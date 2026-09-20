@@ -1,0 +1,1741 @@
+{
+  "fingerprint": "7c648e29e7f7c877228a0e7c27cc0e5b60409b62618dfda1c01344ccf301f6bd",
+  "split": "development",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 60,
+  "attempted": 60,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7333567160000003,
+    "usage": 1.7306687160000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 21966,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7388717360000003,
+    "usage": 1.7361837360000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22026,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "checklist": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.0021254520000000003,
+      "inputTokens": 50606,
+      "cases": {
+        "development/daisy-side-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/white-line-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-pair-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/edge-cycle-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/daisy-side-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-R": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "R"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "development/white-line-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-pair-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/edge-cycle-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "concise": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.0016641240000000003,
+      "inputTokens": 39622,
+      "cases": {
+        "development/daisy-side-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/white-line-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-pair-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/edge-cycle-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/daisy-side-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/white-line-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-pair-R": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "R"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "development/edge-cycle-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "neutral": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.001725444,
+      "inputTokens": 41082,
+      "cases": {
+        "development/daisy-side-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/white-line-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-pair-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/edge-cycle-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/daisy-side-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/white-line-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-pair-R": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "R"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "development/edge-cycle-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "development/daisy-side-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "6979f39b-055e-4992-9fae-3a7feab9dea1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "0fded4a1-b28d-4471-8aef-08c8bab7fe28",
+      "cost": 0.00008223600000000002,
+      "inputTokens": 1958,
+      "elapsedMs": 583.139339,
+      "confidence": {
+        "reference": 0.75
+      }
+    },
+    {
+      "fixture": "development/daisy-side-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "3a386397-380b-496b-8ad8-90cee6a2f3e5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "0e2591cc-2c66-43f1-ad77-9ac41f373e10",
+      "cost": 0.00006442800000000001,
+      "inputTokens": 1534,
+      "elapsedMs": 584.1081780000001,
+      "confidence": {
+        "reference": 0.41
+      }
+    },
+    {
+      "fixture": "development/cross-align-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "c399031e-1bfa-4045-9410-decdaa128c9b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "10ad441e-4f7c-4c93-a5e5-26120636bd40",
+      "cost": 0.00006837600000000001,
+      "inputTokens": 1628,
+      "elapsedMs": 623.2823520000001,
+      "confidence": {
+        "reference": 0.95
+      }
+    },
+    {
+      "fixture": "development/daisy-side-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "3f4f9bf4-1189-4698-b115-324fff84d670",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "22f16c8a-3f13-4358-b191-b043a2096a19",
+      "cost": 0.00006136200000000001,
+      "inputTokens": 1461,
+      "elapsedMs": 702.788309,
+      "confidence": {
+        "reference": 0.5
+      }
+    },
+    {
+      "fixture": "development/cross-align-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "e4e7fc60-7ce2-4614-8933-18ea678b7aa0",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "6c3ea195-a3b1-4fb7-982f-e30b36b23670",
+      "cost": 0.00007144200000000001,
+      "inputTokens": 1701,
+      "elapsedMs": 216.58238900000015,
+      "confidence": {
+        "reference": 0.75
+      }
+    },
+    {
+      "fixture": "development/cross-align-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "4c87676d-3832-43a0-a843-4ff84dc81d4f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "89c4de2a-8393-4826-b97e-66c2f5d8e4f3",
+      "cost": 0.00009479400000000001,
+      "inputTokens": 2257,
+      "elapsedMs": 251.68090499999994,
+      "confidence": {
+        "reference": 0.76
+      }
+    },
+    {
+      "fixture": "development/corner-insert-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "61661892-45a8-4995-98d7-e39386c4e41d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "e252f0d5-7b0a-4e40-b28f-46a2ca2fcaa8",
+      "cost": 0.00008022000000000001,
+      "inputTokens": 1910,
+      "elapsedMs": 271.75232000000005,
+      "confidence": {
+        "reference": 0.94
+      }
+    },
+    {
+      "fixture": "development/corner-insert-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "283df482-5b51-49df-a6e6-1e580482a2b9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "6c38279e-79b8-4d29-995c-4af526a4aea9",
+      "cost": 0.00010806600000000002,
+      "inputTokens": 2573,
+      "elapsedMs": 292.82610999999997,
+      "confidence": {
+        "reference": 0.95
+      }
+    },
+    {
+      "fixture": "development/corner-insert-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "b1ef9c36-91ed-4fad-bf24-0eb81985529c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "41048076-ac7b-4c56-b5ac-520d8f6d1efc",
+      "cost": 0.00007715400000000001,
+      "inputTokens": 1837,
+      "elapsedMs": 266.48386600000003,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "development/corner-extract-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "1cff46c1-2548-4969-b69e-9840f453732e",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "1e998407-d124-4971-9108-727e3a2f926b",
+      "cost": 0.00010697400000000001,
+      "inputTokens": 2547,
+      "elapsedMs": 276.2866180000001,
+      "confidence": {
+        "reference": 0.93
+      }
+    },
+    {
+      "fixture": "development/corner-extract-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "9184584e-4c94-4a39-9380-b02561715386",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "6aa1434a-dcd2-47c3-bf70-2a6cd62cf18c",
+      "cost": 0.00007635600000000001,
+      "inputTokens": 1818,
+      "elapsedMs": 247.6553939999999,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "development/corner-extract-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "a3091e1d-d674-4936-ad10-5387ba35e343",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "4ccc7fb5-18cd-4665-b8a0-d17130502e40",
+      "cost": 0.00007942200000000001,
+      "inputTokens": 1891,
+      "elapsedMs": 243.81350900000007,
+      "confidence": {
+        "reference": 0.94
+      }
+    },
+    {
+      "fixture": "development/middle-insert-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "eabc2763-09fb-4c93-94fe-a2a869b5d312",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "64d65123-298a-4bf0-9ddf-0b4a18f62950",
+      "cost": 0.000070518,
+      "inputTokens": 1679,
+      "elapsedMs": 218.78342199999997,
+      "confidence": {
+        "reference": 0.7
+      }
+    },
+    {
+      "fixture": "development/middle-insert-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "7ab61c33-621d-4470-a4b3-a540372e7484",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "67d4beff-28ad-4edb-83aa-c9307fc69b81",
+      "cost": 0.000073584,
+      "inputTokens": 1752,
+      "elapsedMs": 289.57892000000015,
+      "confidence": {
+        "reference": 0.44
+      }
+    },
+    {
+      "fixture": "development/middle-insert-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "831b4152-8577-4311-bb6a-6c116c813211",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "726379b0-9212-45d7-9c07-38f8ac70b2ca",
+      "cost": 0.00009727200000000001,
+      "inputTokens": 2316,
+      "elapsedMs": 299.190703,
+      "confidence": {
+        "reference": 0.81
+      }
+    },
+    {
+      "fixture": "development/middle-extract-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "a5b52ceb-2252-4c74-9267-a7b4c9c2ae18",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "820e7c7b-ff30-4f48-8ba2-2e568a272c58",
+      "cost": 0.000076272,
+      "inputTokens": 1816,
+      "elapsedMs": 285.297861,
+      "confidence": {
+        "reference": 0.72
+      }
+    },
+    {
+      "fixture": "development/middle-extract-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "0542dcd9-afa3-48c5-9bbc-7ab9ef99a595",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "93241368-12a7-4d0c-a6f3-42b40fd3b265",
+      "cost": 0.00010130400000000002,
+      "inputTokens": 2412,
+      "elapsedMs": 245.7827679999998,
+      "confidence": {
+        "reference": 0.91
+      }
+    },
+    {
+      "fixture": "development/middle-extract-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "b088895e-5932-425d-88a7-f5a148573df4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "97700e25-1645-4dac-8bd7-1ade4849afd4",
+      "cost": 0.000073206,
+      "inputTokens": 1743,
+      "elapsedMs": 279.04986599999984,
+      "confidence": {
+        "reference": 0.78
+      }
+    },
+    {
+      "fixture": "development/white-line-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "b938699d-3b6e-489b-b151-d3e19d9e2544",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "008c594d-1f52-4106-b4ae-ceb75d942074",
+      "cost": 0.00010357200000000002,
+      "inputTokens": 2466,
+      "elapsedMs": 265.66838400000006,
+      "confidence": {
+        "reference": 0.47
+      }
+    },
+    {
+      "fixture": "development/white-line-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "10b41580-9ade-4e90-bb9e-fd9f39232aaf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "e038a6d1-403a-4e7a-ab11-ef83e463db2f",
+      "cost": 0.00009042600000000002,
+      "inputTokens": 2153,
+      "elapsedMs": 278.1717060000001,
+      "confidence": {
+        "reference": 0.55
+      }
+    },
+    {
+      "fixture": "development/white-line-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "18d84cef-83e0-426f-9e76-12aeb01bfbc6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "1877c9ad-7b0d-45f9-bde7-e6870cf45a8b",
+      "cost": 0.00009349200000000002,
+      "inputTokens": 2226,
+      "elapsedMs": 276.2552780000001,
+      "confidence": {
+        "reference": 0.55
+      }
+    },
+    {
+      "fixture": "development/white-corners-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "c382092d-a887-4ffd-b89c-9f11006aeabb",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "32aa2266-6d07-4267-ab4c-7b3641b7ea36",
+      "cost": 0.00011285400000000001,
+      "inputTokens": 2687,
+      "elapsedMs": 257.7390949999999,
+      "confidence": {
+        "reference": 0.69
+      }
+    },
+    {
+      "fixture": "development/white-corners-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "5eb99c1b-f220-4b37-a060-bbdf2901e3fd",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "c4403c27-bec5-4426-aba1-72e8093ec729",
+      "cost": 0.000129108,
+      "inputTokens": 3074,
+      "elapsedMs": 242.4620920000002,
+      "confidence": {
+        "reference": 0.82
+      }
+    },
+    {
+      "fixture": "development/white-corners-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "6bc0718f-b158-4135-9438-b98ee79d1aea",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "f0e50b82-7672-499b-a3d7-c081324bf6f2",
+      "cost": 0.00010978800000000001,
+      "inputTokens": 2614,
+      "elapsedMs": 361.19173500000034,
+      "confidence": {
+        "reference": 0.84
+      }
+    },
+    {
+      "fixture": "development/corner-pair-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "79dea611-5f0c-4d5a-a31a-554d30409d46",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "ec519b25-5a7b-4570-8a08-c9120b40612d",
+      "cost": 0.00011655000000000001,
+      "inputTokens": 2775,
+      "elapsedMs": 272.05712300000005,
+      "confidence": {
+        "reference": 0.74
+      }
+    },
+    {
+      "fixture": "development/corner-pair-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "f25e4e33-41ab-4142-b1e5-1f177f8601c6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "c224cc9e-6bc8-4861-8a21-552abde587ac",
+      "cost": 0.00013419000000000001,
+      "inputTokens": 3195,
+      "elapsedMs": 249.41514899999993,
+      "confidence": {
+        "reference": 0.89
+      }
+    },
+    {
+      "fixture": "development/corner-pair-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "dfef4d64-d08c-4a2e-8f48-2acc1a91221b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "758c2af2-6de8-4b98-a45b-8c1abe81e281",
+      "cost": 0.00011348400000000001,
+      "inputTokens": 2702,
+      "elapsedMs": 248.0822760000001,
+      "confidence": {
+        "reference": 0.69
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-F",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "4f1f0353-f5cb-427a-b3d8-b2c25958798e",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "cc2cd07e-8a18-4d4f-b3b3-929956f5d45b",
+      "cost": 0.00009139200000000001,
+      "inputTokens": 2176,
+      "elapsedMs": 236.24623800000018,
+      "confidence": {
+        "reference": 0.84
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-F",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "3a46e100-61d9-45dd-ad62-4170bf7a6435",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "6eb6a858-613e-46c5-8499-7cf83a8f55ce",
+      "cost": 0.00010521000000000002,
+      "inputTokens": 2505,
+      "elapsedMs": 281.2192399999999,
+      "confidence": {
+        "reference": 0.78
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-F",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "394191c8-7606-45a7-92ed-68873fb5c03e",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "7c98bc5f-333f-4e2e-9cf1-de7785de42b3",
+      "cost": 0.00009445800000000001,
+      "inputTokens": 2249,
+      "elapsedMs": 258.886348,
+      "confidence": {
+        "reference": 0.92
+      }
+    },
+    {
+      "fixture": "development/daisy-side-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "c7bd3eba-22d3-45f4-91ab-39639a2c135d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "38cf31f8-85d6-4b76-95a9-6b4a3c95e547",
+      "cost": 0.00006442800000000001,
+      "inputTokens": 1534,
+      "elapsedMs": 233.46576700000014,
+      "confidence": {
+        "reference": 0.71
+      }
+    },
+    {
+      "fixture": "development/daisy-side-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "9b1eb178-22fa-4872-8ea5-60f8e0afd196",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "c7c0c58d-97e5-4ae3-9fe0-c873c5c8b946",
+      "cost": 0.00006136200000000001,
+      "inputTokens": 1461,
+      "elapsedMs": 314.4415949999998,
+      "confidence": {
+        "reference": 0.72
+      }
+    },
+    {
+      "fixture": "development/daisy-side-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "0e89b17e-b8bb-40ff-b1b3-61cb2348fc90",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [],
+      "decisionId": "ff7fc9ad-6eaa-4285-9a1b-ccdd6ccde59f",
+      "cost": 0.00008223600000000002,
+      "inputTokens": 1958,
+      "elapsedMs": 281.3507370000002,
+      "confidence": {
+        "reference": 0.72
+      }
+    },
+    {
+      "fixture": "development/cross-align-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "d485c301-c5ab-472f-8f87-4d1b7ad9cd76",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "1b657454-7cbd-4533-9a57-f077de873fed",
+      "cost": 0.00007144200000000001,
+      "inputTokens": 1701,
+      "elapsedMs": 226.35285699999986,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "development/cross-align-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "1ea63a8d-15fb-4fc8-84de-22ee5df357d3",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "708e9652-ab92-457e-b8b1-d2e64e26d025",
+      "cost": 0.00009479400000000001,
+      "inputTokens": 2257,
+      "elapsedMs": 260.58936500000027,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "development/cross-align-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "05ddc721-903c-4e2d-a1c1-00bad7f208db",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "b88e98f0-381b-4d1b-9eb1-6c41dcbd55da",
+      "cost": 0.00006837600000000001,
+      "inputTokens": 1628,
+      "elapsedMs": 270.444254,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "development/corner-insert-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "9cdb8cbb-ef38-4916-a3bd-1e22369c9831",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "b622ae22-25f1-4103-88a3-968403f1a961",
+      "cost": 0.00010806600000000002,
+      "inputTokens": 2573,
+      "elapsedMs": 239.25255400000015,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "development/corner-insert-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "cbb1d114-7ce8-4a56-84a9-25b5d2fb4fb0",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "81b5c9d6-67b4-455a-868d-6a59650fbb04",
+      "cost": 0.00007715400000000001,
+      "inputTokens": 1837,
+      "elapsedMs": 245.5151460000002,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "development/corner-insert-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "cc818d57-9da1-4f7c-b438-7b97502f6376",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "8c5e390e-b1e6-49d0-a440-c1c51048e58b",
+      "cost": 0.00008022000000000001,
+      "inputTokens": 1910,
+      "elapsedMs": 271.35291000000007,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "development/corner-extract-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "b1e3c2b0-a1a1-4cfa-a227-234e2ebf4849",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "329707ba-e9a7-4d5b-a6df-11a9701c4451",
+      "cost": 0.00007635600000000001,
+      "inputTokens": 1818,
+      "elapsedMs": 272.62190299999975,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "development/corner-extract-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "a5d44b20-e006-4381-9db1-8720d0b34207",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "679e22e0-7bc9-455b-9388-1595c139b66e",
+      "cost": 0.00007942200000000001,
+      "inputTokens": 1891,
+      "elapsedMs": 277.6506079999999,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "development/corner-extract-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "7ddf1b1e-ed94-447e-8924-c098ea6e4208",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "df7ec016-a7eb-4579-8f37-3181370c50b9",
+      "cost": 0.00010697400000000001,
+      "inputTokens": 2547,
+      "elapsedMs": 244.05278799999996,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "development/middle-insert-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "c08f04c2-54ca-4acd-8540-f6bf4a78b7bf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "40cb993b-c7a9-4fa9-acae-e1d45864bac4",
+      "cost": 0.000073584,
+      "inputTokens": 1752,
+      "elapsedMs": 236.82859100000042,
+      "confidence": {
+        "reference": 0.6
+      }
+    },
+    {
+      "fixture": "development/middle-insert-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "23144d1b-e4b8-4bbc-83f3-b3d410960e2f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "84071e95-0815-41ca-bb46-b9639b60a4fd",
+      "cost": 0.00009727200000000001,
+      "inputTokens": 2316,
+      "elapsedMs": 253.7170689999998,
+      "confidence": {
+        "reference": 0.91
+      }
+    },
+    {
+      "fixture": "development/middle-insert-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "48a346a4-d278-4a3d-b634-c204422a26db",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "ff0187b3-44c8-4b08-b478-b0063a352a40",
+      "cost": 0.000070518,
+      "inputTokens": 1679,
+      "elapsedMs": 266.4439309999998,
+      "confidence": {
+        "reference": 0.63
+      }
+    },
+    {
+      "fixture": "development/middle-extract-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "fda6744a-fce5-482a-85fc-d6206b0daf49",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "R"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "1bfea4bb-d04c-442d-ba46-20fa347b313a",
+      "cost": 0.00010130400000000002,
+      "inputTokens": 2412,
+      "elapsedMs": 315.81182699999954,
+      "confidence": {
+        "reference": 0.35
+      }
+    },
+    {
+      "fixture": "development/middle-extract-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "dc1b6d5e-36d0-4bc7-83cb-bb18a8bc11f7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "417e7a3f-7287-4b30-9ea7-1622173a2fc0",
+      "cost": 0.000073206,
+      "inputTokens": 1743,
+      "elapsedMs": 266.07323499999984,
+      "confidence": {
+        "reference": 0.28
+      }
+    },
+    {
+      "fixture": "development/middle-extract-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "bda487a2-76a7-472f-83cd-b60fa14518b8",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "96a726ff-626a-4212-b3d5-5f2e2de47490",
+      "cost": 0.000076272,
+      "inputTokens": 1816,
+      "elapsedMs": 311.7610910000003,
+      "confidence": {
+        "reference": 0.28
+      }
+    },
+    {
+      "fixture": "development/white-line-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "f6fc22ff-053c-4fbf-9f1a-5fbaa77f3180",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "ee09f57a-1aae-4ecf-ad1a-004ede42e98f",
+      "cost": 0.00009042600000000002,
+      "inputTokens": 2153,
+      "elapsedMs": 324.193088,
+      "confidence": {
+        "reference": 0.4
+      }
+    },
+    {
+      "fixture": "development/white-line-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "c19c06f6-7b74-4d04-bfa8-aad2ebb30efe",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "54385747-a198-4713-ad05-582a5d97398b",
+      "cost": 0.00009349200000000002,
+      "inputTokens": 2226,
+      "elapsedMs": 260.7241389999999,
+      "confidence": {
+        "reference": 0.65
+      }
+    },
+    {
+      "fixture": "development/white-line-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "4479d485-58dc-45bf-abfd-28d0868cb157",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "0bce3e16-68d2-4471-9fda-3bd1eda99c8a",
+      "cost": 0.00010357200000000002,
+      "inputTokens": 2466,
+      "elapsedMs": 284.4181979999994,
+      "confidence": {
+        "reference": 0.46
+      }
+    },
+    {
+      "fixture": "development/white-corners-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "a1f92777-e94d-4c9d-8f21-c87f6d8fe6ed",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "5e8559a9-742f-474c-b397-24fcef911d03",
+      "cost": 0.00011285400000000001,
+      "inputTokens": 2687,
+      "elapsedMs": 283.5546459999996,
+      "confidence": {
+        "reference": 0.86
+      }
+    },
+    {
+      "fixture": "development/white-corners-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "37614c7a-0e5b-44da-a84e-73ad82fccc24",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "b0baf172-8903-4488-a196-a461cc6d64e6",
+      "cost": 0.000129108,
+      "inputTokens": 3074,
+      "elapsedMs": 292.3872140000003,
+      "confidence": {
+        "reference": 0.91
+      }
+    },
+    {
+      "fixture": "development/white-corners-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "9ded4222-824a-44b6-b268-eb99566bec3e",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "50d8594e-60c0-43fd-a73b-0bf99a5f3acd",
+      "cost": 0.00010978800000000001,
+      "inputTokens": 2614,
+      "elapsedMs": 238.81674500000008,
+      "confidence": {
+        "reference": 0.84
+      }
+    },
+    {
+      "fixture": "development/corner-pair-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "1e2194bc-4629-4b09-aaad-3d63b5273c86",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "d5c59012-78a8-4db2-b0b9-d2cf3d75ff7a",
+      "cost": 0.00013419000000000001,
+      "inputTokens": 3195,
+      "elapsedMs": 265.8856530000003,
+      "confidence": {
+        "reference": 0.72
+      }
+    },
+    {
+      "fixture": "development/corner-pair-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "05e7ca2d-9a1e-4ebb-98dd-53a00032d4ad",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "R"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "31bb0b90-4620-4543-bb06-976bbaf5d53f",
+      "cost": 0.00011655000000000001,
+      "inputTokens": 2775,
+      "elapsedMs": 253.23283999999967,
+      "confidence": {
+        "reference": 0.17
+      }
+    },
+    {
+      "fixture": "development/corner-pair-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "b28f4085-feb9-447d-988b-c210296ce694",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "R"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "2b48d818-2a09-49aa-9814-50a378559b0e",
+      "cost": 0.00011348400000000001,
+      "inputTokens": 2702,
+      "elapsedMs": 338.74720100000013,
+      "confidence": {
+        "reference": 0.13
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-R",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "0b40a101-eaa6-4292-be6d-a1085fc8e50a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "637f5977-341a-4b1b-8945-6309665691e2",
+      "cost": 0.00009139200000000001,
+      "inputTokens": 2176,
+      "elapsedMs": 260.70522299999993,
+      "confidence": {
+        "reference": 0.78
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-R",
+      "variant": "neutral",
+      "repeat": 0,
+      "runId": "3be4af22-dcf1-4919-bc3d-36242c0b13bf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "7d2c0455-4b45-4cf5-b7da-5662792c2ade",
+      "cost": 0.00009445800000000001,
+      "inputTokens": 2249,
+      "elapsedMs": 259.49168400000053,
+      "confidence": {
+        "reference": 0.84
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-R",
+      "variant": "checklist",
+      "repeat": 0,
+      "runId": "bf3799d7-b2bf-45c1-ad7f-5208c5d8c239",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "cc80c952-5609-4340-8efb-6436cca38f22",
+      "cost": 0.00010521000000000002,
+      "inputTokens": 2505,
+      "elapsedMs": 238.53614800000014,
+      "confidence": {
+        "reference": 0.69
+      }
+    }
+  ]
+}

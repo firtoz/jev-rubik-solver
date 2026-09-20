@@ -1,0 +1,1153 @@
+{
+  "fingerprint": "937d19b511dc5e530f6d796be58585dcc44da39914778dc037ddd0878fa50acc",
+  "split": "validation",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 40,
+  "attempted": 40,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7388717360000003,
+    "usage": 1.7361837360000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22026,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7425999920000002,
+    "usage": 1.7399119920000001,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22066,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.002064132,
+      "inputTokens": 49146,
+      "cases": {
+        "validation/daisy-side-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/cross-align-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-insert-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-extract-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-insert-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-extract-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-line-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-corners-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-pair-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/edge-cycle-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/daisy-side-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/cross-align-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-insert-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-extract-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-insert-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-extract-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-line-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-corners-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-pair-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/edge-cycle-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "concise": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.0016641240000000003,
+      "inputTokens": 39622,
+      "cases": {
+        "validation/daisy-side-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/cross-align-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-insert-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-extract-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-insert-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-extract-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-line-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-corners-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-pair-B": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "B"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "validation/edge-cycle-B": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/daisy-side-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/cross-align-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-insert-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-extract-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-insert-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/middle-extract-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-line-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/white-corners-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/corner-pair-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/edge-cycle-L": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "validation/daisy-side-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "c76cc554-1f27-4aff-af61-0f61be86041d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "22a93502-af6a-4f9a-8c74-7005c7daea82",
+      "cost": 0.00006136200000000001,
+      "inputTokens": 1461,
+      "elapsedMs": 612.5991919999999,
+      "confidence": {
+        "reference": 0.57
+      }
+    },
+    {
+      "fixture": "validation/cross-align-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d6cb863d-10ae-4ae0-b780-19eeb051009a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "b3c3d5fb-3bab-4c43-a213-e5a8188beaca",
+      "cost": 0.00009172800000000001,
+      "inputTokens": 2184,
+      "elapsedMs": 633.981229,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "validation/daisy-side-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "635cfdba-ef20-41f5-8998-bb000e0cfc07",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "12b6fc3e-0b39-4b06-a578-f0bfaf0b3b6c",
+      "cost": 0.00007917000000000002,
+      "inputTokens": 1885,
+      "elapsedMs": 681.345883,
+      "confidence": {
+        "reference": 0.81
+      }
+    },
+    {
+      "fixture": "validation/cross-align-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "3d82ae0a-aaf5-4eb9-8c2a-2c4945a82df1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "fbd4aea6-5e91-4f71-8627-d3ea789a2b59",
+      "cost": 0.00006837600000000001,
+      "inputTokens": 1628,
+      "elapsedMs": 678.0110480000001,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "validation/corner-extract-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "4ccf1a8e-a0eb-4e21-9f94-60bba1e9d048",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "b816a478-9d76-4048-b7a6-a6892a324461",
+      "cost": 0.00010390800000000001,
+      "inputTokens": 2474,
+      "elapsedMs": 241.989008,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/corner-insert-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "4e1ef0bc-189b-4dd7-9f58-971cc40ef1b8",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "99f07fa2-857a-43c8-a3a2-4a6d75bb64ca",
+      "cost": 0.00007715400000000001,
+      "inputTokens": 1837,
+      "elapsedMs": 312.77082999999993,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/corner-extract-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "6f62010d-70b1-4bb5-ad69-769a4f1c9015",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "97cd6b41-3ac5-4f4d-96fd-adb5198ec5e8",
+      "cost": 0.00007635600000000001,
+      "inputTokens": 1818,
+      "elapsedMs": 324.5847869999999,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/corner-insert-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "f1de9485-92f1-4b44-b3d8-b92bbc6ba9d8",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "3958d7dd-cff7-4067-ae6a-5b18f3c87c4b",
+      "cost": 0.00010500000000000002,
+      "inputTokens": 2500,
+      "elapsedMs": 397.40757099999985,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/middle-insert-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "3efffee7-db3a-48a9-a264-8f0567b3c8a7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "38f4d2c4-20f5-4f22-9780-b105d7172e94",
+      "cost": 0.00009420600000000001,
+      "inputTokens": 2243,
+      "elapsedMs": 240.4065250000001,
+      "confidence": {
+        "reference": 0.91
+      }
+    },
+    {
+      "fixture": "validation/middle-insert-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "07281748-b127-45a9-9f27-c9bbd019b96a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "506dc1ad-45dc-41f3-8e5b-9835dc760228",
+      "cost": 0.000070518,
+      "inputTokens": 1679,
+      "elapsedMs": 401.57250299999987,
+      "confidence": {
+        "reference": 0.61
+      }
+    },
+    {
+      "fixture": "validation/middle-extract-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "d7ded544-49e0-40f8-8434-7128dd51cb89",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "2304801a-c7db-466b-9b90-7fc8505b18c7",
+      "cost": 0.000073206,
+      "inputTokens": 1743,
+      "elapsedMs": 388.1019040000001,
+      "confidence": {
+        "reference": 0.83
+      }
+    },
+    {
+      "fixture": "validation/middle-extract-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "48aa6307-ae20-4b07-92f6-294fde15724c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "8ad856bc-eb32-44b6-a5d3-8086b387a31d",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 380.840608,
+      "confidence": {
+        "reference": 0.93
+      }
+    },
+    {
+      "fixture": "validation/white-line-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "fcbc4d8c-3cff-4559-a63e-9a329036e502",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "785ea673-1831-4fd9-9874-355a17290403",
+      "cost": 0.00010050600000000002,
+      "inputTokens": 2393,
+      "elapsedMs": 259.7785060000001,
+      "confidence": {
+        "reference": 0.68
+      }
+    },
+    {
+      "fixture": "validation/white-corners-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "7b389158-890e-4b86-97e4-15929653d1fd",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "3faa2207-8d60-4171-875e-87f68966a8e3",
+      "cost": 0.00010978800000000001,
+      "inputTokens": 2614,
+      "elapsedMs": 234.01963,
+      "confidence": {
+        "reference": 0.18
+      }
+    },
+    {
+      "fixture": "validation/white-corners-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "fb3832a0-d196-4e02-8af2-67563b1cb128",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "43fd7a46-a626-4167-8ca7-65e82ea9f842",
+      "cost": 0.000126042,
+      "inputTokens": 3001,
+      "elapsedMs": 264.1444769999998,
+      "confidence": {
+        "reference": 0.38
+      }
+    },
+    {
+      "fixture": "validation/white-line-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "3cdcaa2c-649a-45fb-9229-1adf4ec7ef63",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "b494ac13-fedb-4217-b07e-807ccd3c82ad",
+      "cost": 0.00009042600000000002,
+      "inputTokens": 2153,
+      "elapsedMs": 505.5718089999998,
+      "confidence": {
+        "reference": 0.57
+      }
+    },
+    {
+      "fixture": "validation/corner-pair-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "b2cfdd85-c2c3-48aa-9696-918421b54fb5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "54de2796-ea0b-4384-a02f-1ba8422521fe",
+      "cost": 0.00013112400000000001,
+      "inputTokens": 3122,
+      "elapsedMs": 409.0294980000001,
+      "confidence": {
+        "reference": 0.67
+      }
+    },
+    {
+      "fixture": "validation/corner-pair-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "4eee740f-8e6b-41c9-a1a8-e804ff766d2c",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "B"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "ae0b5175-f14d-473b-9d35-1f60b692d671",
+      "cost": 0.00011348400000000001,
+      "inputTokens": 2702,
+      "elapsedMs": 291.0946909999998,
+      "confidence": {
+        "reference": 0.33
+      }
+    },
+    {
+      "fixture": "validation/edge-cycle-B",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "0d8b1a09-ad25-48b8-9a19-3768435159f1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "4e2ddbf8-6dec-4bf5-9443-45ea84581f7f",
+      "cost": 0.00009139200000000001,
+      "inputTokens": 2176,
+      "elapsedMs": 419.769178,
+      "confidence": {
+        "reference": 0.89
+      }
+    },
+    {
+      "fixture": "validation/daisy-side-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "2ae0da34-6670-4967-9b99-62a3e2b46f61",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "1fdf7411-f76c-4b46-acf4-1eee4b6ace23",
+      "cost": 0.00007917000000000002,
+      "inputTokens": 1885,
+      "elapsedMs": 230.3813580000001,
+      "confidence": {
+        "reference": 0.85
+      }
+    },
+    {
+      "fixture": "validation/edge-cycle-B",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "fab6ee49-765a-4ed5-9991-3f62fa5a2732",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "cb0f91d4-803d-4e56-a690-f5a4b2e2e09e",
+      "cost": 0.00010214400000000002,
+      "inputTokens": 2432,
+      "elapsedMs": 296.2763009999999,
+      "confidence": {
+        "reference": 0.89
+      }
+    },
+    {
+      "fixture": "validation/daisy-side-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "ec2e987c-e7d0-4e39-8421-90cd6f5ff51d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "wrong": [],
+      "decisionId": "a7cac13d-2c64-45b5-9a02-56b652974626",
+      "cost": 0.00006136200000000001,
+      "inputTokens": 1461,
+      "elapsedMs": 237.89207199999964,
+      "confidence": {
+        "reference": 0.57
+      }
+    },
+    {
+      "fixture": "validation/cross-align-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "6f039222-95d4-468d-ae46-1312aedfb42d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "bfa10064-496e-4656-9087-a4d916357d84",
+      "cost": 0.00006837600000000001,
+      "inputTokens": 1628,
+      "elapsedMs": 271.26787399999967,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/cross-align-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "a3258985-939e-4711-8768-40457bf229d9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "45c273a9-e662-41f2-8e01-dcb64792c2b3",
+      "cost": 0.00009172800000000001,
+      "inputTokens": 2184,
+      "elapsedMs": 268.89611000000014,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/corner-insert-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e01ee5e7-4ded-4fde-b739-59492af6823f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "c58c61dc-2eae-4fea-a25c-4ea86ec22216",
+      "cost": 0.00010500000000000002,
+      "inputTokens": 2500,
+      "elapsedMs": 261.98588299999983,
+      "confidence": {
+        "reference": 0.99
+      }
+    },
+    {
+      "fixture": "validation/corner-insert-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "3caf69f1-8b47-4e5a-a3e1-94dcb29de663",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "45dd11e4-1db7-4e36-8b95-34b63d69b459",
+      "cost": 0.00007715400000000001,
+      "inputTokens": 1837,
+      "elapsedMs": 231.904317,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "validation/corner-extract-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "163dd476-7381-45b8-aa0e-90d06178cb09",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "4b5169dc-1140-4d71-8dd4-327ada569c80",
+      "cost": 0.00007635600000000001,
+      "inputTokens": 1818,
+      "elapsedMs": 260.98064399999976,
+      "confidence": {
+        "reference": 0.97
+      }
+    },
+    {
+      "fixture": "validation/middle-insert-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d2c51555-456b-432d-9456-e69e13a36360",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "aef5441c-b508-4abf-9299-0debf0033207",
+      "cost": 0.00009420600000000001,
+      "inputTokens": 2243,
+      "elapsedMs": 433.5176080000001,
+      "confidence": {
+        "reference": 0.94
+      }
+    },
+    {
+      "fixture": "validation/corner-extract-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "91f6074a-c8a4-4216-988e-98f7608a1fe2",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "8abe29b4-3ead-4a10-8331-e38460686247",
+      "cost": 0.00010390800000000001,
+      "inputTokens": 2474,
+      "elapsedMs": 470.97553400000015,
+      "confidence": {
+        "reference": 0.98
+      }
+    },
+    {
+      "fixture": "validation/middle-insert-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "ab5da79b-f86e-4bd2-9adc-7e0e7e250d26",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "4c27c4b7-dec5-4b3d-a9e9-83e577d1a12b",
+      "cost": 0.000070518,
+      "inputTokens": 1679,
+      "elapsedMs": 465.2131129999998,
+      "confidence": {
+        "reference": 0.48
+      }
+    },
+    {
+      "fixture": "validation/middle-extract-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "6fceb069-8da7-4b52-b2ca-2aae63581b36",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "6b4348f6-71f6-4f39-aa27-058e85f6fd7c",
+      "cost": 0.000073206,
+      "inputTokens": 1743,
+      "elapsedMs": 305.1936370000003,
+      "confidence": {
+        "reference": 0.55
+      }
+    },
+    {
+      "fixture": "validation/middle-extract-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "2846eeaf-7aca-4adc-86be-3d029fa07b34",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "f4ac413a-4420-41d4-baba-962ab72d403b",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 247.22348899999997,
+      "confidence": {
+        "reference": 0.32
+      }
+    },
+    {
+      "fixture": "validation/white-line-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "fbfcf5b5-72d6-4cdd-bbed-f177a4b65fde",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "8defd5de-a4dc-4a2f-8f43-e052f4ae2fba",
+      "cost": 0.00010050600000000002,
+      "inputTokens": 2393,
+      "elapsedMs": 273.1239800000003,
+      "confidence": {
+        "reference": 0.54
+      }
+    },
+    {
+      "fixture": "validation/white-line-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "477a111e-389d-438e-bca2-b920fc9991da",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "wrong": [],
+      "decisionId": "b3f65185-c7d6-4b5d-80b5-1705b5bb0c44",
+      "cost": 0.00009042600000000002,
+      "inputTokens": 2153,
+      "elapsedMs": 420.3325560000003,
+      "confidence": {
+        "reference": 0.56
+      }
+    },
+    {
+      "fixture": "validation/white-corners-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "84f4c1c6-4b2f-4305-bc27-1a59690a4c79",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "eb7dcedc-165c-409c-b46f-3b94089562fd",
+      "cost": 0.00010978800000000001,
+      "inputTokens": 2614,
+      "elapsedMs": 418.15361200000007,
+      "confidence": {
+        "reference": 0.33
+      }
+    },
+    {
+      "fixture": "validation/white-corners-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "bb61a69a-740c-4ba5-872f-3e4406148223",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "cae3aa38-e53e-4d18-bd26-2e30ebd87acc",
+      "cost": 0.000126042,
+      "inputTokens": 3001,
+      "elapsedMs": 319.5809570000001,
+      "confidence": {
+        "reference": 0.44
+      }
+    },
+    {
+      "fixture": "validation/corner-pair-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "b14daad5-0ba4-42ab-9502-84b054f6acb4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "4e52d821-fb1f-4f59-8efc-c59efebc9800",
+      "cost": 0.00013112400000000001,
+      "inputTokens": 3122,
+      "elapsedMs": 459.0416530000002,
+      "confidence": {
+        "reference": 0.79
+      }
+    },
+    {
+      "fixture": "validation/corner-pair-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "bd05894b-57d3-4456-86f6-7ba0e07682ec",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "b00634a8-9390-477f-a1ff-01d3c3145d18",
+      "cost": 0.00011348400000000001,
+      "inputTokens": 2702,
+      "elapsedMs": 260.34599300000036,
+      "confidence": {
+        "reference": 0.51
+      }
+    },
+    {
+      "fixture": "validation/edge-cycle-L",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "c76ede9b-a777-48ba-b26b-4123791ad00b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "7b268f2a-5ca3-470a-8cb8-4f8d3fd52fb3",
+      "cost": 0.00010214400000000002,
+      "inputTokens": 2432,
+      "elapsedMs": 412.93269899999996,
+      "confidence": {
+        "reference": 0.56
+      }
+    },
+    {
+      "fixture": "validation/edge-cycle-L",
+      "variant": "concise",
+      "repeat": 0,
+      "runId": "b084fd60-469e-4bcf-a205-7df05bd1d33f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "wrong": [],
+      "decisionId": "aa59eed7-89da-4c4e-a498-7c5ca866379b",
+      "cost": 0.00009139200000000001,
+      "inputTokens": 2176,
+      "elapsedMs": 485.5924350000005,
+      "confidence": {
+        "reference": 0.42
+      }
+    }
+  ]
+}
