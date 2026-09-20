@@ -1,0 +1,24 @@
+{
+  "status": "paused-for-user",
+  "reason": "No development gain; focused split regressed on fresh validation. Keep combined production request.",
+  "metric": "Selected target is acceptable AND its chosen intention is correct; same metric for combined and split requests.",
+  "seed": "combined",
+  "developmentFingerprint": "210c359663bb8e00564958104d0071f3d50b354f76e3e66a88a797e3f4b496ab",
+  "validationFingerprint": "cfd0f1224f773c93537dfdcaff8d2ea99282bc53051b988dd1061028c56bcdb6",
+  "requests": 200,
+  "cost": 0.01319249400000011,
+  "results": {
+    "development": {
+      "combined": "19/20",
+      "split-full": "19/20",
+      "split-focused": "19/20",
+      "split-checklist": "19/20"
+    },
+    "validation": {
+      "combined": "20/20",
+      "split-focused": "19/20"
+    }
+  },
+  "finding": "All development variants failed the same actual-history case: DR at UR with yellow facing R was classified align or insert, rather than extract.",
+  "nextExperiment": "Test factual recognition of observed yellow sticker direction and top-layer location before asking for intention, versus renamed intention categories. Use 20 distinct controlled contrast cases and retire validation if used for tuning. No full-cube evaluation until this distinction is reliable."
+}

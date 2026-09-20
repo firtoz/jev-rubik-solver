@@ -1,0 +1,137 @@
+{
+  "results": [
+    {
+      "front": "F",
+      "intent": {
+        "type": "choice",
+        "choice": "align",
+        "probabilities": {
+          "insert": 0.01,
+          "align": 0.99,
+          "done": 0,
+          "reorient": 0,
+          "extract": 0
+        },
+        "confidence": 0.99
+      },
+      "action": {
+        "type": "choice",
+        "choice": "U'",
+        "probabilities": {
+          "insertRight": 0,
+          "U": 0.02,
+          "U2": 0.01,
+          "U'": 0.93,
+          "extractRight": 0,
+          "insertFront": 0,
+          "insertLeft": 0,
+          "reconsider": 0.04
+        },
+        "confidence": 0.92
+      },
+      "cost": 0.00016228800000000002
+    },
+    {
+      "front": "R",
+      "intent": {
+        "type": "choice",
+        "choice": "align",
+        "probabilities": {
+          "done": 0,
+          "extract": 0,
+          "insert": 0.01,
+          "reorient": 0,
+          "align": 0.99
+        },
+        "confidence": 0.99
+      },
+      "action": {
+        "type": "choice",
+        "choice": "U'",
+        "probabilities": {
+          "extractRight": 0,
+          "insertRight": 0,
+          "insertLeft": 0.01,
+          "U'": 0.88,
+          "U2": 0.03,
+          "insertFront": 0,
+          "U": 0.04,
+          "reconsider": 0.04
+        },
+        "confidence": 0.85
+      },
+      "cost": 0.00016212000000000003
+    },
+    {
+      "front": "B",
+      "intent": {
+        "type": "choice",
+        "choice": "align",
+        "probabilities": {
+          "align": 0.99,
+          "extract": 0,
+          "insert": 0.01,
+          "done": 0,
+          "reorient": 0
+        },
+        "confidence": 0.98
+      },
+      "action": {
+        "type": "choice",
+        "choice": "U'",
+        "probabilities": {
+          "U": 0.04,
+          "extractRight": 0,
+          "insertFront": 0,
+          "U'": 0.72,
+          "reconsider": 0.15,
+          "insertRight": 0,
+          "U2": 0.09,
+          "insertLeft": 0
+        },
+        "confidence": 0.67
+      },
+      "cost": 0.00016228800000000002
+    },
+    {
+      "front": "L",
+      "intent": {
+        "type": "choice",
+        "choice": "align",
+        "probabilities": {
+          "insert": 0.01,
+          "align": 0.99,
+          "extract": 0,
+          "reorient": 0,
+          "done": 0
+        },
+        "confidence": 0.98
+      },
+      "action": {
+        "type": "choice",
+        "choice": "U'",
+        "probabilities": {
+          "U": 0.06,
+          "reconsider": 0.09,
+          "extractRight": 0,
+          "insertFront": 0,
+          "U'": 0.76,
+          "U2": 0.09,
+          "insertLeft": 0,
+          "insertRight": 0
+        },
+        "confidence": 0.72
+      },
+      "cost": 0.00016228800000000002
+    }
+  ],
+  "budget": {
+    "cap": 5,
+    "reservedAndSpent": 0.6778386300000001,
+    "usage": 0.6751506300000001,
+    "reserved": 0.0026880000000000003,
+    "attempts": 9182,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

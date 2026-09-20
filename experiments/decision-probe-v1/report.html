@@ -1,0 +1,4580 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>JEV · Six decision probes</title><style>body{font:16px/1.6 system-ui;background:#131714;color:#e4eadd;max-width:1050px;margin:40px auto;padding:0 24px}h1,h2,h3{line-height:1.2}small{display:block;color:#a9b5a4}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:14px;border-bottom:1px solid #394237}article{border:1px solid #394237;padding:24px;margin:24px 0;border-radius:12px}.pass{color:#b1e889}.fail{color:#ff9a85}pre{overflow:auto;font-size:12px;background:#090c09;padding:16px;max-height:550px}summary{cursor:pointer;padding:10px 0}.prob{display:flex;gap:12px;align-items:center}.prob span:first-child{width:150px}meter{width:220px}b{color:#d3ee9d}</style><h1>Six situations. Twelve requests.</h1><p>Frozen development probe · jev-1.13.0 · No retries or autonomous rollouts</p><p><b>Additional estimated API cost: $0.00144182</b>. Both formats met 5/6 fixture rubrics. These are individual decisions, not cube solves.</p><table><thead><tr><th>Situation</th><th>Broad prompt</th><th>Structured prompt</th></tr></thead><tbody><tr><th>alignment</th><td>U&#39; <span class="pass">✓</span><small>Confidence 20%</small></td><td>reconsider <span class="fail">✕</span><small>Confidence 27%</small></td></tr><tr><th>flipped-edge</th><td>flipRight <span class="pass">✓</span><small>Confidence 30%</small></td><td>flipRight <span class="pass">✓</span><small>Confidence 40%</small></td></tr><tr><th>trapped-corner</th><td>extractRight <span class="pass">✓</span><small>Confidence 76%</small></td><td>extractRight <span class="pass">✓</span><small>Confidence 79%</small></td></tr><tr><th>competing-targets</th><td>DRF <span class="fail">✕</span><small>Confidence 22%</small></td><td>DFL <span class="pass">✓</span><small>Confidence 28%</small></td></tr><tr><th>temporary-disruption</th><td>finish <span class="pass">✓</span><small>Confidence 63%</small></td><td>finish <span class="pass">✓</span><small>Confidence 71%</small></td></tr><tr><th>repeated-state</th><td>inspect <span class="pass">✓</span><small>Confidence 65%</small></td><td>inspect <span class="pass">✓</span><small>Confidence 46%</small></td></tr></tbody></table><h2>What this tells us</h2><p>The structured batch correctly located/classified all seven target pieces, but still failed to choose the alignment action. Target selection improved only narrowly (52% versus 45%). Both formats stopped for inspection on the recovery case: that passes the recovery rubric but does not demonstrate autonomous progress.</p><p>The pair uses identical states, goals and action menus. The broad baseline is a new controlled prompt, not a replay of the old five-call runner. Structured input adds semantic facts and an operation contract, plus independent diagnostic questions. These changes are bundled, so this test cannot attribute differences to one feature. Diagnostic answers are not available to the action question in the same request.</p><p>Confidence is the provider's distribution statistic, not a measured probability of solving. Temporary-disruption testing supplies the remaining move explicitly and tests continuation of a recorded operation, not invention of that operation. Fixture construction, accepted answers and future outcomes are excluded from requests.</p><h2>Next experiment</h2><p>Isolate alignment: hold the state and eight-option menu constant, ask for immediate intention first (align / insert / extract / reconsider), then feed that answer into the operation question. Compare against the frozen one-call result. Test rotated counterparts before trying rollouts. No further live calls have been made.</p><h2>Inspect every decision</h2><article><h3>alignment · broad</h3><p>Selected <b>U&#39;</b>. U-prime places DRF at UFR; the cross stays complete. This is a setup, not a finished insertion.</p><p>Provider confidence: 0.2; 2371 input tokens; 591 ms; $0.00009958.</p><h4>action</h4><div class="prob"><span>U</span><meter min="0" max="1" value="0.1"></meter><span>10%</span></div><div class="prob"><span>extractRight</span><meter min="0" max="1" value="0.1"></meter><span>10%</span></div><div class="prob"><span>insertRight</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.23"></meter><span>23%</span></div><div class="prob"><span>insertFront</span><meter min="0" max="1" value="0.02"></meter><span>2%</span></div><div class="prob"><span>U&#39;</span><meter min="0" max="1" value="0.29"></meter><span>29%</span></div><div class="prob"><span>U2</span><meter min="0" max="1" value="0.16"></meter><span>16%</span></div><div class="prob"><span>insertLeft</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Prepare the selected corner for insertion into its home; complete the bottom corners while preserving the bottom cross.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;ULF&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;L&quot;,
+        &quot;red&quot;: &quot;F&quot;,
+        &quot;green&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      }
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 10
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: []
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.&quot;,
+      &quot;criteria&quot;: {
+        &quot;U&quot;: &quot;Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.&quot;,
+        &quot;U&#39;&quot;: &quot;Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.&quot;,
+        &quot;U2&quot;: &quot;Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.&quot;,
+        &quot;insertRight&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R&#39;.&quot;,
+        &quot;insertFront&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F&#39; U&#39; F.&quot;,
+        &quot;extractRight&quot;: &quot;Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R&#39; U&#39;.&quot;,
+        &quot;insertLeft&quot;: &quot;Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L&#39; U&#39; L.&quot;,
+        &quot;reconsider&quot;: &quot;Do not move. Reconsider the target or operation because none of these fits.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;U&#39;&quot;,
+      &quot;probabilities&quot;: {
+        &quot;U&quot;: 0.1,
+        &quot;extractRight&quot;: 0.1,
+        &quot;insertRight&quot;: 0.05,
+        &quot;reconsider&quot;: 0.23,
+        &quot;insertFront&quot;: 0.02,
+        &quot;U&#39;&quot;: 0.29,
+        &quot;U2&quot;: 0.16,
+        &quot;insertLeft&quot;: 0.05
+      },
+      &quot;confidence&quot;: 0.2
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 2371,
+    &quot;output_tokens&quot;: 90
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 12
+  }
+}</pre></details></article><article><h3>alignment · structured</h3><p>Selected <b>reconsider</b>. U-prime places DRF at UFR; the cross stays complete. This is a setup, not a finished insertion.</p><p>Provider confidence: 0.27; 3213 input tokens; 304 ms; $0.00013495.</p><h4>action</h4><div class="prob"><span>insertLeft</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><div class="prob"><span>extractRight</span><meter min="0" max="1" value="0.03"></meter><span>3%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.36"></meter><span>36%</span></div><div class="prob"><span>U</span><meter min="0" max="1" value="0.15"></meter><span>15%</span></div><div class="prob"><span>insertFront</span><meter min="0" max="1" value="0.02"></meter><span>2%</span></div><div class="prob"><span>insertRight</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><div class="prob"><span>U2</span><meter min="0" max="1" value="0.12"></meter><span>12%</span></div><div class="prob"><span>U&#39;</span><meter min="0" max="1" value="0.22"></meter><span>22%</span></div><h4>situation_DRF</h4><div class="prob"><span>top</span><meter min="0" max="1" value="1"></meter><span>100%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Prepare the selected corner for insertion into its home; complete the bottom corners while preserving the bottom cross.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;ULF&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;L&quot;,
+        &quot;red&quot;: &quot;F&quot;,
+        &quot;green&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      },
+      &quot;locationWords&quot;: &quot;top left front&quot;,
+      &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+      &quot;layer&quot;: &quot;top&quot;,
+      &quot;stickerDirectionsInWords&quot;: {
+        &quot;yellow&quot;: &quot;left&quot;,
+        &quot;red&quot;: &quot;front&quot;,
+        &quot;green&quot;: &quot;top&quot;
+      },
+      &quot;directlyAboveHome&quot;: false,
+      &quot;sideStickersMatchingCenters&quot;: []
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;top left front&quot;,
+        &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+        &quot;layer&quot;: &quot;top&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;left&quot;,
+          &quot;red&quot;: &quot;front&quot;,
+          &quot;green&quot;: &quot;top&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: []
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom front left&quot;,
+        &quot;destinationWords&quot;: &quot;bottom front left&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;green&quot;: &quot;front&quot;,
+          &quot;orange&quot;: &quot;left&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;,
+          &quot;orange&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom left back&quot;,
+        &quot;destinationWords&quot;: &quot;bottom left back&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;orange&quot;: &quot;left&quot;,
+          &quot;blue&quot;: &quot;back&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;orange&quot;,
+          &quot;blue&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom back right&quot;,
+        &quot;destinationWords&quot;: &quot;bottom back right&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;blue&quot;: &quot;back&quot;,
+          &quot;red&quot;: &quot;right&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;blue&quot;,
+          &quot;red&quot;
+        ]
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 10
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: [],
+    &quot;operationContract&quot;: {
+      &quot;frame&quot;: &quot;Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.&quot;,
+      &quot;preservation&quot;: &quot;Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.&quot;,
+      &quot;choiceBoundary&quot;: &quot;Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.&quot;,
+      &quot;task&quot;: &quot;Choose only the next operation or target. You are not asked to produce a full solution.&quot;
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: {
+        &quot;question&quot;: &quot;Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?&quot;,
+        &quot;guidance&quot;: &quot;Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate.&quot;
+      },
+      &quot;criteria&quot;: {
+        &quot;U&quot;: &quot;Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.&quot;,
+        &quot;U&#39;&quot;: &quot;Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.&quot;,
+        &quot;U2&quot;: &quot;Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.&quot;,
+        &quot;insertRight&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R&#39;.&quot;,
+        &quot;insertFront&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F&#39; U&#39; F.&quot;,
+        &quot;extractRight&quot;: &quot;Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R&#39; U&#39;.&quot;,
+        &quot;insertLeft&quot;: &quot;Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L&#39; U&#39; L.&quot;,
+        &quot;reconsider&quot;: &quot;Do not move. Reconsider the target or operation because none of these fits.&quot;
+      }
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;reconsider&quot;,
+      &quot;probabilities&quot;: {
+        &quot;insertLeft&quot;: 0.05,
+        &quot;extractRight&quot;: 0.03,
+        &quot;reconsider&quot;: 0.36,
+        &quot;U&quot;: 0.15,
+        &quot;insertFront&quot;: 0.02,
+        &quot;insertRight&quot;: 0.05,
+        &quot;U2&quot;: 0.12,
+        &quot;U&#39;&quot;: 0.22
+      },
+      &quot;confidence&quot;: 0.27
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;top&quot;,
+      &quot;probabilities&quot;: {
+        &quot;top&quot;: 1,
+        &quot;absent&quot;: 0,
+        &quot;bottomCorrect&quot;: 0,
+        &quot;bottomWrong&quot;: 0,
+        &quot;middle&quot;: 0
+      },
+      &quot;confidence&quot;: 1
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 3213,
+    &quot;output_tokens&quot;: 150
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  }
+}</pre></details></article><article><h3>flipped-edge · structured</h3><p>Selected <b>flipRight</b>. Either flip puts the selected edge yellow-up; both landing slots are free.</p><p>Provider confidence: 0.4; 2829 input tokens; 225 ms; $0.00011882.</p><h4>action</h4><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.13"></meter><span>13%</span></div><div class="prob"><span>U</span><meter min="0" max="1" value="0.06"></meter><span>6%</span></div><div class="prob"><span>flipRight</span><meter min="0" max="1" value="0.53"></meter><span>53%</span></div><div class="prob"><span>flipLeft</span><meter min="0" max="1" value="0.23"></meter><span>23%</span></div><div class="prob"><span>lift</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><h4>situation_DR</h4><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>top</span><meter min="0" max="1" value="1"></meter><span>100%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;daisy&quot;,
+    &quot;goal&quot;: &quot;Place the selected yellow edge on the top with yellow pointing up, preserving existing yellow-up petals. Its final bottom destination is not the current objective.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DR&quot;,
+      &quot;kind&quot;: &quot;edge&quot;,
+      &quot;position&quot;: &quot;UF&quot;,
+      &quot;destination&quot;: &quot;DR&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;F&quot;,
+        &quot;red&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;U&quot;
+      },
+      &quot;locationWords&quot;: &quot;top front&quot;,
+      &quot;destinationWords&quot;: &quot;bottom right&quot;,
+      &quot;layer&quot;: &quot;top&quot;,
+      &quot;stickerDirectionsInWords&quot;: {
+        &quot;yellow&quot;: &quot;front&quot;,
+        &quot;red&quot;: &quot;top&quot;
+      },
+      &quot;directlyAboveHome&quot;: false,
+      &quot;sideStickersMatchingCenters&quot;: []
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;destination&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;top front&quot;,
+        &quot;destinationWords&quot;: &quot;bottom right&quot;,
+        &quot;layer&quot;: &quot;top&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;front&quot;,
+          &quot;red&quot;: &quot;top&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: []
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;destination&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;bottom back&quot;,
+        &quot;destinationWords&quot;: &quot;bottom back&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;blue&quot;: &quot;back&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;blue&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;destination&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;bottom left&quot;,
+        &quot;destinationWords&quot;: &quot;bottom left&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;orange&quot;: &quot;left&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;orange&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;destination&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;front right&quot;,
+        &quot;destinationWords&quot;: &quot;bottom front&quot;,
+        &quot;layer&quot;: &quot;middle&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;right&quot;,
+          &quot;green&quot;: &quot;front&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;
+        ]
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;L&quot;,
+          &quot;orange&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: false,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 7
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: [],
+    &quot;operationContract&quot;: {
+      &quot;frame&quot;: &quot;Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.&quot;,
+      &quot;preservation&quot;: &quot;Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.&quot;,
+      &quot;choiceBoundary&quot;: &quot;Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.&quot;,
+      &quot;task&quot;: &quot;Choose only the next operation or target. You are not asked to produce a full solution.&quot;
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: {
+        &quot;question&quot;: &quot;Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?&quot;,
+        &quot;guidance&quot;: &quot;Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate.&quot;
+      },
+      &quot;criteria&quot;: {
+        &quot;lift&quot;: &quot;Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal. Moves: F2.&quot;,
+        &quot;flipRight&quot;: &quot;Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal. Moves: F R.&quot;,
+        &quot;flipLeft&quot;: &quot;Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals. Moves: F&#39; L&#39;.&quot;,
+        &quot;U&quot;: &quot;Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.&quot;,
+        &quot;reconsider&quot;: &quot;No operation fits; reconsider.&quot;
+      }
+    },
+    &quot;situation_DR&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DR in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;flipRight&quot;,
+      &quot;probabilities&quot;: {
+        &quot;reconsider&quot;: 0.13,
+        &quot;U&quot;: 0.06,
+        &quot;flipRight&quot;: 0.53,
+        &quot;flipLeft&quot;: 0.23,
+        &quot;lift&quot;: 0.05
+      },
+      &quot;confidence&quot;: 0.4
+    },
+    &quot;situation_DR&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;top&quot;,
+      &quot;probabilities&quot;: {
+        &quot;bottomCorrect&quot;: 0,
+        &quot;absent&quot;: 0,
+        &quot;middle&quot;: 0,
+        &quot;bottomWrong&quot;: 0,
+        &quot;top&quot;: 1
+      },
+      &quot;confidence&quot;: 1
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 2829,
+    &quot;output_tokens&quot;: 118
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: false,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 7
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 1,
+    &quot;cross&quot;: false,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 12
+  }
+}</pre></details></article><article><h3>flipped-edge · broad</h3><p>Selected <b>flipRight</b>. Either flip puts the selected edge yellow-up; both landing slots are free.</p><p>Provider confidence: 0.3; 2050 input tokens; 258 ms; $0.00008610.</p><h4>action</h4><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.19"></meter><span>19%</span></div><div class="prob"><span>U</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><div class="prob"><span>flipLeft</span><meter min="0" max="1" value="0.22"></meter><span>22%</span></div><div class="prob"><span>flipRight</span><meter min="0" max="1" value="0.44"></meter><span>44%</span></div><div class="prob"><span>lift</span><meter min="0" max="1" value="0.1"></meter><span>10%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;daisy&quot;,
+    &quot;goal&quot;: &quot;Place the selected yellow edge on the top with yellow pointing up, preserving existing yellow-up petals. Its final bottom destination is not the current objective.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DR&quot;,
+      &quot;kind&quot;: &quot;edge&quot;,
+      &quot;position&quot;: &quot;UF&quot;,
+      &quot;destination&quot;: &quot;DR&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;F&quot;,
+        &quot;red&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;U&quot;
+      }
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;destination&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;destination&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;destination&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;kind&quot;: &quot;edge&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;destination&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;L&quot;,
+          &quot;orange&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: false,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 7
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: []
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.&quot;,
+      &quot;criteria&quot;: {
+        &quot;lift&quot;: &quot;Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal. Moves: F2.&quot;,
+        &quot;flipRight&quot;: &quot;Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal. Moves: F R.&quot;,
+        &quot;flipLeft&quot;: &quot;Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals. Moves: F&#39; L&#39;.&quot;,
+        &quot;U&quot;: &quot;Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.&quot;,
+        &quot;reconsider&quot;: &quot;No operation fits; reconsider.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;flipRight&quot;,
+      &quot;probabilities&quot;: {
+        &quot;reconsider&quot;: 0.19,
+        &quot;U&quot;: 0.05,
+        &quot;flipLeft&quot;: 0.22,
+        &quot;flipRight&quot;: 0.44,
+        &quot;lift&quot;: 0.1
+      },
+      &quot;confidence&quot;: 0.3
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 2050,
+    &quot;output_tokens&quot;: 60
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: false,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 7
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 1,
+    &quot;cross&quot;: false,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 12
+  }
+}</pre></details></article><article><h3>trapped-corner · broad</h3><p>Selected <b>extractRight</b>. Both R U R-prime and the right trigger extract this corner to U and restore the cross. U alone cannot move it.</p><p>Provider confidence: 0.76; 2371 input tokens; 265 ms; $0.00009958.</p><h4>action</h4><div class="prob"><span>extractRight</span><meter min="0" max="1" value="0.79"></meter><span>79%</span></div><div class="prob"><span>U&#39;</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>U</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.11"></meter><span>11%</span></div><div class="prob"><span>U2</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>insertFront</span><meter min="0" max="1" value="0.06"></meter><span>6%</span></div><div class="prob"><span>insertLeft</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>insertRight</span><meter min="0" max="1" value="0.04"></meter><span>4%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Make the twisted selected bottom corner available for reinsertion while preserving the bottom cross after the operation.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;DRF&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;F&quot;,
+        &quot;red&quot;: &quot;D&quot;,
+        &quot;green&quot;: &quot;R&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      }
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;B&quot;,
+          &quot;blue&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;blue&quot;: &quot;L&quot;,
+          &quot;orange&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: true,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 13
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: []
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.&quot;,
+      &quot;criteria&quot;: {
+        &quot;U&quot;: &quot;Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.&quot;,
+        &quot;U&#39;&quot;: &quot;Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.&quot;,
+        &quot;U2&quot;: &quot;Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.&quot;,
+        &quot;insertRight&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R&#39;.&quot;,
+        &quot;insertFront&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F&#39; U&#39; F.&quot;,
+        &quot;extractRight&quot;: &quot;Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R&#39; U&#39;.&quot;,
+        &quot;insertLeft&quot;: &quot;Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L&#39; U&#39; L.&quot;,
+        &quot;reconsider&quot;: &quot;Do not move. Reconsider the target or operation because none of these fits.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;extractRight&quot;,
+      &quot;probabilities&quot;: {
+        &quot;extractRight&quot;: 0.79,
+        &quot;U&#39;&quot;: 0,
+        &quot;U&quot;: 0,
+        &quot;reconsider&quot;: 0.11,
+        &quot;U2&quot;: 0,
+        &quot;insertFront&quot;: 0.06,
+        &quot;insertLeft&quot;: 0,
+        &quot;insertRight&quot;: 0.04
+      },
+      &quot;confidence&quot;: 0.76
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 2371,
+    &quot;output_tokens&quot;: 92
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: true,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 13
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: true,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 16
+  }
+}</pre></details></article><article><h3>trapped-corner · structured</h3><p>Selected <b>extractRight</b>. Both R U R-prime and the right trigger extract this corner to U and restore the cross. U alone cannot move it.</p><p>Provider confidence: 0.79; 3213 input tokens; 279 ms; $0.00013495.</p><h4>action</h4><div class="prob"><span>U</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.1"></meter><span>10%</span></div><div class="prob"><span>U2</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>insertFront</span><meter min="0" max="1" value="0.04"></meter><span>4%</span></div><div class="prob"><span>U&#39;</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>insertRight</span><meter min="0" max="1" value="0.04"></meter><span>4%</span></div><div class="prob"><span>insertLeft</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>extractRight</span><meter min="0" max="1" value="0.82"></meter><span>82%</span></div><h4>situation_DRF</h4><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>top</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0.02"></meter><span>2%</span></div><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0.98"></meter><span>98%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Make the twisted selected bottom corner available for reinsertion while preserving the bottom cross after the operation.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;DRF&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;F&quot;,
+        &quot;red&quot;: &quot;D&quot;,
+        &quot;green&quot;: &quot;R&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      },
+      &quot;locationWords&quot;: &quot;bottom right front&quot;,
+      &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+      &quot;layer&quot;: &quot;bottom&quot;,
+      &quot;stickerDirectionsInWords&quot;: {
+        &quot;yellow&quot;: &quot;front&quot;,
+        &quot;red&quot;: &quot;bottom&quot;,
+        &quot;green&quot;: &quot;right&quot;
+      },
+      &quot;directlyAboveHome&quot;: false,
+      &quot;sideStickersMatchingCenters&quot;: []
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;bottom right front&quot;,
+        &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;front&quot;,
+          &quot;red&quot;: &quot;bottom&quot;,
+          &quot;green&quot;: &quot;right&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: []
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom front left&quot;,
+        &quot;destinationWords&quot;: &quot;bottom front left&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;green&quot;: &quot;front&quot;,
+          &quot;orange&quot;: &quot;left&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;,
+          &quot;orange&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom left back&quot;,
+        &quot;destinationWords&quot;: &quot;bottom left back&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;orange&quot;: &quot;left&quot;,
+          &quot;blue&quot;: &quot;back&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;orange&quot;,
+          &quot;blue&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom back right&quot;,
+        &quot;destinationWords&quot;: &quot;bottom back right&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;blue&quot;: &quot;back&quot;,
+          &quot;red&quot;: &quot;right&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;blue&quot;,
+          &quot;red&quot;
+        ]
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;B&quot;,
+          &quot;blue&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;blue&quot;: &quot;L&quot;,
+          &quot;orange&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: true,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 13
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: [],
+    &quot;operationContract&quot;: {
+      &quot;frame&quot;: &quot;Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.&quot;,
+      &quot;preservation&quot;: &quot;Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.&quot;,
+      &quot;choiceBoundary&quot;: &quot;Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.&quot;,
+      &quot;task&quot;: &quot;Choose only the next operation or target. You are not asked to produce a full solution.&quot;
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: {
+        &quot;question&quot;: &quot;Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?&quot;,
+        &quot;guidance&quot;: &quot;Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate.&quot;
+      },
+      &quot;criteria&quot;: {
+        &quot;U&quot;: &quot;Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.&quot;,
+        &quot;U&#39;&quot;: &quot;Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.&quot;,
+        &quot;U2&quot;: &quot;Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.&quot;,
+        &quot;insertRight&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R&#39;.&quot;,
+        &quot;insertFront&quot;: &quot;Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F&#39; U&#39; F.&quot;,
+        &quot;extractRight&quot;: &quot;Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R&#39; U&#39;.&quot;,
+        &quot;insertLeft&quot;: &quot;Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L&#39; U&#39; L.&quot;,
+        &quot;reconsider&quot;: &quot;Do not move. Reconsider the target or operation because none of these fits.&quot;
+      }
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;extractRight&quot;,
+      &quot;probabilities&quot;: {
+        &quot;U&quot;: 0,
+        &quot;reconsider&quot;: 0.1,
+        &quot;U2&quot;: 0,
+        &quot;insertFront&quot;: 0.04,
+        &quot;U&#39;&quot;: 0,
+        &quot;insertRight&quot;: 0.04,
+        &quot;insertLeft&quot;: 0,
+        &quot;extractRight&quot;: 0.82
+      },
+      &quot;confidence&quot;: 0.79
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;bottomWrong&quot;,
+      &quot;probabilities&quot;: {
+        &quot;middle&quot;: 0,
+        &quot;top&quot;: 0,
+        &quot;absent&quot;: 0,
+        &quot;bottomCorrect&quot;: 0.02,
+        &quot;bottomWrong&quot;: 0.98
+      },
+      &quot;confidence&quot;: 0.98
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 3213,
+    &quot;output_tokens&quot;: 154
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: true,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 13
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: true,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 16
+  }
+}</pre></details></article><article><h3>competing-targets · structured</h3><p>Selected <b>DFL</b>. DFL is above its own slot with yellow facing L; DRF is trapped in the wrong bottom slot.</p><p>Provider confidence: 0.28; 2652 input tokens; 271 ms; $0.00011138.</p><h4>action</h4><div class="prob"><span>DRF</span><meter min="0" max="1" value="0.45"></meter><span>45%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.03"></meter><span>3%</span></div><div class="prob"><span>DFL</span><meter min="0" max="1" value="0.52"></meter><span>52%</span></div><h4>situation_DRF</h4><div class="prob"><span>top</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0.01"></meter><span>1%</span></div><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0.99"></meter><span>99%</span></div><h4>situation_DFL</h4><div class="prob"><span>top</span><meter min="0" max="1" value="0.95"></meter><span>95%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Choose which of the two unfinished corners to work on first. Prefer an immediate valid insertion over extraction when it preserves the bottom cross.&quot;,
+    &quot;target&quot;: &quot;whole&quot;,
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;top left front&quot;,
+        &quot;destinationWords&quot;: &quot;bottom front left&quot;,
+        &quot;layer&quot;: &quot;top&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;left&quot;,
+          &quot;green&quot;: &quot;front&quot;,
+          &quot;orange&quot;: &quot;top&quot;
+        },
+        &quot;directlyAboveHome&quot;: true,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;bottom front left&quot;,
+        &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;left&quot;,
+          &quot;red&quot;: &quot;bottom&quot;,
+          &quot;green&quot;: &quot;front&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom left back&quot;,
+        &quot;destinationWords&quot;: &quot;bottom left back&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;orange&quot;: &quot;left&quot;,
+          &quot;blue&quot;: &quot;back&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;orange&quot;,
+          &quot;blue&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom back right&quot;,
+        &quot;destinationWords&quot;: &quot;bottom back right&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;blue&quot;: &quot;back&quot;,
+          &quot;red&quot;: &quot;right&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;blue&quot;,
+          &quot;red&quot;
+        ]
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;F&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;orange&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 8
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: [],
+    &quot;operationContract&quot;: {
+      &quot;frame&quot;: &quot;Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.&quot;,
+      &quot;preservation&quot;: &quot;Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.&quot;,
+      &quot;choiceBoundary&quot;: &quot;Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.&quot;,
+      &quot;task&quot;: &quot;Choose only the next operation or target. You are not asked to produce a full solution.&quot;
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: {
+        &quot;question&quot;: &quot;Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?&quot;,
+        &quot;guidance&quot;: &quot;Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate.&quot;
+      },
+      &quot;criteria&quot;: {
+        &quot;DRF&quot;: &quot;Work on corner DRF.&quot;,
+        &quot;DFL&quot;: &quot;Work on corner DFL.&quot;,
+        &quot;reconsider&quot;: &quot;Neither target offers a suitable next operation.&quot;
+      }
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    },
+    &quot;situation_DFL&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DFL in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;DFL&quot;,
+      &quot;probabilities&quot;: {
+        &quot;DRF&quot;: 0.45,
+        &quot;reconsider&quot;: 0.03,
+        &quot;DFL&quot;: 0.52
+      },
+      &quot;confidence&quot;: 0.28
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;bottomWrong&quot;,
+      &quot;probabilities&quot;: {
+        &quot;top&quot;: 0,
+        &quot;absent&quot;: 0,
+        &quot;bottomCorrect&quot;: 0.01,
+        &quot;middle&quot;: 0,
+        &quot;bottomWrong&quot;: 0.99
+      },
+      &quot;confidence&quot;: 0.99
+    },
+    &quot;situation_DFL&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;top&quot;,
+      &quot;probabilities&quot;: {
+        &quot;top&quot;: 0.95,
+        &quot;absent&quot;: 0,
+        &quot;bottomCorrect&quot;: 0,
+        &quot;middle&quot;: 0,
+        &quot;bottomWrong&quot;: 0.05
+      },
+      &quot;confidence&quot;: 0.94
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 2652,
+    &quot;output_tokens&quot;: 164
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 8
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 8
+  }
+}</pre></details></article><article><h3>competing-targets · broad</h3><p>Selected <b>DRF</b>. DFL is above its own slot with yellow facing L; DRF is trapped in the wrong bottom slot.</p><p>Provider confidence: 0.22; 1762 input tokens; 247 ms; $0.00007400.</p><h4>action</h4><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.04"></meter><span>4%</span></div><div class="prob"><span>DRF</span><meter min="0" max="1" value="0.49"></meter><span>49%</span></div><div class="prob"><span>DFL</span><meter min="0" max="1" value="0.47"></meter><span>47%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Choose which of the two unfinished corners to work on first. Prefer an immediate valid insertion over extraction when it preserves the bottom cross.&quot;,
+    &quot;target&quot;: &quot;whole&quot;,
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;F&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;orange&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 8
+    },
+    &quot;recentActions&quot;: [],
+    &quot;executionHistory&quot;: []
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.&quot;,
+      &quot;criteria&quot;: {
+        &quot;DRF&quot;: &quot;Work on corner DRF.&quot;,
+        &quot;DFL&quot;: &quot;Work on corner DFL.&quot;,
+        &quot;reconsider&quot;: &quot;Neither target offers a suitable next operation.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;DRF&quot;,
+      &quot;probabilities&quot;: {
+        &quot;reconsider&quot;: 0.04,
+        &quot;DRF&quot;: 0.49,
+        &quot;DFL&quot;: 0.47
+      },
+      &quot;confidence&quot;: 0.22
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 1762,
+    &quot;output_tokens&quot;: 43
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 8
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 8
+  }
+}</pre></details></article><article><h3>temporary-disruption · broad</h3><p>Selected <b>finish</b>. The cross is temporarily disturbed after R U. Remaining R-prime completes the insertion and solves this fixture.</p><p>Provider confidence: 0.63; 2683 input tokens; 226 ms; $0.00011269.</p><h4>action</h4><div class="prob"><span>undo</span><meter min="0" max="1" value="0.05"></meter><span>5%</span></div><div class="prob"><span>restart</span><meter min="0" max="1" value="0.06"></meter><span>6%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.17"></meter><span>17%</span></div><div class="prob"><span>finish</span><meter min="0" max="1" value="0.72"></meter><span>72%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Finish the committed corner insertion if the recorded execution still matches it. Judge preservation at completion, allowing intermediate disruption.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;UFR&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;F&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      }
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: false,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 12
+    },
+    &quot;recentActions&quot;: [
+      &quot;R&quot;,
+      &quot;U&quot;
+    ],
+    &quot;executionHistory&quot;: [
+      {
+        &quot;move&quot;: &quot;R&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,1,8,2,4,5,6,7,0,9,10,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[4,1,0,2,3,5,6,7],\&quot;orientation\&quot;:[1,0,1,0,1,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[3,0,8,2,4,10,6,7,5,9,1,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[3,4,0,2,7,5,6,1],\&quot;orientation\&quot;:[0,2,1,0,1,0,0,2]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 12
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: false,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 7
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,0,8,2,4,10,6,7,5,9,1,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[3,4,0,2,7,5,6,1],\&quot;orientation\&quot;:[0,2,1,0,1,0,0,2]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[0,8,2,3,4,10,6,7,5,9,1,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[4,0,2,3,7,5,6,1],\&quot;orientation\&quot;:[2,1,0,0,1,0,0,2]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: false,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 7
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: false,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 12
+        }
+      }
+    ],
+    &quot;committedOperation&quot;: {
+      &quot;moves&quot;: &quot;R U R&#39;&quot;,
+      &quot;executed&quot;: [
+        &quot;R&quot;,
+        &quot;U&quot;
+      ],
+      &quot;remaining&quot;: [
+        &quot;R&#39;&quot;
+      ]
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.&quot;,
+      &quot;criteria&quot;: {
+        &quot;finish&quot;: &quot;Execute remaining R-prime of the committed insertion.&quot;,
+        &quot;undo&quot;: &quot;Undo only the last U turn.&quot;,
+        &quot;restart&quot;: &quot;Start the entire R U R-prime insertion again.&quot;,
+        &quot;reconsider&quot;: &quot;Abandon this operation and select a different target.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;finish&quot;,
+      &quot;probabilities&quot;: {
+        &quot;undo&quot;: 0.05,
+        &quot;restart&quot;: 0.06,
+        &quot;reconsider&quot;: 0.17,
+        &quot;finish&quot;: 0.72
+      },
+      &quot;confidence&quot;: 0.63
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 2683,
+    &quot;output_tokens&quot;: 47
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: false,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 12
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: true,
+    &quot;middle&quot;: true,
+    &quot;topCross&quot;: true,
+    &quot;topOriented&quot;: true,
+    &quot;cornersPlaced&quot;: true,
+    &quot;solved&quot;: true,
+    &quot;solvedPieces&quot;: 20
+  }
+}</pre></details></article><article><h3>temporary-disruption · structured</h3><p>Selected <b>finish</b>. The cross is temporarily disturbed after R U. Remaining R-prime completes the insertion and solves this fixture.</p><p>Provider confidence: 0.71; 3527 input tokens; 274 ms; $0.00014813.</p><h4>action</h4><div class="prob"><span>restart</span><meter min="0" max="1" value="0.04"></meter><span>4%</span></div><div class="prob"><span>reconsider</span><meter min="0" max="1" value="0.17"></meter><span>17%</span></div><div class="prob"><span>finish</span><meter min="0" max="1" value="0.78"></meter><span>78%</span></div><div class="prob"><span>undo</span><meter min="0" max="1" value="0.01"></meter><span>1%</span></div><h4>situation_DRF</h4><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>top</span><meter min="0" max="1" value="1"></meter><span>100%</span></div><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Finish the committed corner insertion if the recorded execution still matches it. Judge preservation at completion, allowing intermediate disruption.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;UFR&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;F&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      },
+      &quot;locationWords&quot;: &quot;top front right&quot;,
+      &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+      &quot;layer&quot;: &quot;top&quot;,
+      &quot;stickerDirectionsInWords&quot;: {
+        &quot;yellow&quot;: &quot;front&quot;,
+        &quot;red&quot;: &quot;right&quot;,
+        &quot;green&quot;: &quot;top&quot;
+      },
+      &quot;directlyAboveHome&quot;: true,
+      &quot;sideStickersMatchingCenters&quot;: [
+        &quot;red&quot;
+      ]
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;top front right&quot;,
+        &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+        &quot;layer&quot;: &quot;top&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;front&quot;,
+          &quot;red&quot;: &quot;right&quot;,
+          &quot;green&quot;: &quot;top&quot;
+        },
+        &quot;directlyAboveHome&quot;: true,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;red&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;bottom right front&quot;,
+        &quot;destinationWords&quot;: &quot;bottom back right&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;front&quot;,
+          &quot;blue&quot;: &quot;bottom&quot;,
+          &quot;red&quot;: &quot;right&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;red&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom front left&quot;,
+        &quot;destinationWords&quot;: &quot;bottom front left&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;green&quot;: &quot;front&quot;,
+          &quot;orange&quot;: &quot;left&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;,
+          &quot;orange&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom left back&quot;,
+        &quot;destinationWords&quot;: &quot;bottom left back&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;orange&quot;: &quot;left&quot;,
+          &quot;blue&quot;: &quot;back&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;orange&quot;,
+          &quot;blue&quot;
+        ]
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;F&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;U&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: false,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 12
+    },
+    &quot;recentActions&quot;: [
+      &quot;R&quot;,
+      &quot;U&quot;
+    ],
+    &quot;executionHistory&quot;: [
+      {
+        &quot;move&quot;: &quot;R&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,1,8,2,4,5,6,7,0,9,10,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[4,1,0,2,3,5,6,7],\&quot;orientation\&quot;:[1,0,1,0,1,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[3,0,8,2,4,10,6,7,5,9,1,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[3,4,0,2,7,5,6,1],\&quot;orientation\&quot;:[0,2,1,0,1,0,0,2]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 12
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: false,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 7
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,0,8,2,4,10,6,7,5,9,1,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[3,4,0,2,7,5,6,1],\&quot;orientation\&quot;:[0,2,1,0,1,0,0,2]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[0,8,2,3,4,10,6,7,5,9,1,11],\&quot;orientation\&quot;:[0,0,0,0,0,0,0,0,0,0,0,0]},{\&quot;pieces\&quot;:[4,0,2,3,7,5,6,1],\&quot;orientation\&quot;:[2,1,0,0,1,0,0,2]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: false,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 7
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: false,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 12
+        }
+      }
+    ],
+    &quot;committedOperation&quot;: {
+      &quot;moves&quot;: &quot;R U R&#39;&quot;,
+      &quot;executed&quot;: [
+        &quot;R&quot;,
+        &quot;U&quot;
+      ],
+      &quot;remaining&quot;: [
+        &quot;R&#39;&quot;
+      ]
+    },
+    &quot;operationContract&quot;: {
+      &quot;frame&quot;: &quot;Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.&quot;,
+      &quot;preservation&quot;: &quot;Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.&quot;,
+      &quot;choiceBoundary&quot;: &quot;Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.&quot;,
+      &quot;task&quot;: &quot;Choose only the next operation or target. You are not asked to produce a full solution.&quot;
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: {
+        &quot;question&quot;: &quot;Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?&quot;,
+        &quot;guidance&quot;: &quot;Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate.&quot;
+      },
+      &quot;criteria&quot;: {
+        &quot;finish&quot;: &quot;Execute remaining R-prime of the committed insertion.&quot;,
+        &quot;undo&quot;: &quot;Undo only the last U turn.&quot;,
+        &quot;restart&quot;: &quot;Start the entire R U R-prime insertion again.&quot;,
+        &quot;reconsider&quot;: &quot;Abandon this operation and select a different target.&quot;
+      }
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;finish&quot;,
+      &quot;probabilities&quot;: {
+        &quot;restart&quot;: 0.04,
+        &quot;reconsider&quot;: 0.17,
+        &quot;finish&quot;: 0.78,
+        &quot;undo&quot;: 0.01
+      },
+      &quot;confidence&quot;: 0.71
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;top&quot;,
+      &quot;probabilities&quot;: {
+        &quot;bottomWrong&quot;: 0,
+        &quot;bottomCorrect&quot;: 0,
+        &quot;top&quot;: 1,
+        &quot;middle&quot;: 0,
+        &quot;absent&quot;: 0
+      },
+      &quot;confidence&quot;: 0.99
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 3527,
+    &quot;output_tokens&quot;: 106
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: false,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 12
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: true,
+    &quot;middle&quot;: true,
+    &quot;topCross&quot;: true,
+    &quot;topOriented&quot;: true,
+    &quot;cornersPlaced&quot;: true,
+    &quot;solved&quot;: true,
+    &quot;solvedPieces&quot;: 20
+  }
+}</pre></details></article><article><h3>repeated-state · structured</h3><p>Selected <b>inspect</b>. U and undo repeat the recorded cycle. Alternative U-prime stages the target; retarget/inspect are also valid recovery decisions.</p><p>Provider confidence: 0.46; 4250 input tokens; 249 ms; $0.00017850.</p><h4>action</h4><div class="prob"><span>repeat</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>inspect</span><meter min="0" max="1" value="0.57"></meter><span>57%</span></div><div class="prob"><span>alternative</span><meter min="0" max="1" value="0.16"></meter><span>16%</span></div><div class="prob"><span>retarget</span><meter min="0" max="1" value="0.25"></meter><span>25%</span></div><div class="prob"><span>undo</span><meter min="0" max="1" value="0.02"></meter><span>2%</span></div><h4>situation_DRF</h4><div class="prob"><span>bottomCorrect</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>bottomWrong</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>top</span><meter min="0" max="1" value="1"></meter><span>100%</span></div><div class="prob"><span>absent</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><div class="prob"><span>middle</span><meter min="0" max="1" value="0"></meter><span>0%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Break the observed no-progress cycle. Choose a different operation from the same state, change target, or stop for inspection.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;ULF&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;L&quot;,
+        &quot;red&quot;: &quot;F&quot;,
+        &quot;green&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      },
+      &quot;locationWords&quot;: &quot;top left front&quot;,
+      &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+      &quot;layer&quot;: &quot;top&quot;,
+      &quot;stickerDirectionsInWords&quot;: {
+        &quot;yellow&quot;: &quot;left&quot;,
+        &quot;red&quot;: &quot;front&quot;,
+        &quot;green&quot;: &quot;top&quot;
+      },
+      &quot;directlyAboveHome&quot;: false,
+      &quot;sideStickersMatchingCenters&quot;: []
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false,
+        &quot;locationWords&quot;: &quot;top left front&quot;,
+        &quot;destinationWords&quot;: &quot;bottom right front&quot;,
+        &quot;layer&quot;: &quot;top&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;left&quot;,
+          &quot;red&quot;: &quot;front&quot;,
+          &quot;green&quot;: &quot;top&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: []
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom front left&quot;,
+        &quot;destinationWords&quot;: &quot;bottom front left&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;green&quot;: &quot;front&quot;,
+          &quot;orange&quot;: &quot;left&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;green&quot;,
+          &quot;orange&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom left back&quot;,
+        &quot;destinationWords&quot;: &quot;bottom left back&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;orange&quot;: &quot;left&quot;,
+          &quot;blue&quot;: &quot;back&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;orange&quot;,
+          &quot;blue&quot;
+        ]
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true,
+        &quot;locationWords&quot;: &quot;bottom back right&quot;,
+        &quot;destinationWords&quot;: &quot;bottom back right&quot;,
+        &quot;layer&quot;: &quot;bottom&quot;,
+        &quot;stickerDirectionsInWords&quot;: {
+          &quot;yellow&quot;: &quot;bottom&quot;,
+          &quot;blue&quot;: &quot;back&quot;,
+          &quot;red&quot;: &quot;right&quot;
+        },
+        &quot;directlyAboveHome&quot;: false,
+        &quot;sideStickersMatchingCenters&quot;: [
+          &quot;blue&quot;,
+          &quot;red&quot;
+        ]
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 10
+    },
+    &quot;recentActions&quot;: [
+      &quot;U&quot;,
+      &quot;U&#39;&quot;,
+      &quot;U&quot;,
+      &quot;U&#39;&quot;
+    ],
+    &quot;executionHistory&quot;: [
+      {
+        &quot;move&quot;: &quot;U&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&#39;&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&#39;&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      }
+    ],
+    &quot;lastActionWasUndo&quot;: true,
+    &quot;operationContract&quot;: {
+      &quot;frame&quot;: &quot;Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.&quot;,
+      &quot;preservation&quot;: &quot;Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.&quot;,
+      &quot;choiceBoundary&quot;: &quot;Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.&quot;,
+      &quot;task&quot;: &quot;Choose only the next operation or target. You are not asked to produce a full solution.&quot;
+    }
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: {
+        &quot;question&quot;: &quot;Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?&quot;,
+        &quot;guidance&quot;: &quot;Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate.&quot;
+      },
+      &quot;criteria&quot;: {
+        &quot;repeat&quot;: &quot;Execute U again.&quot;,
+        &quot;undo&quot;: &quot;Undo the last action again (execute U).&quot;,
+        &quot;alternative&quot;: &quot;Execute U-prime instead of repeating U.&quot;,
+        &quot;retarget&quot;: &quot;Choose a different target without moving.&quot;,
+        &quot;inspect&quot;: &quot;Stop this probe to inspect the failure.&quot;
+      }
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.&quot;,
+      &quot;criteria&quot;: {
+        &quot;top&quot;: &quot;In the top layer.&quot;,
+        &quot;bottomCorrect&quot;: &quot;In its bottom home slot with correct orientation.&quot;,
+        &quot;bottomWrong&quot;: &quot;In the bottom layer but misplaced or twisted.&quot;,
+        &quot;middle&quot;: &quot;In the middle layer.&quot;,
+        &quot;absent&quot;: &quot;Not present in stagePieces.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;inspect&quot;,
+      &quot;probabilities&quot;: {
+        &quot;repeat&quot;: 0,
+        &quot;inspect&quot;: 0.57,
+        &quot;alternative&quot;: 0.16,
+        &quot;retarget&quot;: 0.25,
+        &quot;undo&quot;: 0.02
+      },
+      &quot;confidence&quot;: 0.46
+    },
+    &quot;situation_DRF&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;top&quot;,
+      &quot;probabilities&quot;: {
+        &quot;bottomCorrect&quot;: 0,
+        &quot;bottomWrong&quot;: 0,
+        &quot;top&quot;: 1,
+        &quot;absent&quot;: 0,
+        &quot;middle&quot;: 0
+      },
+      &quot;confidence&quot;: 1
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 4250,
+    &quot;output_tokens&quot;: 112
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  }
+}</pre></details></article><article><h3>repeated-state · broad</h3><p>Selected <b>inspect</b>. U and undo repeat the recorded cycle. Alternative U-prime stages the target; retarget/inspect are also valid recovery decisions.</p><p>Provider confidence: 0.65; 3408 input tokens; 284 ms; $0.00014314.</p><h4>action</h4><div class="prob"><span>repeat</span><meter min="0" max="1" value="0.01"></meter><span>1%</span></div><div class="prob"><span>retarget</span><meter min="0" max="1" value="0.1"></meter><span>10%</span></div><div class="prob"><span>alternative</span><meter min="0" max="1" value="0.14"></meter><span>14%</span></div><div class="prob"><span>inspect</span><meter min="0" max="1" value="0.72"></meter><span>72%</span></div><div class="prob"><span>undo</span><meter min="0" max="1" value="0.03"></meter><span>3%</span></div><details><summary>Exact request</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: {
+      &quot;centers&quot;: {
+        &quot;U&quot;: &quot;white&quot;,
+        &quot;D&quot;: &quot;yellow&quot;,
+        &quot;F&quot;: &quot;green&quot;,
+        &quot;B&quot;: &quot;blue&quot;,
+        &quot;R&quot;: &quot;red&quot;,
+        &quot;L&quot;: &quot;orange&quot;
+      },
+      &quot;note&quot;: &quot;Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face.&quot;
+    },
+    &quot;stage&quot;: &quot;first-layer&quot;,
+    &quot;goal&quot;: &quot;Break the observed no-progress cycle. Choose a different operation from the same state, change target, or stop for inspection.&quot;,
+    &quot;target&quot;: {
+      &quot;piece&quot;: &quot;DRF&quot;,
+      &quot;kind&quot;: &quot;corner&quot;,
+      &quot;position&quot;: &quot;ULF&quot;,
+      &quot;destination&quot;: &quot;DRF&quot;,
+      &quot;stickers&quot;: {
+        &quot;yellow&quot;: &quot;L&quot;,
+        &quot;red&quot;: &quot;F&quot;,
+        &quot;green&quot;: &quot;U&quot;
+      },
+      &quot;solved&quot;: false,
+      &quot;requiredStickerDirections&quot;: {
+        &quot;yellow&quot;: &quot;D&quot;,
+        &quot;red&quot;: &quot;R&quot;,
+        &quot;green&quot;: &quot;F&quot;
+      }
+    },
+    &quot;stagePieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;DRF&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;ULF&quot;,
+        &quot;destination&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;L&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;green&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false,
+        &quot;satisfiesStageGoal&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DFL&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DFL&quot;,
+        &quot;destination&quot;: &quot;DFL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DLB&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DLB&quot;,
+        &quot;destination&quot;: &quot;DLB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DBR&quot;,
+        &quot;kind&quot;: &quot;corner&quot;,
+        &quot;position&quot;: &quot;DBR&quot;,
+        &quot;destination&quot;: &quot;DBR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true,
+        &quot;satisfiesStageGoal&quot;: true
+      }
+    ],
+    &quot;otherPieces&quot;: [
+      {
+        &quot;piece&quot;: &quot;UB&quot;,
+        &quot;position&quot;: &quot;UF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UL&quot;,
+        &quot;position&quot;: &quot;UR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FR&quot;,
+        &quot;position&quot;: &quot;UB&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UF&quot;,
+        &quot;position&quot;: &quot;UL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;DF&quot;,
+        &quot;position&quot;: &quot;DF&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;green&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DR&quot;,
+        &quot;position&quot;: &quot;DR&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DB&quot;,
+        &quot;position&quot;: &quot;DB&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;blue&quot;: &quot;B&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;DL&quot;,
+        &quot;position&quot;: &quot;DL&quot;,
+        &quot;stickers&quot;: {
+          &quot;yellow&quot;: &quot;D&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UR&quot;,
+        &quot;position&quot;: &quot;FR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;FL&quot;,
+        &quot;position&quot;: &quot;FL&quot;,
+        &quot;stickers&quot;: {
+          &quot;green&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BR&quot;,
+        &quot;position&quot;: &quot;BR&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;BL&quot;,
+        &quot;position&quot;: &quot;BL&quot;,
+        &quot;stickers&quot;: {
+          &quot;blue&quot;: &quot;B&quot;,
+          &quot;orange&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: true
+      },
+      {
+        &quot;piece&quot;: &quot;UBL&quot;,
+        &quot;position&quot;: &quot;UFR&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;blue&quot;: &quot;F&quot;,
+          &quot;orange&quot;: &quot;R&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;UFR&quot;,
+        &quot;position&quot;: &quot;URB&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;green&quot;: &quot;B&quot;,
+          &quot;red&quot;: &quot;U&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;ULF&quot;,
+        &quot;position&quot;: &quot;UBL&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;U&quot;,
+          &quot;orange&quot;: &quot;B&quot;,
+          &quot;green&quot;: &quot;L&quot;
+        },
+        &quot;solved&quot;: false
+      },
+      {
+        &quot;piece&quot;: &quot;URB&quot;,
+        &quot;position&quot;: &quot;DRF&quot;,
+        &quot;stickers&quot;: {
+          &quot;white&quot;: &quot;R&quot;,
+          &quot;red&quot;: &quot;F&quot;,
+          &quot;blue&quot;: &quot;D&quot;
+        },
+        &quot;solved&quot;: false
+      }
+    ],
+    &quot;completed&quot;: {
+      &quot;daisy&quot;: 0,
+      &quot;cross&quot;: true,
+      &quot;firstLayer&quot;: false,
+      &quot;middle&quot;: false,
+      &quot;topCross&quot;: false,
+      &quot;topOriented&quot;: false,
+      &quot;cornersPlaced&quot;: false,
+      &quot;solved&quot;: false,
+      &quot;solvedPieces&quot;: 10
+    },
+    &quot;recentActions&quot;: [
+      &quot;U&quot;,
+      &quot;U&#39;&quot;,
+      &quot;U&quot;,
+      &quot;U&#39;&quot;
+    ],
+    &quot;executionHistory&quot;: [
+      {
+        &quot;move&quot;: &quot;U&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&#39;&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      },
+      {
+        &quot;move&quot;: &quot;U&#39;&quot;,
+        &quot;before&quot;: &quot;[{\&quot;pieces\&quot;:[3,8,0,2,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,1,0,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[0,3,4,2,1,5,6,7],\&quot;orientation\&quot;:[2,0,2,0,2,0,0,0]}]&quot;,
+        &quot;after&quot;: &quot;[{\&quot;pieces\&quot;:[2,3,8,0,4,5,6,7,1,9,10,11],\&quot;orientation\&quot;:[0,0,1,0,0,0,0,0,1,0,0,0]},{\&quot;pieces\&quot;:[2,0,3,4,1,5,6,7],\&quot;orientation\&quot;:[0,2,0,2,2,0,0,0]}]&quot;,
+        &quot;factsBefore&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        },
+        &quot;factsAfter&quot;: {
+          &quot;daisy&quot;: 0,
+          &quot;cross&quot;: true,
+          &quot;firstLayer&quot;: false,
+          &quot;middle&quot;: false,
+          &quot;topCross&quot;: false,
+          &quot;topOriented&quot;: false,
+          &quot;cornersPlaced&quot;: false,
+          &quot;solved&quot;: false,
+          &quot;solvedPieces&quot;: 10
+        }
+      }
+    ],
+    &quot;lastActionWasUndo&quot;: true
+  },
+  &quot;questions&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;instructions&quot;: &quot;Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.&quot;,
+      &quot;criteria&quot;: {
+        &quot;repeat&quot;: &quot;Execute U again.&quot;,
+        &quot;undo&quot;: &quot;Undo the last action again (execute U).&quot;,
+        &quot;alternative&quot;: &quot;Execute U-prime instead of repeating U.&quot;,
+        &quot;retarget&quot;: &quot;Choose a different target without moving.&quot;,
+        &quot;inspect&quot;: &quot;Stop this probe to inspect the failure.&quot;
+      }
+    }
+  }
+}</pre></details><details><summary>Native response</summary><pre>{
+  &quot;model&quot;: &quot;jev-1.13.0&quot;,
+  &quot;answers&quot;: {
+    &quot;action&quot;: {
+      &quot;type&quot;: &quot;choice&quot;,
+      &quot;choice&quot;: &quot;inspect&quot;,
+      &quot;probabilities&quot;: {
+        &quot;repeat&quot;: 0.01,
+        &quot;retarget&quot;: 0.1,
+        &quot;alternative&quot;: 0.14,
+        &quot;inspect&quot;: 0.72,
+        &quot;undo&quot;: 0.03
+      },
+      &quot;confidence&quot;: 0.65
+    }
+  },
+  &quot;usage&quot;: {
+    &quot;input_tokens&quot;: 3408,
+    &quot;output_tokens&quot;: 53
+  }
+}</pre></details><details><summary>Offline action effects</summary><pre>{
+  &quot;before&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  },
+  &quot;after&quot;: {
+    &quot;daisy&quot;: 0,
+    &quot;cross&quot;: true,
+    &quot;firstLayer&quot;: false,
+    &quot;middle&quot;: false,
+    &quot;topCross&quot;: false,
+    &quot;topOriented&quot;: false,
+    &quot;cornersPlaced&quot;: false,
+    &quot;solved&quot;: false,
+    &quot;solvedPieces&quot;: 10
+  }
+}</pre></details></article></html>

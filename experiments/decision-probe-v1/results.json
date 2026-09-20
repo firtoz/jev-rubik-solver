@@ -1,0 +1,6747 @@
+{
+  "fingerprint": "684e0b21e5376c6f879fe5bf3c2cc95e27de435918fc9dca71fa2bad105890e3",
+  "attempts": 12,
+  "budgetBefore": {
+    "cap": 5,
+    "reservedAndSpent": 0.6757478280000001,
+    "usage": 0.6730598280000001,
+    "reserved": 0.0026880000000000003,
+    "attempts": 9162,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "budgetAfter": {
+    "cap": 5,
+    "reservedAndSpent": 0.6771896460000001,
+    "usage": 0.6745016460000001,
+    "reserved": 0.0026880000000000003,
+    "attempts": 9174,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "results": [
+    {
+      "fixture": "alignment",
+      "style": "broad",
+      "runId": "86689f6f-cce9-4e13-ae9c-2aea5ca42821",
+      "accepted": true,
+      "choice": "U'",
+      "confidence": 0.2,
+      "expected": [
+        "U'"
+      ],
+      "rationale": "U-prime places DRF at UFR; the cross stays complete. This is a setup, not a finished insertion.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            2,
+            3,
+            8,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            4,
+            2,
+            0,
+            3,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            2,
+            0,
+            2,
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 12
+        }
+      },
+      "id": "5e9f8fe3-4690-403d-9f36-2382f30d4c92",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Prepare the selected corner for insertion into its home; complete the bottom corners while preserving the bottom cross.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "ULF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "L",
+              "red": "F",
+              "green": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            }
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "ULF",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "L",
+                "red": "F",
+                "green": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UB",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "blue": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UB",
+              "stickers": {
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "R",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UBL",
+              "position": "UFR",
+              "stickers": {
+                "white": "U",
+                "blue": "F",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "orange": "B",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "DRF",
+              "stickers": {
+                "white": "R",
+                "red": "F",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 10
+          },
+          "recentActions": [],
+          "executionHistory": []
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.",
+            "criteria": {
+              "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.",
+              "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.",
+              "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.",
+              "insertRight": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R'.",
+              "insertFront": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F' U' F.",
+              "extractRight": "Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R' U'.",
+              "insertLeft": "Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L' U' L.",
+              "reconsider": "Do not move. Reconsider the target or operation because none of these fits."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "U'",
+            "probabilities": {
+              "U": 0.1,
+              "extractRight": 0.1,
+              "insertRight": 0.05,
+              "reconsider": 0.23,
+              "insertFront": 0.02,
+              "U'": 0.29,
+              "U2": 0.16,
+              "insertLeft": 0.05
+            },
+            "confidence": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 2371,
+          "output_tokens": 90
+        }
+      },
+      "elapsedMs": 590.952104,
+      "cost": 0.00009958200000000001
+    },
+    {
+      "fixture": "alignment",
+      "style": "structured",
+      "runId": "c5c24cb0-0851-440c-bbbe-c869b0441f1a",
+      "accepted": false,
+      "choice": "reconsider",
+      "confidence": 0.27,
+      "expected": [
+        "U'"
+      ],
+      "rationale": "U-prime places DRF at UFR; the cross stays complete. This is a setup, not a finished insertion.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        }
+      },
+      "id": "c5632259-7307-4758-9743-40d1d19cdb10",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Prepare the selected corner for insertion into its home; complete the bottom corners while preserving the bottom cross.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "ULF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "L",
+              "red": "F",
+              "green": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            },
+            "locationWords": "top left front",
+            "destinationWords": "bottom right front",
+            "layer": "top",
+            "stickerDirectionsInWords": {
+              "yellow": "left",
+              "red": "front",
+              "green": "top"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": []
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "ULF",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "L",
+                "red": "F",
+                "green": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "top left front",
+              "destinationWords": "bottom right front",
+              "layer": "top",
+              "stickerDirectionsInWords": {
+                "yellow": "left",
+                "red": "front",
+                "green": "top"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom front left",
+              "destinationWords": "bottom front left",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "green": "front",
+                "orange": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "green",
+                "orange"
+              ]
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom left back",
+              "destinationWords": "bottom left back",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "orange": "left",
+                "blue": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "orange",
+                "blue"
+              ]
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom back right",
+              "destinationWords": "bottom back right",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "blue": "back",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "blue",
+                "red"
+              ]
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UB",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "blue": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UB",
+              "stickers": {
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "R",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UBL",
+              "position": "UFR",
+              "stickers": {
+                "white": "U",
+                "blue": "F",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "orange": "B",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "DRF",
+              "stickers": {
+                "white": "R",
+                "red": "F",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 10
+          },
+          "recentActions": [],
+          "executionHistory": [],
+          "operationContract": {
+            "frame": "Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.",
+            "preservation": "Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.",
+            "choiceBoundary": "Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.",
+            "task": "Choose only the next operation or target. You are not asked to produce a full solution."
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": {
+              "question": "Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?",
+              "guidance": "Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate."
+            },
+            "criteria": {
+              "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.",
+              "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.",
+              "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.",
+              "insertRight": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R'.",
+              "insertFront": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F' U' F.",
+              "extractRight": "Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R' U'.",
+              "insertLeft": "Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L' U' L.",
+              "reconsider": "Do not move. Reconsider the target or operation because none of these fits."
+            }
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "instructions": "Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "reconsider",
+            "probabilities": {
+              "insertLeft": 0.05,
+              "extractRight": 0.03,
+              "reconsider": 0.36,
+              "U": 0.15,
+              "insertFront": 0.02,
+              "insertRight": 0.05,
+              "U2": 0.12,
+              "U'": 0.22
+            },
+            "confidence": 0.27
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "choice": "top",
+            "probabilities": {
+              "top": 1,
+              "absent": 0,
+              "bottomCorrect": 0,
+              "bottomWrong": 0,
+              "middle": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 3213,
+          "output_tokens": 150
+        }
+      },
+      "elapsedMs": 304.0444389999999,
+      "cost": 0.00013494600000000002
+    },
+    {
+      "fixture": "flipped-edge",
+      "style": "structured",
+      "runId": "d307298b-735a-4222-84cc-1c1f48790d9a",
+      "accepted": true,
+      "choice": "flipRight",
+      "confidence": 0.4,
+      "expected": [
+        "flipRight",
+        "flipLeft"
+      ],
+      "rationale": "Either flip puts the selected edge yellow-up; both landing slots are free.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            5,
+            8,
+            2,
+            3,
+            9,
+            10,
+            6,
+            7,
+            4,
+            0,
+            1,
+            11
+          ],
+          "orientation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            0,
+            2,
+            4,
+            5,
+            3,
+            6,
+            1
+          ],
+          "orientation": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            5,
+            2,
+            3,
+            4,
+            1,
+            6,
+            7,
+            10,
+            9,
+            8,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            4,
+            2,
+            3,
+            1,
+            5,
+            6,
+            0
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 7
+        },
+        "after": {
+          "daisy": 1,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 12
+        }
+      },
+      "id": "2462745c-25cb-4331-8016-46b2eed20142",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "daisy",
+          "goal": "Place the selected yellow edge on the top with yellow pointing up, preserving existing yellow-up petals. Its final bottom destination is not the current objective.",
+          "target": {
+            "piece": "DR",
+            "kind": "edge",
+            "position": "UF",
+            "destination": "DR",
+            "stickers": {
+              "yellow": "F",
+              "red": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "U"
+            },
+            "locationWords": "top front",
+            "destinationWords": "bottom right",
+            "layer": "top",
+            "stickerDirectionsInWords": {
+              "yellow": "front",
+              "red": "top"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": []
+          },
+          "stagePieces": [
+            {
+              "piece": "DR",
+              "kind": "edge",
+              "position": "UF",
+              "destination": "DR",
+              "stickers": {
+                "yellow": "F",
+                "red": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "top front",
+              "destinationWords": "bottom right",
+              "layer": "top",
+              "stickerDirectionsInWords": {
+                "yellow": "front",
+                "red": "top"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            {
+              "piece": "DB",
+              "kind": "edge",
+              "position": "DB",
+              "destination": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": false,
+              "locationWords": "bottom back",
+              "destinationWords": "bottom back",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "blue": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "blue"
+              ]
+            },
+            {
+              "piece": "DL",
+              "kind": "edge",
+              "position": "DL",
+              "destination": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": false,
+              "locationWords": "bottom left",
+              "destinationWords": "bottom left",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "orange": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "orange"
+              ]
+            },
+            {
+              "piece": "DF",
+              "kind": "edge",
+              "position": "FR",
+              "destination": "DF",
+              "stickers": {
+                "yellow": "R",
+                "green": "F"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "front right",
+              "destinationWords": "bottom front",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "yellow": "right",
+                "green": "front"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "green"
+              ]
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "FR",
+              "position": "UR",
+              "stickers": {
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UB",
+              "position": "UB",
+              "stickers": {
+                "white": "U",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UL",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "FL",
+              "position": "DF",
+              "stickers": {
+                "green": "F",
+                "orange": "D"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BR",
+              "position": "DR",
+              "stickers": {
+                "blue": "D",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "FL",
+              "stickers": {
+                "white": "L",
+                "green": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UR",
+              "position": "BR",
+              "stickers": {
+                "white": "B",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DBR",
+              "position": "UFR",
+              "stickers": {
+                "yellow": "F",
+                "blue": "R",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "B",
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UBL",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DRF",
+              "position": "ULF",
+              "stickers": {
+                "yellow": "F",
+                "red": "U",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DFL",
+              "position": "DRF",
+              "stickers": {
+                "yellow": "R",
+                "green": "F",
+                "orange": "D"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "DFL",
+              "stickers": {
+                "white": "L",
+                "orange": "D",
+                "green": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DLB",
+              "position": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "URB",
+              "position": "DBR",
+              "stickers": {
+                "white": "B",
+                "red": "R",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": false,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 7
+          },
+          "recentActions": [],
+          "executionHistory": [],
+          "operationContract": {
+            "frame": "Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.",
+            "preservation": "Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.",
+            "choiceBoundary": "Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.",
+            "task": "Choose only the next operation or target. You are not asked to produce a full solution."
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": {
+              "question": "Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?",
+              "guidance": "Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate."
+            },
+            "criteria": {
+              "lift": "Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal. Moves: F2.",
+              "flipRight": "Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal. Moves: F R.",
+              "flipLeft": "Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals. Moves: F' L'.",
+              "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.",
+              "reconsider": "No operation fits; reconsider."
+            }
+          },
+          "situation_DR": {
+            "type": "choice",
+            "instructions": "Describe piece DR in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "flipRight",
+            "probabilities": {
+              "reconsider": 0.13,
+              "U": 0.06,
+              "flipRight": 0.53,
+              "flipLeft": 0.23,
+              "lift": 0.05
+            },
+            "confidence": 0.4
+          },
+          "situation_DR": {
+            "type": "choice",
+            "choice": "top",
+            "probabilities": {
+              "bottomCorrect": 0,
+              "absent": 0,
+              "middle": 0,
+              "bottomWrong": 0,
+              "top": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 2829,
+          "output_tokens": 118
+        }
+      },
+      "elapsedMs": 224.84769199999982,
+      "cost": 0.00011881800000000001
+    },
+    {
+      "fixture": "flipped-edge",
+      "style": "broad",
+      "runId": "c160f77e-4c79-43f2-844b-f14bdab1afd2",
+      "accepted": true,
+      "choice": "flipRight",
+      "confidence": 0.3,
+      "expected": [
+        "flipRight",
+        "flipLeft"
+      ],
+      "rationale": "Either flip puts the selected edge yellow-up; both landing slots are free.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            5,
+            8,
+            2,
+            3,
+            9,
+            10,
+            6,
+            7,
+            4,
+            0,
+            1,
+            11
+          ],
+          "orientation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            0,
+            2,
+            4,
+            5,
+            3,
+            6,
+            1
+          ],
+          "orientation": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            5,
+            2,
+            3,
+            4,
+            1,
+            6,
+            7,
+            10,
+            9,
+            8,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            4,
+            2,
+            3,
+            1,
+            5,
+            6,
+            0
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 7
+        },
+        "after": {
+          "daisy": 1,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 12
+        }
+      },
+      "id": "2866905b-7e00-4f29-aca9-b045e2785c6b",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "daisy",
+          "goal": "Place the selected yellow edge on the top with yellow pointing up, preserving existing yellow-up petals. Its final bottom destination is not the current objective.",
+          "target": {
+            "piece": "DR",
+            "kind": "edge",
+            "position": "UF",
+            "destination": "DR",
+            "stickers": {
+              "yellow": "F",
+              "red": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "U"
+            }
+          },
+          "stagePieces": [
+            {
+              "piece": "DR",
+              "kind": "edge",
+              "position": "UF",
+              "destination": "DR",
+              "stickers": {
+                "yellow": "F",
+                "red": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DB",
+              "kind": "edge",
+              "position": "DB",
+              "destination": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DL",
+              "kind": "edge",
+              "position": "DL",
+              "destination": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DF",
+              "kind": "edge",
+              "position": "FR",
+              "destination": "DF",
+              "stickers": {
+                "yellow": "R",
+                "green": "F"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "FR",
+              "position": "UR",
+              "stickers": {
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UB",
+              "position": "UB",
+              "stickers": {
+                "white": "U",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UL",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "FL",
+              "position": "DF",
+              "stickers": {
+                "green": "F",
+                "orange": "D"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BR",
+              "position": "DR",
+              "stickers": {
+                "blue": "D",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "FL",
+              "stickers": {
+                "white": "L",
+                "green": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UR",
+              "position": "BR",
+              "stickers": {
+                "white": "B",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DBR",
+              "position": "UFR",
+              "stickers": {
+                "yellow": "F",
+                "blue": "R",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "B",
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UBL",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DRF",
+              "position": "ULF",
+              "stickers": {
+                "yellow": "F",
+                "red": "U",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DFL",
+              "position": "DRF",
+              "stickers": {
+                "yellow": "R",
+                "green": "F",
+                "orange": "D"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "DFL",
+              "stickers": {
+                "white": "L",
+                "orange": "D",
+                "green": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DLB",
+              "position": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "URB",
+              "position": "DBR",
+              "stickers": {
+                "white": "B",
+                "red": "R",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": false,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 7
+          },
+          "recentActions": [],
+          "executionHistory": []
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.",
+            "criteria": {
+              "lift": "Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal. Moves: F2.",
+              "flipRight": "Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal. Moves: F R.",
+              "flipLeft": "Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals. Moves: F' L'.",
+              "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.",
+              "reconsider": "No operation fits; reconsider."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "flipRight",
+            "probabilities": {
+              "reconsider": 0.19,
+              "U": 0.05,
+              "flipLeft": 0.22,
+              "flipRight": 0.44,
+              "lift": 0.1
+            },
+            "confidence": 0.3
+          }
+        },
+        "usage": {
+          "input_tokens": 2050,
+          "output_tokens": 60
+        }
+      },
+      "elapsedMs": 257.97706200000016,
+      "cost": 0.0000861
+    },
+    {
+      "fixture": "trapped-corner",
+      "style": "broad",
+      "runId": "0273757e-204b-4110-9929-7bf06a376130",
+      "accepted": true,
+      "choice": "extractRight",
+      "confidence": 0.76,
+      "expected": [
+        "extractRight",
+        "insertRight"
+      ],
+      "rationale": "Both R U R-prime and the right trigger extract this corner to U and restore the cross. U alone cannot move it.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            2,
+            8,
+            3,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            4,
+            2,
+            1,
+            3,
+            0,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": true,
+          "solved": false,
+          "solvedPieces": 13
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": true,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 16
+        }
+      },
+      "id": "d09f42ec-e78f-435f-83a0-82c9c4c8be24",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Make the twisted selected bottom corner available for reinsertion while preserving the bottom cross after the operation.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "DRF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "F",
+              "red": "D",
+              "green": "R"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            }
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "DRF",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "F",
+                "red": "D",
+                "green": "R"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UF",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UB",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "blue": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UB",
+              "stickers": {
+                "green": "U",
+                "red": "B"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "F",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UFR",
+              "position": "UFR",
+              "stickers": {
+                "white": "R",
+                "green": "U",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "red": "B",
+                "blue": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UBL",
+              "position": "UBL",
+              "stickers": {
+                "white": "B",
+                "blue": "L",
+                "orange": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "ULF",
+              "stickers": {
+                "white": "U",
+                "orange": "L",
+                "green": "F"
+              },
+              "solved": true
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": true,
+            "solved": false,
+            "solvedPieces": 13
+          },
+          "recentActions": [],
+          "executionHistory": []
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.",
+            "criteria": {
+              "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.",
+              "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.",
+              "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.",
+              "insertRight": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R'.",
+              "insertFront": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F' U' F.",
+              "extractRight": "Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R' U'.",
+              "insertLeft": "Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L' U' L.",
+              "reconsider": "Do not move. Reconsider the target or operation because none of these fits."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "extractRight",
+            "probabilities": {
+              "extractRight": 0.79,
+              "U'": 0,
+              "U": 0,
+              "reconsider": 0.11,
+              "U2": 0,
+              "insertFront": 0.06,
+              "insertLeft": 0,
+              "insertRight": 0.04
+            },
+            "confidence": 0.76
+          }
+        },
+        "usage": {
+          "input_tokens": 2371,
+          "output_tokens": 92
+        }
+      },
+      "elapsedMs": 265.13268100000005,
+      "cost": 0.00009958200000000001
+    },
+    {
+      "fixture": "trapped-corner",
+      "style": "structured",
+      "runId": "796cc4bb-019a-4123-b766-19009c786082",
+      "accepted": true,
+      "choice": "extractRight",
+      "confidence": 0.79,
+      "expected": [
+        "extractRight",
+        "insertRight"
+      ],
+      "rationale": "Both R U R-prime and the right trigger extract this corner to U and restore the cross. U alone cannot move it.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            2,
+            8,
+            3,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            4,
+            2,
+            1,
+            3,
+            0,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": true,
+          "solved": false,
+          "solvedPieces": 13
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": true,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 16
+        }
+      },
+      "id": "622eeaf3-7b87-4bac-866e-d0b400efb065",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Make the twisted selected bottom corner available for reinsertion while preserving the bottom cross after the operation.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "DRF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "F",
+              "red": "D",
+              "green": "R"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            },
+            "locationWords": "bottom right front",
+            "destinationWords": "bottom right front",
+            "layer": "bottom",
+            "stickerDirectionsInWords": {
+              "yellow": "front",
+              "red": "bottom",
+              "green": "right"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": []
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "DRF",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "F",
+                "red": "D",
+                "green": "R"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "bottom right front",
+              "destinationWords": "bottom right front",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "front",
+                "red": "bottom",
+                "green": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom front left",
+              "destinationWords": "bottom front left",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "green": "front",
+                "orange": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "green",
+                "orange"
+              ]
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom left back",
+              "destinationWords": "bottom left back",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "orange": "left",
+                "blue": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "orange",
+                "blue"
+              ]
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom back right",
+              "destinationWords": "bottom back right",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "blue": "back",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "blue",
+                "red"
+              ]
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UF",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UB",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "blue": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UB",
+              "stickers": {
+                "green": "U",
+                "red": "B"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "F",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UFR",
+              "position": "UFR",
+              "stickers": {
+                "white": "R",
+                "green": "U",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "red": "B",
+                "blue": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UBL",
+              "position": "UBL",
+              "stickers": {
+                "white": "B",
+                "blue": "L",
+                "orange": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "ULF",
+              "stickers": {
+                "white": "U",
+                "orange": "L",
+                "green": "F"
+              },
+              "solved": true
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": true,
+            "solved": false,
+            "solvedPieces": 13
+          },
+          "recentActions": [],
+          "executionHistory": [],
+          "operationContract": {
+            "frame": "Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.",
+            "preservation": "Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.",
+            "choiceBoundary": "Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.",
+            "task": "Choose only the next operation or target. You are not asked to produce a full solution."
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": {
+              "question": "Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?",
+              "guidance": "Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate."
+            },
+            "criteria": {
+              "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→L, L→B, B→R, R→F; the U sticker direction stays fixed. Corner positions: UFR→ULF, ULF→UBL, UBL→URB, URB→UFR. Edge positions: UF→UL, UL→UB, UB→UR, UR→UF.",
+              "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F→R, L→F, B→L, R→B; the U sticker direction stays fixed. Corner positions: UFR→URB, ULF→UFR, UBL→ULF, URB→UBL. Edge positions: UF→UR, UL→UF, UB→UL, UR→UB.",
+              "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F→B, L→R, B→F, R→L; the U sticker direction stays fixed. Corner positions: UFR→UBL, ULF→URB, UBL→UFR, URB→ULF. Edge positions: UF→UB, UL→UR, UB→UF, UR→UL.",
+              "insertRight": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first. Moves: R U R'.",
+              "insertFront": "Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F. Moves: F' U' F.",
+              "extractRight": "Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first. Moves: R U R' U'.",
+              "insertLeft": "Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first. Moves: L' U' L.",
+              "reconsider": "Do not move. Reconsider the target or operation because none of these fits."
+            }
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "instructions": "Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "extractRight",
+            "probabilities": {
+              "U": 0,
+              "reconsider": 0.1,
+              "U2": 0,
+              "insertFront": 0.04,
+              "U'": 0,
+              "insertRight": 0.04,
+              "insertLeft": 0,
+              "extractRight": 0.82
+            },
+            "confidence": 0.79
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "choice": "bottomWrong",
+            "probabilities": {
+              "middle": 0,
+              "top": 0,
+              "absent": 0,
+              "bottomCorrect": 0.02,
+              "bottomWrong": 0.98
+            },
+            "confidence": 0.98
+          }
+        },
+        "usage": {
+          "input_tokens": 3213,
+          "output_tokens": 154
+        }
+      },
+      "elapsedMs": 278.8089140000002,
+      "cost": 0.00013494600000000002
+    },
+    {
+      "fixture": "competing-targets",
+      "style": "structured",
+      "runId": "2d0cbf87-f8dc-409c-88f0-3ed7d5e6eb6d",
+      "accepted": true,
+      "choice": "DFL",
+      "confidence": 0.28,
+      "expected": [
+        "DFL"
+      ],
+      "rationale": "DFL is above its own slot with yellow facing L; DRF is trapped in the wrong bottom slot.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            9,
+            8,
+            4,
+            5,
+            6,
+            7,
+            1,
+            0,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            3,
+            0,
+            5,
+            1,
+            4,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            9,
+            8,
+            4,
+            5,
+            6,
+            7,
+            1,
+            0,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            3,
+            0,
+            5,
+            1,
+            4,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 8
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 8
+        }
+      },
+      "id": "732943fe-df70-4dbf-bf94-1a8a87abf512",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Choose which of the two unfinished corners to work on first. Prefer an immediate valid insertion over extraction when it preserves the bottom cross.",
+          "target": "whole",
+          "stagePieces": [
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "ULF",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "L",
+                "green": "F",
+                "orange": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "top left front",
+              "destinationWords": "bottom front left",
+              "layer": "top",
+              "stickerDirectionsInWords": {
+                "yellow": "left",
+                "green": "front",
+                "orange": "top"
+              },
+              "directlyAboveHome": true,
+              "sideStickersMatchingCenters": [
+                "green"
+              ]
+            },
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "L",
+                "red": "D",
+                "green": "F"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "bottom front left",
+              "destinationWords": "bottom right front",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "left",
+                "red": "bottom",
+                "green": "front"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "green"
+              ]
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom left back",
+              "destinationWords": "bottom left back",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "orange": "left",
+                "blue": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "orange",
+                "blue"
+              ]
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom back right",
+              "destinationWords": "bottom back right",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "blue": "back",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "blue",
+                "red"
+              ]
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UB",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "blue": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "UB",
+              "stickers": {
+                "green": "U",
+                "orange": "B"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UL",
+              "stickers": {
+                "green": "L",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "R",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "FL",
+              "stickers": {
+                "white": "F",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UBL",
+              "position": "UFR",
+              "stickers": {
+                "white": "U",
+                "blue": "F",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "orange": "B",
+                "green": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "UBL",
+              "stickers": {
+                "white": "B",
+                "green": "L",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "DRF",
+              "stickers": {
+                "white": "R",
+                "red": "F",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 8
+          },
+          "recentActions": [],
+          "executionHistory": [],
+          "operationContract": {
+            "frame": "Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.",
+            "preservation": "Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.",
+            "choiceBoundary": "Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.",
+            "task": "Choose only the next operation or target. You are not asked to produce a full solution."
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": {
+              "question": "Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?",
+              "guidance": "Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate."
+            },
+            "criteria": {
+              "DRF": "Work on corner DRF.",
+              "DFL": "Work on corner DFL.",
+              "reconsider": "Neither target offers a suitable next operation."
+            }
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "instructions": "Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          },
+          "situation_DFL": {
+            "type": "choice",
+            "instructions": "Describe piece DFL in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "DFL",
+            "probabilities": {
+              "DRF": 0.45,
+              "reconsider": 0.03,
+              "DFL": 0.52
+            },
+            "confidence": 0.28
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "choice": "bottomWrong",
+            "probabilities": {
+              "top": 0,
+              "absent": 0,
+              "bottomCorrect": 0.01,
+              "middle": 0,
+              "bottomWrong": 0.99
+            },
+            "confidence": 0.99
+          },
+          "situation_DFL": {
+            "type": "choice",
+            "choice": "top",
+            "probabilities": {
+              "top": 0.95,
+              "absent": 0,
+              "bottomCorrect": 0,
+              "middle": 0,
+              "bottomWrong": 0.05
+            },
+            "confidence": 0.94
+          }
+        },
+        "usage": {
+          "input_tokens": 2652,
+          "output_tokens": 164
+        }
+      },
+      "elapsedMs": 271.08112200000005,
+      "cost": 0.00011138400000000002
+    },
+    {
+      "fixture": "competing-targets",
+      "style": "broad",
+      "runId": "5b52c581-b7e2-4ecc-bb70-7655013c47d0",
+      "accepted": false,
+      "choice": "DRF",
+      "confidence": 0.22,
+      "expected": [
+        "DFL"
+      ],
+      "rationale": "DFL is above its own slot with yellow facing L; DRF is trapped in the wrong bottom slot.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            9,
+            8,
+            4,
+            5,
+            6,
+            7,
+            1,
+            0,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            3,
+            0,
+            5,
+            1,
+            4,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            9,
+            8,
+            4,
+            5,
+            6,
+            7,
+            1,
+            0,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            3,
+            0,
+            5,
+            1,
+            4,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 8
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 8
+        }
+      },
+      "id": "9e1ed11a-81fb-4562-97a4-2a52abefc26e",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Choose which of the two unfinished corners to work on first. Prefer an immediate valid insertion over extraction when it preserves the bottom cross.",
+          "target": "whole",
+          "stagePieces": [
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "ULF",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "L",
+                "green": "F",
+                "orange": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "L",
+                "red": "D",
+                "green": "F"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UB",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "blue": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "UB",
+              "stickers": {
+                "green": "U",
+                "orange": "B"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UL",
+              "stickers": {
+                "green": "L",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "R",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "FL",
+              "stickers": {
+                "white": "F",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UBL",
+              "position": "UFR",
+              "stickers": {
+                "white": "U",
+                "blue": "F",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "orange": "B",
+                "green": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "UBL",
+              "stickers": {
+                "white": "B",
+                "green": "L",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "DRF",
+              "stickers": {
+                "white": "R",
+                "red": "F",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 8
+          },
+          "recentActions": [],
+          "executionHistory": []
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.",
+            "criteria": {
+              "DRF": "Work on corner DRF.",
+              "DFL": "Work on corner DFL.",
+              "reconsider": "Neither target offers a suitable next operation."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "DRF",
+            "probabilities": {
+              "reconsider": 0.04,
+              "DRF": 0.49,
+              "DFL": 0.47
+            },
+            "confidence": 0.22
+          }
+        },
+        "usage": {
+          "input_tokens": 1762,
+          "output_tokens": 43
+        }
+      },
+      "elapsedMs": 246.52403700000013,
+      "cost": 0.000074004
+    },
+    {
+      "fixture": "temporary-disruption",
+      "style": "broad",
+      "runId": "6c545fca-db07-4d01-82a0-c965b7502e05",
+      "accepted": true,
+      "choice": "finish",
+      "confidence": 0.63,
+      "expected": [
+        "finish"
+      ],
+      "rationale": "The cross is temporarily disturbed after R U. Remaining R-prime completes the insertion and solves this fixture.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            8,
+            2,
+            3,
+            4,
+            10,
+            6,
+            7,
+            5,
+            9,
+            1,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            4,
+            0,
+            2,
+            3,
+            7,
+            5,
+            6,
+            1
+          ],
+          "orientation": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 12
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": true,
+          "middle": true,
+          "topCross": true,
+          "topOriented": true,
+          "cornersPlaced": true,
+          "solved": true,
+          "solvedPieces": 20
+        }
+      },
+      "id": "6ef2773b-8e6c-4536-ada9-df64410bbcd9",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Finish the committed corner insertion if the recorded execution still matches it. Judge preservation at completion, allowing intermediate disruption.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "UFR",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "F",
+              "red": "R",
+              "green": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            }
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "UFR",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "F",
+                "red": "R",
+                "green": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DRF",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "F",
+                "blue": "D",
+                "red": "R"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UF",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "FR",
+              "position": "UR",
+              "stickers": {
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UB",
+              "position": "UB",
+              "stickers": {
+                "white": "U",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UL",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "DR",
+              "stickers": {
+                "blue": "D",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "FR",
+              "stickers": {
+                "yellow": "F",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "BR",
+              "stickers": {
+                "white": "B",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "B",
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UBL",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "ULF",
+              "position": "ULF",
+              "stickers": {
+                "white": "U",
+                "orange": "L",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "URB",
+              "position": "DBR",
+              "stickers": {
+                "white": "B",
+                "red": "R",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": false,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 12
+          },
+          "recentActions": [
+            "R",
+            "U"
+          ],
+          "executionHistory": [
+            {
+              "move": "R",
+              "before": "[{\"pieces\":[3,1,8,2,4,5,6,7,0,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,1,0,2,3,5,6,7],\"orientation\":[1,0,1,0,1,0,0,0]}]",
+              "after": "[{\"pieces\":[3,0,8,2,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,4,0,2,7,5,6,1],\"orientation\":[0,2,1,0,1,0,0,2]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 12
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 7
+              }
+            },
+            {
+              "move": "U",
+              "before": "[{\"pieces\":[3,0,8,2,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,4,0,2,7,5,6,1],\"orientation\":[0,2,1,0,1,0,0,2]}]",
+              "after": "[{\"pieces\":[0,8,2,3,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,2,3,7,5,6,1],\"orientation\":[2,1,0,0,1,0,0,2]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 7
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 12
+              }
+            }
+          ],
+          "committedOperation": {
+            "moves": "R U R'",
+            "executed": [
+              "R",
+              "U"
+            ],
+            "remaining": [
+              "R'"
+            ]
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.",
+            "criteria": {
+              "finish": "Execute remaining R-prime of the committed insertion.",
+              "undo": "Undo only the last U turn.",
+              "restart": "Start the entire R U R-prime insertion again.",
+              "reconsider": "Abandon this operation and select a different target."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "finish",
+            "probabilities": {
+              "undo": 0.05,
+              "restart": 0.06,
+              "reconsider": 0.17,
+              "finish": 0.72
+            },
+            "confidence": 0.63
+          }
+        },
+        "usage": {
+          "input_tokens": 2683,
+          "output_tokens": 47
+        }
+      },
+      "elapsedMs": 226.03370899999982,
+      "cost": 0.00011268600000000001
+    },
+    {
+      "fixture": "temporary-disruption",
+      "style": "structured",
+      "runId": "cb4792b5-6ca5-4ac2-ae0c-d797fd15e7f4",
+      "accepted": true,
+      "choice": "finish",
+      "confidence": 0.71,
+      "expected": [
+        "finish"
+      ],
+      "rationale": "The cross is temporarily disturbed after R U. Remaining R-prime completes the insertion and solves this fixture.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            8,
+            2,
+            3,
+            4,
+            10,
+            6,
+            7,
+            5,
+            9,
+            1,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            4,
+            0,
+            2,
+            3,
+            7,
+            5,
+            6,
+            1
+          ],
+          "orientation": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 12
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": true,
+          "middle": true,
+          "topCross": true,
+          "topOriented": true,
+          "cornersPlaced": true,
+          "solved": true,
+          "solvedPieces": 20
+        }
+      },
+      "id": "f9597fb6-8735-41ba-9bf9-a14a05185504",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Finish the committed corner insertion if the recorded execution still matches it. Judge preservation at completion, allowing intermediate disruption.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "UFR",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "F",
+              "red": "R",
+              "green": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            },
+            "locationWords": "top front right",
+            "destinationWords": "bottom right front",
+            "layer": "top",
+            "stickerDirectionsInWords": {
+              "yellow": "front",
+              "red": "right",
+              "green": "top"
+            },
+            "directlyAboveHome": true,
+            "sideStickersMatchingCenters": [
+              "red"
+            ]
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "UFR",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "F",
+                "red": "R",
+                "green": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "top front right",
+              "destinationWords": "bottom right front",
+              "layer": "top",
+              "stickerDirectionsInWords": {
+                "yellow": "front",
+                "red": "right",
+                "green": "top"
+              },
+              "directlyAboveHome": true,
+              "sideStickersMatchingCenters": [
+                "red"
+              ]
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DRF",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "F",
+                "blue": "D",
+                "red": "R"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "bottom right front",
+              "destinationWords": "bottom back right",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "front",
+                "blue": "bottom",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "red"
+              ]
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom front left",
+              "destinationWords": "bottom front left",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "green": "front",
+                "orange": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "green",
+                "orange"
+              ]
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom left back",
+              "destinationWords": "bottom left back",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "orange": "left",
+                "blue": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "orange",
+                "blue"
+              ]
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UF",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "FR",
+              "position": "UR",
+              "stickers": {
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UB",
+              "position": "UB",
+              "stickers": {
+                "white": "U",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UL",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "DR",
+              "stickers": {
+                "blue": "D",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "FR",
+              "stickers": {
+                "yellow": "F",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "BR",
+              "stickers": {
+                "white": "B",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "B",
+                "green": "U",
+                "red": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UBL",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "ULF",
+              "position": "ULF",
+              "stickers": {
+                "white": "U",
+                "orange": "L",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "URB",
+              "position": "DBR",
+              "stickers": {
+                "white": "B",
+                "red": "R",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": false,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 12
+          },
+          "recentActions": [
+            "R",
+            "U"
+          ],
+          "executionHistory": [
+            {
+              "move": "R",
+              "before": "[{\"pieces\":[3,1,8,2,4,5,6,7,0,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,1,0,2,3,5,6,7],\"orientation\":[1,0,1,0,1,0,0,0]}]",
+              "after": "[{\"pieces\":[3,0,8,2,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,4,0,2,7,5,6,1],\"orientation\":[0,2,1,0,1,0,0,2]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 12
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 7
+              }
+            },
+            {
+              "move": "U",
+              "before": "[{\"pieces\":[3,0,8,2,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,4,0,2,7,5,6,1],\"orientation\":[0,2,1,0,1,0,0,2]}]",
+              "after": "[{\"pieces\":[0,8,2,3,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,2,3,7,5,6,1],\"orientation\":[2,1,0,0,1,0,0,2]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 7
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 12
+              }
+            }
+          ],
+          "committedOperation": {
+            "moves": "R U R'",
+            "executed": [
+              "R",
+              "U"
+            ],
+            "remaining": [
+              "R'"
+            ]
+          },
+          "operationContract": {
+            "frame": "Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.",
+            "preservation": "Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.",
+            "choiceBoundary": "Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.",
+            "task": "Choose only the next operation or target. You are not asked to produce a full solution."
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": {
+              "question": "Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?",
+              "guidance": "Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate."
+            },
+            "criteria": {
+              "finish": "Execute remaining R-prime of the committed insertion.",
+              "undo": "Undo only the last U turn.",
+              "restart": "Start the entire R U R-prime insertion again.",
+              "reconsider": "Abandon this operation and select a different target."
+            }
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "instructions": "Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "finish",
+            "probabilities": {
+              "restart": 0.04,
+              "reconsider": 0.17,
+              "finish": 0.78,
+              "undo": 0.01
+            },
+            "confidence": 0.71
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "choice": "top",
+            "probabilities": {
+              "bottomWrong": 0,
+              "bottomCorrect": 0,
+              "top": 1,
+              "middle": 0,
+              "absent": 0
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 3527,
+          "output_tokens": 106
+        }
+      },
+      "elapsedMs": 274.3291610000001,
+      "cost": 0.00014813400000000002
+    },
+    {
+      "fixture": "repeated-state",
+      "style": "structured",
+      "runId": "ded61fc1-7521-4c23-822c-f083e6de478f",
+      "accepted": true,
+      "choice": "inspect",
+      "confidence": 0.46,
+      "expected": [
+        "alternative",
+        "retarget",
+        "inspect"
+      ],
+      "rationale": "U and undo repeat the recorded cycle. Alternative U-prime stages the target; retarget/inspect are also valid recovery decisions.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        }
+      },
+      "id": "c6100e80-398b-4763-b6c3-d8f118b1b283",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Break the observed no-progress cycle. Choose a different operation from the same state, change target, or stop for inspection.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "ULF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "L",
+              "red": "F",
+              "green": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            },
+            "locationWords": "top left front",
+            "destinationWords": "bottom right front",
+            "layer": "top",
+            "stickerDirectionsInWords": {
+              "yellow": "left",
+              "red": "front",
+              "green": "top"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": []
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "ULF",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "L",
+                "red": "F",
+                "green": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false,
+              "locationWords": "top left front",
+              "destinationWords": "bottom right front",
+              "layer": "top",
+              "stickerDirectionsInWords": {
+                "yellow": "left",
+                "red": "front",
+                "green": "top"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom front left",
+              "destinationWords": "bottom front left",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "green": "front",
+                "orange": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "green",
+                "orange"
+              ]
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom left back",
+              "destinationWords": "bottom left back",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "orange": "left",
+                "blue": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "orange",
+                "blue"
+              ]
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true,
+              "locationWords": "bottom back right",
+              "destinationWords": "bottom back right",
+              "layer": "bottom",
+              "stickerDirectionsInWords": {
+                "yellow": "bottom",
+                "blue": "back",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": [
+                "blue",
+                "red"
+              ]
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UB",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "blue": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UB",
+              "stickers": {
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "R",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UBL",
+              "position": "UFR",
+              "stickers": {
+                "white": "U",
+                "blue": "F",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "orange": "B",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "DRF",
+              "stickers": {
+                "white": "R",
+                "red": "F",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 10
+          },
+          "recentActions": [
+            "U",
+            "U'",
+            "U",
+            "U'"
+          ],
+          "executionHistory": [
+            {
+              "move": "U",
+              "before": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "after": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            },
+            {
+              "move": "U'",
+              "before": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "after": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            },
+            {
+              "move": "U",
+              "before": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "after": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            },
+            {
+              "move": "U'",
+              "before": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "after": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            }
+          ],
+          "lastActionWasUndo": true,
+          "operationContract": {
+            "frame": "Fixed U white, D yellow, F green, R red, B blue, L orange. Camera orientation does not change notation.",
+            "preservation": "Preserve completed stage goals after a whole operation; temporary disruption inside a committed operation is allowed.",
+            "choiceBoundary": "Descriptions explain operations generally; they are not recommendations for this state. You may reconsider if none applies.",
+            "task": "Choose only the next operation or target. You are not asked to produce a full solution."
+          }
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": {
+              "question": "Which option best advances `goal` using `target`, `stagePieces`, `completed`, and `executionHistory`?",
+              "guidance": "Compare present positions AND sticker directions with the operation descriptions. Distinguish being in a home slot from being correctly oriented. Respect any committedOperation. Avoid repeating a recorded no-progress cycle. Return reconsider/inspect when appropriate."
+            },
+            "criteria": {
+              "repeat": "Execute U again.",
+              "undo": "Undo the last action again (execute U).",
+              "alternative": "Execute U-prime instead of repeating U.",
+              "retarget": "Choose a different target without moving.",
+              "inspect": "Stop this probe to inspect the failure."
+            }
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "instructions": "Describe piece DRF in state.stagePieces using current position and stickers. This is an independent observation; your answer is NOT available to the action question.",
+            "criteria": {
+              "top": "In the top layer.",
+              "bottomCorrect": "In its bottom home slot with correct orientation.",
+              "bottomWrong": "In the bottom layer but misplaced or twisted.",
+              "middle": "In the middle layer.",
+              "absent": "Not present in stagePieces."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "inspect",
+            "probabilities": {
+              "repeat": 0,
+              "inspect": 0.57,
+              "alternative": 0.16,
+              "retarget": 0.25,
+              "undo": 0.02
+            },
+            "confidence": 0.46
+          },
+          "situation_DRF": {
+            "type": "choice",
+            "choice": "top",
+            "probabilities": {
+              "bottomCorrect": 0,
+              "bottomWrong": 0,
+              "top": 1,
+              "absent": 0,
+              "middle": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 4250,
+          "output_tokens": 112
+        }
+      },
+      "elapsedMs": 248.9952269999999,
+      "cost": 0.00017850000000000003
+    },
+    {
+      "fixture": "repeated-state",
+      "style": "broad",
+      "runId": "5dd486f4-dedc-4f13-9e47-1056a9c7be8f",
+      "accepted": true,
+      "choice": "inspect",
+      "confidence": 0.65,
+      "expected": [
+        "alternative",
+        "retarget",
+        "inspect"
+      ],
+      "rationale": "U and undo repeat the recorded cycle. Alternative U-prime stages the target; retarget/inspect are also valid recovery decisions.",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            3,
+            8,
+            0,
+            4,
+            5,
+            6,
+            7,
+            1,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            2,
+            0,
+            3,
+            4,
+            1,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "changes": {
+        "before": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        },
+        "after": {
+          "daisy": 0,
+          "cross": true,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 10
+        }
+      },
+      "id": "fd190e3e-d0fc-442d-8dda-fe702372edac",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "frame": {
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            },
+            "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+          },
+          "stage": "first-layer",
+          "goal": "Break the observed no-progress cycle. Choose a different operation from the same state, change target, or stop for inspection.",
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "ULF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "L",
+              "red": "F",
+              "green": "U"
+            },
+            "solved": false,
+            "requiredStickerDirections": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            }
+          },
+          "stagePieces": [
+            {
+              "piece": "DRF",
+              "kind": "corner",
+              "position": "ULF",
+              "destination": "DRF",
+              "stickers": {
+                "yellow": "L",
+                "red": "F",
+                "green": "U"
+              },
+              "solved": false,
+              "satisfiesStageGoal": false
+            },
+            {
+              "piece": "DFL",
+              "kind": "corner",
+              "position": "DFL",
+              "destination": "DFL",
+              "stickers": {
+                "yellow": "D",
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DLB",
+              "kind": "corner",
+              "position": "DLB",
+              "destination": "DLB",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L",
+                "blue": "B"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            },
+            {
+              "piece": "DBR",
+              "kind": "corner",
+              "position": "DBR",
+              "destination": "DBR",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true,
+              "satisfiesStageGoal": true
+            }
+          ],
+          "otherPieces": [
+            {
+              "piece": "UB",
+              "position": "UF",
+              "stickers": {
+                "white": "U",
+                "blue": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UL",
+              "position": "UR",
+              "stickers": {
+                "white": "U",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FR",
+              "position": "UB",
+              "stickers": {
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UF",
+              "position": "UL",
+              "stickers": {
+                "white": "U",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "DF",
+              "position": "DF",
+              "stickers": {
+                "yellow": "D",
+                "green": "F"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DR",
+              "position": "DR",
+              "stickers": {
+                "yellow": "D",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DB",
+              "position": "DB",
+              "stickers": {
+                "yellow": "D",
+                "blue": "B"
+              },
+              "solved": true
+            },
+            {
+              "piece": "DL",
+              "position": "DL",
+              "stickers": {
+                "yellow": "D",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UR",
+              "position": "FR",
+              "stickers": {
+                "white": "R",
+                "red": "F"
+              },
+              "solved": false
+            },
+            {
+              "piece": "FL",
+              "position": "FL",
+              "stickers": {
+                "green": "F",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BR",
+              "position": "BR",
+              "stickers": {
+                "blue": "B",
+                "red": "R"
+              },
+              "solved": true
+            },
+            {
+              "piece": "BL",
+              "position": "BL",
+              "stickers": {
+                "blue": "B",
+                "orange": "L"
+              },
+              "solved": true
+            },
+            {
+              "piece": "UBL",
+              "position": "UFR",
+              "stickers": {
+                "white": "U",
+                "blue": "F",
+                "orange": "R"
+              },
+              "solved": false
+            },
+            {
+              "piece": "UFR",
+              "position": "URB",
+              "stickers": {
+                "white": "R",
+                "green": "B",
+                "red": "U"
+              },
+              "solved": false
+            },
+            {
+              "piece": "ULF",
+              "position": "UBL",
+              "stickers": {
+                "white": "U",
+                "orange": "B",
+                "green": "L"
+              },
+              "solved": false
+            },
+            {
+              "piece": "URB",
+              "position": "DRF",
+              "stickers": {
+                "white": "R",
+                "red": "F",
+                "blue": "D"
+              },
+              "solved": false
+            }
+          ],
+          "completed": {
+            "daisy": 0,
+            "cross": true,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 10
+          },
+          "recentActions": [
+            "U",
+            "U'",
+            "U",
+            "U'"
+          ],
+          "executionHistory": [
+            {
+              "move": "U",
+              "before": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "after": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            },
+            {
+              "move": "U'",
+              "before": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "after": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            },
+            {
+              "move": "U",
+              "before": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "after": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            },
+            {
+              "move": "U'",
+              "before": "[{\"pieces\":[3,8,0,2,4,5,6,7,1,9,10,11],\"orientation\":[0,1,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[0,3,4,2,1,5,6,7],\"orientation\":[2,0,2,0,2,0,0,0]}]",
+              "after": "[{\"pieces\":[2,3,8,0,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[2,0,3,4,1,5,6,7],\"orientation\":[0,2,0,2,2,0,0,0]}]",
+              "factsBefore": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              },
+              "factsAfter": {
+                "daisy": 0,
+                "cross": true,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 10
+              }
+            }
+          ],
+          "lastActionWasUndo": true
+        },
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Choose the best next action for the current goal and target while protecting completed progress. Use the available operation descriptions and recent actions.",
+            "criteria": {
+              "repeat": "Execute U again.",
+              "undo": "Undo the last action again (execute U).",
+              "alternative": "Execute U-prime instead of repeating U.",
+              "retarget": "Choose a different target without moving.",
+              "inspect": "Stop this probe to inspect the failure."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "inspect",
+            "probabilities": {
+              "repeat": 0.01,
+              "retarget": 0.1,
+              "alternative": 0.14,
+              "inspect": 0.72,
+              "undo": 0.03
+            },
+            "confidence": 0.65
+          }
+        },
+        "usage": {
+          "input_tokens": 3408,
+          "output_tokens": 53
+        }
+      },
+      "elapsedMs": 284.3811690000002,
+      "cost": 0.000143136
+    }
+  ]
+}

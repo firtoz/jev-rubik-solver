@@ -1,0 +1,2897 @@
+{
+  "fingerprint": "f31fcfaedd04d2854b8f52d7848973ef5fe810d00a12b7bd27254ca181694d34",
+  "split": "development",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 80,
+  "attempted": 80,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.6988151600000003,
+    "usage": 1.6961271600000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 21406,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7070137280000002,
+    "usage": 1.7043257280000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 21486,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.001974042,
+      "inputTokens": 47001,
+      "cases": {
+        "development/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DF\":\"insert\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "literal-fields": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.002195802,
+      "inputTokens": 52281,
+      "cases": {
+        "development/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DF\":\"insert\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "ordered-checklist": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.002011002,
+      "inputTokens": 47881,
+      "cases": {
+        "development/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DF\":\"insert\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "compact-table": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.002017722,
+      "inputTokens": 48041,
+      "cases": {
+        "development/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DF\":\"insert\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DF\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DL\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"insert\",\"intent_DF\":\"done\",\"intent_DR\":\"done\",\"intent_DB\":\"done\"}"
+          ],
+          "failures": []
+        },
+        "development/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DB\":\"done\",\"intent_DL\":\"done\",\"intent_DF\":\"extract\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "intent_DR",
+                "expected": [
+                  "extract"
+                ],
+                "actual": "insert"
+              }
+            ]
+          ]
+        },
+        "development/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intent_DR\":\"insert\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intent_DL\":\"extract\",\"intent_DF\":\"extract\",\"intent_DR\":\"extract\",\"intent_DB\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intent_DB\":\"extract\",\"intent_DF\":\"extract\",\"intent_DL\":\"extract\",\"intent_DR\":\"extract\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "development/case-01",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "3861dc27-3f06-411d-82bf-0b65b541064a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "8b807d47-5ba7-46b6-84fb-6365aa7d3681",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 619.266341,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.82,
+        "intent_DB": 0.64,
+        "intent_DL": 0.73,
+        "intent_DF": 0.89
+      }
+    },
+    {
+      "fixture": "development/case-01",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "8245be09-9647-4a34-ab0f-3e1f4c51b2c4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "32d12ced-3480-418b-a405-b7aacfb65b94",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 623.534973,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DF": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-01",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "c4119568-a8f2-46e9-9fd6-a4ff84211fc2",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "3dc09f07-d33d-4fc1-b564-2b1d57cc1e0d",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 663.097654,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 0.99,
+        "intent_DF": 0.93
+      }
+    },
+    {
+      "fixture": "development/case-01",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "5306a9a2-38f2-45ef-b071-18a78998f80a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "e8b021a2-9479-4958-a673-6515e615662e",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 761.772606,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.94,
+        "intent_DB": 0.93,
+        "intent_DL": 0.76,
+        "intent_DF": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "181ce20b-1950-43ff-a1ef-18fc7cf499b1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "1b7381c0-6d0a-4d8c-8d28-113a1d68c773",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 262.26190500000007,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.89,
+        "intent_DB": 0.94,
+        "intent_DL": 0.9,
+        "intent_DF": 1
+      }
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "088f4775-64cb-4dcf-ae5f-18221d2952e0",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "d9596427-4663-4da5-b6bb-f085ede62aec",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 249.77866900000004,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DF": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "de173167-d5b4-428b-b930-b554db7f8195",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "b9919906-9aeb-4607-b641-d78dbe0711ba",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 281.02289399999995,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DF": 0.89
+      }
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "dd62a4b6-e842-42ba-ae19-be2567d0c0cf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "1e9c0ed7-dab0-4421-8143-94fef74c7af3",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 257.4656309999998,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.72,
+        "intent_DB": 0.75,
+        "intent_DL": 0.66,
+        "intent_DF": 0.86
+      }
+    },
+    {
+      "fixture": "development/case-03",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "f9a51dc3-87ee-4ac2-a9e0-08afac67d187",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DF": "insert",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "1f0e1045-40d7-48bb-871f-a21f8471d30a",
+      "cost": 0.00010008600000000002,
+      "inputTokens": 2383,
+      "elapsedMs": 263.01641100000006,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.8,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-03",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "deb453ad-a661-4552-9057-127676136811",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DF": "insert",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "f9f85b71-4c30-49a4-8bf0-6549d304ca8d",
+      "cost": 0.00010042200000000001,
+      "inputTokens": 2391,
+      "elapsedMs": 283.535071,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.98,
+        "intent_DR": 0.99,
+        "intent_DB": 1,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-03",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "fb3d553c-d9e5-42b2-8980-89d01ed40aad",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DF": "insert",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "53a6ace2-f234-4cb8-93bb-f63ae3cba2e0",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 237.68086799999992,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.85,
+        "intent_DR": 0.44,
+        "intent_DB": 0.7,
+        "intent_DL": 0.65
+      }
+    },
+    {
+      "fixture": "development/case-03",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "e69f5ecf-da09-41f8-89f8-b394019240b7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DF": "insert",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "2f54321e-b69e-4a54-9618-39002602e955",
+      "cost": 0.00010932600000000002,
+      "inputTokens": 2603,
+      "elapsedMs": 242.4908190000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.78,
+        "intent_DR": 0.89,
+        "intent_DB": 0.95,
+        "intent_DL": 0.92
+      }
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "36d37117-4651-498c-83d0-9729047768ad",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "13a7bbf9-76a9-4564-8ffc-7e9f2bf2a6c2",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 271.58923500000014,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.6,
+        "intent_DB": 0.75,
+        "intent_DL": 0.79,
+        "intent_DR": 0.84
+      }
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "96777b72-ecbf-42a6-a06a-2fbbc96e7d84",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "ffa47b0c-602c-4593-ac38-8180bd09b83e",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 354.1194600000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DR": 0.75
+      }
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "f56187b7-df9e-4713-b190-a0e341e796dd",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "3234e7fb-0f1a-4142-b6af-c28ed6766ee9",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 279.10975299999996,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.97,
+        "intent_DB": 0.93,
+        "intent_DL": 0.95,
+        "intent_DR": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "fbe2aa2e-c1cd-4d99-878a-54abd0d53362",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "65f4c3ee-d521-4c5b-8fb9-b1ee7ac66fea",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 267.3943590000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DR": 0.98
+      }
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "ab1f4a0a-91bb-4060-838d-4043a5d929be",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "d15e8444-687a-43b1-bdf8-7c4c4c13f7a2",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 272.4142029999998,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.69,
+        "intent_DB": 0.69,
+        "intent_DL": 0.73,
+        "intent_DR": 0.92
+      }
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "0a81f62f-62b0-45d3-8545-ad2f672595c5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "c4396a2f-30ea-4243-8e93-18d2fe91605b",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 349.03062599999976,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.97,
+        "intent_DB": 0.96,
+        "intent_DL": 0.96,
+        "intent_DR": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "a8ebbf16-7cdd-4430-8071-b605a1861d47",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "de6ce18f-fc42-408f-9d22-66c38ae1d130",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 328.13904600000023,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.99,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DR": 0.83
+      }
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "023cddb6-b4a2-489e-b97a-74d9afb13eb6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "89623ce3-2ed2-4833-8b63-e42570d6afc1",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 370.87525400000004,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DR": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "7a13c700-ad14-4fed-ac4e-ee86cdb4b832",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "8f3b81b4-3aa8-42a0-8182-dd911ffd7c2d",
+      "cost": 0.00010008600000000002,
+      "inputTokens": 2383,
+      "elapsedMs": 231.58766000000014,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.88,
+        "intent_DF": 1,
+        "intent_DB": 1,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "e3e8184f-934b-4cee-9e88-5b3fac3d295f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "7b299c39-ff5c-44c5-931c-0b217b505358",
+      "cost": 0.00010932600000000002,
+      "inputTokens": 2603,
+      "elapsedMs": 275.3966929999997,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.62,
+        "intent_DF": 0.94,
+        "intent_DB": 0.95,
+        "intent_DL": 0.93
+      }
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "464f68a1-a7ba-4bcd-9855-a079f4e19186",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "02a27743-1ea5-4843-93f2-72148f338308",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 284.9585219999999,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.74,
+        "intent_DF": 0.62,
+        "intent_DB": 0.67,
+        "intent_DL": 0.52
+      }
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "173e0a39-0a57-41be-9875-e7e29c8b63e2",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DF": "done",
+        "intent_DB": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "66c95cea-6f20-4b97-9680-ef8cefd1aacf",
+      "cost": 0.00010042200000000001,
+      "inputTokens": 2391,
+      "elapsedMs": 366.4271939999999,
+      "confidence": {
+        "target": 1,
+        "intent_DR": 0.97,
+        "intent_DF": 0.99,
+        "intent_DB": 0.99,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "927bce2a-e4af-4f35-8a08-11724d0b6074",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "62c74c3f-60ab-49c6-a36e-910bdbee4d2f",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 308.5256260000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DL": 1,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "69a901e9-9d72-4164-a3a5-7242a8f6a42b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "417c1ba3-6848-4fe1-b293-1b11e995e35b",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 308.877426,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.99,
+        "intent_DR": 1,
+        "intent_DL": 0.99,
+        "intent_DB": 0.91
+      }
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "c97a5658-fd2e-4040-b55d-ba877d54a859",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "1104cd13-bdc1-4892-bde8-b5ecdb213a78",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 271.72729400000026,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.66,
+        "intent_DR": 0.72,
+        "intent_DL": 0.55,
+        "intent_DB": 0.91
+      }
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "d46baba5-3976-4b0f-b3b8-ef913c593bff",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "8b6a1f02-b67a-40ad-ae16-1adefa784658",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 325.0213429999999,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.96,
+        "intent_DR": 0.95,
+        "intent_DL": 0.92,
+        "intent_DB": 1
+      }
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d809e170-289f-49c7-8980-fec6e5d6d7e9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "0582a361-ac39-4dc0-9ad2-a5682485141d",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 246.06410700000015,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.6,
+        "intent_DR": 0.73,
+        "intent_DL": 0.5,
+        "intent_DB": 0.92
+      }
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "2dd5414b-2a77-4d9b-bae3-2bf27e75c191",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "fca4af11-91df-4537-940a-1a704ea8b07e",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 335.9956750000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.99,
+        "intent_DR": 1,
+        "intent_DL": 1,
+        "intent_DB": 0.9
+      }
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "4994e3f3-fd2b-4625-9d0b-1c21002dbd02",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "661a9c40-253a-4664-bcb0-35ef78cf2fb2",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 274.8249390000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.96,
+        "intent_DR": 0.96,
+        "intent_DL": 0.87,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "3e04cbfc-5fc7-454c-b287-02193048d333",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "8ef556b6-cb4a-42c2-b7bd-9d4231d7b564",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 316.1453300000003,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DL": 1,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6b56eed6-f3aa-4efe-bd09-f24adfb8c48c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "fff4f290-15b3-4971-bdaa-a5c63975ef1d",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 282.763011,
+      "confidence": {
+        "target": 1,
+        "intent_DB": 0.73,
+        "intent_DF": 0.69,
+        "intent_DR": 0.74,
+        "intent_DL": 0.44
+      }
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "022a0e0c-e716-48c0-b6b6-8e287fc56e11",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "26e1c06d-64f5-4397-9298-c18cad69b9a6",
+      "cost": 0.00010932600000000002,
+      "inputTokens": 2603,
+      "elapsedMs": 307.6159279999997,
+      "confidence": {
+        "target": 1,
+        "intent_DB": 0.77,
+        "intent_DF": 0.91,
+        "intent_DR": 0.96,
+        "intent_DL": 0.9
+      }
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "e054c5d4-ed24-4c4d-9e4b-002755acc923",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "dcc986c7-d19f-4b8a-9d90-859e58b53345",
+      "cost": 0.00010042200000000001,
+      "inputTokens": 2391,
+      "elapsedMs": 238.43104700000004,
+      "confidence": {
+        "target": 1,
+        "intent_DB": 0.96,
+        "intent_DF": 0.99,
+        "intent_DR": 1,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "45a355d5-346b-4939-bdb5-0d8673d31c6c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DL": "done"
+      },
+      "wrong": [],
+      "decisionId": "7778fc5c-5971-41cf-9d2b-9513afdaf8de",
+      "cost": 0.00010008600000000002,
+      "inputTokens": 2383,
+      "elapsedMs": 337.1205060000002,
+      "confidence": {
+        "target": 1,
+        "intent_DB": 0.94,
+        "intent_DF": 0.99,
+        "intent_DR": 1,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "3f9f4d20-b853-40de-b27a-6f7a65679eaa",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "0c7964d3-c878-4401-b4c2-06b06c931f0e",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 340.4981789999997,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.96,
+        "intent_DR": 0.95,
+        "intent_DB": 0.89,
+        "intent_DL": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "0975f4eb-0248-44aa-a0eb-a396e5406b7c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "287b1276-2d61-4c3c-9021-1d4d8c1f2430",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 329.2731359999998,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "3a37eaad-b202-44fd-88f0-2cd1bd150eb9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "c54e71c0-3420-41e4-911f-92a13c279c39",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 317.00486299999966,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.99,
+        "intent_DR": 1,
+        "intent_DB": 0.99,
+        "intent_DL": 0.79
+      }
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "1de48ef4-5345-4a19-97e0-bb0b83176b43",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "0710428a-bc06-4993-a9cb-26900cae2ee2",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 315.19731999999976,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.8,
+        "intent_DR": 0.7,
+        "intent_DB": 0.69,
+        "intent_DL": 0.92
+      }
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "197e5693-067e-40c3-bb6a-e218aa2a428b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "8040659f-c28e-4b26-8ef2-8652e79df604",
+      "cost": 0.00010109400000000002,
+      "inputTokens": 2407,
+      "elapsedMs": 227.59032600000046,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DB": 0.99,
+        "intent_DL": 0.78
+      }
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "1cb6d3b6-f079-4bf8-a964-d2df383b5ca9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "5c1906c6-f88e-4172-baf9-274f5d6357ca",
+      "cost": 0.00010075800000000001,
+      "inputTokens": 2399,
+      "elapsedMs": 291.5093300000003,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DB": 1,
+        "intent_DL": 0.98
+      }
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "ce0e43ea-ed36-40f5-896e-34d7dfa8e57a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "258357b8-3085-41cb-b9f1-ae67d0a21280",
+      "cost": 0.00009891000000000001,
+      "inputTokens": 2355,
+      "elapsedMs": 278.3962730000003,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.76,
+        "intent_DR": 0.74,
+        "intent_DB": 0.68,
+        "intent_DL": 0.85
+      }
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "5983d7ff-da83-4bc2-b043-35559bce567a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "ad969a77-4c0f-486b-bd8b-b54b57c3810b",
+      "cost": 0.00010999800000000001,
+      "inputTokens": 2619,
+      "elapsedMs": 268.6167740000001,
+      "confidence": {
+        "target": 1,
+        "intent_DF": 0.93,
+        "intent_DR": 0.93,
+        "intent_DB": 0.92,
+        "intent_DL": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "745011b5-9db3-4fa9-935f-1912dd1ef71b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done"
+      },
+      "wrong": [],
+      "decisionId": "53243cab-baec-4e73-8bb7-da08a4a4fe74",
+      "cost": 0.00010042200000000001,
+      "inputTokens": 2391,
+      "elapsedMs": 242.8977329999998,
+      "confidence": {
+        "target": 1,
+        "intent_DL": 0.98,
+        "intent_DF": 0.99,
+        "intent_DR": 1,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d6b05110-d3d1-4ea3-b9c5-ee986ef86b2c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done"
+      },
+      "wrong": [],
+      "decisionId": "de306c6a-9625-49da-b724-02d0e0fe40db",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 386.65408800000023,
+      "confidence": {
+        "target": 1,
+        "intent_DL": 0.7,
+        "intent_DF": 0.65,
+        "intent_DR": 0.73,
+        "intent_DB": 0.7
+      }
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "ad2f04ac-724c-4ed3-a1ce-2074cd128369",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done"
+      },
+      "wrong": [],
+      "decisionId": "45d4aba7-8a65-4772-ba0a-bbb25102c505",
+      "cost": 0.00010932600000000002,
+      "inputTokens": 2603,
+      "elapsedMs": 320.37530100000004,
+      "confidence": {
+        "target": 1,
+        "intent_DL": 0.71,
+        "intent_DF": 0.94,
+        "intent_DR": 0.95,
+        "intent_DB": 0.93
+      }
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "d6206c66-e6f4-4052-935b-3d9438d9d2e1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "insert",
+        "intent_DF": "done",
+        "intent_DR": "done",
+        "intent_DB": "done"
+      },
+      "wrong": [],
+      "decisionId": "5118a203-4eb1-4505-af5d-0d4d3fd7fee2",
+      "cost": 0.00010008600000000002,
+      "inputTokens": 2383,
+      "elapsedMs": 319.0158900000006,
+      "confidence": {
+        "target": 1,
+        "intent_DL": 0.96,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DB": 1
+      }
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "fb382842-0b59-4fed-aad7-9cfce525ae97",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "5672f5c9-ccdd-4866-a338-7a1bb2638c74",
+      "cost": 0.00009765000000000002,
+      "inputTokens": 2325,
+      "elapsedMs": 285.7229390000002,
+      "confidence": {
+        "target": 0.41,
+        "intent_DL": 0.82,
+        "intent_DF": 0.9,
+        "intent_DR": 0.89,
+        "intent_DB": 0.89
+      }
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "e510309f-6c4b-43fc-89fd-0c1215df6482",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "2d0b6737-58e4-4b74-bd82-cceecf64ba6f",
+      "cost": 0.00010873800000000001,
+      "inputTokens": 2589,
+      "elapsedMs": 261.07399499999974,
+      "confidence": {
+        "target": 0.44,
+        "intent_DL": 0.97,
+        "intent_DF": 0.99,
+        "intent_DR": 0.96,
+        "intent_DB": 0.95
+      }
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "b79ef1a8-30b4-4342-b0bb-a690100409fa",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "40784e50-59c5-4e36-8203-af037756c9f3",
+      "cost": 0.00009949800000000002,
+      "inputTokens": 2369,
+      "elapsedMs": 248.638379,
+      "confidence": {
+        "target": 0.39,
+        "intent_DL": 0.99,
+        "intent_DF": 1,
+        "intent_DR": 1,
+        "intent_DB": 1
+      }
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "51eff0ee-3cbe-4ac5-a367-ab211cab37db",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "8bd243db-b442-4627-8533-61acae739242",
+      "cost": 0.000099834,
+      "inputTokens": 2377,
+      "elapsedMs": 277.05635900000016,
+      "confidence": {
+        "target": 0.4,
+        "intent_DL": 0.99,
+        "intent_DF": 0.99,
+        "intent_DR": 0.98,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "e07ec94c-afb0-4fcb-87b5-d1aca3541972",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "bd974dcb-4d82-4e24-b790-9075c44e3f5b",
+      "cost": 0.00010873800000000001,
+      "inputTokens": 2589,
+      "elapsedMs": 300.79435100000046,
+      "confidence": {
+        "target": 0.5,
+        "intent_DR": 0.94,
+        "intent_DB": 0.99,
+        "intent_DL": 0.97,
+        "intent_DF": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "f7d134e7-0ac6-4d46-8196-42b87549c1ff",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "a5865ff3-33db-49a3-b94c-963c1618d6ab",
+      "cost": 0.00009949800000000002,
+      "inputTokens": 2369,
+      "elapsedMs": 247.9299289999999,
+      "confidence": {
+        "target": 0.48,
+        "intent_DR": 0.99,
+        "intent_DB": 0.99,
+        "intent_DL": 1,
+        "intent_DF": 1
+      }
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "1acd789b-7751-488e-94f6-eb72577ddbe9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "ad6d029a-5bc6-41a5-813d-2ba9578e9af7",
+      "cost": 0.000099834,
+      "inputTokens": 2377,
+      "elapsedMs": 279.6568209999996,
+      "confidence": {
+        "target": 0.51,
+        "intent_DR": 0.97,
+        "intent_DB": 0.98,
+        "intent_DL": 0.97,
+        "intent_DF": 0.98
+      }
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "370e450b-fa2c-41dc-8a13-4c52e24dec8c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "5b8219a7-6366-4954-9d35-9537d788a1a8",
+      "cost": 0.00009765000000000002,
+      "inputTokens": 2325,
+      "elapsedMs": 256.407655,
+      "confidence": {
+        "target": 0.53,
+        "intent_DR": 0.81,
+        "intent_DB": 0.89,
+        "intent_DL": 0.85,
+        "intent_DF": 0.92
+      }
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "4cb924e0-bd4a-4750-a198-c7931c61a2d3",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "ff72168e-deb6-447d-a20c-349a8a23625f",
+      "cost": 0.00009949800000000002,
+      "inputTokens": 2369,
+      "elapsedMs": 275.16689099999985,
+      "confidence": {
+        "target": 0.48,
+        "intent_DB": 0.99,
+        "intent_DL": 1,
+        "intent_DF": 0.99,
+        "intent_DR": 1
+      }
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "005e8b1a-b91f-4278-a9e7-931cf2aa13d7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "99ba1629-65b7-43f7-bcc8-b00673982a30",
+      "cost": 0.000099834,
+      "inputTokens": 2377,
+      "elapsedMs": 276.02592300000015,
+      "confidence": {
+        "target": 0.57,
+        "intent_DB": 0.98,
+        "intent_DL": 0.99,
+        "intent_DF": 0.99,
+        "intent_DR": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "45264513-328d-4537-87e2-8de48daec3e4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "83ce12cc-b370-4b8b-a4ef-c5adf309d52a",
+      "cost": 0.00010873800000000001,
+      "inputTokens": 2589,
+      "elapsedMs": 242.0025429999996,
+      "confidence": {
+        "target": 0.53,
+        "intent_DB": 0.97,
+        "intent_DL": 0.98,
+        "intent_DF": 0.99,
+        "intent_DR": 0.98
+      }
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "092a58bb-e824-4eee-bf91-0b061cb2e95a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "6e29ad8c-5cca-408c-9694-5fd433daf0eb",
+      "cost": 0.00009765000000000002,
+      "inputTokens": 2325,
+      "elapsedMs": 288.6453540000002,
+      "confidence": {
+        "target": 0.51,
+        "intent_DB": 0.88,
+        "intent_DL": 0.91,
+        "intent_DF": 0.97,
+        "intent_DR": 0.94
+      }
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "296128c1-59a8-42f1-93c3-4c9c3980f13f",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [
+        {
+          "question": "intent_DR",
+          "expected": [
+            "extract"
+          ],
+          "actual": "insert"
+        }
+      ],
+      "decisionId": "3a1e11c5-6ab7-4004-a770-4fb5ca635b12",
+      "cost": 0.00010105200000000001,
+      "inputTokens": 2406,
+      "elapsedMs": 244.91845600000033,
+      "confidence": {
+        "target": 0.79,
+        "intent_DR": 0.66,
+        "intent_DB": 0.99,
+        "intent_DL": 0.99,
+        "intent_DF": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "db605fab-f9cb-4a6f-ab6d-fd5e119268cb",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "68696789-1c17-4b3b-a681-0176ba57aa67",
+      "cost": 0.00009886800000000002,
+      "inputTokens": 2354,
+      "elapsedMs": 312.59528600000067,
+      "confidence": {
+        "target": 0.74,
+        "intent_DR": 0.18,
+        "intent_DB": 0.77,
+        "intent_DL": 0.51,
+        "intent_DF": 0.89
+      }
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "f0398e67-c25a-429c-9955-dd3aa5dea663",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "8008f4f5-98be-471b-980d-76311ab741fb",
+      "cost": 0.00010995600000000002,
+      "inputTokens": 2618,
+      "elapsedMs": 261.5913759999994,
+      "confidence": {
+        "target": 0.73,
+        "intent_DR": 0.93,
+        "intent_DB": 0.95,
+        "intent_DL": 0.93,
+        "intent_DF": 1
+      }
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "2e4a144c-be39-4305-9760-f61f743a9784",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "extract",
+        "intent_DB": "done",
+        "intent_DL": "done",
+        "intent_DF": "extract"
+      },
+      "wrong": [],
+      "decisionId": "d56c3570-6fb9-402a-a0c0-f1600aa0c194",
+      "cost": 0.00010071600000000002,
+      "inputTokens": 2398,
+      "elapsedMs": 272.20088399999986,
+      "confidence": {
+        "target": 0.8,
+        "intent_DR": 0.59,
+        "intent_DB": 1,
+        "intent_DL": 1,
+        "intent_DF": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "cbde027f-30cd-4976-94ec-2db15c151411",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "e4ce238a-5014-46a3-8911-51d44b440825",
+      "cost": 0.00009954000000000001,
+      "inputTokens": 2370,
+      "elapsedMs": 313.6698729999998,
+      "confidence": {
+        "target": 0.91,
+        "intent_DR": 0.55,
+        "intent_DB": 0.69,
+        "intent_DF": 0.95,
+        "intent_DL": 0.93
+      }
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "8182c5a9-0a64-407c-a87e-6a599c226599",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "c8d0d90b-2808-4f8f-bca0-2cc8e08f6466",
+      "cost": 0.00011062800000000001,
+      "inputTokens": 2634,
+      "elapsedMs": 263.58314599999994,
+      "confidence": {
+        "target": 0.91,
+        "intent_DR": 0.74,
+        "intent_DB": 0.97,
+        "intent_DF": 1,
+        "intent_DL": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "7503a364-b150-4eca-afa7-bb635b13bfa9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "71fe2025-8e2b-4481-a834-fb5a04d94e8e",
+      "cost": 0.00010138800000000001,
+      "inputTokens": 2414,
+      "elapsedMs": 273.85339699999986,
+      "confidence": {
+        "target": 0.9,
+        "intent_DR": 0.86,
+        "intent_DB": 0.93,
+        "intent_DF": 1,
+        "intent_DL": 1
+      }
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "6fa157a8-b869-47c7-814c-47c4f528d4c4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intent_DR": "insert",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract"
+      },
+      "wrong": [],
+      "decisionId": "ca52346a-b650-4e16-b7d6-f2f354779301",
+      "cost": 0.00010172400000000002,
+      "inputTokens": 2422,
+      "elapsedMs": 260.0487809999995,
+      "confidence": {
+        "target": 0.9,
+        "intent_DR": 0.96,
+        "intent_DB": 0.72,
+        "intent_DF": 0.99,
+        "intent_DL": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "b88ec5be-f617-4998-adf7-bf005a9a9e63",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "ee24b38b-ca53-441b-a13c-6d18eb58cb50",
+      "cost": 0.00011029200000000002,
+      "inputTokens": 2626,
+      "elapsedMs": 256.66311399999995,
+      "confidence": {
+        "target": 0.36,
+        "intent_DB": 0.92,
+        "intent_DF": 0.93,
+        "intent_DL": 0.99,
+        "intent_DR": 1
+      }
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "a60b051b-6bc4-4dc3-af7b-13129ab9f3eb",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "4fc6aea8-e4be-418c-920c-f87d54d21d1b",
+      "cost": 0.00010105200000000001,
+      "inputTokens": 2406,
+      "elapsedMs": 222.2273779999996,
+      "confidence": {
+        "target": 0.38,
+        "intent_DB": 0.96,
+        "intent_DF": 0.97,
+        "intent_DL": 1,
+        "intent_DR": 1
+      }
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "91eb6ef8-a062-4c71-b934-4d6a3dc978b3",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "d48cc69e-2d0e-4882-a3e6-ffbdfcacb0a8",
+      "cost": 0.00010138800000000001,
+      "inputTokens": 2414,
+      "elapsedMs": 279.0632660000001,
+      "confidence": {
+        "target": 0.35,
+        "intent_DB": 0.54,
+        "intent_DF": 0.93,
+        "intent_DL": 0.98,
+        "intent_DR": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "7673d07d-7d95-4886-be33-cd0357945628",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "33df97f3-8e4d-4b9b-b21e-6ab8772a3dec",
+      "cost": 0.00009920400000000001,
+      "inputTokens": 2362,
+      "elapsedMs": 345.1110690000005,
+      "confidence": {
+        "target": 0.37,
+        "intent_DB": 0.33,
+        "intent_DF": 0.77,
+        "intent_DL": 0.78,
+        "intent_DR": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "cdcb7bf0-0597-451a-b1a7-616c18a160b4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "37d9f995-01df-4c1b-8b03-53b29c98f5f9",
+      "cost": 0.00010197600000000001,
+      "inputTokens": 2428,
+      "elapsedMs": 237.00387800000044,
+      "confidence": {
+        "target": 0.25,
+        "intent_DL": 0.99,
+        "intent_DF": 0.99,
+        "intent_DR": 0.99,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "71a2b97f-f83b-469e-a34c-fe54f42df7fd",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "99d5be71-9899-4381-9cb8-547cc2733c61",
+      "cost": 0.00010231200000000002,
+      "inputTokens": 2436,
+      "elapsedMs": 304.6480759999995,
+      "confidence": {
+        "target": 0.21,
+        "intent_DL": 0.96,
+        "intent_DF": 0.88,
+        "intent_DR": 0.88,
+        "intent_DB": 0.73
+      }
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "98d04caa-8f26-4355-a712-96502526fbc9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "7d064fb0-84bb-4453-b99b-374de9b7429f",
+      "cost": 0.00011121600000000001,
+      "inputTokens": 2648,
+      "elapsedMs": 246.5915359999999,
+      "confidence": {
+        "target": 0.25,
+        "intent_DL": 0.97,
+        "intent_DF": 0.99,
+        "intent_DR": 0.99,
+        "intent_DB": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "compact-table",
+      "repeat": 0,
+      "runId": "8bc000c5-0cb4-4637-8721-5d793e8719c9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "255f8cfb-18c9-4f8d-8eb5-9783a811894e",
+      "cost": 0.00010130400000000002,
+      "inputTokens": 2412,
+      "elapsedMs": 313.1562589999994,
+      "confidence": {
+        "target": 0.43,
+        "intent_DB": 0.97,
+        "intent_DF": 0.95,
+        "intent_DL": 0.78,
+        "intent_DR": 0.95
+      }
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "9823209c-1422-4448-a3ae-123196a27907",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intent_DL": "extract",
+        "intent_DF": "extract",
+        "intent_DR": "extract",
+        "intent_DB": "extract"
+      },
+      "wrong": [],
+      "decisionId": "e48df1c5-b96d-4637-963e-9aebeaace19a",
+      "cost": 0.00010012800000000001,
+      "inputTokens": 2384,
+      "elapsedMs": 386.8515159999997,
+      "confidence": {
+        "target": 0.28,
+        "intent_DL": 0.88,
+        "intent_DF": 0.81,
+        "intent_DR": 0.74,
+        "intent_DB": 0.78
+      }
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "090552a2-f32b-4adb-a6c7-d9411b650e6a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "60aad1a0-aeec-4c11-a8a6-db732f1c48ec",
+      "cost": 0.00009912000000000001,
+      "inputTokens": 2360,
+      "elapsedMs": 267.50971599999957,
+      "confidence": {
+        "target": 0.34,
+        "intent_DB": 0.88,
+        "intent_DF": 0.93,
+        "intent_DL": 0.91,
+        "intent_DR": 0.95
+      }
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "literal-fields",
+      "repeat": 0,
+      "runId": "9b6374bb-3c7f-4f80-9b77-41210934714a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "605b3459-e312-45b5-a238-13b77e2321d6",
+      "cost": 0.00011020800000000001,
+      "inputTokens": 2624,
+      "elapsedMs": 265.22094000000016,
+      "confidence": {
+        "target": 0.4,
+        "intent_DB": 0.95,
+        "intent_DF": 0.99,
+        "intent_DL": 0.98,
+        "intent_DR": 0.99
+      }
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "ordered-checklist",
+      "repeat": 0,
+      "runId": "f2cbdd66-9ec4-472c-9404-e7534bb0ae23",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intent_DB": "extract",
+        "intent_DF": "extract",
+        "intent_DL": "extract",
+        "intent_DR": "extract"
+      },
+      "wrong": [],
+      "decisionId": "710d354f-1a39-4258-abd7-84e916013566",
+      "cost": 0.00010096800000000001,
+      "inputTokens": 2404,
+      "elapsedMs": 256.01624100000026,
+      "confidence": {
+        "target": 0.42,
+        "intent_DB": 0.99,
+        "intent_DF": 1,
+        "intent_DL": 0.99,
+        "intent_DR": 0.99
+      }
+    }
+  ]
+}

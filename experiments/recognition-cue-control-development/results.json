@@ -1,0 +1,1128 @@
+{
+  "fingerprint": "5e680d135d1e2b14e50418374d99848a04367b995be09eda53dac2d29ef7949a",
+  "split": "development",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 20,
+  "attempted": 20,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7305942080000003,
+    "usage": 1.7279062080000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 21926,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7312925840000002,
+    "usage": 1.7286045840000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 21946,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "direct-cue": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.0006983760000000001,
+      "inputTokens": 16628,
+      "cases": {
+        "development/case-01": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"align\"}"
+          ],
+          "failures": [
+            {
+              "expectedTargets": [
+                "DR",
+                "DF"
+              ],
+              "expectedIntention": [
+                "extract"
+              ],
+              "targetCorrect": true,
+              "intentionCorrect": false
+            }
+          ]
+        },
+        "development/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"insert\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"align\"}"
+          ],
+          "failures": []
+        },
+        "development/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DF\",\"intention\":\"insert\"}"
+          ],
+          "failures": []
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"align\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"insert\"}"
+          ],
+          "failures": []
+        },
+        "development/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DR\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        },
+        "development/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DB\",\"intention\":\"align\"}"
+          ],
+          "failures": []
+        },
+        "development/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"target\":\"DL\",\"intention\":\"extract\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "development/case-03",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "1b18f9b7-9d35-4f08-b381-62ed59850f92",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "F",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DL",
+          "DR",
+          "DB",
+          "DF"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "b21a8d71-e1ce-4e5f-9659-81b3050bc3a7",
+          "elapsedMs": 605.1277180000001,
+          "confidence": {
+            "intention": 0.48
+          }
+        }
+      ],
+      "cost": 0.00003456600000000001,
+      "inputTokens": 823,
+      "elapsedMs": 605.1277180000001
+    },
+    {
+      "fixture": "development/case-01",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "42254292-62ba-4149-a4ba-d112ec05aa5d",
+      "correct": false,
+      "selectedCorrect": false,
+      "targetCorrect": true,
+      "intentionCorrect": false,
+      "choices": {
+        "target": "DR",
+        "intention": "align"
+      },
+      "goldFacts": {
+        "yellowDirection": "R",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "yes"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DR",
+          "DF"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": false
+      },
+      "calls": [
+        {
+          "id": "bd4a857b-c1c9-4df5-bb1e-c85d0549f397",
+          "elapsedMs": 727.175202,
+          "confidence": {
+            "intention": 0.32
+          }
+        }
+      ],
+      "cost": 0.000034734,
+      "inputTokens": 827,
+      "elapsedMs": 727.175202
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "b8c1737d-68c9-4683-a08b-3f5584d20b7d",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "D",
+        "layer": "bottom",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DF",
+          "DR",
+          "DL",
+          "DB"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "eacb076b-80e6-44cb-8dc6-aa836a62adaf",
+          "elapsedMs": 748.1871219999999,
+          "confidence": {
+            "intention": 0.94
+          }
+        }
+      ],
+      "cost": 0.000034818000000000004,
+      "inputTokens": 829,
+      "elapsedMs": 748.1871219999999
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "f0f7e0d2-9143-4d6c-b3fc-5254b691dbdb",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "F",
+        "layer": "middle",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DF",
+          "DL",
+          "DR"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "619279f5-e2bf-4b48-b180-c88985f999b2",
+          "elapsedMs": 744.159474,
+          "confidence": {
+            "intention": 0.88
+          }
+        }
+      ],
+      "cost": 0.000035658,
+      "inputTokens": 849,
+      "elapsedMs": 744.159474
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "d668e365-8e8d-4d96-9e9c-9d8eae7775f3",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "D",
+        "layer": "bottom",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DL",
+          "DF",
+          "DR"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "aa5266f5-de93-4199-8038-07a2eab272cd",
+          "elapsedMs": 238.47535800000014,
+          "confidence": {
+            "intention": 0.96
+          }
+        }
+      ],
+      "cost": 0.000034482000000000006,
+      "inputTokens": 821,
+      "elapsedMs": 238.47535800000014
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "36361702-0192-44ee-8126-891f497b2ba0",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "R",
+        "layer": "middle",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DF",
+          "DB",
+          "DL",
+          "DR"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "b83ba810-bd52-43e5-9a18-d9802b417a13",
+          "elapsedMs": 243.19204100000002,
+          "confidence": {
+            "intention": 0.99
+          }
+        }
+      ],
+      "cost": 0.000035532000000000005,
+      "inputTokens": 846,
+      "elapsedMs": 243.19204100000002
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "529a54e4-7761-4889-b354-1292fb2038f6",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "R",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DL",
+          "DF"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "66824fc3-4d96-46bd-82c3-4044fbfb4d61",
+          "elapsedMs": 288.0732009999999,
+          "confidence": {
+            "intention": 0.57
+          }
+        }
+      ],
+      "cost": 0.00003456600000000001,
+      "inputTokens": 823,
+      "elapsedMs": 288.0732009999999
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "79c529c1-a6d0-4427-a430-51130fbe6de2",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "insert"
+      },
+      "goldFacts": {
+        "yellowDirection": "U",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "yes"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DL",
+          "DR",
+          "DF",
+          "DB"
+        ],
+        "expectedIntention": [
+          "insert"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "c77da3b1-baf3-4286-a24b-1a22b7426797",
+          "elapsedMs": 300.05049600000007,
+          "confidence": {
+            "intention": 0.74
+          }
+        }
+      ],
+      "cost": 0.000035028000000000004,
+      "inputTokens": 834,
+      "elapsedMs": 300.05049600000007
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "4c53aad0-c5ad-42f6-8e77-250d4c8cc9f9",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "D",
+        "layer": "bottom",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DF",
+          "DL",
+          "DR"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "eb70de53-8abd-4d88-848a-b1cb2984de00",
+          "elapsedMs": 263.0721450000003,
+          "confidence": {
+            "intention": 0.97
+          }
+        }
+      ],
+      "cost": 0.000034482000000000006,
+      "inputTokens": 821,
+      "elapsedMs": 263.0721450000003
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "2156564b-0f91-4258-88de-c800cb75987b",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "D",
+        "layer": "bottom",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DF",
+          "DR",
+          "DL"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "8437905c-eddb-4380-a9a8-de6afd5a7c0a",
+          "elapsedMs": 251.28738199999998,
+          "confidence": {
+            "intention": 0.96
+          }
+        }
+      ],
+      "cost": 0.000034818000000000004,
+      "inputTokens": 829,
+      "elapsedMs": 251.28738199999998
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "a47a759f-83e2-4d16-b435-46e396d2b03b",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "L",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DF",
+          "DL"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "31e6b107-a319-41fe-8b32-341a007f7468",
+          "elapsedMs": 232.98286700000017,
+          "confidence": {
+            "intention": 0.52
+          }
+        }
+      ],
+      "cost": 0.00003456600000000001,
+      "inputTokens": 823,
+      "elapsedMs": 232.98286700000017
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "62988e55-3077-49b3-b33c-a6723262aa53",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "align"
+      },
+      "goldFacts": {
+        "yellowDirection": "U",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DL",
+          "DR",
+          "DB",
+          "DF"
+        ],
+        "expectedIntention": [
+          "align"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "a9b2dadf-91ff-4688-a1d3-4edf2aad865b",
+          "elapsedMs": 243.31049400000006,
+          "confidence": {
+            "intention": 0.64
+          }
+        }
+      ],
+      "cost": 0.000034902000000000006,
+      "inputTokens": 831,
+      "elapsedMs": 243.31049400000006
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "0b6b0464-daf0-46d0-9faf-5ec75218057e",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DF",
+        "intention": "insert"
+      },
+      "goldFacts": {
+        "yellowDirection": "U",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "yes"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DF",
+          "DR",
+          "DB",
+          "DL"
+        ],
+        "expectedIntention": [
+          "insert"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "b5a93012-e64e-487d-8aba-29939af1c590",
+          "elapsedMs": 230.5192979999997,
+          "confidence": {
+            "intention": 0.81
+          }
+        }
+      ],
+      "cost": 0.000034692000000000006,
+      "inputTokens": 826,
+      "elapsedMs": 230.5192979999997
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "0924c17a-595b-4aa4-a786-90877813135b",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "D",
+        "layer": "bottom",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DR",
+          "DL",
+          "DF",
+          "DB"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "c6358c12-5184-4ba4-b0e6-53e40c4a0ac5",
+          "elapsedMs": 251.8230169999997,
+          "confidence": {
+            "intention": 0.97
+          }
+        }
+      ],
+      "cost": 0.00003486,
+      "inputTokens": 830,
+      "elapsedMs": 251.8230169999997
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "117d9c18-d469-42b5-9eac-8cb232f74164",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "align"
+      },
+      "goldFacts": {
+        "yellowDirection": "U",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DR",
+          "DF",
+          "DL",
+          "DB"
+        ],
+        "expectedIntention": [
+          "align"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "25b5e1d7-b37a-4f39-ba6c-9de5e04e0410",
+          "elapsedMs": 252.79211899999973,
+          "confidence": {
+            "intention": 0.66
+          }
+        }
+      ],
+      "cost": 0.00003456600000000001,
+      "inputTokens": 823,
+      "elapsedMs": 252.79211899999973
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "25743898-cccd-4965-9169-531615a23066",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "L",
+        "layer": "middle",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DF",
+          "DR",
+          "DL"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "ae23470f-4e3a-43e5-a562-83c7fd02f77b",
+          "elapsedMs": 294.2993789999996,
+          "confidence": {
+            "intention": 0.98
+          }
+        }
+      ],
+      "cost": 0.000035616000000000006,
+      "inputTokens": 848,
+      "elapsedMs": 294.2993789999996
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "a1d30e74-e24b-4641-946b-76ffb147b404",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "insert"
+      },
+      "goldFacts": {
+        "yellowDirection": "U",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "yes"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DR",
+          "DB",
+          "DF",
+          "DL"
+        ],
+        "expectedIntention": [
+          "insert"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "c44684c9-831a-4996-9e2e-d3ff11e0b976",
+          "elapsedMs": 246.63117299999976,
+          "confidence": {
+            "intention": 0.73
+          }
+        }
+      ],
+      "cost": 0.000034692000000000006,
+      "inputTokens": 826,
+      "elapsedMs": 246.63117299999976
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "9adabfce-e23c-4dfc-b60f-3deb6ad71388",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DR",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "F",
+        "layer": "middle",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DF",
+          "DR",
+          "DL",
+          "DB"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "64e27f46-ea66-442d-9b2a-3bd3f58eb20d",
+          "elapsedMs": 276.5528639999998,
+          "confidence": {
+            "intention": 0.99
+          }
+        }
+      ],
+      "cost": 0.000035574,
+      "inputTokens": 847,
+      "elapsedMs": 276.5528639999998
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "517a0f20-55d4-4af4-b268-b5aab1c354ac",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DB",
+        "intention": "align"
+      },
+      "goldFacts": {
+        "yellowDirection": "U",
+        "layer": "top",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DF",
+          "DR",
+          "DL"
+        ],
+        "expectedIntention": [
+          "align"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "127d9db6-7800-4483-aebe-ac388794d0e5",
+          "elapsedMs": 250.8549380000004,
+          "confidence": {
+            "intention": 0.67
+          }
+        }
+      ],
+      "cost": 0.00003456600000000001,
+      "inputTokens": 823,
+      "elapsedMs": 250.8549380000004
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "direct-cue",
+      "repeat": 0,
+      "runId": "1564b8a3-c74d-4fce-a48a-816b356284d3",
+      "correct": true,
+      "selectedCorrect": true,
+      "targetCorrect": true,
+      "intentionCorrect": true,
+      "choices": {
+        "target": "DL",
+        "intention": "extract"
+      },
+      "goldFacts": {
+        "yellowDirection": "B",
+        "layer": "middle",
+        "solved": "no",
+        "aboveHome": "no"
+      },
+      "recognitionCorrect": null,
+      "wrong": {
+        "expectedTargets": [
+          "DB",
+          "DR",
+          "DL"
+        ],
+        "expectedIntention": [
+          "extract"
+        ],
+        "targetCorrect": true,
+        "intentionCorrect": true
+      },
+      "calls": [
+        {
+          "id": "d2be7079-17e3-4c65-8573-825ac0205e22",
+          "elapsedMs": 285.6824280000001,
+          "confidence": {
+            "intention": 0.96
+          }
+        }
+      ],
+      "cost": 0.000035658,
+      "inputTokens": 849,
+      "elapsedMs": 285.6824280000001
+    }
+  ]
+}

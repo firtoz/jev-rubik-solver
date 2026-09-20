@@ -1,0 +1,872 @@
+[
+  {
+    "example": "broad-turn",
+    "eventId": 7720,
+    "runId": "287a136f-4883-4392-b301-7a164ef6f7cb",
+    "id": "82ea03ed-134d-485a-8c41-174e50fcdf62",
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "frame": {
+          "centers": {
+            "U": "white",
+            "D": "yellow",
+            "F": "green",
+            "B": "blue",
+            "R": "red",
+            "L": "orange"
+          },
+          "note": "Fixed frame. Yellow D first; white U last. Clockwise is viewed directly at the turned face."
+        },
+        "stage": "top-orientation",
+        "goal": "Orient all white corner stickers toward U, preserving the lower layers and top cross.",
+        "target": "whole",
+        "stagePieces": [
+          {
+            "piece": "UBL",
+            "kind": "corner",
+            "position": "UFR",
+            "destination": "UBL",
+            "stickers": {
+              "white": "F",
+              "blue": "R",
+              "orange": "U"
+            },
+            "solved": false
+          },
+          {
+            "piece": "ULF",
+            "kind": "corner",
+            "position": "URB",
+            "destination": "ULF",
+            "stickers": {
+              "white": "R",
+              "orange": "B",
+              "green": "U"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UFR",
+            "kind": "corner",
+            "position": "UBL",
+            "destination": "UFR",
+            "stickers": {
+              "white": "B",
+              "green": "L",
+              "red": "U"
+            },
+            "solved": false
+          },
+          {
+            "piece": "URB",
+            "kind": "corner",
+            "position": "ULF",
+            "destination": "URB",
+            "stickers": {
+              "white": "U",
+              "red": "L",
+              "blue": "F"
+            },
+            "solved": false
+          }
+        ],
+        "otherPieces": [
+          {
+            "piece": "UF",
+            "position": "UF",
+            "stickers": {
+              "white": "U",
+              "green": "F"
+            },
+            "solved": true
+          },
+          {
+            "piece": "UB",
+            "position": "UR",
+            "stickers": {
+              "white": "U",
+              "blue": "R"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UL",
+            "position": "UB",
+            "stickers": {
+              "white": "U",
+              "orange": "B"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UR",
+            "position": "UL",
+            "stickers": {
+              "white": "U",
+              "red": "L"
+            },
+            "solved": false
+          },
+          {
+            "piece": "DF",
+            "position": "DF",
+            "stickers": {
+              "yellow": "D",
+              "green": "F"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DR",
+            "position": "DR",
+            "stickers": {
+              "yellow": "D",
+              "red": "R"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DB",
+            "position": "DB",
+            "stickers": {
+              "yellow": "D",
+              "blue": "B"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DL",
+            "position": "DL",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "FR",
+            "position": "FR",
+            "stickers": {
+              "green": "F",
+              "red": "R"
+            },
+            "solved": true
+          },
+          {
+            "piece": "FL",
+            "position": "FL",
+            "stickers": {
+              "green": "F",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "BR",
+            "position": "BR",
+            "stickers": {
+              "blue": "B",
+              "red": "R"
+            },
+            "solved": true
+          },
+          {
+            "piece": "BL",
+            "position": "BL",
+            "stickers": {
+              "blue": "B",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DRF",
+            "position": "DRF",
+            "stickers": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DFL",
+            "position": "DFL",
+            "stickers": {
+              "yellow": "D",
+              "green": "F",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DLB",
+            "position": "DLB",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L",
+              "blue": "B"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DBR",
+            "position": "DBR",
+            "stickers": {
+              "yellow": "D",
+              "blue": "B",
+              "red": "R"
+            },
+            "solved": true
+          }
+        ],
+        "completed": {
+          "cross": true,
+          "firstLayer": true,
+          "middle": true,
+          "topCross": true,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 13
+        },
+        "recentActions": []
+      },
+      "questions": {
+        "turn": {
+          "type": "choice",
+          "instructions": "Choose one face turn that moves the target toward its requiredStickerDirections and destination while protecting solved pieces. Read the static direction mappings in the options. If one turn solves the entire cube, choose it. Quarter turns are clockwise looking directly at that face; prime is counterclockwise.",
+          "criteria": {
+            "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192L, L\u2192B, B\u2192R, R\u2192F; the U sticker direction stays fixed.",
+            "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192R, L\u2192F, B\u2192L, R\u2192B; the U sticker direction stays fixed.",
+            "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192B, L\u2192R, B\u2192F, R\u2192L; the U sticker direction stays fixed.",
+            "D": "Turn D clockwise looking at that face. Only pieces touching D move. Their sticker directions change: F\u2192R, R\u2192B, B\u2192L, L\u2192F; the D sticker direction stays fixed.",
+            "D'": "Turn D counterclockwise looking at that face. Only pieces touching D move. Their sticker directions change: F\u2192L, R\u2192F, B\u2192R, L\u2192B; the D sticker direction stays fixed.",
+            "D2": "Turn D 180 degrees looking at that face. Only pieces touching D move. Their sticker directions change: F\u2192B, R\u2192L, B\u2192F, L\u2192R; the D sticker direction stays fixed.",
+            "F": "Turn F clockwise looking at that face. Only pieces touching F move. Their sticker directions change: U\u2192R, R\u2192D, D\u2192L, L\u2192U; the F sticker direction stays fixed.",
+            "F'": "Turn F counterclockwise looking at that face. Only pieces touching F move. Their sticker directions change: U\u2192L, R\u2192U, D\u2192R, L\u2192D; the F sticker direction stays fixed.",
+            "F2": "Turn F 180 degrees looking at that face. Only pieces touching F move. Their sticker directions change: U\u2192D, R\u2192L, D\u2192U, L\u2192R; the F sticker direction stays fixed.",
+            "B": "Turn B clockwise looking at that face. Only pieces touching B move. Their sticker directions change: U\u2192L, L\u2192D, D\u2192R, R\u2192U; the B sticker direction stays fixed.",
+            "B'": "Turn B counterclockwise looking at that face. Only pieces touching B move. Their sticker directions change: U\u2192R, L\u2192U, D\u2192L, R\u2192D; the B sticker direction stays fixed.",
+            "B2": "Turn B 180 degrees looking at that face. Only pieces touching B move. Their sticker directions change: U\u2192D, L\u2192R, D\u2192U, R\u2192L; the B sticker direction stays fixed.",
+            "R": "Turn R clockwise looking at that face. Only pieces touching R move. Their sticker directions change: U\u2192B, B\u2192D, D\u2192F, F\u2192U; the R sticker direction stays fixed.",
+            "R'": "Turn R counterclockwise looking at that face. Only pieces touching R move. Their sticker directions change: U\u2192F, B\u2192U, D\u2192B, F\u2192D; the R sticker direction stays fixed.",
+            "R2": "Turn R 180 degrees looking at that face. Only pieces touching R move. Their sticker directions change: U\u2192D, B\u2192F, D\u2192U, F\u2192B; the R sticker direction stays fixed.",
+            "L": "Turn L clockwise looking at that face. Only pieces touching L move. Their sticker directions change: U\u2192F, F\u2192D, D\u2192B, B\u2192U; the L sticker direction stays fixed.",
+            "L'": "Turn L counterclockwise looking at that face. Only pieces touching L move. Their sticker directions change: U\u2192B, F\u2192U, D\u2192F, B\u2192D; the L sticker direction stays fixed.",
+            "L2": "Turn L 180 degrees looking at that face. Only pieces touching L move. Their sticker directions change: U\u2192D, F\u2192B, D\u2192U, B\u2192F; the L sticker direction stays fixed."
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "turn": {
+          "type": "choice",
+          "choice": "U",
+          "probabilities": {
+            "U2": 0.12,
+            "B'": 0.03,
+            "L2": 0,
+            "F2": 0,
+            "B": 0.02,
+            "U": 0.39,
+            "R'": 0.1,
+            "L'": 0.01,
+            "D": 0.01,
+            "B2": 0.01,
+            "L": 0.01,
+            "R2": 0.01,
+            "U'": 0.17,
+            "F": 0.03,
+            "D'": 0,
+            "F'": 0.02,
+            "D2": 0,
+            "R": 0.07
+          },
+          "confidence": 0.36
+        }
+      },
+      "usage": {
+        "input_tokens": 2683,
+        "output_tokens": 155
+      }
+    },
+    "elapsedMs": 361.10837100000936,
+    "cost": 0.00011268600000000001
+  },
+  {
+    "example": "vague-setup-probe",
+    "eventId": 6,
+    "runId": "77d10f11-f641-4fe0-a77d-59fd403c12a3",
+    "id": "64cbc2c6-0965-4980-a616-12e7c2e81c93",
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "frame": {
+          "centers": {
+            "U": "white",
+            "D": "yellow",
+            "F": "green",
+            "B": "blue",
+            "R": "red",
+            "L": "orange"
+          },
+          "note": "Fixed frame, U up, D down, F front. Solve yellow D first, white U last. Camera has no effect."
+        },
+        "stage": "top-corners",
+        "goal": "Position the oriented top corners in their correct destinations.",
+        "pieces": [
+          {
+            "piece": "UR",
+            "kind": "edge",
+            "position": "UF",
+            "destination": "UR",
+            "stickers": {
+              "white": "U",
+              "red": "F"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UB",
+            "kind": "edge",
+            "position": "UR",
+            "destination": "UB",
+            "stickers": {
+              "white": "U",
+              "blue": "R"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UL",
+            "kind": "edge",
+            "position": "UB",
+            "destination": "UL",
+            "stickers": {
+              "white": "U",
+              "orange": "B"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UF",
+            "kind": "edge",
+            "position": "UL",
+            "destination": "UF",
+            "stickers": {
+              "white": "U",
+              "green": "L"
+            },
+            "solved": false
+          },
+          {
+            "piece": "DF",
+            "kind": "edge",
+            "position": "DF",
+            "destination": "DF",
+            "stickers": {
+              "yellow": "D",
+              "green": "F"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DR",
+            "kind": "edge",
+            "position": "DR",
+            "destination": "DR",
+            "stickers": {
+              "yellow": "D",
+              "red": "R"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DB",
+            "kind": "edge",
+            "position": "DB",
+            "destination": "DB",
+            "stickers": {
+              "yellow": "D",
+              "blue": "B"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DL",
+            "kind": "edge",
+            "position": "DL",
+            "destination": "DL",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "FR",
+            "kind": "edge",
+            "position": "FR",
+            "destination": "FR",
+            "stickers": {
+              "green": "F",
+              "red": "R"
+            },
+            "solved": true
+          },
+          {
+            "piece": "FL",
+            "kind": "edge",
+            "position": "FL",
+            "destination": "FL",
+            "stickers": {
+              "green": "F",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "BR",
+            "kind": "edge",
+            "position": "BR",
+            "destination": "BR",
+            "stickers": {
+              "blue": "B",
+              "red": "R"
+            },
+            "solved": true
+          },
+          {
+            "piece": "BL",
+            "kind": "edge",
+            "position": "BL",
+            "destination": "BL",
+            "stickers": {
+              "blue": "B",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "URB",
+            "kind": "corner",
+            "position": "UFR",
+            "destination": "URB",
+            "stickers": {
+              "white": "U",
+              "red": "F",
+              "blue": "R"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UBL",
+            "kind": "corner",
+            "position": "URB",
+            "destination": "UBL",
+            "stickers": {
+              "white": "U",
+              "blue": "R",
+              "orange": "B"
+            },
+            "solved": false
+          },
+          {
+            "piece": "ULF",
+            "kind": "corner",
+            "position": "UBL",
+            "destination": "ULF",
+            "stickers": {
+              "white": "U",
+              "orange": "B",
+              "green": "L"
+            },
+            "solved": false
+          },
+          {
+            "piece": "UFR",
+            "kind": "corner",
+            "position": "ULF",
+            "destination": "UFR",
+            "stickers": {
+              "white": "U",
+              "green": "L",
+              "red": "F"
+            },
+            "solved": false
+          },
+          {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "DRF",
+            "destination": "DRF",
+            "stickers": {
+              "yellow": "D",
+              "red": "R",
+              "green": "F"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DFL",
+            "kind": "corner",
+            "position": "DFL",
+            "destination": "DFL",
+            "stickers": {
+              "yellow": "D",
+              "green": "F",
+              "orange": "L"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DLB",
+            "kind": "corner",
+            "position": "DLB",
+            "destination": "DLB",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L",
+              "blue": "B"
+            },
+            "solved": true
+          },
+          {
+            "piece": "DBR",
+            "kind": "corner",
+            "position": "DBR",
+            "destination": "DBR",
+            "stickers": {
+              "yellow": "D",
+              "blue": "B",
+              "red": "R"
+            },
+            "solved": true
+          }
+        ],
+        "completed": {
+          "cross": true,
+          "firstLayer": true,
+          "middle": true,
+          "topCross": true,
+          "topOriented": true,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 12
+        },
+        "recentActions": [],
+        "target": null
+      },
+      "questions": {
+        "setup": {
+          "type": "choice",
+          "instructions": "The lower two layers and orientations are already solved. Which U turn restores all pieces to their destinations?",
+          "criteria": {
+            "U": "clockwise",
+            "U'": "counterclockwise",
+            "U2": "half turn"
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "setup": {
+          "type": "choice",
+          "choice": "U",
+          "probabilities": {
+            "U'": 0.34,
+            "U": 0.45,
+            "U2": 0.21
+          },
+          "confidence": 0.17
+        }
+      },
+      "usage": {
+        "input_tokens": 1919,
+        "output_tokens": 40
+      }
+    },
+    "elapsedMs": 313.25581999999997,
+    "cost": 8.059800000000002e-05
+  },
+  {
+    "example": "focused-setup-probe",
+    "eventId": 14342,
+    "runId": "9f661d62-bd88-49b6-b696-b9bd6211d37f",
+    "id": "1321ea34-12e9-4e72-a7ab-e699876a6406",
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "ULF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "L",
+            "red": "F",
+            "green": "U"
+          },
+          "solved": false,
+          "requiredStickerDirections": {
+            "yellow": "D",
+            "red": "R",
+            "green": "F"
+          }
+        },
+        "centers": {
+          "U": "white",
+          "D": "yellow",
+          "F": "green",
+          "B": "blue",
+          "R": "red",
+          "L": "orange"
+        }
+      },
+      "questions": {
+        "setup": {
+          "type": "choice",
+          "instructions": "The target corner belongs in DRF (bottom-right-front). Before insertion it must be at UFR (top-front-right), directly above that slot. Which U-layer rotation moves it from its current position to UFR? Use the position mappings provided. Choose none only if it is already at UFR.",
+          "criteria": {
+            "none": "Do not turn U; every piece stays where it is.",
+            "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192L, L\u2192B, B\u2192R, R\u2192F; the U sticker direction stays fixed. Corner positions: UFR\u2192ULF, ULF\u2192UBL, UBL\u2192URB, URB\u2192UFR. Edge positions: UF\u2192UL, UL\u2192UB, UB\u2192UR, UR\u2192UF.",
+            "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192R, L\u2192F, B\u2192L, R\u2192B; the U sticker direction stays fixed. Corner positions: UFR\u2192URB, ULF\u2192UFR, UBL\u2192ULF, URB\u2192UBL. Edge positions: UF\u2192UR, UL\u2192UF, UB\u2192UL, UR\u2192UB.",
+            "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192B, L\u2192R, B\u2192F, R\u2192L; the U sticker direction stays fixed. Corner positions: UFR\u2192UBL, ULF\u2192URB, UBL\u2192UFR, URB\u2192ULF. Edge positions: UF\u2192UB, UL\u2192UR, UB\u2192UF, UR\u2192UL."
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "setup": {
+          "type": "choice",
+          "choice": "U'",
+          "probabilities": {
+            "U2": 0,
+            "U": 0.01,
+            "none": 0,
+            "U'": 0.99
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 833,
+        "output_tokens": 48
+      }
+    },
+    "elapsedMs": 560.7861539999999,
+    "cost": 3.498600000000001e-05
+  },
+  {
+    "example": "conflicting-daisy-goal",
+    "eventId": 25041,
+    "runId": "86a1a2b2-b617-4c94-8e3a-542ff53f4368",
+    "id": "437d73ea-9f90-4f50-87ff-3088d20d98ee",
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "frame": {
+          "centers": {
+            "U": "white",
+            "D": "yellow",
+            "F": "green",
+            "B": "blue",
+            "R": "red",
+            "L": "orange"
+          },
+          "note": "All positions, sticker directions, and algorithm notation in this question use a reference with original F as F. U and D are unchanged. Piece IDs remain permanent identities."
+        },
+        "stage": "daisy",
+        "goal": "Put all four yellow edges around the white U center, with yellow stickers pointing U. These are petals. Preserve existing petals. Side colors do not need to match centers yet; already solved D edges may be moved to build the daisy.",
+        "target": {
+          "piece": "DF",
+          "kind": "edge",
+          "position": "DF",
+          "destination": "DF",
+          "stickers": {
+            "yellow": "D",
+            "green": "F"
+          },
+          "solved": true,
+          "requiredStickerDirections": {
+            "yellow": "D",
+            "green": "F"
+          },
+          "locationWords": "bottom front",
+          "destinationWords": "bottom front",
+          "layer": "bottom",
+          "stickerDirectionsInWords": {
+            "yellow": "bottom",
+            "green": "front"
+          },
+          "directlyAboveHome": false,
+          "sideStickersMatchingCenters": [
+            "green"
+          ]
+        },
+        "stagePieces": [
+          {
+            "piece": "DF",
+            "kind": "edge",
+            "position": "DF",
+            "destination": "DF",
+            "stickers": {
+              "yellow": "D",
+              "green": "F"
+            },
+            "solved": true,
+            "satisfiesStageGoal": false,
+            "locationWords": "bottom front",
+            "destinationWords": "bottom front",
+            "layer": "bottom",
+            "stickerDirectionsInWords": {
+              "yellow": "bottom",
+              "green": "front"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": [
+              "green"
+            ]
+          },
+          {
+            "piece": "DB",
+            "kind": "edge",
+            "position": "DB",
+            "destination": "DB",
+            "stickers": {
+              "yellow": "D",
+              "blue": "B"
+            },
+            "solved": true,
+            "satisfiesStageGoal": false,
+            "locationWords": "bottom back",
+            "destinationWords": "bottom back",
+            "layer": "bottom",
+            "stickerDirectionsInWords": {
+              "yellow": "bottom",
+              "blue": "back"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": [
+              "blue"
+            ]
+          },
+          {
+            "piece": "DL",
+            "kind": "edge",
+            "position": "DL",
+            "destination": "DL",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L"
+            },
+            "solved": true,
+            "satisfiesStageGoal": false,
+            "locationWords": "bottom left",
+            "destinationWords": "bottom left",
+            "layer": "bottom",
+            "stickerDirectionsInWords": {
+              "yellow": "bottom",
+              "orange": "left"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": [
+              "orange"
+            ]
+          },
+          {
+            "piece": "DR",
+            "kind": "edge",
+            "position": "FR",
+            "destination": "DR",
+            "stickers": {
+              "yellow": "F",
+              "red": "R"
+            },
+            "solved": false,
+            "satisfiesStageGoal": false,
+            "locationWords": "front right",
+            "destinationWords": "bottom right",
+            "layer": "middle",
+            "stickerDirectionsInWords": {
+              "yellow": "front",
+              "red": "right"
+            },
+            "directlyAboveHome": false,
+            "sideStickersMatchingCenters": [
+              "red"
+            ]
+          }
+        ],
+        "completed": {
+          "daisy": 0,
+          "cross": false,
+          "firstLayer": false,
+          "middle": false,
+          "topCross": false,
+          "topOriented": false,
+          "cornersPlaced": false,
+          "solved": false,
+          "solvedPieces": 7
+        },
+        "recentActions": [],
+        "recognisedCaseBeforeSetup": "bottomDown",
+        "setupAlreadyAppliedInObservation": "none"
+      },
+      "questions": {
+        "skill": {
+          "type": "choice",
+          "instructions": "Choose the skill using the observed sticker directions. Focus on target.requiredStickerDirections. The state below is AFTER your chosen setup. Algorithms use the selected reference front. Choose based on applicability, not its name alone.",
+          "criteria": {
+            "lift-bottom": "Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal. Algorithm in selected reference: F2",
+            "lift-middle-right": "Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal. Algorithm in selected reference: R",
+            "lift-middle-left": "Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal. Algorithm in selected reference: L'",
+            "flip-bottom-edge": "Target at DF with yellow pointing F: F then L-prime lifts it via FL to UL yellow-up. First clear yellow-up petals away from UF and UL using U setup. Algorithm in selected reference: F L'",
+            "flip-top-edge": "Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal. Algorithm in selected reference: F R",
+            "lower-top-edge": "Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target. Algorithm in selected reference: F",
+            "flip-top-edge-left": "Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals. Algorithm in selected reference: F' L'",
+            "U": "Turn U clockwise looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192L, L\u2192B, B\u2192R, R\u2192F; the U sticker direction stays fixed.",
+            "U'": "Turn U counterclockwise looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192R, L\u2192F, B\u2192L, R\u2192B; the U sticker direction stays fixed.",
+            "U2": "Turn U 180 degrees looking at that face. Only pieces touching U move. Their sticker directions change: F\u2192B, L\u2192R, B\u2192F, R\u2192L; the U sticker direction stays fixed."
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "skill": {
+          "type": "choice",
+          "choice": "lift-bottom",
+          "probabilities": {
+            "U2": 0,
+            "lift-bottom": 0.9400000000000001,
+            "U'": 0,
+            "flip-top-edge": 0,
+            "lift-middle-left": 0,
+            "lift-middle-right": 0.02,
+            "flip-bottom-edge": 0.02,
+            "U": 0.01,
+            "flip-top-edge-left": 0,
+            "lower-top-edge": 0
+          },
+          "confidence": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 2014,
+        "output_tokens": 104
+      }
+    },
+    "elapsedMs": 235.61846600000013,
+    "cost": 8.458800000000001e-05
+  }
+]
