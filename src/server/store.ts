@@ -8,6 +8,7 @@ export const db = new Database(path);
 db.exec(`PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;
 CREATE TABLE IF NOT EXISTS runs(id TEXT PRIMARY KEY,json TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY AUTOINCREMENT,run_id TEXT,kind TEXT,created_at TEXT,payload TEXT);
+CREATE INDEX IF NOT EXISTS events_run_id_id ON events(run_id,id);
 CREATE TABLE IF NOT EXISTS ledger(id TEXT PRIMARY KEY,run_id TEXT,amount REAL,status TEXT,created_at TEXT);
 CREATE TABLE IF NOT EXISTS locks(run_id TEXT PRIMARY KEY,owner TEXT,expires INTEGER);
 CREATE TABLE IF NOT EXISTS commands(id TEXT PRIMARY KEY,run_id TEXT);

@@ -1,0 +1,265 @@
+{
+  "id": "8d7e7a7c-f37a-4d2a-820a-6d54e6f91d64",
+  "name": "Frozen validation",
+  "split": "validation",
+  "datasetId": "2c54c7db-b2a6-4055-a522-f065eab328b3",
+  "cases": [
+    {
+      "id": "a61e2efd-2a5f-4bbe-a309-aa239816bfc9",
+      "scramble": "F U2 B D R' F' B2 L' U R2 F2 U B2 L2 F2 D' F2 L B'",
+      "stateHash": "[{\"pieces\":[5,2,0,9,6,3,1,7,11,8,10,4],\"orientation\":[0,1,0,0,1,1,1,1,1,1,0,1]},{\"pieces\":[1,3,6,5,2,7,0,4],\"orientation\":[2,0,0,1,2,1,1,2]}]"
+    },
+    {
+      "id": "d8db0251-fd0f-49ed-ac5d-5c87adae87ac",
+      "scramble": "U' D' B2 L2 F U2 L F B2 U R2 U2 R2 U' R2 D F2 B2 R2 D R'",
+      "stateHash": "[{\"pieces\":[5,8,9,4,10,11,0,1,3,2,6,7],\"orientation\":[1,0,0,0,1,0,1,0,0,0,0,1]},{\"pieces\":[2,4,7,3,1,0,6,5],\"orientation\":[1,0,2,0,1,0,2,0]}]"
+    },
+    {
+      "id": "a687d496-f4a7-426d-b8df-a9b32b7e35b4",
+      "scramble": "R2 U' R2 L F D2 L' D' L2 U' D2 L2 F2 B2 D' B2 D' R2 B' L",
+      "stateHash": "[{\"pieces\":[7,9,11,6,1,2,0,3,10,8,5,4],\"orientation\":[0,0,1,1,0,1,1,1,0,1,1,1]},{\"pieces\":[5,4,1,7,0,3,6,2],\"orientation\":[1,1,1,0,1,0,1,1]}]"
+    },
+    {
+      "id": "0dd8de86-11f8-4b00-87ef-c056ebe562d0",
+      "scramble": "D L' F R' F B' L' U L2 D B2 D' L2 F2 D B2 R2 D2 R2 F D",
+      "stateHash": "[{\"pieces\":[6,4,8,7,3,2,10,5,1,0,9,11],\"orientation\":[1,1,0,0,1,0,0,1,0,0,0,0]},{\"pieces\":[0,4,7,1,3,5,6,2],\"orientation\":[0,2,2,0,2,2,2,2]}]"
+    },
+    {
+      "id": "7881b0c2-1f8a-4f77-aac4-71c9e9206f59",
+      "scramble": "F' D2 B U F' D2 R B' D' R2 D2 F2 R2 B' R2 L2 U2 B U2 B'",
+      "stateHash": "[{\"pieces\":[5,10,7,6,4,11,1,8,2,9,0,3],\"orientation\":[1,0,0,1,0,1,0,1,1,1,1,1]},{\"pieces\":[2,1,3,4,7,0,5,6],\"orientation\":[1,1,0,2,2,2,0,1]}]"
+    },
+    {
+      "id": "d7f8c45b-c96c-40a2-baee-b67b566662bd",
+      "scramble": "U2 F D B L' B' U' B2 R F2 D2 L2 F2 B L2 U2 F U2 F2 U2 F2",
+      "stateHash": "[{\"pieces\":[3,1,10,2,5,0,8,11,9,7,4,6],\"orientation\":[0,1,1,1,0,1,0,0,1,1,0,0]},{\"pieces\":[2,0,3,7,6,4,1,5],\"orientation\":[2,0,1,1,2,0,1,2]}]"
+    },
+    {
+      "id": "d1ac628a-9d38-4937-9efd-61b9ef25999d",
+      "scramble": "U B' R2 D' L' B' R' F L' D R2 D2 R' B2 D2 R2 B2 D2 R F2 R",
+      "stateHash": "[{\"pieces\":[7,6,3,2,4,11,0,1,8,10,9,5],\"orientation\":[1,1,1,1,1,0,1,1,1,1,0,1]},{\"pieces\":[2,1,7,5,0,6,4,3],\"orientation\":[0,2,2,1,0,1,2,1]}]"
+    },
+    {
+      "id": "d87c6831-4f8e-461c-8f9e-6bb7af552a3f",
+      "scramble": "B2 D L' D' F' D' B' L2 U2 B2 U' L2 U2 F2 L2 U' F2 L2 D B' R2",
+      "stateHash": "[{\"pieces\":[2,11,6,3,1,5,0,8,9,4,7,10],\"orientation\":[1,1,0,1,0,0,0,1,1,1,1,1]},{\"pieces\":[0,2,4,7,6,5,1,3],\"orientation\":[0,1,2,1,0,2,2,1]}]"
+    }
+  ],
+  "policies": [
+    "skills"
+  ],
+  "version": "rubik-v26/beginner-v7",
+  "model": "jev-1.13.0",
+  "limits": {
+    "requests": 500,
+    "turns": 1000,
+    "ms": 600000
+  },
+  "stopRule": "After each four-case batch, retire a final evaluation if more than five attempts failed: 95/100 is then impossible. Preserve unattempted cases separately.",
+  "sourceHash": "9afc8b59b781fb19ebfc26f4317480c43b4d21352796d0d50c0ed70952973986",
+  "status": "complete",
+  "startedAt": "2026-09-20T20:56:39.594Z",
+  "results": [
+    {
+      "caseId": "a687d496-f4a7-426d-b8df-a9b32b7e35b4",
+      "policy": "skills",
+      "runId": "a978c7b5-b93b-439b-8111-dbe637bed3ce",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 121,
+      "turns": 95,
+      "tokens": 208729,
+      "cost": 0.008766618000000002,
+      "activeMs": 54510,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "d8db0251-fd0f-49ed-ac5d-5c87adae87ac",
+      "policy": "skills",
+      "runId": "bc3dcbb5-e5ca-4b0a-8770-9ba19a9e3f2e",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 146,
+      "turns": 140,
+      "tokens": 253826,
+      "cost": 0.010660691999999998,
+      "activeMs": 66972,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "a61e2efd-2a5f-4bbe-a309-aa239816bfc9",
+      "policy": "skills",
+      "runId": "14a5dda5-0457-457b-a027-020a52d4b2a1",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 165,
+      "turns": 137,
+      "tokens": 282103,
+      "cost": 0.011848325999999998,
+      "activeMs": 76042,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "0dd8de86-11f8-4b00-87ef-c056ebe562d0",
+      "policy": "skills",
+      "runId": "f5406dba-2eaa-4bba-a061-15a27be74455",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 166,
+      "turns": 176,
+      "tokens": 294109,
+      "cost": 0.012352578000000003,
+      "activeMs": 77264,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "7881b0c2-1f8a-4f77-aac4-71c9e9206f59",
+      "policy": "skills",
+      "runId": "4db351a9-00db-42f6-9db4-b2d2450b5c29",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 165,
+      "turns": 172,
+      "tokens": 313451,
+      "cost": 0.013164941999999995,
+      "activeMs": 85848,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "d87c6831-4f8e-461c-8f9e-6bb7af552a3f",
+      "policy": "skills",
+      "runId": "c50e81d3-5f45-45e7-8092-978dae8edd00",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 166,
+      "turns": 173,
+      "tokens": 324636,
+      "cost": 0.013634711999999997,
+      "activeMs": 88001,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "d7f8c45b-c96c-40a2-baee-b67b566662bd",
+      "policy": "skills",
+      "runId": "d2cb3e67-7912-4361-bc25-39572b5d345e",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 170,
+      "turns": 130,
+      "tokens": 307523,
+      "cost": 0.012915965999999996,
+      "activeMs": 90647,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "d1ac628a-9d38-4937-9efd-61b9ef25999d",
+      "policy": "skills",
+      "runId": "3612e801-9b0f-4b75-8138-60176dcaacf5",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 175,
+      "turns": 133,
+      "tokens": 304931,
+      "cost": 0.012807101999999999,
+      "activeMs": 92555,
+      "recovery": 0,
+      "reason": null
+    }
+  ],
+  "assignments": [
+    {
+      "caseId": "a61e2efd-2a5f-4bbe-a309-aa239816bfc9",
+      "runId": "14a5dda5-0457-457b-a027-020a52d4b2a1"
+    },
+    {
+      "caseId": "d8db0251-fd0f-49ed-ac5d-5c87adae87ac",
+      "runId": "bc3dcbb5-e5ca-4b0a-8770-9ba19a9e3f2e"
+    },
+    {
+      "caseId": "a687d496-f4a7-426d-b8df-a9b32b7e35b4",
+      "runId": "a978c7b5-b93b-439b-8111-dbe637bed3ce"
+    },
+    {
+      "caseId": "0dd8de86-11f8-4b00-87ef-c056ebe562d0",
+      "runId": "f5406dba-2eaa-4bba-a061-15a27be74455"
+    },
+    {
+      "caseId": "7881b0c2-1f8a-4f77-aac4-71c9e9206f59",
+      "runId": "4db351a9-00db-42f6-9db4-b2d2450b5c29"
+    },
+    {
+      "caseId": "d7f8c45b-c96c-40a2-baee-b67b566662bd",
+      "runId": "d2cb3e67-7912-4361-bc25-39572b5d345e"
+    },
+    {
+      "caseId": "d1ac628a-9d38-4937-9efd-61b9ef25999d",
+      "runId": "3612e801-9b0f-4b75-8138-60176dcaacf5"
+    },
+    {
+      "caseId": "d87c6831-4f8e-461c-8f9e-6bb7af552a3f",
+      "runId": "c50e81d3-5f45-45e7-8092-978dae8edd00"
+    }
+  ],
+  "budgetBefore": {
+    "cap": 5,
+    "reservedAndSpent": 2.4644656260000004,
+    "usage": 2.4617776260000004,
+    "reserved": 0.0026880000000000003,
+    "attempts": 31249,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "skills": {
+      "assigned": 8,
+      "completed": 8,
+      "remaining": 0,
+      "solved": 8,
+      "requests": 1274,
+      "turns": 1156,
+      "inputTokens": 2289308,
+      "cost": 0.09615093599999999,
+      "activeMs": 631839,
+      "recoveryDecisions": 4,
+      "requestLatencyMs": {
+        "p50": 307.1048789999995,
+        "p95": 843.7610700000005
+      },
+      "failures": []
+    }
+  },
+  "budgetAfter": {
+    "cap": 5,
+    "reservedAndSpent": 2.5606165620000003,
+    "usage": 2.5579285620000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 32523,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "accepted": false,
+  "finishedAt": "2026-09-20T20:59:47.846Z"
+}

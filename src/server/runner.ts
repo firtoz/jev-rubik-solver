@@ -1,5 +1,5 @@
 import { goalRequest } from './goal-policy';
-import { skillDecision } from './skill-policy';
+import { measuredSkillDecision as skillDecision } from './measured-policy';
 import {
   apply,
   solved,
@@ -89,6 +89,8 @@ function localView(view: ReturnType<typeof observation>) {
 const terminal = (r: Run) => ['solved', 'stopped', 'capped', 'error'].includes(r.status);
 export async function step(id: string, revision: number, command: string) {
   const initial = getRun(id);
+  if (initial.split === 'article-manual')
+    throw new Error('Use the How it works page to advance this manual session.');
   if (terminal(initial)) throw new Error('Run is finished');
   if (initial.version !== VERSION + '/' + SKILL_VERSION)
     throw new Error('This run uses an older policy version. Replay it or create a new run.');
@@ -236,7 +238,7 @@ export async function step(id: string, revision: number, command: string) {
         const criteria = Object.fromEntries(
           targets.map((p) => [
             p.piece,
-            `${p.kind} ${p.piece}, currently at ${p.position}, destination ${p.destination}; ${(r.stage === 'daisy' ? p.stickers.yellow === 'U' : p.solved) ? 'current stage goal satisfied — protect it' : 'current stage goal NOT satisfied'}`,
+            `${p.kind} ${p.piece}, currently at ${p.position}, destination ${p.destination}; ${(r.stage === 'daisy' ? p.stickers.yellow === 'U' : p.solved) ? 'current stage goal satisfied; protect it' : 'current stage goal NOT satisfied'}`,
           ]),
         );
         if (r.stage.startsWith('top-')) criteria.whole = 'Work on the layer pattern as a whole';
@@ -324,6 +326,8 @@ export async function step(id: string, revision: number, command: string) {
   return getRun(id);
 }
 export function controlRun(id: string, action: 'start' | 'pause' | 'stop') {
+  if (action === 'start' && getRun(id).split === 'article-manual')
+    throw new Error('Use the How it works page to advance this manual session.');
   const r = getRun(id);
   if (terminal(r)) throw new Error('Run is finished');
   if (action === 'start') {

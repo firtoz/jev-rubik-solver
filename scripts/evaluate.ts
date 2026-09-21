@@ -11,6 +11,8 @@ const [mode, arg] = process.argv.slice(2);
 const paths = [
   'src/server/runner.ts',
   'src/server/skill-policy.ts',
+    'src/server/cross-intention.ts',
+    'src/server/measured-policy.ts',
   'src/server/goal-policy.ts',
   'src/server/jev.ts',
   'src/server/store.ts',

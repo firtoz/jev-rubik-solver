@@ -1,0 +1,518 @@
+{
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 2.4601855740000005,
+    "usage": 2.4574975740000005,
+    "reserved": 0.0026880000000000003,
+    "attempts": 31116,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 2.4649405620000002,
+    "usage": 2.459564562,
+    "reserved": 0.005376000000000001,
+    "attempts": 31181,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "results": [
+    {
+      "runId": "172fe0c3-bb7f-4225-8c9b-d597c9630bd5",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "U"
+      },
+      "front": "B",
+      "skill": "sune",
+      "alg": "L U L' U L U2 L'",
+      "after": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "de8fbf1a-c9c3-43e3-8465-9eed0c803dd1",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "B",
+        "UFR": "U",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "487d522f-6ac1-4ea6-9251-fceed21fc699",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "U",
+        "URB": "B"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "b503ad65-d6de-4e0f-914c-2f35b9bbbf33",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "U",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "front": "R",
+      "skill": "sune",
+      "alg": "B U B' U B U2 B'",
+      "after": {
+        "UBL": "U",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "45474e3c-c579-4567-88ea-432a3f452308",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "U",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "69811a7e-4145-4e0c-89f1-96caad7d52d6",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "F",
+        "ULF": "F",
+        "URB": "R"
+      },
+      "front": "R",
+      "skill": "sune",
+      "alg": "B U B' U B U2 B'",
+      "after": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "34d9d8a7-39c6-4172-b767-86ed26652615",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "U",
+        "UFR": "U",
+        "ULF": "U",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "67d7425f-61bf-42ff-a1b2-22e713757db9",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "R"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "979bfe7d-6165-4d7f-988c-eff35a24790f",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "R",
+        "ULF": "L",
+        "URB": "B"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "1ae70a67-cc9d-4a7d-9e17-acc6b350a3c7",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "6bd2cedd-24f0-4b91-9e79-0d0e7228a520",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "U",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "front": "R",
+      "skill": "sune",
+      "alg": "B U B' U B U2 B'",
+      "after": {
+        "UBL": "U",
+        "UFR": "U",
+        "ULF": "U",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "ab36794f-6021-430d-9dc2-8871c2184b93",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "U"
+      },
+      "front": "B",
+      "skill": "sune",
+      "alg": "L U L' U L U2 L'",
+      "after": {
+        "UBL": "U",
+        "UFR": "U",
+        "ULF": "U",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "211ce74d-ba29-497b-9e5d-2920ef6cd868",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "B"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "U",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "correct": true
+    },
+    {
+      "runId": "2903337d-4741-4ecf-a16a-fa2e94d1e927",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "F",
+        "ULF": "L",
+        "URB": "R"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "U",
+        "UFR": "U",
+        "ULF": "U",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "757350c1-f088-4cee-861d-1cc3760900bb",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "U",
+        "ULF": "L",
+        "URB": "B"
+      },
+      "front": "B",
+      "skill": "sune",
+      "alg": "L U L' U L U2 L'",
+      "after": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "4ad4ba57-999d-4544-975d-3aec970b2d3e",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "U",
+        "ULF": "F",
+        "URB": "R"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "U",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "cf668872-c930-4e95-88f3-2590db6bfcc9",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "B"
+      },
+      "front": "B",
+      "skill": "sune",
+      "alg": "L U L' U L U2 L'",
+      "after": {
+        "UBL": "U",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "f2327780-f6ee-481b-a420-8c7ce36da2fc",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "R",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "front": "R",
+      "skill": "sune",
+      "alg": "B U B' U B U2 B'",
+      "after": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "U",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "807c6a55-f379-4d99-901d-b0cb59ff9aea",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "U",
+        "ULF": "U",
+        "URB": "B"
+      },
+      "front": "B",
+      "skill": "sune",
+      "alg": "L U L' U L U2 L'",
+      "after": {
+        "UBL": "L",
+        "UFR": "U",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "6f3cf5fd-3c91-42a8-ba2c-5282341585ce",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "U",
+        "ULF": "U",
+        "URB": "R"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "U",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "a62af158-afb1-4033-83e0-ca802d0cdbc4",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "U",
+        "ULF": "L",
+        "URB": "U"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "U"
+      },
+      "correct": true
+    },
+    {
+      "runId": "ae57bfe1-cc27-4a67-8c8d-dd424e4a5b05",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "U",
+        "ULF": "F",
+        "URB": "U"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "L",
+        "UFR": "U",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "f9d0c2fa-512b-485d-896b-a3da5642a498",
+      "pattern": {
+        "UBL": "L",
+        "UFR": "F",
+        "ULF": "U",
+        "URB": "U"
+      },
+      "front": "L",
+      "skill": "sune",
+      "alg": "F U F' U F U2 F'",
+      "after": {
+        "UBL": "U",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "960364f7-cce4-413f-ba92-6f43066e9938",
+      "pattern": {
+        "UBL": "B",
+        "UFR": "R",
+        "ULF": "U",
+        "URB": "U"
+      },
+      "front": "R",
+      "skill": "sune",
+      "alg": "B U B' U B U2 B'",
+      "after": {
+        "UBL": "L",
+        "UFR": "U",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "3fccaa30-b662-48cc-9c0a-a1690e2a031e",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "F",
+        "ULF": "F",
+        "URB": "U"
+      },
+      "front": "F",
+      "skill": "sune",
+      "alg": "R U R' U R U2 R'",
+      "after": {
+        "UBL": "U",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "B"
+      },
+      "correct": true
+    },
+    {
+      "runId": "ad31a9bc-79c4-4d13-89e2-e6347e9420cc",
+      "pattern": {
+        "UBL": "U",
+        "UFR": "R",
+        "ULF": "L",
+        "URB": "U"
+      },
+      "front": "R",
+      "skill": "sune",
+      "alg": "B U B' U B U2 B'",
+      "after": {
+        "UBL": "L",
+        "UFR": "R",
+        "ULF": "F",
+        "URB": "U"
+      },
+      "correct": true
+    }
+  ],
+  "correct": 26,
+  "total": 26
+}

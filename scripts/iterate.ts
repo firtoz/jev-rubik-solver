@@ -32,6 +32,8 @@ mkdirSync('.data/iterations', { recursive: true });
 const source = Object.fromEntries(
   [
     'src/server/skill-policy.ts',
+    'src/server/cross-intention.ts',
+    'src/server/measured-policy.ts',
     'src/server/goal-policy.ts',
     'src/server/runner.ts',
     'src/lib/cube.ts',

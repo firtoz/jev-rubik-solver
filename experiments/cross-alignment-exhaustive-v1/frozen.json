@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "currentPosition": "UF",
+      "destination": "DF",
+      "expected": "insert"
+    },
+    {
+      "currentPosition": "UF",
+      "destination": "DR",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UF",
+      "destination": "DB",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UF",
+      "destination": "DL",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UR",
+      "destination": "DF",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UR",
+      "destination": "DR",
+      "expected": "insert"
+    },
+    {
+      "currentPosition": "UR",
+      "destination": "DB",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UR",
+      "destination": "DL",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UB",
+      "destination": "DF",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UB",
+      "destination": "DR",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UB",
+      "destination": "DB",
+      "expected": "insert"
+    },
+    {
+      "currentPosition": "UB",
+      "destination": "DL",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UL",
+      "destination": "DF",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UL",
+      "destination": "DR",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UL",
+      "destination": "DB",
+      "expected": "align"
+    },
+    {
+      "currentPosition": "UL",
+      "destination": "DL",
+      "expected": "insert"
+    }
+  ],
+  "sources": "import type { Ask } from './skill-policy';\nimport type { JevRequest } from '../lib/types';\nexport function crossPhaseRequest(model:string,target:any):JevRequest {\n return {model,state:{alreadySolved:target.solved,currentPosition:target.position,yellowStickerDirection:target.stickers.yellow},questions:{phase:{type:'choice',instructions:'Classify the CURRENT yellow edge for solving the yellow bottom cross. Check alreadySolved first. If already solved choose done. Otherwise, only a yellow sticker pointing U is ready to transfer toward the bottom. Any other yellow direction requires lifting/reorientation first. Do not plan alignment in this question.',criteria:{done:'alreadySolved is true',extract:'Not solved, and yellowStickerDirection is D, F, R, B, or L: lift/reorient first',transfer:'Not solved, and yellowStickerDirection is U: ready to align/transfer'}}}};\n}\nexport function crossAlignmentRequest(model:string,target:any):JevRequest {\n return {model,state:{currentPosition:target.position,requiredPosition:'U'+target.destination.slice(1)},questions:{alignment:{type:'choice',instructions:'The yellow edge has already been classified by the model as ready to transfer. Compare the two position labels exactly. If currentPosition and requiredPosition are IDENTICAL choose insert. If they are DIFFERENT choose align. requiredPosition is the top slot geometrically above the bottom destination; it does not say whether the target is there.',criteria:{align:'The two position labels are different',insert:'The two position labels are identical'}}}};\n}\nexport async function decideCrossIntention(model:string,target:any,ask:Ask){\n const phase=await ask(crossPhaseRequest(model,target));\n const choice=phase.answers.phase.choice;\n // These branches route model-selected phases; they do not inspect the cube.\n if(choice==='transfer')return (await ask(crossAlignmentRequest(model,target))).answers.alignment;\n return phase.answers.phase;\n}\n",
+  "note": "Exhaustive 16 possible slot pairs. Abstract geometry inputs, not full-cube solve cases."
+}

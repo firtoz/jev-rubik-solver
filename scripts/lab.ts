@@ -19,6 +19,9 @@ function snapshot() {
     [
       'src/server/runner.ts',
       'src/server/skill-policy.ts',
+    'src/server/cross-intention.ts',
+    'src/server/measured-policy.ts',
+    'src/server/goal-policy.ts',
       'src/lib/cube.ts',
       'src/lib/skills.ts',
       'src/lib/types.ts',

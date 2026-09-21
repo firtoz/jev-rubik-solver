@@ -1,0 +1,42 @@
+{
+  "id": "6f780b2b-6782-42c5-a5c1-77b04902e94e",
+  "status": "complete",
+  "version": "rubik-v26/beginner-v7",
+  "sourceHash": "9afc8b59b781fb19ebfc26f4317480c43b4d21352796d0d50c0ed70952973986",
+  "summary": {
+    "skills": {
+      "assigned": 100,
+      "completed": 100,
+      "remaining": 0,
+      "solved": 99,
+      "requests": 16896,
+      "turns": 15859,
+      "inputTokens": 30476226,
+      "cost": 1.2800014919999996,
+      "activeMs": 7645612,
+      "recoveryDecisions": 67,
+      "requestLatencyMs": {
+        "p50": 276.09238600000026,
+        "p95": 777.3234080000111
+      },
+      "failures": [
+        {
+          "caseId": "66d99e31-a38e-47f2-829a-129622019562",
+          "stage": "top-corners",
+          "reason": "JEV HTTP 503"
+        }
+      ]
+    }
+  },
+  "accepted": true,
+  "budgetAfter": {
+    "cap": 5,
+    "reservedAndSpent": 3.8433060540000006,
+    "usage": 3.8379300540000005,
+    "reserved": 0.005376000000000001,
+    "attempts": 49419,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "finishedAt": "2026-09-20T22:12:41.180Z"
+}

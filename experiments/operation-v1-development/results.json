@@ -1,0 +1,601 @@
+{
+  "fingerprint": "9e7afff3eff343b6378e4531fb96c122aae4e293faa199b4a9b08ae5b1163a5b",
+  "split": "development",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 20,
+  "attempted": 20,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7537561160000004,
+    "usage": 1.7510681160000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22226,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7553010440000003,
+    "usage": 1.7526130440000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22246,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 19,
+      "rate": 0.95,
+      "selectedTargetAndIntentCorrect": 19,
+      "errors": 0,
+      "cost": 0.001544928,
+      "inputTokens": 36784,
+      "cases": {
+        "development/cross-align-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"daisy-to-cross\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-align-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"corner-insert\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"right-trigger\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-align-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-F": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        },
+        "development/white-line-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"orient-edges\"}"
+          ],
+          "failures": []
+        },
+        "development/white-corners-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"sune\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-permute-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"corner-permute\"}"
+          ],
+          "failures": []
+        },
+        "development/edge-cycle-F": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"edge-cycle\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-align-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": []
+        },
+        "development/cross-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"daisy-to-cross\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-align-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"corner-insert\"}"
+          ],
+          "failures": []
+        },
+        "development/corner-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"right-trigger\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-align-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-insert-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/middle-extract-R": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "development/cross-align-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6dea7634-4202-4033-9fa1-ff06d7d887b9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [],
+      "decisionId": "26e203af-6487-4487-9fe3-918d7eabdd1b",
+      "cost": 0.00004935000000000001,
+      "inputTokens": 1175,
+      "elapsedMs": 602.3413389999998,
+      "confidence": {
+        "operation": 0.72
+      }
+    },
+    {
+      "fixture": "development/corner-align-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "8340a9d4-0fd0-4da4-9bb3-c4800842ec94",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [],
+      "decisionId": "c764ed70-fa36-4083-8282-14a70eb893da",
+      "cost": 0.000050904000000000006,
+      "inputTokens": 1212,
+      "elapsedMs": 630.427907,
+      "confidence": {
+        "operation": 0.9
+      }
+    },
+    {
+      "fixture": "development/cross-insert-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e94d2c0d-d89c-4913-a660-3df1f23f2d57",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "daisy-to-cross"
+      },
+      "wrong": [],
+      "decisionId": "2bd935a6-dfc7-4591-9cab-a3ac645e71cd",
+      "cost": 0.00010273200000000002,
+      "inputTokens": 2446,
+      "elapsedMs": 661.516209,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/corner-insert-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "b82d7285-f380-40bb-85d0-5da0f3a294c5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "corner-insert"
+      },
+      "wrong": [],
+      "decisionId": "69da9824-bb23-4f9f-b6c8-3c0c78537dd4",
+      "cost": 0.00010836000000000001,
+      "inputTokens": 2580,
+      "elapsedMs": 657.823507,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/corner-extract-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "c3dd7c3b-64fa-4ee9-9ddb-f8dae0be9eed",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "right-trigger"
+      },
+      "wrong": [],
+      "decisionId": "c0b7abf3-5950-42be-adef-727f1f949c63",
+      "cost": 0.00010794000000000001,
+      "inputTokens": 2570,
+      "elapsedMs": 273.008065,
+      "confidence": {
+        "operation": 0.9
+      }
+    },
+    {
+      "fixture": "development/middle-extract-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "1da24a3c-5125-409e-aee6-c3e15fc90b40",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "9b4a6dc1-8887-4fe0-b594-d58aed84677f",
+      "cost": 0.00009126600000000002,
+      "inputTokens": 2173,
+      "elapsedMs": 264.91146200000003,
+      "confidence": {
+        "operation": 0.08
+      }
+    },
+    {
+      "fixture": "development/middle-align-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "a9f2143e-a76d-4631-bb9a-7ce31bb0cfcf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [],
+      "decisionId": "bad26c3e-16ad-49ba-8459-0283bbfc1e04",
+      "cost": 0.000048048000000000005,
+      "inputTokens": 1144,
+      "elapsedMs": 344.66217900000015,
+      "confidence": {
+        "operation": 0.8
+      }
+    },
+    {
+      "fixture": "development/middle-insert-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "8af04f9b-e839-47e1-923d-b1ff0ed9c963",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "1b56ce1b-72b6-46e2-b997-7e0e0902fe41",
+      "cost": 0.00009088800000000001,
+      "inputTokens": 2164,
+      "elapsedMs": 371.1919129999999,
+      "confidence": {
+        "operation": 0.84
+      }
+    },
+    {
+      "fixture": "development/white-line-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "bbc5d217-af5d-4ee5-b5b9-8bfe110f1825",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "orient-edges"
+      },
+      "wrong": [],
+      "decisionId": "c13c04f9-a24c-48c2-9660-1f86af5b5ade",
+      "cost": 0.000058296000000000006,
+      "inputTokens": 1388,
+      "elapsedMs": 232.803001,
+      "confidence": {
+        "operation": 0.45
+      }
+    },
+    {
+      "fixture": "development/white-corners-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6f170178-9cad-484b-aae4-62944b81cfb6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "sune"
+      },
+      "wrong": [],
+      "decisionId": "01ea26e1-ab32-48c9-93e7-4088c9119811",
+      "cost": 0.00006451200000000001,
+      "inputTokens": 1536,
+      "elapsedMs": 238.11512600000015,
+      "confidence": {
+        "operation": 0.85
+      }
+    },
+    {
+      "fixture": "development/corner-permute-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "3be61f96-9940-488c-9282-d7f6fad1f757",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "corner-permute"
+      },
+      "wrong": [],
+      "decisionId": "a7cc768f-3c0a-4dce-802c-f50c7826024f",
+      "cost": 0.00006300000000000001,
+      "inputTokens": 1500,
+      "elapsedMs": 267.4069280000001,
+      "confidence": {
+        "operation": 0.44
+      }
+    },
+    {
+      "fixture": "development/edge-cycle-F",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "4008cb7a-10f0-4f28-974a-88350f6e6df0",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "edge-cycle"
+      },
+      "wrong": [],
+      "decisionId": "df3e7e5c-7d3c-447f-be73-1941a1c51d70",
+      "cost": 0.000060144000000000006,
+      "inputTokens": 1432,
+      "elapsedMs": 279.1142789999999,
+      "confidence": {
+        "operation": 0.48
+      }
+    },
+    {
+      "fixture": "development/cross-align-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "a73420e6-c687-425f-a6f4-ffac33cc98c9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [],
+      "decisionId": "77b84092-d8b6-4225-a371-a1ed70ea3748",
+      "cost": 0.00004935000000000001,
+      "inputTokens": 1175,
+      "elapsedMs": 255.60436400000003,
+      "confidence": {
+        "operation": 0.62
+      }
+    },
+    {
+      "fixture": "development/cross-insert-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "5e320d59-b1f1-4c7f-b761-c5ab58b4e21a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "daisy-to-cross"
+      },
+      "wrong": [],
+      "decisionId": "ccb359ff-4654-4275-956d-8f867da7f719",
+      "cost": 0.00010273200000000002,
+      "inputTokens": 2446,
+      "elapsedMs": 234.43518599999993,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/corner-align-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "1ce62d6b-352f-4e7e-9291-fe0d972c4b49",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [],
+      "decisionId": "1cedfa0b-8982-4d65-8e31-e2fa9faa7e4c",
+      "cost": 0.000050904000000000006,
+      "inputTokens": 1212,
+      "elapsedMs": 251.38456100000008,
+      "confidence": {
+        "operation": 0.85
+      }
+    },
+    {
+      "fixture": "development/corner-insert-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "56dfbb0e-3711-4dc7-8460-df811c96c479",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "corner-insert"
+      },
+      "wrong": [],
+      "decisionId": "98aa2b8d-e49f-4378-b740-d0727614d6d7",
+      "cost": 0.00010836000000000001,
+      "inputTokens": 2580,
+      "elapsedMs": 287.47778300000004,
+      "confidence": {
+        "operation": 0.93
+      }
+    },
+    {
+      "fixture": "development/corner-extract-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6bb28aa8-d0b5-4fe1-b387-6676cde67a0a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "right-trigger"
+      },
+      "wrong": [],
+      "decisionId": "2a2c4e59-8f12-472c-8a3f-55d983c9b922",
+      "cost": 0.00010794000000000001,
+      "inputTokens": 2570,
+      "elapsedMs": 232.07927199999995,
+      "confidence": {
+        "operation": 0.89
+      }
+    },
+    {
+      "fixture": "development/middle-align-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "7152f5fa-a09d-490e-8f3e-f997d08a7274",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [],
+      "decisionId": "9cc2fcad-ca12-44cf-addd-666ecf96176b",
+      "cost": 0.000048048000000000005,
+      "inputTokens": 1144,
+      "elapsedMs": 213.0240530000001,
+      "confidence": {
+        "operation": 0.85
+      }
+    },
+    {
+      "fixture": "development/middle-insert-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d521a141-d320-4628-9e3f-d70dc505ad2a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "b32d8e04-ef9b-4068-a9ab-9a173f074fd0",
+      "cost": 0.00009088800000000001,
+      "inputTokens": 2164,
+      "elapsedMs": 269.66919499999995,
+      "confidence": {
+        "operation": 0.62
+      }
+    },
+    {
+      "fixture": "development/middle-extract-R",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "c68cead8-1c40-473f-af4b-10c4d058e729",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "22af49e4-0d7a-422a-91ca-9fa7b21d38b7",
+      "cost": 0.00009126600000000002,
+      "inputTokens": 2173,
+      "elapsedMs": 268.455606,
+      "confidence": {
+        "operation": 0.16
+      }
+    }
+  ]
+}

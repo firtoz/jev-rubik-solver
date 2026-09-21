@@ -1,0 +1,2116 @@
+{
+  "cases": [
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "R' F2 U' F2 B2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              0,
+              4,
+              6,
+              2,
+              3,
+              8,
+              10,
+              7,
+              1,
+              9,
+              11,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              0,
+              5,
+              7
+            ],
+            "orientation": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DR",
+      "expectedFront": "B",
+      "kind": "middle-right"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "L' R2 B D' U'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              9,
+              0,
+              5,
+              8,
+              1,
+              3,
+              11,
+              4,
+              10,
+              7,
+              6,
+              2
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              5,
+              7,
+              0,
+              4,
+              2,
+              1,
+              6,
+              3
+            ],
+            "orientation": [
+              1,
+              0,
+              2,
+              1,
+              2,
+              0,
+              2,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DF",
+      "expectedFront": "L",
+      "kind": "bottom-down"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "B D' F L2 R",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              9,
+              0,
+              10,
+              4,
+              8,
+              6,
+              7,
+              3,
+              11,
+              2,
+              1,
+              5
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              3,
+              6,
+              5,
+              2,
+              1,
+              4,
+              7
+            ],
+            "orientation": [
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              2,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "R",
+      "kind": "bottom-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "B' L' R D' B2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              0,
+              8,
+              6,
+              9,
+              2,
+              10,
+              11,
+              4,
+              5,
+              7,
+              3,
+              1
+            ],
+            "orientation": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              4,
+              7,
+              6,
+              5,
+              2,
+              1,
+              0,
+              3
+            ],
+            "orientation": [
+              2,
+              1,
+              2,
+              1,
+              1,
+              2,
+              1,
+              2
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "B",
+      "kind": "top-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "F' L R' U2 F2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              9,
+              11,
+              8,
+              10,
+              2,
+              4,
+              6,
+              0,
+              3,
+              1,
+              5,
+              7
+            ],
+            "orientation": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              2,
+              1,
+              4,
+              7,
+              6,
+              3,
+              5
+            ],
+            "orientation": [
+              1,
+              1,
+              2,
+              2,
+              1,
+              2,
+              2,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DF",
+      "expectedFront": "R",
+      "kind": "bottom-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "B' R' U' L2 B2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              3,
+              0,
+              10,
+              7,
+              4,
+              8,
+              2,
+              11,
+              1,
+              6,
+              9,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              3,
+              6,
+              4,
+              7,
+              0,
+              1,
+              2,
+              5
+            ],
+            "orientation": [
+              0,
+              1,
+              2,
+              2,
+              1,
+              2,
+              1,
+              0
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "L",
+      "kind": "middle-right"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "F D2 R' B2 R'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              9,
+              11,
+              8,
+              3,
+              6,
+              1,
+              2,
+              5,
+              10,
+              4,
+              0,
+              7
+            ],
+            "orientation": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              2,
+              6,
+              5,
+              1,
+              7,
+              4,
+              3
+            ],
+            "orientation": [
+              1,
+              1,
+              2,
+              2,
+              0,
+              0,
+              2,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "F",
+      "kind": "bottom-down"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "B' U B' D2 F",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              9,
+              11,
+              6,
+              0,
+              8,
+              7,
+              4,
+              5,
+              1,
+              2,
+              3,
+              10
+            ],
+            "orientation": [
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              3,
+              7,
+              6,
+              2,
+              1,
+              4,
+              5
+            ],
+            "orientation": [
+              1,
+              2,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DL",
+      "expectedFront": "R",
+      "kind": "bottom-down"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "L F2 L2 U2 D2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              2,
+              9,
+              4,
+              1,
+              6,
+              11,
+              0,
+              5,
+              3,
+              7,
+              10,
+              8
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              5,
+              3,
+              1,
+              4,
+              7,
+              2,
+              6
+            ],
+            "orientation": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "F",
+      "kind": "bottom-down"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "R' L R' L2 D2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              0,
+              5,
+              2,
+              9,
+              6,
+              11,
+              4,
+              1,
+              10,
+              7,
+              8,
+              3
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              7,
+              4,
+              3,
+              5,
+              2,
+              0,
+              1,
+              6
+            ],
+            "orientation": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              2
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DL",
+      "expectedFront": "F",
+      "kind": "middle-left"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "U F D R2 L F' L' U' R2 U2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              8,
+              3,
+              9,
+              2,
+              0,
+              10,
+              5,
+              6,
+              1,
+              4,
+              7,
+              11
+            ],
+            "orientation": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              4,
+              1,
+              0,
+              5,
+              2,
+              6,
+              7,
+              3
+            ],
+            "orientation": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DF",
+      "expectedFront": "L",
+      "kind": "middle-right"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "R' D2 U F' L R' U' B D2 L'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              11,
+              1,
+              7,
+              0,
+              8,
+              10,
+              9,
+              5,
+              2,
+              6,
+              4,
+              3
+            ],
+            "orientation": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              3,
+              4,
+              0,
+              1,
+              5,
+              6,
+              2,
+              7
+            ],
+            "orientation": [
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1,
+              2
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DL",
+      "expectedFront": "B",
+      "kind": "top-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "L2 F' D2 B' U' F' L2 F2 U L'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              8,
+              1,
+              5,
+              6,
+              4,
+              3,
+              10,
+              7,
+              11,
+              9,
+              2,
+              0
+            ],
+            "orientation": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              4,
+              2,
+              5,
+              3,
+              6,
+              0,
+              7,
+              1
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              2,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "L",
+      "kind": "top-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "R2 B R B D B D' B' U B2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              10,
+              5,
+              6,
+              0,
+              4,
+              8,
+              3,
+              7,
+              1,
+              9,
+              2,
+              11
+            ],
+            "orientation": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              7,
+              6,
+              1,
+              2,
+              5,
+              4,
+              3
+            ],
+            "orientation": [
+              0,
+              0,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DR",
+      "expectedFront": "R",
+      "kind": "top-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "U F2 B2 U2 B2 U L2 R D U",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              9,
+              2,
+              7,
+              0,
+              6,
+              1,
+              10,
+              4,
+              5,
+              11,
+              3,
+              8
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              2,
+              1,
+              4,
+              0,
+              6,
+              7,
+              3,
+              5
+            ],
+            "orientation": [
+              1,
+              0,
+              0,
+              2,
+              0,
+              0,
+              2,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DR",
+      "expectedFront": "F",
+      "kind": "middle-right"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "B' D' B' R L2 R' L F B D'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              4,
+              1,
+              11,
+              9,
+              10,
+              3,
+              7,
+              8,
+              0,
+              5,
+              2,
+              6
+            ],
+            "orientation": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              4,
+              2,
+              6,
+              7,
+              5,
+              0,
+              1,
+              3
+            ],
+            "orientation": [
+              2,
+              2,
+              1,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DL",
+      "expectedFront": "B",
+      "kind": "bottom-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "B2 L' B L' D2 U2 B' L' B2 L2",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              11,
+              7,
+              2,
+              4,
+              3,
+              6,
+              9,
+              10,
+              8,
+              0,
+              1,
+              5
+            ],
+            "orientation": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              5,
+              4,
+              3,
+              0,
+              6,
+              1,
+              7,
+              2
+            ],
+            "orientation": [
+              0,
+              2,
+              1,
+              2,
+              2,
+              1,
+              0,
+              1
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DB",
+      "expectedFront": "R",
+      "kind": "bottom-side"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "R2 B2 L' U L2 D' U R' L U'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              7,
+              6,
+              11,
+              8,
+              1,
+              10,
+              0,
+              3,
+              9,
+              5,
+              2,
+              4
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              0,
+              4,
+              7,
+              5,
+              3,
+              6,
+              1,
+              2
+            ],
+            "orientation": [
+              2,
+              1,
+              1,
+              0,
+              0,
+              2,
+              1,
+              2
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DR",
+      "expectedFront": "F",
+      "kind": "middle-left"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "D2 R2 D2 B2 F2 U2 L' U L2 D",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              3,
+              4,
+              10,
+              8,
+              6,
+              0,
+              5,
+              2,
+              9,
+              7,
+              11,
+              1
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              4,
+              1,
+              6,
+              0,
+              5,
+              7,
+              2,
+              3
+            ],
+            "orientation": [
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DL",
+      "expectedFront": "F",
+      "kind": "middle-left"
+    },
+    {
+      "run": {
+        "id": "cdb19e3c-d4eb-46e6-b7db-ef9bfada0447",
+        "createdAt": "2026-09-20T20:04:10.147Z",
+        "policy": "skills",
+        "scramble": "F' L U' L' D2 U2 L2 F B2 F'",
+        "state": {
+          "EDGES": {
+            "pieces": [
+              1,
+              3,
+              9,
+              5,
+              6,
+              7,
+              11,
+              8,
+              4,
+              2,
+              0,
+              10
+            ],
+            "orientation": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          "CORNERS": {
+            "pieces": [
+              6,
+              4,
+              3,
+              5,
+              1,
+              2,
+              0,
+              7
+            ],
+            "orientation": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ]
+          },
+          "CENTERS": {
+            "pieces": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "orientation": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "orientationMod": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "status": "stopped",
+        "revision": 10,
+        "stage": "cross",
+        "target": null,
+        "history": [],
+        "requests": 0,
+        "turns": 0,
+        "activeMs": 0,
+        "tokens": 0,
+        "cost": 0,
+        "reason": "Cross lift probe",
+        "version": "cross-lifts-v1",
+        "split": "probe",
+        "benchmarkId": null
+      },
+      "target": "DF",
+      "expectedFront": "R",
+      "kind": "middle-left"
+    }
+  ],
+  "counts": {
+    "middle-right": 4,
+    "bottom-down": 4,
+    "bottom-side": 4,
+    "top-side": 4,
+    "middle-left": 4
+  },
+  "sources": {
+    "src/server/measured-policy.ts": "import { decideCrossIntention } from './cross-intention';\nimport { skillDecision, type Ask } from './skill-policy';\nimport type { Run, JevRequest } from '../lib/types';\n\nexport const extractionReferenceRule =\n  'For this middle-edge EXTRACTION, use CURRENT position, not destination. Put the occupied slot at local FR. In the original fixed frame: current FR requires front F; current BR requires front R; current BL requires front B; current FL requires front L. Destination does not determine the extraction frame.';\nexport const extractionOperationRule =\n  'When chosenIntention is EXTRACT, insert a replacement top edge into the CURRENT occupied slot to eject the trapped target. In these local coordinates, FR uses middle-right and FL uses middle-left. The target destination and the incoming replacement edge colors do not select the extraction side; those color conditions apply to INSERT. Preserve the solved bottom layer.';\n\n// Routing follows model-selected goals/intentions only. It never classifies a\n// cube case, computes a preferred option, simulates actions, or repairs answers.\nexport async function measuredSkillDecision(\n  run: Run,\n  model: string,\n  ask: Ask,\n  experience: unknown[],\n  excludedTarget: string | null = null,\n) {\n  return skillDecision(\n    run,\n    model,\n    async (original) => {\n      const request = structuredClone(original);\n      const state = request.state as any;\n      if (run.stage === 'cross' && request.questions.target) {\n        const selected = await ask({ ...request, questions: { target: request.questions.target } });\n        const target = selected.answers.target.choice;\n        const piece = state.stagePieces.find((p: any) => p.piece === target);\n        if (!piece) throw new Error('Invalid target response');\n        const intention = await decideCrossIntention(model, piece, ask);\n        // Assemble earlier model choices for the existing pipeline. Actual individual\n        // requests/native responses are persisted by ask; this is not a provider reply.\n        return {\n          ...selected,\n          answers: {\n            target: selected.answers.target,\n            ['intent_' + target]: intention,\n          },\n        };\n      }\n      if (request.questions.reference && run.stage === 'middle-layer' && state.intent === 'extract')\n        request.questions.reference.instructions = extractionReferenceRule;\n      if (\n        request.questions.operation &&\n        run.stage === 'middle-layer' &&\n        state.chosenIntention === 'extract'\n      ) {\n        request.state = {\n          frame: state.frame,\n          target: { position: state.target.position, stickers: state.target.stickers },\n          chosenIntention: 'extract',\n          goal: 'Eject the trapped target into the U layer while preserving the solved bottom layer.',\n        };\n        request.questions.operation.instructions =\n          'Choose one insertion algorithm that ejects the trapped target from its CURRENT middle slot. In these local coordinates FR requires middle-right; FL requires middle-left. Do not use destination or incoming edge colors to choose extraction. U turns do not move a middle-layer target.';\n      }\n      if (request.questions.reference && run.stage === 'cross' && state.intent === 'extract') {\n        const p=state.referenceViews.F.target;\n        request.state={target:{position:p.position,stickers:p.stickers},intent:'extract',frame:'Original fixed cube frame'};\n        request.questions.reference.instructions='Choose the original face that will become the reference front for lifting this yellow edge. If its yellow sticker points F, R, B, or L, choose that same face. If yellow points D, use its CURRENT bottom slot: DF→F, DR→R, DB→B, DL→L. Ignore the final destination. This selects a notation frame, not a move.';\n        request.questions.reference.criteria={F:'Original front becomes reference front',R:'Original right becomes reference front',B:'Original back becomes reference front',L:'Original left becomes reference front'};\n      }\n      if (request.questions.operation && run.stage === 'cross' && state.chosenIntention === 'extract') {\n        request.state={currentLocalPosition:state.target.position,yellowStickerDirection:state.target.stickers.yellow};\n        request.questions.operation.instructions='Choose the lift whose starting position AND yellow sticker direction match both input fields exactly. All listed algorithms have been mechanically verified to lift this target yellow-up while preserving other solved bottom cross edges. Their effects are guarantees from the skill reference; do not attempt to infer other pieces or require their observations. Coordinates are local to the selected frame.';\n        request.questions.operation.criteria={\n          'lift-bottom':'Starting position DF and yellow direction D. Lift with F2.',\n          'cross-flip-bottom':'Starting position DF and yellow direction F. Lift with F L\\' U2 L F\\'.',\n          'cross-lift-right':'Starting position FR and yellow direction F. Lift with R U R\\'.',\n          'cross-lift-left':'Starting position FL and yellow direction F. Lift with L\\' U\\' L.',\n          'cross-flip-top-right':'Starting position UF and yellow direction F. Lift with F R U2 R\\' F\\'.',\n          'cross-flip-top-left':'Starting position UF and yellow direction F. Lift with F\\' L\\' U2 L F.',\n          reconsider:'None of the listed starting conditions matches both input fields.'\n        };\n      }\n      if (run.stage === 'top-orientation' && request.questions.reference) {\n        request.state = { whiteUpCount: state.referenceViews.F.whiteUpPositions.length,\n          referenceViews: Object.fromEntries(Object.entries(state.referenceViews).map(([front,v]: [string,any])=>[front,Object.fromEntries(['ULF','UFR','URB','UBL'].map(position=>[position,v.stagePieces.find((p:any)=>p.position===position).stickers.white]))])) };\n        request.questions.reference.instructions = 'Choose a reference for the beginner repeated-Sune method. Read whiteUpCount. With ZERO white-up corners choose a view where ULF white points L. With ONE choose a view where ULF white points U. With TWO choose a view where ULF white points F. These are staging rules; a Sune may temporarily leave the same number of oriented corners. Each view maps corner POSITION to white sticker DIRECTION. Do not use other corner colors or destinations.';\n        request.questions.reference.criteria = Object.fromEntries(['F','R','B','L'].map(f=>[f,'Use referenceViews.'+f+' if its ULF entry matches the rule for whiteUpCount.']));\n      }\n      if (run.stage === 'top-orientation' && request.questions.operation) {\n        request.state = { chosenIntention: state.chosenIntention,\n          whiteUpCount: state.whiteUpPositions.length,\n          corners: Object.fromEntries(['ULF','UFR','URB','UBL'].map(position=>[position,state.stagePieces.find((p:any)=>p.position===position).stickers.white])) };\n        request.questions.operation.instructions = 'Choose the operation for the selected local frame. Beginner repeated-Sune staging: ZERO white-up corners requires white L at ULF; ONE requires white U at ULF; TWO requires white F at ULF. When the staging rule matches, choose sune, then observe again. This can require up to three Sune applications with new reference choices. Do not alternate Sune and its inverse just because the count did not increase. If the staging rule does not match, reconsider. All corners already U requires reconsider because this goal is complete.';\n        request.questions.operation.criteria.sune='Repeated-Sune strategy: valid if whiteUpCount=0 and corners.ULF=L, OR whiteUpCount=1 and corners.ULF=U, OR whiteUpCount=2 and corners.ULF=F. Execute R U R\\' U R U2 R\\'. This is valid preparation even when it does not finish orientation in one application.';\n        request.questions.operation.criteria.reconsider='No repeated-Sune staging condition matches, or all four corners are already oriented. Do not select this merely because more than one Sune may be needed.';\n      }\n      return ask(request);\n    },\n    experience,\n    excludedTarget,\n  );\n}\n",
+    "src/lib/skills.ts": "export const SKILL_VERSION = 'beginner-v7';\nexport const skills = [\n  {id:'cross-lift-right',alg:\"R U R'\",stages:['cross'],purpose:'Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.'},\n  {id:'cross-lift-left',alg:\"L' U' L\",stages:['cross'],purpose:'Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.'},\n  {id:'cross-flip-top-right',alg:\"F R U2 R' F'\",stages:['cross'],purpose:'Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.'},\n  {id:'cross-flip-top-left',alg:\"F' L' U2 L F\",stages:['cross'],purpose:'Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.'},\n  {id:'cross-flip-bottom',alg:\"F L' U2 L F'\",stages:['cross'],purpose:'Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.'},\n\n  {\n    id: 'lift-bottom',\n    alg: 'F2',\n    stages: ['daisy', 'cross'],\n    purpose:\n      'Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.',\n  },\n  {\n    id: 'lift-middle-right',\n    alg: 'R',\n    stages: ['daisy'],\n    purpose:\n      'Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.',\n  },\n  {\n    id: 'lift-middle-left',\n    alg: \"L'\",\n    stages: ['daisy'],\n    purpose:\n      'Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.',\n  },\n  {\n    id: 'flip-bottom-edge',\n    alg: \"F L'\",\n    stages: [], // Retained for historical replay; superseded for cross work.\n    purpose:\n      'Target at DF with yellow pointing F: F then L-prime lifts it via FL to UL yellow-up. First clear yellow-up petals away from UF and UL using U setup.',\n  },\n  {\n    id: 'stage-bottom-edge',\n    alg: 'F',\n    stages: ['daisy'],\n    purpose:\n      'Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.',\n  },\n  {\n    id: 'flip-top-edge',\n    alg: 'F R',\n    stages: ['daisy'],\n    purpose:\n      'Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.',\n  },\n  {\n    id: 'lower-top-edge',\n    alg: 'F',\n    stages: ['daisy'],\n    purpose:\n      'Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.',\n  },\n  {\n    id: 'flip-top-edge-left',\n    alg: \"F' L'\",\n    stages: ['daisy'],\n    purpose:\n      'Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.',\n  },\n  {\n    id: 'daisy-to-cross',\n    alg: 'F2',\n    stages: ['cross'],\n    purpose:\n      'Target at UF, yellow points U, its other sticker matches the front center, and destination is DF: F2 inserts the target as a correct yellow D cross edge. Do not transfer an unaligned petal.',\n  },\n  {\n    id: 'right-trigger',\n    alg: \"R U R' U'\",\n    stages: ['first-layer'],\n    purpose:\n      'Use when the target is at UFR with yellow facing U to reorient it, or at DRF misplaced/twisted to extract it. Does NOT insert a target at ULF, UBL, or URB: align it first.',\n  },\n  {\n    id: 'left-trigger',\n    alg: \"L' U' L U\",\n    stages: ['first-layer'],\n    purpose:\n      'Use when the target is at ULF with yellow facing U to reorient it, or at DFL misplaced/twisted to extract it. Other U positions need alignment first.',\n  },\n  {\n    id: 'corner-insert',\n    alg: \"R U R'\",\n    stages: ['first-layer'],\n    purpose:\n      'Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing R. If at another U corner, align it first.',\n  },\n  {\n    id: 'corner-insert-left',\n    alg: \"L' U' L\",\n    stages: ['first-layer'],\n    purpose:\n      'Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing L. If at another U corner, align it first.',\n  },\n  {\n    id: 'corner-front-right',\n    alg: \"F' U' F\",\n    stages: ['first-layer'],\n    purpose:\n      'Insert target from UFR into DRF. Required: destination DRF, current position UFR, yellow sticker pointing F.',\n  },\n  {\n    id: 'corner-front-left',\n    alg: \"F U F'\",\n    stages: ['first-layer'],\n    purpose:\n      'Insert target from ULF into DFL. Required: destination DFL, current position ULF, yellow sticker pointing F.',\n  },\n  {\n    id: 'middle-right',\n    alg: \"U R U' R' U' F' U F\",\n    stages: ['middle-layer'],\n    purpose:\n      'Insert UF into FR when its front sticker matches F and its upper sticker matches R. Can eject a wrong FR edge.',\n  },\n  {\n    id: 'middle-left',\n    alg: \"U' L' U L U F U' F'\",\n    stages: ['middle-layer'],\n    purpose:\n      'Insert UF into FL when its front sticker matches F and its upper sticker matches L. Can eject a wrong FL edge.',\n  },\n  {\n    id: 'orient-edges',\n    alg: \"F R U R' U' F'\",\n    stages: ['top-cross'],\n    purpose:\n      'Orient U edges with an oriented line across UL–UR. A dot first needs this algorithm to form an elbow. Preserves lower layers.',\n  },\n  {\n    id: 'orient-elbow',\n    alg: \"F U R U' R' F'\",\n    stages: ['top-cross'],\n    purpose:\n      'Orient the top edges when white-up edges form an elbow at UB and UL. Preserves lower layers.',\n  },\n  {\n    id: 'sune',\n    alg: \"R U R' U R U2 R'\",\n    stages: ['top-orientation'],\n    purpose:\n      'Twist top corners while preserving lower layers and top-edge orientation. Standard Sune: a single white-up corner at ULF and white on F at UFR.',\n  },\n  {\n    id: 'antisune',\n    alg: \"R U2 R' U' R U' R'\",\n    stages: ['top-orientation'],\n    purpose:\n      'Inverse Sune: white points U at URB, R at UFR, L at UBL and F at ULF. Preserves lower layers and top-edge orientation. Other patterns may require several operations.',\n  },\n  {\n    id: 'corner-permute',\n    alg: \"R U R' U' R' F R2 U' R' U' R U R' F'\",\n    stages: ['top-corners'],\n    purpose:\n      'T permutation: swap UFR and URB corners and UR/UL edges; preserves orientations and lower layers. Position the corner pair on the right.',\n  },\n  {\n    id: 'edge-cycle',\n    alg: \"R U' R U R U R U' R' U' R2\",\n    stages: ['top-edges'],\n    purpose:\n      'Cycle top edge positions UF→UR→UL→UF with UB fixed. All corner positions and orientations and lower layers are preserved. Hold the correctly placed edge at UB.',\n  },\n  {\n    id: 'edge-cycle-inverse',\n    alg: \"R2 U R U R' U' R' U' R' U R'\",\n    stages: ['top-edges'],\n    purpose:\n      'Cycle top edge positions UF→UL→UR→UF with UB fixed. All corners and lower layers are preserved. Hold the correctly placed edge at UB.',\n  },\n];\nexport function skillOptions(stage: string) {\n  return Object.fromEntries(\n    skills\n      .filter((s) => s.stages.includes(stage))\n      .map((s) => [s.id, `${s.purpose} Algorithm in selected reference: ${s.alg}`]),\n  );\n}\nexport const casesByStage: Record<string, Record<string, string>> = {\n  daisy: {\n    petal: 'Target already has yellow pointing U: preserve it and select another target',\n    bottomDown: 'Target in D layer, yellow pointing D: lift with a side half turn',\n    bottomSide: 'Target in D layer, yellow pointing sideways: flip-bottom-edge',\n    middle:\n      'Target in middle layer, yellow pointing sideways: orient reference with yellow facing F and lift left/right',\n    topSide: 'Target in U layer, yellow pointing sideways: flip-top-edge',\n  },\n  cross: {\n    aligned: 'Target yellow edge already matches both centers; protect it',\n    daisy:\n      'Target yellow sticker faces U; align its other color with its center then use that side half turn',\n    middle:\n      'Target edge is in the middle slice; lift or insert it without disturbing solved yellow edges',\n    bottom: 'Target is on D but displaced or flipped; extract or align it',\n    topSide: 'Target is on U with yellow pointing sideways; reorient it',\n  },\n  'first-layer': {\n    solved: 'Target yellow corner is already solved; protect it',\n    topSide:\n      'Target is in U layer with yellow facing a side; align it over its destination and insert',\n    topUp:\n      'Target is in U layer with yellow facing U; a trigger can turn it sideways before insertion',\n    bottomWrong: 'Target is in D layer but misplaced or twisted; lift it to U first',\n  },\n  'middle-layer': {\n    solved: 'Target middle edge is solved; protect it',\n    top: 'Target is in U layer; align its side sticker with its matching center, then choose left/right insertion',\n    trapped:\n      'Target middle edge is misplaced or flipped in the middle; eject it using an insertion algorithm',\n  },\n  'top-cross': {\n    dot: 'No U edge has white facing U',\n    line: 'Two opposite U edges have white facing U',\n    elbow: 'Two adjacent U edges have white facing U',\n    cross: 'All four U edges have white facing U',\n  },\n  'top-orientation': {\n    none: 'No U corners have white facing U',\n    one: 'One U corner has white facing U',\n    two: 'Two U corners have white facing U',\n    all: 'All four U corners have white facing U',\n  },\n  'top-corners': {\n    alignment: 'A U-layer rotation alone can align all four corner destinations',\n    adjacent: 'An adjacent corner pair must be swapped',\n    diagonal: 'A diagonal corner pair must be swapped; more than one adjacent swap may be needed',\n  },\n  'top-edges': {\n    alignment: 'Only a U-layer rotation is needed',\n    cycle: 'One edge is correctly placed and three need cycling',\n    pairs: 'No edge is correctly placed; multiple cycles or alignment may be needed',\n  },\n};\n",
+    "scripts/request-eval/cross-lifts.ts": "import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';\nimport {apply,solved,pieces,hash,referenceObservation,focusedObservation} from '../../src/lib/cube';\nimport {measuredSkillDecision} from '../../src/server/measured-policy';\nimport {getRun,saveRun,event} from '../../src/server/store';\nimport {evaluate,budget,MODEL} from '../../src/server/jev';\nconst split=process.argv.includes('--validation')?'validation':'development';\nlet seed=split==='development'?567423:246581;const random=()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return(seed>>>0)/4294967296;};\nconst template=getRun('cdb19e3c-d4eb-46e6-b7db-ef9bfada0447'),seen=new Set<string>(),counts:Record<string,number>={},cases:any[]=[];\nwhile(cases.length<20){\n const ms:string[]=[];while(ms.length<(cases.length<10?5:10)){const f='UDFBRL'[Math.floor(random()*6)];if(ms.at(-1)?.[0]!==f)ms.push(f+['',\"'\",'2'][Math.floor(random()*3)]);}\n const scramble=ms.join(' '),state=await apply(await solved(),scramble);if(seen.has(hash(state)))continue;\n for(const p of pieces(state).filter(p=>p.kind==='edge'&&p.destination.includes('D')&&!p.solved&&p.stickers.yellow!=='U')){\n  const expectedFront=p.stickers.yellow==='D'?p.position[1]:p.stickers.yellow;\n  const run={...template,state,scramble,target:null,stage:'cross',history:[],requests:0,cost:0,tokens:0,turns:0,activeMs:0,status:'stopped' as const,reason:'Cross lift probe',version:'cross-lifts-v1',split:'probe',benchmarkId:null};\n  const local=referenceObservation(focusedObservation({...run,target:p.piece}),expectedFront).target as any;\n  const kind=local.stickers.yellow==='D'?'bottom-down':local.position==='DF'?'bottom-side':local.position==='UF'?'top-side':local.position==='FR'?'middle-right':'middle-left';\n  if((counts[kind]??0)>=4)continue;\n  counts[kind]=(counts[kind]??0)+1;seen.add(hash(state));cases.push({run,target:p.piece,expectedFront,kind});break;\n }\n}\nconst dir='experiments/cross-lifts-'+(process.env.EXPERIMENT_VERSION||'v1')+'-'+split;mkdirSync(dir,{recursive:true});\nwriteFileSync(dir+'/frozen.json',JSON.stringify({cases,counts,sources:Object.fromEntries(['src/server/measured-policy.ts','src/lib/skills.ts','scripts/request-eval/cross-lifts.ts'].map(p=>[p,readFileSync(p,'utf8')]))},null,2),{flag:'wx'});\nconst start=budget(),results:any[]=[];\nfor(const c of cases){\n if(budget().reservedAndSpent-start.reservedAndSpent+.002688>.05)throw new Error('Local cap');\n const run={...c.run,id:crypto.randomUUID(),createdAt:new Date().toISOString()};saveRun(run);event(run.id,'probe-created',{state:run.state,kind:c.kind});\n let row:any={kind:c.kind,runId:run.id};\n try{\n const d=await measuredSkillDecision(run,MODEL,async req=>{\n  const key=Object.keys(req.questions)[0];\n  if(key==='target'||key==='phase'){const choice=key==='target'?c.target:'extract';return{model:req.model,usage:{input_tokens:0,output_tokens:0},answers:{[key]:{type:'choice',choice,confidence:1,probabilities:Object.fromEntries(Object.keys(req.questions[key].criteria).map(k=>[k,k===choice?1:0]))}}};}\n  return(await evaluate(run.id,req,AbortSignal.timeout(30000),{maxAttempts:1})).response;\n },[]);\n const after=pieces(await apply(run.state,d.alg));\n const preserved=pieces(run.state).filter(p=>p.kind==='edge'&&p.destination.includes('D')&&p.solved).every(p=>after.find(q=>q.piece===p.piece)!.solved);\n row={...row,referenceCorrect:d.front===c.expectedFront,expectedFront:c.expectedFront,front:d.front,skill:d.skill,alg:d.alg,preserved,yellowUp:after.find(p=>p.piece===c.target)!.stickers.yellow==='U'};row.correct=row.referenceCorrect&&row.preserved&&row.yellowUp;\n }catch(e){row={...row,correct:false,error:String(e)};}\n results.push(row);event(run.id,'cross-lift-result',row);writeFileSync(dir+'/results.json',JSON.stringify({start,end:budget(),results,correct:results.filter(r=>r.correct).length,planned:20,unattempted:20-results.length},null,2));if(row.error)break;\n}\nconsole.log(JSON.stringify({correct:results.filter(r=>r.correct).length,total:results.length,cost:budget().usage-start.usage,failures:results.filter(r=>!r.correct)}));\n"
+  }
+}

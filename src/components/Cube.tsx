@@ -6,12 +6,14 @@ export function Cube({
   alg,
   speed,
   instant = false,
+  hideControls = false,
   transition,
 }: {
   scramble: string;
   alg: string;
   speed: number;
   instant?: boolean;
+  hideControls?: boolean;
   transition?: RecordedTransition;
 }) {
   const host = useRef<HTMLDivElement>(null),
@@ -32,7 +34,7 @@ export function Cube({
           experimentalSetupAlg: scramble,
           alg: latest.current.alg,
           background: 'none',
-          controlPanel: latest.current.instant ? 'none' : 'bottom-row',
+          controlPanel: latest.current.instant || hideControls ? 'none' : 'bottom-row',
           backView: 'top-right',
           hintFacelets: 'none',
           tempoScale: latest.current.speed,
@@ -104,8 +106,9 @@ export function Cube({
     };
   }, [alg, instant, transition?.key, generation, scramble]);
   useEffect(() => {
-    if (player.current) player.current.controlPanel = instant ? 'none' : 'bottom-row';
-  }, [instant]);
+    if (player.current)
+      player.current.controlPanel = instant || hideControls ? 'none' : 'bottom-row';
+  }, [instant, hideControls]);
   useEffect(() => {
     if (player.current) player.current.tempoScale = speed;
   }, [speed]);

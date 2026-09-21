@@ -1,0 +1,206 @@
+{
+  "fingerprint": "38f45fc823fc57b54ba535acd8568f8262a3dfb0a2a9e2229f3e0386ff8a3d1d",
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7799442500000002,
+    "usage": 1.7772562500000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22607,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7805144420000003,
+    "usage": 1.7778264420000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22638,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "results": [
+    {
+      "case": "validation/case-01",
+      "runId": "d2c0a366-b26a-483c-8de3-8024e77a9431",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    },
+    {
+      "case": "validation/case-02",
+      "runId": "a6bfb6af-b793-497a-bf53-5d885e39027f",
+      "expected": [
+        "extract"
+      ],
+      "choice": "extract",
+      "correct": true
+    },
+    {
+      "case": "validation/case-03",
+      "runId": "1eab015f-7836-4fe5-a3f9-db70322d3f46",
+      "expected": [
+        "insert"
+      ],
+      "choice": "insert",
+      "correct": true
+    },
+    {
+      "case": "validation/case-04",
+      "runId": "242e4960-546b-4c10-9c5b-eedce2923f26",
+      "expected": [
+        "extract"
+      ],
+      "choice": "extract",
+      "correct": true
+    },
+    {
+      "case": "validation/case-05",
+      "runId": "52e07ef4-396a-46e2-b44d-b870eb6c4026",
+      "expected": [
+        "done"
+      ],
+      "choice": "done",
+      "correct": true
+    },
+    {
+      "case": "validation/case-06",
+      "runId": "ed396b1f-ddd4-4584-8302-a4b76a605420",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    },
+    {
+      "case": "validation/case-07",
+      "runId": "bcd0f063-afeb-4b4e-a8cf-478c52bf6125",
+      "expected": [
+        "done"
+      ],
+      "choice": "done",
+      "correct": true
+    },
+    {
+      "case": "validation/case-08",
+      "runId": "bb532937-eb2d-441d-9585-775d74baa13c",
+      "expected": [
+        "align"
+      ],
+      "choice": "insert",
+      "correct": false
+    },
+    {
+      "case": "validation/case-09",
+      "runId": "8ce3c0da-bb2d-4069-a6f4-cbbdadd7ceac",
+      "expected": [
+        "done"
+      ],
+      "choice": "done",
+      "correct": true
+    },
+    {
+      "case": "validation/case-10",
+      "runId": "b302295f-5129-43ed-b202-d655468d5c6b",
+      "expected": [
+        "extract"
+      ],
+      "choice": "extract",
+      "correct": true
+    },
+    {
+      "case": "validation/case-11",
+      "runId": "ac1ef041-f7ca-4724-852b-9f449db5b8e8",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    },
+    {
+      "case": "validation/case-12",
+      "runId": "7b8fe54c-79a0-49bd-b353-90e6b139c818",
+      "expected": [
+        "extract"
+      ],
+      "choice": "extract",
+      "correct": true
+    },
+    {
+      "case": "validation/case-13",
+      "runId": "b56adeab-ea70-4cec-b492-2bcb0434f855",
+      "expected": [
+        "insert"
+      ],
+      "choice": "insert",
+      "correct": true
+    },
+    {
+      "case": "validation/case-14",
+      "runId": "7c620c60-706c-46d4-ab31-4526e2dfa118",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    },
+    {
+      "case": "validation/case-15",
+      "runId": "614c8125-55fb-4250-8527-a3555171c8e6",
+      "expected": [
+        "align"
+      ],
+      "choice": "insert",
+      "correct": false
+    },
+    {
+      "case": "validation/case-16",
+      "runId": "6d566995-9dc8-4a70-bafc-bcbbee4bec39",
+      "expected": [
+        "extract"
+      ],
+      "choice": "extract",
+      "correct": true
+    },
+    {
+      "case": "validation/case-17",
+      "runId": "2baf3cd2-7b8f-4ea9-8fc5-8fd92ee18f6f",
+      "expected": [
+        "extract"
+      ],
+      "choice": "extract",
+      "correct": true
+    },
+    {
+      "case": "validation/case-18",
+      "runId": "801bfb45-5905-4702-ab5f-114902cd73dd",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    },
+    {
+      "case": "validation/case-19",
+      "runId": "b840c245-f76c-4a73-aed0-2de68c43027e",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    },
+    {
+      "case": "validation/case-20",
+      "runId": "0312607c-3bbd-4a6b-ace3-7ed2a7541254",
+      "expected": [
+        "align"
+      ],
+      "choice": "align",
+      "correct": true
+    }
+  ],
+  "correct": 18,
+  "planned": 20,
+  "unattempted": 0
+}

@@ -47,5 +47,5 @@ export type Run = {
   benchmarkId: string | null;
 };
 export type Event = { id: number; runId: string; kind: string; createdAt: string; payload: any };
-export const VERSION = 'rubik-v21';
+export const VERSION = 'rubik-v26';
 export const LIMITS = { requests: 500, turns: 1000, ms: 600000 };

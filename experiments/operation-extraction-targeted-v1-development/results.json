@@ -1,0 +1,1297 @@
+{
+  "fingerprint": "f3fae6dc7dd5278ccb229180b7da4fbb3a237eb90a1b356c0736001498f5c7ed",
+  "split": "development",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 40,
+  "attempted": 40,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7656623600000003,
+    "usage": 1.7629743600000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22386,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7682623700000002,
+    "usage": 1.7655743700000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22426,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 11,
+      "rate": 0.55,
+      "selectedTargetAndIntentCorrect": 11,
+      "errors": 0,
+      "cost": 0.0018112500000000001,
+      "inputTokens": 43125,
+      "cases": {
+        "development/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-02": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "development/case-13": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-17": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        },
+        "development/case-18": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        },
+        "development/case-19": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "development/case-20": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "extraction-local": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.0007887600000000002,
+      "inputTokens": 18780,
+      "cases": {
+        "development/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "development/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "development/case-01",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "40dba5b3-b487-406e-9927-2de80add30cd",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "f372d573-f7ae-40ae-91fc-44664663bc10",
+      "cost": 0.00009126600000000002,
+      "inputTokens": 2173,
+      "elapsedMs": 613.105791,
+      "confidence": {
+        "operation": 0.21
+      }
+    },
+    {
+      "fixture": "development/case-01",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "91fecad7-c14b-4011-ae80-353ec1cd6dbd",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "3c1f6f9d-f513-4deb-b5c6-9901d804f629",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 601.5682879999999,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "8adb7b46-32e3-495b-a9ae-235c00f83269",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "9df05118-5f79-40ac-81d5-6223a4f86ce5",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 615.255539,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-02",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "aaf79ef2-7e6c-413a-832c-3e8d390da7f3",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "05f25a96-7e40-4272-8026-58c7a9a10caa",
+      "cost": 0.00009004800000000002,
+      "inputTokens": 2144,
+      "elapsedMs": 614.7622630000001,
+      "confidence": {
+        "operation": 0.16
+      }
+    },
+    {
+      "fixture": "development/case-03",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "0582719a-b419-4cab-881c-896f15e7c42c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "b41862af-44f9-4d05-84df-efc5250a3cdc",
+      "cost": 0.00008941800000000002,
+      "inputTokens": 2129,
+      "elapsedMs": 217.39098999999987,
+      "confidence": {
+        "operation": 0.25
+      }
+    },
+    {
+      "fixture": "development/case-03",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "c74d5e20-cd00-462b-99f3-1577d75feba5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "8745c337-08a8-4098-9787-7dbededa5ca3",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 274.09345800000006,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "cf89f730-4fd6-43f3-a528-a393504f9c42",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "457aea4f-ba4a-419a-8c6d-65c948f21a59",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 255.85011199999985,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-04",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "844c8dc7-0e7f-490d-81b8-38b895d5c91a",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "2b68ef4a-f1b4-40fa-9c81-4c7ead66b404",
+      "cost": 0.000091014,
+      "inputTokens": 2167,
+      "elapsedMs": 273.49690799999985,
+      "confidence": {
+        "operation": 0.18
+      }
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "62e450ba-79c3-4421-b036-1ca9fd1065a9",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "a9bf135f-22a4-4527-98a4-543c61c1d326",
+      "cost": 0.000091014,
+      "inputTokens": 2167,
+      "elapsedMs": 282.5076260000001,
+      "confidence": {
+        "operation": 0.28
+      }
+    },
+    {
+      "fixture": "development/case-05",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "e256f0bb-c940-4b62-bf60-245cab23ed8d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "7df0910a-e796-4e4e-a90a-a8db2b7f34c0",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 259.17288099999996,
+      "confidence": {
+        "operation": 0.94
+      }
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "aa0f73ef-1240-4112-a457-58f2e6b992d6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "5a91dd0e-0c12-4dbe-82cd-1bb632a5f6a9",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 267.7868659999999,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-06",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "806ae93f-c4ed-45f0-9f74-bda8dfcd87e3",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "5db06ff9-f73d-4ba8-94c1-79b97592f96c",
+      "cost": 0.00009114000000000001,
+      "inputTokens": 2170,
+      "elapsedMs": 274.33464000000004,
+      "confidence": {
+        "operation": 0.23
+      }
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "1c4b101c-b725-47c1-bf0c-ddf2277471f0",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "3ec13a15-79f5-42a6-a506-6ddfdcf81ae2",
+      "cost": 0.00009025800000000002,
+      "inputTokens": 2149,
+      "elapsedMs": 248.5851419999999,
+      "confidence": {
+        "operation": 0.13
+      }
+    },
+    {
+      "fixture": "development/case-07",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "8817afdb-8d06-4611-8725-308c95444a3c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "2b9288e9-1650-4873-93ca-2bb03864ac6e",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 245.52170999999998,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "b78a5fc9-0e4b-4315-83af-35b360f75398",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "1195cd7c-000c-43a3-a8ff-91cab784f759",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 277.88194999999996,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-08",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e71fbd3d-235a-4895-8334-392fbc42906d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "47f5669f-342c-4ef4-bd9b-8dcfdc39c1ba",
+      "cost": 0.000090006,
+      "inputTokens": 2143,
+      "elapsedMs": 264.26178700000037,
+      "confidence": {
+        "operation": 0.25
+      }
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "5392249c-a34a-487f-88ae-600425df8be7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "3bb9cbc8-c420-40a0-8917-e210c402aef0",
+      "cost": 0.000091014,
+      "inputTokens": 2167,
+      "elapsedMs": 250.36007500000005,
+      "confidence": {
+        "operation": 0.25
+      }
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "96d920a3-ddb5-44cd-84d0-bf70512e1dbb",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "b4e851e3-f008-4666-97a5-1cabb49ac259",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 230.97327200000018,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "development/case-09",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "34786855-5c0a-4539-9520-ab62ce2c3cb9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "d7b08c8c-22cf-4925-8f9f-299d253d1c1a",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 354.4947739999998,
+      "confidence": {
+        "operation": 0.98
+      }
+    },
+    {
+      "fixture": "development/case-10",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "f6f236f7-55b6-481b-a622-b1ac2de570af",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "a79b495e-a251-437e-b039-dbd73476f70b",
+      "cost": 0.00009013200000000001,
+      "inputTokens": 2146,
+      "elapsedMs": 309.21793000000025,
+      "confidence": {
+        "operation": 0.21
+      }
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e1b0b1f0-cb16-497a-8d3d-a069cb0bcdea",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "c4df47f1-0b85-4255-a6b3-7cec2c89e151",
+      "cost": 0.00009013200000000001,
+      "inputTokens": 2146,
+      "elapsedMs": 243.12246499999992,
+      "confidence": {
+        "operation": 0.13
+      }
+    },
+    {
+      "fixture": "development/case-11",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "361a2fb6-dc01-48a2-99c5-4a9e584f0f6b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "ef4e09f3-f35d-4062-866e-fb6ad99069bd",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 275.70521299999973,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "3c64d205-f1f2-4567-afcf-48744bbce647",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "1e75934d-62f7-4b85-8ad2-1547b3fdcab4",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 269.41452200000003,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-12",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "892d764b-5344-42a2-a7be-568e1e7af514",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "6cdafab5-211a-4bfc-94cb-2a878c1e30d7",
+      "cost": 0.00009025800000000002,
+      "inputTokens": 2149,
+      "elapsedMs": 290.3964900000001,
+      "confidence": {
+        "operation": 0.1
+      }
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "123aa7ac-d879-45f8-9655-4afa93b32f3a",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "3429e647-59fc-447c-b611-bca51777b440",
+      "cost": 0.00009114000000000001,
+      "inputTokens": 2170,
+      "elapsedMs": 244.21773200000007,
+      "confidence": {
+        "operation": 0.26
+      }
+    },
+    {
+      "fixture": "development/case-13",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "4a797117-5508-4f1c-9c7e-9589fd75d298",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "1f70ebbd-3882-4681-9b80-a2f180bf65b5",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 286.38483700000006,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e358d147-e3c2-468e-b596-4bae01f3ace4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "44d2e34f-e011-4a48-b424-be07a8a9e039",
+      "cost": 0.00009084600000000002,
+      "inputTokens": 2163,
+      "elapsedMs": 253.55735699999968,
+      "confidence": {
+        "operation": 0.21
+      }
+    },
+    {
+      "fixture": "development/case-14",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "e01bf9b8-6938-4fea-bfc3-d6645762e4e6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "6397622e-09ed-4c49-9701-acb30dee29a6",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 371.1481240000003,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "62b15b25-305f-4844-ae40-51351f597934",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "43d31744-18f5-4739-9a9d-d13ed7cbe2ea",
+      "cost": 0.00009105600000000002,
+      "inputTokens": 2168,
+      "elapsedMs": 335.6599390000001,
+      "confidence": {
+        "operation": 0.18
+      }
+    },
+    {
+      "fixture": "development/case-15",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "2875257a-6153-4dfc-8e8e-fd382e79c178",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "04d81910-618c-43fd-9d94-f49fdb187312",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 235.40966200000003,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "0728172a-32d3-4411-aac0-ef256a24c409",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "275d5085-12f4-4951-9cc3-67b4e3e02177",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 256.46913600000016,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-16",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "b01ab7b7-4350-49c5-b088-04dc8762beb7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "6442c380-dcd9-4f1b-a9ea-fa6ecaa0f164",
+      "cost": 0.00009193800000000001,
+      "inputTokens": 2189,
+      "elapsedMs": 292.2151140000001,
+      "confidence": {
+        "operation": 0.38
+      }
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "661c4e32-5ec9-429a-b951-ce6ed2cf14da",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "db31ca49-2036-4216-9dbf-84935997c195",
+      "cost": 0.00009004800000000002,
+      "inputTokens": 2144,
+      "elapsedMs": 311.7525300000002,
+      "confidence": {
+        "operation": 0.14
+      }
+    },
+    {
+      "fixture": "development/case-17",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "6217178f-190c-4808-aee6-907b1059f79e",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "cd8acff4-11db-4ccd-893a-46a8bd1dc9b8",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 253.4281850000002,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "302db1a8-32db-4785-b793-9016632e6b34",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "517e8744-b4aa-4bd3-b122-1215981a3087",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 274.995641,
+      "confidence": {
+        "operation": 0.98
+      }
+    },
+    {
+      "fixture": "development/case-18",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "ecfe404d-0104-46f3-84f0-7bd9f37040b3",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "b99192e7-7f7b-4f6e-ac4e-8bfd0ceb4531",
+      "cost": 0.00009013200000000001,
+      "inputTokens": 2146,
+      "elapsedMs": 248.2280499999997,
+      "confidence": {
+        "operation": 0.14
+      }
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "b0c67414-c51e-4e72-b402-13bdaa407172",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "f3352042-741d-4343-86c2-3b960625a34b",
+      "cost": 0.000090006,
+      "inputTokens": 2143,
+      "elapsedMs": 277.4494490000002,
+      "confidence": {
+        "operation": 0.12
+      }
+    },
+    {
+      "fixture": "development/case-19",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "7cfc3253-15cb-4b19-b93e-2e45698c54d9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "65666d38-e548-4e4c-8884-b0f855eec1f2",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 271.8415180000002,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "ef2b3958-a608-4cd2-a153-5725384277fe",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "be3d14dc-94fa-4f9c-bd71-39b236f13c98",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 248.8755170000004,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "development/case-20",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6d3d62b9-84f4-48ed-9555-9a06ebaa7631",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "94bd29a7-56c8-40f7-90e6-c14bc834a3e1",
+      "cost": 0.00009038400000000001,
+      "inputTokens": 2152,
+      "elapsedMs": 232.290395,
+      "confidence": {
+        "operation": 0.12
+      }
+    }
+  ]
+}

@@ -1,0 +1,1315 @@
+{
+  "fingerprint": "51a310adc7240d7964f951aba050740e27911bd597fecc04dc79452356f9ab9b",
+  "split": "validation",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 40,
+  "attempted": 40,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7682623700000002,
+    "usage": 1.7655743700000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22426,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7708582640000003,
+    "usage": 1.7681702640000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22466,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 10,
+      "rate": 0.5,
+      "selectedTargetAndIntentCorrect": 10,
+      "errors": 0,
+      "cost": 0.0018071340000000004,
+      "inputTokens": 43027,
+      "cases": {
+        "validation/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-03": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        },
+        "validation/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-05": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "validation/case-06": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U'"
+              }
+            ]
+          ]
+        },
+        "validation/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-10": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "validation/case-11": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U'\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U'"
+              }
+            ]
+          ]
+        },
+        "validation/case-12": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "validation/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-14": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "validation/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-18": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        },
+        "validation/case-19": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"U\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "U"
+              }
+            ]
+          ]
+        },
+        "validation/case-20": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-left\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "operation",
+                "expected": [
+                  "middle-right"
+                ],
+                "actual": "middle-left"
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "extraction-local": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.0007887600000000002,
+      "inputTokens": 18780,
+      "cases": {
+        "validation/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"operation\":\"middle-right\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "validation/case-01",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "43e361d8-4e03-4344-b481-cdab61bf8eaf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "f40c1eae-2756-4750-952a-c2792006ae15",
+      "cost": 0.00009193800000000001,
+      "inputTokens": 2189,
+      "elapsedMs": 617.9395969999999,
+      "confidence": {
+        "operation": 0.37
+      }
+    },
+    {
+      "fixture": "validation/case-02",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "95305e09-20e3-4725-845e-44b140e108d5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "d716f073-ac38-43c7-a231-de4865e7617f",
+      "cost": 0.00008941800000000002,
+      "inputTokens": 2129,
+      "elapsedMs": 612.3549610000001,
+      "confidence": {
+        "operation": 0.14
+      }
+    },
+    {
+      "fixture": "validation/case-02",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "753e9c9d-93d8-4d5a-a90b-90366a79548d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "6e0a1ee0-2fa2-489b-8474-c46d3700ebf4",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 643.4669890000001,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "validation/case-01",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "67074e35-78f0-44d4-98b1-881551f5f125",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "58aabe64-d3fc-4297-874a-e7bb8721d977",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 675.8852099999999,
+      "confidence": {
+        "operation": 0.98
+      }
+    },
+    {
+      "fixture": "validation/case-03",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "619d44c5-4338-4772-980f-3f8fae2ef901",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "b2650794-72c5-4c04-bfaf-105bf19ddba3",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 273.05612999999994,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "validation/case-04",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "7d25ebb1-7563-492f-b293-47874aebb17f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "66eed0b5-8703-40fe-9a21-3973b1d05b82",
+      "cost": 0.00009042600000000002,
+      "inputTokens": 2153,
+      "elapsedMs": 247.95975599999997,
+      "confidence": {
+        "operation": 0.27
+      }
+    },
+    {
+      "fixture": "validation/case-04",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "fe70689b-7ab0-4048-9d91-86fbe271b85f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "ec677e4c-bf19-45c8-a829-8ce32545aa2e",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 300.8239980000001,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-03",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "38cee5dc-e986-4f34-95e7-110c1e54b485",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "a0c1d9fe-31dd-40d6-9ee5-4dcfeec4cc39",
+      "cost": 0.000090006,
+      "inputTokens": 2143,
+      "elapsedMs": 377.2709419999999,
+      "confidence": {
+        "operation": 0.11
+      }
+    },
+    {
+      "fixture": "validation/case-05",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "6f39205c-3c5b-42dc-be55-c98c75ff41c2",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "92cb487f-9ff0-444e-ba2e-db9b82a56102",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 255.7258589999999,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-05",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "ecbd58a9-4373-41ff-b088-5c710dd8df96",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "6bd0335d-54a9-425a-ad5f-fb786fda8379",
+      "cost": 0.00009004800000000002,
+      "inputTokens": 2144,
+      "elapsedMs": 308.17168600000014,
+      "confidence": {
+        "operation": 0.09
+      }
+    },
+    {
+      "fixture": "validation/case-06",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "d9b2a672-2690-43f1-92b1-10fef288e0ee",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "f6556195-e90c-48ed-b80b-0a1caa1ba1a0",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 306.35519499999987,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-06",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "11373a1c-a3b8-45d6-b2bb-3331f1504816",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U'"
+        }
+      ],
+      "decisionId": "3267815a-4934-4f44-b70d-2f709f910f68",
+      "cost": 0.00009126600000000002,
+      "inputTokens": 2173,
+      "elapsedMs": 317.7504700000002,
+      "confidence": {
+        "operation": 0.16
+      }
+    },
+    {
+      "fixture": "validation/case-07",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e6b542ec-cfa3-4f79-ac92-d299d315ebcf",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "e4ff5e14-cac0-485b-a633-7a7e70a9787f",
+      "cost": 0.000091014,
+      "inputTokens": 2167,
+      "elapsedMs": 236.8547349999999,
+      "confidence": {
+        "operation": 0.16
+      }
+    },
+    {
+      "fixture": "validation/case-08",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "6806a531-b4f7-454f-95bf-6011a6e788ff",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "b5a44425-7ff5-440b-9f21-55739b151650",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 219.53570500000023,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-07",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "65dcc0d6-c473-479d-82e8-753e28a75731",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "2596292c-6559-4b99-8629-34e4c944a839",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 299.2776550000001,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-08",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "4dad76c6-2d61-4b2d-9688-49b05956ce04",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "b5821d75-8222-4529-b250-190230330dd0",
+      "cost": 0.00009025800000000002,
+      "inputTokens": 2149,
+      "elapsedMs": 286.65748699999995,
+      "confidence": {
+        "operation": 0.2
+      }
+    },
+    {
+      "fixture": "validation/case-09",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "160aa895-f250-4b43-9a2c-2a4715e0b3af",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "21f05661-447b-42ea-93f9-0daba19dc2d7",
+      "cost": 0.00008904000000000001,
+      "inputTokens": 2120,
+      "elapsedMs": 253.36803199999986,
+      "confidence": {
+        "operation": 0.26
+      }
+    },
+    {
+      "fixture": "validation/case-09",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "0f851bad-1d38-443f-8362-5861a1055b14",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "3eb59952-3ec4-4e6c-bcf6-d7c6373e4695",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 269.3012480000002,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-10",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "c2330bc4-b940-4d47-bdd1-1abe16e8a020",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "544d457b-48ce-4518-bddb-051db854dcf3",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 302.83601599999974,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "validation/case-10",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "bd1a0d37-fbb4-461d-b6d5-4e1065e1401a",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "faa2ec6d-cf83-472a-88ae-ead4104ce7a0",
+      "cost": 0.00009072000000000001,
+      "inputTokens": 2160,
+      "elapsedMs": 311.1644849999998,
+      "confidence": {
+        "operation": 0.16
+      }
+    },
+    {
+      "fixture": "validation/case-11",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "025831e7-9671-49ba-8163-808799bebb18",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U'"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U'"
+        }
+      ],
+      "decisionId": "a39286de-c69e-47ac-b552-2fadb3225b82",
+      "cost": 0.00009004800000000002,
+      "inputTokens": 2144,
+      "elapsedMs": 259.72827400000006,
+      "confidence": {
+        "operation": 0.22
+      }
+    },
+    {
+      "fixture": "validation/case-11",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "4be66d9b-dd26-43e0-a8d0-0154763528b0",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "19dbad4a-2868-49cd-b549-f9d9c7691200",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 258.45077600000013,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "validation/case-12",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "c427922a-ed5c-4cb5-b4e7-a19c65fddb51",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "66a89cdf-1afb-4f9d-9b55-7b413bda726f",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 238.03544200000033,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "validation/case-13",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "11f2e6a2-6740-4399-8f08-fc33e3a286e9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "6538a794-10e7-4882-bab7-54ad734cf2d7",
+      "cost": 0.000091014,
+      "inputTokens": 2167,
+      "elapsedMs": 224.60120700000016,
+      "confidence": {
+        "operation": 0.15
+      }
+    },
+    {
+      "fixture": "validation/case-12",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "2564f4dc-2e54-4b66-8add-48ea3a051852",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "fd5f2293-9a1c-45ac-b134-3a35b1566d33",
+      "cost": 0.00008983800000000002,
+      "inputTokens": 2139,
+      "elapsedMs": 472.230513,
+      "confidence": {
+        "operation": 0.13
+      }
+    },
+    {
+      "fixture": "validation/case-14",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "3d22ecf8-bf19-4a1b-9e73-7e1f5cc86a6b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "7ada9a0b-a723-4dc5-87de-b47a6522f18c",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 442.0695099999998,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "validation/case-13",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "bc4bf760-8f67-4e6b-821c-3ea20568005d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "cb601a2a-b5e5-425a-9a17-0d6d295c327a",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 489.89190599999984,
+      "confidence": {
+        "operation": 0.95
+      }
+    },
+    {
+      "fixture": "validation/case-14",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "3b9dffa6-b05f-4a18-938e-b254f1e03eb6",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "0c58662d-d40b-4e4d-a910-c020e4f1c55c",
+      "cost": 0.00009030000000000001,
+      "inputTokens": 2150,
+      "elapsedMs": 237.27844000000005,
+      "confidence": {
+        "operation": 0.11
+      }
+    },
+    {
+      "fixture": "validation/case-15",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "c56a746c-9300-49ba-8e2b-5d7089ac34f1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "92f4ae89-a21a-4823-9b87-9e52c67a94f2",
+      "cost": 0.00008996400000000001,
+      "inputTokens": 2142,
+      "elapsedMs": 248.26463999999987,
+      "confidence": {
+        "operation": 0.15
+      }
+    },
+    {
+      "fixture": "validation/case-15",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "d0471250-3eb2-49a2-a5ef-9d9315f5ae84",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "9bba6feb-72ee-4def-a9a9-99d6adfef2a3",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 269.9447660000001,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "validation/case-16",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "4f6fd096-c2b8-42d6-a108-85dfe7d82434",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "6776482f-d37f-410e-a810-1863363ffec3",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 286.6843879999997,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-16",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d92f8f74-fbae-42a6-acf5-ac75f74765eb",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "0b2c7d5d-7bf1-4e22-946f-798fccdaad6e",
+      "cost": 0.00009084600000000002,
+      "inputTokens": 2163,
+      "elapsedMs": 239.16026499999998,
+      "confidence": {
+        "operation": 0.13
+      }
+    },
+    {
+      "fixture": "validation/case-17",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "0fb8e34d-3efd-4cf2-a28e-e73226a76179",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "1c2af0bd-1f0b-46c4-82f6-bbbe5cdc2d6e",
+      "cost": 0.00009025800000000002,
+      "inputTokens": 2149,
+      "elapsedMs": 227.25593200000003,
+      "confidence": {
+        "operation": 0.12
+      }
+    },
+    {
+      "fixture": "validation/case-17",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "e1e398e5-d419-49c0-b2d7-3dc2c645a181",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "74ca6948-62a6-4f3a-b276-c5c30ea99833",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 245.58228299999973,
+      "confidence": {
+        "operation": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-18",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "062a2150-b2ba-4cdc-8ffb-e041bfc8f79d",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "e2ae64ba-ae22-4f30-8b96-7bcaac8d3037",
+      "cost": 0.00009025800000000002,
+      "inputTokens": 2149,
+      "elapsedMs": 247.90452200000027,
+      "confidence": {
+        "operation": 0.1
+      }
+    },
+    {
+      "fixture": "validation/case-18",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "57245189-ae6a-495f-a858-08f9b86a95ee",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "d6245a11-0ed2-419f-9444-1034453a2906",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 313.28243999999995,
+      "confidence": {
+        "operation": 0.98
+      }
+    },
+    {
+      "fixture": "validation/case-19",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "c08a8e22-6d82-4ce9-8da0-9a35caba2e0c",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "U"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "U"
+        }
+      ],
+      "decisionId": "7561ac0c-9fe2-4fe6-bcbe-e635b8e044d7",
+      "cost": 0.00009004800000000002,
+      "inputTokens": 2144,
+      "elapsedMs": 247.61423799999966,
+      "confidence": {
+        "operation": 0.12
+      }
+    },
+    {
+      "fixture": "validation/case-19",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "035d019c-ce8f-45d3-bf4b-e8fc2ace3780",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "ddf025f7-6b37-49d2-9846-db3851357f28",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 259.3014629999998,
+      "confidence": {
+        "operation": 0.97
+      }
+    },
+    {
+      "fixture": "validation/case-20",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6a7aacbe-a13c-42ac-a1dd-9680b4ef6a17",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "operation": "middle-left"
+      },
+      "wrong": [
+        {
+          "question": "operation",
+          "expected": [
+            "middle-right"
+          ],
+          "actual": "middle-left"
+        }
+      ],
+      "decisionId": "6be9149d-3652-4ebb-b8a8-93c99500b1b1",
+      "cost": 0.00009042600000000002,
+      "inputTokens": 2153,
+      "elapsedMs": 241.32208299999957,
+      "confidence": {
+        "operation": 0.15
+      }
+    },
+    {
+      "fixture": "validation/case-20",
+      "variant": "extraction-local",
+      "repeat": 0,
+      "runId": "729c7e2b-c505-4436-9d88-b53645b5b1e9",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "operation": "middle-right"
+      },
+      "wrong": [],
+      "decisionId": "585f9c32-451a-45e8-ae5e-e5828e1a5d42",
+      "cost": 0.000039438000000000004,
+      "inputTokens": 939,
+      "elapsedMs": 298.27369099999987,
+      "confidence": {
+        "operation": 0.96
+      }
+    }
+  ]
+}

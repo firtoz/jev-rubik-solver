@@ -1,5 +1,11 @@
-export const SKILL_VERSION = 'beginner-v6';
+export const SKILL_VERSION = 'beginner-v7';
 export const skills = [
+  {id:'cross-lift-right',alg:"R U R'",stages:['cross'],purpose:'Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.'},
+  {id:'cross-lift-left',alg:"L' U' L",stages:['cross'],purpose:'Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.'},
+  {id:'cross-flip-top-right',alg:"F R U2 R' F'",stages:['cross'],purpose:'Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.'},
+  {id:'cross-flip-top-left',alg:"F' L' U2 L F",stages:['cross'],purpose:'Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.'},
+  {id:'cross-flip-bottom',alg:"F L' U2 L F'",stages:['cross'],purpose:'Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.'},
+
   {
     id: 'lift-bottom',
     alg: 'F2',
@@ -10,21 +16,21 @@ export const skills = [
   {
     id: 'lift-middle-right',
     alg: 'R',
-    stages: ['daisy', 'cross'],
+    stages: ['daisy'],
     purpose:
       'Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.',
   },
   {
     id: 'lift-middle-left',
     alg: "L'",
-    stages: ['daisy', 'cross'],
+    stages: ['daisy'],
     purpose:
       'Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.',
   },
   {
     id: 'flip-bottom-edge',
     alg: "F L'",
-    stages: ['cross'],
+    stages: [], // Retained for historical replay; superseded for cross work.
     purpose:
       'Target at DF with yellow pointing F: F then L-prime lifts it via FL to UL yellow-up. First clear yellow-up petals away from UF and UL using U setup.',
   },
@@ -38,21 +44,21 @@ export const skills = [
   {
     id: 'flip-top-edge',
     alg: 'F R',
-    stages: ['daisy', 'cross'],
+    stages: ['daisy'],
     purpose:
       'Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.',
   },
   {
     id: 'lower-top-edge',
     alg: 'F',
-    stages: ['daisy', 'cross'],
+    stages: ['daisy'],
     purpose:
       'Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.',
   },
   {
     id: 'flip-top-edge-left',
     alg: "F' L'",
-    stages: ['daisy', 'cross'],
+    stages: ['daisy'],
     purpose:
       'Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.',
   },

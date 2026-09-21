@@ -240,3 +240,71 @@ test('runner obeys a model-selected goal even when the old curriculum would disa
   expect(recorded.find((e) => e.kind === 'action')?.payload.stageAfter).toBe('middle-layer');
   expect(after.history).toEqual(['U']);
 });
+
+const { createSession, viewSession, advanceSession } = await import('../src/server/tutorial');
+const { hash } = await import('../src/lib/cube');
+test('article pauses at real dependencies, preserves responses and applies only on command', async () => {
+  let calls = 0;
+  globalThis.fetch = (async (_url: any, init: any) => {
+    calls++;
+    const request = JSON.parse(init.body);
+    const chosen: Record<string, string> = {
+      goal: 'top-edges',
+      target: 'whole',
+      intent_whole: 'align',
+      reference: 'F',
+      operation: "U'",
+    };
+    return Response.json({
+      model: 'jev-1.13.0',
+      answers: Object.fromEntries(
+        Object.entries(request.questions).map(([id, q]: any) => [
+          id,
+          {
+            type: 'choice',
+            choice: chosen[id],
+            confidence: 0.9,
+            probabilities: Object.fromEntries(
+              Object.keys(q.criteria).map((k) => [k, k === chosen[id] ? 1 : 0]),
+            ),
+          },
+        ]),
+      ),
+      usage: { input_tokens: 50, output_tokens: 10 },
+      extra: { kept: true },
+    });
+  }) as typeof fetch;
+  let s = await createSession('U');
+  await expect(runner.step(s.id,0,crypto.randomUUID())).rejects.toThrow('How it works');
+  expect(()=>runner.controlRun(s.id,'start')).toThrow('How it works');
+  const initial = hash(s.run.state);
+  expect(calls).toBe(0);
+  expect(Object.keys(s.request!.questions)).toEqual(['goal']);
+  const id = s.id;
+  let firstCommand = '';
+  for (let i = 0; i < 4; i++) {
+    const command = crypto.randomUUID();
+    if (i === 0) firstCommand = command;
+    s = await advanceSession(id, s.revision, command, 'ask');
+    expect(hash(s.run.state)).toBe(initial);
+  }
+  expect(calls).toBe(4);
+  expect(s.action?.alg).toBe("U'");
+  expect((s.answers[0].nativeResponse as any).extra.kept).toBe(true);
+  const restored = await viewSession(id);
+  expect(restored.answers).toEqual(s.answers);
+  expect(calls).toBe(4);
+  await expect(advanceSession(id, 0, crypto.randomUUID(), 'ask')).rejects.toThrow('Stale');
+  await expect(advanceSession(id, s.revision, firstCommand, 'apply')).rejects.toThrow('Duplicate');
+  s = await advanceSession(id, s.revision, crypto.randomUUID(), 'apply');
+  expect(s.solved).toBe(true);
+  expect(s.archive).toHaveLength(1);
+  expect(calls).toBe(4);
+});
+test('solved and malformed configurations never dispatch', async () => {
+  const s = await createSession('');
+  expect(s.solved).toBe(true);
+  expect(s.request).toBeNull();
+  await expect(advanceSession(s.id, 0, crypto.randomUUID(), 'ask')).rejects.toThrow('No pending');
+  await expect(createSession('not moves')).rejects.toThrow('standard face turns');
+});

@@ -1,0 +1,448 @@
+{
+  "baseline": {
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "intent": "extract",
+        "stage": "middle-layer",
+        "referenceViews": {
+          "F": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "BR",
+              "destination": "FR",
+              "stickers": {
+                "green": "R",
+                "red": "B"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "F",
+                "red": "R"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "R"
+                },
+                {
+                  "color": "red",
+                  "direction": "B"
+                }
+              ],
+              "locationWords": "back right",
+              "destinationWords": "front right",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "right",
+                "red": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            }
+          },
+          "R": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "FR",
+              "destination": "FL",
+              "stickers": {
+                "green": "F",
+                "red": "R"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "L",
+                "red": "F"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "F"
+                },
+                {
+                  "color": "red",
+                  "direction": "R"
+                }
+              ],
+              "locationWords": "front right",
+              "destinationWords": "front left",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "front",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "L": "green",
+              "R": "blue",
+              "F": "red",
+              "B": "orange"
+            }
+          },
+          "B": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "FL",
+              "destination": "BL",
+              "stickers": {
+                "green": "L",
+                "red": "F"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "B",
+                "red": "L"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "L"
+                },
+                {
+                  "color": "red",
+                  "direction": "F"
+                }
+              ],
+              "locationWords": "front left",
+              "destinationWords": "back left",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "left",
+                "red": "front"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "B": "green",
+              "F": "blue",
+              "L": "red",
+              "R": "orange"
+            }
+          },
+          "L": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "BL",
+              "destination": "BR",
+              "stickers": {
+                "green": "B",
+                "red": "L"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "R",
+                "red": "B"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "B"
+                },
+                {
+                  "color": "red",
+                  "direction": "L"
+                }
+              ],
+              "locationWords": "back left",
+              "destinationWords": "back right",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "back",
+                "red": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "R": "green",
+              "L": "blue",
+              "B": "red",
+              "F": "orange"
+            }
+          }
+        }
+      },
+      "questions": {
+        "reference": {
+          "type": "choice",
+          "instructions": "Compare referenceViews.F, referenceViews.R, referenceViews.B and referenceViews.L. Choose the view satisfying this reference requirement for the target. This renames coordinates, not a move. For a target on U, choose the reference whose front center equals target.sideFacingStickers[0].color. Do NOT match topStickerColor. For extraction, put its CURRENT middle position at FR. Do not choose front from its final destination for extraction.",
+          "criteria": {
+            "F": "Reference F: front center green; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"BR\",\"destination\":\"FR\",\"stickers\":{\"green\":\"R\",\"red\":\"B\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"F\",\"red\":\"R\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"R\"},{\"color\":\"red\",\"direction\":\"B\"}],\"locationWords\":\"back right\",\"destinationWords\":\"front right\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"right\",\"red\":\"back\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates.",
+            "R": "Reference R: front center red; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"FR\",\"destination\":\"FL\",\"stickers\":{\"green\":\"F\",\"red\":\"R\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"L\",\"red\":\"F\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"F\"},{\"color\":\"red\",\"direction\":\"R\"}],\"locationWords\":\"front right\",\"destinationWords\":\"front left\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"front\",\"red\":\"right\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates.",
+            "B": "Reference B: front center blue; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"FL\",\"destination\":\"BL\",\"stickers\":{\"green\":\"L\",\"red\":\"F\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"B\",\"red\":\"L\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"L\"},{\"color\":\"red\",\"direction\":\"F\"}],\"locationWords\":\"front left\",\"destinationWords\":\"back left\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"left\",\"red\":\"front\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates.",
+            "L": "Reference L: front center orange; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"BL\",\"destination\":\"BR\",\"stickers\":{\"green\":\"B\",\"red\":\"L\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"R\",\"red\":\"B\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"B\"},{\"color\":\"red\",\"direction\":\"L\"}],\"locationWords\":\"back left\",\"destinationWords\":\"back right\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"back\",\"red\":\"left\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates."
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "reference": {
+          "type": "choice",
+          "choice": "F",
+          "confidence": 0.49,
+          "probabilities": {
+            "F": 0.61,
+            "R": 0.37,
+            "L": 0.01,
+            "B": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 2319,
+        "output_tokens": 45
+      }
+    }
+  },
+  "revised": {
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "intent": "extract",
+        "stage": "middle-layer",
+        "referenceViews": {
+          "F": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "BR",
+              "destination": "FR",
+              "stickers": {
+                "green": "R",
+                "red": "B"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "F",
+                "red": "R"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "R"
+                },
+                {
+                  "color": "red",
+                  "direction": "B"
+                }
+              ],
+              "locationWords": "back right",
+              "destinationWords": "front right",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "right",
+                "red": "back"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "F": "green",
+              "B": "blue",
+              "R": "red",
+              "L": "orange"
+            }
+          },
+          "R": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "FR",
+              "destination": "FL",
+              "stickers": {
+                "green": "F",
+                "red": "R"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "L",
+                "red": "F"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "F"
+                },
+                {
+                  "color": "red",
+                  "direction": "R"
+                }
+              ],
+              "locationWords": "front right",
+              "destinationWords": "front left",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "front",
+                "red": "right"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "L": "green",
+              "R": "blue",
+              "F": "red",
+              "B": "orange"
+            }
+          },
+          "B": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "FL",
+              "destination": "BL",
+              "stickers": {
+                "green": "L",
+                "red": "F"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "B",
+                "red": "L"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "L"
+                },
+                {
+                  "color": "red",
+                  "direction": "F"
+                }
+              ],
+              "locationWords": "front left",
+              "destinationWords": "back left",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "left",
+                "red": "front"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "B": "green",
+              "F": "blue",
+              "L": "red",
+              "R": "orange"
+            }
+          },
+          "L": {
+            "target": {
+              "piece": "FR",
+              "kind": "edge",
+              "position": "BL",
+              "destination": "BR",
+              "stickers": {
+                "green": "B",
+                "red": "L"
+              },
+              "solved": false,
+              "requiredStickerDirections": {
+                "green": "R",
+                "red": "B"
+              },
+              "topStickerColor": null,
+              "sideFacingStickers": [
+                {
+                  "color": "green",
+                  "direction": "B"
+                },
+                {
+                  "color": "red",
+                  "direction": "L"
+                }
+              ],
+              "locationWords": "back left",
+              "destinationWords": "back right",
+              "layer": "middle",
+              "stickerDirectionsInWords": {
+                "green": "back",
+                "red": "left"
+              },
+              "directlyAboveHome": false,
+              "sideStickersMatchingCenters": []
+            },
+            "centers": {
+              "U": "white",
+              "D": "yellow",
+              "R": "green",
+              "L": "blue",
+              "B": "red",
+              "F": "orange"
+            }
+          }
+        }
+      },
+      "questions": {
+        "reference": {
+          "type": "choice",
+          "instructions": "For this middle-edge EXTRACTION, use CURRENT position, not destination. Put the occupied slot at local FR. In the original fixed frame: current FR requires front F; current BR requires front R; current BL requires front B; current FL requires front L. Destination does not determine the extraction frame.",
+          "criteria": {
+            "F": "Reference F: front center green; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"BR\",\"destination\":\"FR\",\"stickers\":{\"green\":\"R\",\"red\":\"B\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"F\",\"red\":\"R\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"R\"},{\"color\":\"red\",\"direction\":\"B\"}],\"locationWords\":\"back right\",\"destinationWords\":\"front right\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"right\",\"red\":\"back\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates.",
+            "R": "Reference R: front center red; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"FR\",\"destination\":\"FL\",\"stickers\":{\"green\":\"F\",\"red\":\"R\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"L\",\"red\":\"F\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"F\"},{\"color\":\"red\",\"direction\":\"R\"}],\"locationWords\":\"front right\",\"destinationWords\":\"front left\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"front\",\"red\":\"right\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates.",
+            "B": "Reference B: front center blue; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"FL\",\"destination\":\"BL\",\"stickers\":{\"green\":\"L\",\"red\":\"F\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"B\",\"red\":\"L\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"L\"},{\"color\":\"red\",\"direction\":\"F\"}],\"locationWords\":\"front left\",\"destinationWords\":\"back left\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"left\",\"red\":\"front\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates.",
+            "L": "Reference L: front center orange; target {\"piece\":\"FR\",\"kind\":\"edge\",\"position\":\"BL\",\"destination\":\"BR\",\"stickers\":{\"green\":\"B\",\"red\":\"L\"},\"solved\":false,\"requiredStickerDirections\":{\"green\":\"R\",\"red\":\"B\"},\"topStickerColor\":null,\"sideFacingStickers\":[{\"color\":\"green\",\"direction\":\"B\"},{\"color\":\"red\",\"direction\":\"L\"}],\"locationWords\":\"back left\",\"destinationWords\":\"back right\",\"layer\":\"middle\",\"stickerDirectionsInWords\":{\"green\":\"back\",\"red\":\"left\"},\"directlyAboveHome\":false,\"sideStickersMatchingCenters\":[]}; white-up positions undefined; side rows undefined. All subsequent moves use these local coordinates."
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "reference": {
+          "type": "choice",
+          "choice": "R",
+          "confidence": 0.88,
+          "probabilities": {
+            "L": 0,
+            "B": 0,
+            "R": 0.91,
+            "F": 0.09
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 2273,
+        "output_tokens": 45
+      }
+    }
+  }
+}

@@ -1,0 +1,1541 @@
+{
+  "fingerprint": "4bea73334d352d15528f5a3559cade762e98966bba30f4db1e1353407efde407",
+  "split": "validation",
+  "status": "complete",
+  "stopReason": null,
+  "planned": 40,
+  "attempted": 40,
+  "unattempted": 0,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 1.7498904360000003,
+    "usage": 1.7472024360000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22186,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 1.7537561160000004,
+    "usage": 1.7510681160000003,
+    "reserved": 0.0026880000000000003,
+    "attempts": 22226,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "baseline": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 13,
+      "rate": 0.65,
+      "selectedTargetAndIntentCorrect": 13,
+      "errors": 0,
+      "cost": 0.001952160000000001,
+      "inputTokens": 46480,
+      "cases": {
+        "validation/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-02": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "R"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "validation/case-03": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "B"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "validation/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-07": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "F"
+                ],
+                "actual": "B"
+              }
+            ]
+          ]
+        },
+        "validation/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-09": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "R"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "validation/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-12": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "F"
+                ],
+                "actual": "B"
+              }
+            ]
+          ]
+        },
+        "validation/case-13": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "F"
+                ],
+                "actual": "B"
+              }
+            ]
+          ]
+        },
+        "validation/case-14": {
+          "correct": 0,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": [
+            [
+              {
+                "question": "reference",
+                "expected": [
+                  "B"
+                ],
+                "actual": "F"
+              }
+            ]
+          ]
+        },
+        "validation/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        }
+      }
+    },
+    "slot-rule": {
+      "attempted": 20,
+      "planned": 20,
+      "correct": 20,
+      "rate": 1,
+      "selectedTargetAndIntentCorrect": 20,
+      "errors": 0,
+      "cost": 0.0019135200000000002,
+      "inputTokens": 45560,
+      "cases": {
+        "validation/case-01": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-02": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-03": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-04": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-05": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-06": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-07": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-08": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-09": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"R\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-10": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-11": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-12": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-13": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-14": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-15": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-16": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-17": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"L\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-18": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-19": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"F\"}"
+          ],
+          "failures": []
+        },
+        "validation/case-20": {
+          "correct": 1,
+          "attempted": 1,
+          "answerPatterns": [
+            "{\"reference\":\"B\"}"
+          ],
+          "failures": []
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "fixture": "validation/case-01",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "58f1b5b6-f466-4c06-80d0-1fe595014e2d",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "105b32cb-50bd-4740-afd6-6f2d415369ff",
+          "elapsedMs": 541.9415100000001
+        }
+      ],
+      "wrong": [],
+      "decisionId": "105b32cb-50bd-4740-afd6-6f2d415369ff",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 541.9415100000001,
+      "confidence": {
+        "reference": 0.94
+      }
+    },
+    {
+      "fixture": "validation/case-02",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6bb83276-d44d-4ea5-ad71-3b20e5805f08",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "241916b6-af30-4776-ac26-22ee63819018",
+          "elapsedMs": 531.6995590000001
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "R"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "241916b6-af30-4776-ac26-22ee63819018",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 531.6995590000001,
+      "confidence": {
+        "reference": 0.33
+      }
+    },
+    {
+      "fixture": "validation/case-01",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "9a853de2-dfe2-4bee-a88a-a2c733129cc0",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "70c6d6ca-9b15-4ce6-b820-de66de533d0e",
+          "elapsedMs": 635.596601
+        }
+      ],
+      "wrong": [],
+      "decisionId": "70c6d6ca-9b15-4ce6-b820-de66de533d0e",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 635.596601,
+      "confidence": {
+        "reference": 0.32
+      }
+    },
+    {
+      "fixture": "validation/case-02",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "4c87828d-4344-49ef-aad1-afa30e80e6ec",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "58ef9b55-ad93-4cdb-bb6a-9c418f10f3c0",
+          "elapsedMs": 595.4195920000001
+        }
+      ],
+      "wrong": [],
+      "decisionId": "58ef9b55-ad93-4cdb-bb6a-9c418f10f3c0",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 595.4195920000001,
+      "confidence": {
+        "reference": 0.85
+      }
+    },
+    {
+      "fixture": "validation/case-03",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d278d42e-2a9f-4f13-80f5-ca065ec8e0a6",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "233183e0-7ce8-4c5f-a48d-5b084d387774",
+          "elapsedMs": 258.7775849999998
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "B"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "233183e0-7ce8-4c5f-a48d-5b084d387774",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 258.7775849999998,
+      "confidence": {
+        "reference": 0.33
+      }
+    },
+    {
+      "fixture": "validation/case-04",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "af77cab8-ad8b-4053-ab5e-50a4918a5ae5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "a4bcf98a-37a0-4e02-a9ee-370db7ead4df",
+          "elapsedMs": 211.46449699999994
+        }
+      ],
+      "wrong": [],
+      "decisionId": "a4bcf98a-37a0-4e02-a9ee-370db7ead4df",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 211.46449699999994,
+      "confidence": {
+        "reference": 0.38
+      }
+    },
+    {
+      "fixture": "validation/case-03",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "85a7ac8b-1858-4c65-a71d-cbebb9e7048c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "bbebd5f0-fbeb-443a-819a-7f5363f35e49",
+          "elapsedMs": 272.03577900000005
+        }
+      ],
+      "wrong": [],
+      "decisionId": "bbebd5f0-fbeb-443a-819a-7f5363f35e49",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 272.03577900000005,
+      "confidence": {
+        "reference": 0.89
+      }
+    },
+    {
+      "fixture": "validation/case-04",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "658ad9eb-948b-469c-a27a-96b1b5e0d9f6",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "175954bc-5bd5-4a1b-91e4-ed9b513fc28a",
+          "elapsedMs": 268.7021599999998
+        }
+      ],
+      "wrong": [],
+      "decisionId": "175954bc-5bd5-4a1b-91e4-ed9b513fc28a",
+      "cost": 0.00009630600000000001,
+      "inputTokens": 2293,
+      "elapsedMs": 268.7021599999998,
+      "confidence": {
+        "reference": 0.92
+      }
+    },
+    {
+      "fixture": "validation/case-05",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "593fa023-ce23-4df9-885b-095d6b700f9c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "1dfc60c9-02ca-4c7b-97ff-cd00e28eeeb2",
+          "elapsedMs": 246.44482900000003
+        }
+      ],
+      "wrong": [],
+      "decisionId": "1dfc60c9-02ca-4c7b-97ff-cd00e28eeeb2",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 246.44482900000003,
+      "confidence": {
+        "reference": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-05",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "29b503db-a919-4770-b02f-00f4a173b4fb",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "e5881ffe-5beb-4f54-a48b-2127fd491e77",
+          "elapsedMs": 342.5553
+        }
+      ],
+      "wrong": [],
+      "decisionId": "e5881ffe-5beb-4f54-a48b-2127fd491e77",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 342.5553,
+      "confidence": {
+        "reference": 0.62
+      }
+    },
+    {
+      "fixture": "validation/case-06",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "416f7672-decf-49ad-ae9c-88dfe85e2bf7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "4831388a-ed18-41ab-8690-431c8b2801c3",
+          "elapsedMs": 312.729057
+        }
+      ],
+      "wrong": [],
+      "decisionId": "4831388a-ed18-41ab-8690-431c8b2801c3",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 312.729057,
+      "confidence": {
+        "reference": 0.72
+      }
+    },
+    {
+      "fixture": "validation/case-06",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "9c37a832-278a-4937-a5d0-fd0f35d0a0c3",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "37c85073-9013-46ff-96f2-a9f2ea1df773",
+          "elapsedMs": 352.5450480000002
+        }
+      ],
+      "wrong": [],
+      "decisionId": "37c85073-9013-46ff-96f2-a9f2ea1df773",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 352.5450480000002,
+      "confidence": {
+        "reference": 0.95
+      }
+    },
+    {
+      "fixture": "validation/case-07",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "4890ccdd-d274-4580-be49-7195bf0a688b",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "3a0fb1f9-45db-43eb-a296-16837ff9d570",
+          "elapsedMs": 241.78108199999997
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "F"
+          ],
+          "actual": "B"
+        }
+      ],
+      "decisionId": "3a0fb1f9-45db-43eb-a296-16837ff9d570",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 241.78108199999997,
+      "confidence": {
+        "reference": 0.4
+      }
+    },
+    {
+      "fixture": "validation/case-07",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "8fdc6f97-7992-456d-b46f-a7cc31306dc1",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "afe2f8bc-8d40-4ad9-9697-3024605c7b1e",
+          "elapsedMs": 238.2663829999999
+        }
+      ],
+      "wrong": [],
+      "decisionId": "afe2f8bc-8d40-4ad9-9697-3024605c7b1e",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 238.2663829999999,
+      "confidence": {
+        "reference": 0.96
+      }
+    },
+    {
+      "fixture": "validation/case-08",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "8d3517c5-050d-4aa2-bdcd-4359703e37ee",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "e59b5e32-d32e-408c-98e0-d0c688a6d29f",
+          "elapsedMs": 229.9803629999999
+        }
+      ],
+      "wrong": [],
+      "decisionId": "e59b5e32-d32e-408c-98e0-d0c688a6d29f",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 229.9803629999999,
+      "confidence": {
+        "reference": 0.49
+      }
+    },
+    {
+      "fixture": "validation/case-08",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "3cba98f8-7691-4229-82db-abab9af7d7ac",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "1a6b2bff-b1ed-4893-bb0c-5b15ba304ce5",
+          "elapsedMs": 268.94972499999994
+        }
+      ],
+      "wrong": [],
+      "decisionId": "1a6b2bff-b1ed-4893-bb0c-5b15ba304ce5",
+      "cost": 0.00009630600000000001,
+      "inputTokens": 2293,
+      "elapsedMs": 268.94972499999994,
+      "confidence": {
+        "reference": 0.74
+      }
+    },
+    {
+      "fixture": "validation/case-10",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "34272d89-fe60-410c-8bcf-165a7c5c242c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "78b2827e-5021-46e3-8aaa-4bff3b43adcf",
+          "elapsedMs": 223.90634899999986
+        }
+      ],
+      "wrong": [],
+      "decisionId": "78b2827e-5021-46e3-8aaa-4bff3b43adcf",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 223.90634899999986,
+      "confidence": {
+        "reference": 0.93
+      }
+    },
+    {
+      "fixture": "validation/case-09",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "c21f8628-e903-46f0-9770-9390ac6ff2e4",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "R"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "9107be7f-9541-4b70-ac91-a41c4a98432f",
+          "elapsedMs": 305.262747
+        }
+      ],
+      "wrong": [],
+      "decisionId": "9107be7f-9541-4b70-ac91-a41c4a98432f",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 305.262747,
+      "confidence": {
+        "reference": 0.86
+      }
+    },
+    {
+      "fixture": "validation/case-09",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "0a1e7167-ab8c-44ff-bdcc-8d7cb0ae7ffa",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "7f4a83ce-cc07-4fb1-9822-901849f54f99",
+          "elapsedMs": 386.15981499999975
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "R"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "7f4a83ce-cc07-4fb1-9822-901849f54f99",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 386.15981499999975,
+      "confidence": {
+        "reference": 0.5
+      }
+    },
+    {
+      "fixture": "validation/case-10",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "4193a206-ddb0-4dcb-ac7f-3d7d1918794e",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "0042437d-cfc2-4bee-b6a9-710e77d00d2a",
+          "elapsedMs": 337.39560200000005
+        }
+      ],
+      "wrong": [],
+      "decisionId": "0042437d-cfc2-4bee-b6a9-710e77d00d2a",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 337.39560200000005,
+      "confidence": {
+        "reference": 0.4
+      }
+    },
+    {
+      "fixture": "validation/case-11",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "d0994354-d556-4ff8-ae31-3ddea9e2bac5",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "c06f7d35-3653-4110-a6df-dae71ef3381a",
+          "elapsedMs": 223.87434900000017
+        }
+      ],
+      "wrong": [],
+      "decisionId": "c06f7d35-3653-4110-a6df-dae71ef3381a",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 223.87434900000017,
+      "confidence": {
+        "reference": 0.43
+      }
+    },
+    {
+      "fixture": "validation/case-11",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "ea020256-d720-4f20-9f1c-f980e05cf86c",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "41cc53cf-d601-48b3-ad6d-3bd170917c7c",
+          "elapsedMs": 258.1784090000001
+        }
+      ],
+      "wrong": [],
+      "decisionId": "41cc53cf-d601-48b3-ad6d-3bd170917c7c",
+      "cost": 0.00009630600000000001,
+      "inputTokens": 2293,
+      "elapsedMs": 258.1784090000001,
+      "confidence": {
+        "reference": 0.91
+      }
+    },
+    {
+      "fixture": "validation/case-12",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "dff57138-1314-42ea-9092-ce2250a9f2fa",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "179a98c2-cd7d-49f9-b038-c8d2c343bd42",
+          "elapsedMs": 256.53977399999985
+        }
+      ],
+      "wrong": [],
+      "decisionId": "179a98c2-cd7d-49f9-b038-c8d2c343bd42",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 256.53977399999985,
+      "confidence": {
+        "reference": 0.92
+      }
+    },
+    {
+      "fixture": "validation/case-12",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "b171d2c4-7802-435c-be14-849ae290f55e",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "035c5fd4-8183-4776-b2e9-8f3af8de7115",
+          "elapsedMs": 263.7764109999998
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "F"
+          ],
+          "actual": "B"
+        }
+      ],
+      "decisionId": "035c5fd4-8183-4776-b2e9-8f3af8de7115",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 263.7764109999998,
+      "confidence": {
+        "reference": 0.36
+      }
+    },
+    {
+      "fixture": "validation/case-13",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "ff60b537-8344-4a30-80d7-e499b6e1c1df",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "d6d09c84-6326-43ff-9d8a-5027475cecac",
+          "elapsedMs": 247.2370460000002
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "F"
+          ],
+          "actual": "B"
+        }
+      ],
+      "decisionId": "d6d09c84-6326-43ff-9d8a-5027475cecac",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 247.2370460000002,
+      "confidence": {
+        "reference": 0.37
+      }
+    },
+    {
+      "fixture": "validation/case-13",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "984d384c-3817-4b6d-b831-4c16b0936212",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "9efd09fd-116c-48c9-a128-d47f03c5c4c8",
+          "elapsedMs": 237.65551499999992
+        }
+      ],
+      "wrong": [],
+      "decisionId": "9efd09fd-116c-48c9-a128-d47f03c5c4c8",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 237.65551499999992,
+      "confidence": {
+        "reference": 0.92
+      }
+    },
+    {
+      "fixture": "validation/case-14",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "0731bb08-69a7-4189-bf61-d3c296c7fc60",
+      "correct": false,
+      "selectedCorrect": false,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "14192d51-9ab2-4b60-b537-26d5dd75ec70",
+          "elapsedMs": 239.604464
+        }
+      ],
+      "wrong": [
+        {
+          "question": "reference",
+          "expected": [
+            "B"
+          ],
+          "actual": "F"
+        }
+      ],
+      "decisionId": "14192d51-9ab2-4b60-b537-26d5dd75ec70",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 239.604464,
+      "confidence": {
+        "reference": 0.38
+      }
+    },
+    {
+      "fixture": "validation/case-14",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "f50c3a4f-a2b2-4979-9261-e320153a14ef",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "fc0f8972-e88e-4b6b-854a-15181d1d9a53",
+          "elapsedMs": 305.66934100000026
+        }
+      ],
+      "wrong": [],
+      "decisionId": "fc0f8972-e88e-4b6b-854a-15181d1d9a53",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 305.66934100000026,
+      "confidence": {
+        "reference": 0.91
+      }
+    },
+    {
+      "fixture": "validation/case-15",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "e39dbb99-4fb4-4237-8c48-accbc4107ea7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "a9b082f6-a23b-4815-a0c6-5b8fabda7a05",
+          "elapsedMs": 232.68624599999976
+        }
+      ],
+      "wrong": [],
+      "decisionId": "a9b082f6-a23b-4815-a0c6-5b8fabda7a05",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 232.68624599999976,
+      "confidence": {
+        "reference": 0.33
+      }
+    },
+    {
+      "fixture": "validation/case-15",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "c1ba956a-0130-4e0e-baac-e62787fcd06b",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "f6caf484-cd3b-4da6-96ec-7b310ff862e9",
+          "elapsedMs": 250.91251699999975
+        }
+      ],
+      "wrong": [],
+      "decisionId": "f6caf484-cd3b-4da6-96ec-7b310ff862e9",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 250.91251699999975,
+      "confidence": {
+        "reference": 0.85
+      }
+    },
+    {
+      "fixture": "validation/case-16",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "873fab76-8bf2-4723-998a-926b40ff0cba",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "a05b78d4-281d-45c6-bf93-cc23fbba413c",
+          "elapsedMs": 235.17576999999983
+        }
+      ],
+      "wrong": [],
+      "decisionId": "a05b78d4-281d-45c6-bf93-cc23fbba413c",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 235.17576999999983,
+      "confidence": {
+        "reference": 0.93
+      }
+    },
+    {
+      "fixture": "validation/case-16",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "dcac87ce-8f9f-4db7-b245-c41e4e034aa7",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "196dd8e4-b400-43ec-9015-a39677602ce2",
+          "elapsedMs": 262.257971
+        }
+      ],
+      "wrong": [],
+      "decisionId": "196dd8e4-b400-43ec-9015-a39677602ce2",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 262.257971,
+      "confidence": {
+        "reference": 0.37
+      }
+    },
+    {
+      "fixture": "validation/case-17",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "8b680d45-12e8-4b50-95ec-eae636b93c73",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "1033be0b-8e0b-4fb8-8061-7207e2865689",
+          "elapsedMs": 260.08009100000027
+        }
+      ],
+      "wrong": [],
+      "decisionId": "1033be0b-8e0b-4fb8-8061-7207e2865689",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 260.08009100000027,
+      "confidence": {
+        "reference": 0.37
+      }
+    },
+    {
+      "fixture": "validation/case-17",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "e3cb787a-8c44-4ae7-9cc2-943f7cec9028",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "L"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "2dd87634-014c-4b3e-bdf4-ccb77ed5f05c",
+          "elapsedMs": 234.39431100000002
+        }
+      ],
+      "wrong": [],
+      "decisionId": "2dd87634-014c-4b3e-bdf4-ccb77ed5f05c",
+      "cost": 0.00009630600000000001,
+      "inputTokens": 2293,
+      "elapsedMs": 234.39431100000002,
+      "confidence": {
+        "reference": 0.81
+      }
+    },
+    {
+      "fixture": "validation/case-18",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "9bb9299a-6a6e-4e86-bc41-775cf8a16c94",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "8ac673af-e75f-40f4-bece-8bff746fb59d",
+          "elapsedMs": 235.54718700000012
+        }
+      ],
+      "wrong": [],
+      "decisionId": "8ac673af-e75f-40f4-bece-8bff746fb59d",
+      "cost": 0.00009630600000000001,
+      "inputTokens": 2293,
+      "elapsedMs": 235.54718700000012,
+      "confidence": {
+        "reference": 0.9
+      }
+    },
+    {
+      "fixture": "validation/case-18",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "6472ec65-3136-49ff-97df-3b27743021fe",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "4ec50452-8233-4f90-b170-2be4cb336d52",
+          "elapsedMs": 225.25981000000002
+        }
+      ],
+      "wrong": [],
+      "decisionId": "4ec50452-8233-4f90-b170-2be4cb336d52",
+      "cost": 0.00009823800000000002,
+      "inputTokens": 2339,
+      "elapsedMs": 225.25981000000002,
+      "confidence": {
+        "reference": 0.62
+      }
+    },
+    {
+      "fixture": "validation/case-19",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "37227708-ecc2-4f37-a0c2-8995ca5d88b8",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "51479245-f2ac-4a2c-981a-fd7696c7c0f3",
+          "elapsedMs": 234.3517310000002
+        }
+      ],
+      "wrong": [],
+      "decisionId": "51479245-f2ac-4a2c-981a-fd7696c7c0f3",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 234.3517310000002,
+      "confidence": {
+        "reference": 0.31
+      }
+    },
+    {
+      "fixture": "validation/case-19",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "85e7edb8-eef4-48bb-9cee-c14391e47faa",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "F"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "39dd695f-d81a-4b44-bb6e-0d23bdb7a8cd",
+          "elapsedMs": 235.74667199999976
+        }
+      ],
+      "wrong": [],
+      "decisionId": "39dd695f-d81a-4b44-bb6e-0d23bdb7a8cd",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 235.74667199999976,
+      "confidence": {
+        "reference": 0.9
+      }
+    },
+    {
+      "fixture": "validation/case-20",
+      "variant": "slot-rule",
+      "repeat": 0,
+      "runId": "cac8022f-2a5c-4766-97e7-5d63dc59c3db",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "f40dc4a9-9433-4da4-93ec-0c7392e535a7",
+          "elapsedMs": 228.20523200000025
+        }
+      ],
+      "wrong": [],
+      "decisionId": "f40dc4a9-9433-4da4-93ec-0c7392e535a7",
+      "cost": 0.00009546600000000001,
+      "inputTokens": 2273,
+      "elapsedMs": 228.20523200000025,
+      "confidence": {
+        "reference": 0.85
+      }
+    },
+    {
+      "fixture": "validation/case-20",
+      "variant": "baseline",
+      "repeat": 0,
+      "runId": "40911adf-a26c-4b24-a5ef-fca324f36f8f",
+      "correct": true,
+      "selectedCorrect": true,
+      "choices": {
+        "reference": "B"
+      },
+      "observationCorrect": null,
+      "calls": [
+        {
+          "id": "d5f81242-e19e-4758-9227-07697d848bec",
+          "elapsedMs": 235.22549200000003
+        }
+      ],
+      "wrong": [],
+      "decisionId": "d5f81242-e19e-4758-9227-07697d848bec",
+      "cost": 0.00009739800000000002,
+      "inputTokens": 2319,
+      "elapsedMs": 235.22549200000003,
+      "confidence": {
+        "reference": 0.61
+      }
+    }
+  ]
+}

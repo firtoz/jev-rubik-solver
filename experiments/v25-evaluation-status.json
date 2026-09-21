@@ -1,0 +1,59 @@
+{
+  "evaluationId": "b0153e76-5ec2-46ee-b3f3-31004824d8b0",
+  "datasetId": "40ec353f-0fca-44b7-953d-5cea61a93e6b",
+  "sourceHash": "316b88acd79c32696d33926eb685e42df1a12a0569c75d3948fc517d1b423798",
+  "status": "retired",
+  "summary": {
+    "skills": {
+      "assigned": 100,
+      "completed": 36,
+      "remaining": 64,
+      "solved": 30,
+      "requests": 5696,
+      "turns": 5891,
+      "inputTokens": 10974662,
+      "cost": 0.46093580400000017,
+      "activeMs": 2773617,
+      "recoveryDecisions": 41,
+      "requestLatencyMs": {
+        "p50": 293.236951999992,
+        "p95": 756.6982669999998
+      },
+      "failures": [
+        {
+          "caseId": "1a9889b5-98af-4223-9a26-d80adbafa90a",
+          "stage": "top-orientation",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "a641fffe-cdaf-4ee2-83fd-98ffe108525a",
+          "stage": "cross",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "e403c431-9706-4062-bd95-73b5a6d15db1",
+          "stage": "cross",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "77377258-e2d3-4580-b1f7-a34bc2a433f1",
+          "stage": "cross",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "9523e6b6-bcf1-40c1-9aca-9cf86cb94649",
+          "stage": "middle-layer",
+          "reason": "Policy abstained: selected completed target"
+        },
+        {
+          "caseId": "3e863364-86a0-4b3d-be65-e942610e9c6c",
+          "stage": "top-orientation",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        }
+      ]
+    }
+  },
+  "accepted": false,
+  "policyFrozen": false,
+  "next": "v25 retired after six failures. v26 fixes operation descriptions and decomposes middle-edge intention; fresh validation required."
+}

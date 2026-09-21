@@ -106,6 +106,9 @@ function Lab() {
           J<span>▧</span>V <b>/</b> CUBE LAB
         </a>
         <div className="header-meta">
+          <a href="/how-it-works" style={{ color: '#cbed9b', textDecoration: 'none' }}>
+            How it works ↗
+          </a>
           <span className="dot" /> JEV 1.13.0 <span className="pill">EXPERIMENT 001</span>
         </div>
       </header>
@@ -125,7 +128,7 @@ function Lab() {
         <div className="budget">
           <small>ESTIMATED API USAGE</small>
           <strong>
-            {budget ? `$${budget.usage.toFixed(4)}` : '—'} <span>/ $5</span>
+            {budget ? `$${budget.usage.toFixed(4)}` : 'Not set'} <span>/ $5</span>
           </strong>
           <div className="meter">
             <i style={{ width: `${Math.max(1, ((budget?.reservedAndSpent || 0) / 5) * 100)}%` }} />
@@ -216,11 +219,17 @@ function Lab() {
               <small>ACTIVE TIME</small>
             </div>
             <div>
-              <strong>{run?.target || '—'}</strong>
+              <strong>{run?.target || 'Not set'}</strong>
               <small>TARGET</small>
             </div>
           </div>
           {run?.reason && <p className="run-reason">{run.reason}</p>}
+          {run?.split === 'article-manual' && (
+            <p className="note">
+              This is a manual teaching session.{' '}
+              <a href="/how-it-works">Continue in How it works ↗</a>
+            </p>
+          )}
           <div className="controls">
             <button
               className="primary"

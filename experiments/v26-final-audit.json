@@ -1,0 +1,19 @@
+{
+  "evaluation": "6f780b2b-6782-42c5-a5c1-77b04902e94e",
+  "checkedAt": "2026-09-20T22:17:28.443Z",
+  "uniqueInitialStates": 100,
+  "successes": 99,
+  "failures": 1,
+  "actions": 3617,
+  "requests": 16896,
+  "responses": 16895,
+  "checks": [
+    "Independent action-by-action replay and final state equality",
+    "No manual control events",
+    "Pinned model and body-only requests",
+    "No initial scramble string in model requests",
+    "Native responses present",
+    "Execution ceilings respected",
+    "Recorded face-turn counts match histories"
+  ]
+}

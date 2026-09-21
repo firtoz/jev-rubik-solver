@@ -73,3 +73,75 @@ export const stopAllRuns = createServerFn({ method: 'POST' }).handler(async () =
   }
   return { stopped: new Set(ids).size };
 });
+
+export const articleCreate = createServerFn({ method: 'POST' })
+  .validator(z.object({ scramble: z.string().max(1000) }))
+  .handler(async ({ data }) =>
+    JSON.stringify(await (await import('./tutorial')).createSession(data.scramble)),
+  );
+export const articleRead = createServerFn({ method: 'GET' })
+  .validator(z.object({ id: z.string().uuid() }))
+  .handler(async ({ data }) =>
+    JSON.stringify(await (await import('./tutorial')).viewSession(data.id)),
+  );
+export const articleAdvance = createServerFn({ method: 'POST' })
+  .validator(
+    z.object({
+      id: z.string().uuid(),
+      revision: z.number().int().min(0),
+      command: z.string().uuid(),
+      action: z.enum(['ask', 'apply']),
+    }),
+  )
+  .handler(async ({ data }) =>
+    JSON.stringify(
+      await (
+        await import('./tutorial')
+      ).advanceSession(data.id, data.revision, data.command, data.action),
+    ),
+  );
+export const articleEvidence = createServerFn({ method: 'GET' }).handler(async () => {
+  const { readFileSync, existsSync } = await import('node:fs');
+  const { getRun, events } = await import('./store');
+  const fresh = 'experiments/article-fresh-comparison.json';
+  const report = JSON.parse(
+    readFileSync(existsSync(fresh) ? fresh : 'experiments/v26-primitive-comparison.json', 'utf8'),
+  );
+  return JSON.stringify(
+    report.policies.map((policy: string) => {
+      const result = report.results.find(
+        (r: any) => r.policy === policy && r.caseId === report.cases[0].id,
+      );
+      const run = getRun(result.runId);
+      const saved = events(run.id);
+      const start = saved.find((e) => e.kind === 'step-start' || e.kind === 'request');
+      const origin = start ? Date.parse(start.createdAt) : 0;
+      return {
+        policy,
+        result,
+        scramble: run.scramble,
+        durationMs: Math.max(0, Date.parse(saved.at(-1)!.createdAt) - origin),
+        costs: saved
+          .filter((e) => e.kind === 'decision')
+          .map((e) => ({
+            ms: Math.max(0, Date.parse(e.createdAt) - origin),
+            cost: e.payload.cost as number,
+          })),
+        timeline: saved
+          .filter((e) => e.kind === 'action')
+          .map((e) => ({
+            alg: e.payload.alg as string,
+            ms: Math.max(0, Date.parse(e.createdAt) - origin),
+          })),
+        actions: saved.filter((e) => e.kind === 'action').map((e) => e.payload.alg),
+        firstRequest: events(run.id).find(
+          (e) =>
+            e.kind === 'request' &&
+            (policy === 'primitive'
+              ? e.payload.request.questions.turn
+              : e.payload.request.questions.goal),
+        )?.payload.request,
+      };
+    }),
+  );
+});

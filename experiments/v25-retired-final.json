@@ -1,0 +1,1574 @@
+{
+  "id": "b0153e76-5ec2-46ee-b3f3-31004824d8b0",
+  "name": "Frozen held-out skill evaluation",
+  "split": "final-test",
+  "datasetId": "40ec353f-0fca-44b7-953d-5cea61a93e6b",
+  "cases": [
+    {
+      "id": "1a9889b5-98af-4223-9a26-d80adbafa90a",
+      "scramble": "B' L' U2 L D' R' F D L2 U L2 D R2 D B2 U2 F U' R'",
+      "stateHash": "[{\"pieces\":[4,6,3,2,10,0,7,9,5,8,1,11],\"orientation\":[0,1,0,1,0,1,0,1,0,1,1,0]},{\"pieces\":[7,6,4,3,5,0,1,2],\"orientation\":[0,2,2,1,2,0,0,2]}]"
+    },
+    {
+      "id": "fd05c98d-d7c6-4d35-8767-bfdef3503d9b",
+      "scramble": "R' U L2 D' L2 F2 D' F2 R2 D R2 B2 U2 L' F' L2 D L2 R' F D2",
+      "stateHash": "[{\"pieces\":[2,11,6,3,0,5,4,10,1,9,7,8],\"orientation\":[0,0,0,0,0,0,1,1,0,1,1,0]},{\"pieces\":[0,5,6,7,2,3,1,4],\"orientation\":[2,2,2,2,1,1,0,2]}]"
+    },
+    {
+      "id": "a7e782d5-0a7a-48ed-8fd0-ed44697a6e29",
+      "scramble": "L2 D L F' L' U2 L B R' U' L' F2 R' U2 D2 B2 L' B2 L' D2 F2",
+      "stateHash": "[{\"pieces\":[9,1,7,11,5,10,6,8,3,2,4,0],\"orientation\":[0,0,1,0,1,1,1,0,1,0,0,1]},{\"pieces\":[6,2,1,4,0,5,3,7],\"orientation\":[0,0,2,1,2,0,1,0]}]"
+    },
+    {
+      "id": "94bb7572-a535-47cf-8c3e-f4b87beb9fdd",
+      "scramble": "U' L' B' R D2 F' L' R2 F2 D' L2 B2 U' R2 L2 B2 R2 U L' F2 R",
+      "stateHash": "[{\"pieces\":[8,6,3,10,7,0,11,1,4,9,2,5],\"orientation\":[0,1,1,0,1,0,0,1,0,0,1,1]},{\"pieces\":[3,7,4,1,5,0,2,6],\"orientation\":[1,0,2,0,1,1,0,1]}]"
+    },
+    {
+      "id": "a641fffe-cdaf-4ee2-83fd-98ffe108525a",
+      "scramble": "D' B' L' F L U2 B D R F2 D2 F2 U F2 D' F2 R2 B2 R2 F2 U",
+      "stateHash": "[{\"pieces\":[2,10,6,5,7,11,1,0,9,4,3,8],\"orientation\":[0,0,0,1,0,1,0,1,0,0,0,1]},{\"pieces\":[3,1,5,4,6,7,0,2],\"orientation\":[1,2,2,1,1,0,0,2]}]"
+    },
+    {
+      "id": "472f78df-8a36-4d0e-afef-8bbae3489257",
+      "scramble": "L D R B L' B' U D2 F L2 U2 R2 U2 B' R2 B2 U2 L' F2 U'",
+      "stateHash": "[{\"pieces\":[7,4,2,6,8,11,5,1,0,3,9,10],\"orientation\":[0,1,1,1,0,1,0,0,0,1,1,0]},{\"pieces\":[6,4,2,7,5,3,0,1],\"orientation\":[2,0,1,2,0,2,0,2]}]"
+    },
+    {
+      "id": "8bfe8679-1405-47b6-8638-dcbb19cd4465",
+      "scramble": "D' L2 D L2 F2 D F2 U2 F2 L2 F2 R D L' F' R2 U2 L2 B2 U",
+      "stateHash": "[{\"pieces\":[9,10,8,4,5,11,0,3,7,6,2,1],\"orientation\":[0,0,0,0,1,0,1,0,0,0,1,1]},{\"pieces\":[0,4,3,1,5,6,7,2],\"orientation\":[0,1,1,2,1,1,1,2]}]"
+    },
+    {
+      "id": "0b31ab2f-93c9-4b88-bd9b-f7c834f5fb97",
+      "scramble": "L2 U2 B D2 L2 D2 L2 F' D2 L D' U' L2 B' D' F2 L' F",
+      "stateHash": "[{\"pieces\":[5,8,3,4,1,6,10,2,11,0,7,9],\"orientation\":[1,1,1,1,1,0,1,0,0,0,1,1]},{\"pieces\":[2,4,1,7,0,5,3,6],\"orientation\":[0,2,1,0,2,2,1,1]}]"
+    },
+    {
+      "id": "38d93004-d5f8-4b22-beb8-42a8f0cbd45d",
+      "scramble": "B2 R' B2 F2 L' U2 F2 L U2 B2 L U2 F' R' B2 D' R F U' B R2",
+      "stateHash": "[{\"pieces\":[3,9,5,0,4,6,8,1,11,2,7,10],\"orientation\":[0,0,1,0,1,0,1,1,1,0,0,1]},{\"pieces\":[0,4,5,6,3,2,7,1],\"orientation\":[0,0,1,0,1,0,0,1]}]"
+    },
+    {
+      "id": "5fe91fe8-8a99-4ff1-93f1-f12986e5ca73",
+      "scramble": "B D B U' D2 B' L F' B' U2 R U2 R' D2 L2 D2 F2 R L2 F2 L2",
+      "stateHash": "[{\"pieces\":[8,5,4,11,6,10,1,9,3,0,7,2],\"orientation\":[1,1,1,1,1,0,0,0,1,0,1,1]},{\"pieces\":[4,5,1,6,0,2,7,3],\"orientation\":[2,1,1,2,0,1,1,1]}]"
+    },
+    {
+      "id": "61649a09-88df-440a-bffe-fdef565414a8",
+      "scramble": "U' F2 R D2 R' U2 B2 L' B2 D2 L' D2 F2 D' F2 R B' U L F R",
+      "stateHash": "[{\"pieces\":[11,9,10,7,3,4,2,5,0,6,8,1],\"orientation\":[1,1,0,1,1,1,1,0,0,1,1,0]},{\"pieces\":[0,2,6,5,3,7,4,1],\"orientation\":[2,2,0,1,1,0,0,0]}]"
+    },
+    {
+      "id": "d84188ca-f8fe-44bf-bf11-5e34bed33109",
+      "scramble": "D F' L' U' R U L2 U B R2 U2 D2 R2 B L2 F' D2 B2 D2 U",
+      "stateHash": "[{\"pieces\":[0,1,2,4,5,7,11,10,6,8,3,9],\"orientation\":[1,0,0,1,0,1,0,0,0,1,0,0]},{\"pieces\":[2,6,0,3,7,1,4,5],\"orientation\":[0,2,0,1,2,0,1,0]}]"
+    },
+    {
+      "id": "8a6c1129-340a-49da-9b8c-d88fe433a37d",
+      "scramble": "F' R2 F2 U2 L2 D2 F2 U2 R B2 D2 R F2 D R B U' B D' F",
+      "stateHash": "[{\"pieces\":[1,6,10,5,9,8,2,4,3,11,7,0],\"orientation\":[1,0,0,1,0,1,0,1,1,1,0,0]},{\"pieces\":[4,0,7,1,2,5,3,6],\"orientation\":[1,1,0,0,0,2,2,0]}]"
+    },
+    {
+      "id": "97fdf54e-b6aa-43d8-9497-3413b6827409",
+      "scramble": "F2 L2 F2 U F2 D' L' F2 R2 L2 D2 L2 B' R2 B U2 B2 D2 B L F'",
+      "stateHash": "[{\"pieces\":[7,2,0,4,11,8,1,9,5,10,3,6],\"orientation\":[0,0,1,1,1,0,1,0,1,0,1,0]},{\"pieces\":[0,5,6,7,4,3,2,1],\"orientation\":[1,2,0,0,0,1,0,2]}]"
+    },
+    {
+      "id": "774c241d-aa22-4afd-8d0a-c88e1696f733",
+      "scramble": "U2 B2 D R' U' F' B2 D B' R2 D2 R2 B2 U2 F2 U2 F D2 F L2",
+      "stateHash": "[{\"pieces\":[0,11,10,9,3,2,1,6,7,5,8,4],\"orientation\":[0,0,1,1,1,0,0,0,1,1,1,0]},{\"pieces\":[0,7,3,6,1,2,4,5],\"orientation\":[1,1,2,1,2,2,1,2]}]"
+    },
+    {
+      "id": "4e597199-56a2-4a71-bf16-b679a9e7f83d",
+      "scramble": "L' F L2 F' U2 B2 L2 B D2 F L2 D2 U' R' U' B F D' R2",
+      "stateHash": "[{\"pieces\":[6,7,9,11,2,5,1,10,8,3,4,0],\"orientation\":[0,1,1,0,1,0,0,0,0,0,1,0]},{\"pieces\":[6,4,5,7,1,2,3,0],\"orientation\":[2,1,2,2,1,1,0,0]}]"
+    },
+    {
+      "id": "54874d67-6a78-433e-bf7a-2f913c8ee49d",
+      "scramble": "U F L U R' B' D R2 B L2 D2 B2 D2 F R2 D2 B R F2 R2",
+      "stateHash": "[{\"pieces\":[6,11,2,5,7,0,1,8,10,9,3,4],\"orientation\":[0,1,0,1,1,0,1,1,0,1,0,0]},{\"pieces\":[6,1,2,3,7,0,5,4],\"orientation\":[2,2,1,2,1,0,1,0]}]"
+    },
+    {
+      "id": "77377258-e2d3-4580-b1f7-a34bc2a433f1",
+      "scramble": "R' F L U' R2 B L2 U2 L' B2 R2 D' R2 D' R2 U F2 D' L2 U2 B",
+      "stateHash": "[{\"pieces\":[10,3,5,7,11,1,8,0,2,6,4,9],\"orientation\":[1,0,1,1,0,1,1,0,0,1,0,0]},{\"pieces\":[6,4,2,0,7,1,3,5],\"orientation\":[1,2,0,1,0,0,0,2]}]"
+    },
+    {
+      "id": "5c5b077a-5b32-432e-be5b-61a84ae48ffb",
+      "scramble": "L' U B2 U R' F R2 B' L' U F2 L2 D B2 R2 L2 U' B2 L2 U",
+      "stateHash": "[{\"pieces\":[6,4,9,2,7,10,8,3,5,11,1,0],\"orientation\":[1,1,1,0,1,1,0,0,0,0,0,1]},{\"pieces\":[3,4,0,6,7,1,5,2],\"orientation\":[1,2,2,0,2,2,2,1]}]"
+    },
+    {
+      "id": "e403c431-9706-4062-bd95-73b5a6d15db1",
+      "scramble": "F2 L2 R B2 D2 B2 U2 F2 L' D2 U2 R2 U B' D2 U' F' L' R F2 U",
+      "stateHash": "[{\"pieces\":[11,2,4,10,1,7,6,0,5,3,8,9],\"orientation\":[0,0,1,1,1,1,0,1,0,0,0,1]},{\"pieces\":[5,4,1,2,7,0,6,3],\"orientation\":[1,0,0,0,1,2,0,2]}]"
+    },
+    {
+      "id": "e297512d-ce37-4f46-b055-d8aa0e68b830",
+      "scramble": "R' F' R U' D' B L D' F' R L D2 R' F2 L' F2 B2 R' B2 D2 U",
+      "stateHash": "[{\"pieces\":[9,10,6,8,2,5,0,7,1,4,3,11],\"orientation\":[1,1,1,1,1,0,1,1,1,0,1,1]},{\"pieces\":[1,3,0,2,7,5,4,6],\"orientation\":[0,0,2,1,2,1,2,1]}]"
+    },
+    {
+      "id": "ce73c3b9-6912-4b80-8f27-58af9b78df7f",
+      "scramble": "B' D' R F' L' F' D' L2 F U2 D2 F2 U R2 U2 L2 B2 R2 U' B2",
+      "stateHash": "[{\"pieces\":[7,8,4,9,11,6,3,0,5,10,2,1],\"orientation\":[0,0,1,1,1,1,1,1,1,1,0,0]},{\"pieces\":[4,6,7,1,0,2,5,3],\"orientation\":[2,2,0,0,1,2,1,1]}]"
+    },
+    {
+      "id": "24db0656-6f9f-4f68-9513-ed4b67f0689c",
+      "scramble": "B R F' D B2 L' B U2 R2 B2 D2 R2 F2 R2 U L2 U2 F2 B' L2",
+      "stateHash": "[{\"pieces\":[2,0,6,5,8,1,11,3,4,7,9,10],\"orientation\":[0,1,1,1,0,0,0,1,1,1,0,0]},{\"pieces\":[4,1,0,6,7,5,3,2],\"orientation\":[2,2,0,2,2,2,1,1]}]"
+    },
+    {
+      "id": "d9223a1a-f648-48e5-b39a-60ddfb3c453e",
+      "scramble": "B2 D2 U F2 D B2 L2 B2 D2 F2 D' L2 B' R' D' B2 U2 R2 B2 L B'",
+      "stateHash": "[{\"pieces\":[4,8,0,6,11,2,5,10,1,3,9,7],\"orientation\":[0,1,1,0,0,0,1,0,1,1,0,1]},{\"pieces\":[5,0,4,6,2,3,7,1],\"orientation\":[1,0,0,0,0,2,0,0]}]"
+    },
+    {
+      "id": "9c382c7b-cd4f-4f85-9832-7fc159fd3271",
+      "scramble": "B D' L B2 D' R B2 D' L U2 B' L2 B D2 F U2 F2 L2 U2 B2",
+      "stateHash": "[{\"pieces\":[5,7,4,3,0,8,10,1,2,11,9,6],\"orientation\":[0,0,0,0,0,0,0,0,1,1,1,1]},{\"pieces\":[5,6,7,3,4,0,2,1],\"orientation\":[1,2,2,2,1,1,2,1]}]"
+    },
+    {
+      "id": "684b405d-51fe-49f3-944a-6a64dda1eb0a",
+      "scramble": "D B D B D' F' B' R F2 R2 B2 U D F2 D B2 L2 B2 U2 B2",
+      "stateHash": "[{\"pieces\":[3,7,8,4,10,5,6,9,2,11,0,1],\"orientation\":[0,1,1,0,1,1,0,1,0,0,1,0]},{\"pieces\":[5,7,2,6,1,4,3,0],\"orientation\":[1,1,0,1,2,1,1,2]}]"
+    },
+    {
+      "id": "ca1f8df5-4061-4045-a28a-c62b275f6e80",
+      "scramble": "R' F' U2 L' F2 R2 B D R' F2 U2 D2 L F2 B2 R F2 U2 D2 B",
+      "stateHash": "[{\"pieces\":[9,1,0,6,11,8,2,5,4,10,3,7],\"orientation\":[1,0,0,1,0,0,1,0,1,1,1,0]},{\"pieces\":[6,7,5,1,4,2,3,0],\"orientation\":[0,1,0,2,0,2,2,2]}]"
+    },
+    {
+      "id": "63ba8654-888a-4307-8c61-0ccde5f69969",
+      "scramble": "R' L' F B U' L' B' R' F' U2 D F2 R2 F2 R2 D R2 F2 D' R2 U2",
+      "stateHash": "[{\"pieces\":[7,10,6,11,4,2,0,5,9,1,8,3],\"orientation\":[0,1,0,1,1,1,1,0,1,0,0,0]},{\"pieces\":[6,0,4,2,3,7,5,1],\"orientation\":[0,1,0,1,2,1,1,0]}]"
+    },
+    {
+      "id": "053974eb-8814-4d8e-b36b-65adf928fbad",
+      "scramble": "F2 L2 U2 L' R2 F2 L2 D2 F2 U2 R2 F2 U B D L2 F U F L2",
+      "stateHash": "[{\"pieces\":[7,1,10,0,11,4,8,5,6,9,2,3],\"orientation\":[0,1,1,0,0,0,0,0,1,0,1,0]},{\"pieces\":[2,6,5,4,7,0,1,3],\"orientation\":[1,2,1,2,1,0,2,0]}]"
+    },
+    {
+      "id": "d22eab4e-5808-486b-a9af-e3cc8fce71e1",
+      "scramble": "B2 U' L2 U B2 U2 L2 D' B2 L2 U L F U' F' R U B' U2 L'",
+      "stateHash": "[{\"pieces\":[6,3,8,11,5,10,2,0,7,9,4,1],\"orientation\":[1,0,0,1,0,0,0,1,0,0,1,0]},{\"pieces\":[7,1,2,5,6,3,0,4],\"orientation\":[2,2,1,1,1,2,2,1]}]"
+    },
+    {
+      "id": "2e26dc59-2645-4ca6-a47a-a8075719911b",
+      "scramble": "U' F' L2 D2 F' U2 F D2 L2 R2 F L2 B2 L U' R2 D B D2 L' B",
+      "stateHash": "[{\"pieces\":[1,7,3,0,2,4,6,5,9,10,11,8],\"orientation\":[1,0,0,0,1,0,1,1,0,1,1,0]},{\"pieces\":[4,1,2,0,3,6,5,7],\"orientation\":[1,0,1,1,1,1,2,2]}]"
+    },
+    {
+      "id": "8ff6b7cb-bfda-475c-8839-3fde79352323",
+      "scramble": "D' F2 R F' B' D2 B' D U2 R2 F' R2 F' R2 B R2 F2 U2 D2 F' L'",
+      "stateHash": "[{\"pieces\":[11,9,7,5,4,2,0,6,8,1,10,3],\"orientation\":[1,0,0,1,0,0,0,0,0,1,1,0]},{\"pieces\":[6,4,5,7,3,0,1,2],\"orientation\":[2,2,2,1,1,1,2,1]}]"
+    },
+    {
+      "id": "fad02bc1-eefb-4537-848f-feed6b35a4f6",
+      "scramble": "F' D' R2 B2 U D' F R' L' B' D2 F2 R2 L2 D R2 U2 R2 U' F2 R2",
+      "stateHash": "[{\"pieces\":[1,6,4,2,0,8,11,10,5,3,9,7],\"orientation\":[1,1,1,1,0,0,0,1,0,1,0,0]},{\"pieces\":[4,1,2,6,5,0,7,3],\"orientation\":[0,0,2,2,1,1,2,1]}]"
+    },
+    {
+      "id": "9523e6b6-bcf1-40c1-9aca-9cf86cb94649",
+      "scramble": "U D L D F' U2 D L' F' D' L2 D2 R2 B2 U' R2 F2 D' F2 R2 F",
+      "stateHash": "[{\"pieces\":[2,8,1,0,10,11,7,4,9,6,3,5],\"orientation\":[1,1,1,1,1,0,0,1,1,1,1,1]},{\"pieces\":[4,2,6,0,7,1,5,3],\"orientation\":[0,2,0,0,0,0,1,0]}]"
+    },
+    {
+      "id": "3e863364-86a0-4b3d-be65-e942610e9c6c",
+      "scramble": "L' F2 R2 U' R2 U2 L' F D' R2 F2 R2 L2 U B2 U2 L2 U R2 U' L",
+      "stateHash": "[{\"pieces\":[3,4,6,1,11,2,7,0,10,8,5,9],\"orientation\":[0,0,0,0,1,0,1,1,0,0,1,0]},{\"pieces\":[5,7,3,4,1,6,2,0],\"orientation\":[0,1,1,1,2,2,0,2]}]"
+    },
+    {
+      "id": "e76699f8-a651-4846-a96a-286a46a54d52",
+      "scramble": "F B' U2 L U D L2 B2 R F L2 B' D2 R2 D2 F L2 D2 B L2 F2",
+      "stateHash": "[{\"pieces\":[9,10,3,1,2,11,8,0,4,7,5,6],\"orientation\":[0,1,0,0,0,1,0,1,0,0,1,0]},{\"pieces\":[6,3,5,1,2,7,4,0],\"orientation\":[0,1,1,1,2,2,0,2]}]"
+    },
+    {
+      "id": "80113baa-43e6-41be-bfc2-42c992772b04",
+      "scramble": "B' R2 U' L U2 R2 F' D2 B L' D2 R' L2 B2 D2 L' B2 D2 L' F2 L2",
+      "stateHash": "[{\"pieces\":[10,11,7,6,8,3,2,4,5,0,9,1],\"orientation\":[1,1,1,1,1,1,0,1,1,0,0,0]},{\"pieces\":[3,2,1,0,5,6,7,4],\"orientation\":[1,1,0,2,1,0,2,2]}]"
+    },
+    {
+      "id": "cf7c25d3-f2a4-44ae-b9ea-15dfc6661f6a",
+      "scramble": "F' R F2 D R2 B' D2 L U2 D F2 U2 R2 F2 U' L2 F2 L2 B' D",
+      "stateHash": "[{\"pieces\":[9,11,1,5,7,10,8,3,4,2,0,6],\"orientation\":[1,1,1,0,0,1,1,1,1,1,1,1]},{\"pieces\":[2,7,1,5,3,0,4,6],\"orientation\":[2,2,2,0,0,1,2,0]}]"
+    },
+    {
+      "id": "56108237-547e-4325-8084-d59ec3dc3ceb",
+      "scramble": "F B D' L' F2 U2 B R' U2 L2 B2 U2 D2 L F2 U2 B2 L2 U F' D'",
+      "stateHash": "[{\"pieces\":[1,9,5,6,7,10,2,0,3,11,8,4],\"orientation\":[1,1,1,0,1,1,1,0,0,0,1,1]},{\"pieces\":[6,0,7,3,1,2,5,4],\"orientation\":[1,2,2,1,0,2,2,2]}]"
+    },
+    {
+      "id": "4632a3e9-7d8e-4ad7-a8c6-9fac20bb0aff",
+      "scramble": "B' L' U D2 B2 L' F' D B2 U' F2 B2 R2 U2 B2 U' F2 D2 B2 R F2",
+      "stateHash": "[{\"pieces\":[2,10,5,11,7,1,6,8,3,9,4,0],\"orientation\":[1,0,1,1,0,1,1,1,0,0,0,0]},{\"pieces\":[5,2,3,6,4,1,0,7],\"orientation\":[1,2,0,1,0,2,2,1]}]"
+    },
+    {
+      "id": "19f84bc2-8b85-4778-80d8-86396f00408d",
+      "scramble": "U' L' B2 D F U R D R F2 B2 D' F2 U' R2 F2 U B2 D L2",
+      "stateHash": "[{\"pieces\":[9,4,5,2,0,7,6,1,11,8,3,10],\"orientation\":[0,0,0,0,0,1,0,0,1,1,1,0]},{\"pieces\":[4,6,7,5,3,0,2,1],\"orientation\":[2,2,2,2,2,2,2,1]}]"
+    },
+    {
+      "id": "396ffda4-7c1d-484d-abf2-f6c14793c8dc",
+      "scramble": "D L2 U' B' R2 B2 U' R D F' B2 R2 U B2 R2 B2 L2 U' F2 U2 D",
+      "stateHash": "[{\"pieces\":[1,10,11,7,0,9,5,4,8,6,3,2],\"orientation\":[1,1,1,0,1,1,1,0,0,0,1,1]},{\"pieces\":[3,6,5,1,0,4,2,7],\"orientation\":[2,1,2,0,0,2,1,1]}]"
+    },
+    {
+      "id": "2cc159b6-55b6-47ed-bb90-ee23ff07d8c2",
+      "scramble": "F L' U D' F2 B R L' F D2 L' D2 F2 L U2 R B2 R2 F2 U2 F2",
+      "stateHash": "[{\"pieces\":[10,7,8,2,3,11,6,5,4,1,9,0],\"orientation\":[1,0,0,0,1,1,1,1,0,1,1,1]},{\"pieces\":[6,1,7,0,3,4,5,2],\"orientation\":[2,0,2,0,2,1,0,2]}]"
+    },
+    {
+      "id": "75ddb114-3a5e-4dd1-bb80-0048d106e646",
+      "scramble": "F2 L U' R F D2 B' L2 D2 R2 B2 R2 F2 B2 U' R2 D2 L2 B2 L' D",
+      "stateHash": "[{\"pieces\":[10,2,3,1,5,6,8,9,11,7,0,4],\"orientation\":[0,0,1,1,0,0,0,0,1,1,1,1]},{\"pieces\":[6,3,2,4,7,5,0,1],\"orientation\":[0,2,2,2,0,0,1,2]}]"
+    },
+    {
+      "id": "45830ace-da80-46ab-9fdd-6786815063c5",
+      "scramble": "D2 R F R L' D' R2 D2 R' B U L2 U2 R2 B2 U' R2 U' F2 U' D'",
+      "stateHash": "[{\"pieces\":[8,11,7,0,6,10,9,3,2,5,1,4],\"orientation\":[0,0,0,1,1,0,1,1,1,0,1,0]},{\"pieces\":[3,5,4,7,1,0,6,2],\"orientation\":[0,0,0,0,2,2,0,2]}]"
+    },
+    {
+      "id": "baeeee9a-c6c3-48a3-b742-37a55c8e15de",
+      "scramble": "D' R L2 D' F2 D R2 D' R2 U B2 D' B2 U L B2 R B' F2 D B2",
+      "stateHash": "[{\"pieces\":[0,11,8,9,6,2,1,5,7,4,10,3],\"orientation\":[0,0,0,0,0,0,1,1,0,0,1,1]},{\"pieces\":[6,0,3,2,1,7,5,4],\"orientation\":[0,0,1,0,1,1,2,1]}]"
+    },
+    {
+      "id": "bad6981c-7b5f-4cae-b0d1-4450257bdd76",
+      "scramble": "U R2 D' L2 B2 D F2 L2 U2 R2 U' R2 B U' L2 R U L U' R'",
+      "stateHash": "[{\"pieces\":[8,5,3,4,1,7,10,2,11,0,6,9],\"orientation\":[0,0,0,0,0,0,1,1,0,0,1,1]},{\"pieces\":[4,7,6,2,5,1,0,3],\"orientation\":[0,0,0,0,1,1,0,1]}]"
+    },
+    {
+      "id": "7ed98e5e-843f-4b6e-bb2d-c61989560d89",
+      "scramble": "F U R' U2 R2 U' F B2 U L2 D' L2 F2 U2 D L2 F2 U R2 L' D",
+      "stateHash": "[{\"pieces\":[5,3,4,8,10,1,9,0,11,6,2,7],\"orientation\":[1,0,0,0,1,0,1,1,0,0,0,0]},{\"pieces\":[4,2,3,7,5,6,1,0],\"orientation\":[0,0,1,1,1,1,1,1]}]"
+    },
+    {
+      "id": "bc1c4cc1-41f1-498e-9531-043bf433eaa8",
+      "scramble": "D F2 L2 D' F' U' R B2 L2 U2 F U2 F D2 F L2 B' L2 U2 L B2",
+      "stateHash": "[{\"pieces\":[1,0,8,7,6,2,5,3,11,4,10,9],\"orientation\":[0,0,1,1,0,0,1,1,0,1,0,1]},{\"pieces\":[2,1,4,5,6,0,7,3],\"orientation\":[1,1,0,0,0,2,0,2]}]"
+    },
+    {
+      "id": "77590c2d-3ceb-4cd7-8c03-6b8b93c42199",
+      "scramble": "F2 L' B' L' U L' B2 L' B U2 R2 B2 U2 D' B2 D2 F2 B2 R2",
+      "stateHash": "[{\"pieces\":[4,0,6,5,11,3,2,1,10,7,8,9],\"orientation\":[1,0,1,0,1,1,1,0,0,1,0,0]},{\"pieces\":[3,7,2,5,4,6,0,1],\"orientation\":[0,0,0,1,1,2,2,0]}]"
+    },
+    {
+      "id": "e2f00dc5-e888-4bc5-87b7-5a8941ef2a2d",
+      "scramble": "D2 R' B L' U2 L2 D F R2 F' R2 F' R2 B R2 U2 B R2 F2 U'",
+      "stateHash": "[{\"pieces\":[9,3,6,1,10,2,0,11,4,5,8,7],\"orientation\":[0,1,0,1,0,1,0,1,1,0,1,0]},{\"pieces\":[7,0,3,5,1,2,4,6],\"orientation\":[1,1,1,1,2,1,1,1]}]"
+    },
+    {
+      "id": "cc462a32-bdc6-4c85-8efb-9bc401809856",
+      "scramble": "U L2 U F' D R F2 L D B' L2 B D2 B' R2 F R2 B' U2 R2 U2",
+      "stateHash": "[{\"pieces\":[10,4,11,9,7,5,0,8,6,1,2,3],\"orientation\":[0,1,1,0,0,0,0,1,0,0,1,0]},{\"pieces\":[0,3,4,1,6,7,2,5],\"orientation\":[0,2,0,0,1,2,1,0]}]"
+    },
+    {
+      "id": "15312cce-ff8a-4adf-972e-298c47bcd7dc",
+      "scramble": "R2 F2 R2 F' R2 D2 B' D2 F2 R2 F' U' B2 R B' D' F' L' R'",
+      "stateHash": "[{\"pieces\":[5,6,4,3,0,10,7,1,8,9,2,11],\"orientation\":[1,1,0,1,0,1,0,1,0,1,1,1]},{\"pieces\":[7,6,5,3,4,1,2,0],\"orientation\":[1,2,2,0,1,0,2,1]}]"
+    },
+    {
+      "id": "f3a94d9d-bb30-4605-a220-41189ecee292",
+      "scramble": "U' R2 F2 D' L U' B' D' F R F2 L' D2 F2 L F2 L2 F2 D2 R B2",
+      "stateHash": "[{\"pieces\":[10,5,9,6,2,4,3,7,1,8,0,11],\"orientation\":[0,1,1,1,1,0,1,1,0,1,0,1]},{\"pieces\":[1,5,7,6,2,0,3,4],\"orientation\":[2,0,0,0,0,1,2,1]}]"
+    },
+    {
+      "id": "0c5277cd-6d1a-4be6-8737-82ecb1fe702f",
+      "scramble": "U2 B2 D L2 R2 U R2 B2 F2 U' B2 F' L' D' U2 R U R B' F2",
+      "stateHash": "[{\"pieces\":[6,3,5,0,4,2,10,8,1,11,7,9],\"orientation\":[0,0,1,0,1,1,0,1,0,0,1,1]},{\"pieces\":[2,6,7,5,1,0,4,3],\"orientation\":[2,2,0,2,2,1,2,1]}]"
+    },
+    {
+      "id": "c6d4245c-17f6-4b3e-a621-09dd6bee7575",
+      "scramble": "U' L F L2 F U' F' D' R F2 L2 F2 D2 L2 B2 U R2 U' R2 D' L2",
+      "stateHash": "[{\"pieces\":[2,5,1,11,3,0,8,10,4,7,9,6],\"orientation\":[1,0,0,0,1,0,1,0,1,1,1,0]},{\"pieces\":[6,3,5,7,0,2,4,1],\"orientation\":[0,2,1,2,0,2,2,0]}]"
+    },
+    {
+      "id": "cd09a161-7202-44e7-bfca-851891d213e9",
+      "scramble": "B2 D L U2 R2 D B2 R2 U L2 D L2 R2 F2 L F' D' R2 D2 B L'",
+      "stateHash": "[{\"pieces\":[3,4,7,6,11,0,5,1,2,9,10,8],\"orientation\":[1,0,0,1,0,1,1,1,0,0,1,0]},{\"pieces\":[2,7,1,4,0,5,3,6],\"orientation\":[0,1,2,2,2,0,1,1]}]"
+    },
+    {
+      "id": "e04cfd26-a32b-4f2d-a3cd-9e7791f0d753",
+      "scramble": "R B2 F2 R' U2 L B2 R' D2 B2 L2 F U R F2 L2 B F2 L' F'",
+      "stateHash": "[{\"pieces\":[11,6,0,4,9,10,5,8,3,7,2,1],\"orientation\":[1,1,1,1,0,0,1,1,0,1,1,0]},{\"pieces\":[6,5,0,2,4,7,1,3],\"orientation\":[1,1,1,1,0,1,0,1]}]"
+    },
+    {
+      "id": "71f807e0-e3c1-4d6b-8140-1231f16ddca2",
+      "scramble": "R2 F' L2 D2 F' L2 F' R2 D2 F2 R2 F R' D2 F' U B L2 U L B",
+      "stateHash": "[{\"pieces\":[2,3,11,8,6,5,7,1,0,4,10,9],\"orientation\":[0,1,1,0,0,0,0,1,1,1,0,1]},{\"pieces\":[3,1,2,7,5,0,4,6],\"orientation\":[0,2,1,0,0,0,2,1]}]"
+    },
+    {
+      "id": "e09da0d1-3448-482a-8311-23650c31cb42",
+      "scramble": "U2 R F R' D B D R2 F U R2 B2 L2 U2 F2 L2 U' F2 L2 U B2",
+      "stateHash": "[{\"pieces\":[2,11,1,5,4,10,3,7,6,8,9,0],\"orientation\":[1,1,0,1,0,1,0,0,1,0,0,1]},{\"pieces\":[6,4,0,2,1,7,5,3],\"orientation\":[0,1,1,0,2,1,0,1]}]"
+    },
+    {
+      "id": "759140e3-3f06-4656-8cc6-9ee44ce39993",
+      "scramble": "R F2 D L2 F R2 F' B2 R F' U2 B2 L2 U2 R2 F U2 D2 L2 F2 R2",
+      "stateHash": "[{\"pieces\":[8,9,0,3,10,6,4,5,7,2,1,11],\"orientation\":[1,0,1,0,0,0,0,0,1,1,0,0]},{\"pieces\":[4,6,3,0,7,1,2,5],\"orientation\":[1,1,0,0,2,0,2,0]}]"
+    },
+    {
+      "id": "e4c6de21-df21-4637-9ee8-cc1d84ecc89b",
+      "scramble": "F' L' D F2 B' D' R' F' U' D2 R' F2 R' U2 L B2 L F2 B2 R2 F2",
+      "stateHash": "[{\"pieces\":[2,11,6,9,0,3,4,8,10,1,5,7],\"orientation\":[1,1,0,0,1,1,0,1,1,1,1,0]},{\"pieces\":[5,7,3,4,1,0,2,6],\"orientation\":[2,1,0,1,1,1,0,0]}]"
+    },
+    {
+      "id": "acdbe132-ffd9-48d1-a32f-614327bc4bee",
+      "scramble": "L' U D' R B2 U L F' B2 D2 L2 D' B2 U2 R2 F2 L2 U2 R",
+      "stateHash": "[{\"pieces\":[6,3,7,1,2,5,9,11,10,4,0,8],\"orientation\":[1,0,0,1,0,1,0,0,0,0,0,1]},{\"pieces\":[5,1,3,0,6,2,7,4],\"orientation\":[0,1,1,2,2,0,0,0]}]"
+    },
+    {
+      "id": "894ed8ad-c3b9-4938-85a8-bb53939c941e",
+      "scramble": "D2 L' F2 R D' B L' U2 F U2 B2 U L2 U F2 B2 R2 D2 B2 U2 B2",
+      "stateHash": "[{\"pieces\":[3,5,0,4,2,6,7,8,10,1,11,9],\"orientation\":[1,0,1,0,1,0,1,0,1,0,1,0]},{\"pieces\":[0,4,2,7,1,5,6,3],\"orientation\":[1,2,1,0,0,2,1,2]}]"
+    },
+    {
+      "id": "a33f88bb-6ee9-40a9-aab3-57f4fc0b8576",
+      "scramble": "B2 R2 F' R D' B D L D F' R2 L2 U2 L2 U2 F U2 R2 F2 R2 L2",
+      "stateHash": "[{\"pieces\":[7,2,11,9,5,4,8,6,1,10,3,0],\"orientation\":[0,0,1,1,1,1,0,1,0,1,0,0]},{\"pieces\":[6,5,2,7,3,4,0,1],\"orientation\":[2,0,2,2,0,0,0,0]}]"
+    },
+    {
+      "id": "b10d422e-c79c-486f-b6c2-86fd3d5f39f3",
+      "scramble": "U B2 L D' R2 D2 F B' R' D' F' D2 F R2 B' L2 D2 F D2 R2",
+      "stateHash": "[{\"pieces\":[9,6,5,8,1,11,4,10,7,3,0,2],\"orientation\":[0,1,0,1,1,1,1,0,0,0,0,1]},{\"pieces\":[4,3,0,5,6,7,1,2],\"orientation\":[2,2,1,2,0,0,2,0]}]"
+    },
+    {
+      "id": "b32d366e-f20b-40d2-a8dc-8b8064cdb3c8",
+      "scramble": "D2 R2 L' D2 L B L B2 D2 L2 F2 U' F2 D2 R2 B2 D L2 U L' D2",
+      "stateHash": "[{\"pieces\":[2,11,7,10,8,6,9,4,5,1,3,0],\"orientation\":[1,0,0,0,1,1,0,0,0,1,0,0]},{\"pieces\":[1,6,4,5,7,0,3,2],\"orientation\":[0,2,0,1,2,2,2,0]}]"
+    },
+    {
+      "id": "e8eb9167-5234-4530-a802-d99ee76754a8",
+      "scramble": "R2 B2 F2 U' L2 F2 D2 F2 U' R2 F2 L2 B' L U2 F2 L' B' R D L",
+      "stateHash": "[{\"pieces\":[7,1,6,9,5,11,0,10,2,8,3,4],\"orientation\":[0,0,1,0,0,1,1,0,0,0,1,0]},{\"pieces\":[1,4,7,6,5,0,3,2],\"orientation\":[1,0,2,0,0,1,1,1]}]"
+    },
+    {
+      "id": "710df814-7f73-480e-af4c-6d855d6628ca",
+      "scramble": "U' D2 R2 D2 F R' U' F U2 F U2 L2 F L2 F' R2 F' U2 F U' R'",
+      "stateHash": "[{\"pieces\":[3,8,1,5,7,10,6,0,4,11,9,2],\"orientation\":[1,1,0,1,1,0,0,0,0,0,1,1]},{\"pieces\":[3,1,5,2,0,4,6,7],\"orientation\":[1,2,0,0,1,1,2,2]}]"
+    },
+    {
+      "id": "78156f31-fbd3-461b-b581-5d15412d8611",
+      "scramble": "U2 R B' R' F2 D2 L' F D' F' U2 F2 U2 F' D2 F U2 L2 B' U2 L2",
+      "stateHash": "[{\"pieces\":[6,2,3,0,11,9,10,8,5,7,4,1],\"orientation\":[1,0,1,1,1,1,1,0,0,1,1,0]},{\"pieces\":[5,4,0,7,2,1,3,6],\"orientation\":[2,1,2,1,0,2,2,2]}]"
+    },
+    {
+      "id": "42e7363a-acc2-438f-b5f3-16e0169c84aa",
+      "scramble": "R' D' F2 D B2 D L2 D' R2 U B2 R2 B2 R' F' D2 B L' B R2 U2",
+      "stateHash": "[{\"pieces\":[5,0,10,7,3,9,8,2,11,1,4,6],\"orientation\":[1,1,1,0,0,0,1,1,0,0,1,0]},{\"pieces\":[4,3,0,6,5,1,7,2],\"orientation\":[0,0,2,0,2,0,0,2]}]"
+    },
+    {
+      "id": "a914f048-0f17-4a0b-8f94-b46b35d5b5f2",
+      "scramble": "D2 B' D2 B L2 F' L2 D2 L2 R2 F' R2 L D2 R U B' F' L2 D2 R'",
+      "stateHash": "[{\"pieces\":[8,9,3,7,1,11,5,4,2,0,6,10],\"orientation\":[1,1,1,0,1,0,1,1,0,1,0,1]},{\"pieces\":[6,0,2,4,1,3,7,5],\"orientation\":[0,1,1,1,2,0,2,2]}]"
+    },
+    {
+      "id": "0736613c-5d8f-420c-a1bc-fb3280206f33",
+      "scramble": "L U2 B2 L' D2 L U2 R2 F2 R2 U' B' L F2 R' F L2 U F'",
+      "stateHash": "[{\"pieces\":[6,5,7,8,9,2,3,4,0,1,10,11],\"orientation\":[0,1,0,1,1,0,1,1,0,0,0,1]},{\"pieces\":[5,6,2,4,3,7,1,0],\"orientation\":[2,0,1,0,2,0,2,2]}]"
+    },
+    {
+      "id": "91075e2c-8811-472b-b4cd-2f075ff7aa04",
+      "scramble": "R2 D2 B R' U2 F2 L' B' R' F2 D' R2 B2 R2 U' F2 D' R2 L2 U2",
+      "stateHash": "[{\"pieces\":[0,5,9,4,7,8,6,2,10,1,3,11],\"orientation\":[1,0,0,0,1,1,0,1,0,0,0,0]},{\"pieces\":[2,0,1,6,5,3,7,4],\"orientation\":[1,1,1,1,0,2,1,2]}]"
+    },
+    {
+      "id": "13a455d7-6024-483f-8225-9a9c3fc73422",
+      "scramble": "F2 U2 D2 F' R2 U R B2 L U' D2 R2 L2 F2 U R2 D R2 U2",
+      "stateHash": "[{\"pieces\":[6,1,2,4,0,7,10,8,5,11,3,9],\"orientation\":[1,0,1,0,0,0,0,1,0,0,0,1]},{\"pieces\":[4,3,2,0,6,7,1,5],\"orientation\":[2,0,2,2,2,2,2,0]}]"
+    },
+    {
+      "id": "b8e5e5df-6f0d-4932-aa33-9879bdfc9a5a",
+      "scramble": "D2 B' U D2 R' F' L' D' R U2 D2 F' L2 B R2 F' R2 B R2 B2 D",
+      "stateHash": "[{\"pieces\":[8,9,11,5,10,0,1,7,3,6,2,4],\"orientation\":[0,1,0,0,0,1,1,1,1,0,1,0]},{\"pieces\":[2,0,6,4,3,7,5,1],\"orientation\":[0,2,0,0,0,2,0,2]}]"
+    },
+    {
+      "id": "b04841ae-9442-40c9-9acd-bbeebbe14da0",
+      "scramble": "F2 B2 D2 R' D2 F' B' L B U R2 F2 D F2 D' L2 B2 D L2 B2 U'",
+      "stateHash": "[{\"pieces\":[2,4,5,6,1,11,9,8,7,0,10,3],\"orientation\":[1,1,0,0,1,0,1,1,0,1,0,0]},{\"pieces\":[7,2,6,3,5,0,4,1],\"orientation\":[0,0,0,1,0,1,0,1]}]"
+    },
+    {
+      "id": "90802dbd-9308-4d31-8b51-f73316ef4846",
+      "scramble": "D B' U B2 L2 U L2 U' R2 U F2 R2 U R' U F2 D' L2 B L'",
+      "stateHash": "[{\"pieces\":[4,0,10,2,8,3,6,7,5,11,1,9],\"orientation\":[0,0,0,1,0,0,1,1,1,1,1,0]},{\"pieces\":[5,2,7,0,6,1,4,3],\"orientation\":[0,1,1,1,2,1,1,2]}]"
+    },
+    {
+      "id": "dac25174-1b7b-4137-a190-bb53df4d184e",
+      "scramble": "R' U' R' L F' B' R D2 F L U F2 L2 F2 U F2 D L2 D2 R2 D'",
+      "stateHash": "[{\"pieces\":[1,4,8,2,6,3,7,9,5,0,11,10],\"orientation\":[1,1,0,1,1,0,1,0,0,0,0,1]},{\"pieces\":[1,0,2,7,6,3,5,4],\"orientation\":[1,1,2,0,1,0,0,1]}]"
+    },
+    {
+      "id": "f3cf30ed-ba1a-4913-ae87-ef697d7054ac",
+      "scramble": "R L U D R L2 U' R' F R' L2 B2 U R2 U L2 U2 L2 F2 L2 D'",
+      "stateHash": "[{\"pieces\":[8,11,6,0,10,5,1,7,3,4,2,9],\"orientation\":[1,0,1,0,0,0,0,1,0,0,0,1]},{\"pieces\":[5,7,0,4,2,1,6,3],\"orientation\":[0,2,2,2,0,1,1,1]}]"
+    },
+    {
+      "id": "7408bb36-af52-4955-9be2-8426e9c4926a",
+      "scramble": "F U' R' B' D L F' L2 D2 R' U' R2 U B2 D2 B2 D' R2 B2 R2 F2",
+      "stateHash": "[{\"pieces\":[8,1,9,4,7,2,0,11,5,3,10,6],\"orientation\":[1,1,0,1,1,1,1,1,1,1,0,1]},{\"pieces\":[7,1,4,6,3,5,0,2],\"orientation\":[2,1,0,0,1,0,1,1]}]"
+    },
+    {
+      "id": "6d94033f-e09c-4fa2-b134-17edb527b148",
+      "scramble": "L2 F2 R U' F' D L F2 U' B2 U F2 D' L2 B2 U2 D' F2 R F'",
+      "stateHash": "[{\"pieces\":[11,1,5,10,0,2,9,8,7,4,3,6],\"orientation\":[1,0,1,0,0,0,0,1,0,1,0,0]},{\"pieces\":[0,6,7,2,4,5,1,3],\"orientation\":[1,0,2,0,0,2,1,0]}]"
+    },
+    {
+      "id": "5ab7aefc-eb07-4fc8-a124-23c6efc2839f",
+      "scramble": "L U F D' L' U' L F2 L2 F D2 F U2 D2 F' R2 B D2 F R B",
+      "stateHash": "[{\"pieces\":[2,7,6,3,10,5,4,8,0,1,9,11],\"orientation\":[0,0,1,1,1,1,1,1,0,1,1,0]},{\"pieces\":[7,3,1,4,0,2,6,5],\"orientation\":[2,2,2,1,0,1,0,1]}]"
+    },
+    {
+      "id": "c8dce944-da40-430d-a2f8-5d732ac344a5",
+      "scramble": "D' U2 R2 U' L2 F2 R2 D L2 U R B' L2 R' D' F' R' F'",
+      "stateHash": "[{\"pieces\":[7,11,10,4,3,1,5,0,2,8,6,9],\"orientation\":[0,0,1,0,0,1,0,0,1,0,1,0]},{\"pieces\":[6,2,4,5,0,7,3,1],\"orientation\":[0,1,0,1,1,1,1,1]}]"
+    },
+    {
+      "id": "da8e85a5-fd2e-4e73-8dcf-b3a447ad308a",
+      "scramble": "R' F2 D' F2 D' U2 L2 D' R2 U' L2 U' R2 B R' D' F' R' B L D2",
+      "stateHash": "[{\"pieces\":[3,4,11,5,2,6,9,1,10,0,8,7],\"orientation\":[1,0,0,0,0,1,1,1,1,0,1,0]},{\"pieces\":[0,2,4,7,6,1,5,3],\"orientation\":[2,1,1,0,2,0,1,2]}]"
+    },
+    {
+      "id": "b597b982-2198-4c1f-81b0-659ec1c74645",
+      "scramble": "B' R L F U2 B U' R F U B2 L2 B2 L2 U' L2 U' D2 F2 D' R",
+      "stateHash": "[{\"pieces\":[7,11,0,6,1,5,10,9,2,8,4,3],\"orientation\":[1,1,1,1,1,0,0,0,0,1,0,0]},{\"pieces\":[3,5,0,7,4,1,2,6],\"orientation\":[2,2,2,0,0,2,0,1]}]"
+    },
+    {
+      "id": "2c01c63f-cbb5-4e25-a73f-17736c7d9fde",
+      "scramble": "U2 R U2 L B2 R U2 R U2 L' U2 B D U L' U2 R' U2 R2 D'",
+      "stateHash": "[{\"pieces\":[8,7,5,2,11,1,0,3,4,10,9,6],\"orientation\":[0,0,0,1,1,0,1,0,0,1,0,0]},{\"pieces\":[1,3,7,5,4,2,6,0],\"orientation\":[1,2,2,2,1,2,0,2]}]"
+    },
+    {
+      "id": "ef37902a-ea6e-4de9-bab5-52e0915d109e",
+      "scramble": "U2 B D' F2 R' F D F U' L2 B2 L2 U' B2 R2 U2 F2 U' L2 D' B",
+      "stateHash": "[{\"pieces\":[3,5,8,7,1,2,0,6,11,4,10,9],\"orientation\":[1,0,1,0,0,0,0,1,1,1,0,1]},{\"pieces\":[1,3,7,5,2,6,4,0],\"orientation\":[2,0,1,2,0,1,2,1]}]"
+    },
+    {
+      "id": "807822ed-8758-427f-b3dc-e8d222c0469d",
+      "scramble": "B2 F2 D2 R2 U' R2 B2 U R2 B2 D' B2 L' D' B' R' U' L U R2",
+      "stateHash": "[{\"pieces\":[1,10,11,8,6,5,9,2,7,3,4,0],\"orientation\":[0,0,1,0,0,1,1,0,0,1,0,0]},{\"pieces\":[3,1,2,4,0,6,7,5],\"orientation\":[2,1,0,1,2,2,1,0]}]"
+    },
+    {
+      "id": "8676c7ac-6f93-4a70-a905-5d80a25850b3",
+      "scramble": "D2 R2 F2 D2 F R2 F' U2 B L2 D2 B L R2 U F' U R2 D L",
+      "stateHash": "[{\"pieces\":[0,3,2,7,8,1,6,5,9,4,11,10],\"orientation\":[0,0,0,0,0,1,1,1,0,0,0,1]},{\"pieces\":[2,6,0,7,4,5,3,1],\"orientation\":[0,1,0,2,2,2,0,2]}]"
+    },
+    {
+      "id": "c4e7c8da-4c47-47c2-bed2-3695c9713d4b",
+      "scramble": "F R' L' B' R' U B L' D2 R' F2 L' U2 L2 F2 U2 L D2 R2 D F2",
+      "stateHash": "[{\"pieces\":[10,11,2,1,6,8,9,0,3,4,7,5],\"orientation\":[0,0,1,0,0,1,1,0,1,0,0,0]},{\"pieces\":[5,7,4,2,0,3,1,6],\"orientation\":[2,1,0,0,2,2,2,0]}]"
+    },
+    {
+      "id": "aa9583bd-5bfa-4566-81a8-626c8c1eefd1",
+      "scramble": "B' R2 F2 R2 U B2 R2 U2 B2 R2 D F2 D' L' D2 U' F D2 U R' F",
+      "stateHash": "[{\"pieces\":[1,6,3,10,11,9,2,8,7,0,4,5],\"orientation\":[0,1,0,0,0,1,0,0,1,1,0,0]},{\"pieces\":[1,3,5,2,7,0,4,6],\"orientation\":[2,0,2,0,0,2,0,0]}]"
+    },
+    {
+      "id": "2742230b-af29-430f-b951-2cea27cb3b2d",
+      "scramble": "D2 F2 U2 B2 U R2 U' F2 U2 B2 F2 U' B U F' L F' D2 U2 L U2",
+      "stateHash": "[{\"pieces\":[7,5,6,1,9,2,3,11,8,10,0,4],\"orientation\":[0,0,0,1,1,1,1,0,0,1,1,0]},{\"pieces\":[0,3,6,7,1,2,5,4],\"orientation\":[1,1,1,0,2,0,2,2]}]"
+    },
+    {
+      "id": "a2265116-62a2-494f-944a-829ba41621b8",
+      "scramble": "U2 R2 U2 B2 D2 U2 L' B2 R' U2 F2 L' D' R' F R' U2 L' D' R' U",
+      "stateHash": "[{\"pieces\":[3,8,10,6,2,7,1,9,5,4,11,0],\"orientation\":[0,1,1,0,1,0,0,1,0,0,0,0]},{\"pieces\":[0,1,3,6,2,5,4,7],\"orientation\":[0,1,2,1,1,0,1,0]}]"
+    },
+    {
+      "id": "71526cd7-2650-4227-9d9d-5475a36c5434",
+      "scramble": "L2 B2 F L2 R2 D2 L2 R2 B L2 B' U2 D' L2 U R' B D2 U' F",
+      "stateHash": "[{\"pieces\":[10,3,9,8,11,7,5,0,4,6,1,2],\"orientation\":[1,0,0,0,0,0,0,1,1,1,1,1]},{\"pieces\":[1,0,5,4,3,2,6,7],\"orientation\":[0,1,1,0,0,0,1,0]}]"
+    },
+    {
+      "id": "021f6085-2e7b-4c9c-bd6e-9e460f1c7089",
+      "scramble": "R U' R' D F' U' R D2 B2 U2 L2 B R2 F2 R2 L2 F D2 U L' F'",
+      "stateHash": "[{\"pieces\":[5,11,7,9,6,10,4,1,3,8,0,2],\"orientation\":[0,1,1,0,1,0,1,1,1,1,1,0]},{\"pieces\":[1,3,5,4,2,6,0,7],\"orientation\":[0,0,2,0,1,0,2,1]}]"
+    },
+    {
+      "id": "e69ec8eb-4c01-4f3f-bf83-d03ceb553234",
+      "scramble": "F2 R2 D L B R2 D' F' D U2 R' F2 D2 B2 D2 B2 R' F2 D2 R B2",
+      "stateHash": "[{\"pieces\":[1,11,7,0,9,5,6,4,8,10,2,3],\"orientation\":[0,0,0,0,1,1,1,1,0,0,1,1]},{\"pieces\":[0,3,6,4,5,1,7,2],\"orientation\":[2,2,0,0,1,1,2,1]}]"
+    },
+    {
+      "id": "b33a5844-eb41-4467-a449-48e1370d1421",
+      "scramble": "R' B2 U' F2 U B L2 F' L' B2 R2 L2 U B2 U L2 B2 D' L2 U L2",
+      "stateHash": "[{\"pieces\":[11,1,6,0,10,9,8,5,7,3,2,4],\"orientation\":[1,0,0,1,0,1,0,1,0,1,1,0]},{\"pieces\":[6,3,2,5,7,1,0,4],\"orientation\":[0,1,2,2,2,0,2,0]}]"
+    },
+    {
+      "id": "3cde5b3a-9b02-4acd-8586-17834fa02046",
+      "scramble": "D' F D2 R F2 B D2 R' L2 B2 R2 F2 D L2 U' B2 U' F2 R2 F",
+      "stateHash": "[{\"pieces\":[2,7,11,8,4,1,5,10,3,9,6,0],\"orientation\":[0,0,1,0,1,1,1,0,1,0,0,1]},{\"pieces\":[0,4,7,5,6,1,3,2],\"orientation\":[1,2,2,2,0,1,0,1]}]"
+    },
+    {
+      "id": "dbbf7a98-c206-4f0e-8506-8e08105a9cb2",
+      "scramble": "U' F2 U2 F2 L F2 L' B2 R' B2 R2 D2 L D L' R D' B' D' U",
+      "stateHash": "[{\"pieces\":[10,5,8,1,7,0,9,2,6,3,4,11],\"orientation\":[0,1,0,0,0,1,0,0,0,0,1,1]},{\"pieces\":[5,1,6,3,7,2,0,4],\"orientation\":[2,0,1,2,2,2,1,2]}]"
+    }
+  ],
+  "policies": [
+    "skills"
+  ],
+  "version": "rubik-v25/beginner-v7",
+  "model": "jev-1.13.0",
+  "limits": {
+    "requests": 500,
+    "turns": 1000,
+    "ms": 600000
+  },
+  "stopRule": "After each four-case batch, retire a final evaluation if more than five attempts failed: 95/100 is then impossible. Preserve unattempted cases separately.",
+  "sourceHash": "316b88acd79c32696d33926eb685e42df1a12a0569c75d3948fc517d1b423798",
+  "status": "retired",
+  "startedAt": "2026-09-20T20:33:30.071Z",
+  "results": [
+    {
+      "caseId": "1a9889b5-98af-4223-9a26-d80adbafa90a",
+      "policy": "skills",
+      "runId": "eec7d23a-bbd0-4fdc-b4dc-17b9d3dfae7c",
+      "status": "error",
+      "verifiedSolved": false,
+      "autonomous": true,
+      "stage": "top-orientation",
+      "requests": 143,
+      "turns": 110,
+      "tokens": 281167,
+      "cost": 0.011809013999999993,
+      "activeMs": 84610,
+      "recovery": 0,
+      "reason": "Policy abstained: no suitable operation or target already complete"
+    },
+    {
+      "caseId": "a7e782d5-0a7a-48ed-8fd0-ed44697a6e29",
+      "policy": "skills",
+      "runId": "3ca97bae-1261-4c8f-8c9e-2e81bb4ee705",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 146,
+      "turns": 137,
+      "tokens": 281493,
+      "cost": 0.011822706,
+      "activeMs": 86504,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "fd05c98d-d7c6-4d35-8767-bfdef3503d9b",
+      "policy": "skills",
+      "runId": "f20c8935-76aa-4a86-bf5c-66e055fa72d3",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 156,
+      "turns": 191,
+      "tokens": 299807,
+      "cost": 0.012591894000000003,
+      "activeMs": 87257,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "94bb7572-a535-47cf-8c3e-f4b87beb9fdd",
+      "policy": "skills",
+      "runId": "58ca2f10-f3e4-4aa3-8a10-6d37d4eb5c0a",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 167,
+      "turns": 204,
+      "tokens": 326907,
+      "cost": 0.013730093999999997,
+      "activeMs": 91857,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "a641fffe-cdaf-4ee2-83fd-98ffe108525a",
+      "policy": "skills",
+      "runId": "f7ba63b7-7d03-40c1-8e1b-06eec44b94df",
+      "status": "error",
+      "verifiedSolved": false,
+      "autonomous": true,
+      "stage": "cross",
+      "requests": 28,
+      "turns": 4,
+      "tokens": 38475,
+      "cost": 0.0016159500000000003,
+      "activeMs": 10786,
+      "recovery": 0,
+      "reason": "Policy abstained: no suitable operation or target already complete"
+    },
+    {
+      "caseId": "0b31ab2f-93c9-4b88-bd9b-f7c834f5fb97",
+      "policy": "skills",
+      "runId": "2e13af3d-3640-4217-aa01-c3bee562122a",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 149,
+      "turns": 145,
+      "tokens": 276733,
+      "cost": 0.011622785999999998,
+      "activeMs": 68926,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "8bfe8679-1405-47b6-8638-dcbb19cd4465",
+      "policy": "skills",
+      "runId": "0d2e06ff-7381-4599-b372-b712ea6a27f6",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 175,
+      "turns": 191,
+      "tokens": 339161,
+      "cost": 0.014244762000000003,
+      "activeMs": 82339,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "472f78df-8a36-4d0e-afef-8bbae3489257",
+      "policy": "skills",
+      "runId": "54c0aaa7-ebf9-495c-886c-4e9566445fee",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 212,
+      "turns": 229,
+      "tokens": 409029,
+      "cost": 0.017179217999999986,
+      "activeMs": 97334,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "5fe91fe8-8a99-4ff1-93f1-f12986e5ca73",
+      "policy": "skills",
+      "runId": "5bbd11a6-0ea4-4a2f-aa91-dfcf2b3e5c60",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 138,
+      "turns": 110,
+      "tokens": 253109,
+      "cost": 0.010630578,
+      "activeMs": 69292,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "d84188ca-f8fe-44bf-bf11-5e34bed33109",
+      "policy": "skills",
+      "runId": "6172696a-1a49-484a-9b40-68685b920279",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 144,
+      "turns": 127,
+      "tokens": 283363,
+      "cost": 0.011901245999999996,
+      "activeMs": 77365,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "61649a09-88df-440a-bffe-fdef565414a8",
+      "policy": "skills",
+      "runId": "36fc8c54-092d-4728-a1be-efa1ac75082c",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 172,
+      "turns": 172,
+      "tokens": 321380,
+      "cost": 0.01349796,
+      "activeMs": 91640,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "38d93004-d5f8-4b22-beb8-42a8f0cbd45d",
+      "policy": "skills",
+      "runId": "6df24af0-2b0b-4948-80d0-0cdde3614d41",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 189,
+      "turns": 188,
+      "tokens": 357744,
+      "cost": 0.015025247999999996,
+      "activeMs": 97547,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "8a6c1129-340a-49da-9b8c-d88fe433a37d",
+      "policy": "skills",
+      "runId": "bf59fc79-ffa6-46ef-9e6f-c3bd1a4ead2f",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 146,
+      "turns": 173,
+      "tokens": 271378,
+      "cost": 0.011397876000000003,
+      "activeMs": 65506,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "97fdf54e-b6aa-43d8-9497-3413b6827409",
+      "policy": "skills",
+      "runId": "b19f1fce-85ff-423a-b364-810ccabf83d6",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 168,
+      "turns": 177,
+      "tokens": 331507,
+      "cost": 0.013923293999999996,
+      "activeMs": 78372,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "4e597199-56a2-4a71-bf16-b679a9e7f83d",
+      "policy": "skills",
+      "runId": "81b45fd8-bbca-43c8-93c3-b2c0968a3e69",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 180,
+      "turns": 189,
+      "tokens": 353842,
+      "cost": 0.014861363999999991,
+      "activeMs": 85577,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "774c241d-aa22-4afd-8d0a-c88e1696f733",
+      "policy": "skills",
+      "runId": "3d0c8234-eb29-437e-a7a5-f13f8ecd6157",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 229,
+      "turns": 236,
+      "tokens": 444216,
+      "cost": 0.018657072000000014,
+      "activeMs": 105498,
+      "recovery": 3,
+      "reason": null
+    },
+    {
+      "caseId": "e403c431-9706-4062-bd95-73b5a6d15db1",
+      "policy": "skills",
+      "runId": "6ee44d48-3a8a-4e2f-ab5e-dd568f344aaa",
+      "status": "error",
+      "verifiedSolved": false,
+      "autonomous": true,
+      "stage": "cross",
+      "requests": 5,
+      "turns": 0,
+      "tokens": 5760,
+      "cost": 0.00024192000000000001,
+      "activeMs": 2405,
+      "recovery": 0,
+      "reason": "Policy abstained: no suitable operation or target already complete"
+    },
+    {
+      "caseId": "77377258-e2d3-4580-b1f7-a34bc2a433f1",
+      "policy": "skills",
+      "runId": "bc4140c9-9c76-4ac3-b7bc-2cf40bf7461a",
+      "status": "error",
+      "verifiedSolved": false,
+      "autonomous": true,
+      "stage": "cross",
+      "requests": 10,
+      "turns": 2,
+      "tokens": 13283,
+      "cost": 0.0005578860000000001,
+      "activeMs": 8287,
+      "recovery": 0,
+      "reason": "Policy abstained: no suitable operation or target already complete"
+    },
+    {
+      "caseId": "54874d67-6a78-433e-bf7a-2f913c8ee49d",
+      "policy": "skills",
+      "runId": "ecab6b9a-b4e8-45e4-8c74-8f06949c4fe7",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 167,
+      "turns": 160,
+      "tokens": 310141,
+      "cost": 0.013025921999999994,
+      "activeMs": 69412,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "5c5b077a-5b32-432e-be5b-61a84ae48ffb",
+      "policy": "skills",
+      "runId": "262f6f9b-1ecb-4de6-bd4b-d2b3f7ac346d",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 171,
+      "turns": 203,
+      "tokens": 330225,
+      "cost": 0.013869449999999997,
+      "activeMs": 74768,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "d9223a1a-f648-48e5-b39a-60ddfb3c453e",
+      "policy": "skills",
+      "runId": "21ccc398-806a-418b-93c7-c4f980b56814",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 156,
+      "turns": 122,
+      "tokens": 305839,
+      "cost": 0.012845237999999998,
+      "activeMs": 67145,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "ce73c3b9-6912-4b80-8f27-58af9b78df7f",
+      "policy": "skills",
+      "runId": "d0d74095-94b7-41a2-8773-9c12187ed6ec",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 174,
+      "turns": 194,
+      "tokens": 325829,
+      "cost": 0.013684818000000005,
+      "activeMs": 78300,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "e297512d-ce37-4f46-b055-d8aa0e68b830",
+      "policy": "skills",
+      "runId": "3dfce491-bdfb-4635-8f16-b6ed70a86ccd",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 185,
+      "turns": 191,
+      "tokens": 369602,
+      "cost": 0.015523284,
+      "activeMs": 87088,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "24db0656-6f9f-4f68-9513-ed4b67f0689c",
+      "policy": "skills",
+      "runId": "10e92c3c-634f-4890-a02c-e8439fbac805",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 197,
+      "turns": 198,
+      "tokens": 371665,
+      "cost": 0.015609930000000001,
+      "activeMs": 92773,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "63ba8654-888a-4307-8c61-0ccde5f69969",
+      "policy": "skills",
+      "runId": "c4eea154-99d0-47dd-a603-8962d03cc232",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 136,
+      "turns": 140,
+      "tokens": 267416,
+      "cost": 0.011231472000000001,
+      "activeMs": 59103,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "ca1f8df5-4061-4045-a28a-c62b275f6e80",
+      "policy": "skills",
+      "runId": "e2af95e6-6cee-4e78-b1d0-4cdeb9779128",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 158,
+      "turns": 177,
+      "tokens": 317988,
+      "cost": 0.013355495999999994,
+      "activeMs": 73599,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "684b405d-51fe-49f3-944a-6a64dda1eb0a",
+      "policy": "skills",
+      "runId": "8aaca10d-bb2b-438f-83bd-63118b2ec9f1",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 172,
+      "turns": 179,
+      "tokens": 325152,
+      "cost": 0.013656383999999997,
+      "activeMs": 84261,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "9c382c7b-cd4f-4f85-9832-7fc159fd3271",
+      "policy": "skills",
+      "runId": "7d49343c-720c-47f3-850e-882e411140e3",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 176,
+      "turns": 207,
+      "tokens": 345228,
+      "cost": 0.014499575999999998,
+      "activeMs": 92620,
+      "recovery": 1,
+      "reason": null
+    },
+    {
+      "caseId": "8ff6b7cb-bfda-475c-8839-3fde79352323",
+      "policy": "skills",
+      "runId": "f979c2af-59d7-4e5c-8e76-7b4c8e2aad03",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 143,
+      "turns": 141,
+      "tokens": 279208,
+      "cost": 0.011726735999999995,
+      "activeMs": 62081,
+      "recovery": 0,
+      "reason": null
+    },
+    {
+      "caseId": "2e26dc59-2645-4ca6-a47a-a8075719911b",
+      "policy": "skills",
+      "runId": "a25066af-70e0-468e-9a09-f1bfbef6ad2f",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 189,
+      "turns": 200,
+      "tokens": 349155,
+      "cost": 0.014664509999999995,
+      "activeMs": 88321,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "d22eab4e-5808-486b-a9af-e3cc8fce71e1",
+      "policy": "skills",
+      "runId": "91613007-f68a-4f87-bde4-a9f6769e20db",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 207,
+      "turns": 242,
+      "tokens": 396935,
+      "cost": 0.016671269999999995,
+      "activeMs": 100740,
+      "recovery": 4,
+      "reason": null
+    },
+    {
+      "caseId": "053974eb-8814-4d8e-b36b-65adf928fbad",
+      "policy": "skills",
+      "runId": "b6832d22-e76d-40da-bd84-214ee7e63d82",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 225,
+      "turns": 300,
+      "tokens": 455402,
+      "cost": 0.019126883999999993,
+      "activeMs": 110576,
+      "recovery": 4,
+      "reason": null
+    },
+    {
+      "caseId": "9523e6b6-bcf1-40c1-9aca-9cf86cb94649",
+      "policy": "skills",
+      "runId": "e64925ef-576c-4261-8d1d-85132f7ee43c",
+      "status": "error",
+      "verifiedSolved": false,
+      "autonomous": true,
+      "stage": "middle-layer",
+      "requests": 119,
+      "turns": 59,
+      "tokens": 216524,
+      "cost": 0.009094008,
+      "activeMs": 57615,
+      "recovery": 0,
+      "reason": "Policy abstained: selected completed target"
+    },
+    {
+      "caseId": "3e863364-86a0-4b3d-be65-e942610e9c6c",
+      "policy": "skills",
+      "runId": "d097f9e6-4506-4ab3-8914-49b3f3d49537",
+      "status": "error",
+      "verifiedSolved": false,
+      "autonomous": true,
+      "stage": "top-orientation",
+      "requests": 160,
+      "turns": 130,
+      "tokens": 321052,
+      "cost": 0.013484183999999993,
+      "activeMs": 79755,
+      "recovery": 0,
+      "reason": "Policy abstained: no suitable operation or target already complete"
+    },
+    {
+      "caseId": "fad02bc1-eefb-4537-848f-feed6b35a4f6",
+      "policy": "skills",
+      "runId": "5f281142-6ff2-4db5-93d4-9a8b894d1eeb",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 191,
+      "turns": 222,
+      "tokens": 380888,
+      "cost": 0.015997295999999998,
+      "activeMs": 95855,
+      "recovery": 2,
+      "reason": null
+    },
+    {
+      "caseId": "e76699f8-a651-4846-a96a-286a46a54d52",
+      "policy": "skills",
+      "runId": "6bdd1ab1-f527-47ed-a87c-f62e630ef359",
+      "status": "solved",
+      "verifiedSolved": true,
+      "autonomous": true,
+      "stage": "solved",
+      "requests": 213,
+      "turns": 241,
+      "tokens": 418059,
+      "cost": 0.017558477999999995,
+      "activeMs": 108503,
+      "recovery": 2,
+      "reason": null
+    }
+  ],
+  "assignments": [
+    {
+      "caseId": "1a9889b5-98af-4223-9a26-d80adbafa90a",
+      "runId": "eec7d23a-bbd0-4fdc-b4dc-17b9d3dfae7c"
+    },
+    {
+      "caseId": "fd05c98d-d7c6-4d35-8767-bfdef3503d9b",
+      "runId": "f20c8935-76aa-4a86-bf5c-66e055fa72d3"
+    },
+    {
+      "caseId": "a7e782d5-0a7a-48ed-8fd0-ed44697a6e29",
+      "runId": "3ca97bae-1261-4c8f-8c9e-2e81bb4ee705"
+    },
+    {
+      "caseId": "94bb7572-a535-47cf-8c3e-f4b87beb9fdd",
+      "runId": "58ca2f10-f3e4-4aa3-8a10-6d37d4eb5c0a"
+    },
+    {
+      "caseId": "a641fffe-cdaf-4ee2-83fd-98ffe108525a",
+      "runId": "f7ba63b7-7d03-40c1-8e1b-06eec44b94df"
+    },
+    {
+      "caseId": "472f78df-8a36-4d0e-afef-8bbae3489257",
+      "runId": "54c0aaa7-ebf9-495c-886c-4e9566445fee"
+    },
+    {
+      "caseId": "8bfe8679-1405-47b6-8638-dcbb19cd4465",
+      "runId": "0d2e06ff-7381-4599-b372-b712ea6a27f6"
+    },
+    {
+      "caseId": "0b31ab2f-93c9-4b88-bd9b-f7c834f5fb97",
+      "runId": "2e13af3d-3640-4217-aa01-c3bee562122a"
+    },
+    {
+      "caseId": "38d93004-d5f8-4b22-beb8-42a8f0cbd45d",
+      "runId": "6df24af0-2b0b-4948-80d0-0cdde3614d41"
+    },
+    {
+      "caseId": "5fe91fe8-8a99-4ff1-93f1-f12986e5ca73",
+      "runId": "5bbd11a6-0ea4-4a2f-aa91-dfcf2b3e5c60"
+    },
+    {
+      "caseId": "61649a09-88df-440a-bffe-fdef565414a8",
+      "runId": "36fc8c54-092d-4728-a1be-efa1ac75082c"
+    },
+    {
+      "caseId": "d84188ca-f8fe-44bf-bf11-5e34bed33109",
+      "runId": "6172696a-1a49-484a-9b40-68685b920279"
+    },
+    {
+      "caseId": "8a6c1129-340a-49da-9b8c-d88fe433a37d",
+      "runId": "bf59fc79-ffa6-46ef-9e6f-c3bd1a4ead2f"
+    },
+    {
+      "caseId": "97fdf54e-b6aa-43d8-9497-3413b6827409",
+      "runId": "b19f1fce-85ff-423a-b364-810ccabf83d6"
+    },
+    {
+      "caseId": "774c241d-aa22-4afd-8d0a-c88e1696f733",
+      "runId": "3d0c8234-eb29-437e-a7a5-f13f8ecd6157"
+    },
+    {
+      "caseId": "4e597199-56a2-4a71-bf16-b679a9e7f83d",
+      "runId": "81b45fd8-bbca-43c8-93c3-b2c0968a3e69"
+    },
+    {
+      "caseId": "54874d67-6a78-433e-bf7a-2f913c8ee49d",
+      "runId": "ecab6b9a-b4e8-45e4-8c74-8f06949c4fe7"
+    },
+    {
+      "caseId": "77377258-e2d3-4580-b1f7-a34bc2a433f1",
+      "runId": "bc4140c9-9c76-4ac3-b7bc-2cf40bf7461a"
+    },
+    {
+      "caseId": "5c5b077a-5b32-432e-be5b-61a84ae48ffb",
+      "runId": "262f6f9b-1ecb-4de6-bd4b-d2b3f7ac346d"
+    },
+    {
+      "caseId": "e403c431-9706-4062-bd95-73b5a6d15db1",
+      "runId": "6ee44d48-3a8a-4e2f-ab5e-dd568f344aaa"
+    },
+    {
+      "caseId": "e297512d-ce37-4f46-b055-d8aa0e68b830",
+      "runId": "3dfce491-bdfb-4635-8f16-b6ed70a86ccd"
+    },
+    {
+      "caseId": "ce73c3b9-6912-4b80-8f27-58af9b78df7f",
+      "runId": "d0d74095-94b7-41a2-8773-9c12187ed6ec"
+    },
+    {
+      "caseId": "24db0656-6f9f-4f68-9513-ed4b67f0689c",
+      "runId": "10e92c3c-634f-4890-a02c-e8439fbac805"
+    },
+    {
+      "caseId": "d9223a1a-f648-48e5-b39a-60ddfb3c453e",
+      "runId": "21ccc398-806a-418b-93c7-c4f980b56814"
+    },
+    {
+      "caseId": "9c382c7b-cd4f-4f85-9832-7fc159fd3271",
+      "runId": "7d49343c-720c-47f3-850e-882e411140e3"
+    },
+    {
+      "caseId": "684b405d-51fe-49f3-944a-6a64dda1eb0a",
+      "runId": "8aaca10d-bb2b-438f-83bd-63118b2ec9f1"
+    },
+    {
+      "caseId": "ca1f8df5-4061-4045-a28a-c62b275f6e80",
+      "runId": "e2af95e6-6cee-4e78-b1d0-4cdeb9779128"
+    },
+    {
+      "caseId": "63ba8654-888a-4307-8c61-0ccde5f69969",
+      "runId": "c4eea154-99d0-47dd-a603-8962d03cc232"
+    },
+    {
+      "caseId": "053974eb-8814-4d8e-b36b-65adf928fbad",
+      "runId": "b6832d22-e76d-40da-bd84-214ee7e63d82"
+    },
+    {
+      "caseId": "d22eab4e-5808-486b-a9af-e3cc8fce71e1",
+      "runId": "91613007-f68a-4f87-bde4-a9f6769e20db"
+    },
+    {
+      "caseId": "2e26dc59-2645-4ca6-a47a-a8075719911b",
+      "runId": "a25066af-70e0-468e-9a09-f1bfbef6ad2f"
+    },
+    {
+      "caseId": "8ff6b7cb-bfda-475c-8839-3fde79352323",
+      "runId": "f979c2af-59d7-4e5c-8e76-7b4c8e2aad03"
+    },
+    {
+      "caseId": "fad02bc1-eefb-4537-848f-feed6b35a4f6",
+      "runId": "5f281142-6ff2-4db5-93d4-9a8b894d1eeb"
+    },
+    {
+      "caseId": "9523e6b6-bcf1-40c1-9aca-9cf86cb94649",
+      "runId": "e64925ef-576c-4261-8d1d-85132f7ee43c"
+    },
+    {
+      "caseId": "3e863364-86a0-4b3d-be65-e942610e9c6c",
+      "runId": "d097f9e6-4506-4ab3-8914-49b3f3d49537"
+    },
+    {
+      "caseId": "e76699f8-a651-4846-a96a-286a46a54d52",
+      "runId": "6bdd1ab1-f527-47ed-a87c-f62e630ef359"
+    },
+    {
+      "caseId": "80113baa-43e6-41be-bfc2-42c992772b04",
+      "runId": "b0e35349-a779-4987-8fc0-ba9e7a63cf79"
+    },
+    {
+      "caseId": "cf7c25d3-f2a4-44ae-b9ea-15dfc6661f6a",
+      "runId": "45e8efae-21b3-4914-bcc2-144b40ea8317"
+    },
+    {
+      "caseId": "56108237-547e-4325-8084-d59ec3dc3ceb",
+      "runId": "16da57db-c25a-43f3-9ced-ed5ae46c1ae9"
+    },
+    {
+      "caseId": "4632a3e9-7d8e-4ad7-a8c6-9fac20bb0aff",
+      "runId": "a68af199-37f3-4c02-955c-831c37fe2676"
+    },
+    {
+      "caseId": "19f84bc2-8b85-4778-80d8-86396f00408d",
+      "runId": "8fae82f1-dd46-4bc4-a897-74877b79a835"
+    },
+    {
+      "caseId": "396ffda4-7c1d-484d-abf2-f6c14793c8dc",
+      "runId": "0f2d5a60-efb3-483c-bda1-316bcf242dbe"
+    },
+    {
+      "caseId": "2cc159b6-55b6-47ed-bb90-ee23ff07d8c2",
+      "runId": "f7ace850-04ba-4f39-87e5-4e18fd07d0b4"
+    },
+    {
+      "caseId": "75ddb114-3a5e-4dd1-bb80-0048d106e646",
+      "runId": "0608e12a-e7f0-410b-9f45-090d8afcd09e"
+    },
+    {
+      "caseId": "45830ace-da80-46ab-9fdd-6786815063c5",
+      "runId": "f07be9a3-98ba-49e0-abcb-3cd952c5983d"
+    },
+    {
+      "caseId": "baeeee9a-c6c3-48a3-b742-37a55c8e15de",
+      "runId": "acd8092a-6150-4295-9bed-4443c7c544fa"
+    },
+    {
+      "caseId": "bad6981c-7b5f-4cae-b0d1-4450257bdd76",
+      "runId": "92697dc9-777d-4205-a1bc-938965942567"
+    },
+    {
+      "caseId": "7ed98e5e-843f-4b6e-bb2d-c61989560d89",
+      "runId": "e816c84c-426b-4347-8d94-8d5337c3cdd9"
+    },
+    {
+      "caseId": "bc1c4cc1-41f1-498e-9531-043bf433eaa8",
+      "runId": "786878fd-633d-414b-b9af-20d4e52c73bb"
+    },
+    {
+      "caseId": "77590c2d-3ceb-4cd7-8c03-6b8b93c42199",
+      "runId": "1ef632b9-4681-4b87-8bc8-600db8fcf667"
+    },
+    {
+      "caseId": "e2f00dc5-e888-4bc5-87b7-5a8941ef2a2d",
+      "runId": "13cf1525-5e1e-4a9e-bdc6-24c217701f45"
+    },
+    {
+      "caseId": "cc462a32-bdc6-4c85-8efb-9bc401809856",
+      "runId": "98f6f7f1-8040-48aa-ba6c-24d5ead3239f"
+    },
+    {
+      "caseId": "15312cce-ff8a-4adf-972e-298c47bcd7dc",
+      "runId": "93d54803-0964-49f5-bf51-f2584a357d4d"
+    },
+    {
+      "caseId": "f3a94d9d-bb30-4605-a220-41189ecee292",
+      "runId": "77ae7c7d-e31a-48f1-b4c7-a655b4ea512e"
+    },
+    {
+      "caseId": "0c5277cd-6d1a-4be6-8737-82ecb1fe702f",
+      "runId": "3812b3ba-9d28-45b9-aff4-f36db8c25348"
+    },
+    {
+      "caseId": "c6d4245c-17f6-4b3e-a621-09dd6bee7575",
+      "runId": "17c12931-de29-486a-8f0b-af19c1d63437"
+    },
+    {
+      "caseId": "cd09a161-7202-44e7-bfca-851891d213e9",
+      "runId": "360aeba0-8833-4786-8510-48eaec864d0c"
+    },
+    {
+      "caseId": "e04cfd26-a32b-4f2d-a3cd-9e7791f0d753",
+      "runId": "3c2a7402-2f54-4346-9835-533ec81ebe41"
+    },
+    {
+      "caseId": "71f807e0-e3c1-4d6b-8140-1231f16ddca2",
+      "runId": "5840756c-53d0-446e-b37c-9440e95ed009"
+    },
+    {
+      "caseId": "e09da0d1-3448-482a-8311-23650c31cb42",
+      "runId": "3904d652-adbc-4ff6-a33f-3bea7c92d8b5"
+    },
+    {
+      "caseId": "759140e3-3f06-4656-8cc6-9ee44ce39993",
+      "runId": "d9a8bb1a-11be-4f4d-a7e5-4bee6e3dd1e8"
+    },
+    {
+      "caseId": "e4c6de21-df21-4637-9ee8-cc1d84ecc89b",
+      "runId": "0a9cf778-4f20-4a23-9441-509a0816217d"
+    },
+    {
+      "caseId": "acdbe132-ffd9-48d1-a32f-614327bc4bee",
+      "runId": "864cd86e-fe9b-49de-bd8f-6cb822b69111"
+    },
+    {
+      "caseId": "894ed8ad-c3b9-4938-85a8-bb53939c941e",
+      "runId": "5d5794af-0b39-4ee5-891f-60ef3691ce18"
+    },
+    {
+      "caseId": "a33f88bb-6ee9-40a9-aab3-57f4fc0b8576",
+      "runId": "f371a7c4-b8ee-4e60-9cf9-f6313b16aed5"
+    },
+    {
+      "caseId": "b10d422e-c79c-486f-b6c2-86fd3d5f39f3",
+      "runId": "e47f69a2-4b42-4393-a5d8-5356e166d3f7"
+    },
+    {
+      "caseId": "b32d366e-f20b-40d2-a8dc-8b8064cdb3c8",
+      "runId": "302a1002-ae89-4675-a28c-fbedfb70e7aa"
+    },
+    {
+      "caseId": "e8eb9167-5234-4530-a802-d99ee76754a8",
+      "runId": "285b194b-ba8e-4f56-8d7f-ecda01359944"
+    },
+    {
+      "caseId": "710df814-7f73-480e-af4c-6d855d6628ca",
+      "runId": "40a5a7eb-9a09-4d07-98c5-03343d8a62a2"
+    },
+    {
+      "caseId": "78156f31-fbd3-461b-b581-5d15412d8611",
+      "runId": "7be2f0ea-2b23-44c3-abad-39a2a39f5354"
+    },
+    {
+      "caseId": "42e7363a-acc2-438f-b5f3-16e0169c84aa",
+      "runId": "eb903bf9-3fda-41ff-b1ab-173559ab6c0a"
+    },
+    {
+      "caseId": "a914f048-0f17-4a0b-8f94-b46b35d5b5f2",
+      "runId": "9cae7ac9-3257-42ab-bf07-898761119f55"
+    },
+    {
+      "caseId": "0736613c-5d8f-420c-a1bc-fb3280206f33",
+      "runId": "d76b4b6b-bc4c-4606-846e-5e57f3805893"
+    },
+    {
+      "caseId": "91075e2c-8811-472b-b4cd-2f075ff7aa04",
+      "runId": "c9ad8263-45e3-43c0-b694-51d668d00164"
+    },
+    {
+      "caseId": "13a455d7-6024-483f-8225-9a9c3fc73422",
+      "runId": "cfad5519-1aea-4d39-a282-ec7661986541"
+    },
+    {
+      "caseId": "b8e5e5df-6f0d-4932-aa33-9879bdfc9a5a",
+      "runId": "68edc93a-e451-47a8-8388-466e0ab8259f"
+    },
+    {
+      "caseId": "b04841ae-9442-40c9-9acd-bbeebbe14da0",
+      "runId": "acd548e3-7809-4ae3-a13a-af320eb47282"
+    },
+    {
+      "caseId": "90802dbd-9308-4d31-8b51-f73316ef4846",
+      "runId": "95e90d33-01b3-444f-a7e1-ac60a4273894"
+    },
+    {
+      "caseId": "dac25174-1b7b-4137-a190-bb53df4d184e",
+      "runId": "1398b4f5-c9cc-4bd1-ad29-41c55ac4d928"
+    },
+    {
+      "caseId": "f3cf30ed-ba1a-4913-ae87-ef697d7054ac",
+      "runId": "2b183c03-073d-40d4-82ff-df5053aa056f"
+    },
+    {
+      "caseId": "7408bb36-af52-4955-9be2-8426e9c4926a",
+      "runId": "fd223287-1b04-461a-a809-4883e0fffcec"
+    },
+    {
+      "caseId": "6d94033f-e09c-4fa2-b134-17edb527b148",
+      "runId": "12fd605a-eafd-4074-8f0e-5103b10ad8d6"
+    },
+    {
+      "caseId": "5ab7aefc-eb07-4fc8-a124-23c6efc2839f",
+      "runId": "87b6c16d-ca29-4ca2-bf98-cd21f38f813e"
+    },
+    {
+      "caseId": "c8dce944-da40-430d-a2f8-5d732ac344a5",
+      "runId": "b7979549-35f3-4e83-88d1-342872c494e5"
+    },
+    {
+      "caseId": "da8e85a5-fd2e-4e73-8dcf-b3a447ad308a",
+      "runId": "525f9e62-8f19-4da3-a731-ca5c358398b0"
+    },
+    {
+      "caseId": "b597b982-2198-4c1f-81b0-659ec1c74645",
+      "runId": "94fc75fa-0b54-45ea-ac02-0ebfbfb30043"
+    },
+    {
+      "caseId": "2c01c63f-cbb5-4e25-a73f-17736c7d9fde",
+      "runId": "037023cb-8437-4385-9512-a9c895384715"
+    },
+    {
+      "caseId": "ef37902a-ea6e-4de9-bab5-52e0915d109e",
+      "runId": "4948bea0-7737-4471-8183-7afe1b6693a1"
+    },
+    {
+      "caseId": "807822ed-8758-427f-b3dc-e8d222c0469d",
+      "runId": "f6225b2b-e0b2-45e6-ad3f-203b64dae4c2"
+    },
+    {
+      "caseId": "8676c7ac-6f93-4a70-a905-5d80a25850b3",
+      "runId": "9bfeac6f-b433-4c09-9f5a-4d240373d750"
+    },
+    {
+      "caseId": "c4e7c8da-4c47-47c2-bed2-3695c9713d4b",
+      "runId": "cf149931-5f94-4f5f-9a54-da332b88ea05"
+    },
+    {
+      "caseId": "aa9583bd-5bfa-4566-81a8-626c8c1eefd1",
+      "runId": "35363e59-a426-4cd7-8916-fb4c7d1d878f"
+    },
+    {
+      "caseId": "2742230b-af29-430f-b951-2cea27cb3b2d",
+      "runId": "e5bbe6c2-3412-4ad6-badc-d0c5eb38d426"
+    },
+    {
+      "caseId": "a2265116-62a2-494f-944a-829ba41621b8",
+      "runId": "0377ebcb-4647-416f-a99b-2a56253d2e31"
+    },
+    {
+      "caseId": "71526cd7-2650-4227-9d9d-5475a36c5434",
+      "runId": "1517b3ab-b432-40fc-a55a-3a86dc38c9ac"
+    },
+    {
+      "caseId": "021f6085-2e7b-4c9c-bd6e-9e460f1c7089",
+      "runId": "3694166d-3c49-4ea9-bef0-9711d791dee9"
+    },
+    {
+      "caseId": "e69ec8eb-4c01-4f3f-bf83-d03ceb553234",
+      "runId": "d3fa65ac-d5a7-4892-b841-f308626169b0"
+    },
+    {
+      "caseId": "b33a5844-eb41-4467-a449-48e1370d1421",
+      "runId": "1b2a5969-0bba-4d87-894c-c86e6605c192"
+    },
+    {
+      "caseId": "3cde5b3a-9b02-4acd-8586-17834fa02046",
+      "runId": "ff9bfade-763f-4bfd-9928-e6f336a7b290"
+    },
+    {
+      "caseId": "dbbf7a98-c206-4f0e-8506-8e08105a9cb2",
+      "runId": "ae80eda2-a67d-4988-aa8a-4bd8facae298"
+    }
+  ],
+  "budgetBefore": {
+    "cap": 5,
+    "reservedAndSpent": 1.9992497700000003,
+    "usage": 1.9965617700000002,
+    "reserved": 0.0026880000000000003,
+    "attempts": 25420,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "summary": {
+    "skills": {
+      "assigned": 100,
+      "completed": 36,
+      "remaining": 64,
+      "solved": 30,
+      "requests": 5696,
+      "turns": 5891,
+      "inputTokens": 10974662,
+      "cost": 0.46093580400000017,
+      "activeMs": 2773617,
+      "recoveryDecisions": 41,
+      "requestLatencyMs": {
+        "p50": 293.236951999992,
+        "p95": 756.6982669999998
+      },
+      "failures": [
+        {
+          "caseId": "1a9889b5-98af-4223-9a26-d80adbafa90a",
+          "stage": "top-orientation",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "a641fffe-cdaf-4ee2-83fd-98ffe108525a",
+          "stage": "cross",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "e403c431-9706-4062-bd95-73b5a6d15db1",
+          "stage": "cross",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "77377258-e2d3-4580-b1f7-a34bc2a433f1",
+          "stage": "cross",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        },
+        {
+          "caseId": "9523e6b6-bcf1-40c1-9aca-9cf86cb94649",
+          "stage": "middle-layer",
+          "reason": "Policy abstained: selected completed target"
+        },
+        {
+          "caseId": "3e863364-86a0-4b3d-be65-e942610e9c6c",
+          "stage": "top-orientation",
+          "reason": "Policy abstained: no suitable operation or target already complete"
+        }
+      ]
+    }
+  },
+  "budgetAfter": {
+    "cap": 5,
+    "reservedAndSpent": 2.4601855740000005,
+    "usage": 2.4574975740000005,
+    "reserved": 0.0026880000000000003,
+    "attempts": 31116,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "accepted": false,
+  "cancelRequested": true,
+  "retirementReason": "More than five failures: 95/100 is impossible. Remaining cases were not attempted.",
+  "retiredAt": "2026-09-20T20:51:17.518Z"
+}

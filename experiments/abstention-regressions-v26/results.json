@@ -1,0 +1,204 @@
+{
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 2.4628687860000005,
+    "usage": 2.4601807860000005,
+    "reserved": 0.0026880000000000003,
+    "attempts": 31208,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "end": {
+    "cap": 5,
+    "reservedAndSpent": 2.4636059280000002,
+    "usage": 2.460917928,
+    "reserved": 0.0026880000000000003,
+    "attempts": 31227,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "results": [
+    {
+      "sourceRun": "eec7d23a-bbd0-4fdc-b4dc-17b9d3dfae7c",
+      "runId": "b011f284-8c7c-47c0-ad42-154ca3bda77e",
+      "stage": "top-orientation",
+      "decision": {
+        "target": "whole",
+        "front": "F",
+        "skill": "sune",
+        "alg": "R U R' U R U2 R'",
+        "intent": "orient"
+      },
+      "correct": true,
+      "factsBefore": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 12
+      },
+      "factsAfter": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 14
+      }
+    },
+    {
+      "sourceRun": "f7ba63b7-7d03-40c1-8e1b-06eec44b94df",
+      "runId": "ffbfca74-1e8f-4917-964e-20caa412b038",
+      "stage": "cross",
+      "decision": {
+        "target": "DF",
+        "front": "F",
+        "skill": "cross-lift-right",
+        "alg": "R U R'",
+        "intent": "extract"
+      },
+      "correct": true,
+      "factsBefore": {
+        "daisy": 0,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 4
+      },
+      "factsAfter": {
+        "daisy": 1,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 3
+      }
+    },
+    {
+      "sourceRun": "6ee44d48-3a8a-4e2f-ab5e-dd568f344aaa",
+      "runId": "e291294f-b56b-48da-815a-c362d8ad0cec",
+      "stage": "cross",
+      "decision": {
+        "target": "DR",
+        "front": "F",
+        "skill": "cross-lift-right",
+        "alg": "R U R'",
+        "intent": "extract"
+      },
+      "correct": true,
+      "factsBefore": {
+        "daisy": 0,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 2
+      },
+      "factsAfter": {
+        "daisy": 1,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 3
+      }
+    },
+    {
+      "sourceRun": "bc4140c9-9c76-4ac3-b7bc-2cf40bf7461a",
+      "runId": "39cde61a-9615-40ac-9456-55e944503401",
+      "stage": "cross",
+      "decision": {
+        "target": "DL",
+        "front": "L",
+        "skill": "cross-lift-right",
+        "alg": "F U F'",
+        "intent": "extract"
+      },
+      "correct": true,
+      "factsBefore": {
+        "daisy": 1,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 0
+      },
+      "factsAfter": {
+        "daisy": 2,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 0
+      }
+    },
+    {
+      "sourceRun": "e64925ef-576c-4261-8d1d-85132f7ee43c",
+      "runId": "82ee3abd-ea8c-4405-a8fc-87a2b871c11c",
+      "stage": "middle-layer",
+      "correct": false,
+      "error": "Error: Policy abstained: selected completed target"
+    },
+    {
+      "sourceRun": "d097f9e6-4506-4ab3-8914-49b3f3d49537",
+      "runId": "4c4250f0-d2e2-4b0c-a0a4-366bbbcc62b5",
+      "stage": "top-orientation",
+      "decision": {
+        "target": "whole",
+        "front": "F",
+        "skill": "sune",
+        "alg": "R U R' U R U2 R'",
+        "intent": "orient"
+      },
+      "correct": true,
+      "factsBefore": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 12
+      },
+      "factsAfter": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 14
+      }
+    }
+  ]
+}

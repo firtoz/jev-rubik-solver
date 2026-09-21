@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-20T21:59:50.619108+00:00",
+  "evaluation": "6f780b2b-6782-42c5-a5c1-77b04902e94e",
+  "completedBefore": 60,
+  "sql": "CREATE INDEX IF NOT EXISTS events_run_id_id ON events(run_id,id)",
+  "reason": "Per-run event queries scanned all later rowids; evaluation startup summaries delayed dispatch.",
+  "policyChanged": false,
+  "eventsChanged": false,
+  "note": "Runtime storage performance changed. Source fingerprint and attempt limits remain unchanged; report elapsed-time comparisons with this caveat."
+}
