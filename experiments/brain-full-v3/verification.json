@@ -1,0 +1,49 @@
+{
+  "partial": false,
+  "expected": 4,
+  "verified": 4,
+  "solved": 4,
+  "allAttemptsPresent": true,
+  "rows": [
+    {
+      "id": "known-loop",
+      "status": "solved",
+      "solved": true,
+      "turns": 169,
+      "requests": 186,
+      "committed": 0.010979682000000001,
+      "elapsedMs": 69003,
+      "recoveries": 0
+    },
+    {
+      "id": "short-1",
+      "status": "solved",
+      "solved": true,
+      "turns": 141,
+      "requests": 122,
+      "committed": 0.007584360000000001,
+      "elapsedMs": 45102,
+      "recoveries": 0
+    },
+    {
+      "id": "random-1",
+      "status": "solved",
+      "solved": true,
+      "turns": 204,
+      "requests": 202,
+      "committed": 0.011062842000000002,
+      "elapsedMs": 76318,
+      "recoveries": 0
+    },
+    {
+      "id": "random-2",
+      "status": "solved",
+      "solved": true,
+      "turns": 151,
+      "requests": 161,
+      "committed": 0.00945021,
+      "elapsedMs": 62965,
+      "recoveries": 0
+    }
+  ]
+}

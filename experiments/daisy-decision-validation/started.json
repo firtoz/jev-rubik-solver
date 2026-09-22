@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-21T16:56:31.231Z",
+  "variants": [
+    "direct",
+    "checks-only",
+    "counts-plain"
+  ],
+  "maxRequests": 120,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 4.104607164000001,
+    "usage": 4.099231164000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 52977,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "validation": true,
+  "scope": "Fresh complete pipelines, original direct comparator"
+}

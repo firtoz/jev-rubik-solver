@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "digest": "162ebf32c062c497418837129ba6e0a381bc092908e475be6c973763930f18b6",
+  "limits": {
+    "requests": 260,
+    "dollars": 0.04,
+    "concurrency": 3
+  },
+  "scope": "Isolated precondition choices. Prior target, reference and routine supplied. Not integration or full action correctness.",
+  "start": {
+    "cap": 9,
+    "reservedAndSpent": 4.151719362000001,
+    "usage": 4.1463433620000005,
+    "reserved": 0.005376000000000001,
+    "attempts": 53617,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

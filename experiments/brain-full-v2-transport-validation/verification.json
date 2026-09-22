@@ -1,0 +1,109 @@
+{
+  "partial": false,
+  "expected": 10,
+  "verified": 10,
+  "solved": 9,
+  "allAttemptsPresent": true,
+  "rows": [
+    {
+      "id": "random-1",
+      "status": "solved",
+      "solved": true,
+      "turns": 182,
+      "requests": 192,
+      "committed": 0.010928862000000001,
+      "elapsedMs": 71630,
+      "recoveries": 0
+    },
+    {
+      "id": "random-2",
+      "status": "solved",
+      "solved": true,
+      "turns": 151,
+      "requests": 187,
+      "committed": 0.010863216000000002,
+      "elapsedMs": 70914,
+      "recoveries": 0
+    },
+    {
+      "id": "random-3",
+      "status": "solved",
+      "solved": true,
+      "turns": 137,
+      "requests": 135,
+      "committed": 0.008257242000000001,
+      "elapsedMs": 52614,
+      "recoveries": 0
+    },
+    {
+      "id": "random-4",
+      "status": "solved",
+      "solved": true,
+      "turns": 202,
+      "requests": 205,
+      "committed": 0.012939444000000001,
+      "elapsedMs": 83633,
+      "recoveries": 0
+    },
+    {
+      "id": "random-5",
+      "status": "solved",
+      "solved": true,
+      "turns": 146,
+      "requests": 186,
+      "committed": 0.009881676,
+      "elapsedMs": 76583,
+      "recoveries": 0
+    },
+    {
+      "id": "random-6",
+      "status": "solved",
+      "solved": true,
+      "turns": 177,
+      "requests": 214,
+      "committed": 0.012613818000000002,
+      "elapsedMs": 86724,
+      "recoveries": 0
+    },
+    {
+      "id": "random-7",
+      "status": "solved",
+      "solved": true,
+      "turns": 156,
+      "requests": 154,
+      "committed": 0.00947268,
+      "elapsedMs": 63493,
+      "recoveries": 0
+    },
+    {
+      "id": "random-8",
+      "status": "solved",
+      "solved": true,
+      "turns": 160,
+      "requests": 140,
+      "committed": 0.008174376,
+      "elapsedMs": 58049,
+      "recoveries": 0
+    },
+    {
+      "id": "random-9",
+      "status": "solved",
+      "solved": true,
+      "turns": 149,
+      "requests": 164,
+      "committed": 0.009607458000000001,
+      "elapsedMs": 72581,
+      "recoveries": 0
+    },
+    {
+      "id": "random-10",
+      "status": "error",
+      "solved": false,
+      "turns": 12,
+      "requests": 82,
+      "committed": 0.005398764,
+      "elapsedMs": 64530,
+      "recoveries": 2
+    }
+  ]
+}

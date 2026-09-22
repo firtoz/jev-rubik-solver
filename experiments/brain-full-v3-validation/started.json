@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-22T16:17:45.600Z",
+  "digest": "3d27612fa7b06563a6299e5487c37d8d6fb61d181d0620bb8e5519dbc07d37ab",
+  "limits": {
+    "requestsPerAttempt": 500,
+    "turns": 1000,
+    "ms": 600000,
+    "studyRequests": 2500,
+    "studyDollars": 0.2,
+    "concurrency": 4,
+    "retries": 1,
+    "retryConditions": [
+      429,
+      529,
+      "request timeout/network failure before overall deadline"
+    ]
+  },
+  "scope": "10 fresh random states for validation; frozen v3 policy and transport. All failures count. Final acceptance requires 95/100 independently verified solves. No tuning on this set."
+}

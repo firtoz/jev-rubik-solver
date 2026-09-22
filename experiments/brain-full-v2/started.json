@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-22T15:29:58.556Z",
+  "digest": "fcc74821f382135428488ba9ceaee69ea01a389608a1ed6621f7567bea189553",
+  "limits": {
+    "requestsPerAttempt": 500,
+    "turns": 1000,
+    "ms": 600000,
+    "studyRequests": 1000,
+    "studyDollars": 0.12,
+    "retries": 0
+  },
+  "scope": "Four development full-policy runs, two short and two random-state. Not final acceptance."
+}

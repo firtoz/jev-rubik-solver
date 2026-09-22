@@ -1,0 +1,330 @@
+{
+  "rows": [
+    {
+      "caseId": "incomplete",
+      "outcome": "capped",
+      "reason": "Error: Attempt limit",
+      "requests": 60,
+      "turns": 7,
+      "cost": 0.0027100080000000007,
+      "activeMs": 22071,
+      "crossComplete": false,
+      "actions": 7,
+      "goalDecisions": 8,
+      "correctGoals": 8,
+      "correctRecognition": 8,
+      "audit": [
+        {
+          "step": 1,
+          "expectedGoal": "daisy",
+          "goal": "daisy",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "2",
+            "bottom": "0"
+          },
+          "alg": "U'"
+        },
+        {
+          "step": 2,
+          "expectedGoal": "daisy",
+          "goal": "daisy",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "2",
+            "bottom": "0"
+          },
+          "alg": "L'"
+        },
+        {
+          "step": 3,
+          "expectedGoal": "daisy",
+          "goal": "daisy",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "3",
+            "bottom": "0"
+          },
+          "alg": "U"
+        },
+        {
+          "step": 4,
+          "expectedGoal": "daisy",
+          "goal": "daisy",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "3",
+            "bottom": "0"
+          },
+          "alg": "R'"
+        },
+        {
+          "step": 5,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "4",
+            "bottom": "0"
+          },
+          "alg": "U'"
+        },
+        {
+          "step": 6,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "4",
+            "bottom": "0"
+          },
+          "alg": "R2"
+        },
+        {
+          "step": 7,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "3",
+            "bottom": "1"
+          },
+          "alg": "F2"
+        },
+        {
+          "step": 8,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "2",
+            "bottom": "2"
+          },
+          "alg": null
+        }
+      ]
+    },
+    {
+      "caseId": "full-daisy",
+      "outcome": "cross-complete",
+      "reason": "JEV chose first-layer",
+      "requests": 35,
+      "turns": 4,
+      "cost": 0.0016720620000000002,
+      "activeMs": 13125,
+      "crossComplete": true,
+      "actions": 4,
+      "goalDecisions": 5,
+      "correctGoals": 5,
+      "correctRecognition": 5,
+      "audit": [
+        {
+          "step": 1,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "4",
+            "bottom": "0"
+          },
+          "alg": "F2"
+        },
+        {
+          "step": 2,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "3",
+            "bottom": "1"
+          },
+          "alg": "R2"
+        },
+        {
+          "step": 3,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "2",
+            "bottom": "2"
+          },
+          "alg": "B2"
+        },
+        {
+          "step": 4,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "1",
+            "bottom": "3"
+          },
+          "alg": "L2"
+        },
+        {
+          "step": 5,
+          "expectedGoal": "first-layer",
+          "goal": "first-layer",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "0",
+            "bottom": "4"
+          },
+          "alg": null
+        }
+      ]
+    },
+    {
+      "caseId": "partial-transfer",
+      "outcome": "cross-complete",
+      "reason": "JEV chose first-layer",
+      "requests": 27,
+      "turns": 3,
+      "cost": 0.001274574,
+      "activeMs": 10580,
+      "crossComplete": true,
+      "actions": 3,
+      "goalDecisions": 4,
+      "correctGoals": 4,
+      "correctRecognition": 4,
+      "audit": [
+        {
+          "step": 1,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "3",
+            "bottom": "1"
+          },
+          "alg": "R2"
+        },
+        {
+          "step": 2,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "2",
+            "bottom": "2"
+          },
+          "alg": "B2"
+        },
+        {
+          "step": 3,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "1",
+            "bottom": "3"
+          },
+          "alg": "L2"
+        },
+        {
+          "step": 4,
+          "expectedGoal": "first-layer",
+          "goal": "first-layer",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "0",
+            "bottom": "4"
+          },
+          "alg": null
+        }
+      ]
+    },
+    {
+      "caseId": "earlier-cross-repair",
+      "outcome": "cross-complete",
+      "reason": "JEV chose first-layer",
+      "requests": 18,
+      "turns": 2,
+      "cost": 0.0008077860000000001,
+      "activeMs": 6505,
+      "crossComplete": true,
+      "actions": 2,
+      "goalDecisions": 3,
+      "correctGoals": 3,
+      "correctRecognition": 3,
+      "audit": [
+        {
+          "step": 1,
+          "expectedGoal": "daisy",
+          "goal": "daisy",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "0",
+            "bottom": "3"
+          },
+          "alg": "R"
+        },
+        {
+          "step": 2,
+          "expectedGoal": "cross",
+          "goal": "cross",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "1",
+            "bottom": "3"
+          },
+          "alg": "R2"
+        },
+        {
+          "step": 3,
+          "expectedGoal": "first-layer",
+          "goal": "first-layer",
+          "correctGoal": true,
+          "correctChecks": true,
+          "correctCounts": true,
+          "counts": {
+            "petal": "0",
+            "bottom": "4"
+          },
+          "alg": null
+        }
+      ]
+    }
+  ],
+  "requests": 140,
+  "cost": 0.006464430000000001
+}

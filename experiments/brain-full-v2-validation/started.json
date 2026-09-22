@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-22T15:35:04.566Z",
+  "digest": "fcc74821f382135428488ba9ceaee69ea01a389608a1ed6621f7567bea189553",
+  "limits": {
+    "requestsPerAttempt": 500,
+    "turns": 1000,
+    "ms": 600000,
+    "studyRequests": 2500,
+    "studyDollars": 0.2,
+    "retries": 0
+  },
+  "scope": "Ten fresh random-state validation attempts on unchanged development policy. Not final acceptance."
+}

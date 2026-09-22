@@ -1,0 +1,26 @@
+[
+  {
+    "id": "short-1",
+    "status": "abstained",
+    "solved": false,
+    "movesVerified": 3
+  },
+  {
+    "id": "short-2",
+    "status": "abstained",
+    "solved": false,
+    "movesVerified": 2
+  },
+  {
+    "id": "random-1",
+    "status": "abstained",
+    "solved": false,
+    "movesVerified": 3
+  },
+  {
+    "id": "random-2",
+    "status": "abstained",
+    "solved": false,
+    "movesVerified": 3
+  }
+]

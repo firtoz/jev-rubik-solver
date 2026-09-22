@@ -1,0 +1,29 @@
+{
+  "model": "jev-1.13.0",
+  "variants": [
+    "fields",
+    "sentences"
+  ],
+  "limits": {
+    "requests": 128,
+    "dollars": 0.02,
+    "concurrency": 4,
+    "retries": 0
+  },
+  "comparison": "Identical current measurements, memory, instructions and criteria. Change state serialization only. Identifiers retained in English to preserve explicit links to fixed criteria. Both forms frozen before either batch. No tuning between batches.",
+  "fixtureLimit": "64 distinct legal routine-generated states from the existing goal-contract development and validation suites, balanced four per goal per batch. Reused evaluation cases, not a new held-out validation. Neither format is revised between batches. Synthetic previousGoal and one-turn memory are controlled irrelevant-context stress tests, not recorded solving history. This is component accuracy, not solve reliability.",
+  "pricing": {
+    "verified": "2026-09-22",
+    "source": "https://docs.typesafe.ai/models",
+    "inputPerMillion": 0.042
+  },
+  "budgetBefore": {
+    "cap": 9,
+    "reservedAndSpent": 5.5885956000000006,
+    "usage": 5.5724676,
+    "reserved": 0.016128000000000003,
+    "attempts": 78823,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

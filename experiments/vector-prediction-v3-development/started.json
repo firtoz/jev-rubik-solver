@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-21T16:15:23.051Z",
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 4.048675134000001,
+    "usage": 4.043299134000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 51723,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "maxRequests": 40
+}

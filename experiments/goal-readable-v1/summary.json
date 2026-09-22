@@ -1,0 +1,176 @@
+{
+  "scores": [
+    {
+      "variant": "fields",
+      "correct": 64,
+      "total": 64,
+      "errors": 0,
+      "batches": [
+        {
+          "phase": "batch-a",
+          "correct": 32,
+          "total": 32
+        },
+        {
+          "phase": "batch-b",
+          "correct": 32,
+          "total": 32
+        }
+      ],
+      "inputTokens": 48888,
+      "estimatedCost": 0.0020532959999999996,
+      "medianMs": 421.90723899999966,
+      "summedMs": 27842.957030000012,
+      "failures": []
+    },
+    {
+      "variant": "sentences",
+      "correct": 64,
+      "total": 64,
+      "errors": 0,
+      "batches": [
+        {
+          "phase": "batch-a",
+          "correct": 32,
+          "total": 32
+        },
+        {
+          "phase": "batch-b",
+          "correct": 32,
+          "total": 32
+        }
+      ],
+      "inputTokens": 53328,
+      "estimatedCost": 0.0022397759999999984,
+      "medianMs": 422.5442490000014,
+      "summedMs": 27756.205317999993,
+      "failures": []
+    }
+  ],
+  "paired": {
+    "bothCorrect": 64,
+    "fieldsOnly": 0,
+    "sentencesOnly": 0,
+    "bothWrong": 0
+  },
+  "usage": {
+    "requests": 128,
+    "cost": 0.004293072
+  },
+  "scope": "64 reused legal cube states, 63 distinct inputs. Same facts, same teaching, same criteria. Synthetic memory. No new held-out claims, no solver change.",
+  "representative": [
+    {
+      "variant": "fields",
+      "expected": "cross",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "completed": {
+            "daisy": 4,
+            "cross": false,
+            "firstLayer": false,
+            "middle": false,
+            "topCross": false,
+            "topOriented": false,
+            "cornersPlaced": false,
+            "solved": false,
+            "solvedPieces": 3
+          },
+          "uncollectedYellowEdges": 0,
+          "previousGoal": "daisy",
+          "recentActions": [
+            "U"
+          ]
+        },
+        "questions": {
+          "goal": {
+            "type": "choice",
+            "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+            "criteria": {
+              "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+              "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+              "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+              "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+              "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+              "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+              "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+              "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "goal": {
+            "type": "choice",
+            "choice": "cross",
+            "confidence": 0.92,
+            "probabilities": {
+              "middle-layer": 0,
+              "cross": 0.93,
+              "daisy": 0.07,
+              "top-orientation": 0,
+              "top-cross": 0,
+              "top-corners": 0,
+              "first-layer": 0,
+              "top-edges": 0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 762,
+          "output_tokens": 85
+        }
+      }
+    },
+    {
+      "variant": "sentences",
+      "expected": "cross",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "There are 4 yellow-up edge petals around the top center (completed.daisy).\nThe yellow bottom cross (completed.cross) is not complete.\nThe bottom layer (completed.firstLayer) is not complete.\nThe middle layer (completed.middle) is not complete.\nThe white top cross (completed.topCross) is not complete.\nThe white top face orientation (completed.topOriented) is not complete.\nThe placement of all corners (completed.cornersPlaced) is not complete.\nThe whole cube (completed.solved) is not complete.\n3 edges and corners are in their home slots with correct orientation (completed.solvedPieces).\n0 yellow edges are neither yellow-up petals nor solved bottom edges (uncollectedYellowEdges).\nThe previous goal (previousGoal) is \"daisy\".\nThe most recent actions, in order (recentActions), are [\"U\"].",
+        "questions": {
+          "goal": {
+            "type": "choice",
+            "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+            "criteria": {
+              "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+              "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+              "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+              "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+              "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+              "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+              "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+              "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "goal": {
+            "type": "choice",
+            "choice": "cross",
+            "confidence": 0.99,
+            "probabilities": {
+              "top-edges": 0,
+              "daisy": 0,
+              "cross": 1,
+              "middle-layer": 0,
+              "top-orientation": 0,
+              "top-corners": 0,
+              "first-layer": 0,
+              "top-cross": 0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 834,
+          "output_tokens": 85
+        }
+      }
+    }
+  ]
+}

@@ -128,10 +128,10 @@ function Lab() {
         <div className="budget">
           <small>ESTIMATED API USAGE</small>
           <strong>
-            {budget ? `$${budget.usage.toFixed(4)}` : 'Not set'} <span>/ $5</span>
+            {budget ? `$${budget.usage.toFixed(4)}` : 'Not set'} <span>/ {budget ? `$${budget.cap}` : '…'}</span>
           </strong>
           <div className="meter">
-            <i style={{ width: `${Math.max(1, ((budget?.reservedAndSpent || 0) / 5) * 100)}%` }} />
+            <i style={{ width: `${Math.max(1, ((budget?.reservedAndSpent || 0) / (budget?.cap || 1)) * 100)}%` }} />
           </div>
           <small>
             {!budget

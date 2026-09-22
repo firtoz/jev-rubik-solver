@@ -1,0 +1,18 @@
+[
+  {
+    "id": "short-1",
+    "scramble": "R U F"
+  },
+  {
+    "id": "short-2",
+    "scramble": "F2 R U' L D"
+  },
+  {
+    "id": "random-1",
+    "scramble": "U2 R D2 B' R' B2 U' F' D U2 B' D2 L2 F U2 B2 D2 L2 F R2 U2"
+  },
+  {
+    "id": "random-2",
+    "scramble": "R2 U L2 F U' B' L D U2 R' U2 L2 U2 R B2 D2 B2 L2 D2 B"
+  }
+]

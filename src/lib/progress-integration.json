@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "caseId": "cross-repair",
+      "variant": "supplied-facts",
+      "outcome": "handoff",
+      "requests": 41,
+      "turns": 26,
+      "cost": 0.002883006,
+      "actions": 8,
+      "goalErrors": 0,
+      "goalDecisions": 9
+    },
+    {
+      "caseId": "cross-repair",
+      "variant": "regional",
+      "outcome": "error",
+      "requests": 38,
+      "turns": 9,
+      "cost": 0.0025962299999999993,
+      "actions": 5,
+      "goalErrors": 1,
+      "goalDecisions": 6
+    },
+    {
+      "caseId": "corner-repair",
+      "variant": "supplied-facts",
+      "outcome": "solved",
+      "requests": 18,
+      "turns": 13,
+      "cost": 0.0014665980000000006,
+      "actions": 4,
+      "goalErrors": 0,
+      "goalDecisions": 4
+    },
+    {
+      "caseId": "corner-repair",
+      "variant": "regional",
+      "outcome": "error",
+      "requests": 5,
+      "turns": 0,
+      "cost": 0.00028992600000000003,
+      "actions": 0,
+      "goalErrors": 1,
+      "goalDecisions": 1
+    },
+    {
+      "caseId": "middle-repair",
+      "variant": "supplied-facts",
+      "outcome": "solved",
+      "requests": 5,
+      "turns": 8,
+      "cost": 0.00035977200000000006,
+      "actions": 1,
+      "goalErrors": 0,
+      "goalDecisions": 1
+    },
+    {
+      "caseId": "middle-repair",
+      "variant": "regional",
+      "outcome": "solved",
+      "requests": 7,
+      "turns": 8,
+      "cost": 0.00047867400000000006,
+      "actions": 1,
+      "goalErrors": 0,
+      "goalDecisions": 1
+    }
+  ],
+  "requests": 114,
+  "cost": 0.008074206
+}

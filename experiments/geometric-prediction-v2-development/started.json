@@ -1,0 +1,19 @@
+{
+  "split": "development",
+  "variants": [
+    "neutral",
+    "coordinates",
+    "decomposed"
+  ],
+  "maxRequests": 80,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 4.045749540000001,
+    "usage": 4.040373540000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 51643,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "at": "2026-09-21T16:14:06.510Z"
+}

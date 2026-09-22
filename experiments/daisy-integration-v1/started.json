@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-21T20:29:27.384Z",
+  "model": "jev-1.13.0",
+  "limits": {
+    "requests": 60,
+    "turns": 200,
+    "ms": 120000,
+    "batchDollars": 0.05
+  },
+  "fixtures": [
+    {
+      "id": "incomplete",
+      "scramble": "U' U2 F R U R' U' F' F2 R2 B2 L2 L U R",
+      "sourceCase": "development-1"
+    },
+    {
+      "id": "full-daisy",
+      "scramble": "R U R' U R U2 R' U' U2 U2 U' F R U R' U' F' F2 R2 B2 L2",
+      "sourceCase": "development-6"
+    },
+    {
+      "id": "partial-transfer",
+      "scramble": "R U R' U R U2 R' R U R' U R U2 R' U F R U R' U' F' F R U R' U' F' F2 R2 B2 L2 F2",
+      "sourceCase": "development-11"
+    },
+    {
+      "id": "earlier-cross-repair",
+      "scramble": "R",
+      "sourceCase": "previous failed integration"
+    }
+  ],
+  "initialBudget": {
+    "cap": 5,
+    "reservedAndSpent": 4.108731564,
+    "usage": 4.103355564,
+    "reserved": 0.005376000000000001,
+    "attempts": 53097,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "scope": "Four diagnostic development attempts. Frozen counts-plain recognition chain; original skill assistance retained downstream. Stop only when JEV chooses first-layer and independently score cross completion. No retries/recovery/tuning. No full solving claim."
+}

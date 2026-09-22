@@ -1,0 +1,67 @@
+{
+  "accepted": true,
+  "solved": 100,
+  "total": 100,
+  "policyDigest": "3d27612fa7b06563a6299e5487c37d8d6fb61d181d0620bb8e5519dbc07d37ab",
+  "model": "jev-1.13.0",
+  "limits": {
+    "requestsPerAttempt": 500,
+    "turns": 1000,
+    "ms": 600000,
+    "studyRequests": 50000,
+    "studyDollars": 3,
+    "concurrency": 4,
+    "retries": 1,
+    "retryConditions": [
+      429,
+      529,
+      "request timeout/network failure before overall deadline"
+    ]
+  },
+  "statuses": {
+    "solved": 100
+  },
+  "errors": {},
+  "requests": {
+    "min": 108,
+    "median": 173.5,
+    "p95": 227,
+    "max": 291,
+    "mean": 176.65
+  },
+  "faceTurns": {
+    "min": 80,
+    "median": 159.5,
+    "p95": 220,
+    "max": 295,
+    "mean": 161.33
+  },
+  "elapsedMs": {
+    "min": 47179,
+    "median": 75962.5,
+    "p95": 105549,
+    "max": 130779,
+    "mean": 77066.38
+  },
+  "spending": {
+    "settled": 1.00927764,
+    "uncertainReservations": 0.005376000000000001,
+    "networkRequests": 17665
+  },
+  "inputTokens": 24030420,
+  "providerLatencyMs": 5878335.270732976,
+  "transportRetries": 2,
+  "planResumes": 193,
+  "planReconsiderations": 4,
+  "recoveries": 13,
+  "evidence": [
+    "started.json",
+    "sources.json",
+    "runner-source.ts",
+    "fixtures.json",
+    "verification.json",
+    "freshness-verification.json",
+    "results.json"
+  ],
+  "interpretation": "Observed held-out performance with explicit static routine teaching and code-measured observations. Every failed or capped attempt remains in the denominator."
+}

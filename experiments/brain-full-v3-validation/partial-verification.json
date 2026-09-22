@@ -1,0 +1,49 @@
+{
+  "partial": true,
+  "expected": 10,
+  "verified": 4,
+  "solved": 4,
+  "allAttemptsPresent": false,
+  "rows": [
+    {
+      "id": "random-1",
+      "status": "solved",
+      "solved": true,
+      "turns": 207,
+      "requests": 195,
+      "committed": 0.011619174000000001,
+      "elapsedMs": 77512,
+      "recoveries": 1
+    },
+    {
+      "id": "random-2",
+      "status": "solved",
+      "solved": true,
+      "turns": 145,
+      "requests": 143,
+      "committed": 0.009225804,
+      "elapsedMs": 56534,
+      "recoveries": 0
+    },
+    {
+      "id": "random-3",
+      "status": "solved",
+      "solved": true,
+      "turns": 143,
+      "requests": 164,
+      "committed": 0.009008244000000002,
+      "elapsedMs": 65005,
+      "recoveries": 0
+    },
+    {
+      "id": "random-4",
+      "status": "solved",
+      "solved": true,
+      "turns": 150,
+      "requests": 180,
+      "committed": 0.009778482000000002,
+      "elapsedMs": 70967,
+      "recoveries": 0
+    }
+  ]
+}

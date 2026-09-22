@@ -1,0 +1,95 @@
+{
+  "source": "experiments/action-preconditions-v1",
+  "phases": [
+    {
+      "phase": "development",
+      "summary": [
+        {
+          "variant": "rule",
+          "family": "transfer",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 20,
+          "cost": 0.000506982,
+          "latencyMs": 7271.422688999999
+        },
+        {
+          "variant": "rule",
+          "family": "landing",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 20,
+          "cost": 0.0005512920000000002,
+          "latencyMs": 7091.001138000005
+        },
+        {
+          "variant": "criteria",
+          "family": "transfer",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 20,
+          "cost": 0.0005128620000000002,
+          "latencyMs": 7380.910643999999
+        },
+        {
+          "variant": "criteria",
+          "family": "landing",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 20,
+          "cost": 0.0005748120000000001,
+          "latencyMs": 6870.637568999999
+        },
+        {
+          "variant": "check-then-choice",
+          "family": "transfer",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 40,
+          "cost": 0.0009593640000000006,
+          "latencyMs": 15858.098730000005
+        },
+        {
+          "variant": "check-then-choice",
+          "family": "landing",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 40,
+          "cost": 0.0010043040000000004,
+          "latencyMs": 14947.226457000015
+        }
+      ]
+    },
+    {
+      "phase": "validation",
+      "summary": [
+        {
+          "variant": "rule",
+          "family": "transfer",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 20,
+          "cost": 0.000506814,
+          "latencyMs": 8187.947709999997
+        },
+        {
+          "variant": "rule",
+          "family": "landing",
+          "cases": 20,
+          "correct": 20,
+          "errors": 0,
+          "requests": 20,
+          "cost": 0.0005513340000000002,
+          "latencyMs": 6878.881127999999
+        }
+      ]
+    }
+  ]
+}

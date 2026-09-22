@@ -1,0 +1,1132 @@
+[
+  {
+    "id": "move-01",
+    "scramble": "U",
+    "stateHash": "[{\"pieces\":[1,2,3,0,4,5,6,7,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[1,2,3,0,4,5,6,7],\"orientation\":[0,0,0,0,0,0,0,0]}]",
+    "affected": false,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DL",
+          "kind": "edge",
+          "position": "DL",
+          "stickers": {
+            "yellow": "D",
+            "orange": "L"
+          }
+        },
+        "trackedSticker": "yellow",
+        "proposedTurn": "U"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DL",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-02",
+    "scramble": "D",
+    "stateHash": "[{\"pieces\":[0,1,2,3,7,4,5,6,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[0,1,2,3,5,6,7,4],\"orientation\":[0,0,0,0,0,0,0,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "URB",
+          "kind": "corner",
+          "position": "URB",
+          "stickers": {
+            "white": "U",
+            "red": "R",
+            "blue": "B"
+          }
+        },
+        "trackedSticker": "red",
+        "proposedTurn": "U'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "UBL",
+      "stickerDirection": "B"
+    }
+  },
+  {
+    "id": "move-03",
+    "scramble": "F",
+    "stateHash": "[{\"pieces\":[9,1,2,3,8,5,6,7,0,4,10,11],\"orientation\":[1,0,0,0,1,0,0,0,1,1,0,0]},{\"pieces\":[3,1,2,5,0,4,6,7],\"orientation\":[1,0,0,2,2,1,0,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "UL",
+          "kind": "edge",
+          "position": "UL",
+          "stickers": {
+            "white": "U",
+            "orange": "L"
+          }
+        },
+        "trackedSticker": "white",
+        "proposedTurn": "U2"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "UR",
+      "stickerDirection": "U"
+    }
+  },
+  {
+    "id": "move-04",
+    "scramble": "B",
+    "stateHash": "[{\"pieces\":[0,1,10,3,4,5,11,7,8,9,6,2],\"orientation\":[0,0,1,0,0,0,1,0,0,0,1,1]},{\"pieces\":[0,7,1,3,4,5,2,6],\"orientation\":[0,2,1,0,0,0,2,1]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DFL",
+          "kind": "corner",
+          "position": "DFL",
+          "stickers": {
+            "yellow": "D",
+            "green": "F",
+            "orange": "L"
+          }
+        },
+        "trackedSticker": "yellow",
+        "proposedTurn": "D"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DRF",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-05",
+    "scramble": "R",
+    "stateHash": "[{\"pieces\":[0,8,2,3,4,10,6,7,5,9,1,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,2,3,7,5,6,1],\"orientation\":[2,1,0,0,1,0,0,2]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DL",
+          "kind": "edge",
+          "position": "DL",
+          "stickers": {
+            "yellow": "D",
+            "orange": "L"
+          }
+        },
+        "trackedSticker": "yellow",
+        "proposedTurn": "D'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DB",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-06",
+    "scramble": "L",
+    "stateHash": "[{\"pieces\":[0,1,2,11,4,5,6,9,8,3,10,7],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[0,1,6,2,4,3,5,7],\"orientation\":[0,0,2,1,0,2,1,0]}]",
+    "affected": false,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "URB",
+          "kind": "corner",
+          "position": "URB",
+          "stickers": {
+            "white": "U",
+            "red": "R",
+            "blue": "B"
+          }
+        },
+        "trackedSticker": "white",
+        "proposedTurn": "D2"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "URB",
+      "stickerDirection": "U"
+    }
+  },
+  {
+    "id": "move-07",
+    "scramble": "F' R B U2 L2",
+    "stateHash": "[{\"pieces\":[1,3,8,7,9,10,11,4,5,2,6,0],\"orientation\":[1,0,1,0,1,0,1,1,0,1,1,1]},{\"pieces\":[4,0,3,2,7,5,1,6],\"orientation\":[0,2,1,2,1,1,1,1]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DR",
+          "kind": "edge",
+          "position": "FR",
+          "stickers": {
+            "yellow": "F",
+            "red": "R"
+          }
+        },
+        "trackedSticker": "red",
+        "proposedTurn": "F"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DF",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-08",
+    "scramble": "F2 B F2 U' D'",
+    "stateHash": "[{\"pieces\":[3,0,1,10,5,11,7,4,8,9,6,2],\"orientation\":[0,0,0,1,0,1,0,0,0,0,1,1]},{\"pieces\":[3,0,7,1,6,4,5,2],\"orientation\":[0,0,2,1,1,0,0,2]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DFL",
+          "stickers": {
+            "yellow": "D",
+            "red": "F",
+            "green": "L"
+          }
+        },
+        "trackedSticker": "red",
+        "proposedTurn": "F'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DRF",
+      "stickerDirection": "F"
+    }
+  },
+  {
+    "id": "move-09",
+    "scramble": "D F B R D",
+    "stateHash": "[{\"pieces\":[9,0,10,3,6,8,5,11,4,7,1,2],\"orientation\":[1,1,1,0,0,1,1,1,0,1,0,1]},{\"pieces\":[0,3,1,6,5,2,4,7],\"orientation\":[1,2,1,2,1,2,1,2]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "FL",
+          "kind": "edge",
+          "position": "UF",
+          "stickers": {
+            "green": "F",
+            "orange": "U"
+          }
+        },
+        "trackedSticker": "orange",
+        "proposedTurn": "F2"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DF",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-10",
+    "scramble": "R L2 F2 B2 F",
+    "stateHash": "[{\"pieces\":[5,8,6,7,11,10,2,3,4,0,9,1],\"orientation\":[1,0,0,0,1,0,0,0,1,1,0,0]},{\"pieces\":[7,3,1,4,2,6,0,5],\"orientation\":[2,0,2,1,2,1,1,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "URB",
+          "kind": "corner",
+          "position": "UBL",
+          "stickers": {
+            "white": "B",
+            "red": "L",
+            "blue": "U"
+          }
+        },
+        "trackedSticker": "red",
+        "proposedTurn": "B"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DLB",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-11",
+    "scramble": "B D' D R D",
+    "stateHash": "[{\"pieces\":[0,8,10,3,7,4,6,11,5,9,1,2],\"orientation\":[0,0,1,0,0,0,1,1,0,0,0,1]},{\"pieces\":[4,0,1,3,5,2,7,6],\"orientation\":[2,1,1,0,0,2,1,2]}]",
+    "affected": false,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "UL",
+          "kind": "edge",
+          "position": "UL",
+          "stickers": {
+            "white": "U",
+            "orange": "L"
+          }
+        },
+        "trackedSticker": "orange",
+        "proposedTurn": "B'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "UL",
+      "stickerDirection": "L"
+    }
+  },
+  {
+    "id": "move-12",
+    "scramble": "U U' L' B B'",
+    "stateHash": "[{\"pieces\":[0,1,2,9,4,5,6,11,8,7,10,3],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[0,1,3,5,4,6,2,7],\"orientation\":[0,0,2,1,0,2,1,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DBR",
+          "kind": "corner",
+          "position": "DBR",
+          "stickers": {
+            "yellow": "D",
+            "blue": "B",
+            "red": "R"
+          }
+        },
+        "trackedSticker": "blue",
+        "proposedTurn": "B2"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "UBL",
+      "stickerDirection": "B"
+    }
+  },
+  {
+    "id": "move-13",
+    "scramble": "B2 L' L R B2",
+    "stateHash": "[{\"pieces\":[0,8,2,3,4,11,6,7,5,9,10,1],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,1,6,3,2,5,0,7],\"orientation\":[2,0,2,0,1,0,1,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          }
+        },
+        "trackedSticker": "red",
+        "proposedTurn": "R"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "BR",
+      "stickerDirection": "R"
+    }
+  },
+  {
+    "id": "move-14",
+    "scramble": "U F' F2 D U2 D2 U2 B R2 D",
+    "stateHash": "[{\"pieces\":[9,6,10,0,8,5,2,11,7,4,1,3],\"orientation\":[1,0,1,0,1,0,0,1,1,1,1,1]},{\"pieces\":[4,7,2,5,1,3,0,6],\"orientation\":[2,0,1,2,2,2,1,2]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          }
+        },
+        "trackedSticker": "green",
+        "proposedTurn": "R'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DRF",
+      "stickerDirection": "F"
+    }
+  },
+  {
+    "id": "move-15",
+    "scramble": "U2 B U D R D R L L' D",
+    "stateHash": "[{\"pieces\":[3,4,1,2,5,11,10,6,7,9,8,0],\"orientation\":[0,0,0,0,0,1,1,1,0,0,0,1]},{\"pieces\":[0,5,1,2,6,3,7,4],\"orientation\":[1,0,0,0,1,0,2,2]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DF",
+          "kind": "edge",
+          "position": "UR",
+          "stickers": {
+            "yellow": "U",
+            "green": "R"
+          }
+        },
+        "trackedSticker": "green",
+        "proposedTurn": "R2"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DR",
+      "stickerDirection": "R"
+    }
+  },
+  {
+    "id": "move-16",
+    "scramble": "B' B L' R' U2 L2 U2 D B' B",
+    "stateHash": "[{\"pieces\":[0,11,2,9,10,4,8,6,1,3,5,7],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[6,2,3,5,1,7,4,0],\"orientation\":[2,1,2,1,2,1,2,1]}]",
+    "affected": false,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DLB",
+          "kind": "corner",
+          "position": "UFR",
+          "stickers": {
+            "yellow": "F",
+            "orange": "R",
+            "blue": "U"
+          }
+        },
+        "trackedSticker": "orange",
+        "proposedTurn": "L"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "UFR",
+      "stickerDirection": "R"
+    }
+  },
+  {
+    "id": "move-17",
+    "scramble": "F2 L2 U2 F' B' B2 F L B' B2",
+    "stateHash": "[{\"pieces\":[2,7,6,4,0,5,3,11,9,1,8,10],\"orientation\":[0,0,0,1,0,0,1,0,0,0,0,0]},{\"pieces\":[0,4,7,6,3,1,5,2],\"orientation\":[0,0,0,2,0,2,0,2]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DF",
+          "kind": "edge",
+          "position": "UL",
+          "stickers": {
+            "yellow": "L",
+            "green": "U"
+          }
+        },
+        "trackedSticker": "green",
+        "proposedTurn": "L'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "BL",
+      "stickerDirection": "B"
+    }
+  },
+  {
+    "id": "move-18",
+    "scramble": "F U' L' B R2 D2 B' R' U L",
+    "stateHash": "[{\"pieces\":[10,1,4,8,2,6,0,7,5,3,11,9],\"orientation\":[0,0,1,0,1,1,0,0,0,0,0,1]},{\"pieces\":[0,7,6,4,1,3,5,2],\"orientation\":[1,0,0,0,0,2,0,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DLB",
+          "kind": "corner",
+          "position": "UBL",
+          "stickers": {
+            "yellow": "U",
+            "orange": "B",
+            "blue": "L"
+          }
+        },
+        "trackedSticker": "yellow",
+        "proposedTurn": "L2"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "DFL",
+      "stickerDirection": "D"
+    }
+  },
+  {
+    "id": "move-19",
+    "scramble": "D' R' F F' R2 U' B' R' D' F'",
+    "stateHash": "[{\"pieces\":[0,8,11,2,9,1,4,5,6,3,10,7],\"orientation\":[1,1,1,0,1,1,0,0,1,1,0,1]},{\"pieces\":[6,7,5,0,3,2,4,1],\"orientation\":[1,1,1,1,0,1,0,1]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "UF",
+          "kind": "edge",
+          "position": "UF",
+          "stickers": {
+            "white": "F",
+            "green": "U"
+          }
+        },
+        "trackedSticker": "green",
+        "proposedTurn": "U"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UF": "The slot touching faces U, F",
+            "UR": "The slot touching faces U, R",
+            "UB": "The slot touching faces U, B",
+            "UL": "The slot touching faces U, L",
+            "DF": "The slot touching faces D, F",
+            "DR": "The slot touching faces D, R",
+            "DB": "The slot touching faces D, B",
+            "DL": "The slot touching faces D, L",
+            "FR": "The slot touching faces F, R",
+            "FL": "The slot touching faces F, L",
+            "BR": "The slot touching faces B, R",
+            "BL": "The slot touching faces B, L"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "UL",
+      "stickerDirection": "U"
+    }
+  },
+  {
+    "id": "move-20",
+    "scramble": "U U' F U' R2 L U2 B2 D' B",
+    "stateHash": "[{\"pieces\":[1,11,7,5,9,3,0,8,10,2,4,6],\"orientation\":[0,0,1,0,1,0,0,1,0,0,0,1]},{\"pieces\":[6,1,4,0,7,3,5,2],\"orientation\":[2,0,0,2,0,1,1,0]}]",
+    "affected": true,
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "target": {
+          "piece": "DLB",
+          "kind": "corner",
+          "position": "UFR",
+          "stickers": {
+            "yellow": "F",
+            "orange": "R",
+            "blue": "U"
+          }
+        },
+        "trackedSticker": "yellow",
+        "proposedTurn": "U'"
+      },
+      "questions": {
+        "position": {
+          "type": "choice",
+          "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+          "criteria": {
+            "UFR": "The slot touching faces U, F, R",
+            "URB": "The slot touching faces U, R, B",
+            "UBL": "The slot touching faces U, B, L",
+            "ULF": "The slot touching faces U, L, F",
+            "DRF": "The slot touching faces D, R, F",
+            "DFL": "The slot touching faces D, F, L",
+            "DLB": "The slot touching faces D, L, B",
+            "DBR": "The slot touching faces D, B, R"
+          }
+        },
+        "stickerDirection": {
+          "type": "choice",
+          "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+          "criteria": {
+            "U": "Up",
+            "D": "Down",
+            "F": "Front",
+            "B": "Back",
+            "R": "Right",
+            "L": "Left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "position": "URB",
+      "stickerDirection": "R"
+    }
+  }
+]

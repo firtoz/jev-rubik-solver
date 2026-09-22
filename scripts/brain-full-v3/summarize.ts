@@ -1,0 +1,22 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {db} from '../../src/server/store';
+const dir='experiments/brain-full-v3-final';
+const read=(p:string)=>JSON.parse(readFileSync(`${dir}/${p}`,'utf8'));
+const verified=read('verification.json'),manifest=read('started.json');
+if(verified.partial||verified.expected!==100||verified.verified!==100||!verified.allAttemptsPresent)throw new Error('Complete independent verification of all 100 attempts is required');
+const freshness=read('freshness-verification.json');
+if(freshness.starts!==100||freshness.unique!==100||freshness.overlaps.length)throw new Error('Held-out independence not verified');
+const rows=verified.rows;
+const distribution=(key:string)=>{const values=rows.map((r:any)=>r[key]).sort((a:number,b:number)=>a-b);return {min:values[0],median:(values[49]+values[50])/2,p95:values[94],max:values[99],mean:values.reduce((a:number,b:number)=>a+b,0)/100};};
+const statuses:Record<string,number>={},errors:Record<string,number>={};let inputTokens=0,providerLatencyMs=0,transportRetries=0,planResumes=0,planReconsiderations=0;
+for(const row of rows){
+ statuses[row.status]=(statuses[row.status]??0)+1;const record=read(`${row.id}.json`);
+ if(record.error)errors[record.error]=(errors[record.error]??0)+1;
+ for(const step of record.steps){transportRetries+=(step.transportRetries??[]).length;for(const d of step.exchanges){inputTokens+=d.response.usage.input_tokens;providerLatencyMs+=d.elapsedMs;const p=d.response.answers.plan?.choice;if(p==='resume')planResumes++;if(p==='reconsider')planReconsiderations++;}}
+}
+const spending=db.query("SELECT COALESCE(SUM(CASE WHEN l.status='settled' THEN amount ELSE 0 END),0) settled,COALESCE(SUM(CASE WHEN l.status='reserved' THEN amount ELSE 0 END),0) uncertainReservations,COUNT(*) networkRequests FROM ledger l JOIN runs r ON r.id=l.run_id WHERE json_extract(r.json,'$.split')='brain-full-v3-final'").get() as any;
+if(spending.networkRequests!==rows.reduce((n:number,r:any)=>n+r.requests,0))throw new Error('Summary ledger mismatch');
+const report={accepted:verified.solved>=95,solved:verified.solved,total:100,policyDigest:manifest.digest,model:'jev-1.13.0',limits:manifest.limits,statuses,errors,requests:distribution('requests'),faceTurns:distribution('turns'),elapsedMs:distribution('elapsedMs'),spending,inputTokens,providerLatencyMs,transportRetries,planResumes,planReconsiderations,recoveries:rows.reduce((n:number,r:any)=>n+r.recoveries,0),evidence:['started.json','sources.json','runner-source.ts','fixtures.json','verification.json','freshness-verification.json','results.json'],interpretation:'Observed held-out performance with explicit static routine teaching and code-measured observations. Every failed or capped attempt remains in the denominator.'};
+writeFileSync(`${dir}/acceptance-report.json`,JSON.stringify(report,null,2));
+writeFileSync(`${dir}/RESULTS.md`,`# JEV brain v3 held-out result\n\n${report.solved}/100 solved. The predeclared 95/100 threshold ${report.accepted?'was met':'was not met'}.\n\nAll 100 attempts were independently verified against their scrambles and recorded choices. Limits were 500 network requests, 1000 face turns and ten minutes each. Transport retries count toward the limits. Every failure remains in the denominator.\n\n- Network requests: ${spending.networkRequests}\n- Settled token-cost estimate: $${spending.settled.toFixed(6)}\n- Retained uncertain reservations: $${spending.uncertainReservations.toFixed(6)}\n- Median requests per attempt: ${report.requests.median}\n- Median face turns per attempt: ${report.faceTurns.median}\n- Median elapsed seconds per attempt: ${(report.elapsedMs.median/1000).toFixed(1)}\n- Transport retries: ${transportRetries}\n\nCode supplies current geometry, counts, patterns and completed structures. JEV chooses the goal, target, situation, reference, routine, setup and recovery. Fixed beginner sequences are explicit assistance. Pending routines execute only after a new model commitment. Runtime candidate-outcome ranking and solver fallback are absent.\n\nSee [acceptance report](acceptance-report.json), [verification](verification.json), [frozen sources](sources.json) and [all attempt summaries](results.json). Exact requests/native responses and before/after states are in each random-N.json file and immutable SQLite events. The result applies to this held-out set; historical solver results remain separate.\n`);
+console.log(JSON.stringify(report));

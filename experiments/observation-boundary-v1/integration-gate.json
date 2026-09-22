@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "required": "Both frozen variants >=19/20 complete chains",
+  "observed": {
+    "code/player": 12,
+    "jev/player": 8
+  },
+  "attempts": 0,
+  "reason": "Both candidates failed component gate; no paid integration calls dispatched."
+}

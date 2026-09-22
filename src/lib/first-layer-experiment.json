@@ -1,0 +1,387 @@
+{
+  "round1": [
+    {
+      "variant": "direct",
+      "total": 20,
+      "completed": 20,
+      "correct": 14,
+      "falsePositive": 0,
+      "falseNegative": 6,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.0007022400000000001,
+      "latencyMs": 5528.628870999998
+    },
+    {
+      "variant": "checklist",
+      "total": 20,
+      "completed": 20,
+      "correct": 12,
+      "falsePositive": 0,
+      "falseNegative": 8,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.0013255200000000004,
+      "latencyMs": 6190.534477999999
+    },
+    {
+      "variant": "sequential",
+      "total": 20,
+      "completed": 20,
+      "correct": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.001597680000000001,
+      "latencyMs": 10832.356974999999
+    }
+  ],
+  "round2": [
+    {
+      "variant": "sequential",
+      "total": 20,
+      "completed": 20,
+      "correct": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.001597680000000001,
+      "latencyMs": 11337.564327999995
+    },
+    {
+      "variant": "sequential:counterexample",
+      "total": 20,
+      "completed": 20,
+      "correct": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.0016766399999999988,
+      "latencyMs": 10903.643175000003
+    },
+    {
+      "variant": "sequential:scope",
+      "total": 20,
+      "completed": 20,
+      "correct": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.0017278800000000009,
+      "latencyMs": 11499.289854999999
+    },
+    {
+      "variant": "direct",
+      "total": 20,
+      "completed": 20,
+      "correct": 14,
+      "falsePositive": 0,
+      "falseNegative": 6,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.0007022400000000001,
+      "latencyMs": 5598.039610999998
+    },
+    {
+      "variant": "direct:counterexample",
+      "total": 20,
+      "completed": 20,
+      "correct": 10,
+      "falsePositive": 0,
+      "falseNegative": 10,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.0007165199999999998,
+      "latencyMs": 5955.108766999996
+    },
+    {
+      "variant": "direct:scope",
+      "total": 20,
+      "completed": 20,
+      "correct": 19,
+      "falsePositive": 0,
+      "falseNegative": 1,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.0007282800000000003,
+      "latencyMs": 5693.246574000001
+    }
+  ],
+  "validation": [
+    {
+      "variant": "sequential",
+      "total": 20,
+      "completed": 20,
+      "correct": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.001597680000000001,
+      "latencyMs": 11089.803400000003
+    },
+    {
+      "variant": "direct:scope",
+      "total": 20,
+      "completed": 20,
+      "correct": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.0007282800000000003,
+      "latencyMs": 5643.928163999998
+    }
+  ],
+  "totalRequests": 320,
+  "cost": 0.013100640000000002,
+  "example": {
+    "caseId": "development-1",
+    "expected": "yes",
+    "request": {
+      "model": "jev-1.13.0",
+      "state": {
+        "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+        "faces": {
+          "U": {
+            "center": "white",
+            "rows": [
+              [
+                "blue",
+                "white",
+                "white"
+              ],
+              [
+                "white",
+                "white",
+                "white"
+              ],
+              [
+                "orange",
+                "white",
+                "red"
+              ]
+            ]
+          },
+          "D": {
+            "center": "yellow",
+            "rows": [
+              [
+                "yellow",
+                "yellow",
+                "yellow"
+              ],
+              [
+                "yellow",
+                "yellow",
+                "yellow"
+              ],
+              [
+                "yellow",
+                "yellow",
+                "yellow"
+              ]
+            ]
+          },
+          "F": {
+            "center": "green",
+            "rows": [
+              [
+                "white",
+                "green",
+                "blue"
+              ],
+              [
+                "green",
+                "green",
+                "green"
+              ],
+              [
+                "green",
+                "green",
+                "green"
+              ]
+            ]
+          },
+          "B": {
+            "center": "blue",
+            "rows": [
+              [
+                "red",
+                "orange",
+                "orange"
+              ],
+              [
+                "blue",
+                "blue",
+                "blue"
+              ],
+              [
+                "blue",
+                "blue",
+                "blue"
+              ]
+            ]
+          },
+          "R": {
+            "center": "red",
+            "rows": [
+              [
+                "white",
+                "red",
+                "green"
+              ],
+              [
+                "red",
+                "red",
+                "red"
+              ],
+              [
+                "red",
+                "red",
+                "red"
+              ]
+            ]
+          },
+          "L": {
+            "center": "orange",
+            "rows": [
+              [
+                "white",
+                "blue",
+                "green"
+              ],
+              [
+                "orange",
+                "orange",
+                "orange"
+              ],
+              [
+                "orange",
+                "orange",
+                "orange"
+              ]
+            ]
+          }
+        }
+      },
+      "questions": {
+        "D": {
+          "type": "choice",
+          "instructions": "The first layer is the bottom D layer. It is complete exactly when all nine D stickers match the D center AND all three stickers in row 3 of EACH side face F,R,B,L match that side face’s center. A uniform D face alone is insufficient. Upper and middle rows of side faces, and U, need not be solved. Inspect only the D face. Do all nine cells match its center?",
+          "criteria": {
+            "yes": "Every specified cell matches this face center.",
+            "no": "At least one specified cell differs from this face center."
+          }
+        },
+        "F": {
+          "type": "choice",
+          "instructions": "The first layer is the bottom D layer. It is complete exactly when all nine D stickers match the D center AND all three stickers in row 3 of EACH side face F,R,B,L match that side face’s center. A uniform D face alone is insufficient. Upper and middle rows of side faces, and U, need not be solved. Inspect only row 3 of face F. Do all three cells match that face's center?",
+          "criteria": {
+            "yes": "Every specified cell matches this face center.",
+            "no": "At least one specified cell differs from this face center."
+          }
+        },
+        "R": {
+          "type": "choice",
+          "instructions": "The first layer is the bottom D layer. It is complete exactly when all nine D stickers match the D center AND all three stickers in row 3 of EACH side face F,R,B,L match that side face’s center. A uniform D face alone is insufficient. Upper and middle rows of side faces, and U, need not be solved. Inspect only row 3 of face R. Do all three cells match that face's center?",
+          "criteria": {
+            "yes": "Every specified cell matches this face center.",
+            "no": "At least one specified cell differs from this face center."
+          }
+        },
+        "B": {
+          "type": "choice",
+          "instructions": "The first layer is the bottom D layer. It is complete exactly when all nine D stickers match the D center AND all three stickers in row 3 of EACH side face F,R,B,L match that side face’s center. A uniform D face alone is insufficient. Upper and middle rows of side faces, and U, need not be solved. Inspect only row 3 of face B. Do all three cells match that face's center?",
+          "criteria": {
+            "yes": "Every specified cell matches this face center.",
+            "no": "At least one specified cell differs from this face center."
+          }
+        },
+        "L": {
+          "type": "choice",
+          "instructions": "The first layer is the bottom D layer. It is complete exactly when all nine D stickers match the D center AND all three stickers in row 3 of EACH side face F,R,B,L match that side face’s center. A uniform D face alone is insufficient. Upper and middle rows of side faces, and U, need not be solved. Inspect only row 3 of face L. Do all three cells match that face's center?",
+          "criteria": {
+            "yes": "Every specified cell matches this face center.",
+            "no": "At least one specified cell differs from this face center."
+          }
+        },
+        "complete": {
+          "type": "choice",
+          "instructions": "The first layer is the bottom D layer. It is complete exactly when all nine D stickers match the D center AND all three stickers in row 3 of EACH side face F,R,B,L match that side face’s center. A uniform D face alone is insufficient. Upper and middle rows of side faces, and U, need not be solved. Check the five required regions systematically and give the overall answer. All five checks must pass.",
+          "criteria": {
+            "yes": "The bottom first layer is complete.",
+            "no": "The bottom first layer is incomplete."
+          }
+        }
+      }
+    },
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "D": {
+          "type": "choice",
+          "choice": "yes",
+          "confidence": 0.99,
+          "probabilities": {
+            "yes": 1,
+            "no": 0
+          }
+        },
+        "F": {
+          "type": "choice",
+          "choice": "yes",
+          "confidence": 0.99,
+          "probabilities": {
+            "yes": 1,
+            "no": 0
+          }
+        },
+        "R": {
+          "type": "choice",
+          "choice": "yes",
+          "confidence": 0.98,
+          "probabilities": {
+            "yes": 0.99,
+            "no": 0.01
+          }
+        },
+        "B": {
+          "type": "choice",
+          "choice": "yes",
+          "confidence": 0.99,
+          "probabilities": {
+            "yes": 1,
+            "no": 0
+          }
+        },
+        "L": {
+          "type": "choice",
+          "choice": "yes",
+          "confidence": 0.99,
+          "probabilities": {
+            "yes": 1,
+            "no": 0
+          }
+        },
+        "complete": {
+          "type": "choice",
+          "choice": "no",
+          "confidence": 0.14,
+          "probabilities": {
+            "yes": 0.43,
+            "no": 0.57
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1578,
+        "output_tokens": 171
+      }
+    }
+  }
+}

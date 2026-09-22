@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-21T16:54:45.854Z",
+  "split": "development",
+  "variants": [
+    "direct",
+    "regions",
+    "focused",
+    "gold"
+  ],
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 4.096564164000001,
+    "usage": 4.091188164000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 52757,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "maxRequests": 120,
+  "method": "Fixed daisy-first strategy, three choices, scope ends at first-layer handoff. Golden checks are supplied only to the explicitly labelled isolated gold variant. Winner by goal score, then fewer calls. Validation frozen before dispatch. No retries."
+}

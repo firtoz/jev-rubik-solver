@@ -1,0 +1,3602 @@
+{
+  "summary": {
+    "total": 20,
+    "completed": 20,
+    "membership": 20,
+    "position": 16,
+    "cost": 0.0009539040000000001,
+    "errors": 0
+  },
+  "results": [
+    {
+      "caseId": "move-01",
+      "runId": "e36a9a6c-d73f-4710-9994-11eda7177fe7",
+      "affected": false,
+      "expected": "unaffected",
+      "membershipCorrect": true,
+      "actual": "unaffected",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "c71c1952-10ca-4f61-867f-cb9e5e178db6",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "F",
+                  "R"
+                ],
+                "trackedStickerFacing": "R",
+                "center": [
+                  1,
+                  0,
+                  1
+                ],
+                "stickerNormal": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "U",
+                "outwardNormal": [
+                  0,
+                  1,
+                  0
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "probabilities": {
+                  "yes": 0.17,
+                  "no": 0.83
+                },
+                "confidence": 0.66
+              }
+            },
+            "usage": {
+              "input_tokens": 551,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "confidence": 0.66,
+                "probabilities": {
+                  "yes": 0.17,
+                  "no": 0.83
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 551,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 917.9052879999999,
+          "cost": 0.000023142000000000003
+        },
+        {
+          "id": "9e20cbd0-313c-45cb-98c2-1c8bc139fc11",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "no"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_right",
+              "diagramBefore": ". . .\n. O .\n. . X",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "probabilities": {
+                  "top_center": 0.02,
+                  "bottom_right": 0.12,
+                  "top_right": 0.12,
+                  "middle_left": 0.03,
+                  "top_left": 0.02,
+                  "middle_right": 0.1,
+                  "bottom_center": 0.03,
+                  "bottom_left": 0.08,
+                  "unaffected": 0.48
+                },
+                "confidence": 0.41
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 92
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "confidence": 0.41,
+                "probabilities": {
+                  "top_center": 0.02,
+                  "bottom_right": 0.12,
+                  "top_right": 0.12,
+                  "middle_left": 0.03,
+                  "top_left": 0.02,
+                  "middle_right": 0.1,
+                  "bottom_center": 0.03,
+                  "bottom_left": 0.08,
+                  "unaffected": 0.48
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 92
+            }
+          },
+          "elapsedMs": 352.3267719999999,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-02",
+      "runId": "314cfd18-b3ea-47fd-9417-0665a8f7e5a8",
+      "affected": true,
+      "expected": "bottom_left",
+      "membershipCorrect": true,
+      "actual": "bottom_left",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "69516410-9e0b-4a03-9f89-4a8f5d97d6f6",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "U",
+                  "B",
+                  "L"
+                ],
+                "trackedStickerFacing": "L",
+                "center": [
+                  -1,
+                  1,
+                  -1
+                ],
+                "stickerNormal": [
+                  -1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "U",
+                "outwardNormal": [
+                  0,
+                  1,
+                  0
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 561,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.99,
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 561,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 321.2631019999999,
+          "cost": 0.000023562000000000002
+        },
+        {
+          "id": "992c439f-25e2-45e7-8559-5111311e2d5a",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_left",
+              "diagramBefore": "X . .\n. O .\n. . .",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_left",
+                "probabilities": {
+                  "top_center": 0.08,
+                  "bottom_left": 0.18,
+                  "middle_left": 0.1,
+                  "top_left": 0.09,
+                  "middle_right": 0.13,
+                  "unaffected": 0.04,
+                  "top_right": 0.15,
+                  "bottom_center": 0.07,
+                  "bottom_right": 0.16
+                },
+                "confidence": 0.08
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_left",
+                "confidence": 0.08,
+                "probabilities": {
+                  "top_center": 0.08,
+                  "bottom_left": 0.18,
+                  "middle_left": 0.1,
+                  "top_left": 0.09,
+                  "middle_right": 0.13,
+                  "unaffected": 0.04,
+                  "top_right": 0.15,
+                  "bottom_center": 0.07,
+                  "bottom_right": 0.16
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 267.3831950000001,
+          "cost": 0.000024402000000000005
+        }
+      ]
+    },
+    {
+      "caseId": "move-03",
+      "runId": "29a33f65-ece1-4da4-9958-c16b3d722be5",
+      "affected": true,
+      "expected": "top_center",
+      "membershipCorrect": true,
+      "actual": "top_center",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "eb3758a6-8013-4b6e-806a-4e68d6df3102",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "U",
+                  "F"
+                ],
+                "trackedStickerFacing": "F",
+                "center": [
+                  0,
+                  1,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "turn": {
+                "face": "U",
+                "outwardNormal": [
+                  0,
+                  1,
+                  0
+                ],
+                "direction": "half turn (180 degrees)"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.88,
+                  "no": 0.12
+                },
+                "confidence": 0.75
+              }
+            },
+            "usage": {
+              "input_tokens": 554,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.75,
+                "probabilities": {
+                  "yes": 0.88,
+                  "no": 0.12
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 554,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 239.87780199999997,
+          "cost": 0.000023268
+        },
+        {
+          "id": "8b907ea2-c7c8-4b36-bfdd-6356f116767a",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_center",
+              "diagramBefore": ". . .\n. O .\n. X .",
+              "turn": "180 degrees"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_center",
+                "probabilities": {
+                  "middle_left": 0.01,
+                  "top_right": 0.01,
+                  "unaffected": 0.08,
+                  "bottom_right": 0,
+                  "top_center": 0.73,
+                  "top_left": 0.02,
+                  "bottom_center": 0.13,
+                  "bottom_left": 0.01,
+                  "middle_right": 0.01
+                },
+                "confidence": 0.7
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_center",
+                "confidence": 0.7,
+                "probabilities": {
+                  "middle_left": 0.01,
+                  "top_right": 0.01,
+                  "unaffected": 0.08,
+                  "bottom_right": 0,
+                  "top_center": 0.73,
+                  "top_left": 0.02,
+                  "bottom_center": 0.13,
+                  "bottom_left": 0.01,
+                  "middle_right": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 305.5327860000002,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-04",
+      "runId": "aa2aab41-c911-4546-9574-ec29a6bbb903",
+      "affected": true,
+      "expected": "top_left",
+      "membershipCorrect": true,
+      "actual": "top_left",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "f4c3d24d-6600-4286-812c-64bbcb14426e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "D",
+                  "L",
+                  "B"
+                ],
+                "trackedStickerFacing": "B",
+                "center": [
+                  -1,
+                  -1,
+                  -1
+                ],
+                "stickerNormal": [
+                  0,
+                  0,
+                  -1
+                ]
+              },
+              "turn": {
+                "face": "D",
+                "outwardNormal": [
+                  0,
+                  -1,
+                  0
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.98,
+                  "no": 0.02
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.97,
+                "probabilities": {
+                  "yes": 0.98,
+                  "no": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 288.6280160000001,
+          "cost": 0.000023520000000000002
+        },
+        {
+          "id": "194dfdb1-cae1-4afb-82df-83a3aaca3df3",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_left",
+              "diagramBefore": ". . .\n. O .\nX . .",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_left",
+                "probabilities": {
+                  "bottom_left": 0.1,
+                  "top_center": 0.06,
+                  "bottom_right": 0.18,
+                  "unaffected": 0.06,
+                  "bottom_center": 0.1,
+                  "top_left": 0.16999999999999998,
+                  "middle_left": 0.16,
+                  "middle_right": 0.08,
+                  "top_right": 0.09
+                },
+                "confidence": 0.08
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_left",
+                "confidence": 0.08,
+                "probabilities": {
+                  "bottom_left": 0.1,
+                  "top_center": 0.06,
+                  "bottom_right": 0.18,
+                  "unaffected": 0.06,
+                  "bottom_center": 0.1,
+                  "top_left": 0.16999999999999998,
+                  "middle_left": 0.16,
+                  "middle_right": 0.08,
+                  "top_right": 0.09
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 275.47605599999997,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-05",
+      "runId": "886cbf4e-79c3-4c3d-9573-d42ccac3bddd",
+      "affected": true,
+      "expected": "middle_left",
+      "membershipCorrect": true,
+      "actual": "middle_right",
+      "correct": false,
+      "exchanges": [
+        {
+          "id": "2183e3a5-5973-4687-a08e-f20c069063ba",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "D",
+                  "F"
+                ],
+                "trackedStickerFacing": "D",
+                "center": [
+                  0,
+                  -1,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  -1,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "D",
+                "outwardNormal": [
+                  0,
+                  -1,
+                  0
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 557,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.98,
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 557,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 363.967897,
+          "cost": 0.000023394000000000003
+        },
+        {
+          "id": "e2200bc6-7afc-4f99-9a95-79eebc831d6f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_center",
+              "diagramBefore": ". X .\n. O .\n. . .",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "probabilities": {
+                  "top_right": 0.13,
+                  "top_center": 0.06,
+                  "middle_right": 0.25,
+                  "bottom_center": 0.16,
+                  "top_left": 0.09,
+                  "bottom_left": 0.1,
+                  "unaffected": 0.03,
+                  "middle_left": 0.09,
+                  "bottom_right": 0.09
+                },
+                "confidence": 0.16
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "confidence": 0.16,
+                "probabilities": {
+                  "top_right": 0.13,
+                  "top_center": 0.06,
+                  "middle_right": 0.25,
+                  "bottom_center": 0.16,
+                  "top_left": 0.09,
+                  "bottom_left": 0.1,
+                  "unaffected": 0.03,
+                  "middle_left": 0.09,
+                  "bottom_right": 0.09
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 337.72430100000065,
+          "cost": 0.000024402000000000005
+        }
+      ]
+    },
+    {
+      "caseId": "move-06",
+      "runId": "5663851a-f9c7-425b-88bc-b4f51a3eece2",
+      "affected": false,
+      "expected": "unaffected",
+      "membershipCorrect": true,
+      "actual": "unaffected",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "c3e4b0b5-bf17-4057-8df5-f16a509ade07",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "U",
+                  "B",
+                  "L"
+                ],
+                "trackedStickerFacing": "L",
+                "center": [
+                  -1,
+                  1,
+                  -1
+                ],
+                "stickerNormal": [
+                  -1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "D",
+                "outwardNormal": [
+                  0,
+                  -1,
+                  0
+                ],
+                "direction": "half turn (180 degrees)"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "probabilities": {
+                  "no": 0.97,
+                  "yes": 0.03
+                },
+                "confidence": 0.93
+              }
+            },
+            "usage": {
+              "input_tokens": 562,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "confidence": 0.93,
+                "probabilities": {
+                  "no": 0.97,
+                  "yes": 0.03
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 562,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 351.4309209999992,
+          "cost": 0.000023604000000000003
+        },
+        {
+          "id": "3683f1bd-1eb2-4921-b416-d53b66b73631",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "no"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_left",
+              "diagramBefore": ". . .\n. O .\nX . .",
+              "turn": "180 degrees"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "probabilities": {
+                  "top_right": 0.1,
+                  "middle_left": 0.05,
+                  "bottom_right": 0.08,
+                  "top_left": 0.08,
+                  "middle_right": 0.06,
+                  "bottom_center": 0.02,
+                  "bottom_left": 0.07,
+                  "unaffected": 0.5,
+                  "top_center": 0.04
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 92
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "confidence": 0.44,
+                "probabilities": {
+                  "top_right": 0.1,
+                  "middle_left": 0.05,
+                  "bottom_right": 0.08,
+                  "top_left": 0.08,
+                  "middle_right": 0.06,
+                  "bottom_center": 0.02,
+                  "bottom_left": 0.07,
+                  "unaffected": 0.5,
+                  "top_center": 0.04
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 92
+            }
+          },
+          "elapsedMs": 447.48813399999926,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-07",
+      "runId": "80701f2e-00e6-44e5-9ce1-c4310a0b27dc",
+      "affected": true,
+      "expected": "middle_right",
+      "membershipCorrect": true,
+      "actual": "middle_right",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "3a1fc7fd-63c5-4449-b7e3-0f7f9a677b57",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "U",
+                  "F"
+                ],
+                "trackedStickerFacing": "U",
+                "center": [
+                  0,
+                  1,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "F",
+                "outwardNormal": [
+                  0,
+                  0,
+                  1
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.95,
+                  "no": 0.05
+                },
+                "confidence": 0.89
+              }
+            },
+            "usage": {
+              "input_tokens": 551,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.89,
+                "probabilities": {
+                  "yes": 0.95,
+                  "no": 0.05
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 551,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 278.7112049999996,
+          "cost": 0.000023142000000000003
+        },
+        {
+          "id": "6eb68c98-c0b0-4ac4-a00a-0b21ef990601",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_center",
+              "diagramBefore": ". X .\n. O .\n. . .",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "probabilities": {
+                  "bottom_right": 0.06,
+                  "top_left": 0.1,
+                  "middle_left": 0.09,
+                  "unaffected": 0.06,
+                  "bottom_center": 0.1,
+                  "bottom_left": 0.1,
+                  "top_right": 0.19,
+                  "top_center": 0.11,
+                  "middle_right": 0.19
+                },
+                "confidence": 0.09
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "confidence": 0.09,
+                "probabilities": {
+                  "bottom_right": 0.06,
+                  "top_left": 0.1,
+                  "middle_left": 0.09,
+                  "unaffected": 0.06,
+                  "bottom_center": 0.1,
+                  "bottom_left": 0.1,
+                  "top_right": 0.19,
+                  "top_center": 0.11,
+                  "middle_right": 0.19
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 430.80778499999997,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-08",
+      "runId": "17368210-4dd1-4fde-bbe6-485bf21ae1da",
+      "affected": true,
+      "expected": "top_right",
+      "membershipCorrect": true,
+      "actual": "top_right",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "eaa1daca-26b2-4688-abf8-25e5cbb21667",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "D",
+                  "R",
+                  "F"
+                ],
+                "trackedStickerFacing": "D",
+                "center": [
+                  1,
+                  -1,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  -1,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "F",
+                "outwardNormal": [
+                  0,
+                  0,
+                  1
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.97,
+                  "no": 0.03
+                },
+                "confidence": 0.95
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.95,
+                "probabilities": {
+                  "yes": 0.97,
+                  "no": 0.03
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 349.7816069999999,
+          "cost": 0.000023520000000000002
+        },
+        {
+          "id": "d4c387a8-9c6e-4816-a9f2-dc59b7a2f2ae",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_right",
+              "diagramBefore": ". . .\n. O .\n. . X",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_right",
+                "probabilities": {
+                  "unaffected": 0.05,
+                  "bottom_left": 0.21,
+                  "middle_left": 0.07,
+                  "top_right": 0.24000000000000002,
+                  "middle_right": 0.12,
+                  "top_center": 0.03,
+                  "bottom_right": 0.09,
+                  "bottom_center": 0.07,
+                  "top_left": 0.12
+                },
+                "confidence": 0.13
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_right",
+                "confidence": 0.13,
+                "probabilities": {
+                  "unaffected": 0.05,
+                  "bottom_left": 0.21,
+                  "middle_left": 0.07,
+                  "top_right": 0.24000000000000002,
+                  "middle_right": 0.12,
+                  "top_center": 0.03,
+                  "bottom_right": 0.09,
+                  "bottom_center": 0.07,
+                  "top_left": 0.12
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 327.5775760000006,
+          "cost": 0.000024402000000000005
+        }
+      ]
+    },
+    {
+      "caseId": "move-09",
+      "runId": "7b3098a8-9f4d-4452-9695-459e944b37b5",
+      "affected": true,
+      "expected": "bottom_center",
+      "membershipCorrect": true,
+      "actual": "bottom_center",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "defdb53f-6cf4-4775-b1f9-6f7afb481b06",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "U",
+                  "F"
+                ],
+                "trackedStickerFacing": "U",
+                "center": [
+                  0,
+                  1,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "F",
+                "outwardNormal": [
+                  0,
+                  0,
+                  1
+                ],
+                "direction": "half turn (180 degrees)"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "no": 0.04,
+                  "yes": 0.96
+                },
+                "confidence": 0.93
+              }
+            },
+            "usage": {
+              "input_tokens": 554,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.93,
+                "probabilities": {
+                  "no": 0.04,
+                  "yes": 0.96
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 554,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 320.16048299999966,
+          "cost": 0.000023268
+        },
+        {
+          "id": "04b63ec0-6c81-4fbd-9c33-c204bc624f4f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_center",
+              "diagramBefore": ". X .\n. O .\n. . .",
+              "turn": "180 degrees"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_center",
+                "probabilities": {
+                  "bottom_right": 0.01,
+                  "unaffected": 0.07,
+                  "top_right": 0.01,
+                  "bottom_center": 0.68,
+                  "bottom_left": 0.02,
+                  "top_center": 0.15,
+                  "middle_left": 0.01,
+                  "middle_right": 0.01,
+                  "top_left": 0.03
+                },
+                "confidence": 0.64
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_center",
+                "confidence": 0.64,
+                "probabilities": {
+                  "bottom_right": 0.01,
+                  "unaffected": 0.07,
+                  "top_right": 0.01,
+                  "bottom_center": 0.68,
+                  "bottom_left": 0.02,
+                  "top_center": 0.15,
+                  "middle_left": 0.01,
+                  "middle_right": 0.01,
+                  "top_left": 0.03
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 281.47137999999995,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-10",
+      "runId": "fe85f8cb-f45c-4fe3-bb05-6f5d0e716195",
+      "affected": true,
+      "expected": "bottom_left",
+      "membershipCorrect": true,
+      "actual": "top_right",
+      "correct": false,
+      "exchanges": [
+        {
+          "id": "6d9d4a71-15f5-49eb-836f-f77bfe8ec39a",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "D",
+                  "L",
+                  "B"
+                ],
+                "trackedStickerFacing": "L",
+                "center": [
+                  -1,
+                  -1,
+                  -1
+                ],
+                "stickerNormal": [
+                  -1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "B",
+                "outwardNormal": [
+                  0,
+                  0,
+                  -1
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.98,
+                  "no": 0.02
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.97,
+                "probabilities": {
+                  "yes": 0.98,
+                  "no": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 453.92154200000004,
+          "cost": 0.000023520000000000002
+        },
+        {
+          "id": "cbb07d46-090e-44c2-a7af-6bd32c1fd238",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_right",
+              "diagramBefore": ". . .\n. O .\n. . X",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_right",
+                "probabilities": {
+                  "bottom_left": 0.17,
+                  "top_center": 0.02,
+                  "bottom_right": 0.11,
+                  "bottom_center": 0.07,
+                  "unaffected": 0.04,
+                  "top_left": 0.05,
+                  "middle_left": 0.05,
+                  "middle_right": 0.21,
+                  "top_right": 0.28
+                },
+                "confidence": 0.19
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_right",
+                "confidence": 0.19,
+                "probabilities": {
+                  "bottom_left": 0.17,
+                  "top_center": 0.02,
+                  "bottom_right": 0.11,
+                  "bottom_center": 0.07,
+                  "unaffected": 0.04,
+                  "top_left": 0.05,
+                  "middle_left": 0.05,
+                  "middle_right": 0.21,
+                  "top_right": 0.28
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 291.21609999999964,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-11",
+      "runId": "e88e5af9-bc9f-4995-8f4d-a5c202a70d66",
+      "affected": false,
+      "expected": "unaffected",
+      "membershipCorrect": true,
+      "actual": "unaffected",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "1aa43a0a-db85-47fb-a762-396287c5071e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "D",
+                  "R"
+                ],
+                "trackedStickerFacing": "R",
+                "center": [
+                  1,
+                  -1,
+                  0
+                ],
+                "stickerNormal": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "B",
+                "outwardNormal": [
+                  0,
+                  0,
+                  -1
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "probabilities": {
+                  "yes": 0.28,
+                  "no": 0.72
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 556,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "confidence": 0.44,
+                "probabilities": {
+                  "yes": 0.28,
+                  "no": 0.72
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 556,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 266.830919,
+          "cost": 0.000023352000000000003
+        },
+        {
+          "id": "6be309e2-3d59-4f6b-81aa-0d959a34c16a",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "no"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_left",
+              "diagramBefore": ". . .\n. O .\nX . .",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "probabilities": {
+                  "top_right": 0.06,
+                  "bottom_left": 0.07,
+                  "middle_left": 0.07,
+                  "bottom_center": 0.05,
+                  "top_left": 0.09,
+                  "middle_right": 0.05,
+                  "top_center": 0.05,
+                  "bottom_right": 0.07,
+                  "unaffected": 0.49
+                },
+                "confidence": 0.43
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 92
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "confidence": 0.43,
+                "probabilities": {
+                  "top_right": 0.06,
+                  "bottom_left": 0.07,
+                  "middle_left": 0.07,
+                  "bottom_center": 0.05,
+                  "top_left": 0.09,
+                  "middle_right": 0.05,
+                  "top_center": 0.05,
+                  "bottom_right": 0.07,
+                  "unaffected": 0.49
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 92
+            }
+          },
+          "elapsedMs": 238.47799400000076,
+          "cost": 0.000024402000000000005
+        }
+      ]
+    },
+    {
+      "caseId": "move-12",
+      "runId": "c7910d13-f867-41fa-8198-76d4695b1448",
+      "affected": true,
+      "expected": "top_left",
+      "membershipCorrect": true,
+      "actual": "top_left",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "9073438d-4574-4588-abd8-366bf5ee4e96",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "D",
+                  "L",
+                  "B"
+                ],
+                "trackedStickerFacing": "L",
+                "center": [
+                  -1,
+                  -1,
+                  -1
+                ],
+                "stickerNormal": [
+                  -1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "B",
+                "outwardNormal": [
+                  0,
+                  0,
+                  -1
+                ],
+                "direction": "half turn (180 degrees)"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 563,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.97,
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 563,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 263.660992000001,
+          "cost": 0.000023646000000000004
+        },
+        {
+          "id": "a5ace27f-e695-4c14-b469-4e7423fb88d4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_right",
+              "diagramBefore": ". . .\n. O .\n. . X",
+              "turn": "180 degrees"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_left",
+                "probabilities": {
+                  "middle_left": 0.05,
+                  "bottom_center": 0.01,
+                  "top_left": 0.42,
+                  "top_center": 0.02,
+                  "middle_right": 0.02,
+                  "top_right": 0.11,
+                  "bottom_left": 0.25,
+                  "bottom_right": 0.06,
+                  "unaffected": 0.06
+                },
+                "confidence": 0.34
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "top_left",
+                "confidence": 0.34,
+                "probabilities": {
+                  "middle_left": 0.05,
+                  "bottom_center": 0.01,
+                  "top_left": 0.42,
+                  "top_center": 0.02,
+                  "middle_right": 0.02,
+                  "top_right": 0.11,
+                  "bottom_left": 0.25,
+                  "bottom_right": 0.06,
+                  "unaffected": 0.06
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 401.0171040000005,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-13",
+      "runId": "dd2c46a1-e4ee-48dc-9685-859859457f16",
+      "affected": true,
+      "expected": "middle_right",
+      "membershipCorrect": true,
+      "actual": "middle_right",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "549911e4-279b-448f-85b9-f3c3e446fae4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "U",
+                  "R"
+                ],
+                "trackedStickerFacing": "R",
+                "center": [
+                  1,
+                  1,
+                  0
+                ],
+                "stickerNormal": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "R",
+                "outwardNormal": [
+                  1,
+                  0,
+                  0
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.97,
+                  "no": 0.03
+                },
+                "confidence": 0.93
+              }
+            },
+            "usage": {
+              "input_tokens": 551,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.93,
+                "probabilities": {
+                  "yes": 0.97,
+                  "no": 0.03
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 551,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 312.05139299999973,
+          "cost": 0.000023142000000000003
+        },
+        {
+          "id": "2a2e13a5-1eae-4855-b172-2e10687eba03",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_center",
+              "diagramBefore": ". X .\n. O .\n. . .",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "probabilities": {
+                  "bottom_left": 0.08,
+                  "unaffected": 0.03,
+                  "top_right": 0.21,
+                  "middle_left": 0.06,
+                  "middle_right": 0.33,
+                  "bottom_center": 0.08,
+                  "top_center": 0.08,
+                  "bottom_right": 0.06,
+                  "top_left": 0.07
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "confidence": 0.26,
+                "probabilities": {
+                  "bottom_left": 0.08,
+                  "unaffected": 0.03,
+                  "top_right": 0.21,
+                  "middle_left": 0.06,
+                  "middle_right": 0.33,
+                  "bottom_center": 0.08,
+                  "top_center": 0.08,
+                  "bottom_right": 0.06,
+                  "top_left": 0.07
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 279.1134970000003,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-14",
+      "runId": "5ddf4e40-b828-4a08-92ed-82f6c0b0419e",
+      "affected": true,
+      "expected": "top_left",
+      "membershipCorrect": true,
+      "actual": "bottom_right",
+      "correct": false,
+      "exchanges": [
+        {
+          "id": "ba8ee02d-1377-49f3-869c-577015693c5d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "U",
+                  "R",
+                  "B"
+                ],
+                "trackedStickerFacing": "R",
+                "center": [
+                  1,
+                  1,
+                  -1
+                ],
+                "stickerNormal": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "R",
+                "outwardNormal": [
+                  1,
+                  0,
+                  0
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 559,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.98,
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 559,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 243.57288100000005,
+          "cost": 0.000023478000000000005
+        },
+        {
+          "id": "48347f53-0501-4e9a-91d7-7ee6862a591e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_right",
+              "diagramBefore": ". . X\n. O .\n. . .",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_right",
+                "probabilities": {
+                  "middle_left": 0.05,
+                  "top_right": 0.09,
+                  "bottom_left": 0.09,
+                  "top_center": 0.11,
+                  "bottom_center": 0.07,
+                  "middle_right": 0.16,
+                  "unaffected": 0.08,
+                  "top_left": 0.12,
+                  "bottom_right": 0.22999999999999998
+                },
+                "confidence": 0.14
+              }
+            },
+            "usage": {
+              "input_tokens": 582,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_right",
+                "confidence": 0.14,
+                "probabilities": {
+                  "middle_left": 0.05,
+                  "top_right": 0.09,
+                  "bottom_left": 0.09,
+                  "top_center": 0.11,
+                  "bottom_center": 0.07,
+                  "middle_right": 0.16,
+                  "unaffected": 0.08,
+                  "top_left": 0.12,
+                  "bottom_right": 0.22999999999999998
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 582,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 293.51844900000106,
+          "cost": 0.000024444000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-15",
+      "runId": "042fa220-b924-476c-8f9a-73db2f34a5cd",
+      "affected": true,
+      "expected": "middle_right",
+      "membershipCorrect": true,
+      "actual": "middle_right",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "1c82f1fe-36bd-428f-add0-9ab806dd03b7",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "F",
+                  "R"
+                ],
+                "trackedStickerFacing": "F",
+                "center": [
+                  1,
+                  0,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "turn": {
+                "face": "R",
+                "outwardNormal": [
+                  1,
+                  0,
+                  0
+                ],
+                "direction": "half turn (180 degrees)"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "no": 0.12,
+                  "yes": 0.88
+                },
+                "confidence": 0.76
+              }
+            },
+            "usage": {
+              "input_tokens": 554,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.76,
+                "probabilities": {
+                  "no": 0.12,
+                  "yes": 0.88
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 554,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 357.55487899999935,
+          "cost": 0.000023268
+        },
+        {
+          "id": "d97af124-bb55-4ba4-8a3d-7a1acce27c01",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "middle_left",
+              "diagramBefore": ". . .\nX O .\n. . .",
+              "turn": "180 degrees"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "probabilities": {
+                  "top_right": 0.03,
+                  "top_center": 0.06,
+                  "unaffected": 0.06,
+                  "middle_right": 0.54,
+                  "bottom_left": 0.06,
+                  "middle_left": 0.11,
+                  "bottom_right": 0.03,
+                  "top_left": 0.07,
+                  "bottom_center": 0.04
+                },
+                "confidence": 0.47
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "confidence": 0.47,
+                "probabilities": {
+                  "top_right": 0.03,
+                  "top_center": 0.06,
+                  "unaffected": 0.06,
+                  "middle_right": 0.54,
+                  "bottom_left": 0.06,
+                  "middle_left": 0.11,
+                  "bottom_right": 0.03,
+                  "top_left": 0.07,
+                  "bottom_center": 0.04
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 396.3943529999997,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-16",
+      "runId": "81a7d14e-0c7c-4808-9f45-c49cb8ff4e90",
+      "affected": false,
+      "expected": "unaffected",
+      "membershipCorrect": true,
+      "actual": "unaffected",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "82481644-3131-44b7-b7b9-b4eacd9f0ca3",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "D",
+                  "B",
+                  "R"
+                ],
+                "trackedStickerFacing": "D",
+                "center": [
+                  1,
+                  -1,
+                  -1
+                ],
+                "stickerNormal": [
+                  0,
+                  -1,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "L",
+                "outwardNormal": [
+                  -1,
+                  0,
+                  0
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "probabilities": {
+                  "yes": 0.1,
+                  "no": 0.9
+                },
+                "confidence": 0.8
+              }
+            },
+            "usage": {
+              "input_tokens": 559,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "no",
+                "confidence": 0.8,
+                "probabilities": {
+                  "yes": 0.1,
+                  "no": 0.9
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 559,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 327.95076599999993,
+          "cost": 0.000023478000000000005
+        },
+        {
+          "id": "2357d19e-6cec-4b92-a12a-a24a00d37274",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "no"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_left",
+              "diagramBefore": ". . .\n. O .\nX . .",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "probabilities": {
+                  "unaffected": 0.42,
+                  "top_left": 0.12,
+                  "bottom_right": 0.09,
+                  "top_right": 0.04,
+                  "middle_right": 0.04,
+                  "bottom_center": 0.07,
+                  "top_center": 0.05,
+                  "bottom_left": 0.08,
+                  "middle_left": 0.09
+                },
+                "confidence": 0.34
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 92
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "unaffected",
+                "confidence": 0.34,
+                "probabilities": {
+                  "unaffected": 0.42,
+                  "top_left": 0.12,
+                  "bottom_right": 0.09,
+                  "top_right": 0.04,
+                  "middle_right": 0.04,
+                  "bottom_center": 0.07,
+                  "top_center": 0.05,
+                  "bottom_left": 0.08,
+                  "middle_left": 0.09
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 92
+            }
+          },
+          "elapsedMs": 303.80457300000126,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-17",
+      "runId": "0e6535b3-f395-4660-9127-074fe7b91187",
+      "affected": true,
+      "expected": "middle_left",
+      "membershipCorrect": true,
+      "actual": "middle_right",
+      "correct": false,
+      "exchanges": [
+        {
+          "id": "c84d6326-db47-411a-ae20-0b3becf8769a",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "U",
+                  "L"
+                ],
+                "trackedStickerFacing": "L",
+                "center": [
+                  -1,
+                  1,
+                  0
+                ],
+                "stickerNormal": [
+                  -1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "L",
+                "outwardNormal": [
+                  -1,
+                  0,
+                  0
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 557,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.99,
+                "probabilities": {
+                  "yes": 0.99,
+                  "no": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 557,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 331.17506499999945,
+          "cost": 0.000023394000000000003
+        },
+        {
+          "id": "14115fda-20df-4935-8f38-95233a669ec1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_center",
+              "diagramBefore": ". X .\n. O .\n. . .",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "probabilities": {
+                  "unaffected": 0.04,
+                  "middle_right": 0.25,
+                  "bottom_right": 0.1,
+                  "top_right": 0.15,
+                  "top_left": 0.1,
+                  "top_center": 0.05,
+                  "bottom_center": 0.11,
+                  "middle_left": 0.09,
+                  "bottom_left": 0.11
+                },
+                "confidence": 0.14
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "confidence": 0.14,
+                "probabilities": {
+                  "unaffected": 0.04,
+                  "middle_right": 0.25,
+                  "bottom_right": 0.1,
+                  "top_right": 0.15,
+                  "top_left": 0.1,
+                  "top_center": 0.05,
+                  "bottom_center": 0.11,
+                  "middle_left": 0.09,
+                  "bottom_left": 0.11
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 292.93967300000077,
+          "cost": 0.000024402000000000005
+        }
+      ]
+    },
+    {
+      "caseId": "move-18",
+      "runId": "e8d62fb7-2c8f-4bc9-a49d-dad80698ae50",
+      "affected": true,
+      "expected": "bottom_left",
+      "membershipCorrect": true,
+      "actual": "bottom_left",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "76c59f9f-46fd-4e88-9daf-d56ce62e91ce",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "U",
+                  "L",
+                  "F"
+                ],
+                "trackedStickerFacing": "L",
+                "center": [
+                  -1,
+                  1,
+                  1
+                ],
+                "stickerNormal": [
+                  -1,
+                  0,
+                  0
+                ]
+              },
+              "turn": {
+                "face": "L",
+                "outwardNormal": [
+                  -1,
+                  0,
+                  0
+                ],
+                "direction": "half turn (180 degrees)"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "yes": 1,
+                  "no": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 561,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 1,
+                "probabilities": {
+                  "yes": 1,
+                  "no": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 561,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 301.3593070000006,
+          "cost": 0.000023562000000000002
+        },
+        {
+          "id": "0baee4d2-0997-4815-9811-933ffe2551f3",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_right",
+              "diagramBefore": ". . X\n. O .\n. . .",
+              "turn": "180 degrees"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_left",
+                "probabilities": {
+                  "unaffected": 0.05,
+                  "top_right": 0.04,
+                  "bottom_center": 0.04,
+                  "bottom_left": 0.38,
+                  "top_left": 0.2,
+                  "bottom_right": 0.25,
+                  "middle_right": 0.01,
+                  "top_center": 0.01,
+                  "middle_left": 0.02
+                },
+                "confidence": 0.3
+              }
+            },
+            "usage": {
+              "input_tokens": 578,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_left",
+                "confidence": 0.3,
+                "probabilities": {
+                  "unaffected": 0.05,
+                  "top_right": 0.04,
+                  "bottom_center": 0.04,
+                  "bottom_left": 0.38,
+                  "top_left": 0.2,
+                  "bottom_right": 0.25,
+                  "middle_right": 0.01,
+                  "top_center": 0.01,
+                  "middle_left": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 578,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 290.6634439999998,
+          "cost": 0.000024276000000000003
+        }
+      ]
+    },
+    {
+      "caseId": "move-19",
+      "runId": "91e13ce1-81ca-4e20-a113-9ff069d084ce",
+      "affected": true,
+      "expected": "middle_right",
+      "membershipCorrect": true,
+      "actual": "middle_right",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "a44923ba-d238-4cd1-bb95-0c603083ad3d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "edge",
+                "touchingFaces": [
+                  "U",
+                  "B"
+                ],
+                "trackedStickerFacing": "B",
+                "center": [
+                  0,
+                  1,
+                  -1
+                ],
+                "stickerNormal": [
+                  0,
+                  0,
+                  -1
+                ]
+              },
+              "turn": {
+                "face": "U",
+                "outwardNormal": [
+                  0,
+                  1,
+                  0
+                ],
+                "direction": "clockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "no": 0.16,
+                  "yes": 0.84
+                },
+                "confidence": 0.67
+              }
+            },
+            "usage": {
+              "input_tokens": 553,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.67,
+                "probabilities": {
+                  "no": 0.16,
+                  "yes": 0.84
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 553,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 269.20814900000005,
+          "cost": 0.000023226000000000004
+        },
+        {
+          "id": "10fcae07-507c-4dd5-a002-dd83f719f16c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "top_center",
+              "diagramBefore": ". X .\n. O .\n. . .",
+              "turn": "90 degrees clockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "probabilities": {
+                  "unaffected": 0.04,
+                  "bottom_right": 0.07,
+                  "middle_left": 0.1,
+                  "middle_right": 0.26,
+                  "bottom_left": 0.11,
+                  "top_center": 0.05,
+                  "top_right": 0.19,
+                  "top_left": 0.08,
+                  "bottom_center": 0.1
+                },
+                "confidence": 0.17
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "middle_right",
+                "confidence": 0.17,
+                "probabilities": {
+                  "unaffected": 0.04,
+                  "bottom_right": 0.07,
+                  "middle_left": 0.1,
+                  "middle_right": 0.26,
+                  "bottom_left": 0.11,
+                  "top_center": 0.05,
+                  "top_right": 0.19,
+                  "top_left": 0.08,
+                  "bottom_center": 0.1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 577,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 229.6022860000012,
+          "cost": 0.000024234000000000002
+        }
+      ]
+    },
+    {
+      "caseId": "move-20",
+      "runId": "680bfbd8-6509-4ef5-9406-9a25a8a9370b",
+      "affected": true,
+      "expected": "bottom_right",
+      "membershipCorrect": true,
+      "actual": "bottom_right",
+      "correct": true,
+      "exchanges": [
+        {
+          "id": "16dabb41-5cfc-4885-a377-c32ea951bc0b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "id": "selected-piece",
+                "kind": "corner",
+                "touchingFaces": [
+                  "U",
+                  "L",
+                  "F"
+                ],
+                "trackedStickerFacing": "F",
+                "center": [
+                  -1,
+                  1,
+                  1
+                ],
+                "stickerNormal": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "turn": {
+                "face": "U",
+                "outwardNormal": [
+                  0,
+                  1,
+                  0
+                ],
+                "direction": "counterclockwise quarter turn"
+              }
+            },
+            "questions": {
+              "affected": {
+                "type": "choice",
+                "instructions": "Fixed right-handed axes: x points right, y up, z toward the front. Face directions: R=+x L=-x U=+y D=-y F=+z B=-z. A turn affects only pieces in its outer layer. Clockwise is viewed from outside looking inward at that face. Apply the rotation to the point and its sticker normal; a piece outside the layer stays unchanged. Is the selected piece in the layer being turned? Compare its current center with the face normal. Choose yes or no. Do not predict a new position yet.",
+                "criteria": {
+                  "yes": "The piece belongs to the turned layer.",
+                  "no": "The piece lies outside the turned layer."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "probabilities": {
+                  "no": 0.01,
+                  "yes": 0.99
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 559,
+              "output_tokens": 31
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "affected": {
+                "type": "choice",
+                "choice": "yes",
+                "confidence": 0.98,
+                "probabilities": {
+                  "no": 0.01,
+                  "yes": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 559,
+              "output_tokens": 31
+            }
+          },
+          "elapsedMs": 288.97341400000005,
+          "cost": 0.000023478000000000005
+        },
+        {
+          "id": "6200229c-2165-46fb-97e0-55d7a43b0855",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "previousModelAnswer": {
+                "affected": "yes"
+              },
+              "view": "Straight at the turned face, from outside. Top of diagram is screen top.",
+              "markerBefore": "bottom_left",
+              "diagramBefore": ". . .\n. O .\nX . .",
+              "turn": "90 degrees counterclockwise"
+            },
+            "questions": {
+              "cell": {
+                "type": "choice",
+                "instructions": "If your earlier affected answer is no, select unaffected: this piece is outside the rotating face, so its projection is not a marker on that face. Otherwise rotate the marked square diagram by the stated angle around O and choose the new position of X. Think of rotating a sheet of paper on a desk. Screen top is up and screen right is right. Do not mirror the diagram.",
+                "criteria": {
+                  "top_left": "top left",
+                  "top_center": "top center",
+                  "top_right": "top right",
+                  "middle_left": "middle left",
+                  "middle_right": "middle right",
+                  "bottom_left": "bottom left",
+                  "bottom_center": "bottom center",
+                  "bottom_right": "bottom right",
+                  "unaffected": "The selected piece is outside this face; its cube position does not change."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_right",
+                "probabilities": {
+                  "middle_right": 0.11,
+                  "bottom_center": 0.06,
+                  "top_left": 0.18,
+                  "unaffected": 0.03,
+                  "bottom_right": 0.25,
+                  "top_right": 0.12,
+                  "middle_left": 0.12,
+                  "top_center": 0.06,
+                  "bottom_left": 0.07
+                },
+                "confidence": 0.14
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "cell": {
+                "type": "choice",
+                "choice": "bottom_right",
+                "confidence": 0.14,
+                "probabilities": {
+                  "middle_right": 0.11,
+                  "bottom_center": 0.06,
+                  "top_left": 0.18,
+                  "unaffected": 0.03,
+                  "bottom_right": 0.25,
+                  "top_right": 0.12,
+                  "middle_left": 0.12,
+                  "top_center": 0.06,
+                  "bottom_left": 0.07
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 581,
+              "output_tokens": 91
+            }
+          },
+          "elapsedMs": 325.63033499999983,
+          "cost": 0.000024402000000000005
+        }
+      ]
+    }
+  ]
+}

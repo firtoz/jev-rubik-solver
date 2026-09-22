@@ -1,0 +1,24 @@
+{
+  "round": 1,
+  "budgetBefore": {
+    "cap": 5,
+    "reservedAndSpent": 4.051550538000001,
+    "usage": 4.046174538000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 51803,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "variants": [
+    "baseline",
+    "paper",
+    "clock"
+  ],
+  "concurrency": 3,
+  "cases": 20,
+  "maxRequests": 60,
+  "primaryMetric": "exact resulting grid cell",
+  "minimumDevelopmentGain": 2,
+  "plateauRule": "Change representation after two rounds with no improvement of at least 2/20; validate a winner on fresh cases.",
+  "membership": "Actual cached v4 model answers supplied unchanged to every variant. This round isolates grid prediction."
+}

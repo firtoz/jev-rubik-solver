@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-21T16:32:11.250Z",
+  "model": "jev-1.13.0",
+  "variants": [
+    "direct",
+    "checklist",
+    "sequential"
+  ],
+  "split": "development",
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 4.0554964380000005,
+    "usage": 4.050120438,
+    "reserved": 0.005376000000000001,
+    "attempts": 51963,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "maxRequests": 80,
+  "concurrency": 3,
+  "ranking": "accuracy descending, false positives ascending, requests ascending, cost ascending. Stop at a perfect cheapest baseline or after two rounds without a two-case gain. Validation must not select or tune variants."
+}

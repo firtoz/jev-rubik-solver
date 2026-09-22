@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-21T16:09:40.718Z",
+  "budget": {
+    "cap": 5,
+    "reservedAndSpent": 4.045063218000001,
+    "usage": 4.039687218000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 51623,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "model": "jev-1.13.0",
+  "maximumRequests": 20,
+  "notes": "Development only. No algorithms, case mappings, simulated outcomes or expected answers sent to JEV."
+}

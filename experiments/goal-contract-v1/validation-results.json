@@ -1,0 +1,3141 @@
+{
+  "rows": [
+    {
+      "id": "case-1",
+      "expected": "first-layer",
+      "variant": "compact",
+      "runId": "f847694d-f0da-4b9d-9e51-0cadbaa37e6d",
+      "exchange": {
+        "id": "e69eca64-c150-48ac-a631-fff9b61a5102",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "first-layer": 0.96,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "cross": 0.03,
+                "daisy": 0.01,
+                "middle-layer": 0
+              },
+              "confidence": 0.96
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "confidence": 0.96,
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "first-layer": 0.96,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "cross": 0.03,
+                "daisy": 0.01,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 628.574486,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "first-layer",
+      "correct": true
+    },
+    {
+      "id": "case-2",
+      "expected": "first-layer",
+      "variant": "compact",
+      "runId": "d92a54e4-de6f-4cac-b0b6-e83ad41794ce",
+      "exchange": {
+        "id": "4e1d1897-b530-4861-a704-84186bd22349",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "first-layer": 0.97,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "cross": 0.02,
+                "daisy": 0.01,
+                "middle-layer": 0
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "confidence": 0.97,
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "first-layer": 0.97,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "cross": 0.02,
+                "daisy": 0.01,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 248.16870100000006,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "first-layer",
+      "correct": true
+    },
+    {
+      "id": "case-3",
+      "expected": "first-layer",
+      "variant": "compact",
+      "runId": "6a4fe7e4-18e1-461d-84af-b7f2f2a8791b",
+      "exchange": {
+        "id": "35b79dff-1609-4bc9-897a-aa9473a950b7",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "probabilities": {
+                "daisy": 0,
+                "first-layer": 0.98,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "top-corners": 0,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "cross": 0.02
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "confidence": 0.97,
+              "probabilities": {
+                "daisy": 0,
+                "first-layer": 0.98,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "top-corners": 0,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "cross": 0.02
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 286.61356899999987,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "first-layer",
+      "correct": true
+    },
+    {
+      "id": "case-4",
+      "expected": "first-layer",
+      "variant": "compact",
+      "runId": "b25109e1-f611-4113-bb29-0795c260fb98",
+      "exchange": {
+        "id": "d68daaed-bfae-4949-b50a-f9d18bd7af40",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "probabilities": {
+                "middle-layer": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0.98,
+                "top-orientation": 0,
+                "daisy": 0,
+                "top-corners": 0,
+                "cross": 0.02
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "confidence": 0.97,
+              "probabilities": {
+                "middle-layer": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0.98,
+                "top-orientation": 0,
+                "daisy": 0,
+                "top-corners": 0,
+                "cross": 0.02
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 340.662828,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "first-layer",
+      "correct": true
+    },
+    {
+      "id": "case-5",
+      "expected": "daisy",
+      "variant": "compact",
+      "runId": "8a4b21f7-8df5-4487-8b0f-57b55cc5c546",
+      "exchange": {
+        "id": "c40ca5b7-a461-4ed4-b550-a998f3f06a22",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 1,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0,
+                "top-orientation": 0,
+                "cross": 0.01,
+                "daisy": 0.99,
+                "middle-layer": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0,
+                "top-orientation": 0,
+                "cross": 0.01,
+                "daisy": 0.99,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 291.55439,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "daisy",
+      "correct": true
+    },
+    {
+      "id": "case-6",
+      "expected": "cross",
+      "variant": "compact",
+      "runId": "9a15eb46-981d-4710-b9ea-15fd5de989aa",
+      "exchange": {
+        "id": "8ce12bce-2b89-4f3b-a844-f50401360e93",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 1,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "probabilities": {
+                "daisy": 0.04,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0.01,
+                "middle-layer": 0,
+                "top-corners": 0,
+                "cross": 0.95,
+                "top-orientation": 0
+              },
+              "confidence": 0.93
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 85
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "confidence": 0.93,
+              "probabilities": {
+                "daisy": 0.04,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0.01,
+                "middle-layer": 0,
+                "top-corners": 0,
+                "cross": 0.95,
+                "top-orientation": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 85
+          }
+        },
+        "elapsedMs": 329.9771660000001,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "cross",
+      "correct": true
+    },
+    {
+      "id": "case-7",
+      "expected": "daisy",
+      "variant": "compact",
+      "runId": "df1ecb21-c3f5-4872-8261-18897c0de7ec",
+      "exchange": {
+        "id": "8d81d734-480d-4d1e-ad81-8a9b817e3485",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 1,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "probabilities": {
+                "top-edges": 0,
+                "top-cross": 0,
+                "daisy": 0.99,
+                "top-orientation": 0,
+                "cross": 0.01,
+                "first-layer": 0,
+                "top-corners": 0,
+                "middle-layer": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-edges": 0,
+                "top-cross": 0,
+                "daisy": 0.99,
+                "top-orientation": 0,
+                "cross": 0.01,
+                "first-layer": 0,
+                "top-corners": 0,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 242.89211999999998,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "daisy",
+      "correct": true
+    },
+    {
+      "id": "case-8",
+      "expected": "daisy",
+      "variant": "compact",
+      "runId": "39989a69-a8ff-4cd5-b2b4-e0d9f1da0af9",
+      "exchange": {
+        "id": "3401a532-6bfd-4403-9e50-4a0f52e0b2be",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 1,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "probabilities": {
+                "top-cross": 0,
+                "first-layer": 0,
+                "top-edges": 0,
+                "top-corners": 0,
+                "daisy": 0.99,
+                "middle-layer": 0,
+                "cross": 0.01,
+                "top-orientation": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-cross": 0,
+                "first-layer": 0,
+                "top-edges": 0,
+                "top-corners": 0,
+                "daisy": 0.99,
+                "middle-layer": 0,
+                "cross": 0.01,
+                "top-orientation": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 363.59025999999994,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "daisy",
+      "correct": true
+    },
+    {
+      "id": "case-9",
+      "expected": "daisy",
+      "variant": "compact",
+      "runId": "d98b06e9-7ada-4a85-a5ca-930d142118ce",
+      "exchange": {
+        "id": "3f57a27b-c240-4785-9c14-960ecb85fe5f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 7
+            },
+            "uncollectedYellowEdges": 2,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "probabilities": {
+                "top-edges": 0,
+                "first-layer": 0,
+                "top-cross": 0,
+                "top-corners": 0,
+                "cross": 0.01,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "daisy": 0.99
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "daisy",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-edges": 0,
+                "first-layer": 0,
+                "top-cross": 0,
+                "top-corners": 0,
+                "cross": 0.01,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "daisy": 0.99
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 228.32998899999984,
+        "cost": 0.000031962
+      },
+      "actual": "daisy",
+      "correct": true
+    },
+    {
+      "id": "case-10",
+      "expected": "middle-layer",
+      "variant": "compact",
+      "runId": "7020d825-f11d-45b4-aed8-1a0c941badd7",
+      "exchange": {
+        "id": "52e9b5db-f230-4345-9234-ffa09c2bda3d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "probabilities": {
+                "cross": 0.01,
+                "first-layer": 0.12,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "top-corners": 0,
+                "middle-layer": 0.87,
+                "top-edges": 0,
+                "daisy": 0
+              },
+              "confidence": 0.85
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "confidence": 0.85,
+              "probabilities": {
+                "cross": 0.01,
+                "first-layer": 0.12,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "top-corners": 0,
+                "middle-layer": 0.87,
+                "top-edges": 0,
+                "daisy": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 246.89834500000006,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "middle-layer",
+      "correct": true
+    },
+    {
+      "id": "case-11",
+      "expected": "middle-layer",
+      "variant": "compact",
+      "runId": "1f7cb3d2-588f-4b3a-a8bf-b4a305c6685a",
+      "exchange": {
+        "id": "1f8cc618-aa24-46bf-9851-c657ff9b7d3c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "cross": 0.01,
+                "middle-layer": 0.77,
+                "first-layer": 0.21,
+                "daisy": 0.01,
+                "top-orientation": 0
+              },
+              "confidence": 0.74
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "confidence": 0.74,
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "cross": 0.01,
+                "middle-layer": 0.77,
+                "first-layer": 0.21,
+                "daisy": 0.01,
+                "top-orientation": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 226.00731300000007,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "middle-layer",
+      "correct": true
+    },
+    {
+      "id": "case-12",
+      "expected": "top-cross",
+      "variant": "compact",
+      "runId": "42da77aa-d596-42c1-8cd5-57078f600d83",
+      "exchange": {
+        "id": "c2b0c857-85c5-4c00-8f5b-7fc621470604",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "probabilities": {
+                "top-corners": 0,
+                "daisy": 0,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "first-layer": 0.01,
+                "top-cross": 0.98,
+                "cross": 0.01
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "confidence": 0.97,
+              "probabilities": {
+                "top-corners": 0,
+                "daisy": 0,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "first-layer": 0.01,
+                "top-cross": 0.98,
+                "cross": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 241.29219299999977,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-cross",
+      "correct": true
+    },
+    {
+      "id": "case-13",
+      "expected": "top-cross",
+      "variant": "compact",
+      "runId": "346411b1-e8fe-4f2c-b4c1-ebbcea146f99",
+      "exchange": {
+        "id": "920e181c-abc2-4cd1-940b-74d2bce68902",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "probabilities": {
+                "first-layer": 0.02,
+                "top-edges": 0,
+                "top-orientation": 0,
+                "top-corners": 0,
+                "top-cross": 0.96,
+                "middle-layer": 0,
+                "daisy": 0,
+                "cross": 0.02
+              },
+              "confidence": 0.96
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "confidence": 0.96,
+              "probabilities": {
+                "first-layer": 0.02,
+                "top-edges": 0,
+                "top-orientation": 0,
+                "top-corners": 0,
+                "top-cross": 0.96,
+                "middle-layer": 0,
+                "daisy": 0,
+                "cross": 0.02
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 255.31538999999975,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-cross",
+      "correct": true
+    },
+    {
+      "id": "case-14",
+      "expected": "top-orientation",
+      "variant": "compact",
+      "runId": "701ffff5-281d-4475-85ff-6a7e64c3e9e2",
+      "exchange": {
+        "id": "b3b9911f-9a02-43ce-97bd-d7af8f81ee8f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "probabilities": {
+                "first-layer": 0.01,
+                "top-orientation": 0.99,
+                "daisy": 0,
+                "cross": 0,
+                "top-edges": 0,
+                "top-corners": 0,
+                "middle-layer": 0,
+                "top-cross": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "confidence": 0.99,
+              "probabilities": {
+                "first-layer": 0.01,
+                "top-orientation": 0.99,
+                "daisy": 0,
+                "cross": 0,
+                "top-edges": 0,
+                "top-corners": 0,
+                "middle-layer": 0,
+                "top-cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 246.57697999999982,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-orientation",
+      "correct": true
+    },
+    {
+      "id": "case-15",
+      "expected": "top-orientation",
+      "variant": "compact",
+      "runId": "1c63ebfc-f5aa-462b-a6eb-abb5f046c0c6",
+      "exchange": {
+        "id": "afe2da41-223a-4db3-a8a3-7f8f858f992a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "first-layer": 0.01,
+                "top-cross": 0,
+                "top-orientation": 0.99,
+                "cross": 0,
+                "daisy": 0,
+                "middle-layer": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-corners": 0,
+                "top-edges": 0,
+                "first-layer": 0.01,
+                "top-cross": 0,
+                "top-orientation": 0.99,
+                "cross": 0,
+                "daisy": 0,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 286.56553200000053,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-orientation",
+      "correct": true
+    },
+    {
+      "id": "case-16",
+      "expected": "top-edges",
+      "variant": "compact",
+      "runId": "6a08d217-4d47-468f-ab96-6a07ee23b72a",
+      "exchange": {
+        "id": "6492d07c-6cd4-47d5-ac56-8c50f19307e4",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": true,
+              "solved": false,
+              "solvedPieces": 17
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "probabilities": {
+                "top-edges": 0.81,
+                "first-layer": 0.02,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "cross": 0,
+                "daisy": 0,
+                "middle-layer": 0,
+                "top-corners": 0.17
+              },
+              "confidence": 0.78
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "confidence": 0.78,
+              "probabilities": {
+                "top-edges": 0.81,
+                "first-layer": 0.02,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "cross": 0,
+                "daisy": 0,
+                "middle-layer": 0,
+                "top-corners": 0.17
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "elapsedMs": 217.69644599999992,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-edges",
+      "correct": true
+    },
+    {
+      "id": "case-17",
+      "expected": "top-edges",
+      "variant": "compact",
+      "runId": "fe9cba63-88e4-444b-bb50-9883ed9742c8",
+      "exchange": {
+        "id": "c7bfd489-ae52-4d65-85cb-78e4d5622e60",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": true,
+              "solved": false,
+              "solvedPieces": 17
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "probabilities": {
+                "daisy": 0,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "cross": 0,
+                "top-edges": 0.87,
+                "top-corners": 0.12,
+                "first-layer": 0.01,
+                "middle-layer": 0
+              },
+              "confidence": 0.84
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "confidence": 0.84,
+              "probabilities": {
+                "daisy": 0,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "cross": 0,
+                "top-edges": 0.87,
+                "top-corners": 0.12,
+                "first-layer": 0.01,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "elapsedMs": 338.30041900000015,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-edges",
+      "correct": true
+    },
+    {
+      "id": "case-18",
+      "expected": "cross",
+      "variant": "compact",
+      "runId": "fcf46b98-9e79-471b-80c4-f749f6e2e631",
+      "exchange": {
+        "id": "28b01d1d-9ce2-4395-9646-8338ab68b760",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 4,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 2
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "probabilities": {
+                "first-layer": 0,
+                "top-orientation": 0,
+                "daisy": 0.04,
+                "cross": 0.96,
+                "top-edges": 0,
+                "top-corners": 0,
+                "middle-layer": 0,
+                "top-cross": 0
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 85
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "confidence": 0.95,
+              "probabilities": {
+                "first-layer": 0,
+                "top-orientation": 0,
+                "daisy": 0.04,
+                "cross": 0.96,
+                "top-edges": 0,
+                "top-corners": 0,
+                "middle-layer": 0,
+                "top-cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 85
+          }
+        },
+        "elapsedMs": 294.1691600000004,
+        "cost": 0.000031962
+      },
+      "actual": "cross",
+      "correct": true
+    },
+    {
+      "id": "case-19",
+      "expected": "cross",
+      "variant": "compact",
+      "runId": "3c81f9e9-a093-4788-b22e-23b25d67bc06",
+      "exchange": {
+        "id": "7a758480-1094-4267-8ac3-0f1c48aa18de",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 2,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 4
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "probabilities": {
+                "top-corners": 0,
+                "first-layer": 0,
+                "daisy": 0.05,
+                "cross": 0.95,
+                "middle-layer": 0,
+                "top-cross": 0,
+                "top-edges": 0,
+                "top-orientation": 0
+              },
+              "confidence": 0.93
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 85
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "confidence": 0.93,
+              "probabilities": {
+                "top-corners": 0,
+                "first-layer": 0,
+                "daisy": 0.05,
+                "cross": 0.95,
+                "middle-layer": 0,
+                "top-cross": 0,
+                "top-edges": 0,
+                "top-orientation": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 85
+          }
+        },
+        "elapsedMs": 260.4217529999996,
+        "cost": 0.000031962
+      },
+      "actual": "cross",
+      "correct": true
+    },
+    {
+      "id": "case-20",
+      "expected": "cross",
+      "variant": "compact",
+      "runId": "638099af-1af7-480c-8911-2b130b591fa1",
+      "exchange": {
+        "id": "4688ad10-e3ab-4d7b-8d19-14f5fd19cc3a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 1,
+              "cross": false,
+              "firstLayer": false,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 7
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "probabilities": {
+                "first-layer": 0.01,
+                "top-orientation": 0,
+                "cross": 0.95,
+                "middle-layer": 0,
+                "top-corners": 0,
+                "top-cross": 0,
+                "top-edges": 0,
+                "daisy": 0.04
+              },
+              "confidence": 0.94
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 85
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "cross",
+              "confidence": 0.94,
+              "probabilities": {
+                "first-layer": 0.01,
+                "top-orientation": 0,
+                "cross": 0.95,
+                "middle-layer": 0,
+                "top-corners": 0,
+                "top-cross": 0,
+                "top-edges": 0,
+                "daisy": 0.04
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 761,
+            "output_tokens": 85
+          }
+        },
+        "elapsedMs": 310.3342050000001,
+        "cost": 0.000031962
+      },
+      "actual": "cross",
+      "correct": true
+    },
+    {
+      "id": "case-21",
+      "expected": "middle-layer",
+      "variant": "compact",
+      "runId": "1e7c32ed-ea88-440f-a954-310b50344e51",
+      "exchange": {
+        "id": "7cafb1e7-2cdf-48ec-860b-3de12781cc6c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "probabilities": {
+                "first-layer": 0.22,
+                "top-orientation": 0,
+                "daisy": 0,
+                "cross": 0.01,
+                "top-corners": 0,
+                "top-edges": 0,
+                "middle-layer": 0.77,
+                "top-cross": 0
+              },
+              "confidence": 0.74
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "confidence": 0.74,
+              "probabilities": {
+                "first-layer": 0.22,
+                "top-orientation": 0,
+                "daisy": 0,
+                "cross": 0.01,
+                "top-corners": 0,
+                "top-edges": 0,
+                "middle-layer": 0.77,
+                "top-cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 409.806114,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "middle-layer",
+      "correct": true
+    },
+    {
+      "id": "case-22",
+      "expected": "middle-layer",
+      "variant": "compact",
+      "runId": "f19d6cc7-e58d-4ad2-8e65-c23100f4ea7a",
+      "exchange": {
+        "id": "33e23bae-6c61-4ea1-9469-cd4397c684ad",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": false,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "probabilities": {
+                "top-corners": 0,
+                "middle-layer": 0.82,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "daisy": 0,
+                "cross": 0.01,
+                "first-layer": 0.17,
+                "top-edges": 0
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "middle-layer",
+              "confidence": 0.79,
+              "probabilities": {
+                "top-corners": 0,
+                "middle-layer": 0.82,
+                "top-cross": 0,
+                "top-orientation": 0,
+                "daisy": 0,
+                "cross": 0.01,
+                "first-layer": 0.17,
+                "top-edges": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 293.35206299999936,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "middle-layer",
+      "correct": true
+    },
+    {
+      "id": "case-23",
+      "expected": "top-cross",
+      "variant": "compact",
+      "runId": "07d33ac4-ec51-4250-a1e5-80ad797fa7cd",
+      "exchange": {
+        "id": "99d52089-beb5-48a8-9b29-ada1d69bdf4a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 14
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "probabilities": {
+                "cross": 0.02,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "daisy": 0,
+                "top-orientation": 0,
+                "top-cross": 0.95,
+                "first-layer": 0.03,
+                "top-corners": 0
+              },
+              "confidence": 0.94
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "confidence": 0.94,
+              "probabilities": {
+                "cross": 0.02,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "daisy": 0,
+                "top-orientation": 0,
+                "top-cross": 0.95,
+                "first-layer": 0.03,
+                "top-corners": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 225.58696400000008,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-cross",
+      "correct": true
+    },
+    {
+      "id": "case-24",
+      "expected": "top-cross",
+      "variant": "compact",
+      "runId": "de9737e9-cb47-4910-bcb6-dc0b48862d7f",
+      "exchange": {
+        "id": "044cacec-f5c2-452d-8960-abcb280b1788",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": false,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "probabilities": {
+                "top-edges": 0,
+                "first-layer": 0.05,
+                "top-cross": 0.93,
+                "top-corners": 0,
+                "cross": 0.02,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "daisy": 0
+              },
+              "confidence": 0.92
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-cross",
+              "confidence": 0.92,
+              "probabilities": {
+                "top-edges": 0,
+                "first-layer": 0.05,
+                "top-cross": 0.93,
+                "top-corners": 0,
+                "cross": 0.02,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "daisy": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 86
+          }
+        },
+        "elapsedMs": 271.1385850000006,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-cross",
+      "correct": true
+    },
+    {
+      "id": "case-25",
+      "expected": "top-orientation",
+      "variant": "compact",
+      "runId": "49ecf49b-cf3c-422d-87ea-77c4695a057e",
+      "exchange": {
+        "id": "a9b8d015-67ae-4291-a3ce-c343b6e23566",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 14
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "probabilities": {
+                "top-edges": 0,
+                "daisy": 0,
+                "cross": 0,
+                "middle-layer": 0,
+                "top-cross": 0,
+                "top-orientation": 1,
+                "top-corners": 0,
+                "first-layer": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-edges": 0,
+                "daisy": 0,
+                "cross": 0,
+                "middle-layer": 0,
+                "top-cross": 0,
+                "top-orientation": 1,
+                "top-corners": 0,
+                "first-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 262.33551400000033,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-orientation",
+      "correct": true
+    },
+    {
+      "id": "case-26",
+      "expected": "top-orientation",
+      "variant": "compact",
+      "runId": "908b5391-5544-42bb-be37-6d9516b6ad74",
+      "exchange": {
+        "id": "185560a3-c707-4db8-b8f0-2ab682ca0bd4",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": false,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "probabilities": {
+                "top-corners": 0,
+                "first-layer": 0,
+                "daisy": 0,
+                "top-orientation": 1,
+                "cross": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "middle-layer": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-orientation",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-corners": 0,
+                "first-layer": 0,
+                "daisy": 0,
+                "top-orientation": 1,
+                "cross": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "middle-layer": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 245.61092599999938,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-orientation",
+      "correct": true
+    },
+    {
+      "id": "case-27",
+      "expected": "top-corners",
+      "variant": "compact",
+      "runId": "9dcb589f-d359-48ac-b078-4bf07ca9f6b3",
+      "exchange": {
+        "id": "45c30fee-3958-4eba-9562-ba34a3a87498",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "probabilities": {
+                "top-corners": 1,
+                "daisy": 0,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0,
+                "cross": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-corners": 1,
+                "daisy": 0,
+                "top-orientation": 0,
+                "middle-layer": 0,
+                "top-edges": 0,
+                "top-cross": 0,
+                "first-layer": 0,
+                "cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 271.1219459999993,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-corners",
+      "correct": true
+    },
+    {
+      "id": "case-28",
+      "expected": "top-corners",
+      "variant": "compact",
+      "runId": "4b6dc95a-e7dc-4ce2-b649-3f92a9f08fc4",
+      "exchange": {
+        "id": "98d0eac8-976a-4298-8231-608dd8be4d8c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 14
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "probabilities": {
+                "middle-layer": 0,
+                "first-layer": 0.01,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "cross": 0,
+                "daisy": 0,
+                "top-edges": 0,
+                "top-corners": 0.99
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "confidence": 0.99,
+              "probabilities": {
+                "middle-layer": 0,
+                "first-layer": 0.01,
+                "top-orientation": 0,
+                "top-cross": 0,
+                "cross": 0,
+                "daisy": 0,
+                "top-edges": 0,
+                "top-corners": 0.99
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 315.57849799999894,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-corners",
+      "correct": true
+    },
+    {
+      "id": "case-29",
+      "expected": "top-corners",
+      "variant": "compact",
+      "runId": "f1ba7e76-e6fc-4319-946a-afb561107505",
+      "exchange": {
+        "id": "14a2cfd8-1bdb-44bb-843a-b38b2c0dc19a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 12
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "probabilities": {
+                "middle-layer": 0,
+                "cross": 0,
+                "first-layer": 0,
+                "top-orientation": 0,
+                "daisy": 0,
+                "top-corners": 1,
+                "top-edges": 0,
+                "top-cross": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "confidence": 0.99,
+              "probabilities": {
+                "middle-layer": 0,
+                "cross": 0,
+                "first-layer": 0,
+                "top-orientation": 0,
+                "daisy": 0,
+                "top-corners": 1,
+                "top-edges": 0,
+                "top-cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 248.77280299999984,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-corners",
+      "correct": true
+    },
+    {
+      "id": "case-30",
+      "expected": "top-corners",
+      "variant": "compact",
+      "runId": "36149457-304a-48ab-9193-8e697e387cd7",
+      "exchange": {
+        "id": "88b688e0-2984-4631-87c6-5553368c12a3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": false,
+              "solved": false,
+              "solvedPieces": 13
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "probabilities": {
+                "top-corners": 0.99,
+                "top-edges": 0,
+                "top-cross": 0,
+                "cross": 0,
+                "middle-layer": 0,
+                "first-layer": 0.01,
+                "daisy": 0,
+                "top-orientation": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-corners",
+              "confidence": 0.99,
+              "probabilities": {
+                "top-corners": 0.99,
+                "top-edges": 0,
+                "top-cross": 0,
+                "cross": 0,
+                "middle-layer": 0,
+                "first-layer": 0.01,
+                "daisy": 0,
+                "top-orientation": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 88
+          }
+        },
+        "elapsedMs": 222.53701100000035,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-corners",
+      "correct": true
+    },
+    {
+      "id": "case-31",
+      "expected": "top-edges",
+      "variant": "compact",
+      "runId": "1f7741bf-4350-4170-84ae-e76be560fcd0",
+      "exchange": {
+        "id": "b7608574-8940-433b-a4e7-e4e7a3b5905d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": true,
+              "solved": false,
+              "solvedPieces": 17
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "probabilities": {
+                "first-layer": 0.01,
+                "top-orientation": 0,
+                "top-edges": 0.88,
+                "top-corners": 0.11,
+                "cross": 0,
+                "middle-layer": 0,
+                "daisy": 0,
+                "top-cross": 0
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "confidence": 0.86,
+              "probabilities": {
+                "first-layer": 0.01,
+                "top-orientation": 0,
+                "top-edges": 0.88,
+                "top-corners": 0.11,
+                "cross": 0,
+                "middle-layer": 0,
+                "daisy": 0,
+                "top-cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "elapsedMs": 232.42945099999997,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-edges",
+      "correct": true
+    },
+    {
+      "id": "case-32",
+      "expected": "top-edges",
+      "variant": "compact",
+      "runId": "fe4ca0c4-5c43-4da3-9076-9fdd5a9df92e",
+      "exchange": {
+        "id": "db03d7d4-2fb8-42bd-970a-fcb9c1791791",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "completed": {
+              "daisy": 0,
+              "cross": true,
+              "firstLayer": true,
+              "middle": true,
+              "topCross": true,
+              "topOriented": true,
+              "cornersPlaced": true,
+              "solved": false,
+              "solvedPieces": 17
+            },
+            "uncollectedYellowEdges": 0,
+            "previousGoal": "cross",
+            "recentActions": [
+              "U"
+            ]
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+              "criteria": {
+                "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "probabilities": {
+                "first-layer": 0.01,
+                "daisy": 0,
+                "cross": 0,
+                "top-corners": 0.11,
+                "middle-layer": 0,
+                "top-orientation": 0,
+                "top-edges": 0.88,
+                "top-cross": 0
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "top-edges",
+              "confidence": 0.86,
+              "probabilities": {
+                "first-layer": 0.01,
+                "daisy": 0,
+                "cross": 0,
+                "top-corners": 0.11,
+                "middle-layer": 0,
+                "top-orientation": 0,
+                "top-edges": 0.88,
+                "top-cross": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 762,
+            "output_tokens": 87
+          }
+        },
+        "elapsedMs": 250.89235800000097,
+        "cost": 0.00003200400000000001
+      },
+      "actual": "top-edges",
+      "correct": true
+    }
+  ],
+  "cost": 0.0010239599999999998
+}

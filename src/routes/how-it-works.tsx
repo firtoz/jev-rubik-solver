@@ -1,3 +1,10 @@
+import { PROJECT_BUDGET_CAP } from '../lib/budget';
+import { ObservationBoundary } from '../components/article/ObservationBoundary';
+import { DaisyTransition } from '../components/article/DaisyTransition';
+import { ProgressIntegration } from '../components/article/ProgressIntegration';
+import { ProgressGoalExperiment } from '../components/article/ProgressGoalExperiment';
+import { FirstLayerExperiment } from '../components/article/FirstLayerExperiment';
+import { ReasoningExperiments } from '../components/article/ReasoningExperiments';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useEffect, useState, useRef } from 'react';
 import { Cube } from '../components/Cube';
@@ -153,19 +160,19 @@ function Article() {
               </div>
             </div>
             <p>
-              We wanted to see whether JEV could solve a Rubik’s cube with a little guidance. This
+              We wanted to see whether JEV could solve a Rubik’s cube using a fixed beginner reference and reliable observations. This
               article follows the experiments that got it working, and lets you try the same
               requests on a cube of your own.
             </p>
           </div>
           <div className="article-stats">
             <div>
-              <strong>99 / 100</strong>
-              <span>unseen cubes solved</span>
+              <strong>100 / 100</strong>
+              <span>unseen cubes solved by the frozen brain v3 policy</span>
             </div>
             <div>
-              <strong>$1.28</strong>
-              <span>the final 100-case evaluation</span>
+              <strong>$1.015</strong>
+              <span>committed for the brain v3 final evaluation</span>
             </div>
             <div>
               <strong>JEV 1.13.0</strong>
@@ -180,6 +187,8 @@ function Article() {
               ['start', '01 / Choosing individual turns'],
               ['decompose', '02 / A smaller decision'],
               ['measure', '03 / Testing the parts'],
+              ['reasoning', 'Follow-up / Fewer supplied rules'],
+              ['recognition', 'Experiment / Recognizing progress'],
               ['playground', '04 / Inside the pipeline'],
               ['reproduce', '05 / Make it reproducible'],
               ['beyond', '06 / Beyond the cube'],
@@ -202,7 +211,8 @@ function Article() {
               <p>
                 We later tested a policy that chose individual face turns, with separate questions
                 to help it choose a goal and a target. On three full scrambles, it used all 500
-                requests allowed per attempt without solving any of them. Below, a fresh matched recording compares both policies on another shared scramble.
+                requests allowed per attempt without solving any of them. Below, a fresh matched
+                recording compares both policies on another shared scramble.
               </p>
               {evidence.length > 0 && <ComparisonDemo recordings={evidence} />}
               <div className="article-note">
@@ -261,7 +271,7 @@ function Article() {
                 </div>
                 <div>
                   <strong>99 / 100</strong>
-                  <h3>The complete system</h3>
+                  <h3>The earlier v26 system</h3>
                   <p>
                     Fresh full random-state scrambles, frozen v26 policy. One HTTP 503 remains
                     counted as failure.
@@ -283,16 +293,28 @@ function Article() {
                 the next final test.
               </p>
               <p>
-                The final 100-case test cost $1.28 for 30.48 million input tokens across 16,896
+                That v26 test cost $1.28 for 30.48 million input tokens across 16,896
                 requests. That made the extra questions affordable for this experiment. Waiting for
                 them was more noticeable, with a mean active time of 76.46 seconds per attempt. We
                 used the $0.042 per million input-token rate checked on 20 September 2026. Check
                 current pricing before running your own evaluation.
               </p>
             </section>
+            <section id="reasoning">
+              <ReasoningExperiments />
+            </section>
+            <section id="recognition">
+              <FirstLayerExperiment />
+              <ProgressGoalExperiment />
+              <ProgressIntegration />
+              <DaisyTransition />
+              <ObservationBoundary />
+              <p><Link to="/request-flow">Explore every request, response and handoff in the recorded pipeline →</Link></p>
+            </section>
             <section id="playground">
               <div className="eyebrow">04 / INSIDE THE PIPELINE</div>
               <h2>Try it with your own cube</h2>
+              <p>This playground and the recorded comparison use the earlier v26 policy. The brain v3 evaluation is documented separately above.</p>
               <p>
                 Set up a cube with the face-turn buttons or enter a move sequence. You can drag the
                 preview to look around it. The directions used in requests stay fixed, with white on
@@ -431,7 +453,7 @@ function Article() {
                       <div className="console-stats">
                         <span>{session.run.requests} requests</span>
                         <span>${session.run.cost.toFixed(5)} this session</span>
-                        <span>${session.budget.usage.toFixed(4)} / $5 project</span>
+                        <span>${session.budget.usage.toFixed(4)} / ${session.budget.cap} project</span>
                       </div>
                       <div className="small-controls">
                         <button
@@ -491,7 +513,7 @@ function Article() {
                       <p className="fine-print">
                         Your manual move applications are recorded separately from autonomous
                         benchmarks. One request per click, no automatic retries. The existing
-                        project-wide $5 cap still applies. This workbench exposes goal and skill
+                        project-wide ${PROJECT_BUDGET_CAP} cap still applies. This workbench exposes goal and skill
                         layers. Autonomous recovery is available in the main lab.
                       </p>
                     </>

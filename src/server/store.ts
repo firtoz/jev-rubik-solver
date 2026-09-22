@@ -1,3 +1,4 @@
+import { PROJECT_BUDGET_CAP } from '../lib/budget';
 import { Database } from 'bun:sqlite';
 import { mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -53,11 +54,11 @@ export function spend() {
   return (db.query('SELECT COALESCE(SUM(amount),0) total FROM ledger').get() as any)
     .total as number;
 }
-export const CAP = 5,
+export const CAP = PROJECT_BUDGET_CAP,
   PRICE = 0.042 / 1e6;
 export function reserve(id: string, runId: string, amount: number) {
   db.transaction(() => {
-    if (spend() + amount > CAP) throw new Error('Project $5 budget exhausted');
+    if (spend() + amount > CAP) throw new Error(`Project $${CAP} budget exhausted`);
     db.query('INSERT INTO ledger VALUES (?,?,?,?,?)').run(
       id,
       runId,

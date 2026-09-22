@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-21T16:38:28.408Z",
+  "variants": [
+    "direct",
+    "chain",
+    "chain:scope"
+  ],
+  "maxRequests": 100,
+  "start": {
+    "cap": 5,
+    "reservedAndSpent": 4.068597078000001,
+    "usage": 4.063221078000001,
+    "reserved": 0.005376000000000001,
+    "attempts": 52283,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "scope": "Four early/middle checkpoints, five cases each; last-layer goal is a handoff, not late-case selection. All options include solved, tested separately offline.",
+  "ranking": "goal accuracy, then premature advancement, then requests and cost; maximum two development rounds; freeze before validation"
+}

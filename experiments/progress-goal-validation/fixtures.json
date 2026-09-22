@@ -1,0 +1,2807 @@
+[
+  {
+    "id": "validation-1",
+    "category": "cross-needed",
+    "scramble": "F R U R' U' F' F R U R' U' F' F R U R' U' F' D",
+    "stateHash": "[{\"pieces\":[0,1,2,3,7,4,5,6,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,2,1,0,5,6,7,4],\"orientation\":[2,1,2,1,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "blue",
+              "white",
+              "blue"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "green",
+              "white",
+              "green"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "white",
+              "blue",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "orange",
+              "red",
+              "orange"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "red",
+              "orange",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "no",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "daisy",
+      "cross"
+    ]
+  },
+  {
+    "id": "validation-2",
+    "category": "cross-needed",
+    "scramble": "R U R' U' R' F R2 U' R' U' R U R' F' R U R' U' R' F R2 U' R' U' R U R' F' U F",
+    "stateHash": "[{\"pieces\":[9,2,3,0,8,5,6,7,1,4,10,11],\"orientation\":[1,0,0,0,1,0,0,0,1,1,0,0]},{\"pieces\":[0,2,3,5,1,4,6,7],\"orientation\":[1,0,0,2,2,1,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "green"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "red",
+              "red",
+              "blue"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "green",
+              "green",
+              "red"
+            ],
+            [
+              "green",
+              "green",
+              "red"
+            ],
+            [
+              "green",
+              "green",
+              "red"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "white",
+              "blue",
+              "blue"
+            ],
+            [
+              "white",
+              "red",
+              "red"
+            ],
+            [
+              "white",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "green",
+              "green",
+              "yellow"
+            ],
+            [
+              "orange",
+              "orange",
+              "yellow"
+            ],
+            [
+              "orange",
+              "orange",
+              "yellow"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "no",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "daisy",
+      "cross"
+    ]
+  },
+  {
+    "id": "validation-3",
+    "category": "cross-needed",
+    "scramble": "F R U R' U' F' R U R' U' R' F R2 U' R' U' R U R' F' U U U' D",
+    "stateHash": "[{\"pieces\":[3,1,0,2,7,4,5,6,8,9,10,11],\"orientation\":[0,0,1,1,0,0,0,0,0,0,0,0]},{\"pieces\":[3,1,0,2,5,6,7,4],\"orientation\":[1,0,0,2,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "green",
+              "white"
+            ],
+            [
+              "blue",
+              "white",
+              "white"
+            ],
+            [
+              "orange",
+              "white",
+              "orange"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "blue",
+              "orange",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "white",
+              "green"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "white",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "red",
+              "white",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "no",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "daisy",
+      "cross"
+    ]
+  },
+  {
+    "id": "validation-4",
+    "category": "cross-needed",
+    "scramble": "R U R' U R U2 R' U2 R U R' U' R' F R2 U' R' U' R U R' F' U2 D'",
+    "stateHash": "[{\"pieces\":[0,2,1,3,5,6,7,4,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[2,3,1,0,7,4,5,6],\"orientation\":[1,0,1,1,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "red",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "green",
+              "white",
+              "blue"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "green",
+              "orange"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "green",
+              "red",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "white",
+              "blue",
+              "orange"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "white",
+              "orange",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "no",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "daisy",
+      "cross"
+    ]
+  },
+  {
+    "id": "validation-5",
+    "category": "cross-needed",
+    "scramble": "U2 F R U R' U' F' U U2 L'",
+    "stateHash": "[{\"pieces\":[1,0,2,9,4,5,6,11,8,7,10,3],\"orientation\":[0,1,1,0,0,0,0,0,0,0,0,0]},{\"pieces\":[2,1,3,5,4,6,0,7],\"orientation\":[0,1,2,1,0,2,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "green",
+              "blue",
+              "red"
+            ],
+            [
+              "green",
+              "white",
+              "green"
+            ],
+            [
+              "green",
+              "white",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "blue",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "blue",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "white",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "yellow",
+              "red",
+              "blue"
+            ],
+            [
+              "yellow",
+              "green",
+              "green"
+            ],
+            [
+              "yellow",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "red"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "orange",
+              "white",
+              "blue"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "green",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "no",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "daisy",
+      "cross"
+    ]
+  },
+  {
+    "id": "validation-6",
+    "category": "corners-needed",
+    "scramble": "U U U F' U' F U",
+    "stateHash": "[{\"pieces\":[8,0,1,3,4,5,6,7,2,9,10,11],\"orientation\":[1,0,0,0,0,0,0,0,1,0,0,0]},{\"pieces\":[4,0,2,1,3,5,6,7],\"orientation\":[1,0,0,1,1,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "orange"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "blue"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "red",
+              "red",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "yellow",
+              "green",
+              "green"
+            ],
+            [
+              "white",
+              "red",
+              "red"
+            ],
+            [
+              "green",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "orange",
+              "orange",
+              "blue"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "first-layer"
+    ]
+  },
+  {
+    "id": "validation-7",
+    "category": "corners-needed",
+    "scramble": "U' F R U R' U' F' R U R' U'",
+    "stateHash": "[{\"pieces\":[1,8,3,2,4,5,6,7,0,9,10,11],\"orientation\":[1,0,1,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,1,3,2,5,6,7],\"orientation\":[2,2,2,0,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "blue",
+              "orange",
+              "red"
+            ],
+            [
+              "white",
+              "white",
+              "green"
+            ],
+            [
+              "white",
+              "red",
+              "green"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "white"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "green",
+              "white",
+              "yellow"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "orange"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "green",
+              "white",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "red",
+              "red",
+              "white"
+            ],
+            [
+              "green",
+              "red",
+              "red"
+            ],
+            [
+              "blue",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "red",
+              "blue",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "first-layer"
+    ]
+  },
+  {
+    "id": "validation-8",
+    "category": "corners-needed",
+    "scramble": "F R U R' U' F' U R U R' U'",
+    "stateHash": "[{\"pieces\":[0,8,1,2,4,5,6,7,3,9,10,11],\"orientation\":[1,0,0,1,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,1,3,2,5,6,7],\"orientation\":[2,2,0,1,1,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "white",
+              "red"
+            ],
+            [
+              "blue",
+              "white",
+              "green"
+            ],
+            [
+              "orange",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "blue"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "white",
+              "yellow"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "green",
+              "red",
+              "red"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "red",
+              "red",
+              "white"
+            ],
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "orange",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "blue",
+              "white",
+              "green"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "first-layer"
+    ]
+  },
+  {
+    "id": "validation-9",
+    "category": "corners-needed",
+    "scramble": "R U R' U R U2 R' F R U R' U' F' U L' U' L U",
+    "stateHash": "[{\"pieces\":[0,3,1,9,4,5,6,7,8,2,10,11],\"orientation\":[1,0,1,0,0,0,0,0,0,0,0,0]},{\"pieces\":[0,2,3,5,4,1,6,7],\"orientation\":[0,1,1,1,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "orange",
+              "red",
+              "blue"
+            ],
+            [
+              "green",
+              "white",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "white",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "yellow",
+              "white",
+              "green"
+            ],
+            [
+              "white",
+              "green",
+              "green"
+            ],
+            [
+              "red",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "white",
+              "white",
+              "green"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "red",
+              "orange",
+              "orange"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "white",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "blue"
+            ],
+            [
+              "orange",
+              "orange",
+              "blue"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "first-layer"
+    ]
+  },
+  {
+    "id": "validation-10",
+    "category": "corners-needed",
+    "scramble": "U2 U2 F R U R' U' F' U' L' U' L U",
+    "stateHash": "[{\"pieces\":[3,2,1,9,4,5,6,7,8,0,10,11],\"orientation\":[0,1,0,0,0,0,0,0,0,1,0,0]},{\"pieces\":[0,2,3,5,4,1,6,7],\"orientation\":[0,2,2,1,0,1,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "green",
+              "white",
+              "orange"
+            ],
+            [
+              "green",
+              "white",
+              "blue"
+            ],
+            [
+              "green",
+              "white",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "red",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "yellow",
+              "orange",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "blue",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "red",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "red",
+              "white",
+              "white"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "white"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "first-layer"
+    ]
+  },
+  {
+    "id": "validation-11",
+    "category": "middle-needed",
+    "scramble": "R U R' U R U2 R' R U R' U R U2 R' U' R U R' U' R' F R2 U' R' U' R U R' F' U R U' R' U' F' U F",
+    "stateHash": "[{\"pieces\":[0,2,8,3,4,5,6,7,1,9,10,11],\"orientation\":[0,0,0,1,0,0,0,0,1,0,0,0]},{\"pieces\":[0,1,2,3,4,5,6,7],\"orientation\":[2,1,1,2,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "blue",
+              "green",
+              "red"
+            ],
+            [
+              "orange",
+              "white",
+              "white"
+            ],
+            [
+              "green",
+              "white",
+              "red"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "orange",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "red"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "white",
+              "red",
+              "orange"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "green",
+              "blue",
+              "blue"
+            ],
+            [
+              "white",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "middle-layer"
+    ]
+  },
+  {
+    "id": "validation-12",
+    "category": "middle-needed",
+    "scramble": "U2 U U' L' U L U F U' F'",
+    "stateHash": "[{\"pieces\":[0,2,9,1,4,5,6,7,8,3,10,11],\"orientation\":[0,1,0,0,0,0,0,0,0,1,0,0]},{\"pieces\":[1,3,0,2,4,5,6,7],\"orientation\":[2,1,0,0,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "green",
+              "orange"
+            ],
+            [
+              "white",
+              "white",
+              "blue"
+            ],
+            [
+              "white",
+              "white",
+              "blue"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "orange",
+              "green",
+              "white"
+            ],
+            [
+              "orange",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "white",
+              "orange",
+              "green"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "red",
+              "white",
+              "green"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "red",
+              "red",
+              "blue"
+            ],
+            [
+              "orange",
+              "orange",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "middle-layer"
+    ]
+  },
+  {
+    "id": "validation-13",
+    "category": "middle-needed",
+    "scramble": "R U R' U R U2 R' U' U2 R U R' U R U2 R' U' L' U L U F U' F'",
+    "stateHash": "[{\"pieces\":[0,2,9,1,4,5,6,7,8,3,10,11],\"orientation\":[0,1,0,0,0,0,0,0,0,1,0,0]},{\"pieces\":[3,1,2,0,4,5,6,7],\"orientation\":[0,0,1,2,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "blue",
+              "green",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "blue"
+            ],
+            [
+              "red",
+              "white",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "green",
+              "green",
+              "orange"
+            ],
+            [
+              "orange",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "orange",
+              "orange"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "green",
+              "white",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "white",
+              "red",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "middle-layer"
+    ]
+  },
+  {
+    "id": "validation-14",
+    "category": "middle-needed",
+    "scramble": "U U F R U R' U' F' U U R U' R' U' F' U F",
+    "stateHash": "[{\"pieces\":[0,1,8,3,4,5,6,7,2,9,10,11],\"orientation\":[1,0,0,1,0,0,0,0,0,0,0,0]},{\"pieces\":[0,2,1,3,4,5,6,7],\"orientation\":[2,0,0,1,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "green",
+              "white"
+            ],
+            [
+              "orange",
+              "white",
+              "white"
+            ],
+            [
+              "orange",
+              "green",
+              "red"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "green",
+              "red",
+              "blue"
+            ],
+            [
+              "blue",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "blue",
+              "white",
+              "green"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "middle-layer"
+    ]
+  },
+  {
+    "id": "validation-15",
+    "category": "middle-needed",
+    "scramble": "R U R' U R U2 R' F R U R' U' F' U2 R U R' U R U2 R' U U R U' R' U' F' U F",
+    "stateHash": "[{\"pieces\":[3,1,8,2,4,5,6,7,0,9,10,11],\"orientation\":[0,1,0,1,0,0,0,0,0,0,0,0]},{\"pieces\":[0,2,1,3,4,5,6,7],\"orientation\":[0,2,2,2,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "blue",
+              "green",
+              "orange"
+            ],
+            [
+              "blue",
+              "white",
+              "red"
+            ],
+            [
+              "green",
+              "white",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "orange",
+              "orange",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "red",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "red",
+              "white",
+              "white"
+            ],
+            [
+              "green",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "red",
+              "white",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "middle-layer"
+    ]
+  },
+  {
+    "id": "validation-16",
+    "category": "last-layer-needed",
+    "scramble": "U R U R' U R U2 R'",
+    "stateHash": "[{\"pieces\":[1,0,2,3,4,5,6,7,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,0,1,2,4,5,6,7],\"orientation\":[1,0,1,1,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "red",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "blue",
+              "white",
+              "orange"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "red",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "red",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "white",
+              "green",
+              "green"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "white",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "yes",
+      "solved": "no"
+    },
+    "accepted": [
+      "last-layer"
+    ]
+  },
+  {
+    "id": "validation-17",
+    "category": "last-layer-needed",
+    "scramble": "R U R' U' R' F R2 U' R' U' R U R' F' F R U R' U' F' U R U R' U R U2 R'",
+    "stateHash": "[{\"pieces\":[0,2,3,1,4,5,6,7,8,9,10,11],\"orientation\":[1,1,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[1,3,2,0,4,5,6,7],\"orientation\":[1,1,0,1,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "white",
+              "orange"
+            ],
+            [
+              "white",
+              "white",
+              "blue"
+            ],
+            [
+              "green",
+              "green",
+              "red"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "white",
+              "white",
+              "blue"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "white",
+              "orange",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "white",
+              "white",
+              "green"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "yes",
+      "solved": "no"
+    },
+    "accepted": [
+      "last-layer"
+    ]
+  },
+  {
+    "id": "validation-18",
+    "category": "last-layer-needed",
+    "scramble": "R U R' U R U2 R' R U R' U R U2 R' U",
+    "stateHash": "[{\"pieces\":[2,3,1,0,4,5,6,7,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[1,2,3,0,4,5,6,7],\"orientation\":[1,2,1,2,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "orange",
+              "white",
+              "orange"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "red",
+              "white",
+              "red"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "green",
+              "blue",
+              "blue"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "red",
+              "green"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "white",
+              "orange",
+              "white"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "white",
+              "green",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "yes",
+      "solved": "no"
+    },
+    "accepted": [
+      "last-layer"
+    ]
+  },
+  {
+    "id": "validation-19",
+    "category": "last-layer-needed",
+    "scramble": "U' U R U R' U' R' F R2 U' R' U' R U R' F' U U2",
+    "stateHash": "[{\"pieces\":[1,0,3,2,4,5,6,7,8,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[3,1,0,2,4,5,6,7],\"orientation\":[0,0,0,0,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "orange",
+              "red",
+              "orange"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "orange",
+              "green"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "green",
+              "green",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "red",
+              "blue",
+              "blue"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "yes",
+      "solved": "no"
+    },
+    "accepted": [
+      "last-layer"
+    ]
+  },
+  {
+    "id": "validation-20",
+    "category": "last-layer-needed",
+    "scramble": "F R U R' U' F' F R U R' U' F' U' R U R' U R U2 R'",
+    "stateHash": "[{\"pieces\":[3,0,1,2,4,5,6,7,8,9,10,11],\"orientation\":[0,1,1,0,0,0,0,0,0,0,0,0]},{\"pieces\":[1,2,3,0,4,5,6,7],\"orientation\":[0,2,2,2,0,0,0,0]}]",
+    "observation": {
+      "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+      "faces": {
+        "U": {
+          "center": "white",
+          "rows": [
+            [
+              "green",
+              "red",
+              "orange"
+            ],
+            [
+              "white",
+              "white",
+              "green"
+            ],
+            [
+              "red",
+              "white",
+              "white"
+            ]
+          ]
+        },
+        "D": {
+          "center": "yellow",
+          "rows": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ]
+        },
+        "F": {
+          "center": "green",
+          "rows": [
+            [
+              "green",
+              "orange",
+              "red"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ]
+        },
+        "B": {
+          "center": "blue",
+          "rows": [
+            [
+              "blue",
+              "white",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ]
+        },
+        "R": {
+          "center": "red",
+          "rows": [
+            [
+              "blue",
+              "white",
+              "white"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ]
+        },
+        "L": {
+          "center": "orange",
+          "rows": [
+            [
+              "orange",
+              "blue",
+              "white"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ]
+        }
+      }
+    },
+    "expected": {
+      "cross": "yes",
+      "firstLayer": "yes",
+      "lowerTwo": "yes",
+      "solved": "no"
+    },
+    "accepted": [
+      "last-layer"
+    ]
+  }
+]

@@ -1,0 +1,2863 @@
+{
+  "summary": {
+    "cases": 20,
+    "completed": 20,
+    "positionCorrect": 8,
+    "stickerCorrect": 12,
+    "bothCorrect": 4,
+    "errors": 0,
+    "cost": 0.0006863220000000002
+  },
+  "results": [
+    {
+      "id": "49651290-bc47-421d-afa3-4cb768d5f954",
+      "runId": "2df34b21-99fc-4b32-9b73-1e8bc8c054cd",
+      "affected": false,
+      "expected": {
+        "position": "DL",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "DL",
+        "stickerDirection": "D"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DL",
+            "kind": "edge",
+            "position": "DL",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L"
+            }
+          },
+          "trackedSticker": "yellow",
+          "proposedTurn": "U"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DL",
+            "probabilities": {
+              "DR": 0.02,
+              "BR": 0,
+              "DL": 0.85,
+              "DB": 0.01,
+              "UL": 0.06,
+              "BL": 0,
+              "DF": 0.03,
+              "FL": 0.01,
+              "FR": 0,
+              "UB": 0.01,
+              "UR": 0,
+              "UF": 0.01
+            },
+            "confidence": 0.83
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "D",
+            "probabilities": {
+              "F": 0.06,
+              "L": 0.04,
+              "R": 0.03,
+              "U": 0.09,
+              "B": 0.01,
+              "D": 0.77
+            },
+            "confidence": 0.73
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DL",
+            "confidence": 0.83,
+            "probabilities": {
+              "DR": 0.02,
+              "BR": 0,
+              "DL": 0.85,
+              "DB": 0.01,
+              "UL": 0.06,
+              "BL": 0,
+              "DF": 0.03,
+              "FL": 0.01,
+              "FR": 0,
+              "UB": 0.01,
+              "UR": 0,
+              "UF": 0.01
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "D",
+            "confidence": 0.73,
+            "probabilities": {
+              "F": 0.06,
+              "L": 0.04,
+              "R": 0.03,
+              "U": 0.09,
+              "B": 0.01,
+              "D": 0.77
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 663.572482,
+      "cost": 3.5112000000000005e-05,
+      "caseId": "move-01"
+    },
+    {
+      "id": "883e3870-7afb-4006-8729-e3ecabd192d3",
+      "runId": "c295ce0d-b654-456c-ae6c-e9952f4e0a66",
+      "affected": true,
+      "expected": {
+        "position": "UBL",
+        "stickerDirection": "B"
+      },
+      "actual": {
+        "position": "UBL",
+        "stickerDirection": "R"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "URB",
+            "kind": "corner",
+            "position": "URB",
+            "stickers": {
+              "white": "U",
+              "red": "R",
+              "blue": "B"
+            }
+          },
+          "trackedSticker": "red",
+          "proposedTurn": "U'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UBL",
+            "probabilities": {
+              "UBL": 0.67,
+              "DRF": 0,
+              "URB": 0.2,
+              "DLB": 0,
+              "DFL": 0,
+              "ULF": 0.01,
+              "UFR": 0.1,
+              "DBR": 0.01
+            },
+            "confidence": 0.63
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "probabilities": {
+              "U": 0.12,
+              "L": 0.04,
+              "F": 0.05,
+              "D": 0.02,
+              "B": 0.06,
+              "R": 0.71
+            },
+            "confidence": 0.67
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 140
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UBL",
+            "confidence": 0.63,
+            "probabilities": {
+              "UBL": 0.67,
+              "DRF": 0,
+              "URB": 0.2,
+              "DLB": 0,
+              "DFL": 0,
+              "ULF": 0.01,
+              "UFR": 0.1,
+              "DBR": 0.01
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "confidence": 0.67,
+            "probabilities": {
+              "U": 0.12,
+              "L": 0.04,
+              "F": 0.05,
+              "D": 0.02,
+              "B": 0.06,
+              "R": 0.71
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 140
+        }
+      },
+      "elapsedMs": 228.25236299999995,
+      "cost": 3.3516e-05,
+      "caseId": "move-02"
+    },
+    {
+      "id": "4bfd1215-70f0-4efc-b72b-79c158b43bb3",
+      "runId": "2e2b57c8-32fe-41fe-b3b5-e4d27680fe59",
+      "affected": true,
+      "expected": {
+        "position": "UR",
+        "stickerDirection": "U"
+      },
+      "actual": {
+        "position": "UL",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "UL",
+            "kind": "edge",
+            "position": "UL",
+            "stickers": {
+              "white": "U",
+              "orange": "L"
+            }
+          },
+          "trackedSticker": "white",
+          "proposedTurn": "U2"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UL",
+            "probabilities": {
+              "FR": 0,
+              "FL": 0,
+              "UB": 0.22,
+              "BL": 0.01,
+              "DL": 0.01,
+              "DB": 0,
+              "UF": 0.01,
+              "BR": 0,
+              "UL": 0.64,
+              "DF": 0,
+              "DR": 0,
+              "UR": 0.11
+            },
+            "confidence": 0.6
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "D": 0.09,
+              "L": 0.05,
+              "F": 0.01,
+              "U": 0.78,
+              "R": 0.01,
+              "B": 0.06
+            },
+            "confidence": 0.74
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UL",
+            "confidence": 0.6,
+            "probabilities": {
+              "FR": 0,
+              "FL": 0,
+              "UB": 0.22,
+              "BL": 0.01,
+              "DL": 0.01,
+              "DB": 0,
+              "UF": 0.01,
+              "BR": 0,
+              "UL": 0.64,
+              "DF": 0,
+              "DR": 0,
+              "UR": 0.11
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.74,
+            "probabilities": {
+              "D": 0.09,
+              "L": 0.05,
+              "F": 0.01,
+              "U": 0.78,
+              "R": 0.01,
+              "B": 0.06
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 251.64209699999992,
+      "cost": 3.5154e-05,
+      "caseId": "move-03"
+    },
+    {
+      "id": "c5a68195-115b-4357-82b3-a711f00a88bf",
+      "runId": "298fa6f7-213a-499f-a8ac-5a08ab1c1adb",
+      "affected": true,
+      "expected": {
+        "position": "DRF",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "DFL",
+        "stickerDirection": "D"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DFL",
+            "kind": "corner",
+            "position": "DFL",
+            "stickers": {
+              "yellow": "D",
+              "green": "F",
+              "orange": "L"
+            }
+          },
+          "trackedSticker": "yellow",
+          "proposedTurn": "D"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DFL",
+            "probabilities": {
+              "UBL": 0.01,
+              "DLB": 0.25,
+              "UFR": 0.01,
+              "URB": 0,
+              "DRF": 0.13,
+              "ULF": 0.04,
+              "DFL": 0.52,
+              "DBR": 0.04
+            },
+            "confidence": 0.45
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "D",
+            "probabilities": {
+              "L": 0.12,
+              "B": 0.04,
+              "R": 0.08,
+              "D": 0.62,
+              "F": 0.09,
+              "U": 0.05
+            },
+            "confidence": 0.54
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DFL",
+            "confidence": 0.45,
+            "probabilities": {
+              "UBL": 0.01,
+              "DLB": 0.25,
+              "UFR": 0.01,
+              "URB": 0,
+              "DRF": 0.13,
+              "ULF": 0.04,
+              "DFL": 0.52,
+              "DBR": 0.04
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "D",
+            "confidence": 0.54,
+            "probabilities": {
+              "L": 0.12,
+              "B": 0.04,
+              "R": 0.08,
+              "D": 0.62,
+              "F": 0.09,
+              "U": 0.05
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 262.179895,
+      "cost": 3.3474000000000005e-05,
+      "caseId": "move-04"
+    },
+    {
+      "id": "787e046b-be5b-4aa9-829b-70bf98df408f",
+      "runId": "7088d0e9-555c-4de0-852a-3a73c0bb5e2f",
+      "affected": true,
+      "expected": {
+        "position": "DB",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "DL",
+        "stickerDirection": "D"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DL",
+            "kind": "edge",
+            "position": "DL",
+            "stickers": {
+              "yellow": "D",
+              "orange": "L"
+            }
+          },
+          "trackedSticker": "yellow",
+          "proposedTurn": "D'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DL",
+            "probabilities": {
+              "DF": 0.18,
+              "UB": 0.02,
+              "UF": 0.01,
+              "DL": 0.24,
+              "FL": 0.02,
+              "FR": 0.01,
+              "BL": 0.1,
+              "UL": 0.09,
+              "UR": 0.01,
+              "DR": 0.21,
+              "BR": 0.01,
+              "DB": 0.1
+            },
+            "confidence": 0.18
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "D",
+            "probabilities": {
+              "L": 0.15,
+              "B": 0.06,
+              "D": 0.41,
+              "R": 0.13,
+              "U": 0.15,
+              "F": 0.1
+            },
+            "confidence": 0.29
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DL",
+            "confidence": 0.18,
+            "probabilities": {
+              "DF": 0.18,
+              "UB": 0.02,
+              "UF": 0.01,
+              "DL": 0.24,
+              "FL": 0.02,
+              "FR": 0.01,
+              "BL": 0.1,
+              "UL": 0.09,
+              "UR": 0.01,
+              "DR": 0.21,
+              "BR": 0.01,
+              "DB": 0.1
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "D",
+            "confidence": 0.29,
+            "probabilities": {
+              "L": 0.15,
+              "B": 0.06,
+              "D": 0.41,
+              "R": 0.13,
+              "U": 0.15,
+              "F": 0.1
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 237.23816999999985,
+      "cost": 3.5154e-05,
+      "caseId": "move-05"
+    },
+    {
+      "id": "1326de1a-7eb2-413d-aa0f-bf63ec3576dd",
+      "runId": "20eb5903-37be-415f-bc97-afce6c205650",
+      "affected": false,
+      "expected": {
+        "position": "URB",
+        "stickerDirection": "U"
+      },
+      "actual": {
+        "position": "DBR",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "URB",
+            "kind": "corner",
+            "position": "URB",
+            "stickers": {
+              "white": "U",
+              "red": "R",
+              "blue": "B"
+            }
+          },
+          "trackedSticker": "white",
+          "proposedTurn": "D2"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DBR",
+            "probabilities": {
+              "DFL": 0.01,
+              "DLB": 0.12,
+              "DRF": 0.03,
+              "URB": 0.36,
+              "ULF": 0,
+              "UBL": 0,
+              "DBR": 0.47000000000000003,
+              "UFR": 0.01
+            },
+            "confidence": 0.38
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "F": 0.05,
+              "R": 0.05,
+              "D": 0.26,
+              "L": 0.03,
+              "B": 0.04,
+              "U": 0.57
+            },
+            "confidence": 0.49
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DBR",
+            "confidence": 0.38,
+            "probabilities": {
+              "DFL": 0.01,
+              "DLB": 0.12,
+              "DRF": 0.03,
+              "URB": 0.36,
+              "ULF": 0,
+              "UBL": 0,
+              "DBR": 0.47000000000000003,
+              "UFR": 0.01
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.49,
+            "probabilities": {
+              "F": 0.05,
+              "R": 0.05,
+              "D": 0.26,
+              "L": 0.03,
+              "B": 0.04,
+              "U": 0.57
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 240.02928399999996,
+      "cost": 3.3516e-05,
+      "caseId": "move-06"
+    },
+    {
+      "id": "a5c0358e-eeec-4146-8e58-e4c822675633",
+      "runId": "ca52951e-b876-4feb-b1f8-286cac9b5096",
+      "affected": true,
+      "expected": {
+        "position": "DF",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "DF",
+        "stickerDirection": "R"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DR",
+            "kind": "edge",
+            "position": "FR",
+            "stickers": {
+              "yellow": "F",
+              "red": "R"
+            }
+          },
+          "trackedSticker": "red",
+          "proposedTurn": "F"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DF",
+            "probabilities": {
+              "UF": 0.04,
+              "UR": 0.01,
+              "FL": 0.07,
+              "UB": 0,
+              "BL": 0,
+              "UL": 0,
+              "DB": 0.02,
+              "BR": 0.01,
+              "DF": 0.32,
+              "DL": 0.03,
+              "DR": 0.32,
+              "FR": 0.18
+            },
+            "confidence": 0.26
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "probabilities": {
+              "U": 0.04,
+              "L": 0.04,
+              "F": 0.24,
+              "D": 0.11,
+              "B": 0.02,
+              "R": 0.55
+            },
+            "confidence": 0.46
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DF",
+            "confidence": 0.26,
+            "probabilities": {
+              "UF": 0.04,
+              "UR": 0.01,
+              "FL": 0.07,
+              "UB": 0,
+              "BL": 0,
+              "UL": 0,
+              "DB": 0.02,
+              "BR": 0.01,
+              "DF": 0.32,
+              "DL": 0.03,
+              "DR": 0.32,
+              "FR": 0.18
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "confidence": 0.46,
+            "probabilities": {
+              "U": 0.04,
+              "L": 0.04,
+              "F": 0.24,
+              "D": 0.11,
+              "B": 0.02,
+              "R": 0.55
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 228.58240299999989,
+      "cost": 3.5112000000000005e-05,
+      "caseId": "move-07"
+    },
+    {
+      "id": "1e497e95-581a-4890-bd14-c2f1cc368cbf",
+      "runId": "f7608e63-c7e5-4cc7-accc-262333cb2852",
+      "affected": true,
+      "expected": {
+        "position": "DRF",
+        "stickerDirection": "F"
+      },
+      "actual": {
+        "position": "DRF",
+        "stickerDirection": "F"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "DFL",
+            "stickers": {
+              "yellow": "D",
+              "red": "F",
+              "green": "L"
+            }
+          },
+          "trackedSticker": "red",
+          "proposedTurn": "F'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DRF",
+            "probabilities": {
+              "URB": 0.01,
+              "ULF": 0.16,
+              "DRF": 0.29,
+              "UBL": 0.01,
+              "DLB": 0.15,
+              "DFL": 0.29,
+              "DBR": 0.05,
+              "UFR": 0.04
+            },
+            "confidence": 0.2
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "F",
+            "probabilities": {
+              "R": 0.25,
+              "D": 0.13,
+              "U": 0.13,
+              "B": 0.1,
+              "L": 0.15,
+              "F": 0.24
+            },
+            "confidence": 0.09
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DRF",
+            "confidence": 0.2,
+            "probabilities": {
+              "URB": 0.01,
+              "ULF": 0.16,
+              "DRF": 0.29,
+              "UBL": 0.01,
+              "DLB": 0.15,
+              "DFL": 0.29,
+              "DBR": 0.05,
+              "UFR": 0.04
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "F",
+            "confidence": 0.09,
+            "probabilities": {
+              "R": 0.25,
+              "D": 0.13,
+              "U": 0.13,
+              "B": 0.1,
+              "L": 0.15,
+              "F": 0.24
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 237.56576399999994,
+      "cost": 3.3516e-05,
+      "caseId": "move-08"
+    },
+    {
+      "id": "0540b754-431b-44ea-a389-4848e0c28bbf",
+      "runId": "317ad727-8296-49d8-8d9b-58f71519e08f",
+      "affected": true,
+      "expected": {
+        "position": "DF",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "DF",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "FL",
+            "kind": "edge",
+            "position": "UF",
+            "stickers": {
+              "green": "F",
+              "orange": "U"
+            }
+          },
+          "trackedSticker": "orange",
+          "proposedTurn": "F2"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DF",
+            "probabilities": {
+              "DR": 0.01,
+              "BR": 0,
+              "FR": 0.02,
+              "BL": 0.01,
+              "DL": 0.01,
+              "UL": 0.02,
+              "DF": 0.39,
+              "UF": 0.24,
+              "UR": 0.01,
+              "UB": 0.09,
+              "FL": 0.19,
+              "DB": 0.01
+            },
+            "confidence": 0.33
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "B": 0.07,
+              "F": 0.24,
+              "U": 0.32,
+              "L": 0.05,
+              "R": 0.04,
+              "D": 0.28
+            },
+            "confidence": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DF",
+            "confidence": 0.33,
+            "probabilities": {
+              "DR": 0.01,
+              "BR": 0,
+              "FR": 0.02,
+              "BL": 0.01,
+              "DL": 0.01,
+              "UL": 0.02,
+              "DF": 0.39,
+              "UF": 0.24,
+              "UR": 0.01,
+              "UB": 0.09,
+              "FL": 0.19,
+              "DB": 0.01
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.2,
+            "probabilities": {
+              "B": 0.07,
+              "F": 0.24,
+              "U": 0.32,
+              "L": 0.05,
+              "R": 0.04,
+              "D": 0.28
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 223.28650800000014,
+      "cost": 3.5154e-05,
+      "caseId": "move-09"
+    },
+    {
+      "id": "49094045-d35f-4556-8160-af32737e8dca",
+      "runId": "03306be3-7a47-42a2-b57e-591d28aaa3cb",
+      "affected": true,
+      "expected": {
+        "position": "DLB",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "URB",
+        "stickerDirection": "L"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "URB",
+            "kind": "corner",
+            "position": "UBL",
+            "stickers": {
+              "white": "B",
+              "red": "L",
+              "blue": "U"
+            }
+          },
+          "trackedSticker": "red",
+          "proposedTurn": "B"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "URB",
+            "probabilities": {
+              "UFR": 0.04,
+              "DFL": 0.01,
+              "DRF": 0.01,
+              "DLB": 0.21,
+              "ULF": 0.08,
+              "DBR": 0.12,
+              "URB": 0.27,
+              "UBL": 0.26
+            },
+            "confidence": 0.16
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "L",
+            "probabilities": {
+              "D": 0.03,
+              "R": 0.1,
+              "L": 0.4,
+              "U": 0.11,
+              "B": 0.3,
+              "F": 0.06
+            },
+            "confidence": 0.26
+          }
+        },
+        "usage": {
+          "input_tokens": 796,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "URB",
+            "confidence": 0.16,
+            "probabilities": {
+              "UFR": 0.04,
+              "DFL": 0.01,
+              "DRF": 0.01,
+              "DLB": 0.21,
+              "ULF": 0.08,
+              "DBR": 0.12,
+              "URB": 0.27,
+              "UBL": 0.26
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "L",
+            "confidence": 0.26,
+            "probabilities": {
+              "D": 0.03,
+              "R": 0.1,
+              "L": 0.4,
+              "U": 0.11,
+              "B": 0.3,
+              "F": 0.06
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 796,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 216.76226099999985,
+      "cost": 3.3432e-05,
+      "caseId": "move-10"
+    },
+    {
+      "id": "a8ea68a0-e86e-4751-898b-be2e7762ebe1",
+      "runId": "4b1fe5ec-da82-48f0-a339-bbf0075bdf3a",
+      "affected": false,
+      "expected": {
+        "position": "UL",
+        "stickerDirection": "L"
+      },
+      "actual": {
+        "position": "UL",
+        "stickerDirection": "L"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "UL",
+            "kind": "edge",
+            "position": "UL",
+            "stickers": {
+              "white": "U",
+              "orange": "L"
+            }
+          },
+          "trackedSticker": "orange",
+          "proposedTurn": "B'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UL",
+            "probabilities": {
+              "DR": 0.01,
+              "DF": 0,
+              "DL": 0.03,
+              "FR": 0,
+              "BR": 0.02,
+              "UF": 0,
+              "UR": 0.01,
+              "BL": 0.19,
+              "UB": 0.24,
+              "DB": 0.01,
+              "FL": 0.01,
+              "UL": 0.48
+            },
+            "confidence": 0.43
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "L",
+            "probabilities": {
+              "R": 0.06,
+              "D": 0.02,
+              "L": 0.65,
+              "U": 0.08,
+              "F": 0.05,
+              "B": 0.14
+            },
+            "confidence": 0.59
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UL",
+            "confidence": 0.43,
+            "probabilities": {
+              "DR": 0.01,
+              "DF": 0,
+              "DL": 0.03,
+              "FR": 0,
+              "BR": 0.02,
+              "UF": 0,
+              "UR": 0.01,
+              "BL": 0.19,
+              "UB": 0.24,
+              "DB": 0.01,
+              "FL": 0.01,
+              "UL": 0.48
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "L",
+            "confidence": 0.59,
+            "probabilities": {
+              "R": 0.06,
+              "D": 0.02,
+              "L": 0.65,
+              "U": 0.08,
+              "F": 0.05,
+              "B": 0.14
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 236.16287199999988,
+      "cost": 3.5154e-05,
+      "caseId": "move-11"
+    },
+    {
+      "id": "ea645e1e-22df-4bda-9134-8cd9d146540b",
+      "runId": "120d226f-d39d-439f-951d-775c110dcdf0",
+      "affected": true,
+      "expected": {
+        "position": "UBL",
+        "stickerDirection": "B"
+      },
+      "actual": {
+        "position": "DBR",
+        "stickerDirection": "B"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DBR",
+            "kind": "corner",
+            "position": "DBR",
+            "stickers": {
+              "yellow": "D",
+              "blue": "B",
+              "red": "R"
+            }
+          },
+          "trackedSticker": "blue",
+          "proposedTurn": "B2"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DBR",
+            "probabilities": {
+              "DFL": 0.03,
+              "DRF": 0.09,
+              "DLB": 0.21,
+              "URB": 0.07,
+              "ULF": 0,
+              "UBL": 0.07,
+              "DBR": 0.52,
+              "UFR": 0.01
+            },
+            "confidence": 0.46
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "B",
+            "probabilities": {
+              "F": 0.11,
+              "R": 0.13,
+              "U": 0.07,
+              "L": 0.1,
+              "B": 0.48,
+              "D": 0.11
+            },
+            "confidence": 0.37
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DBR",
+            "confidence": 0.46,
+            "probabilities": {
+              "DFL": 0.03,
+              "DRF": 0.09,
+              "DLB": 0.21,
+              "URB": 0.07,
+              "ULF": 0,
+              "UBL": 0.07,
+              "DBR": 0.52,
+              "UFR": 0.01
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "B",
+            "confidence": 0.37,
+            "probabilities": {
+              "F": 0.11,
+              "R": 0.13,
+              "U": 0.07,
+              "L": 0.1,
+              "B": 0.48,
+              "D": 0.11
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 249.70251999999982,
+      "cost": 3.3516e-05,
+      "caseId": "move-12"
+    },
+    {
+      "id": "2a0987a8-27db-49b1-bccf-bcac5086a5dd",
+      "runId": "d5e65150-8995-428b-a05d-8498f504b7b7",
+      "affected": true,
+      "expected": {
+        "position": "BR",
+        "stickerDirection": "R"
+      },
+      "actual": {
+        "position": "FR",
+        "stickerDirection": "R"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "FR",
+            "kind": "edge",
+            "position": "UR",
+            "stickers": {
+              "green": "U",
+              "red": "R"
+            }
+          },
+          "trackedSticker": "red",
+          "proposedTurn": "R"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "FR",
+            "probabilities": {
+              "BL": 0,
+              "DR": 0.08,
+              "UF": 0.07,
+              "DB": 0,
+              "UL": 0.01,
+              "BR": 0.08,
+              "DL": 0,
+              "FR": 0.35000000000000003,
+              "FL": 0,
+              "UR": 0.27,
+              "UB": 0.13,
+              "DF": 0
+            },
+            "confidence": 0.28
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "probabilities": {
+              "R": 0.46,
+              "B": 0.04,
+              "U": 0.15,
+              "D": 0.09,
+              "L": 0.06,
+              "F": 0.2
+            },
+            "confidence": 0.35
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "FR",
+            "confidence": 0.28,
+            "probabilities": {
+              "BL": 0,
+              "DR": 0.08,
+              "UF": 0.07,
+              "DB": 0,
+              "UL": 0.01,
+              "BR": 0.08,
+              "DL": 0,
+              "FR": 0.35000000000000003,
+              "FL": 0,
+              "UR": 0.27,
+              "UB": 0.13,
+              "DF": 0
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "confidence": 0.35,
+            "probabilities": {
+              "R": 0.46,
+              "B": 0.04,
+              "U": 0.15,
+              "D": 0.09,
+              "L": 0.06,
+              "F": 0.2
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 334.22015699999974,
+      "cost": 3.5112000000000005e-05,
+      "caseId": "move-13"
+    },
+    {
+      "id": "61d618d6-72bf-42f0-9515-0b060edab290",
+      "runId": "6b71f65a-35fd-4621-b503-fdbe9af6d5c5",
+      "affected": true,
+      "expected": {
+        "position": "DRF",
+        "stickerDirection": "F"
+      },
+      "actual": {
+        "position": "URB",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DRF",
+            "kind": "corner",
+            "position": "UFR",
+            "stickers": {
+              "yellow": "F",
+              "red": "R",
+              "green": "U"
+            }
+          },
+          "trackedSticker": "green",
+          "proposedTurn": "R'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "URB",
+            "probabilities": {
+              "DRF": 0.22,
+              "ULF": 0.01,
+              "DBR": 0.03,
+              "URB": 0.63,
+              "UBL": 0,
+              "UFR": 0.1,
+              "DFL": 0.01,
+              "DLB": 0
+            },
+            "confidence": 0.58
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "R": 0.24,
+              "D": 0.09,
+              "F": 0.09,
+              "L": 0.05,
+              "U": 0.5,
+              "B": 0.03
+            },
+            "confidence": 0.4
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "URB",
+            "confidence": 0.58,
+            "probabilities": {
+              "DRF": 0.22,
+              "ULF": 0.01,
+              "DBR": 0.03,
+              "URB": 0.63,
+              "UBL": 0,
+              "UFR": 0.1,
+              "DFL": 0.01,
+              "DLB": 0
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.4,
+            "probabilities": {
+              "R": 0.24,
+              "D": 0.09,
+              "F": 0.09,
+              "L": 0.05,
+              "U": 0.5,
+              "B": 0.03
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 234.89432299999953,
+      "cost": 3.3516e-05,
+      "caseId": "move-14"
+    },
+    {
+      "id": "987df41a-558e-4912-ac06-b1a9bba7603f",
+      "runId": "432599e2-cd40-4eda-85f5-7abbd98e71cc",
+      "affected": true,
+      "expected": {
+        "position": "DR",
+        "stickerDirection": "R"
+      },
+      "actual": {
+        "position": "UR",
+        "stickerDirection": "R"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DF",
+            "kind": "edge",
+            "position": "UR",
+            "stickers": {
+              "yellow": "U",
+              "green": "R"
+            }
+          },
+          "trackedSticker": "green",
+          "proposedTurn": "R2"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UR",
+            "probabilities": {
+              "UB": 0.22,
+              "DF": 0.07,
+              "UF": 0.01,
+              "DL": 0,
+              "FL": 0,
+              "FR": 0.03,
+              "BL": 0.01,
+              "UL": 0.02,
+              "UR": 0.36,
+              "DR": 0.24,
+              "BR": 0.02,
+              "DB": 0.02
+            },
+            "confidence": 0.3
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "probabilities": {
+              "L": 0.1,
+              "B": 0.09,
+              "D": 0.12,
+              "R": 0.47,
+              "F": 0.06,
+              "U": 0.16
+            },
+            "confidence": 0.37
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UR",
+            "confidence": 0.3,
+            "probabilities": {
+              "UB": 0.22,
+              "DF": 0.07,
+              "UF": 0.01,
+              "DL": 0,
+              "FL": 0,
+              "FR": 0.03,
+              "BL": 0.01,
+              "UL": 0.02,
+              "UR": 0.36,
+              "DR": 0.24,
+              "BR": 0.02,
+              "DB": 0.02
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "confidence": 0.37,
+            "probabilities": {
+              "L": 0.1,
+              "B": 0.09,
+              "D": 0.12,
+              "R": 0.47,
+              "F": 0.06,
+              "U": 0.16
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 343.33935199999996,
+      "cost": 3.5154e-05,
+      "caseId": "move-15"
+    },
+    {
+      "id": "4645dc01-dd35-43e2-ba7e-d574253bdae5",
+      "runId": "a6273a5b-e728-4704-b127-4dde785696c8",
+      "affected": false,
+      "expected": {
+        "position": "UFR",
+        "stickerDirection": "R"
+      },
+      "actual": {
+        "position": "ULF",
+        "stickerDirection": "R"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DLB",
+            "kind": "corner",
+            "position": "UFR",
+            "stickers": {
+              "yellow": "F",
+              "orange": "R",
+              "blue": "U"
+            }
+          },
+          "trackedSticker": "orange",
+          "proposedTurn": "L"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "ULF",
+            "probabilities": {
+              "UBL": 0.07,
+              "URB": 0.01,
+              "DLB": 0.13,
+              "DRF": 0,
+              "UFR": 0.33,
+              "DFL": 0.03,
+              "DBR": 0,
+              "ULF": 0.43
+            },
+            "confidence": 0.34
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "probabilities": {
+              "R": 0.8,
+              "B": 0.02,
+              "L": 0.09,
+              "U": 0.01,
+              "D": 0.03,
+              "F": 0.05
+            },
+            "confidence": 0.76
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "ULF",
+            "confidence": 0.34,
+            "probabilities": {
+              "UBL": 0.07,
+              "URB": 0.01,
+              "DLB": 0.13,
+              "DRF": 0,
+              "UFR": 0.33,
+              "DFL": 0.03,
+              "DBR": 0,
+              "ULF": 0.43
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "R",
+            "confidence": 0.76,
+            "probabilities": {
+              "R": 0.8,
+              "B": 0.02,
+              "L": 0.09,
+              "U": 0.01,
+              "D": 0.03,
+              "F": 0.05
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 339.97336799999994,
+      "cost": 3.3474000000000005e-05,
+      "caseId": "move-16"
+    },
+    {
+      "id": "f0ce7e55-b327-4798-ba32-f38bf36ffeb9",
+      "runId": "b3d33aff-146a-4332-90aa-351e5fcb47bc",
+      "affected": true,
+      "expected": {
+        "position": "BL",
+        "stickerDirection": "B"
+      },
+      "actual": {
+        "position": "UB",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DF",
+            "kind": "edge",
+            "position": "UL",
+            "stickers": {
+              "yellow": "L",
+              "green": "U"
+            }
+          },
+          "trackedSticker": "green",
+          "proposedTurn": "L'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UB",
+            "probabilities": {
+              "FR": 0,
+              "DF": 0.08,
+              "UL": 0.07,
+              "DB": 0.01,
+              "FL": 0.15,
+              "BR": 0.01,
+              "UR": 0.03,
+              "UF": 0.12,
+              "DL": 0.16,
+              "DR": 0.01,
+              "BL": 0.1,
+              "UB": 0.26
+            },
+            "confidence": 0.2
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "U": 0.39,
+              "L": 0.21,
+              "B": 0.05,
+              "R": 0.07,
+              "F": 0.16,
+              "D": 0.12
+            },
+            "confidence": 0.26
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UB",
+            "confidence": 0.2,
+            "probabilities": {
+              "FR": 0,
+              "DF": 0.08,
+              "UL": 0.07,
+              "DB": 0.01,
+              "FL": 0.15,
+              "BR": 0.01,
+              "UR": 0.03,
+              "UF": 0.12,
+              "DL": 0.16,
+              "DR": 0.01,
+              "BL": 0.1,
+              "UB": 0.26
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.26,
+            "probabilities": {
+              "U": 0.39,
+              "L": 0.21,
+              "B": 0.05,
+              "R": 0.07,
+              "F": 0.16,
+              "D": 0.12
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 837,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 263.3290900000002,
+      "cost": 3.5154e-05,
+      "caseId": "move-17"
+    },
+    {
+      "id": "4c589cc3-9bbc-413a-afba-76a2bc8197bd",
+      "runId": "ebb5ff1e-d32c-4a87-870d-fdf2bfa6feb3",
+      "affected": true,
+      "expected": {
+        "position": "DFL",
+        "stickerDirection": "D"
+      },
+      "actual": {
+        "position": "DLB",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": false,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DLB",
+            "kind": "corner",
+            "position": "UBL",
+            "stickers": {
+              "yellow": "U",
+              "orange": "B",
+              "blue": "L"
+            }
+          },
+          "trackedSticker": "yellow",
+          "proposedTurn": "L2"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DLB",
+            "probabilities": {
+              "UFR": 0.01,
+              "DFL": 0.06,
+              "DRF": 0.01,
+              "UBL": 0.23,
+              "DBR": 0.05,
+              "ULF": 0.14,
+              "URB": 0.02,
+              "DLB": 0.48
+            },
+            "confidence": 0.41
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "D": 0.05,
+              "R": 0.05,
+              "L": 0.21,
+              "U": 0.57,
+              "F": 0.05,
+              "B": 0.07
+            },
+            "confidence": 0.48
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "DLB",
+            "confidence": 0.41,
+            "probabilities": {
+              "UFR": 0.01,
+              "DFL": 0.06,
+              "DRF": 0.01,
+              "UBL": 0.23,
+              "DBR": 0.05,
+              "ULF": 0.14,
+              "URB": 0.02,
+              "DLB": 0.48
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.48,
+            "probabilities": {
+              "D": 0.05,
+              "R": 0.05,
+              "L": 0.21,
+              "U": 0.57,
+              "F": 0.05,
+              "B": 0.07
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 234.20706299999983,
+      "cost": 3.3474000000000005e-05,
+      "caseId": "move-18"
+    },
+    {
+      "id": "644cc952-1f38-4fd7-acba-d2b2954c91f6",
+      "runId": "be04fdac-e0b5-423b-9aeb-bd75245517f2",
+      "affected": true,
+      "expected": {
+        "position": "UL",
+        "stickerDirection": "U"
+      },
+      "actual": {
+        "position": "UL",
+        "stickerDirection": "U"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": true,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "UF",
+            "kind": "edge",
+            "position": "UF",
+            "stickers": {
+              "white": "F",
+              "green": "U"
+            }
+          },
+          "trackedSticker": "green",
+          "proposedTurn": "U"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UF": "The slot touching faces U, F",
+              "UR": "The slot touching faces U, R",
+              "UB": "The slot touching faces U, B",
+              "UL": "The slot touching faces U, L",
+              "DF": "The slot touching faces D, F",
+              "DR": "The slot touching faces D, R",
+              "DB": "The slot touching faces D, B",
+              "DL": "The slot touching faces D, L",
+              "FR": "The slot touching faces F, R",
+              "FL": "The slot touching faces F, L",
+              "BR": "The slot touching faces B, R",
+              "BL": "The slot touching faces B, L"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UL",
+            "probabilities": {
+              "DR": 0,
+              "UF": 0.06,
+              "DB": 0,
+              "BL": 0,
+              "DF": 0,
+              "UB": 0.11,
+              "FR": 0,
+              "BR": 0,
+              "FL": 0.02,
+              "DL": 0,
+              "UR": 0.19,
+              "UL": 0.62
+            },
+            "confidence": 0.58
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "probabilities": {
+              "R": 0.11,
+              "B": 0.05,
+              "U": 0.59,
+              "F": 0.12,
+              "L": 0.11,
+              "D": 0.02
+            },
+            "confidence": 0.5
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "UL",
+            "confidence": 0.58,
+            "probabilities": {
+              "DR": 0,
+              "UF": 0.06,
+              "DB": 0,
+              "BL": 0,
+              "DF": 0,
+              "UB": 0.11,
+              "FR": 0,
+              "BR": 0,
+              "FL": 0.02,
+              "DL": 0,
+              "UR": 0.19,
+              "UL": 0.62
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "U",
+            "confidence": 0.5,
+            "probabilities": {
+              "R": 0.11,
+              "B": 0.05,
+              "U": 0.59,
+              "F": 0.12,
+              "L": 0.11,
+              "D": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 836,
+          "output_tokens": 161
+        }
+      },
+      "elapsedMs": 217.7388920000003,
+      "cost": 3.5112000000000005e-05,
+      "caseId": "move-19"
+    },
+    {
+      "id": "06f9220b-931c-4906-8fe3-13aecb740eef",
+      "runId": "70341471-9c5b-4b5f-9883-26e6c482c012",
+      "affected": true,
+      "expected": {
+        "position": "URB",
+        "stickerDirection": "R"
+      },
+      "actual": {
+        "position": "URB",
+        "stickerDirection": "F"
+      },
+      "positionCorrect": true,
+      "stickerCorrect": false,
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "target": {
+            "piece": "DLB",
+            "kind": "corner",
+            "position": "UFR",
+            "stickers": {
+              "yellow": "F",
+              "orange": "R",
+              "blue": "U"
+            }
+          },
+          "trackedSticker": "yellow",
+          "proposedTurn": "U'"
+        },
+        "questions": {
+          "position": {
+            "type": "choice",
+            "instructions": "Predict the current position of this same physical piece AFTER the proposed single face turn. Its piece name identifies its home, not its current location. Fixed frame: U top, D bottom, F front, B back, R right, L left. A slot name lists its touching faces; letter order does not change the physical slot. A plain face letter means 90 degrees clockwise looking directly at that face from outside; prime means counterclockwise; 2 means 180 degrees. Only pieces touching the turned face move. Mentally track the piece through the turn.",
+            "criteria": {
+              "UFR": "The slot touching faces U, F, R",
+              "URB": "The slot touching faces U, R, B",
+              "UBL": "The slot touching faces U, B, L",
+              "ULF": "The slot touching faces U, L, F",
+              "DRF": "The slot touching faces D, R, F",
+              "DFL": "The slot touching faces D, F, L",
+              "DLB": "The slot touching faces D, L, B",
+              "DBR": "The slot touching faces D, B, R"
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "instructions": "After the same proposed turn, which fixed face direction will the tracked colored sticker point toward? Use its observed direction before the move. Directions rotate with the piece only if it belongs to the turned layer. A sticker facing along the turn axis keeps that direction. Use the same outside-view clockwise convention as the position question.",
+            "criteria": {
+              "U": "Up",
+              "D": "Down",
+              "F": "Front",
+              "B": "Back",
+              "R": "Right",
+              "L": "Left"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "URB",
+            "probabilities": {
+              "DLB": 0.03,
+              "ULF": 0.39,
+              "DRF": 0.01,
+              "URB": 0.44,
+              "DBR": 0,
+              "UFR": 0.07,
+              "UBL": 0.06,
+              "DFL": 0
+            },
+            "confidence": 0.36
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "F",
+            "probabilities": {
+              "B": 0.04,
+              "R": 0.12,
+              "U": 0.13,
+              "F": 0.64,
+              "D": 0.03,
+              "L": 0.04
+            },
+            "confidence": 0.56
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "nativeResponse": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "position": {
+            "type": "choice",
+            "choice": "URB",
+            "confidence": 0.36,
+            "probabilities": {
+              "DLB": 0.03,
+              "ULF": 0.39,
+              "DRF": 0.01,
+              "URB": 0.44,
+              "DBR": 0,
+              "UFR": 0.07,
+              "UBL": 0.06,
+              "DFL": 0
+            }
+          },
+          "stickerDirection": {
+            "type": "choice",
+            "choice": "F",
+            "confidence": 0.56,
+            "probabilities": {
+              "B": 0.04,
+              "R": 0.12,
+              "U": 0.13,
+              "F": 0.64,
+              "D": 0.03,
+              "L": 0.04
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 141
+        }
+      },
+      "elapsedMs": 230.2239810000001,
+      "cost": 3.3516e-05,
+      "caseId": "move-20"
+    }
+  ]
+}

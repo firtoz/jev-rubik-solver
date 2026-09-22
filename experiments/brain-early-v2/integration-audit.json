@@ -1,0 +1,427 @@
+{
+  "method": "Independent cubing replay and fixed bottom edge coordinates; diagnostic cycle scores use the offline evaluator only.",
+  "rows": [
+    {
+      "caseId": "development-1",
+      "status": "complete",
+      "cross": true,
+      "turns": 9,
+      "requests": 33,
+      "steps": [
+        {
+          "index": 0,
+          "alg": "R2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 1,
+          "alg": "B2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 2,
+          "alg": "L2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 3,
+          "alg": "F2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 4,
+          "alg": "U",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 5,
+          "alg": "F2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 6,
+          "alg": "R2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 7,
+          "alg": "B2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 8,
+          "alg": "L2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 9,
+          "alg": "",
+          "score": {
+            "goal": true,
+            "target": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 1
+        }
+      ]
+    },
+    {
+      "caseId": "development-4",
+      "status": "capped",
+      "cross": false,
+      "turns": 19,
+      "requests": 60,
+      "steps": [
+        {
+          "index": 0,
+          "alg": "L U L'",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 1,
+          "alg": "U'",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 5
+        },
+        {
+          "index": 2,
+          "alg": "F L' U2 L F'",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 3,
+          "alg": "U",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 10
+        },
+        {
+          "index": 4,
+          "alg": "R",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 8
+        },
+        {
+          "index": 5,
+          "alg": "U'",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": false,
+            "correct": false
+          },
+          "requests": 6
+        },
+        {
+          "index": 6,
+          "alg": "U'",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 6
+        },
+        {
+          "index": 7,
+          "alg": "F' U' F",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 8,
+          "alg": "U2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 9,
+          "alg": "F2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 10,
+          "alg": "U",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 11,
+          "score": null,
+          "requests": 2
+        }
+      ]
+    },
+    {
+      "caseId": "development-10",
+      "status": "complete",
+      "cross": true,
+      "turns": 5,
+      "requests": 17,
+      "steps": [
+        {
+          "index": 0,
+          "alg": "U",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 1,
+          "alg": "F2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 2,
+          "alg": "R2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 3,
+          "alg": "B2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 4,
+          "alg": "L2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 5,
+          "alg": "",
+          "score": {
+            "goal": true,
+            "target": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 1
+        }
+      ]
+    },
+    {
+      "caseId": "development-13",
+      "status": "complete",
+      "cross": true,
+      "turns": 4,
+      "requests": 14,
+      "steps": [
+        {
+          "index": 0,
+          "alg": "U",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 4
+        },
+        {
+          "index": 1,
+          "alg": "R2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 2,
+          "alg": "B2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 3,
+          "alg": "L2",
+          "score": {
+            "goal": true,
+            "target": true,
+            "recognition": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 3
+        },
+        {
+          "index": 4,
+          "alg": "",
+          "score": {
+            "goal": true,
+            "target": true,
+            "action": true,
+            "correct": true
+          },
+          "requests": 1
+        }
+      ]
+    }
+  ]
+}

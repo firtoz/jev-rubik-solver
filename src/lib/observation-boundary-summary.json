@@ -1,0 +1,171 @@
+{
+  "phases": [
+    {
+      "phase": "development",
+      "summary": [
+        {
+          "variant": "code/structured",
+          "cases": 20,
+          "correct": 10,
+          "components": {
+            "recognition": 20,
+            "goal": 19,
+            "target": 19,
+            "situation": 18,
+            "reference": 18,
+            "operation": 10,
+            "conditionalTargets": 20
+          },
+          "errors": 0,
+          "requests": 48,
+          "tokens": 109470,
+          "cost": 0.0045977399999999995,
+          "latencyMs": 21513.303352000003
+        },
+        {
+          "variant": "code/player",
+          "cases": 20,
+          "correct": 10,
+          "components": {
+            "recognition": 20,
+            "goal": 19,
+            "target": 19,
+            "situation": 17,
+            "reference": 18,
+            "operation": 11,
+            "conditionalTargets": 20
+          },
+          "errors": 0,
+          "requests": 48,
+          "tokens": 104864,
+          "cost": 0.004404288000000001,
+          "latencyMs": 21303.09980499999
+        },
+        {
+          "variant": "jev/structured",
+          "cases": 20,
+          "correct": 9,
+          "components": {
+            "recognition": 19,
+            "goal": 19,
+            "target": 19,
+            "situation": 18,
+            "reference": 18,
+            "operation": 10,
+            "conditionalTargets": 20
+          },
+          "errors": 0,
+          "requests": 68,
+          "tokens": 133369,
+          "cost": 0.005601497999999999,
+          "latencyMs": 29969.993226999988
+        },
+        {
+          "variant": "jev/player",
+          "cases": 20,
+          "correct": 10,
+          "components": {
+            "recognition": 17,
+            "goal": 20,
+            "target": 19,
+            "situation": 18,
+            "reference": 17,
+            "operation": 10,
+            "conditionalTargets": 19
+          },
+          "errors": 0,
+          "requests": 68,
+          "tokens": 126843,
+          "cost": 0.005327406000000003,
+          "latencyMs": 29339.502176
+        }
+      ]
+    },
+    {
+      "phase": "revision",
+      "summary": [
+        {
+          "variant": "code/player",
+          "cases": 20,
+          "correct": 9,
+          "components": {
+            "recognition": 20,
+            "goal": 19,
+            "target": 19,
+            "situation": 17,
+            "reference": 18,
+            "operation": 10,
+            "conditionalTargets": 20
+          },
+          "errors": 0,
+          "requests": 14,
+          "tokens": 75610,
+          "cost": 0.003175620000000001,
+          "latencyMs": 8177.569987000002
+        },
+        {
+          "variant": "jev/player",
+          "cases": 20,
+          "correct": 11,
+          "components": {
+            "recognition": 17,
+            "goal": 20,
+            "target": 19,
+            "situation": 18,
+            "reference": 17,
+            "operation": 11,
+            "conditionalTargets": 19
+          },
+          "errors": 0,
+          "requests": 14,
+          "tokens": 75608,
+          "cost": 0.003175536000000001,
+          "latencyMs": 6633.756353999999
+        }
+      ]
+    },
+    {
+      "phase": "validation",
+      "summary": [
+        {
+          "variant": "code/player",
+          "cases": 20,
+          "correct": 12,
+          "components": {
+            "recognition": 20,
+            "goal": 20,
+            "target": 20,
+            "situation": 20,
+            "reference": 20,
+            "operation": 12,
+            "conditionalTargets": 20
+          },
+          "errors": 0,
+          "requests": 50,
+          "tokens": 110935,
+          "cost": 0.004659270000000002,
+          "latencyMs": 23435.302438
+        },
+        {
+          "variant": "jev/player",
+          "cases": 20,
+          "correct": 8,
+          "components": {
+            "recognition": 16,
+            "goal": 20,
+            "target": 20,
+            "situation": 20,
+            "reference": 20,
+            "operation": 10,
+            "conditionalTargets": 20
+          },
+          "errors": 0,
+          "requests": 70,
+          "tokens": 132905,
+          "cost": 0.0055820100000000036,
+          "latencyMs": 32674.17108999999
+        }
+      ]
+    }
+  ]
+}

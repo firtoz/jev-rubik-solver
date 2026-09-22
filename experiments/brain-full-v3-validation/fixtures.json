@@ -1,0 +1,42 @@
+[
+  {
+    "id": "random-1",
+    "scramble": "U2 F' R2 D R' U2 L' U' R2 U' R2 D' R2 F2 L2 U2 R2 D' R2 F U'"
+  },
+  {
+    "id": "random-2",
+    "scramble": "R F2 L2 F' R2 B' D2 F' D2 U2 F' R2 D2 U' L' F R' B' F' L"
+  },
+  {
+    "id": "random-3",
+    "scramble": "D2 U2 F2 U2 F R2 U2 F U2 L2 F R B2 R' U' F' D2 U2 L2"
+  },
+  {
+    "id": "random-4",
+    "scramble": "R B L2 B U2 F R U' L2 D2 R2 F D2 F' U2 F2 L2 D2 F' R2"
+  },
+  {
+    "id": "random-5",
+    "scramble": "B L D' L2 U' L B D' F D2 L2 U2 L2 F2 U' R2 D' F2 L2 D B2"
+  },
+  {
+    "id": "random-6",
+    "scramble": "B L F2 U R2 F' L' B U' R' U2 L2 U' F2 L2 D L2 B2 U' R2 U'"
+  },
+  {
+    "id": "random-7",
+    "scramble": "R2 D' R2 U L2 D R2 B2 L2 U2 B2 U B' D2 F U L' U F2 L R"
+  },
+  {
+    "id": "random-8",
+    "scramble": "R2 B R' L U D R U F' B U2 F2 L' B2 D2 R' U2 R' F2 U2 D2"
+  },
+  {
+    "id": "random-9",
+    "scramble": "B' U B' R U' L2 B2 R2 U' L R2 F' R2 U2 F' D2 F2 L2 F R2 B"
+  },
+  {
+    "id": "random-10",
+    "scramble": "D2 U2 F' D2 F' U2 F' L2 R2 U2 L2 B' U L D' F D R F D F2"
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "updatedAt": "2026-09-21T16:20:04.018Z",
+  "representations": [
+    {
+      "name": "Original piece names and turn notation",
+      "position": 8,
+      "sticker": 12,
+      "both": 4
+    },
+    {
+      "name": "Neutral piece name",
+      "variant": "neutral",
+      "completed": 20,
+      "total": 20,
+      "position": 5,
+      "sticker": 14,
+      "both": 4,
+      "cost": 0.0007424760000000003,
+      "errors": 0
+    },
+    {
+      "name": "3D coordinates",
+      "variant": "coordinates",
+      "completed": 20,
+      "total": 20,
+      "position": 7,
+      "sticker": 12,
+      "both": 6,
+      "cost": 0.0008334060000000002,
+      "errors": 0
+    },
+    {
+      "name": "Layer membership, then 3D prediction",
+      "variant": "decomposed",
+      "completed": 20,
+      "total": 20,
+      "position": 4,
+      "sticker": 12,
+      "both": 4,
+      "membership": 20,
+      "cost": 0.0013497119999999999,
+      "errors": 0
+    },
+    {
+      "name": "Layer membership, then vector arithmetic",
+      "total": 20,
+      "completed": 20,
+      "membership": 20,
+      "position": 1,
+      "sticker": 7,
+      "both": 1,
+      "cost": 0.0019217519999999997,
+      "errors": 0
+    },
+    {
+      "name": "Layer membership, then face diagram",
+      "total": 20,
+      "completed": 20,
+      "membership": 20,
+      "position": 13,
+      "cost": 0.0009536520000000004,
+      "errors": 0
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "results": [
+        {
+          "variant": "baseline",
+          "total": 20,
+          "completed": 20,
+          "correct": 14,
+          "errors": 0,
+          "cost": 0.000486066
+        },
+        {
+          "variant": "paper",
+          "total": 20,
+          "completed": 20,
+          "correct": 13,
+          "errors": 0,
+          "cost": 0.0005011860000000001
+        },
+        {
+          "variant": "clock",
+          "total": 20,
+          "completed": 20,
+          "correct": 10,
+          "errors": 0,
+          "cost": 0.0004969860000000002
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "results": [
+        {
+          "variant": "baseline",
+          "total": 20,
+          "completed": 20,
+          "correct": 13,
+          "errors": 0,
+          "cost": 0.000486066
+        },
+        {
+          "variant": "paper",
+          "total": 20,
+          "completed": 20,
+          "correct": 13,
+          "errors": 0,
+          "cost": 0.0005129460000000001
+        },
+        {
+          "variant": "clock",
+          "total": 20,
+          "completed": 20,
+          "correct": 11,
+          "errors": 0,
+          "cost": 0.0005087460000000001
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "total": 20,
+    "completed": 20,
+    "membership": 20,
+    "position": 16,
+    "cost": 0.0009539040000000001,
+    "errors": 0
+  }
+}

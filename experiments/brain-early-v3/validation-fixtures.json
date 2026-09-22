@@ -1,0 +1,2630 @@
+[
+  {
+    "id": "validation-1",
+    "category": "zero",
+    "scramble": "F R U R' U' F' F R U R' U' F' U' U2 R L2 D2 L2 U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          8,
+          3,
+          10,
+          2,
+          6,
+          1,
+          4,
+          7,
+          5,
+          9,
+          0,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          2,
+          7,
+          4,
+          0,
+          5,
+          6,
+          3
+        ],
+        "orientation": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[8,3,10,2,6,1,4,7,5,9,0,11],\"orientation\":[0,0,0,0,0,1,0,0,0,0,1,0]},{\"pieces\":[1,2,7,4,0,5,6,3],\"orientation\":[0,1,1,2,1,0,0,1]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "no",
+        "bottom_DR": "no",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 1
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DR",
+        "DB"
+      ],
+      "transferTargets": [],
+      "situations": {
+        "DF": {
+          "situation": "bottomDown",
+          "reference": "B"
+        },
+        "DR": {
+          "situation": "middle",
+          "reference": "F"
+        },
+        "DB": {
+          "situation": "bottomDown",
+          "reference": "F"
+        }
+      },
+      "actions": {
+        "DF": [
+          "none:lift-bottom",
+          "U:lift-bottom",
+          "U':lift-bottom",
+          "U2:lift-bottom",
+          "none:daisy-to-cross",
+          "U:daisy-to-cross",
+          "U':daisy-to-cross",
+          "U2:daisy-to-cross"
+        ],
+        "DR": [
+          "none:cross-lift-right",
+          "U:cross-lift-right",
+          "U':cross-lift-right",
+          "U2:cross-lift-right",
+          "none:lift-middle-right",
+          "U:lift-middle-right",
+          "U':lift-middle-right",
+          "U2:lift-middle-right"
+        ],
+        "DB": [
+          "none:lift-bottom",
+          "U:lift-bottom",
+          "U':lift-bottom",
+          "U2:lift-bottom",
+          "none:daisy-to-cross",
+          "U:daisy-to-cross",
+          "U':daisy-to-cross",
+          "U2:daisy-to-cross"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-2",
+    "category": "zero",
+    "scramble": "R U R' U R U2 R' U' F R U R' U' F' L' F' D' L2 D L' F2 F' L D' R D R2 R2 U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          7,
+          11,
+          8,
+          0,
+          4,
+          5,
+          10,
+          9,
+          6,
+          1,
+          2,
+          3
+        ],
+        "orientation": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          5,
+          7,
+          0,
+          6,
+          4,
+          2,
+          3,
+          1
+        ],
+        "orientation": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          2,
+          1,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[7,11,8,0,4,5,10,9,6,1,2,3],\"orientation\":[1,1,0,0,0,0,0,1,0,0,1,0]},{\"pieces\":[5,7,0,6,4,2,3,1],\"orientation\":[2,2,1,1,0,2,1,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 2
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DB",
+        "DL"
+      ],
+      "transferTargets": [],
+      "situations": {
+        "DB": {
+          "situation": "middle",
+          "reference": "F"
+        },
+        "DL": {
+          "situation": "topSide",
+          "reference": "F"
+        }
+      },
+      "actions": {
+        "DB": [
+          "none:cross-lift-right",
+          "U:cross-lift-right",
+          "U':cross-lift-right",
+          "U2:cross-lift-right"
+        ],
+        "DL": [
+          "U2:cross-lift-right",
+          "U2:cross-lift-left",
+          "none:cross-flip-top-right",
+          "U:cross-flip-top-right",
+          "U2:cross-flip-top-right",
+          "none:cross-flip-top-left",
+          "U':cross-flip-top-left",
+          "U2:cross-flip-top-left",
+          "U:lift-middle-left"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-3",
+    "category": "zero",
+    "scramble": "U' U2 U2 U U' D' D2 D F U2 U' R U' B D2",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          9,
+          0,
+          1,
+          2,
+          11,
+          5,
+          8,
+          10,
+          7,
+          6,
+          4,
+          3
+        ],
+        "orientation": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          3,
+          7,
+          0,
+          4,
+          5,
+          6
+        ],
+        "orientation": [
+          1,
+          1,
+          2,
+          2,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[9,0,1,2,11,5,8,10,7,6,4,3],\"orientation\":[1,0,1,0,1,0,1,0,0,1,1,0]},{\"pieces\":[2,1,3,7,0,4,5,6],\"orientation\":[1,1,2,2,0,1,1,1]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 1
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DB",
+        "DL"
+      ],
+      "transferTargets": [],
+      "situations": {
+        "DF": {
+          "situation": "middle",
+          "reference": "R"
+        },
+        "DB": {
+          "situation": "middle",
+          "reference": "L"
+        },
+        "DL": {
+          "situation": "middle",
+          "reference": "F"
+        }
+      },
+      "actions": {
+        "DF": [
+          "none:cross-lift-right",
+          "U:cross-lift-right",
+          "U':cross-lift-right",
+          "U2:cross-lift-right",
+          "none:lift-middle-right",
+          "U:lift-middle-right",
+          "U':lift-middle-right",
+          "U2:lift-middle-right"
+        ],
+        "DB": [
+          "none:cross-lift-right",
+          "U:cross-lift-right",
+          "U':cross-lift-right",
+          "U2:cross-lift-right",
+          "none:lift-middle-right",
+          "U:lift-middle-right",
+          "U':lift-middle-right",
+          "U2:lift-middle-right"
+        ],
+        "DL": [
+          "none:cross-lift-right",
+          "U:cross-lift-right",
+          "U':cross-lift-right",
+          "U2:cross-lift-right"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-4",
+    "category": "one",
+    "scramble": "U2 U' U2 L2 U' D2 F F2 R' R' U L2 D F'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          10,
+          0,
+          1,
+          5,
+          9,
+          11,
+          3,
+          4,
+          8,
+          2,
+          6,
+          7
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          6,
+          0,
+          5,
+          7,
+          1,
+          4,
+          2,
+          3
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[10,0,1,5,9,11,3,4,8,2,6,7],\"orientation\":[1,0,0,0,1,1,0,0,0,1,1,1]},{\"pieces\":[6,0,5,7,1,4,2,3],\"orientation\":[0,0,1,1,2,1,1,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 1,
+        "bottom": 0
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DB",
+        "DL"
+      ],
+      "transferTargets": [
+        "DR"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "bottomDown",
+          "reference": "L"
+        },
+        "DB": {
+          "situation": "middle",
+          "reference": "R"
+        },
+        "DL": {
+          "situation": "middle",
+          "reference": "L"
+        }
+      },
+      "actions": {
+        "DF": [
+          "turn:U",
+          "turn:U'",
+          "turn:U2",
+          "U:lift-bottom",
+          "U':lift-bottom",
+          "U2:lift-bottom",
+          "U:daisy-to-cross",
+          "U':daisy-to-cross",
+          "U2:daisy-to-cross"
+        ],
+        "DB": [
+          "U:cross-lift-right",
+          "U':cross-lift-right",
+          "U2:cross-lift-right",
+          "none:lift-middle-right",
+          "U':lift-middle-right",
+          "U2:lift-middle-right"
+        ],
+        "DL": [
+          "none:cross-lift-left",
+          "U:cross-lift-left",
+          "U':cross-lift-left",
+          "none:lift-middle-left",
+          "U':lift-middle-left",
+          "U2:lift-middle-left"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-5",
+    "category": "one",
+    "scramble": "R U R' U R U2 R' U2 U R U R' U R U2 R' B B F R2 F' L2 B U L2 B2 R2 U R2",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          2,
+          3,
+          5,
+          4,
+          9,
+          7,
+          11,
+          8,
+          6,
+          10,
+          0
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          6,
+          5,
+          7,
+          1,
+          0,
+          3,
+          4
+        ],
+        "orientation": [
+          2,
+          1,
+          2,
+          0,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[1,2,3,5,4,9,7,11,8,6,10,0],\"orientation\":[0,0,0,0,0,1,0,1,0,1,0,1]},{\"pieces\":[2,6,5,7,1,0,3,4],\"orientation\":[2,1,2,0,2,1,1,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 1,
+        "bottom": 1
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DB",
+        "DL"
+      ],
+      "transferTargets": [
+        "DR"
+      ],
+      "situations": {
+        "DB": {
+          "situation": "middle",
+          "reference": "L"
+        },
+        "DL": {
+          "situation": "bottomDown",
+          "reference": "B"
+        }
+      },
+      "actions": {
+        "DB": [
+          "none:cross-lift-right",
+          "U:cross-lift-right",
+          "U':cross-lift-right"
+        ],
+        "DL": [
+          "none:lift-bottom",
+          "U':lift-bottom",
+          "U2:lift-bottom",
+          "none:daisy-to-cross",
+          "U':daisy-to-cross",
+          "U2:daisy-to-cross"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-6",
+    "category": "one",
+    "scramble": "F R U R' U' F' R U R' U R U2 R' R2 D2 R2 B' R' R' F2 F D2",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          5,
+          11,
+          1,
+          10,
+          3,
+          9,
+          7,
+          6,
+          2,
+          8,
+          4
+        ],
+        "orientation": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          4,
+          0,
+          6,
+          7,
+          5,
+          1,
+          2
+        ],
+        "orientation": [
+          2,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          1
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[0,5,11,1,10,3,9,7,6,2,8,4],\"orientation\":[1,0,1,0,1,0,1,0,1,0,0,1]},{\"pieces\":[3,4,0,6,7,5,1,2],\"orientation\":[2,0,1,0,2,0,0,1]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 1,
+        "bottom": 1
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DB"
+      ],
+      "transferTargets": [
+        "DR"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "middle",
+          "reference": "L"
+        },
+        "DB": {
+          "situation": "middle",
+          "reference": "R"
+        }
+      },
+      "actions": {
+        "DF": [
+          "U:cross-lift-left",
+          "U':cross-lift-left",
+          "U2:cross-lift-left",
+          "none:lift-middle-left",
+          "U:lift-middle-left",
+          "U2:lift-middle-left"
+        ],
+        "DB": [
+          "none:cross-lift-left",
+          "U:cross-lift-left",
+          "U':cross-lift-left",
+          "none:lift-middle-left",
+          "U':lift-middle-left",
+          "U2:lift-middle-left"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-7",
+    "category": "two-or-three",
+    "scramble": "U2 U' R U R' U R U2 R' B2 L' U B R2 D' L'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          5,
+          11,
+          7,
+          6,
+          3,
+          10,
+          9,
+          2,
+          4,
+          8,
+          1
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          7,
+          4,
+          3,
+          1,
+          6,
+          0,
+          2,
+          5
+        ],
+        "orientation": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[0,5,11,7,6,3,10,9,2,4,8,1],\"orientation\":[0,0,1,0,0,1,0,1,1,0,0,0]},{\"pieces\":[7,4,3,1,6,0,2,5],\"orientation\":[2,0,0,1,0,1,2,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 2,
+        "bottom": 0
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DB"
+      ],
+      "transferTargets": [
+        "DR",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "middle",
+          "reference": "F"
+        },
+        "DB": {
+          "situation": "bottomDown",
+          "reference": "F"
+        }
+      },
+      "actions": {
+        "DF": [
+          "none:cross-lift-left",
+          "U2:cross-lift-left",
+          "U:lift-middle-left",
+          "U':lift-middle-left"
+        ],
+        "DB": [
+          "none:lift-bottom",
+          "U2:lift-bottom",
+          "none:daisy-to-cross",
+          "U2:daisy-to-cross"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-8",
+    "category": "two-or-three",
+    "scramble": "R U R' U R U2 R' R U R' U R U2 R' U2 R U R' U R U2 R' U B U D' F B2 D F",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          5,
+          10,
+          7,
+          2,
+          1,
+          8,
+          11,
+          3,
+          9,
+          4,
+          0,
+          6
+        ],
+        "orientation": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          5,
+          3,
+          2,
+          1,
+          6,
+          0,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[5,10,7,2,1,8,11,3,9,4,0,6],\"orientation\":[0,1,0,0,0,1,1,0,0,1,1,1]},{\"pieces\":[4,5,3,2,1,6,0,7],\"orientation\":[0,0,1,0,1,0,0,1]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "no",
+        "bottom_DB": "no",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 2,
+        "bottom": 0
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DB"
+      ],
+      "transferTargets": [
+        "DR",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "middle",
+          "reference": "L"
+        },
+        "DB": {
+          "situation": "middle",
+          "reference": "L"
+        }
+      },
+      "actions": {
+        "DF": [
+          "none:cross-lift-right",
+          "U2:cross-lift-right",
+          "U:lift-middle-right",
+          "U':lift-middle-right"
+        ],
+        "DB": [
+          "none:cross-lift-left",
+          "U2:cross-lift-left",
+          "U:lift-middle-left",
+          "U':lift-middle-left"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-9",
+    "category": "two-or-three",
+    "scramble": "U' U U2 U R U R' U R U2 R' U2 L R2 B' B' F",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          5,
+          6,
+          11,
+          10,
+          1,
+          3,
+          9,
+          0,
+          4,
+          7,
+          8
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          5,
+          3,
+          2,
+          7,
+          0,
+          4,
+          6
+        ],
+        "orientation": [
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          0,
+          2
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[2,5,6,11,10,1,3,9,0,4,7,8],\"orientation\":[1,0,0,0,1,0,0,0,1,1,0,0]},{\"pieces\":[1,5,3,2,7,0,4,6],\"orientation\":[0,1,1,1,2,2,0,2]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "yes",
+        "bottom_DB": "no",
+        "petal_DL": "no",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 2,
+        "bottom": 0
+      },
+      "goal": "daisy",
+      "gatherTargets": [
+        "DF",
+        "DL"
+      ],
+      "transferTargets": [
+        "DR",
+        "DB"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "middle",
+          "reference": "L"
+        },
+        "DL": {
+          "situation": "middle",
+          "reference": "B"
+        }
+      },
+      "actions": {
+        "DF": [
+          "U':cross-lift-right",
+          "U2:cross-lift-right",
+          "none:lift-middle-right",
+          "U':lift-middle-right"
+        ],
+        "DL": [
+          "none:cross-lift-left",
+          "U':cross-lift-left",
+          "U':lift-middle-left",
+          "U2:lift-middle-left"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-10",
+    "category": "full-daisy",
+    "scramble": "U2 F R U R' U' F' F R U R' U' F' U U2 F2 R2 B2 L2 U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          7,
+          4,
+          5,
+          6,
+          1,
+          3,
+          0,
+          2,
+          10,
+          9,
+          11,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          7,
+          6,
+          1,
+          2,
+          5,
+          4,
+          3
+        ],
+        "orientation": [
+          2,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          2
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[7,4,5,6,1,3,0,2,10,9,11,8],\"orientation\":[0,0,0,0,0,1,0,1,0,0,0,0]},{\"pieces\":[0,7,6,1,2,5,4,3],\"orientation\":[2,0,0,1,1,0,0,2]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "yes",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "yes",
+        "bottom_DB": "no",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 4,
+        "bottom": 0
+      },
+      "goal": "cross",
+      "gatherTargets": [],
+      "transferTargets": [
+        "DF",
+        "DR",
+        "DB",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "petal",
+          "reference": "R"
+        },
+        "DR": {
+          "situation": "petal",
+          "reference": "B"
+        },
+        "DB": {
+          "situation": "petal",
+          "reference": "L"
+        },
+        "DL": {
+          "situation": "petal",
+          "reference": "F"
+        }
+      },
+      "actions": {
+        "DF": [
+          "turn:U"
+        ],
+        "DR": [
+          "turn:U"
+        ],
+        "DB": [
+          "turn:U"
+        ],
+        "DL": [
+          "turn:U"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-11",
+    "category": "full-daisy",
+    "scramble": "R U R' U R U2 R' U U U2 R U R' U R U2 R' U2 F2 R2 B2 L2 U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          5,
+          6,
+          7,
+          4,
+          3,
+          1,
+          0,
+          2,
+          10,
+          9,
+          11,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          6,
+          2,
+          1,
+          7,
+          3,
+          5,
+          4,
+          0
+        ],
+        "orientation": [
+          0,
+          2,
+          1,
+          0,
+          1,
+          0,
+          0,
+          2
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[5,6,7,4,3,1,0,2,10,9,11,8],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[6,2,1,7,3,5,4,0],\"orientation\":[0,2,1,0,1,0,0,2]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "yes",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "yes",
+        "bottom_DB": "no",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 4,
+        "bottom": 0
+      },
+      "goal": "cross",
+      "gatherTargets": [],
+      "transferTargets": [
+        "DF",
+        "DR",
+        "DB",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "petal",
+          "reference": "L"
+        },
+        "DR": {
+          "situation": "petal",
+          "reference": "F"
+        },
+        "DB": {
+          "situation": "petal",
+          "reference": "R"
+        },
+        "DL": {
+          "situation": "petal",
+          "reference": "B"
+        }
+      },
+      "actions": {
+        "DF": [
+          "turn:U'"
+        ],
+        "DR": [
+          "turn:U'"
+        ],
+        "DB": [
+          "turn:U'"
+        ],
+        "DL": [
+          "turn:U'"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-12",
+    "category": "full-daisy",
+    "scramble": "F R U R' U' F' U U2 R U R' U R U2 R' F2 R2 B2 L2 ",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          4,
+          5,
+          6,
+          7,
+          3,
+          1,
+          2,
+          0,
+          10,
+          9,
+          11,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          7,
+          6,
+          2,
+          3,
+          1,
+          5,
+          4,
+          0
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[4,5,6,7,3,1,2,0,10,9,11,8],\"orientation\":[0,0,0,0,0,0,1,1,0,0,0,0]},{\"pieces\":[7,6,2,3,1,5,4,0],\"orientation\":[0,0,0,2,0,0,0,1]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "yes",
+        "bottom_DF": "no",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "yes",
+        "bottom_DB": "no",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 4,
+        "bottom": 0
+      },
+      "goal": "cross",
+      "gatherTargets": [],
+      "transferTargets": [
+        "DF",
+        "DR",
+        "DB",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "petal",
+          "reference": "F"
+        },
+        "DR": {
+          "situation": "petal",
+          "reference": "R"
+        },
+        "DB": {
+          "situation": "petal",
+          "reference": "B"
+        },
+        "DL": {
+          "situation": "petal",
+          "reference": "L"
+        }
+      },
+      "actions": {
+        "DF": [
+          "none:lift-bottom",
+          "none:daisy-to-cross"
+        ],
+        "DR": [
+          "none:lift-bottom",
+          "none:daisy-to-cross"
+        ],
+        "DB": [
+          "none:lift-bottom",
+          "none:daisy-to-cross"
+        ],
+        "DL": [
+          "none:lift-bottom",
+          "none:daisy-to-cross"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-13",
+    "category": "partial-transfer",
+    "scramble": "U' U F2 R2 B2 L2 R2 B2 U2",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          7,
+          4,
+          1,
+          0,
+          5,
+          6,
+          3,
+          11,
+          9,
+          8,
+          10
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          7,
+          3,
+          2,
+          4,
+          6,
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[2,7,4,1,0,5,6,3,11,9,8,10],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[7,3,2,4,6,5,1,0],\"orientation\":[0,0,0,0,0,0,0,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "yes",
+        "bottom_DF": "no",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 2,
+        "bottom": 2
+      },
+      "goal": "cross",
+      "gatherTargets": [],
+      "transferTargets": [
+        "DF",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "petal",
+          "reference": "B"
+        },
+        "DL": {
+          "situation": "petal",
+          "reference": "R"
+        }
+      },
+      "actions": {
+        "DF": [
+          "turn:U2"
+        ],
+        "DL": [
+          "turn:U2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-14",
+    "category": "partial-transfer",
+    "scramble": "R U R' U R U2 R' U U' U2 F R U R' U' F' F2 R2 B2 L2 F2 U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          7,
+          0,
+          5,
+          6,
+          4,
+          1,
+          2,
+          3,
+          9,
+          10,
+          11,
+          8
+        ],
+        "orientation": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          5,
+          6,
+          3,
+          0,
+          7,
+          4,
+          1
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[7,0,5,6,4,1,2,3,9,10,11,8],\"orientation\":[0,1,0,0,0,1,0,0,0,0,0,0]},{\"pieces\":[2,5,6,3,0,7,4,1],\"orientation\":[0,0,0,1,1,0,0,1]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "yes",
+        "bottom_DR": "no",
+        "petal_DB": "yes",
+        "bottom_DB": "no",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 3,
+        "bottom": 1
+      },
+      "goal": "cross",
+      "gatherTargets": [],
+      "transferTargets": [
+        "DR",
+        "DB",
+        "DL"
+      ],
+      "situations": {
+        "DR": {
+          "situation": "petal",
+          "reference": "B"
+        },
+        "DB": {
+          "situation": "petal",
+          "reference": "L"
+        },
+        "DL": {
+          "situation": "petal",
+          "reference": "F"
+        }
+      },
+      "actions": {
+        "DR": [
+          "turn:U"
+        ],
+        "DB": [
+          "turn:U"
+        ],
+        "DL": [
+          "turn:U"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-15",
+    "category": "partial-transfer",
+    "scramble": "U2 R U R' U R U2 R' F R U R' U' F' F R U R' U' F' F2 R2 B2 L2 R2 B2 ",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          4,
+          3,
+          2,
+          7,
+          1,
+          5,
+          6,
+          0,
+          11,
+          9,
+          8,
+          10
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          4,
+          7,
+          3,
+          6,
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[4,3,2,7,1,5,6,0,11,9,8,10],\"orientation\":[0,0,1,0,1,0,0,0,0,0,0,0]},{\"pieces\":[2,4,7,3,6,5,1,0],\"orientation\":[0,0,0,2,0,0,2,2]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "yes",
+        "bottom_DF": "no",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "yes",
+        "bottom_DL": "no"
+      },
+      "counts": {
+        "petals": 2,
+        "bottom": 2
+      },
+      "goal": "cross",
+      "gatherTargets": [],
+      "transferTargets": [
+        "DF",
+        "DL"
+      ],
+      "situations": {
+        "DF": {
+          "situation": "petal",
+          "reference": "F"
+        },
+        "DL": {
+          "situation": "petal",
+          "reference": "L"
+        }
+      },
+      "actions": {
+        "DF": [
+          "none:lift-bottom",
+          "none:daisy-to-cross"
+        ],
+        "DL": [
+          "none:lift-bottom",
+          "none:daisy-to-cross"
+        ]
+      }
+    }
+  },
+  {
+    "id": "validation-16",
+    "category": "cross-complete",
+    "scramble": "U2 R U R' U R U2 R' R U R' U R U2 R' R U R' U R U2 R' R U R' U R U2 R' R U R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          8,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7,
+          3,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          0,
+          3,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[2,8,1,0,4,5,6,7,3,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,3,1,2,5,6,7],\"orientation\":[2,0,2,2,0,0,0,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 4
+      },
+      "goal": "first-layer",
+      "gatherTargets": [],
+      "transferTargets": [],
+      "situations": {},
+      "actions": {}
+    }
+  },
+  {
+    "id": "validation-17",
+    "category": "cross-complete",
+    "scramble": "F R U R' U' F' U R U R' U R U2 R' R U R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          8,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          2,
+          3,
+          1,
+          0,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[0,8,2,3,4,5,6,7,1,9,10,11],\"orientation\":[1,0,1,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,2,3,1,0,5,6,7],\"orientation\":[2,2,1,1,0,0,0,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 4
+      },
+      "goal": "first-layer",
+      "gatherTargets": [],
+      "transferTargets": [],
+      "situations": {},
+      "actions": {}
+    }
+  },
+  {
+    "id": "validation-18",
+    "category": "cross-complete",
+    "scramble": "U' R U R' U R U2 R' R U R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          3,
+          8,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          0,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          3,
+          2,
+          0,
+          1,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[3,8,2,1,4,5,6,7,0,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,3,2,0,1,5,6,7],\"orientation\":[2,0,0,1,0,0,0,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 4
+      },
+      "goal": "first-layer",
+      "gatherTargets": [],
+      "transferTargets": [],
+      "situations": {},
+      "actions": {}
+    }
+  },
+  {
+    "id": "validation-19",
+    "category": "cross-complete",
+    "scramble": "U' R U R' U R U2 R' U' R U R' U R U2 R' U2 U2 R U R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          8,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          3,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          0,
+          3,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          1,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[1,8,0,2,4,5,6,7,3,9,10,11],\"orientation\":[0,0,0,0,0,0,0,0,0,0,0,0]},{\"pieces\":[4,0,3,1,2,5,6,7],\"orientation\":[2,1,1,2,0,0,0,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 4
+      },
+      "goal": "first-layer",
+      "gatherTargets": [],
+      "transferTargets": [],
+      "situations": {},
+      "actions": {}
+    }
+  },
+  {
+    "id": "validation-20",
+    "category": "cross-complete",
+    "scramble": "F R U R' U' F' F R U R' U' F' R U R' U R U2 R' U' U' R U R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          8,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          2,
+          1,
+          3,
+          0,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          2,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "stateHash": "[{\"pieces\":[2,8,0,3,4,5,6,7,1,9,10,11],\"orientation\":[0,0,1,0,0,0,0,0,1,0,0,0]},{\"pieces\":[4,2,1,3,0,5,6,7],\"orientation\":[2,2,0,1,1,0,0,0]}]",
+    "expected": {
+      "checks": {
+        "petal_DF": "no",
+        "bottom_DF": "yes",
+        "petal_DR": "no",
+        "bottom_DR": "yes",
+        "petal_DB": "no",
+        "bottom_DB": "yes",
+        "petal_DL": "no",
+        "bottom_DL": "yes"
+      },
+      "counts": {
+        "petals": 0,
+        "bottom": 4
+      },
+      "goal": "first-layer",
+      "gatherTargets": [],
+      "transferTargets": [],
+      "situations": {},
+      "actions": {}
+    }
+  }
+]

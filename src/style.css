@@ -2449,3 +2449,26 @@ footer span:first-child {
     grid-template-columns: 1fr;
   }
 }
+.reasoning-experiments {
+  padding-top: 12px;
+}
+.reasoning-experiments > h3 {
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.2;
+  margin: 22px 0;
+}
+.reasoning-experiments > h4 {
+  font-size: 21px;
+  margin: 40px 0 18px;
+}
+.experiment-method {
+  padding-left: 24px;
+  color: #b5bfae;
+  line-height: 1.8;
+}
+.experiment-method li {
+  padding: 0 0 18px 8px;
+}
+.experiment-method strong {
+  color: #e2e8da;
+}

@@ -60,12 +60,12 @@ Final datasets cannot be reused or overlap prior recorded initial states. Do not
 
 Every request is recorded with its exact input and native response in immutable SQLite events. Source snapshots, dataset manifests, metrics and failed attempts are retained under `.data/configs`, `.data/datasets`, `.data/reports` and `.data/iterations`. Single-step probes are not full solves. Checkpoint continuations are development diagnostics, not held-out successes.
 
-The shared ledger enforces the original **$5 project cap**, including retries. Each dispatch reserves the full documented request ceiling; successful responses settle at reported input-token usage. Uncertain outcomes retain their reservation. Pricing was checked at $0.042 per million input tokens on 2026-09-20; verify it again before later evaluations.
+The shared ledger enforces the **$9 cumulative project cap** (raised by the user on 2026-09-21 after funding the account to $10), including retries. Each dispatch reserves the full documented request ceiling; successful responses settle at reported input-token usage. Uncertain outcomes retain their reservation. Pricing was checked at $0.042 per million input tokens on 2026-09-20; verify it again before later evaluations.
 
 ## Interactive field guide
 
 Open `/how-it-works` for the interactive article and manual layer workbench. Build a legal configuration using face turns or a setup sequence, prepare its first request for free, run one paid layer at a time, then explicitly apply the selected move. The workbench replays cached answers through the production goal and skill policy to construct each dependent question; revisiting a request never calls JEV. It intentionally omits automatic recovery and marks its runs `article-manual`, so they cannot count as autonomous benchmark successes.
 
-Sessions and round histories persist in `tutorial_sessions` in the same SQLite database. Exact provider exchanges also use the existing immutable event ledger. The shared $5 cap and 500-request ceiling apply; each click makes at most one provider attempt. Manual sessions cannot be started by the autonomous runner. Configuration edits begin a new investigation without deleting earlier records.
+Sessions and round histories persist in `tutorial_sessions` in the same SQLite database. Exact provider exchanges also use the existing immutable event ledger. The shared $9 cap and 500-request ceiling apply; each click makes at most one provider attempt. Manual sessions cannot be started by the autonomous runner. Configuration edits begin a new investigation without deleting earlier records.
 
 The article's recorded comparison reads `experiments/v26-primitive-comparison.json` and corresponding local SQLite runs. Preserve `.data/lab.sqlite` when moving this existing lab. A fresh installation can use the live workbench without those historical recordings; reproduce experiments with the commands in the article and the request-evaluation scripts.

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "known-loop",
+    "scramble": "U D' B D2 B2 U R' B L F' L2 U2 L2 F L2 F2 U2 B L2 F D2"
+  },
+  {
+    "id": "short-1",
+    "scramble": "R U F"
+  },
+  {
+    "id": "random-1",
+    "scramble": "R F B2 L F2 U F' R2 D2 B R2 L2 U' R2 F2 R2 F2 L2 F2 U2 B2"
+  },
+  {
+    "id": "random-2",
+    "scramble": "U2 B2 R U2 R D2 R2 D2 U2 B2 F2 R' U F' D2 U L U L U2 L"
+  }
+]

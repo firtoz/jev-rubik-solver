@@ -1,0 +1,902 @@
+{
+  "round1": [
+    {
+      "variant": "direct",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 8,
+      "recognitionAll": null,
+      "recognitionFields": null,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.00097944
+    },
+    {
+      "variant": "chain",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 7,
+      "recognitionAll": 4,
+      "recognitionFields": 55,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.0019446000000000003
+    },
+    {
+      "variant": "chain:scope",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 7,
+      "recognitionAll": 2,
+      "recognitionFields": 52,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.0020218799999999993
+    }
+  ],
+  "round2": [
+    {
+      "variant": "direct:scope",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 7,
+      "recognitionAll": null,
+      "recognitionFields": null,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.00099624
+    },
+    {
+      "variant": "chain:selfcontained",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 14,
+      "recognitionAll": 14,
+      "recognitionFields": 74,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 40,
+      "cost": 0.0025090799999999995
+    },
+    {
+      "variant": "regional",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 17,
+      "recognitionAll": 19,
+      "recognitionFields": 79,
+      "wrongDespiteCorrectRecognition": 2,
+      "errors": 0,
+      "requests": 60,
+      "cost": 0.0041269199999999975
+    }
+  ],
+  "handoff": [
+    {
+      "variant": "regional",
+      "completed": 20,
+      "total": 20,
+      "correct": 18,
+      "wrongDespiteCorrectRecognition": 1,
+      "cost": 0.0010449599999999997
+    },
+    {
+      "variant": "regional:handoff",
+      "completed": 20,
+      "total": 20,
+      "correct": 16,
+      "wrongDespiteCorrectRecognition": 3,
+      "cost": 0.0006602400000000002
+    },
+    {
+      "variant": "regional:compact",
+      "completed": 20,
+      "total": 20,
+      "correct": 14,
+      "wrongDespiteCorrectRecognition": 5,
+      "cost": 0.00050316
+    }
+  ],
+  "validation": [
+    {
+      "variant": "direct",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 7,
+      "recognitionAll": null,
+      "recognitionFields": null,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 20,
+      "cost": 0.00097944
+    },
+    {
+      "variant": "regional",
+      "total": 20,
+      "completed": 20,
+      "goalCorrect": 19,
+      "recognitionAll": 19,
+      "recognitionFields": 79,
+      "wrongDespiteCorrectRecognition": 0,
+      "errors": 0,
+      "requests": 60,
+      "cost": 0.0041269199999999975
+    }
+  ],
+  "requests": 360,
+  "cost": 0.019892879999999995,
+  "example": {
+    "caseId": "validation-5",
+    "expected": {
+      "cross": "no",
+      "firstLayer": "no",
+      "lowerTwo": "no",
+      "solved": "no"
+    },
+    "accepted": [
+      "daisy",
+      "cross"
+    ],
+    "actual": "first-layer",
+    "exchanges": [
+      {
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+            "faces": {
+              "U": {
+                "center": "white",
+                "rows": [
+                  [
+                    "green",
+                    "blue",
+                    "red"
+                  ],
+                  [
+                    "green",
+                    "white",
+                    "green"
+                  ],
+                  [
+                    "green",
+                    "white",
+                    "white"
+                  ]
+                ]
+              },
+              "D": {
+                "center": "yellow",
+                "rows": [
+                  [
+                    "blue",
+                    "yellow",
+                    "yellow"
+                  ],
+                  [
+                    "blue",
+                    "yellow",
+                    "yellow"
+                  ],
+                  [
+                    "white",
+                    "yellow",
+                    "yellow"
+                  ]
+                ]
+              },
+              "F": {
+                "center": "green",
+                "rows": [
+                  [
+                    "yellow",
+                    "red",
+                    "blue"
+                  ],
+                  [
+                    "yellow",
+                    "green",
+                    "green"
+                  ],
+                  [
+                    "yellow",
+                    "green",
+                    "green"
+                  ]
+                ]
+              },
+              "B": {
+                "center": "blue",
+                "rows": [
+                  [
+                    "white",
+                    "white",
+                    "white"
+                  ],
+                  [
+                    "blue",
+                    "blue",
+                    "white"
+                  ],
+                  [
+                    "blue",
+                    "blue",
+                    "red"
+                  ]
+                ]
+              },
+              "R": {
+                "center": "red",
+                "rows": [
+                  [
+                    "orange",
+                    "white",
+                    "blue"
+                  ],
+                  [
+                    "red",
+                    "red",
+                    "red"
+                  ],
+                  [
+                    "red",
+                    "red",
+                    "red"
+                  ]
+                ]
+              },
+              "L": {
+                "center": "orange",
+                "rows": [
+                  [
+                    "orange",
+                    "orange",
+                    "orange"
+                  ],
+                  [
+                    "orange",
+                    "orange",
+                    "orange"
+                  ],
+                  [
+                    "green",
+                    "orange",
+                    "orange"
+                  ]
+                ]
+              }
+            }
+          },
+          "questions": {
+            "Dface": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all nine cells of D. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Dedges": {
+              "type": "choice",
+              "instructions": "Inspect ONLY D cells row1 col2, row2 col1, row2 col3, row3 col2. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Uface": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all nine cells of U. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Fbottom": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row3 of F. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Fedge": {
+              "type": "choice",
+              "instructions": "Inspect ONLY the single cell row3 col2 of F. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Fmiddle": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row2 of F. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Fface": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all nine cells of F. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Rbottom": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row3 of R. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Redge": {
+              "type": "choice",
+              "instructions": "Inspect ONLY the single cell row3 col2 of R. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Rmiddle": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row2 of R. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Rface": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all nine cells of R. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Bbottom": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row3 of B. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Bedge": {
+              "type": "choice",
+              "instructions": "Inspect ONLY the single cell row3 col2 of B. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Bmiddle": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row2 of B. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Bface": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all nine cells of B. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Lbottom": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row3 of L. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Ledge": {
+              "type": "choice",
+              "instructions": "Inspect ONLY the single cell row3 col2 of L. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Lmiddle": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all three cells in row2 of L. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            },
+            "Lface": {
+              "type": "choice",
+              "instructions": "Inspect ONLY all nine cells of L. Rows and columns are numbered 1 to 3. Do all these specified cells match their OWN face center? Ignore every other cell. Do not decide whether a layer or the cube is solved.",
+              "criteria": {
+                "yes": "Every specified cell matches its own face center",
+                "no": "At least one specified cell differs from its own face center"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "Dface": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.58,
+              "probabilities": {
+                "no": 0.79,
+                "yes": 0.21
+              }
+            },
+            "Dedges": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.03,
+              "probabilities": {
+                "no": 0.48,
+                "yes": 0.52
+              }
+            },
+            "Uface": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.33,
+              "probabilities": {
+                "no": 0.66,
+                "yes": 0.34
+              }
+            },
+            "Fbottom": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.92,
+              "probabilities": {
+                "no": 0.96,
+                "yes": 0.04
+              }
+            },
+            "Fedge": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.99,
+              "probabilities": {
+                "no": 0.01,
+                "yes": 0.99
+              }
+            },
+            "Fmiddle": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.92,
+              "probabilities": {
+                "no": 0.96,
+                "yes": 0.04
+              }
+            },
+            "Fface": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.47,
+              "probabilities": {
+                "no": 0.74,
+                "yes": 0.26
+              }
+            },
+            "Rbottom": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.95,
+              "probabilities": {
+                "no": 0.03,
+                "yes": 0.97
+              }
+            },
+            "Redge": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.97,
+              "probabilities": {
+                "no": 0.02,
+                "yes": 0.98
+              }
+            },
+            "Rmiddle": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.97,
+              "probabilities": {
+                "no": 0.02,
+                "yes": 0.98
+              }
+            },
+            "Rface": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.64,
+              "probabilities": {
+                "no": 0.82,
+                "yes": 0.18
+              }
+            },
+            "Bbottom": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.98,
+              "probabilities": {
+                "no": 0.99,
+                "yes": 0.01
+              }
+            },
+            "Bedge": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.93,
+              "probabilities": {
+                "no": 0.03,
+                "yes": 0.97
+              }
+            },
+            "Bmiddle": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.92,
+              "probabilities": {
+                "no": 0.96,
+                "yes": 0.04
+              }
+            },
+            "Bface": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.58,
+              "probabilities": {
+                "no": 0.79,
+                "yes": 0.21
+              }
+            },
+            "Lbottom": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 1,
+              "probabilities": {
+                "no": 1,
+                "yes": 0
+              }
+            },
+            "Ledge": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.96,
+              "probabilities": {
+                "no": 0.02,
+                "yes": 0.98
+              }
+            },
+            "Lmiddle": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.98,
+              "probabilities": {
+                "no": 0.01,
+                "yes": 0.99
+              }
+            },
+            "Lface": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 0.74,
+              "probabilities": {
+                "no": 0.87,
+                "yes": 0.13
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 2759,
+            "output_tokens": 558
+          }
+        }
+      },
+      {
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "regionChecksFromPreviousModelResponse": {
+              "Dface": "no",
+              "Dedges": "yes",
+              "Uface": "no",
+              "Fbottom": "no",
+              "Fedge": "yes",
+              "Fmiddle": "no",
+              "Fface": "no",
+              "Rbottom": "yes",
+              "Redge": "yes",
+              "Rmiddle": "yes",
+              "Rface": "no",
+              "Bbottom": "no",
+              "Bedge": "yes",
+              "Bmiddle": "no",
+              "Bface": "no",
+              "Lbottom": "no",
+              "Ledge": "yes",
+              "Lmiddle": "yes",
+              "Lface": "no"
+            }
+          },
+          "questions": {
+            "cross": {
+              "type": "choice",
+              "instructions": "Assess cross using your earlier answers. Return yes exactly when ALL of these named region checks are yes: Dedges, Fedge, Redge, Bedge, Ledge. If any is no, return no. Ignore checks outside this list; do not replace your earlier answers.",
+              "criteria": {
+                "yes": "All required checks are yes",
+                "no": "At least one required check is no"
+              }
+            },
+            "firstLayer": {
+              "type": "choice",
+              "instructions": "Assess firstLayer using your earlier answers. Return yes exactly when ALL of these named region checks are yes: Dface, Fbottom, Rbottom, Bbottom, Lbottom. If any is no, return no. Ignore checks outside this list; do not replace your earlier answers.",
+              "criteria": {
+                "yes": "All required checks are yes",
+                "no": "At least one required check is no"
+              }
+            },
+            "lowerTwo": {
+              "type": "choice",
+              "instructions": "Assess lowerTwo using your earlier answers. Return yes exactly when ALL of these named region checks are yes: Dface, Fbottom, Rbottom, Bbottom, Lbottom, Fmiddle, Rmiddle, Bmiddle, Lmiddle. If any is no, return no. Ignore checks outside this list; do not replace your earlier answers.",
+              "criteria": {
+                "yes": "All required checks are yes",
+                "no": "At least one required check is no"
+              }
+            },
+            "solved": {
+              "type": "choice",
+              "instructions": "Assess solved using your earlier answers. Return yes exactly when ALL of these named region checks are yes: Dface, Uface, Fface, Rface, Bface, Lface. If any is no, return no. Ignore checks outside this list; do not replace your earlier answers.",
+              "criteria": {
+                "yes": "All required checks are yes",
+                "no": "At least one required check is no"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "cross": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 1,
+              "probabilities": {
+                "no": 0,
+                "yes": 1
+              }
+            },
+            "firstLayer": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 1,
+              "probabilities": {
+                "no": 1,
+                "yes": 0
+              }
+            },
+            "lowerTwo": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 1,
+              "probabilities": {
+                "no": 1,
+                "yes": 0
+              }
+            },
+            "solved": {
+              "type": "choice",
+              "choice": "no",
+              "confidence": 1,
+              "probabilities": {
+                "no": 1,
+                "yes": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 910,
+            "output_tokens": 121
+          }
+        }
+      },
+      {
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "observations": {
+              "frame": "U top, D bottom, F front, B back, R right, L left. Every grid is viewed from outside. For F/R/B/L, row 3 touches D. For U the top of the grid touches B; for D the top touches F. Rows are top to bottom; columns left to right.",
+              "faces": {
+                "U": {
+                  "center": "white",
+                  "rows": [
+                    [
+                      "green",
+                      "blue",
+                      "red"
+                    ],
+                    [
+                      "green",
+                      "white",
+                      "green"
+                    ],
+                    [
+                      "green",
+                      "white",
+                      "white"
+                    ]
+                  ]
+                },
+                "D": {
+                  "center": "yellow",
+                  "rows": [
+                    [
+                      "blue",
+                      "yellow",
+                      "yellow"
+                    ],
+                    [
+                      "blue",
+                      "yellow",
+                      "yellow"
+                    ],
+                    [
+                      "white",
+                      "yellow",
+                      "yellow"
+                    ]
+                  ]
+                },
+                "F": {
+                  "center": "green",
+                  "rows": [
+                    [
+                      "yellow",
+                      "red",
+                      "blue"
+                    ],
+                    [
+                      "yellow",
+                      "green",
+                      "green"
+                    ],
+                    [
+                      "yellow",
+                      "green",
+                      "green"
+                    ]
+                  ]
+                },
+                "B": {
+                  "center": "blue",
+                  "rows": [
+                    [
+                      "white",
+                      "white",
+                      "white"
+                    ],
+                    [
+                      "blue",
+                      "blue",
+                      "white"
+                    ],
+                    [
+                      "blue",
+                      "blue",
+                      "red"
+                    ]
+                  ]
+                },
+                "R": {
+                  "center": "red",
+                  "rows": [
+                    [
+                      "orange",
+                      "white",
+                      "blue"
+                    ],
+                    [
+                      "red",
+                      "red",
+                      "red"
+                    ],
+                    [
+                      "red",
+                      "red",
+                      "red"
+                    ]
+                  ]
+                },
+                "L": {
+                  "center": "orange",
+                  "rows": [
+                    [
+                      "orange",
+                      "orange",
+                      "orange"
+                    ],
+                    [
+                      "orange",
+                      "orange",
+                      "orange"
+                    ],
+                    [
+                      "green",
+                      "orange",
+                      "orange"
+                    ]
+                  ]
+                }
+              }
+            },
+            "previousModelAssessments": {
+              "cross": "yes",
+              "firstLayer": "no",
+              "lowerTwo": "no",
+              "solved": "no"
+            }
+          },
+          "questions": {
+            "goal": {
+              "type": "choice",
+              "instructions": {
+                "definitions": {
+                  "cross": "Bottom cross: D edge-center cells (row1 col2, row2 col1, row2 col3, row3 col2) equal D center, AND row3 col2 of EACH side F,R,B,L equals its own face center. Ignore D corners.",
+                  "firstLayer": "Bottom first layer: all nine D cells equal D center AND all three cells in row3 of EACH side F,R,B,L equal that side center. Ignore upper side rows and U.",
+                  "lowerTwo": "Lower two layers: bottom first layer as defined above is complete AND all three cells in row2 of EACH side F,R,B,L equal that side center. Ignore row1 of sides and U.",
+                  "solved": "Entire cube: every cell of each of the six faces equals that face center."
+                },
+                "strategy": "Use this beginner progression. If the cube is entirely solved, choose solved. Otherwise, if the lower two layers are complete, choose last-layer. Otherwise, if the first layer is complete, choose middle-layer. Otherwise, if the cross is complete, choose first-layer. Otherwise either daisy or cross is acceptable: daisy is a scaffold for the cross, while cross means direct cross construction. Never dismantle a complete cross to make a daisy. This experiment stops at the last-layer handoff; it does not choose among last-layer algorithms.",
+                "task": "Choose the next goal. Use your previous assessments as the working progress description. They are model observations, not answers from a solver."
+              },
+              "criteria": {
+                "daisy": "Build a temporary daisy for an incomplete bottom cross",
+                "cross": "Build or finish the bottom cross directly",
+                "first-layer": "Finish bottom corners while retaining the completed cross",
+                "middle-layer": "Solve middle edges while retaining the completed first layer",
+                "last-layer": "Work on the last layer while preserving the completed lower two layers",
+                "solved": "The entire cube is solved; stop"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "goal": {
+              "type": "choice",
+              "choice": "first-layer",
+              "confidence": 0.32,
+              "probabilities": {
+                "solved": 0,
+                "first-layer": 0.44,
+                "daisy": 0.23,
+                "cross": 0.31,
+                "middle-layer": 0.01,
+                "last-layer": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1244,
+            "output_tokens": 65
+          }
+        }
+      }
+    ]
+  }
+}

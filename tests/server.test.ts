@@ -7,7 +7,7 @@ const jev = await import('../src/server/jev');
 const originalFetch = globalThis.fetch;
 afterAll(() => {
   globalThis.fetch = originalFetch;
-  store.db.close();
+  // The test process closes the shared temporary database after all files finish.
 });
 test('complete native response fields survive validation, and credentials never enter records', async () => {
   const raw = {
@@ -142,9 +142,14 @@ test('request cap, recovery after restart and budget cap are durable', async () 
   store.recover();
   expect(store.getRun(s.id).status).toBe('paused');
   const reservationId = crypto.randomUUID();
-  store.reserve(reservationId, s.id, 4.9 - store.spend());
+  store.reserve(reservationId, s.id, store.CAP - 0.1 - store.spend());
   expect(() => store.reserve(crypto.randomUUID(), s.id, 0.11)).toThrow('budget');
   store.settle(reservationId, 0);
+  expect(store.CAP).toBe(9);
+  const fullReservation = crypto.randomUUID();
+  store.reserve(fullReservation, s.id, store.CAP - store.spend());
+  expect(() => store.reserve(crypto.randomUUID(), s.id, 64000 * store.PRICE)).toThrow('budget');
+  store.settle(fullReservation, 0);
 });
 test('policy input contains observations but no scramble or initial history', async () => {
   const r = await runner.createRun("R U F'", 'skills');
@@ -307,4 +312,20 @@ test('solved and malformed configurations never dispatch', async () => {
   expect(s.request).toBeNull();
   await expect(advanceSession(s.id, 0, crypto.randomUUID(), 'ask')).rejects.toThrow('No pending');
   await expect(createSession('not moves')).rejects.toThrow('standard face turns');
+});
+
+const boundedRequest={model:'jev-1.13.0',state:{measurement:1},questions:{q:{type:'choice' as const,instructions:'Choose',criteria:{a:'A'}}}};
+test('529 retries identical body once, counts both calls and retains uncertain cost',async()=>{
+ const bodies:string[]=[];
+ globalThis.fetch=(async(_url:any,init:any)=>{bodies.push(init.body);return bodies.length===1?new Response('{}',{status:529}):Response.json({model:'jev-1.13.0',answers:{q:{type:'choice',choice:'a',confidence:1,probabilities:{a:1}}},usage:{input_tokens:10,output_tokens:1}});}) as unknown as typeof fetch;
+ const run=await runner.createRun('R','skills');await jev.evaluate(run.id,boundedRequest,AbortSignal.timeout(5000),{maxAttempts:2});
+ expect(bodies).toHaveLength(2);expect(bodies[0]).toBe(bodies[1]);expect(store.getRun(run.id).requests).toBe(2);
+ const ledger=store.db.query('SELECT status,amount FROM ledger WHERE run_id=?').all(run.id) as any[];
+ expect(ledger.find(r=>r.status==='reserved').amount).toBe(64000*store.PRICE);
+ expect(ledger.find(r=>r.status==='settled').amount).toBe(10*store.PRICE);
+ expect(store.events(run.id).filter(e=>e.kind==='request-error')).toHaveLength(1);
+});
+test('second overload ends attempt without a third call',async()=>{
+ let calls=0;globalThis.fetch=(async()=>{calls++;return new Response('{}',{status:529});}) as unknown as typeof fetch;
+ const run=await runner.createRun('R','skills');await expect(jev.evaluate(run.id,boundedRequest,AbortSignal.timeout(5000),{maxAttempts:2})).rejects.toThrow('529');expect(calls).toBe(2);
 });

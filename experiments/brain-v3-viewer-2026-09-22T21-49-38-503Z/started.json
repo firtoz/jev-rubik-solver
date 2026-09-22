@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-22T21:49:38.517Z",
+  "digest": "3d27612fa7b06563a6299e5487c37d8d6fb61d181d0620bb8e5519dbc07d37ab",
+  "limits": {
+    "requestsPerAttempt": 500,
+    "turns": 1000,
+    "ms": 600000,
+    "studyRequests": 500,
+    "studyDollars": 0.05,
+    "concurrency": 1,
+    "retries": 1,
+    "retryConditions": [
+      429,
+      529,
+      "request timeout/network failure before overall deadline"
+    ]
+  },
+  "scope": "1 fresh random states for viewer; frozen v3 policy and transport. All failures count. Single fresh recording for viewer verification; separate from the frozen final evaluation."
+}
