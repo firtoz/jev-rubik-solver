@@ -1,0 +1,18 @@
+{
+  "limits": {
+    "requests": 80,
+    "cost": 0.03,
+    "concurrency": 4,
+    "retries": 0
+  },
+  "design": "Reused 20 development observations. Direct one-call action vs relations -> intention -> action, latter three sequential calls, model answers copied unchanged. Same universal action effects; explicit slot-to-action decision rules absent. Effects mechanically verified. Target supplied, no target selection/full integration claim. Criterion: final action is accepted offline; report intention separately.",
+  "budgetBefore": {
+    "cap": 9,
+    "reservedAndSpent": 5.618815398000001,
+    "usage": 5.6026873980000005,
+    "reserved": 0.016128000000000003,
+    "attempts": 79603,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

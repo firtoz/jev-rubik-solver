@@ -1,0 +1,1828 @@
+[
+  {
+    "id": "development-1",
+    "split": "development",
+    "family": "done",
+    "scramble": "U' R' U R U B U' B' U2 U B U' B' U' R' U R U' U B U' B' U' R' U R U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          3,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FR",
+    "expected": "done",
+    "accepted": [
+      "leave"
+    ]
+  },
+  {
+    "id": "development-2",
+    "split": "development",
+    "family": "done",
+    "scramble": "U' R' U R U B U' B' U U' R' U R U B U' B' U' U' L' U L U F U' F' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          2,
+          10,
+          9,
+          4,
+          5,
+          6,
+          7,
+          8,
+          3,
+          1,
+          11
+        ],
+        "orientation": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "done",
+    "accepted": [
+      "leave"
+    ]
+  },
+  {
+    "id": "development-3",
+    "split": "development",
+    "family": "insert",
+    "scramble": "U B U' B' U' R' U R U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          3,
+          10,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          1,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          3,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BR",
+    "expected": "insert",
+    "accepted": [
+      "middle-left@B"
+    ]
+  },
+  {
+    "id": "development-4",
+    "split": "development",
+    "family": "align",
+    "scramble": "U' L' U L U F U' F' U2",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          9,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          3,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FL",
+    "expected": "align",
+    "accepted": [
+      "U"
+    ]
+  },
+  {
+    "id": "development-5",
+    "split": "development",
+    "family": "align",
+    "scramble": "U' L' U L U F U' F' U U' R' U R U B U' B' U2 U' B' U B U L U' L' U2 U B U' B' U' R' U R U2 U R U' R' U' F' U F U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          10,
+          8,
+          2,
+          9,
+          4,
+          5,
+          6,
+          7,
+          11,
+          0,
+          1,
+          3
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          3,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FL",
+    "expected": "align",
+    "accepted": [
+      "U'"
+    ]
+  },
+  {
+    "id": "development-6",
+    "split": "development",
+    "family": "align",
+    "scramble": "U R U' R' U' F' U F U U F U' F' U' L' U L U U' F' U F U R U' R' U' U L U' L' U' B' U B U2 U' F' U F U R U' R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          9,
+          11,
+          8,
+          4,
+          5,
+          6,
+          7,
+          0,
+          3,
+          10,
+          1
+        ],
+        "orientation": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          3,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "align",
+    "accepted": [
+      "U'"
+    ]
+  },
+  {
+    "id": "development-7",
+    "split": "development",
+    "family": "align",
+    "scramble": "U' R' U R U B U' B' U2 U' F' U F U R U' R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          8,
+          0,
+          10,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          2,
+          11
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BR",
+    "expected": "align",
+    "accepted": [
+      "U"
+    ]
+  },
+  {
+    "id": "development-8",
+    "split": "development",
+    "family": "flipped",
+    "scramble": "U' L' U L U F U' F' U2 U' L' U L U F U' F' U U' B' U B U L U' L' U' U L U' L' U' B' U B U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          3,
+          2,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FL",
+    "expected": "extract",
+    "accepted": [
+      "middle-left@F",
+      "middle-right@L"
+    ]
+  },
+  {
+    "id": "development-9",
+    "split": "development",
+    "family": "insert",
+    "scramble": "U B U' B' U' R' U R U U' B' U B U L U' L' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          10,
+          11,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          1,
+          2
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BR",
+    "expected": "insert",
+    "accepted": [
+      "middle-right@R"
+    ]
+  },
+  {
+    "id": "development-10",
+    "split": "development",
+    "family": "insert",
+    "scramble": "U' F' U F U R U' R' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          8,
+          3,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          0,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FR",
+    "expected": "insert",
+    "accepted": [
+      "middle-right@F"
+    ]
+  },
+  {
+    "id": "development-11",
+    "split": "development",
+    "family": "trapped",
+    "scramble": "U R U' R' U' F' U F U2 U' F' U F U R U' R' U U' B' U B U L U' L' U U R U' R' U' F' U F U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          3,
+          1,
+          8,
+          0,
+          4,
+          5,
+          6,
+          7,
+          11,
+          9,
+          10,
+          2
+        ],
+        "orientation": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          3,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          1,
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "extract",
+    "accepted": [
+      "middle-right@F",
+      "middle-left@R"
+    ]
+  },
+  {
+    "id": "development-12",
+    "split": "development",
+    "family": "align",
+    "scramble": "U' L' U L U F U' F' U' U L U' L' U' B' U B U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          11,
+          9,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0,
+          10,
+          3
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FL",
+    "expected": "align",
+    "accepted": [
+      "U2"
+    ]
+  },
+  {
+    "id": "development-13",
+    "split": "development",
+    "family": "align",
+    "scramble": "U F U' F' U' L' U L U2 U L U' L' U' B' U B U' U' B' U B U L U' L' U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          11,
+          0,
+          9,
+          4,
+          5,
+          6,
+          7,
+          8,
+          3,
+          10,
+          2
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "align",
+    "accepted": [
+      "U2"
+    ]
+  },
+  {
+    "id": "development-14",
+    "split": "development",
+    "family": "insert",
+    "scramble": "U F U' F' U' L' U L U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          9,
+          0,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          3,
+          10,
+          11
+        ],
+        "orientation": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          0,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FL",
+    "expected": "insert",
+    "accepted": [
+      "middle-left@F"
+    ]
+  },
+  {
+    "id": "development-15",
+    "split": "development",
+    "family": "align",
+    "scramble": "U' L' U L U F U' F' U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          3,
+          9,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0,
+          10,
+          11
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "FL",
+    "expected": "align",
+    "accepted": [
+      "U2"
+    ]
+  },
+  {
+    "id": "development-16",
+    "split": "development",
+    "family": "align",
+    "scramble": "U' R' U R U B U' B' U2 U' L' U L U F U' F' U2 U L U' L' U' B' U B U' U' L' U L U F U' F' U' U R U' R' U' F' U F U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          10,
+          8,
+          11,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          9,
+          2,
+          1
+        ],
+        "orientation": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          1,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BR",
+    "expected": "align",
+    "accepted": [
+      "U2"
+    ]
+  },
+  {
+    "id": "development-17",
+    "split": "development",
+    "family": "trapped",
+    "scramble": "U L U' L' U' B' U B U U F U' F' U' L' U L U' U B U' B' U' R' U R U",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          3,
+          10,
+          9,
+          4,
+          5,
+          6,
+          7,
+          8,
+          11,
+          1,
+          2
+        ],
+        "orientation": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          3,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "extract",
+    "accepted": [
+      "middle-left@F",
+      "middle-right@L"
+    ]
+  },
+  {
+    "id": "development-18",
+    "split": "development",
+    "family": "flipped",
+    "scramble": "U L U' L' U' B' U B U U L U' L' U' B' U B U U' L' U L U F U' F' U2 U' R' U R U B U' B' U2 U' R' U R U B U' B' U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          3,
+          1,
+          2,
+          9,
+          4,
+          5,
+          6,
+          7,
+          8,
+          11,
+          10,
+          0
+        ],
+        "orientation": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BR",
+    "expected": "extract",
+    "accepted": [
+      "middle-right@R",
+      "middle-left@B"
+    ]
+  },
+  {
+    "id": "development-19",
+    "split": "development",
+    "family": "trapped",
+    "scramble": "U L U' L' U' B' U B U' U F U' F' U' L' U L U' U B U' B' U' R' U R U' U F U' F' U' L' U L U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          3,
+          9,
+          1,
+          10,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0,
+          11,
+          2
+        ],
+        "orientation": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          3,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "extract",
+    "accepted": [
+      "middle-right@R",
+      "middle-left@B"
+    ]
+  },
+  {
+    "id": "development-20",
+    "split": "development",
+    "family": "trapped",
+    "scramble": "U' B' U B U L U' L' U' U F U' F' U' L' U L U2 U' F' U F U R U' R' U' U F U' F' U' L' U L U'",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          2,
+          9,
+          1,
+          8,
+          4,
+          5,
+          6,
+          7,
+          11,
+          0,
+          10,
+          3
+        ],
+        "orientation": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "target": "BL",
+    "expected": "extract",
+    "accepted": [
+      "middle-right@F",
+      "middle-left@R"
+    ]
+  }
+]

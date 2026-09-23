@@ -1,0 +1,122 @@
+[
+  {
+    "id": "case-5",
+    "success": true,
+    "requests": 20,
+    "cycles": 4,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-6",
+    "success": true,
+    "requests": 15,
+    "cycles": 3,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-7",
+    "success": true,
+    "requests": 20,
+    "cycles": 4,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-8",
+    "success": true,
+    "requests": 39,
+    "cycles": 8,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": {
+      "cycle": 2,
+      "kind": "routine/frame",
+      "expectedIntention": "insert",
+      "chosen": {
+        "target": "BL",
+        "intention": "insert",
+        "front": "B",
+        "action": "middle-left@B"
+      }
+    },
+    "terminalError": null
+  },
+  {
+    "id": "case-9",
+    "success": true,
+    "requests": 10,
+    "cycles": 2,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-10",
+    "success": true,
+    "requests": 48,
+    "cycles": 10,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-11",
+    "success": true,
+    "requests": 20,
+    "cycles": 4,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-12",
+    "success": true,
+    "requests": 44,
+    "cycles": 9,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": {
+      "cycle": 2,
+      "kind": "routine/frame",
+      "expectedIntention": "insert",
+      "chosen": {
+        "target": "BL",
+        "intention": "insert",
+        "front": "B",
+        "action": "middle-left@B"
+      }
+    },
+    "terminalError": null
+  },
+  {
+    "id": "case-13",
+    "success": true,
+    "requests": 24,
+    "cycles": 5,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  },
+  {
+    "id": "case-14",
+    "success": true,
+    "requests": 5,
+    "cycles": 1,
+    "noOps": 0,
+    "repeatedStates": 0,
+    "firstError": null,
+    "terminalError": null
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "digest": "8703b39b866e188ac55a8250320376943a9ef185fce525b119d1d4cfdd394d07",
+  "limits": {
+    "requests": 2500,
+    "cost": 0.35,
+    "concurrency": 4,
+    "retries": 0,
+    "integrationRequests": 160,
+    "integrationTurns": 200,
+    "integrationMs": 120000
+  },
+  "design": "20 new development scenes, then >=18/20 gates 40 heldout unique observed scenes. Whole selection/intention/action scored against offline all-target labels. Must choose unfinished target unless all four middle edges solved. All align/insert/extract/done families must occur among heldout choices, >=36/40 overall. Four middle-complete scenes test leaving solved pieces alone. All eight non-bottom edges shown only for target selection; local subcases can repeat. Then ten noncomplete integration starts, >=9/10 required. Exclude development states/scenes from later phases. Targets and all tactics chosen by JEV.",
+  "budgetBefore": {
+    "cap": 9,
+    "reservedAndSpent": 5.633677812000001,
+    "usage": 5.617549812000001,
+    "reserved": 0.016128000000000003,
+    "attempts": 80094,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

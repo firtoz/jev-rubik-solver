@@ -1,0 +1,4721 @@
+{
+  "rows": [
+    {
+      "id": "match-F-green-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "green",
+          "adjacentSideCenter": "green"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "3153d984-e7cf-4f1e-b2e9-755707c84ad5",
+      "exchange": {
+        "id": "9e43c9f0-aedb-4aaf-94d1-0d326c1c805c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "green",
+            "adjacentSideCenter": "green"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 727.608774,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "match-F-red-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "red",
+          "adjacentSideCenter": "green"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "67324c8f-fb09-4718-bb73-c1217c1d32ca",
+      "exchange": {
+        "id": "8492038b-3a06-4918-b9b8-23c885c6a1e4",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "red",
+            "adjacentSideCenter": "green"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 483.14993599999997,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-F-blue-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "blue",
+          "adjacentSideCenter": "green"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "58cdcfc8-9a9f-4d23-a754-3db14dc01f77",
+      "exchange": {
+        "id": "aa5c3ffa-3a10-4eba-954f-e05387be65b9",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "blue",
+            "adjacentSideCenter": "green"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 709.4976100000001,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-F-orange-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "orange",
+          "adjacentSideCenter": "green"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "6faa8503-2cc6-4c28-9502-23dfcebba10f",
+      "exchange": {
+        "id": "e2cacc3a-8702-490c-8c3f-bf1c678dc3cd",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "orange",
+            "adjacentSideCenter": "green"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 796.4332919999999,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-R-green-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "green",
+          "adjacentSideCenter": "red"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "f9895c77-8805-4242-a3ce-7ed5048beb03",
+      "exchange": {
+        "id": "e1707ff9-c937-42a5-ae74-2ea8bb2aaa34",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "green",
+            "adjacentSideCenter": "red"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 511.32152300000007,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-R-red-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "red",
+          "adjacentSideCenter": "red"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "007be900-057c-4e60-9d86-5ad8017eb18b",
+      "exchange": {
+        "id": "8eb5ad63-4e90-4acf-82cf-32a7510e1aa8",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "red",
+            "adjacentSideCenter": "red"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 509.6509510000001,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "match-R-blue-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "blue",
+          "adjacentSideCenter": "red"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "363b3675-1400-4088-88bc-be6e28bd44fb",
+      "exchange": {
+        "id": "f2b83387-8fd5-4f42-9ad3-a3145ffc2bea",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "blue",
+            "adjacentSideCenter": "red"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 478.693714,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-R-orange-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "orange",
+          "adjacentSideCenter": "red"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "fe35fbed-1356-416c-a6f1-27329383f754",
+      "exchange": {
+        "id": "817af3a1-8d5d-45d7-9686-0dda14fd3b30",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "orange",
+            "adjacentSideCenter": "red"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 453.7978679999999,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-B-green-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "green",
+          "adjacentSideCenter": "blue"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "590159bb-350d-4ed9-9f59-de8cdde4eced",
+      "exchange": {
+        "id": "4e52e941-dfd0-4683-aed4-ebd1c03ab0de",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "green",
+            "adjacentSideCenter": "blue"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 433.2052390000001,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-B-red-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "red",
+          "adjacentSideCenter": "blue"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "b84e4335-6c92-4614-a632-864205ff6cea",
+      "exchange": {
+        "id": "2132aeb8-cfcb-42fc-bd20-7215857ea54a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "red",
+            "adjacentSideCenter": "blue"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 449.22909800000025,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-B-blue-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "blue",
+          "adjacentSideCenter": "blue"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "ceb94ddd-189f-42e6-b7ee-fddd866aa77b",
+      "exchange": {
+        "id": "34ea29d3-f516-42a1-b844-aa554d810ad9",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "blue",
+            "adjacentSideCenter": "blue"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "same": 1,
+                "different": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "same": 1,
+                "different": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 443.87881800000014,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "match-B-orange-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "orange",
+          "adjacentSideCenter": "blue"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "8dff1d3c-a862-4101-8af6-22d83e643f72",
+      "exchange": {
+        "id": "64edcb31-2f26-46e2-bd5d-36de77d86a03",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "orange",
+            "adjacentSideCenter": "blue"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 805.740834,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-green-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "green",
+          "adjacentSideCenter": "orange"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "9338d049-0903-4d7d-8502-351fd757c0a1",
+      "exchange": {
+        "id": "fac29928-04d1-486a-a955-0d6d722646c5",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "green",
+            "adjacentSideCenter": "orange"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 367.9165899999998,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-red-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "red",
+          "adjacentSideCenter": "orange"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "0dedd4be-bf14-4c2b-a532-ac7d0f2c1b70",
+      "exchange": {
+        "id": "4abce808-f7d0-44c4-b1cf-6fb3866150b3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "red",
+            "adjacentSideCenter": "orange"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 373.79045099999985,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-blue-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "blue",
+          "adjacentSideCenter": "orange"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "a17fcc3c-af7c-4c40-9fe7-390275907094",
+      "exchange": {
+        "id": "66b9e792-fbad-45f4-b011-50778cfc9298",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "blue",
+            "adjacentSideCenter": "orange"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 490.015578,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-orange-fields",
+      "family": "match",
+      "variant": "fields",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "sideStickerColor": "orange",
+          "adjacentSideCenter": "orange"
+        },
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "f0868f57-4e50-4a54-b96b-cd27ce202969",
+      "exchange": {
+        "id": "7441db6c-c350-49b3-9ba3-c56a93286b43",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "sideStickerColor": "orange",
+            "adjacentSideCenter": "orange"
+          },
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 352,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 400.297685,
+        "cost": 0.000014784000000000003
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "rotation-F-R-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "front",
+          "requiredSide": "right"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "1aad5799-7bc3-48c4-8b6c-2de25abdab1c",
+      "exchange": {
+        "id": "87b7254a-c243-4dbe-bb36-46f346871832",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "front",
+            "requiredSide": "right"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U'": 0.98,
+                "U2": 0.01,
+                "U": 0.01
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.98,
+              "probabilities": {
+                "U'": 0.98,
+                "U2": 0.01,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 404.30944499999987,
+        "cost": 0.00001722
+      },
+      "actual": "U'",
+      "correct": true
+    },
+    {
+      "id": "rotation-F-B-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "front",
+          "requiredSide": "back"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "ac4a2e6f-f305-49af-8b23-853424e08657",
+      "exchange": {
+        "id": "dc47c888-26b3-416b-829e-c8a62de29105",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "front",
+            "requiredSide": "back"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U2": 0.75,
+                "U": 0.1,
+                "U'": 0.15
+              },
+              "confidence": 0.63
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.63,
+              "probabilities": {
+                "U2": 0.75,
+                "U": 0.1,
+                "U'": 0.15
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 425.27223700000013,
+        "cost": 0.00001722
+      },
+      "actual": "U2",
+      "correct": true
+    },
+    {
+      "id": "rotation-F-L-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "front",
+          "requiredSide": "left"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "1e1d140c-3124-4cfb-bf07-de4236280ab0",
+      "exchange": {
+        "id": "70753243-31bc-4118-8747-0c57f9cf7315",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "front",
+            "requiredSide": "left"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U2": 0.03,
+                "U": 0.8,
+                "U'": 0.17
+              },
+              "confidence": 0.7
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.7,
+              "probabilities": {
+                "U2": 0.03,
+                "U": 0.8,
+                "U'": 0.17
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 438.9104070000003,
+        "cost": 0.00001722
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "rotation-R-F-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "right",
+          "requiredSide": "front"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "e08c54ca-f210-40a2-b897-bd3519589f6e",
+      "exchange": {
+        "id": "0434e5b8-7ec5-48d2-b309-0f01ea462541",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "right",
+            "requiredSide": "front"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.09,
+                "U": 0.91,
+                "U2": 0
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.86,
+              "probabilities": {
+                "U'": 0.09,
+                "U": 0.91,
+                "U2": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 462.53949799999964,
+        "cost": 0.00001722
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "rotation-R-B-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "right",
+          "requiredSide": "back"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "767c81c7-4e85-4666-ab92-56fdc1257c1e",
+      "exchange": {
+        "id": "0ef2ee27-e3a2-464f-8c24-9d770e1669f2",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "right",
+            "requiredSide": "back"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U'": 0.98,
+                "U2": 0.01,
+                "U": 0.01
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.97,
+              "probabilities": {
+                "U'": 0.98,
+                "U2": 0.01,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 465.8545250000002,
+        "cost": 0.00001722
+      },
+      "actual": "U'",
+      "correct": true
+    },
+    {
+      "id": "rotation-R-L-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "right",
+          "requiredSide": "left"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "7a32e018-ee48-4a80-af6b-5e128fead4b6",
+      "exchange": {
+        "id": "4bfcafe3-f2e1-4a72-863d-b2876b109cc5",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "right",
+            "requiredSide": "left"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U'": 0.1,
+                "U2": 0.83,
+                "U": 0.07
+              },
+              "confidence": 0.75
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.75,
+              "probabilities": {
+                "U'": 0.1,
+                "U2": 0.83,
+                "U": 0.07
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 468.04977899999994,
+        "cost": 0.00001722
+      },
+      "actual": "U2",
+      "correct": true
+    },
+    {
+      "id": "rotation-B-F-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "back",
+          "requiredSide": "front"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "1372c5ce-fe4a-4e69-9be9-d1d63dc8f384",
+      "exchange": {
+        "id": "142f3725-4115-4c65-80d8-9589329dba17",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "back",
+            "requiredSide": "front"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U'": 0.05,
+                "U2": 0.89,
+                "U": 0.06
+              },
+              "confidence": 0.84
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.84,
+              "probabilities": {
+                "U'": 0.05,
+                "U2": 0.89,
+                "U": 0.06
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 490.501534,
+        "cost": 0.00001722
+      },
+      "actual": "U2",
+      "correct": true
+    },
+    {
+      "id": "rotation-B-R-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "back",
+          "requiredSide": "right"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "48882684-97e6-4e8d-9aeb-73ae9e8b47ef",
+      "exchange": {
+        "id": "47db4cb1-cb74-4cfa-ba5d-6288623ac3da",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "back",
+            "requiredSide": "right"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.04,
+                "U2": 0.01,
+                "U": 0.95
+              },
+              "confidence": 0.94
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.94,
+              "probabilities": {
+                "U'": 0.04,
+                "U2": 0.01,
+                "U": 0.95
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 491.2500319999999,
+        "cost": 0.00001722
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "rotation-B-L-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "back",
+          "requiredSide": "left"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "b3628e71-7a5a-42dc-bc46-e9200e4385c5",
+      "exchange": {
+        "id": "4c68cd1f-5b1d-4f89-afba-2d40035b3669",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "back",
+            "requiredSide": "left"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U'": 0.98,
+                "U2": 0.01,
+                "U": 0.01
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.98,
+              "probabilities": {
+                "U'": 0.98,
+                "U2": 0.01,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 475.0759799999996,
+        "cost": 0.00001722
+      },
+      "actual": "U'",
+      "correct": true
+    },
+    {
+      "id": "rotation-L-F-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "left",
+          "requiredSide": "front"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "43fcb9d6-e3ef-4bd4-a40e-e1c417c32a51",
+      "exchange": {
+        "id": "947c7283-bb22-4e8d-a97c-47f9d79c4e8a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "left",
+            "requiredSide": "front"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U": 0.03,
+                "U2": 0.02,
+                "U'": 0.95
+              },
+              "confidence": 0.93
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.93,
+              "probabilities": {
+                "U": 0.03,
+                "U2": 0.02,
+                "U'": 0.95
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 481.3074200000001,
+        "cost": 0.00001722
+      },
+      "actual": "U'",
+      "correct": true
+    },
+    {
+      "id": "rotation-L-R-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "left",
+          "requiredSide": "right"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "9740d09d-5556-4977-b2d4-d5a4d2658f0b",
+      "exchange": {
+        "id": "2577de50-7351-4a1b-8e51-2bee6d5c78a5",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "left",
+            "requiredSide": "right"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U'": 0.06,
+                "U": 0.36,
+                "U2": 0.58
+              },
+              "confidence": 0.38
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.38,
+              "probabilities": {
+                "U'": 0.06,
+                "U": 0.36,
+                "U2": 0.58
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 448.0081620000001,
+        "cost": 0.00001722
+      },
+      "actual": "U2",
+      "correct": true
+    },
+    {
+      "id": "rotation-L-B-fields",
+      "family": "rotation",
+      "variant": "fields",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "left",
+          "requiredSide": "back"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "front to left, left to back, back to right, right to front",
+              "U'": "front to right, right to back, back to left, left to front",
+              "U2": "front to back, back to front, right to left, left to right"
+            }
+          }
+        }
+      },
+      "runId": "14efe0d4-1a4d-488b-850b-c7e7595ea4f3",
+      "exchange": {
+        "id": "32de7d23-2df7-4f12-9653-770befee1263",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "left",
+            "requiredSide": "back"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "front to left, left to back, back to right, right to front",
+                "U'": "front to right, right to back, back to left, left to front",
+                "U2": "front to back, back to front, right to left, left to right"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U2": 0.08,
+                "U": 0.79,
+                "U'": 0.13
+              },
+              "confidence": 0.69
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.69,
+              "probabilities": {
+                "U2": 0.08,
+                "U": 0.79,
+                "U'": 0.13
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 410,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 472.8286760000001,
+        "cost": 0.00001722
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "match-F-green-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is green. The center immediately below that sticker is green.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "a0cd852a-e2a6-49dc-91f0-4a8532fc8333",
+      "exchange": {
+        "id": "391c4db7-dcef-4bd8-814d-4bf4bb354262",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is green. The center immediately below that sticker is green.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "same": 1,
+                "different": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "same": 1,
+                "different": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 492.01334099999985,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "match-F-red-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is red. The center immediately below that sticker is green.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "60abc6e0-6b7d-4067-9085-b581e10d5b97",
+      "exchange": {
+        "id": "22acad2e-a4ca-43e4-b9c8-ea9bd976d2aa",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is red. The center immediately below that sticker is green.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 478.5417040000002,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-F-blue-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is green.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "a15b60db-deb1-44e1-ac41-ca7fd39658a9",
+      "exchange": {
+        "id": "4be5aa4d-6060-40a8-9c3a-c2aa1e4a67ce",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is green.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 461.8497729999999,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-F-orange-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is green.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "bd95c848-c9ac-4e86-9416-a7053fefbe11",
+      "exchange": {
+        "id": "dedb2f6c-d15a-45bc-8d5a-4883225fff7d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is green.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 437.83863999999994,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-R-green-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is green. The center immediately below that sticker is red.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "a7bc0535-286a-4aad-9007-398d4fea9ddd",
+      "exchange": {
+        "id": "4b167cef-7c16-4c6b-ac8c-7d9c2f583e82",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is green. The center immediately below that sticker is red.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 455.9338680000001,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-R-red-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is red. The center immediately below that sticker is red.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "d3ffd111-af7b-4cdc-a6ed-a607ed0108db",
+      "exchange": {
+        "id": "ec539728-cb32-42b4-bf1e-9bd565e56373",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is red. The center immediately below that sticker is red.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 461.822596,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "match-R-blue-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is red.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "b7949550-b94e-449d-b80f-0e72a349f8ec",
+      "exchange": {
+        "id": "2ca7f784-098c-4cd9-a6a2-05cb6bb05eb8",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is red.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 470.60482499999944,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-R-orange-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is red.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "00333fb6-a22a-4cd3-9f6c-18b65279388e",
+      "exchange": {
+        "id": "e4e1a0c8-7206-4526-ae2c-e6b8843098e6",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is red.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 694.8812779999998,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-B-green-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is green. The center immediately below that sticker is blue.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "70e8df21-f078-4186-97f9-a4f7e7fe3d6a",
+      "exchange": {
+        "id": "088e2853-6ab4-48bc-a96d-4cb335c87e89",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is green. The center immediately below that sticker is blue.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 376.27824599999985,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-B-red-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is red. The center immediately below that sticker is blue.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "95cfa39e-5dd4-4ca0-b588-c85a0c6d005b",
+      "exchange": {
+        "id": "2088d891-b269-499d-b44a-0eed3d2b1caf",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is red. The center immediately below that sticker is blue.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 516.385284,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-B-blue-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is blue.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "f74d1f45-de9b-4dfe-84cb-07cd8efde3ba",
+      "exchange": {
+        "id": "365c90ae-2105-4746-9c80-b8ef28088157",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is blue.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "same": 1,
+                "different": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "same": 1,
+                "different": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 502.6328489999996,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "match-B-orange-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is blue.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "8130b46d-a33e-448a-a834-fea17cb65cdd",
+      "exchange": {
+        "id": "b9593501-9846-4e52-817d-b03a94995422",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is blue.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 468.2025590000003,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-green-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is green. The center immediately below that sticker is orange.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "3295b7a3-e453-4674-9308-7580734cf2d3",
+      "exchange": {
+        "id": "d0247dd4-6dbc-4f69-9edc-9d75f8d95fdf",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is green. The center immediately below that sticker is orange.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "different": 1,
+                "same": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 467.22584599999936,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-red-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is red. The center immediately below that sticker is orange.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "0edd3b6a-f1b7-446b-b6de-fa87881dd53d",
+      "exchange": {
+        "id": "42ba1be8-0df1-4c11-8318-95256c15526f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is red. The center immediately below that sticker is orange.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 472.445479,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-blue-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "different",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is orange.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "a4b3319b-191b-4a2b-9641-7369b4221eb4",
+      "exchange": {
+        "id": "496ec088-5bdb-4b18-a637-14e3ad251d9b",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is blue. The center immediately below that sticker is orange.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "different",
+              "confidence": 1,
+              "probabilities": {
+                "same": 0,
+                "different": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 417.0699770000001,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "different",
+      "correct": true
+    },
+    {
+      "id": "match-L-orange-sentence",
+      "family": "match",
+      "variant": "sentence",
+      "expected": "same",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is orange.",
+        "questions": {
+          "comparison": {
+            "type": "choice",
+            "instructions": "Compare the two colors. Are they the same color or different colors?",
+            "criteria": {
+              "same": "The sticker and center are the same color.",
+              "different": "The sticker and center are different colors."
+            }
+          }
+        }
+      },
+      "runId": "6b0b18d2-e368-4658-89f4-27fd4a3f56b0",
+      "exchange": {
+        "id": "c8f83efa-6be9-4d28-bf46-396c2f910ba9",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": "The edge's side-facing sticker is orange. The center immediately below that sticker is orange.",
+          "questions": {
+            "comparison": {
+              "type": "choice",
+              "instructions": "Compare the two colors. Are they the same color or different colors?",
+              "criteria": {
+                "same": "The sticker and center are the same color.",
+                "different": "The sticker and center are different colors."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "comparison": {
+              "type": "choice",
+              "choice": "same",
+              "confidence": 1,
+              "probabilities": {
+                "different": 0,
+                "same": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 347,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 426.5263869999999,
+        "cost": 0.000014574000000000001
+      },
+      "actual": "same",
+      "correct": true
+    },
+    {
+      "id": "rotation-F-R-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "front",
+          "requiredSide": "right"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "8680b501-eb40-4dfc-a047-4bc56b2bebc1",
+      "exchange": {
+        "id": "b4362e87-1fd0-46e3-9097-c639504d8694",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "front",
+            "requiredSide": "right"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.33,
+                "U": 0.61,
+                "U2": 0.06
+              },
+              "confidence": 0.42
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.42,
+              "probabilities": {
+                "U'": 0.33,
+                "U": 0.61,
+                "U2": 0.06
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 424.4443799999999,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-F-B-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "front",
+          "requiredSide": "back"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "b0812a4b-f3f2-4937-84d0-34f5592b837d",
+      "exchange": {
+        "id": "e6ed8ae1-3b50-494e-ae0c-1947c98d2030",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "front",
+            "requiredSide": "back"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U": 0.55,
+                "U2": 0.32,
+                "U'": 0.13
+              },
+              "confidence": 0.33
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.33,
+              "probabilities": {
+                "U": 0.55,
+                "U2": 0.32,
+                "U'": 0.13
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 437.097162,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-F-L-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "front",
+          "requiredSide": "left"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "3f923b38-377b-4ca8-b701-46b0940c99af",
+      "exchange": {
+        "id": "da64b585-9ca9-43c3-af40-e738feba8980",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "front",
+            "requiredSide": "left"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.41,
+                "U2": 0.07,
+                "U": 0.52
+              },
+              "confidence": 0.28
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.28,
+              "probabilities": {
+                "U'": 0.41,
+                "U2": 0.07,
+                "U": 0.52
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 423.98312499999975,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "rotation-R-F-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "right",
+          "requiredSide": "front"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "f5e86c85-938f-4550-9043-55c55e689810",
+      "exchange": {
+        "id": "7f57923f-80ee-46cd-8ce4-bffac43c2492",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "right",
+            "requiredSide": "front"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U": 0.49,
+                "U'": 0.42,
+                "U2": 0.09
+              },
+              "confidence": 0.23
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.23,
+              "probabilities": {
+                "U": 0.49,
+                "U'": 0.42,
+                "U2": 0.09
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 414.5721569999996,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "rotation-R-B-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "right",
+          "requiredSide": "back"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "a28ff22d-ddca-465f-8530-eb9190fa9da1",
+      "exchange": {
+        "id": "e9daefe8-f7f4-455d-87cf-c5163b3bf5c1",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "right",
+            "requiredSide": "back"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.27,
+                "U2": 0.29,
+                "U": 0.44
+              },
+              "confidence": 0.16
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.16,
+              "probabilities": {
+                "U'": 0.27,
+                "U2": 0.29,
+                "U": 0.44
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 402.4443689999998,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-R-L-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "right",
+          "requiredSide": "left"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "e175f514-9fae-4693-a38c-24fa8e56bba0",
+      "exchange": {
+        "id": "2d1173d9-feaf-4c1d-b778-8f8614e570ca",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "right",
+            "requiredSide": "left"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.38,
+                "U": 0.46,
+                "U2": 0.16
+              },
+              "confidence": 0.2
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.2,
+              "probabilities": {
+                "U'": 0.38,
+                "U": 0.46,
+                "U2": 0.16
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 405.96962600000006,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-B-F-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "back",
+          "requiredSide": "front"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "9f2479df-6a1a-4630-96d2-da0ba5fc6176",
+      "exchange": {
+        "id": "4e4de8c1-2afe-43a4-9716-d2ae56ee84ac",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "back",
+            "requiredSide": "front"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U2": 0.4,
+                "U'": 0.12,
+                "U": 0.48
+              },
+              "confidence": 0.22
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.22,
+              "probabilities": {
+                "U2": 0.4,
+                "U'": 0.12,
+                "U": 0.48
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 416.6178289999998,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-B-R-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "back",
+          "requiredSide": "right"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "96331b69-02cf-4368-b719-afe65bc397f0",
+      "exchange": {
+        "id": "897cc81a-cd7c-480e-8e2f-c3f28e90dac7",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "back",
+            "requiredSide": "right"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U": 0.53,
+                "U2": 0.18,
+                "U'": 0.29
+              },
+              "confidence": 0.3
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.3,
+              "probabilities": {
+                "U": 0.53,
+                "U2": 0.18,
+                "U'": 0.29
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 478.7349370000011,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": true
+    },
+    {
+      "id": "rotation-B-L-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "back",
+          "requiredSide": "left"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "16d36b32-4eb0-4762-8417-d4e166357d92",
+      "exchange": {
+        "id": "c13f80b7-4427-464f-85c6-5ebf1244470d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "back",
+            "requiredSide": "left"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U": 0.4,
+                "U2": 0.24,
+                "U'": 0.36
+              },
+              "confidence": 0.1
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.1,
+              "probabilities": {
+                "U": 0.4,
+                "U2": 0.24,
+                "U'": 0.36
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 488.4139919999998,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-L-F-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U'",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "left",
+          "requiredSide": "front"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "1cd3c184-2872-4eae-ac2f-3450a9589483",
+      "exchange": {
+        "id": "10ea3bb3-c21d-4ea3-ada0-2c1e8591a797",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "left",
+            "requiredSide": "front"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.36,
+                "U2": 0.13,
+                "U": 0.51
+              },
+              "confidence": 0.25
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.25,
+              "probabilities": {
+                "U'": 0.36,
+                "U2": 0.13,
+                "U": 0.51
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 409.1356940000005,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-L-R-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U2",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "left",
+          "requiredSide": "right"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "8e320b3b-a545-447f-a15d-6c1fe4055d40",
+      "exchange": {
+        "id": "c5d8b5e3-ed0b-4f11-b67c-6d113c3c5248",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "left",
+            "requiredSide": "right"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.2,
+                "U": 0.54,
+                "U2": 0.26
+              },
+              "confidence": 0.31
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.31,
+              "probabilities": {
+                "U'": 0.2,
+                "U": 0.54,
+                "U2": 0.26
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 339.39598300000034,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": false
+    },
+    {
+      "id": "rotation-L-B-sentence",
+      "family": "rotation",
+      "variant": "sentence",
+      "expected": "U",
+      "request": {
+        "model": "jev-1.13.0",
+        "state": {
+          "currentSide": "left",
+          "requiredSide": "back"
+        },
+        "questions": {
+          "turn": {
+            "type": "choice",
+            "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+            "criteria": {
+              "U": "Turn the upper face clockwise as viewed from above.",
+              "U'": "Turn the upper face counterclockwise as viewed from above.",
+              "U2": "Turn the upper face halfway around."
+            }
+          }
+        }
+      },
+      "runId": "264e9e13-2eb6-4ac2-b9fb-0dacf4c23a28",
+      "exchange": {
+        "id": "6f77fbc8-2f67-4993-a067-f9aaea956dd3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentSide": "left",
+            "requiredSide": "back"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Move an upper-layer edge from currentSide to requiredSide. Choose one upper-face turn. Front means the front of the cube, not the top of a drawing.",
+              "criteria": {
+                "U": "Turn the upper face clockwise as viewed from above.",
+                "U'": "Turn the upper face counterclockwise as viewed from above.",
+                "U2": "Turn the upper face halfway around."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.27,
+                "U": 0.42,
+                "U2": 0.31
+              },
+              "confidence": 0.12
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.12,
+              "probabilities": {
+                "U'": 0.27,
+                "U": 0.42,
+                "U2": 0.31
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 396,
+            "output_tokens": 40
+          }
+        },
+        "elapsedMs": 356.4425190000002,
+        "cost": 0.000016632000000000003
+      },
+      "actual": "U",
+      "correct": true
+    }
+  ],
+  "usage": {
+    "requests": 56,
+    "cost": 0.0008759520000000002
+  },
+  "budget": {
+    "cap": 9,
+    "reservedAndSpent": 5.618815398000001,
+    "usage": 5.6026873980000005,
+    "reserved": 0.016128000000000003,
+    "attempts": 79603,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

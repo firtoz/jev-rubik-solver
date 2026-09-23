@@ -1,0 +1,22 @@
+{
+  "digest": "593f1c272b71bb001aa357c4ed86f003bb6e6fe2119720358012f2a81d6a24e9",
+  "limits": {
+    "requests": 120,
+    "cost": 0.03,
+    "concurrency": 4,
+    "retries": 0,
+    "integrationRequests": 160,
+    "integrationTurns": 200,
+    "integrationMs": 120000
+  },
+  "design": "Reused 20 development scenes, paired geometry vs relational observations in model-selected reference. Generic six-operation effects; no intention request. Offline correct target+action defines complete decision. Following unused original harness gates are disabled: 20 new development scenes, then >=18/20 gates 40 heldout unique observed scenes. Whole selection/intention/action scored against offline all-target labels. Must choose unfinished target unless all four middle edges solved. All align/insert/extract/done families must occur among heldout choices, >=36/40 overall. Four middle-complete scenes test leaving solved pieces alone. All eight non-bottom edges shown only for target selection; local subcases can repeat. Then ten noncomplete integration starts, >=9/10 required. Exclude development states/scenes from later phases. Targets and all tactics chosen by JEV.",
+  "budgetBefore": {
+    "cap": 9,
+    "reservedAndSpent": 5.636067402000001,
+    "usage": 5.619939402000001,
+    "reserved": 0.016128000000000003,
+    "attempts": 80182,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

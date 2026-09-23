@@ -1,0 +1,425 @@
+{
+  "verifiedAt": "2026-09-23T10:04:06.226Z",
+  "digest": "4a4d6ac73d34c3a1b6b5b3e0e0de016742d063eff14d80e26a7f6365bf587ca1",
+  "reports": [
+    {
+      "phase": "heldout",
+      "success": 38,
+      "total": 40,
+      "checked": [
+        {
+          "id": "case-1",
+          "correct": true,
+          "cycles": 1,
+          "requests": 3,
+          "turns": 0,
+          "error": null
+        },
+        {
+          "id": "case-2",
+          "correct": true,
+          "cycles": 1,
+          "requests": 3,
+          "turns": 0,
+          "error": null
+        },
+        {
+          "id": "case-3",
+          "correct": true,
+          "cycles": 1,
+          "requests": 3,
+          "turns": 0,
+          "error": null
+        },
+        {
+          "id": "case-4",
+          "correct": true,
+          "cycles": 1,
+          "requests": 3,
+          "turns": 0,
+          "error": null
+        },
+        {
+          "id": "case-5",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-6",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-7",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-8",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-9",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-10",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-11",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-12",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-13",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-14",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-15",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-16",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-17",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-18",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-19",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-20",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-21",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-22",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-23",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-24",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-25",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-26",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-27",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-28",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-29",
+          "correct": false,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 0,
+          "error": null
+        },
+        {
+          "id": "case-30",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-31",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-32",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-33",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-34",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-35",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-36",
+          "correct": false,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 0,
+          "error": null
+        },
+        {
+          "id": "case-37",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        },
+        {
+          "id": "case-38",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-39",
+          "correct": true,
+          "cycles": 1,
+          "requests": 4,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-40",
+          "correct": true,
+          "cycles": 1,
+          "requests": 5,
+          "turns": 1,
+          "error": null
+        }
+      ]
+    },
+    {
+      "phase": "integration",
+      "success": 2,
+      "total": 10,
+      "checked": [
+        {
+          "id": "case-5",
+          "correct": true,
+          "cycles": 3,
+          "requests": 15,
+          "turns": 8,
+          "error": null
+        },
+        {
+          "id": "case-6",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 1,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-7",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 1,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-8",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 0,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-9",
+          "correct": true,
+          "cycles": 3,
+          "requests": 15,
+          "turns": 9,
+          "error": null
+        },
+        {
+          "id": "case-10",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 0,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-11",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 1,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-12",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 0,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-13",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 10,
+          "error": "Error: Integration cap"
+        },
+        {
+          "id": "case-14",
+          "correct": false,
+          "cycles": 32,
+          "requests": 160,
+          "turns": 1,
+          "error": "Error: Integration cap"
+        }
+      ]
+    }
+  ],
+  "ledger": {
+    "requests": 1754,
+    "cost": 0.047138070000000004
+  },
+  "scope": "Offline replay of exact model requests/controller answers and authoritative cube transformations. Independent raw piece-index predicates verify bottom and middle. No network calls."
+}

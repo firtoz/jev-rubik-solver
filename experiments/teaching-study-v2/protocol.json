@@ -1,0 +1,22 @@
+{
+  "digest": "6f941e145c369e02cf69be70cbbf0fb8eba072e9d699240f1ea0dc2d4c220a1e",
+  "limits": {
+    "requests": 4500,
+    "cost": 0.25,
+    "concurrency": 4,
+    "retries": 0,
+    "integrationRequests": 160,
+    "integrationTurns": 200,
+    "integrationMs": 120000
+  },
+  "design": "Final development round. Matched focused intention observations for effects, four contrast examples, or explicit applicability teaching. Twenty development scenes include retired integration intermediate states. Same downstream teaching for every arm. Select highest complete score >=18/20, ties prefer effects then examples then guidance. Freeze before 40 fresh observations, require >=36/40 and all four intention families before ten new integrations requiring >=9/10. No third round. All v1 evaluation data retired. Exclude all v1 fixture and reached scenes from fresh tests; local subcases can recur. Cumulative v1+v2 cap $0.25 and 4500 calls, global $9. No retries or runtime tactical repair.",
+  "budgetBefore": {
+    "cap": 9,
+    "reservedAndSpent": 5.686603776000001,
+    "usage": 5.670475776000001,
+    "reserved": 0.016128000000000003,
+    "attempts": 82056,
+    "pricePerMillion": 0.042,
+    "configured": true
+  }
+}

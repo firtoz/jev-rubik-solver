@@ -1,0 +1,26 @@
+{
+  "selected": "minimal",
+  "scores": [
+    {
+      "variant": "explicit",
+      "total": 20,
+      "intention": 12,
+      "action": 12,
+      "complete": 11
+    },
+    {
+      "variant": "relational",
+      "total": 20,
+      "intention": 6,
+      "action": 9,
+      "complete": 6
+    },
+    {
+      "variant": "minimal",
+      "total": 20,
+      "intention": 10,
+      "action": 11,
+      "complete": 9
+    }
+  ]
+}
