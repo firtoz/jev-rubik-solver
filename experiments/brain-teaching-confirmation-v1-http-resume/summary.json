@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "solved": 94,
+  "total": 100,
+  "categories": {
+    "solved": 94,
+    "attempt limit": 6
+  },
+  "commitment": 1.1893123200000457,
+  "estimatedSpent": 0.9635203200000458,
+  "reserved": 0.2257919999999998,
+  "additionalCommitment": 0.3658317180000225,
+  "originalNoRetrySolves": 62,
+  "requests": 19674
+}

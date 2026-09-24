@@ -1,0 +1,71 @@
+{
+  "passed": false,
+  "solved": 94,
+  "total": 100,
+  "categories": {
+    "solved": 94,
+    "study budget": 6
+  },
+  "failures": [
+    {
+      "id": "random-95",
+      "status": "capped",
+      "category": "study budget",
+      "error": "Error: Study/project cap",
+      "goal": "top-edges",
+      "requests": 220
+    },
+    {
+      "id": "random-96",
+      "status": "capped",
+      "category": "study budget",
+      "error": "Error: Study/project cap",
+      "goal": "first-layer",
+      "requests": 60
+    },
+    {
+      "id": "random-97",
+      "status": "capped",
+      "category": "study budget",
+      "error": "Error: Study/project cap",
+      "goal": "cross",
+      "requests": 42
+    },
+    {
+      "id": "random-98",
+      "status": "capped",
+      "category": "study budget",
+      "error": "Error: Study/project cap",
+      "goal": null,
+      "requests": 0
+    },
+    {
+      "id": "random-99",
+      "status": "capped",
+      "category": "study budget",
+      "error": "Error: Study/project cap",
+      "goal": null,
+      "requests": 0
+    },
+    {
+      "id": "random-100",
+      "status": "capped",
+      "category": "study budget",
+      "error": "Error: Study/project cap",
+      "goal": null,
+      "requests": 0
+    }
+  ],
+  "studyCost": 0.9949724400000002,
+  "globalBudget": {
+    "cap": 9,
+    "reservedAndSpent": 6.699671874000001,
+    "usage": 6.683543874000001,
+    "reserved": 0.016128000000000003,
+    "attempts": 103352,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "validationSolves": 10,
+  "sourceDigest": "2ea8e830a7720185ffb60c352d7e1454d32117183748dc688f14f0306315aba7"
+}

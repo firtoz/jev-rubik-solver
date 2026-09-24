@@ -1,0 +1,17 @@
+[
+  {
+    "id": "fresh-1",
+    "scramble": "R U2 F' L B R2 L F D2 L' U2 R2 L2 U' L2 U2 F2 D B2 D",
+    "hash": "[{\"pieces\":[7,10,9,1,6,11,8,2,3,4,0,5],\"orientation\":[1,0,0,1,0,1,0,1,0,1,1,0]},{\"pieces\":[2,4,1,7,0,5,6,3],\"orientation\":[2,0,2,0,2,2,1,0]}]"
+  },
+  {
+    "id": "fresh-7",
+    "scramble": "F R2 B U' L F' L2 D' L2 B' L2 F2 R2 D2 F' D2 F R2 D2 L2 R'",
+    "hash": "[{\"pieces\":[1,5,7,11,8,2,6,4,9,3,0,10],\"orientation\":[0,1,1,1,1,0,0,1,1,1,1,0]},{\"pieces\":[2,0,7,5,6,3,1,4],\"orientation\":[0,2,1,0,0,2,0,1]}]"
+  },
+  {
+    "id": "fresh-8",
+    "scramble": "B2 U' R2 D' F2 U2 L2 R2 U' F2 D' L' F' U2 F U B R' D' U2 R2",
+    "hash": "[{\"pieces\":[9,0,8,5,2,3,11,6,7,4,10,1],\"orientation\":[1,1,0,1,1,0,0,0,0,0,1,1]},{\"pieces\":[2,3,4,7,1,0,5,6],\"orientation\":[0,0,1,0,1,0,2,2]}]"
+  }
+]

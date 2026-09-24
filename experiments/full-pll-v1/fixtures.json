@@ -1,0 +1,4226 @@
+[
+  {
+    "id": "development-1",
+    "phase": "development",
+    "case": "Ua",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          3,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ua@F:none"
+    ]
+  },
+  {
+    "id": "development-2",
+    "phase": "development",
+    "case": "Ub",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ub@F:none"
+    ]
+  },
+  {
+    "id": "development-3",
+    "phase": "development",
+    "case": "H",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          3,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "H@F:none"
+    ]
+  },
+  {
+    "id": "development-4",
+    "phase": "development",
+    "case": "Z",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Z@F:none"
+    ]
+  },
+  {
+    "id": "development-5",
+    "phase": "development",
+    "case": "Aa",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Aa@F:none"
+    ]
+  },
+  {
+    "id": "development-6",
+    "phase": "development",
+    "case": "Ab",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          2,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ab@F:none"
+    ]
+  },
+  {
+    "id": "development-7",
+    "phase": "development",
+    "case": "E",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "E@F:none"
+    ]
+  },
+  {
+    "id": "development-8",
+    "phase": "development",
+    "case": "Ga",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          3,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ga@F:none"
+    ]
+  },
+  {
+    "id": "development-9",
+    "phase": "development",
+    "case": "Gb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          3,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Gb@F:none"
+    ]
+  },
+  {
+    "id": "development-10",
+    "phase": "development",
+    "case": "Gc",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Gc@F:none"
+    ]
+  },
+  {
+    "id": "development-11",
+    "phase": "development",
+    "case": "Gd",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          1,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          3,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Gd@F:none"
+    ]
+  },
+  {
+    "id": "development-12",
+    "phase": "development",
+    "case": "Ra",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ra@F:none"
+    ]
+  },
+  {
+    "id": "development-13",
+    "phase": "development",
+    "case": "Rb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Rb@F:none"
+    ]
+  },
+  {
+    "id": "development-14",
+    "phase": "development",
+    "case": "Ja",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ja@F:none"
+    ]
+  },
+  {
+    "id": "development-15",
+    "phase": "development",
+    "case": "Jb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Jb@F:none"
+    ]
+  },
+  {
+    "id": "development-16",
+    "phase": "development",
+    "case": "T",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "T@F:none"
+    ]
+  },
+  {
+    "id": "development-17",
+    "phase": "development",
+    "case": "F",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "F@F:none"
+    ]
+  },
+  {
+    "id": "development-18",
+    "phase": "development",
+    "case": "V",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "V@F:none"
+    ]
+  },
+  {
+    "id": "development-19",
+    "phase": "development",
+    "case": "Y",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Y@F:none"
+    ]
+  },
+  {
+    "id": "development-20",
+    "phase": "development",
+    "case": "Na",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Na@F:none"
+    ]
+  },
+  {
+    "id": "development-21",
+    "phase": "development",
+    "case": "Nb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Nb@F:none"
+    ]
+  },
+  {
+    "id": "development-22",
+    "phase": "development",
+    "case": "AUF",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "AUF:none"
+    ]
+  },
+  {
+    "id": "development-23",
+    "phase": "development",
+    "case": "AUF",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "AUF:U"
+    ]
+  },
+  {
+    "id": "development-24",
+    "phase": "development",
+    "case": "AUF",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "AUF:U'"
+    ]
+  },
+  {
+    "id": "validation-1",
+    "phase": "validation",
+    "case": "Ua",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ua@F:U"
+    ]
+  },
+  {
+    "id": "validation-2",
+    "phase": "validation",
+    "case": "Ub",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          3,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ub@F:U"
+    ]
+  },
+  {
+    "id": "validation-3",
+    "phase": "validation",
+    "case": "H",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "H@F:U"
+    ]
+  },
+  {
+    "id": "validation-4",
+    "phase": "validation",
+    "case": "Z",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Z@F:U"
+    ]
+  },
+  {
+    "id": "validation-5",
+    "phase": "validation",
+    "case": "Aa",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Aa@F:U"
+    ]
+  },
+  {
+    "id": "validation-6",
+    "phase": "validation",
+    "case": "Ab",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          1,
+          2,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ab@F:U"
+    ]
+  },
+  {
+    "id": "validation-7",
+    "phase": "validation",
+    "case": "E",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "E@F:U"
+    ]
+  },
+  {
+    "id": "validation-8",
+    "phase": "validation",
+    "case": "Ga",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          0,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ga@F:U"
+    ]
+  },
+  {
+    "id": "validation-9",
+    "phase": "validation",
+    "case": "Gb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          0,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Gb@F:U"
+    ]
+  },
+  {
+    "id": "validation-10",
+    "phase": "validation",
+    "case": "Gc",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          3,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Gc@F:U"
+    ]
+  },
+  {
+    "id": "validation-11",
+    "phase": "validation",
+    "case": "Gd",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          0,
+          3,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Gd@F:U"
+    ]
+  },
+  {
+    "id": "validation-12",
+    "phase": "validation",
+    "case": "Ra",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          1,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ra@F:U"
+    ]
+  },
+  {
+    "id": "validation-13",
+    "phase": "validation",
+    "case": "Rb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          1,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Rb@F:U"
+    ]
+  },
+  {
+    "id": "validation-14",
+    "phase": "validation",
+    "case": "Ja",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          0,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ja@F:U"
+    ]
+  },
+  {
+    "id": "validation-15",
+    "phase": "validation",
+    "case": "Jb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          1,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          1,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Jb@F:U"
+    ]
+  },
+  {
+    "id": "validation-16",
+    "phase": "validation",
+    "case": "T",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          1,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "T@F:U"
+    ]
+  },
+  {
+    "id": "validation-17",
+    "phase": "validation",
+    "case": "F",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          2,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          1,
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "F@F:U"
+    ]
+  },
+  {
+    "id": "validation-18",
+    "phase": "validation",
+    "case": "V",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          0,
+          2,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "V@F:U"
+    ]
+  },
+  {
+    "id": "validation-19",
+    "phase": "validation",
+    "case": "Y",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Y@F:U"
+    ]
+  },
+  {
+    "id": "validation-20",
+    "phase": "validation",
+    "case": "Na",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Na@F:U"
+    ]
+  },
+  {
+    "id": "validation-21",
+    "phase": "validation",
+    "case": "Nb",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          3,
+          2,
+          1,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Nb@F:U"
+    ]
+  },
+  {
+    "id": "validation-22",
+    "phase": "validation",
+    "case": "AUF",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          3,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          3,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "AUF:U2"
+    ]
+  },
+  {
+    "id": "validation-23",
+    "phase": "validation",
+    "case": "Ua",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          3,
+          2,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ua@F:U'"
+    ]
+  },
+  {
+    "id": "validation-24",
+    "phase": "validation",
+    "case": "Ua",
+    "before": {
+      "EDGES": {
+        "pieces": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          2,
+          3,
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "acceptable": [
+      "Ua@F:U2"
+    ]
+  }
+]

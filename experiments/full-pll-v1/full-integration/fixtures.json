@@ -1,0 +1,22 @@
+[
+  {
+    "id": "fresh-1",
+    "scramble": "R U2 F' L B R2 L F D2 L' U2 R2 L2 U' L2 U2 F2 D B2 D",
+    "hash": "[{\"pieces\":[7,10,9,1,6,11,8,2,3,4,0,5],\"orientation\":[1,0,0,1,0,1,0,1,0,1,1,0]},{\"pieces\":[2,4,1,7,0,5,6,3],\"orientation\":[2,0,2,0,2,2,1,0]}]"
+  },
+  {
+    "id": "fresh-2",
+    "scramble": "F' B2 U' D R' U' R2 B L U D2 F' B' R2 D2 B' R2 F L2 U2 F",
+    "hash": "[{\"pieces\":[1,8,4,3,9,0,10,6,7,2,11,5],\"orientation\":[1,0,1,0,0,1,1,0,1,0,0,1]},{\"pieces\":[6,3,7,0,4,2,1,5],\"orientation\":[2,0,2,1,0,1,1,2]}]"
+  },
+  {
+    "id": "fresh-3",
+    "scramble": "L' U2 L2 U' R2 U' F2 D2 L2 B2 L2 F2 U' B' F2 R B R' U L2 U'",
+    "hash": "[{\"pieces\":[2,10,6,0,9,1,5,4,3,7,11,8],\"orientation\":[0,0,1,0,0,0,0,0,0,0,1,0]},{\"pieces\":[5,2,0,1,4,7,3,6],\"orientation\":[1,2,2,0,0,0,1,0]}]"
+  },
+  {
+    "id": "fresh-5",
+    "scramble": "L' U' F' D' B2 L' D2 L F U F2 U' R2 F2 R2 D2 F2 D' L2 B2 L2",
+    "hash": "[{\"pieces\":[5,4,10,2,7,9,11,0,3,8,1,6],\"orientation\":[0,0,0,0,1,0,0,0,0,0,1,0]},{\"pieces\":[3,1,7,6,0,5,4,2],\"orientation\":[0,1,2,0,2,1,0,0]}]"
+  }
+]

@@ -1,0 +1,1209 @@
+{
+  "snapshotDrift": [
+    {
+      "run": "random-6",
+      "id": "f5315ce3-8840-4047-bbd1-ba0fe30759b1",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-7",
+      "id": "e0a9df0b-3a9c-4a79-b38d-978c453a195b",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-8",
+      "id": "504980b5-c2f7-48d2-a6bb-a4f4297976d3",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-10",
+      "id": "1f091ac0-3e1b-41a5-998c-5125bc036240",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-11",
+      "id": "502f78ab-dc9f-4add-adee-011303b2b328",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-13",
+      "id": "9fa5005b-299c-4c43-ae12-b20a04d00c8f",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-14",
+      "id": "82746bfd-4c4a-4bad-a6b5-d02f8925063b",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-16",
+      "id": "dd2f225d-4e11-41ad-8930-1950a662187e",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-17",
+      "id": "0d144599-67c9-4c32-b327-efb1952dfb33",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-18",
+      "id": "fbb120ad-a825-409f-a9a8-e84f7ee65b2f",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-19",
+      "id": "7ce3045f-de31-485b-b42c-5c919345cdd0",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-21",
+      "id": "ca6cab93-5897-47d5-b1d5-4af053cfaa2b",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-25",
+      "id": "8a3eb1d5-8183-4306-ac2e-024b3ceff0d5",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-27",
+      "id": "1340a792-9340-42ba-a6a6-c72b1bf43dfb",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-29",
+      "id": "f2b4ccf8-0061-4d5f-93a2-ae4409522c1e",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-31",
+      "id": "a5e50def-e5e1-4130-983d-ef677b3b7880",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-32",
+      "id": "d839c028-ef01-4ec6-98fd-61389b7552b1",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-32",
+      "id": "a565785b-65a3-4ac2-b5ef-8f3108c56ce6",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-32",
+      "id": "b14b3bcb-61d2-4f61-904f-fa494609b396",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-33",
+      "id": "689eb9c1-67ab-4e98-8a4a-8347fdcef8be",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-39",
+      "id": "0875944a-a3c5-49c9-b9dc-d176b9ea1f21",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-46",
+      "id": "41194bf9-51d7-4213-b441-2118bcd77fa7",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-47",
+      "id": "f23d1678-1c38-4d0c-9fe7-79e3ebd4004c",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-48",
+      "id": "f6e00e04-f814-4bdc-96e0-561c4d138abd",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-51",
+      "id": "460a9449-faa7-43ed-86f9-aeaf16145679",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-58",
+      "id": "a57f142a-ee9a-4baf-bcd6-3210abcd86a3",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-59",
+      "id": "12eeca1e-be4a-46c1-bf32-ae38fad8ed7a",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-66",
+      "id": "baa1892e-1941-4716-b53a-ea2b21ff2b3d",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-69",
+      "id": "7fba46fd-2aab-4275-b5cd-3ad78a0be045",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-69",
+      "id": "ebf86470-0ef2-4d2f-b17b-c121923e19a4",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-72",
+      "id": "3e1a6a8c-7a4e-4a2e-a14c-8d180875280a",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-77",
+      "id": "0608adee-c9e9-47df-9239-eeadd278f7e4",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-78",
+      "id": "7090555f-685b-4278-8df1-5c8b80db83c3",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-78",
+      "id": "19531865-2fe9-40cd-bf53-201cd2062b11",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-81",
+      "id": "f4da96a0-2366-46d7-bf35-9bec7d81d77b",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-82",
+      "id": "609bb6d3-78bf-4275-8c3f-9e06fb5a0b60",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-88",
+      "id": "70af0e96-efce-43fd-97ee-ea55350e378a",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-94",
+      "id": "b01d7a92-e5d4-4ac5-b726-de7be9f1d3eb",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    },
+    {
+      "run": "random-94",
+      "id": "cfe50a71-41ab-4348-a644-df01720e71cf",
+      "reason": "Mutable request snapshot differs from immutable dispatch event"
+    }
+  ],
+  "study": {
+    "cost": 0.9949724400000002
+  },
+  "partial": false,
+  "expected": 100,
+  "verified": 100,
+  "solved": 94,
+  "allAttemptsPresent": true,
+  "rows": [
+    {
+      "id": "random-1",
+      "status": "solved",
+      "solved": true,
+      "turns": 158,
+      "requests": 147,
+      "committed": 0.008053962000000001,
+      "elapsedMs": 80499,
+      "recoveries": 0
+    },
+    {
+      "id": "random-2",
+      "status": "solved",
+      "solved": true,
+      "turns": 129,
+      "requests": 173,
+      "committed": 0.008161902,
+      "elapsedMs": 95771,
+      "recoveries": 0
+    },
+    {
+      "id": "random-3",
+      "status": "solved",
+      "solved": true,
+      "turns": 241,
+      "requests": 235,
+      "committed": 0.012791982000000002,
+      "elapsedMs": 129328,
+      "recoveries": 0
+    },
+    {
+      "id": "random-4",
+      "status": "solved",
+      "solved": true,
+      "turns": 180,
+      "requests": 218,
+      "committed": 0.009531984000000002,
+      "elapsedMs": 119099,
+      "recoveries": 0
+    },
+    {
+      "id": "random-5",
+      "status": "solved",
+      "solved": true,
+      "turns": 216,
+      "requests": 218,
+      "committed": 0.010908828000000002,
+      "elapsedMs": 118822,
+      "recoveries": 1
+    },
+    {
+      "id": "random-6",
+      "status": "solved",
+      "solved": true,
+      "turns": 110,
+      "requests": 149,
+      "committed": 0.0059166240000000005,
+      "elapsedMs": 81382,
+      "recoveries": 0
+    },
+    {
+      "id": "random-7",
+      "status": "solved",
+      "solved": true,
+      "turns": 183,
+      "requests": 238,
+      "committed": 0.011547984000000002,
+      "elapsedMs": 130229,
+      "recoveries": 0
+    },
+    {
+      "id": "random-8",
+      "status": "solved",
+      "solved": true,
+      "turns": 168,
+      "requests": 205,
+      "committed": 0.008773926000000001,
+      "elapsedMs": 112050,
+      "recoveries": 0
+    },
+    {
+      "id": "random-9",
+      "status": "solved",
+      "solved": true,
+      "turns": 172,
+      "requests": 219,
+      "committed": 0.011069058000000001,
+      "elapsedMs": 124919,
+      "recoveries": 0
+    },
+    {
+      "id": "random-10",
+      "status": "solved",
+      "solved": true,
+      "turns": 121,
+      "requests": 160,
+      "committed": 0.007383642000000001,
+      "elapsedMs": 88306,
+      "recoveries": 0
+    },
+    {
+      "id": "random-11",
+      "status": "solved",
+      "solved": true,
+      "turns": 166,
+      "requests": 208,
+      "committed": 0.009824388000000002,
+      "elapsedMs": 162860,
+      "recoveries": 0
+    },
+    {
+      "id": "random-12",
+      "status": "solved",
+      "solved": true,
+      "turns": 188,
+      "requests": 164,
+      "committed": 0.007322910000000001,
+      "elapsedMs": 127707,
+      "recoveries": 0
+    },
+    {
+      "id": "random-13",
+      "status": "solved",
+      "solved": true,
+      "turns": 143,
+      "requests": 184,
+      "committed": 0.009211608000000001,
+      "elapsedMs": 183715,
+      "recoveries": 0
+    },
+    {
+      "id": "random-14",
+      "status": "solved",
+      "solved": true,
+      "turns": 175,
+      "requests": 197,
+      "committed": 0.008741586,
+      "elapsedMs": 191518,
+      "recoveries": 0
+    },
+    {
+      "id": "random-15",
+      "status": "solved",
+      "solved": true,
+      "turns": 186,
+      "requests": 170,
+      "committed": 0.008029224000000001,
+      "elapsedMs": 149767,
+      "recoveries": 0
+    },
+    {
+      "id": "random-16",
+      "status": "solved",
+      "solved": true,
+      "turns": 142,
+      "requests": 201,
+      "committed": 0.008397774000000002,
+      "elapsedMs": 165715,
+      "recoveries": 0
+    },
+    {
+      "id": "random-17",
+      "status": "solved",
+      "solved": true,
+      "turns": 157,
+      "requests": 185,
+      "committed": 0.009266712000000002,
+      "elapsedMs": 129931,
+      "recoveries": 0
+    },
+    {
+      "id": "random-18",
+      "status": "solved",
+      "solved": true,
+      "turns": 173,
+      "requests": 211,
+      "committed": 0.009720102000000001,
+      "elapsedMs": 148567,
+      "recoveries": 0
+    },
+    {
+      "id": "random-19",
+      "status": "solved",
+      "solved": true,
+      "turns": 206,
+      "requests": 206,
+      "committed": 0.009736818000000001,
+      "elapsedMs": 148413,
+      "recoveries": 0
+    },
+    {
+      "id": "random-20",
+      "status": "solved",
+      "solved": true,
+      "turns": 210,
+      "requests": 233,
+      "committed": 0.011881800000000001,
+      "elapsedMs": 169689,
+      "recoveries": 0
+    },
+    {
+      "id": "random-21",
+      "status": "solved",
+      "solved": true,
+      "turns": 161,
+      "requests": 200,
+      "committed": 0.009100182000000002,
+      "elapsedMs": 147468,
+      "recoveries": 0
+    },
+    {
+      "id": "random-22",
+      "status": "solved",
+      "solved": true,
+      "turns": 215,
+      "requests": 182,
+      "committed": 0.010172736000000002,
+      "elapsedMs": 135356,
+      "recoveries": 0
+    },
+    {
+      "id": "random-23",
+      "status": "solved",
+      "solved": true,
+      "turns": 195,
+      "requests": 171,
+      "committed": 0.009464616000000002,
+      "elapsedMs": 127559,
+      "recoveries": 0
+    },
+    {
+      "id": "random-24",
+      "status": "solved",
+      "solved": true,
+      "turns": 188,
+      "requests": 204,
+      "committed": 0.008590302000000001,
+      "elapsedMs": 157874,
+      "recoveries": 0
+    },
+    {
+      "id": "random-25",
+      "status": "solved",
+      "solved": true,
+      "turns": 282,
+      "requests": 235,
+      "committed": 0.012652164000000002,
+      "elapsedMs": 181407,
+      "recoveries": 3
+    },
+    {
+      "id": "random-26",
+      "status": "solved",
+      "solved": true,
+      "turns": 158,
+      "requests": 210,
+      "committed": 0.010141446000000002,
+      "elapsedMs": 162366,
+      "recoveries": 0
+    },
+    {
+      "id": "random-27",
+      "status": "solved",
+      "solved": true,
+      "turns": 176,
+      "requests": 200,
+      "committed": 0.009767058000000002,
+      "elapsedMs": 157241,
+      "recoveries": 0
+    },
+    {
+      "id": "random-28",
+      "status": "solved",
+      "solved": true,
+      "turns": 178,
+      "requests": 162,
+      "committed": 0.009409344000000002,
+      "elapsedMs": 131692,
+      "recoveries": 1
+    },
+    {
+      "id": "random-29",
+      "status": "solved",
+      "solved": true,
+      "turns": 176,
+      "requests": 218,
+      "committed": 0.009704604000000002,
+      "elapsedMs": 172557,
+      "recoveries": 0
+    },
+    {
+      "id": "random-30",
+      "status": "solved",
+      "solved": true,
+      "turns": 185,
+      "requests": 169,
+      "committed": 0.009104004,
+      "elapsedMs": 134463,
+      "recoveries": 1
+    },
+    {
+      "id": "random-31",
+      "status": "solved",
+      "solved": true,
+      "turns": 181,
+      "requests": 199,
+      "committed": 0.010021494,
+      "elapsedMs": 156046,
+      "recoveries": 0
+    },
+    {
+      "id": "random-32",
+      "status": "solved",
+      "solved": true,
+      "turns": 153,
+      "requests": 223,
+      "committed": 0.008775648,
+      "elapsedMs": 176054,
+      "recoveries": 0
+    },
+    {
+      "id": "random-33",
+      "status": "solved",
+      "solved": true,
+      "turns": 129,
+      "requests": 158,
+      "committed": 0.007317072000000001,
+      "elapsedMs": 128257,
+      "recoveries": 0
+    },
+    {
+      "id": "random-34",
+      "status": "solved",
+      "solved": true,
+      "turns": 171,
+      "requests": 206,
+      "committed": 0.00891009,
+      "elapsedMs": 165919,
+      "recoveries": 0
+    },
+    {
+      "id": "random-35",
+      "status": "solved",
+      "solved": true,
+      "turns": 208,
+      "requests": 212,
+      "committed": 0.011063010000000002,
+      "elapsedMs": 168213,
+      "recoveries": 0
+    },
+    {
+      "id": "random-36",
+      "status": "solved",
+      "solved": true,
+      "turns": 181,
+      "requests": 183,
+      "committed": 0.010249638000000002,
+      "elapsedMs": 141541,
+      "recoveries": 0
+    },
+    {
+      "id": "random-37",
+      "status": "solved",
+      "solved": true,
+      "turns": 256,
+      "requests": 236,
+      "committed": 0.012035352000000001,
+      "elapsedMs": 188642,
+      "recoveries": 2
+    },
+    {
+      "id": "random-38",
+      "status": "solved",
+      "solved": true,
+      "turns": 209,
+      "requests": 189,
+      "committed": 0.009456972000000001,
+      "elapsedMs": 151865,
+      "recoveries": 0
+    },
+    {
+      "id": "random-39",
+      "status": "solved",
+      "solved": true,
+      "turns": 190,
+      "requests": 229,
+      "committed": 0.010746582000000001,
+      "elapsedMs": 180112,
+      "recoveries": 0
+    },
+    {
+      "id": "random-40",
+      "status": "solved",
+      "solved": true,
+      "turns": 150,
+      "requests": 177,
+      "committed": 0.007821534000000002,
+      "elapsedMs": 137734,
+      "recoveries": 0
+    },
+    {
+      "id": "random-41",
+      "status": "solved",
+      "solved": true,
+      "turns": 172,
+      "requests": 193,
+      "committed": 0.008397144,
+      "elapsedMs": 140556,
+      "recoveries": 0
+    },
+    {
+      "id": "random-42",
+      "status": "solved",
+      "solved": true,
+      "turns": 148,
+      "requests": 159,
+      "committed": 0.007103586000000001,
+      "elapsedMs": 117269,
+      "recoveries": 0
+    },
+    {
+      "id": "random-43",
+      "status": "solved",
+      "solved": true,
+      "turns": 190,
+      "requests": 217,
+      "committed": 0.009468060000000002,
+      "elapsedMs": 161617,
+      "recoveries": 0
+    },
+    {
+      "id": "random-44",
+      "status": "solved",
+      "solved": true,
+      "turns": 135,
+      "requests": 184,
+      "committed": 0.008266734000000001,
+      "elapsedMs": 138160,
+      "recoveries": 0
+    },
+    {
+      "id": "random-45",
+      "status": "solved",
+      "solved": true,
+      "turns": 151,
+      "requests": 201,
+      "committed": 0.009924516000000001,
+      "elapsedMs": 147263,
+      "recoveries": 0
+    },
+    {
+      "id": "random-46",
+      "status": "solved",
+      "solved": true,
+      "turns": 230,
+      "requests": 264,
+      "committed": 0.012733266000000002,
+      "elapsedMs": 190726,
+      "recoveries": 1
+    },
+    {
+      "id": "random-47",
+      "status": "solved",
+      "solved": true,
+      "turns": 183,
+      "requests": 198,
+      "committed": 0.009310938000000001,
+      "elapsedMs": 140925,
+      "recoveries": 0
+    },
+    {
+      "id": "random-48",
+      "status": "solved",
+      "solved": true,
+      "turns": 153,
+      "requests": 201,
+      "committed": 0.009282672,
+      "elapsedMs": 143621,
+      "recoveries": 0
+    },
+    {
+      "id": "random-49",
+      "status": "solved",
+      "solved": true,
+      "turns": 166,
+      "requests": 176,
+      "committed": 0.008690304000000001,
+      "elapsedMs": 126836,
+      "recoveries": 0
+    },
+    {
+      "id": "random-50",
+      "status": "solved",
+      "solved": true,
+      "turns": 159,
+      "requests": 177,
+      "committed": 0.008304114000000001,
+      "elapsedMs": 129827,
+      "recoveries": 0
+    },
+    {
+      "id": "random-51",
+      "status": "solved",
+      "solved": true,
+      "turns": 128,
+      "requests": 175,
+      "committed": 0.008398278,
+      "elapsedMs": 126208,
+      "recoveries": 0
+    },
+    {
+      "id": "random-52",
+      "status": "solved",
+      "solved": true,
+      "turns": 165,
+      "requests": 173,
+      "committed": 0.008297352000000001,
+      "elapsedMs": 125443,
+      "recoveries": 0
+    },
+    {
+      "id": "random-53",
+      "status": "solved",
+      "solved": true,
+      "turns": 182,
+      "requests": 210,
+      "committed": 0.010208016000000002,
+      "elapsedMs": 142157,
+      "recoveries": 0
+    },
+    {
+      "id": "random-54",
+      "status": "solved",
+      "solved": true,
+      "turns": 132,
+      "requests": 178,
+      "committed": 0.008599710000000002,
+      "elapsedMs": 113557,
+      "recoveries": 0
+    },
+    {
+      "id": "random-55",
+      "status": "solved",
+      "solved": true,
+      "turns": 138,
+      "requests": 162,
+      "committed": 0.008305458000000002,
+      "elapsedMs": 98185,
+      "recoveries": 0
+    },
+    {
+      "id": "random-56",
+      "status": "solved",
+      "solved": true,
+      "turns": 161,
+      "requests": 177,
+      "committed": 0.008188446000000002,
+      "elapsedMs": 106492,
+      "recoveries": 0
+    },
+    {
+      "id": "random-57",
+      "status": "solved",
+      "solved": true,
+      "turns": 150,
+      "requests": 162,
+      "committed": 0.008309448,
+      "elapsedMs": 94416,
+      "recoveries": 0
+    },
+    {
+      "id": "random-58",
+      "status": "solved",
+      "solved": true,
+      "turns": 171,
+      "requests": 212,
+      "committed": 0.010322844000000001,
+      "elapsedMs": 125964,
+      "recoveries": 0
+    },
+    {
+      "id": "random-59",
+      "status": "solved",
+      "solved": true,
+      "turns": 185,
+      "requests": 222,
+      "committed": 0.009606030000000002,
+      "elapsedMs": 132307,
+      "recoveries": 0
+    },
+    {
+      "id": "random-60",
+      "status": "solved",
+      "solved": true,
+      "turns": 166,
+      "requests": 194,
+      "committed": 0.009944844000000001,
+      "elapsedMs": 114884,
+      "recoveries": 0
+    },
+    {
+      "id": "random-61",
+      "status": "solved",
+      "solved": true,
+      "turns": 189,
+      "requests": 233,
+      "committed": 0.011476794000000002,
+      "elapsedMs": 137731,
+      "recoveries": 0
+    },
+    {
+      "id": "random-62",
+      "status": "solved",
+      "solved": true,
+      "turns": 146,
+      "requests": 155,
+      "committed": 0.007983696000000002,
+      "elapsedMs": 92185,
+      "recoveries": 0
+    },
+    {
+      "id": "random-63",
+      "status": "solved",
+      "solved": true,
+      "turns": 217,
+      "requests": 234,
+      "committed": 0.010681188000000001,
+      "elapsedMs": 137530,
+      "recoveries": 0
+    },
+    {
+      "id": "random-64",
+      "status": "solved",
+      "solved": true,
+      "turns": 167,
+      "requests": 195,
+      "committed": 0.009349074,
+      "elapsedMs": 115555,
+      "recoveries": 0
+    },
+    {
+      "id": "random-65",
+      "status": "solved",
+      "solved": true,
+      "turns": 196,
+      "requests": 220,
+      "committed": 0.009999696,
+      "elapsedMs": 128581,
+      "recoveries": 0
+    },
+    {
+      "id": "random-66",
+      "status": "solved",
+      "solved": true,
+      "turns": 139,
+      "requests": 160,
+      "committed": 0.008131116,
+      "elapsedMs": 93333,
+      "recoveries": 0
+    },
+    {
+      "id": "random-67",
+      "status": "solved",
+      "solved": true,
+      "turns": 182,
+      "requests": 195,
+      "committed": 0.010363836000000001,
+      "elapsedMs": 118338,
+      "recoveries": 0
+    },
+    {
+      "id": "random-68",
+      "status": "solved",
+      "solved": true,
+      "turns": 155,
+      "requests": 194,
+      "committed": 0.010135314000000001,
+      "elapsedMs": 116203,
+      "recoveries": 0
+    },
+    {
+      "id": "random-69",
+      "status": "solved",
+      "solved": true,
+      "turns": 111,
+      "requests": 190,
+      "committed": 0.008599248000000002,
+      "elapsedMs": 113791,
+      "recoveries": 0
+    },
+    {
+      "id": "random-70",
+      "status": "solved",
+      "solved": true,
+      "turns": 115,
+      "requests": 111,
+      "committed": 0.005670042000000001,
+      "elapsedMs": 67646,
+      "recoveries": 0
+    },
+    {
+      "id": "random-71",
+      "status": "solved",
+      "solved": true,
+      "turns": 163,
+      "requests": 177,
+      "committed": 0.00920514,
+      "elapsedMs": 110606,
+      "recoveries": 0
+    },
+    {
+      "id": "random-72",
+      "status": "solved",
+      "solved": true,
+      "turns": 172,
+      "requests": 231,
+      "committed": 0.010981152000000001,
+      "elapsedMs": 162741,
+      "recoveries": 0
+    },
+    {
+      "id": "random-73",
+      "status": "solved",
+      "solved": true,
+      "turns": 154,
+      "requests": 193,
+      "committed": 0.008344602000000001,
+      "elapsedMs": 133019,
+      "recoveries": 0
+    },
+    {
+      "id": "random-74",
+      "status": "solved",
+      "solved": true,
+      "turns": 134,
+      "requests": 164,
+      "committed": 0.009039576,
+      "elapsedMs": 116639,
+      "recoveries": 0
+    },
+    {
+      "id": "random-75",
+      "status": "solved",
+      "solved": true,
+      "turns": 160,
+      "requests": 175,
+      "committed": 0.009109758,
+      "elapsedMs": 141282,
+      "recoveries": 0
+    },
+    {
+      "id": "random-76",
+      "status": "solved",
+      "solved": true,
+      "turns": 189,
+      "requests": 254,
+      "committed": 0.010981782,
+      "elapsedMs": 183355,
+      "recoveries": 0
+    },
+    {
+      "id": "random-77",
+      "status": "solved",
+      "solved": true,
+      "turns": 112,
+      "requests": 158,
+      "committed": 0.007435008000000001,
+      "elapsedMs": 124645,
+      "recoveries": 0
+    },
+    {
+      "id": "random-78",
+      "status": "solved",
+      "solved": true,
+      "turns": 224,
+      "requests": 271,
+      "committed": 0.012670602000000001,
+      "elapsedMs": 187308,
+      "recoveries": 0
+    },
+    {
+      "id": "random-79",
+      "status": "solved",
+      "solved": true,
+      "turns": 172,
+      "requests": 165,
+      "committed": 0.007758156000000001,
+      "elapsedMs": 105388,
+      "recoveries": 0
+    },
+    {
+      "id": "random-80",
+      "status": "solved",
+      "solved": true,
+      "turns": 285,
+      "requests": 270,
+      "committed": 0.015309210000000002,
+      "elapsedMs": 163934,
+      "recoveries": 1
+    },
+    {
+      "id": "random-81",
+      "status": "solved",
+      "solved": true,
+      "turns": 172,
+      "requests": 207,
+      "committed": 0.009716322000000001,
+      "elapsedMs": 125285,
+      "recoveries": 0
+    },
+    {
+      "id": "random-82",
+      "status": "solved",
+      "solved": true,
+      "turns": 202,
+      "requests": 228,
+      "committed": 0.009066498000000001,
+      "elapsedMs": 137614,
+      "recoveries": 0
+    },
+    {
+      "id": "random-83",
+      "status": "solved",
+      "solved": true,
+      "turns": 159,
+      "requests": 171,
+      "committed": 0.009953538000000001,
+      "elapsedMs": 104195,
+      "recoveries": 0
+    },
+    {
+      "id": "random-84",
+      "status": "solved",
+      "solved": true,
+      "turns": 123,
+      "requests": 160,
+      "committed": 0.007903434,
+      "elapsedMs": 99722,
+      "recoveries": 0
+    },
+    {
+      "id": "random-85",
+      "status": "solved",
+      "solved": true,
+      "turns": 201,
+      "requests": 197,
+      "committed": 0.011447352000000001,
+      "elapsedMs": 119815,
+      "recoveries": 0
+    },
+    {
+      "id": "random-86",
+      "status": "solved",
+      "solved": true,
+      "turns": 157,
+      "requests": 196,
+      "committed": 0.008425116000000002,
+      "elapsedMs": 119708,
+      "recoveries": 0
+    },
+    {
+      "id": "random-87",
+      "status": "solved",
+      "solved": true,
+      "turns": 197,
+      "requests": 186,
+      "committed": 0.009711534,
+      "elapsedMs": 114353,
+      "recoveries": 0
+    },
+    {
+      "id": "random-88",
+      "status": "solved",
+      "solved": true,
+      "turns": 243,
+      "requests": 201,
+      "committed": 0.010115322000000001,
+      "elapsedMs": 122484,
+      "recoveries": 1
+    },
+    {
+      "id": "random-89",
+      "status": "solved",
+      "solved": true,
+      "turns": 153,
+      "requests": 178,
+      "committed": 0.008317890000000001,
+      "elapsedMs": 110588,
+      "recoveries": 0
+    },
+    {
+      "id": "random-90",
+      "status": "solved",
+      "solved": true,
+      "turns": 181,
+      "requests": 211,
+      "committed": 0.009756684000000002,
+      "elapsedMs": 129336,
+      "recoveries": 0
+    },
+    {
+      "id": "random-91",
+      "status": "solved",
+      "solved": true,
+      "turns": 169,
+      "requests": 187,
+      "committed": 0.009219588,
+      "elapsedMs": 114939,
+      "recoveries": 0
+    },
+    {
+      "id": "random-92",
+      "status": "solved",
+      "solved": true,
+      "turns": 171,
+      "requests": 231,
+      "committed": 0.010931004000000001,
+      "elapsedMs": 150093,
+      "recoveries": 0
+    },
+    {
+      "id": "random-93",
+      "status": "solved",
+      "solved": true,
+      "turns": 142,
+      "requests": 179,
+      "committed": 0.009967020000000002,
+      "elapsedMs": 119496,
+      "recoveries": 0
+    },
+    {
+      "id": "random-94",
+      "status": "solved",
+      "solved": true,
+      "turns": 200,
+      "requests": 227,
+      "committed": 0.009843246000000002,
+      "elapsedMs": 144865,
+      "recoveries": 0
+    },
+    {
+      "id": "random-95",
+      "status": "capped",
+      "solved": false,
+      "turns": 213,
+      "requests": 220,
+      "committed": 0.011313666000000002,
+      "elapsedMs": 140290,
+      "recoveries": 0
+    },
+    {
+      "id": "random-96",
+      "status": "capped",
+      "solved": false,
+      "turns": 26,
+      "requests": 60,
+      "committed": 0.0025481820000000004,
+      "elapsedMs": 36507,
+      "recoveries": 0
+    },
+    {
+      "id": "random-97",
+      "status": "capped",
+      "solved": false,
+      "turns": 9,
+      "requests": 42,
+      "committed": 0.0013477800000000002,
+      "elapsedMs": 25684,
+      "recoveries": 0
+    },
+    {
+      "id": "random-98",
+      "status": "capped",
+      "solved": false,
+      "turns": 0,
+      "requests": 0,
+      "committed": 0,
+      "elapsedMs": 69,
+      "recoveries": 0
+    },
+    {
+      "id": "random-99",
+      "status": "capped",
+      "solved": false,
+      "turns": 0,
+      "requests": 0,
+      "committed": 0,
+      "elapsedMs": 65,
+      "recoveries": 0
+    },
+    {
+      "id": "random-100",
+      "status": "capped",
+      "solved": false,
+      "turns": 0,
+      "requests": 0,
+      "committed": 0,
+      "elapsedMs": 65,
+      "recoveries": 0
+    }
+  ]
+}

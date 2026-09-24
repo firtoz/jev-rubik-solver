@@ -1,0 +1,63 @@
+{
+  "partial": true,
+  "checked": 2,
+  "projectCommitment": 8.072136156000001,
+  "rows": [
+    {
+      "id": "pair-1",
+      "variant": "candidate",
+      "status": "capped",
+      "turns": 95,
+      "requests": 124,
+      "cost": 0.004254642,
+      "elapsedMs": 64774,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 36,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "top-corners": 29
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": false,
+        "solvedPieces": 17
+      }
+    },
+    {
+      "id": "pair-2",
+      "variant": "candidate",
+      "status": "capped",
+      "turns": 91,
+      "requests": 133,
+      "cost": 0.004603452000000001,
+      "elapsedMs": 67915,
+      "stages": {
+        "daisy": 8,
+        "cross": 8,
+        "f2l": 42,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "top-corners": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 17
+      }
+    }
+  ]
+}

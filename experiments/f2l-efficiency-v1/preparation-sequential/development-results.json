@@ -1,0 +1,4929 @@
+{
+  "phase": "development",
+  "rows": [
+    {
+      "id": "position-0",
+      "variant": "sequential",
+      "runId": "8308f22b-f34c-4e36-bab5-e5c2503d07e1",
+      "expected": "routine",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "281b7b6e-961d-46f6-a458-f42836462053",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.99,
+                  "extract-corner": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.99,
+                  "extract-corner": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 731.853447,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "ee893633-85d3-4dd0-91ba-869456cfa726",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.97,
+                  "extract-edge": 0.02
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.96,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.97,
+                  "extract-edge": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 274.7736749999999,
+          "cost": 0.000016716
+        },
+        {
+          "id": "422177ad-6be2-45f2-aa98-500219e6ffac",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 1,
+                  "align-corner": 0,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 1,
+                  "align-corner": 0,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 344.088401,
+          "cost": 0.000016758
+        },
+        {
+          "id": "c59b58b3-b9e6-49a1-8ac7-d58f6d6037ff",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "probabilities": {
+                  "routine": 0.99,
+                  "align-edge": 0,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "confidence": 0.99,
+                "probabilities": {
+                  "routine": 0.99,
+                  "align-edge": 0,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 282.1240719999996,
+          "cost": 0.000018396
+        }
+      ],
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-2",
+      "variant": "sequential",
+      "runId": "ebe62534-10ae-40fc-a169-da256135f916",
+      "expected": "routine",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "cc164c5a-dae4-4241-bbf3-cf644488b4c6",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.99,
+                  "reconsider": 0,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 0.99,
+                  "reconsider": 0,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 767.151252,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "8c95384f-a29c-48c2-bb54-43795b3cb505",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "extract-edge": 0.01,
+                  "continue": 0.98
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.97,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "extract-edge": 0.01,
+                  "continue": 0.98
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 394.57698100000016,
+          "cost": 0.000016716
+        },
+        {
+          "id": "0bf14aed-b479-418f-a158-243b8c87f698",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "align-corner": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "align-corner": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 278.9120409999998,
+          "cost": 0.000016758
+        },
+        {
+          "id": "a672768c-2107-424a-81b8-2c8878812f8f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "probabilities": {
+                  "align-edge": 0,
+                  "routine": 0.99,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "confidence": 0.98,
+                "probabilities": {
+                  "align-edge": 0,
+                  "routine": 0.99,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 343.7208049999999,
+          "cost": 0.000018396
+        }
+      ],
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-4",
+      "variant": "sequential",
+      "runId": "069c622c-3d10-42ba-ade1-6cc770a84d9e",
+      "expected": "routine",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "e770c603-7f27-495a-81b5-c7409c5988bc",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "extract-corner": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "extract-corner": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 317.6012010000004,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "f6ba97bc-aa6b-4aa6-a05c-fa5ce00198a7",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-edge": 0,
+                  "continue": 1,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "extract-edge": 0,
+                  "continue": 1,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 305.9382029999997,
+          "cost": 0.000016716
+        },
+        {
+          "id": "020cc604-9c69-4de5-ba2f-95f26555b9e3",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 1,
+                  "reconsider": 0,
+                  "align-corner": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 1,
+                  "reconsider": 0,
+                  "align-corner": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 628.8228290000002,
+          "cost": 0.000016758
+        },
+        {
+          "id": "8ec2fb33-684a-4d48-805a-f70e3e4c2664",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "align-edge": 0,
+                  "routine": 0.99
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "align-edge": 0,
+                  "routine": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 300.6060500000003,
+          "cost": 0.000018396
+        }
+      ],
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-6",
+      "variant": "sequential",
+      "runId": "6d1ea924-228d-4933-adb1-8101a2c822ca",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "1dfc5b45-bae2-40e6-891f-ba0ad9174c1f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-corner": 0.01,
+                  "continue": 0.99,
+                  "reconsider": 0
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "extract-corner": 0.01,
+                  "continue": 0.99,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 311.79082199999993,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "0588f0c2-23e3-44ab-99b5-0bffd1378950",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "probabilities": {
+                  "reconsider": 0.17,
+                  "extract-edge": 0.52,
+                  "continue": 0.31
+                },
+                "confidence": 0.28
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "confidence": 0.28,
+                "probabilities": {
+                  "reconsider": 0.17,
+                  "extract-edge": 0.52,
+                  "continue": 0.31
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 486.62781300000006,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-8",
+      "variant": "sequential",
+      "runId": "21d533b3-7f05-41b8-b434-a130c27c225b",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "70c65717-f77c-4dd5-be20-58c5c4b57aa6",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 302.7416029999995,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "fa167fb7-9b86-4bf4-a5a0-2e2ec8256a3b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-edge": 0.02,
+                  "reconsider": 0.01,
+                  "continue": 0.97
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.96,
+                "probabilities": {
+                  "extract-edge": 0.02,
+                  "reconsider": 0.01,
+                  "continue": 0.97
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 365.422047,
+          "cost": 0.000016716
+        },
+        {
+          "id": "beadd5b6-2a7c-400c-a673-0aef4547ef59",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "align-corner": 0.98,
+                  "continue": 0.01,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "align-corner": 0.98,
+                  "continue": 0.01,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 282.75924099999975,
+          "cost": 0.000016758
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-10",
+      "variant": "sequential",
+      "runId": "ca5b7896-0ecc-48a9-90b4-d9ed37abdee7",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "b768f730-e0cd-499e-bf04-93df8da46b41",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-corner": 0.01,
+                  "reconsider": 0,
+                  "continue": 0.99
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "extract-corner": 0.01,
+                  "reconsider": 0,
+                  "continue": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 277.3912129999999,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "114e5f93-6550-404b-82c0-8e8efc10ce48",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.98,
+                  "extract-edge": 0.01
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.96,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.98,
+                  "extract-edge": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 383.33247200000005,
+          "cost": 0.000016716
+        },
+        {
+          "id": "36a3fa18-1d4f-431a-8e59-18443b271f89",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "align-corner": 0.98,
+                  "continue": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.98,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "align-corner": 0.98,
+                  "continue": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 310.0654910000003,
+          "cost": 0.000016758
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-12",
+      "variant": "sequential",
+      "runId": "f6902270-460b-4ec3-aae0-62785c028f06",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "dfd415f1-db8f-4716-a852-b1e4ed701037",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 280.5088260000002,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "078fb02f-7a91-4132-9a2f-773dddb02e59",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "extract-edge": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "extract-edge": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 342.37423299999955,
+          "cost": 0.000016716
+        },
+        {
+          "id": "ea2cf2da-90db-4504-bf74-7917cec16d57",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "continue": 0.01,
+                  "reconsider": 0.01,
+                  "align-corner": 0.98
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.98,
+                "probabilities": {
+                  "continue": 0.01,
+                  "reconsider": 0.01,
+                  "align-corner": 0.98
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 341.88989499999934,
+          "cost": 0.000016758
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-14",
+      "variant": "sequential",
+      "runId": "b9dda7f0-8223-444b-90ba-5f45beb24f87",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "36e76b33-1b07-4eb5-9e4b-7ba8594ee8dd",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "URB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 336.1332250000005,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "81673f46-fc0d-4d5e-9ac3-ae8614b8dc23",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "probabilities": {
+                  "continue": 0.24,
+                  "reconsider": 0.18,
+                  "extract-edge": 0.58
+                },
+                "confidence": 0.36
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "confidence": 0.36,
+                "probabilities": {
+                  "continue": 0.24,
+                  "reconsider": 0.18,
+                  "extract-edge": 0.58
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 334.70534000000043,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-16",
+      "variant": "sequential",
+      "runId": "6afc3a4d-c95d-4988-a595-039a36f8db66",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "14f0a72f-5f27-43d3-9951-343fe9f43bb4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-corner": 0.01,
+                  "reconsider": 0,
+                  "continue": 0.99
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "extract-corner": 0.01,
+                  "reconsider": 0,
+                  "continue": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 327.9086420000003,
+          "cost": 0.000017136000000000003
+        },
+        {
+          "id": "81f01966-20cb-4aea-aa94-807efea9b80e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.97,
+                  "extract-edge": 0.02
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.96,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "continue": 0.97,
+                  "extract-edge": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 384.0334669999993,
+          "cost": 0.000016716
+        },
+        {
+          "id": "0d3a19ea-3186-4781-b7d2-df61a293bff1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "align-corner": 0.99,
+                  "reconsider": 0,
+                  "continue": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.98,
+                "probabilities": {
+                  "align-corner": 0.99,
+                  "reconsider": 0,
+                  "continue": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 381.7861589999993,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-18",
+      "variant": "sequential",
+      "runId": "c86de572-105d-4dfb-b535-753325367acf",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "c47f207b-18b4-498c-959f-50fcdd23d838",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-corner": 0.02,
+                  "continue": 0.98,
+                  "reconsider": 0
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.97,
+                "probabilities": {
+                  "extract-corner": 0.02,
+                  "continue": 0.98,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 373.0494920000001,
+          "cost": 0.000017136000000000003
+        },
+        {
+          "id": "a85325f7-e8a1-4a74-9e7c-32485e9eff27",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.98,
+                  "reconsider": 0.01,
+                  "extract-edge": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.97,
+                "probabilities": {
+                  "continue": 0.98,
+                  "reconsider": 0.01,
+                  "extract-edge": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 365.83850899999925,
+          "cost": 0.000016716
+        },
+        {
+          "id": "0a3c3583-469e-455c-a5d2-3b2a8b5b5a39",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "continue": 0.01,
+                  "align-corner": 0.99,
+                  "reconsider": 0
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.98,
+                "probabilities": {
+                  "continue": 0.01,
+                  "align-corner": 0.99,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 345.7669219999989,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-20",
+      "variant": "sequential",
+      "runId": "dfd9553e-e184-4ddf-8b91-1c0586584aee",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "2a573e2d-928a-4185-9627-125f17f07a74",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.03,
+                  "continue": 0.97
+                },
+                "confidence": 0.95
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.95,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.03,
+                  "continue": 0.97
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 356.65028899999925,
+          "cost": 0.000017136000000000003
+        },
+        {
+          "id": "5d1ffae8-4ee3-4dc6-a0bb-6871c9a8b59e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-edge": 0,
+                  "continue": 1,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "extract-edge": 0,
+                  "continue": 1,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 310.2543449999994,
+          "cost": 0.000016716
+        },
+        {
+          "id": "f242674a-9453-4054-b1d8-464e4bafecf4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "align-corner": 0.99,
+                  "reconsider": 0,
+                  "continue": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "align-corner": 0.99,
+                  "reconsider": 0,
+                  "continue": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 418.4514760000002,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-22",
+      "variant": "sequential",
+      "runId": "309addbb-3ba8-4c35-9825-61429b8eb9f3",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "7f6c71c0-51ac-4c50-a677-2aa4f2b01c81",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UBL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-corner": 0.02,
+                  "continue": 0.98,
+                  "reconsider": 0
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.97,
+                "probabilities": {
+                  "extract-corner": 0.02,
+                  "continue": 0.98,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 408,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 322.92588500000056,
+          "cost": 0.000017136000000000003
+        },
+        {
+          "id": "32ca12c2-6a1b-4377-8205-13af0c30836b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "probabilities": {
+                  "continue": 0.25,
+                  "reconsider": 0.15,
+                  "extract-edge": 0.6
+                },
+                "confidence": 0.4
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "confidence": 0.4,
+                "probabilities": {
+                  "continue": 0.25,
+                  "reconsider": 0.15,
+                  "extract-edge": 0.6
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 264.4082640000015,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-24",
+      "variant": "sequential",
+      "runId": "f11425ed-fa04-4c6c-aac6-f3841d9580bf",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "0d47d24f-f498-49d9-a817-a4bbecc39b4e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.01,
+                  "continue": 0.99
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.01,
+                  "continue": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 328.70180100000107,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "682144d2-2d20-4eb8-9558-096f4c16436d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.97,
+                  "extract-edge": 0.02,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.95
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.95,
+                "probabilities": {
+                  "continue": 0.97,
+                  "extract-edge": 0.02,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 291.2433170000004,
+          "cost": 0.000016716
+        },
+        {
+          "id": "67679911-985c-4309-8978-04d05d7db92f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "align-corner": 0.98,
+                  "continue": 0.01,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "align-corner": 0.98,
+                  "continue": 0.01,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 311.9591730000011,
+          "cost": 0.000016758
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-26",
+      "variant": "sequential",
+      "runId": "3c482740-0b2f-4b9a-969b-003549899e32",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "5242dbd6-e24d-4761-8dca-487e53ad77a5",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.99,
+                  "extract-corner": 0.01,
+                  "reconsider": 0
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "continue": 0.99,
+                  "extract-corner": 0.01,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 263.88282900000013,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "e2f05d15-494e-4512-b8b2-35d746db1bc0",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "extract-edge": 0.02,
+                  "continue": 0.97
+                },
+                "confidence": 0.95
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.95,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "extract-edge": 0.02,
+                  "continue": 0.97
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 245.05142499999965,
+          "cost": 0.000016716
+        },
+        {
+          "id": "6eed3431-fd18-4a0a-8b59-652ed3110fff",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "continue": 0.02,
+                  "align-corner": 0.97,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.96,
+                "probabilities": {
+                  "continue": 0.02,
+                  "align-corner": 0.97,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 413.60435300000063,
+          "cost": 0.000016758
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-28",
+      "variant": "sequential",
+      "runId": "024b541e-2afd-4ed4-8cce-7dc6b5067669",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "b7b664b0-ca79-43e1-bc5d-b2d8bafc223c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.98,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 328.11268700000073,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "f9ddfb52-cdec-4b98-8a29-7e09ba362ef8",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 1,
+                  "reconsider": 0,
+                  "extract-edge": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 1,
+                  "reconsider": 0,
+                  "extract-edge": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 363.310085000001,
+          "cost": 0.000016716
+        },
+        {
+          "id": "03057bf7-9455-41e1-a687-866b3b36293e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "probabilities": {
+                  "continue": 0.02,
+                  "align-corner": 0.98,
+                  "reconsider": 0
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "continue": 0.02,
+                  "align-corner": 0.98,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 426.9018559999986,
+          "cost": 0.000016758
+        }
+      ],
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-30",
+      "variant": "sequential",
+      "runId": "4335122f-c588-4478-aaaa-19bcfb888895",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "fbab5337-1baf-419d-8f47-db3abbc0ac74",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "ULF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0.99,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 357.7827749999997,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "27ed3125-ccdb-48e0-b1a3-b9f190d1a032",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "probabilities": {
+                  "continue": 0.33,
+                  "reconsider": 0.13,
+                  "extract-edge": 0.54
+                },
+                "confidence": 0.31
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "confidence": 0.31,
+                "probabilities": {
+                  "continue": 0.33,
+                  "reconsider": 0.13,
+                  "extract-edge": 0.54
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 270.46230300000025,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-32",
+      "variant": "sequential",
+      "runId": "9efce326-6f66-4747-9b44-342a47b44087",
+      "expected": "routine",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "d638ea0b-c9fe-4935-b3af-d418acf59e81",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.99,
+                  "reconsider": 0,
+                  "extract-corner": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 0.99,
+                  "reconsider": 0,
+                  "extract-corner": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 321.7188449999994,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "a7cfd5da-fc39-461f-994c-139b4d4fd74c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.97,
+                  "reconsider": 0.01,
+                  "extract-edge": 0.02
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.97,
+                "probabilities": {
+                  "continue": 0.97,
+                  "reconsider": 0.01,
+                  "extract-edge": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 313.74093399999947,
+          "cost": 0.000016716
+        },
+        {
+          "id": "9c1d744e-9cbd-4368-84b3-b6097dfa3219",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "align-corner": 0,
+                  "reconsider": 0,
+                  "continue": 1
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "align-corner": 0,
+                  "reconsider": 0,
+                  "continue": 1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 274.1825660000013,
+          "cost": 0.000016758
+        },
+        {
+          "id": "effba9a1-4d33-4399-ac9d-86980895585e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "edgePosition": "UF",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "probabilities": {
+                  "routine": 1,
+                  "align-edge": 0,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "confidence": 0.99,
+                "probabilities": {
+                  "routine": 1,
+                  "align-edge": 0,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 308.4687860000013,
+          "cost": 0.000018396
+        }
+      ],
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-34",
+      "variant": "sequential",
+      "runId": "aedeb8b1-0431-44ea-9074-481b0e28caf3",
+      "expected": "align-edge",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "d7636c5a-fc1c-4f27-bae8-e1c9523ac897",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "extract-corner": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "extract-corner": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 305.12825299999895,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "527b3f10-ea8d-46d4-9c2e-5c9282c1122e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "extract-edge": 0.02,
+                  "reconsider": 0.01,
+                  "continue": 0.97
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.96,
+                "probabilities": {
+                  "extract-edge": 0.02,
+                  "reconsider": 0.01,
+                  "continue": 0.97
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 266.56385600000067,
+          "cost": 0.000016716
+        },
+        {
+          "id": "97835a5a-fcd6-44d4-8573-795e8977dd55",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 1,
+                  "align-corner": 0,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 1,
+                  "align-corner": 0,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 302.54373999999916,
+          "cost": 0.000016758
+        },
+        {
+          "id": "c28ad7dc-769b-41d9-8b66-edcfcb1ed4c6",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "edgePosition": "UB",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-edge",
+                "probabilities": {
+                  "routine": 0.08,
+                  "align-edge": 0.71,
+                  "reconsider": 0.21
+                },
+                "confidence": 0.58
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "align-edge",
+                "confidence": 0.58,
+                "probabilities": {
+                  "routine": 0.08,
+                  "align-edge": 0.71,
+                  "reconsider": 0.21
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 320.2904089999993,
+          "cost": 0.000018396
+        }
+      ],
+      "choice": "align-edge",
+      "passed": true
+    },
+    {
+      "id": "position-36",
+      "variant": "sequential",
+      "runId": "c196023e-d68b-4856-9dcf-f8ffa2e68d3a",
+      "expected": "routine",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "29a2cf52-9edb-44a3-bbca-481ca6a38eec",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 0.99,
+                  "extract-corner": 0.01,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 0.99,
+                  "extract-corner": 0.01,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 323.7409269999989,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "4346221a-4908-470f-871a-ee02ed74c8d6",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-edge": 0.01,
+                  "continue": 0.99
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-edge": 0.01,
+                  "continue": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 326.15594299999793,
+          "cost": 0.000016716
+        },
+        {
+          "id": "70c3920e-6fc2-49f5-a102-b957da123b73",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "align-corner": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 1,
+                  "align-corner": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 520.9389199999969,
+          "cost": 0.000016758
+        },
+        {
+          "id": "833da7c8-44f8-4498-bfa1-ec854a21e51f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "edgePosition": "FR",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "probabilities": {
+                  "align-edge": 0,
+                  "reconsider": 0,
+                  "routine": 1
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "confidence": 0.99,
+                "probabilities": {
+                  "align-edge": 0,
+                  "reconsider": 0,
+                  "routine": 1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "elapsedMs": 447.360392999999,
+          "cost": 0.000018396
+        }
+      ],
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-38",
+      "variant": "sequential",
+      "runId": "72b45a73-4ba7-49fd-b9bf-584b2e448773",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "47bdd3b1-fd30-4f2a-9842-181e739fe5f2",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DRF",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.01,
+                  "continue": 0.99
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.01,
+                  "continue": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 326.9266580000003,
+          "cost": 0.000017178000000000004
+        },
+        {
+          "id": "f47f0dac-b593-48eb-8267-9a357a9ace1c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "probabilities": {
+                  "extract-edge": 0.55,
+                  "continue": 0.34,
+                  "reconsider": 0.11
+                },
+                "confidence": 0.32
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-edge",
+                "confidence": 0.32,
+                "probabilities": {
+                  "extract-edge": 0.55,
+                  "continue": 0.34,
+                  "reconsider": 0.11
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 44
+            }
+          },
+          "elapsedMs": 283.875683000002,
+          "cost": 0.000016716
+        }
+      ],
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-40",
+      "variant": "sequential",
+      "runId": "e59c79d6-460c-4fd1-9769-095f7cf6609d",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "c617e6f4-13a8-4482-b5f8-9881c9519da4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DFL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0,
+                  "extract-corner": 1
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "continue": 0,
+                  "extract-corner": 1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 311.37742699999944,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-42",
+      "variant": "sequential",
+      "runId": "7a283029-8564-4113-abc6-b33025707c0e",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "72ad4c40-bbf0-4060-9ed1-81fca0d82d69",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DFL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "continue": 0,
+                  "reconsider": 0,
+                  "extract-corner": 1
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 0,
+                  "reconsider": 0,
+                  "extract-corner": 1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 360.7405919999983,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-44",
+      "variant": "sequential",
+      "runId": "d3231bd4-93cb-4270-83b5-6d9ca0dea304",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "72eab9d7-7e87-4389-a790-2d17fe4e07d4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DFL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 1,
+                  "continue": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 1,
+                  "continue": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 347.3700820000013,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-46",
+      "variant": "sequential",
+      "runId": "b5d11ba7-9463-4a27-804e-df4ae1794da5",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "839c565a-8255-429e-8029-a065b707408f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DFL",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 1,
+                  "continue": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 1,
+                  "continue": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 352.04285000000164,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-48",
+      "variant": "sequential",
+      "runId": "86b956fa-fd46-4326-95f7-8e11fe2d2496",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "c863e6cd-2e5f-4b4b-89b8-87fdcd914caf",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DLB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.99,
+                  "continue": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.99,
+                  "continue": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 333.7980370000005,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-50",
+      "variant": "sequential",
+      "runId": "fb442b9b-15ce-4285-8a77-c24754b27e19",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "3282562d-b1d0-46e3-a89a-30b4b954db04",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DLB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.99,
+                  "continue": 0.01
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.98,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0.99,
+                  "continue": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 318.7754030000033,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-52",
+      "variant": "sequential",
+      "runId": "e7f1d8c4-81d4-4faf-8cd3-46eac40892db",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "8d9cd752-afab-48eb-8af1-14f0604913f1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DLB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "continue": 0,
+                  "extract-corner": 1,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 0,
+                  "extract-corner": 1,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 322.12330999999904,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-54",
+      "variant": "sequential",
+      "runId": "54dc7780-1a10-4729-953c-9bea48f64a9b",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "ae3d810c-ecf6-41ff-9f72-b12c554904aa",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DLB",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "extract-corner": 1,
+                  "continue": 0,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.99,
+                "probabilities": {
+                  "extract-corner": 1,
+                  "continue": 0,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 337.8588490000002,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-56",
+      "variant": "sequential",
+      "runId": "e67968e6-0047-4222-88c1-05e492dc29e1",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "34ac5123-70ed-4b27-9151-808901111dc3",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DBR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "continue": 0.01,
+                  "extract-corner": 0.99,
+                  "reconsider": 0
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.98,
+                "probabilities": {
+                  "continue": 0.01,
+                  "extract-corner": 0.99,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 325.8928410000008,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-58",
+      "variant": "sequential",
+      "runId": "e0b85a52-cb77-4b11-b9cf-ad737356de0b",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "f7ee5578-0962-451c-8cbc-a99a44f42c7b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DBR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "extract-corner": 0.98,
+                  "continue": 0.01,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "extract-corner": 0.98,
+                  "continue": 0.01,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 327.7864109999973,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-60",
+      "variant": "sequential",
+      "runId": "4bd9701c-de07-4ef7-bb66-e5afa2236342",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "a7ccb0fa-f681-459f-acfb-29dea3285f46",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DBR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "extract-corner": 0.98,
+                  "continue": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "reconsider": 0.01,
+                  "extract-corner": 0.98,
+                  "continue": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 325.2004760000018,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    },
+    {
+      "id": "position-62",
+      "variant": "sequential",
+      "runId": "3bc9b0bf-bed3-426c-b527-2e58adbc2e51",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "555899ae-b446-406b-b45c-6715d11ed9d1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "DBR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "probabilities": {
+                  "continue": 0.01,
+                  "extract-corner": 0.98,
+                  "reconsider": 0.01
+                },
+                "confidence": 0.97
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "extract-corner",
+                "confidence": 0.97,
+                "probabilities": {
+                  "continue": 0.01,
+                  "extract-corner": 0.98,
+                  "reconsider": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 46
+            }
+          },
+          "elapsedMs": 232.18943600000057,
+          "cost": 0.000017178000000000004
+        }
+      ],
+      "choice": "extract-corner",
+      "passed": true
+    }
+  ],
+  "usage": {
+    "requests": 73,
+    "cost": 0.0012454680000000002
+  }
+}

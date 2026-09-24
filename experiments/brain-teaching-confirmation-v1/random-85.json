@@ -1,0 +1,254 @@
+{
+  "id": "random-85",
+  "runId": "eb5d3b2c-faf3-40ab-afde-f6aa5bc7ec7a",
+  "before": {
+    "EDGES": {
+      "pieces": [
+        1,
+        10,
+        7,
+        4,
+        2,
+        3,
+        8,
+        0,
+        11,
+        5,
+        9,
+        6
+      ],
+      "orientation": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "CORNERS": {
+      "pieces": [
+        0,
+        3,
+        7,
+        6,
+        2,
+        5,
+        1,
+        4
+      ],
+      "orientation": [
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2
+      ]
+    },
+    "CENTERS": {
+      "pieces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orientationMod": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "steps": [
+    {
+      "before": {
+        "EDGES": {
+          "pieces": [
+            1,
+            10,
+            7,
+            4,
+            2,
+            3,
+            8,
+            0,
+            11,
+            5,
+            9,
+            6
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            3,
+            7,
+            6,
+            2,
+            5,
+            1,
+            4
+          ],
+          "orientation": [
+            0,
+            1,
+            2,
+            1,
+            1,
+            2,
+            0,
+            2
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "pendingPlan": null,
+      "exchanges": []
+    }
+  ],
+  "status": "error",
+  "error": "Error: JEV HTTP 529",
+  "after": {
+    "EDGES": {
+      "pieces": [
+        1,
+        10,
+        7,
+        4,
+        2,
+        3,
+        8,
+        0,
+        11,
+        5,
+        9,
+        6
+      ],
+      "orientation": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "CORNERS": {
+      "pieces": [
+        0,
+        3,
+        7,
+        6,
+        2,
+        5,
+        1,
+        4
+      ],
+      "orientation": [
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2
+      ]
+    },
+    "CENTERS": {
+      "pieces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orientationMod": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "turns": 0,
+  "elapsedMs": 3277
+}

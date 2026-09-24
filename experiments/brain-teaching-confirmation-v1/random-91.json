@@ -1,0 +1,483 @@
+{
+  "id": "random-91",
+  "runId": "282ddcfd-e624-436d-8db5-a7f33c013f67",
+  "before": {
+    "EDGES": {
+      "pieces": [
+        11,
+        6,
+        5,
+        4,
+        9,
+        7,
+        3,
+        0,
+        10,
+        2,
+        8,
+        1
+      ],
+      "orientation": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "CORNERS": {
+      "pieces": [
+        7,
+        4,
+        3,
+        2,
+        1,
+        6,
+        5,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        2
+      ]
+    },
+    "CENTERS": {
+      "pieces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orientationMod": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "steps": [
+    {
+      "before": {
+        "EDGES": {
+          "pieces": [
+            11,
+            6,
+            5,
+            4,
+            9,
+            7,
+            3,
+            0,
+            10,
+            2,
+            8,
+            1
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            4,
+            3,
+            2,
+            1,
+            6,
+            5,
+            0
+          ],
+          "orientation": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            2,
+            0,
+            2
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "pendingPlan": null,
+      "exchanges": [
+        {
+          "id": "13538290-13c8-4bc8-b50e-4a9c24d5953a",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "completed": {
+                "daisy": 2,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 0
+              },
+              "uncollectedYellowEdges": 2,
+              "previousGoal": null,
+              "recentActions": []
+            },
+            "questions": {
+              "goal": {
+                "type": "choice",
+                "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+                "criteria": {
+                  "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                  "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                  "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                  "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                  "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                  "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                  "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                  "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "probabilities": {
+                  "top-orientation": 0,
+                  "middle-layer": 0,
+                  "top-edges": 0,
+                  "cross": 0,
+                  "daisy": 1,
+                  "top-cross": 0,
+                  "first-layer": 0,
+                  "top-corners": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 756,
+              "output_tokens": 86
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "confidence": 0.99,
+                "probabilities": {
+                  "top-orientation": 0,
+                  "middle-layer": 0,
+                  "top-edges": 0,
+                  "cross": 0,
+                  "daisy": 1,
+                  "top-cross": 0,
+                  "first-layer": 0,
+                  "top-corners": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 756,
+              "output_tokens": 86
+            }
+          },
+          "elapsedMs": 2081.249361000024,
+          "cost": 0.000031752000000000004
+        },
+        {
+          "id": "3f93ef0e-27ef-46a6-bbbe-8299762b3771",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": {
+                "frame": {
+                  "centers": {
+                    "U": "white",
+                    "D": "yellow",
+                    "F": "green",
+                    "B": "blue",
+                    "R": "red",
+                    "L": "orange"
+                  },
+                  "note": "Fixed frame: yellow D, white U. Clockwise is viewed directly at the turned face. Camera has no effect."
+                },
+                "edges": [
+                  "Edge DF is at UL. yellow faces U; green faces L.",
+                  "Edge DR is at UB. yellow faces B; red faces U.",
+                  "Edge DB is at UR. yellow faces U; blue faces R.",
+                  "Edge DL is at DR. yellow faces R; orange faces D."
+                ],
+                "memory": {
+                  "target": null,
+                  "recentActions": []
+                }
+              },
+              "checks": {
+                "petal_DF": "yes",
+                "bottom_DF": "no",
+                "petal_DR": "no",
+                "bottom_DR": "no",
+                "petal_DB": "yes",
+                "bottom_DB": "no",
+                "petal_DL": "no",
+                "bottom_DL": "no"
+              },
+              "counts": {
+                "petals": 2,
+                "bottom": 0
+              },
+              "uncollectedYellowEdges": 2,
+              "selectedGoal": "daisy",
+              "excludedTarget": null
+            },
+            "questions": {
+              "gatherTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is gathering missing petals, regardless of the goal answer in this request. Choose an edge with petal=no AND bottom=no. Preserve both existing petals and solved bottom edges. Prefer an accessible edge; any eligible edge is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is transferring petals, regardless of the goal answer in this request. Choose an edge with petal=yes AND bottom=no. Any eligible petal is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DR",
+                "probabilities": {
+                  "DR": 0.74,
+                  "DL": 0.23,
+                  "DF": 0,
+                  "DB": 0,
+                  "none": 0.03
+                },
+                "confidence": 0.67
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "probabilities": {
+                  "DR": 0,
+                  "DB": 0.06,
+                  "DF": 0.94,
+                  "none": 0,
+                  "DL": 0
+                },
+                "confidence": 0.92
+              }
+            },
+            "usage": {
+              "input_tokens": 885,
+              "output_tokens": 107
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DR",
+                "confidence": 0.67,
+                "probabilities": {
+                  "DR": 0.74,
+                  "DL": 0.23,
+                  "DF": 0,
+                  "DB": 0,
+                  "none": 0.03
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "confidence": 0.92,
+                "probabilities": {
+                  "DR": 0,
+                  "DB": 0.06,
+                  "DF": 0.94,
+                  "none": 0,
+                  "DL": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 885,
+              "output_tokens": 107
+            }
+          },
+          "elapsedMs": 2448.0428809998557,
+          "cost": 0.000037170000000000005
+        }
+      ]
+    }
+  ],
+  "status": "error",
+  "error": "Error: JEV HTTP 529",
+  "after": {
+    "EDGES": {
+      "pieces": [
+        11,
+        6,
+        5,
+        4,
+        9,
+        7,
+        3,
+        0,
+        10,
+        2,
+        8,
+        1
+      ],
+      "orientation": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "CORNERS": {
+      "pieces": [
+        7,
+        4,
+        3,
+        2,
+        1,
+        6,
+        5,
+        0
+      ],
+      "orientation": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        2
+      ]
+    },
+    "CENTERS": {
+      "pieces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orientationMod": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "turns": 0,
+  "elapsedMs": 8310
+}

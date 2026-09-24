@@ -1,0 +1,2046 @@
+{
+  "phase": "validation",
+  "rows": [
+    {
+      "id": "edge-0-10",
+      "variant": "sequential",
+      "acceptable": [
+        "R-forward"
+      ],
+      "runId": "50b4aef7-1cb7-4361-861a-088fafabde1d",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "05928610-793e-4336-89a6-a7206b505ec2",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "BR"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "L": 0,
+                  "F": 0,
+                  "R": 1,
+                  "B": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 1,
+                "probabilities": {
+                  "L": 0,
+                  "F": 0,
+                  "R": 1,
+                  "B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 760.3082529999999,
+          "cost": 0.000015834
+        },
+        {
+          "id": "a0e387f1-47f4-41fe-a067-740cfe6be5b3",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "R",
+              "partner": "corner",
+              "partnerPosition": "UFR"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "R-forward": "This direction puts the corner from URB into DBR. Choose only if partnerPosition is NOT URB.",
+                  "R-reverse": "This direction puts the corner from UFR into DBR. Choose only if partnerPosition is NOT UFR."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "probabilities": {
+                  "R-reverse": 0.13,
+                  "R-forward": 0.87
+                },
+                "confidence": 0.74
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "confidence": 0.74,
+                "probabilities": {
+                  "R-reverse": 0.13,
+                  "R-forward": 0.87
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 239.87210000000005,
+          "cost": 0.000018816000000000004
+        }
+      ],
+      "choice": "R-forward",
+      "passed": true
+    },
+    {
+      "id": "edge-1-9",
+      "variant": "sequential",
+      "acceptable": [
+        "L-forward",
+        "L-reverse"
+      ],
+      "runId": "0d4f3f59-1b2a-4d8f-ae75-7b10653afc39",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "568c19f3-4758-4bf5-8ac3-93f7909441a9",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "FL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "probabilities": {
+                  "L": 0.99,
+                  "F": 0.01,
+                  "B": 0,
+                  "R": 0
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "confidence": 0.98,
+                "probabilities": {
+                  "L": 0.99,
+                  "F": 0.01,
+                  "B": 0,
+                  "R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 809.840072,
+          "cost": 0.000015834
+        },
+        {
+          "id": "e6a2bfa8-c45c-4c6b-b224-a9dddf1a39bf",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "L",
+              "partner": "corner",
+              "partnerPosition": "URB"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "L-forward": "This direction puts the corner from ULF into DFL. Choose only if partnerPosition is NOT ULF.",
+                  "L-reverse": "This direction puts the corner from UBL into DFL. Choose only if partnerPosition is NOT UBL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-forward",
+                "probabilities": {
+                  "L-forward": 0.52,
+                  "L-reverse": 0.48
+                },
+                "confidence": 0.04
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-forward",
+                "confidence": 0.04,
+                "probabilities": {
+                  "L-forward": 0.52,
+                  "L-reverse": 0.48
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 401.2224719999999,
+          "cost": 0.000018816000000000004
+        }
+      ],
+      "choice": "L-forward",
+      "passed": true
+    },
+    {
+      "id": "edge-1-11",
+      "variant": "sequential",
+      "acceptable": [
+        "B-forward"
+      ],
+      "runId": "15ef744a-075d-47e1-9b62-3bd0681225f4",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "0f20ee79-f3f3-4d23-848b-880a8dcc93d8",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "BL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "probabilities": {
+                  "B": 1,
+                  "L": 0,
+                  "R": 0,
+                  "F": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "confidence": 1,
+                "probabilities": {
+                  "B": 1,
+                  "L": 0,
+                  "R": 0,
+                  "F": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 379.26142900000013,
+          "cost": 0.000015834
+        },
+        {
+          "id": "9755cf76-7d6e-46e0-855b-b62b3b32da39",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "B",
+              "partner": "corner",
+              "partnerPosition": "URB"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "B-forward": "This direction puts the corner from UBL into DLB. Choose only if partnerPosition is NOT UBL.",
+                  "B-reverse": "This direction puts the corner from URB into DLB. Choose only if partnerPosition is NOT URB."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-forward",
+                "probabilities": {
+                  "B-reverse": 0.05,
+                  "B-forward": 0.95
+                },
+                "confidence": 0.91
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-forward",
+                "confidence": 0.91,
+                "probabilities": {
+                  "B-reverse": 0.05,
+                  "B-forward": 0.95
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 370.0469470000003,
+          "cost": 0.000018816000000000004
+        }
+      ],
+      "choice": "B-forward",
+      "passed": true
+    },
+    {
+      "id": "edge-2-10",
+      "variant": "sequential",
+      "acceptable": [
+        "R-forward",
+        "R-reverse"
+      ],
+      "runId": "c422be7e-c3b4-45bd-9687-fcafbd56e5ba",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "daf2cb5a-9531-4782-b361-f95947dabc1c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "BR"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "L": 0,
+                  "R": 1,
+                  "B": 0,
+                  "F": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 1,
+                "probabilities": {
+                  "L": 0,
+                  "R": 1,
+                  "B": 0,
+                  "F": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 358.4236410000003,
+          "cost": 0.000015834
+        },
+        {
+          "id": "231eceec-2f97-45fc-a1dd-f900101817ed",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "R",
+              "partner": "corner",
+              "partnerPosition": "UBL"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "R-forward": "This direction puts the corner from URB into DBR. Choose only if partnerPosition is NOT URB.",
+                  "R-reverse": "This direction puts the corner from UFR into DBR. Choose only if partnerPosition is NOT UFR."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "probabilities": {
+                  "R-forward": 0.61,
+                  "R-reverse": 0.39
+                },
+                "confidence": 0.23
+              }
+            },
+            "usage": {
+              "input_tokens": 447,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "confidence": 0.23,
+                "probabilities": {
+                  "R-forward": 0.61,
+                  "R-reverse": 0.39
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 447,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 401.3970400000003,
+          "cost": 0.000018774000000000004
+        }
+      ],
+      "choice": "R-forward",
+      "passed": true
+    },
+    {
+      "id": "edge-3-9",
+      "variant": "sequential",
+      "acceptable": [
+        "L-reverse"
+      ],
+      "runId": "504a11ae-28c7-40c8-aadd-6499fa080b54",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "a5df68b0-8d20-4289-b245-595f666c03e4",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "FL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "probabilities": {
+                  "R": 0,
+                  "B": 0,
+                  "L": 0.98,
+                  "F": 0.02
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "confidence": 0.98,
+                "probabilities": {
+                  "R": 0,
+                  "B": 0,
+                  "L": 0.98,
+                  "F": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 352.84734500000013,
+          "cost": 0.000015834
+        },
+        {
+          "id": "eb966fb7-f9b1-4b02-83e3-02f101038cf1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "L",
+              "partner": "corner",
+              "partnerPosition": "ULF"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "L-forward": "This direction puts the corner from ULF into DFL. Choose only if partnerPosition is NOT ULF.",
+                  "L-reverse": "This direction puts the corner from UBL into DFL. Choose only if partnerPosition is NOT UBL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-reverse",
+                "probabilities": {
+                  "L-forward": 0.28,
+                  "L-reverse": 0.72
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 38
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-reverse",
+                "confidence": 0.44,
+                "probabilities": {
+                  "L-forward": 0.28,
+                  "L-reverse": 0.72
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 38
+            }
+          },
+          "elapsedMs": 391.9257160000002,
+          "cost": 0.000018816000000000004
+        }
+      ],
+      "choice": "L-reverse",
+      "passed": true
+    },
+    {
+      "id": "edge-3-11",
+      "variant": "sequential",
+      "acceptable": [
+        "B-forward",
+        "B-reverse"
+      ],
+      "runId": "733dc99c-28f9-49e1-b8da-6431d905c88b",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "e0fd97a9-b53f-446f-a389-c37591f0628e",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "BL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "probabilities": {
+                  "F": 0,
+                  "L": 0,
+                  "R": 0,
+                  "B": 1
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "confidence": 1,
+                "probabilities": {
+                  "F": 0,
+                  "L": 0,
+                  "R": 0,
+                  "B": 1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 364.6527430000001,
+          "cost": 0.000015834
+        },
+        {
+          "id": "d2e435fe-07ad-46cf-a028-3a8cffd6fe63",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "B",
+              "partner": "corner",
+              "partnerPosition": "ULF"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "B-forward": "This direction puts the corner from UBL into DLB. Choose only if partnerPosition is NOT UBL.",
+                  "B-reverse": "This direction puts the corner from URB into DLB. Choose only if partnerPosition is NOT URB."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-forward",
+                "probabilities": {
+                  "B-forward": 0.53,
+                  "B-reverse": 0.47
+                },
+                "confidence": 0.05
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-forward",
+                "confidence": 0.05,
+                "probabilities": {
+                  "B-forward": 0.53,
+                  "B-reverse": 0.47
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 342.8777949999999,
+          "cost": 0.000018816000000000004
+        }
+      ],
+      "choice": "B-forward",
+      "passed": true
+    },
+    {
+      "id": "edge-4-10",
+      "variant": "sequential",
+      "acceptable": [
+        "R-forward",
+        "R-reverse"
+      ],
+      "runId": "fb18a078-5559-4481-a05c-1c0c4c07d5b5",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "710b02cd-657a-4e5b-b8c8-f99e5e862072",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "BR"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "L": 0,
+                  "R": 1,
+                  "B": 0,
+                  "F": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 1,
+                "probabilities": {
+                  "L": 0,
+                  "R": 1,
+                  "B": 0,
+                  "F": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 377,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 336.666741,
+          "cost": 0.000015834
+        },
+        {
+          "id": "e3b1b414-718f-4322-88e5-9411eaff2182",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "R",
+              "partner": "corner",
+              "partnerPosition": "DRF"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "R-forward": "This direction puts the corner from URB into DBR. Choose only if partnerPosition is NOT URB.",
+                  "R-reverse": "This direction puts the corner from UFR into DBR. Choose only if partnerPosition is NOT UFR."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "probabilities": {
+                  "R-forward": 0.55,
+                  "R-reverse": 0.45
+                },
+                "confidence": 0.11
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "confidence": 0.11,
+                "probabilities": {
+                  "R-forward": 0.55,
+                  "R-reverse": 0.45
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 422.84493399999974,
+          "cost": 0.000018816000000000004
+        }
+      ],
+      "choice": "R-forward",
+      "passed": true
+    },
+    {
+      "id": "corner-5-0",
+      "variant": "sequential",
+      "acceptable": [
+        "L-forward",
+        "L-reverse"
+      ],
+      "runId": "4a383505-0c47-4242-aef8-dac616bde83f",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "7277afe4-ee9f-4bf2-8391-dbdf6558748c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DFL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "probabilities": {
+                  "R": 0,
+                  "L": 0.99,
+                  "F": 0.01,
+                  "B": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "confidence": 0.99,
+                "probabilities": {
+                  "R": 0,
+                  "L": 0.99,
+                  "F": 0.01,
+                  "B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 414.71690599999965,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "ac2dc431-5933-4a32-9cb0-c3f09b25b49d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "L",
+              "partner": "edge",
+              "partnerPosition": "UF"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "L-forward": "This direction puts the edge from UR into FL. Choose only if partnerPosition is NOT UR.",
+                  "L-reverse": "This direction puts the edge from UL into FL. Choose only if partnerPosition is NOT UL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-reverse",
+                "probabilities": {
+                  "L-forward": 0.49,
+                  "L-reverse": 0.51
+                },
+                "confidence": 0.01
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 38
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-reverse",
+                "confidence": 0.01,
+                "probabilities": {
+                  "L-forward": 0.49,
+                  "L-reverse": 0.51
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 38
+            }
+          },
+          "elapsedMs": 569.1899789999998,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "L-reverse",
+      "passed": true
+    },
+    {
+      "id": "corner-5-2",
+      "variant": "sequential",
+      "acceptable": [
+        "L-forward",
+        "L-reverse"
+      ],
+      "runId": "89351e54-bdcd-4904-8605-6986f0ad1952",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "1deb871d-831e-416c-97a3-8a8dde77ca5b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DFL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "probabilities": {
+                  "L": 1,
+                  "F": 0,
+                  "R": 0,
+                  "B": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "confidence": 0.99,
+                "probabilities": {
+                  "L": 1,
+                  "F": 0,
+                  "R": 0,
+                  "B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 558.8206179999997,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "e60e70e9-8535-4ac3-a540-7ab611a2d4b1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "L",
+              "partner": "edge",
+              "partnerPosition": "UB"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "L-forward": "This direction puts the edge from UR into FL. Choose only if partnerPosition is NOT UR.",
+                  "L-reverse": "This direction puts the edge from UL into FL. Choose only if partnerPosition is NOT UL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-forward",
+                "probabilities": {
+                  "L-reverse": 0.48,
+                  "L-forward": 0.52
+                },
+                "confidence": 0.03
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-forward",
+                "confidence": 0.03,
+                "probabilities": {
+                  "L-reverse": 0.48,
+                  "L-forward": 0.52
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 923.4424010000002,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "L-forward",
+      "passed": true
+    },
+    {
+      "id": "corner-5-8",
+      "variant": "sequential",
+      "acceptable": [
+        "L-forward",
+        "L-reverse"
+      ],
+      "runId": "10b9175b-cf0c-4237-9f7c-8d220d1b1f2d",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "46a73e4d-8140-43df-bd5a-98fff86772af",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DFL"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "probabilities": {
+                  "L": 0.99,
+                  "F": 0.01,
+                  "B": 0,
+                  "R": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "L",
+                "confidence": 0.99,
+                "probabilities": {
+                  "L": 0.99,
+                  "F": 0.01,
+                  "B": 0,
+                  "R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 303.98953600000004,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "981cc4b0-0fa7-419e-925c-231e78a4a19d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "L",
+              "partner": "edge",
+              "partnerPosition": "FR"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "L-forward": "This direction puts the edge from UR into FL. Choose only if partnerPosition is NOT UR.",
+                  "L-reverse": "This direction puts the edge from UL into FL. Choose only if partnerPosition is NOT UL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-forward",
+                "probabilities": {
+                  "L-forward": 0.58,
+                  "L-reverse": 0.42
+                },
+                "confidence": 0.15
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "L-forward",
+                "confidence": 0.15,
+                "probabilities": {
+                  "L-forward": 0.58,
+                  "L-reverse": 0.42
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 252.38009799999963,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "L-forward",
+      "passed": true
+    },
+    {
+      "id": "corner-6-1",
+      "variant": "sequential",
+      "acceptable": [
+        "B-forward",
+        "B-reverse"
+      ],
+      "runId": "a0d722a3-1e64-4729-8804-93c3b04fdcbc",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "6f0b4dbe-7c35-4b7b-bf54-3f2b7a435ca7",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DLB"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "probabilities": {
+                  "L": 0.01,
+                  "R": 0,
+                  "B": 0.99,
+                  "F": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "confidence": 0.99,
+                "probabilities": {
+                  "L": 0.01,
+                  "R": 0,
+                  "B": 0.99,
+                  "F": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 346.6922400000003,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "e9cb401b-1a4a-4dc0-8977-0d46338efe68",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "B",
+              "partner": "edge",
+              "partnerPosition": "UR"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "B-forward": "This direction puts the edge from UF into BL. Choose only if partnerPosition is NOT UF.",
+                  "B-reverse": "This direction puts the edge from UB into BL. Choose only if partnerPosition is NOT UB."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-forward",
+                "probabilities": {
+                  "B-reverse": 0.49,
+                  "B-forward": 0.51
+                },
+                "confidence": 0.01
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-forward",
+                "confidence": 0.01,
+                "probabilities": {
+                  "B-reverse": 0.49,
+                  "B-forward": 0.51
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 612.8438729999998,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "B-forward",
+      "passed": true
+    },
+    {
+      "id": "corner-6-3",
+      "variant": "sequential",
+      "acceptable": [
+        "B-forward",
+        "B-reverse"
+      ],
+      "runId": "543cbfd8-6501-49c6-8ca4-63f474fcaf23",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "0116836f-228b-44ce-9095-e233825a326c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DLB"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "probabilities": {
+                  "B": 0.99,
+                  "R": 0,
+                  "F": 0,
+                  "L": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "B",
+                "confidence": 0.99,
+                "probabilities": {
+                  "B": 0.99,
+                  "R": 0,
+                  "F": 0,
+                  "L": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 330.2567719999997,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "a25ce85e-c669-4e80-85ab-cdf5ff0101ef",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "B",
+              "partner": "edge",
+              "partnerPosition": "UL"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "B-forward": "This direction puts the edge from UF into BL. Choose only if partnerPosition is NOT UF.",
+                  "B-reverse": "This direction puts the edge from UB into BL. Choose only if partnerPosition is NOT UB."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-reverse",
+                "probabilities": {
+                  "B-forward": 0.45,
+                  "B-reverse": 0.55
+                },
+                "confidence": 0.11
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 38
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "B-reverse",
+                "confidence": 0.11,
+                "probabilities": {
+                  "B-forward": 0.45,
+                  "B-reverse": 0.55
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 38
+            }
+          },
+          "elapsedMs": 584.3058110000002,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "B-reverse",
+      "passed": true
+    },
+    {
+      "id": "corner-7-0",
+      "variant": "sequential",
+      "acceptable": [
+        "R-forward",
+        "R-reverse"
+      ],
+      "runId": "0e1089ba-cfde-4df9-a905-0dece342904e",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "a4bd62f8-5242-41d4-8402-a12569d953e1",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DBR"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "R": 1,
+                  "L": 0,
+                  "F": 0,
+                  "B": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 1,
+                "probabilities": {
+                  "R": 1,
+                  "L": 0,
+                  "F": 0,
+                  "B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 341.69357300000047,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "ee9a03b7-14e5-46bc-b54a-9f131010cfba",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "R",
+              "partner": "edge",
+              "partnerPosition": "UF"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "R-forward": "This direction puts the edge from UL into BR. Choose only if partnerPosition is NOT UL.",
+                  "R-reverse": "This direction puts the edge from UR into BR. Choose only if partnerPosition is NOT UR."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "probabilities": {
+                  "R-reverse": 0.45,
+                  "R-forward": 0.55
+                },
+                "confidence": 0.1
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "confidence": 0.1,
+                "probabilities": {
+                  "R-reverse": 0.45,
+                  "R-forward": 0.55
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 428.83439199999884,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "R-forward",
+      "passed": true
+    },
+    {
+      "id": "corner-7-2",
+      "variant": "sequential",
+      "acceptable": [
+        "R-forward",
+        "R-reverse"
+      ],
+      "runId": "46d566fe-31a1-4968-9569-c098716071ae",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "863e1701-3fdc-4bc4-acb6-19fa07d092cc",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DBR"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "R": 1,
+                  "L": 0,
+                  "F": 0,
+                  "B": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 1,
+                "probabilities": {
+                  "R": 1,
+                  "L": 0,
+                  "F": 0,
+                  "B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 416.44882099999995,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "99d1f2bc-6969-44e7-a49f-f4378a01ac45",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "R",
+              "partner": "edge",
+              "partnerPosition": "UB"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "R-forward": "This direction puts the edge from UL into BR. Choose only if partnerPosition is NOT UL.",
+                  "R-reverse": "This direction puts the edge from UR into BR. Choose only if partnerPosition is NOT UR."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "probabilities": {
+                  "R-reverse": 0.49,
+                  "R-forward": 0.51
+                },
+                "confidence": 0.02
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "confidence": 0.02,
+                "probabilities": {
+                  "R-reverse": 0.49,
+                  "R-forward": 0.51
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 502.0751,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "R-forward",
+      "passed": true
+    },
+    {
+      "id": "corner-7-8",
+      "variant": "sequential",
+      "acceptable": [
+        "R-forward",
+        "R-reverse"
+      ],
+      "runId": "02d07e0e-dc9f-4527-a602-5ae16b58fbd5",
+      "status": "complete",
+      "exchanges": [
+        {
+          "id": "d74a4d38-27fb-4557-953e-55a36b68ecce",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DBR"
+            },
+            "questions": {
+              "slot": {
+                "type": "choice",
+                "instructions": "Choose the slot containing the piece to extract. Use its current position, not its destination.",
+                "criteria": {
+                  "F": "Corner DRF or edge FR.",
+                  "R": "Corner DBR or edge BR.",
+                  "B": "Corner DLB or edge BL.",
+                  "L": "Corner DFL or edge FL."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "F": 0,
+                  "R": 1,
+                  "B": 0,
+                  "L": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "slot": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 1,
+                "probabilities": {
+                  "F": 0,
+                  "R": 1,
+                  "B": 0,
+                  "L": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 378,
+              "output_tokens": 45
+            }
+          },
+          "elapsedMs": 571.8529070000004,
+          "cost": 0.000015876000000000002
+        },
+        {
+          "id": "085c4006-9138-4d27-a94e-6a397a1ee02b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedSlot": "R",
+              "partner": "edge",
+              "partnerPosition": "FR"
+            },
+            "questions": {
+              "extraction": {
+                "type": "choice",
+                "instructions": "The selected slot must be opened. Choose the direction that does NOT send the target partner down into this slot. Compare partnerPosition to the incoming position described in each option. If the partner is already in its own bottom/middle home, either direction is safe. If both are safe, either is acceptable.",
+                "criteria": {
+                  "R-forward": "This direction puts the edge from UL into BR. Choose only if partnerPosition is NOT UL.",
+                  "R-reverse": "This direction puts the edge from UR into BR. Choose only if partnerPosition is NOT UR."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "probabilities": {
+                  "R-reverse": 0.46,
+                  "R-forward": 0.54
+                },
+                "confidence": 0.08
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "extraction": {
+                "type": "choice",
+                "choice": "R-forward",
+                "confidence": 0.08,
+                "probabilities": {
+                  "R-reverse": 0.46,
+                  "R-forward": 0.54
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 441,
+              "output_tokens": 37
+            }
+          },
+          "elapsedMs": 535.2648149999986,
+          "cost": 0.000018522000000000003
+        }
+      ],
+      "choice": "R-forward",
+      "passed": true
+    }
+  ],
+  "usage": {
+    "requests": 60,
+    "cost": 0.0010355940000000001
+  }
+}

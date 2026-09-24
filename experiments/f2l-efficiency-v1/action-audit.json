@@ -1,0 +1,460 @@
+{
+  "input": "experiments/last-layer-efficiency-v1/full-integration/results.json",
+  "rows": [
+    {
+      "id": "pair-1",
+      "groups": {
+        "extract-corner": {
+          "actions": 1,
+          "turns": 3
+        },
+        "align-corner": {
+          "actions": 6,
+          "turns": 6
+        },
+        "routine": {
+          "actions": 4,
+          "turns": 31
+        },
+        "align-edge": {
+          "actions": 1,
+          "turns": 1
+        }
+      },
+      "actions": [
+        {
+          "target": "FR",
+          "preparation": "extract-corner",
+          "routine": "extract@L",
+          "alg": "F U F'",
+          "turns": 3,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "routine",
+          "routine": "pair-25",
+          "alg": "U R U' R' U' R U' R' U R U' R'",
+          "turns": 12,
+          "newlySolved": [
+            "FR",
+            "DRF"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BR",
+          "preparation": "routine",
+          "routine": "pair-05",
+          "alg": "B U B'",
+          "turns": 3,
+          "newlySolved": [
+            "BR",
+            "DBR"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "align-edge",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "routine",
+          "routine": "pair-31",
+          "alg": "U' L U L' U' L U L'",
+          "turns": 8,
+          "newlySolved": [
+            "BL",
+            "DLB"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "routine",
+          "routine": "pair-37",
+          "alg": "U L' U' L U' F U F'",
+          "turns": 8,
+          "newlySolved": [
+            "FL",
+            "DFL"
+          ],
+          "middleAfter": true
+        }
+      ]
+    },
+    {
+      "id": "pair-2",
+      "groups": {
+        "align-edge": {
+          "actions": 2,
+          "turns": 2
+        },
+        "routine": {
+          "actions": 4,
+          "turns": 32
+        },
+        "align-corner": {
+          "actions": 2,
+          "turns": 2
+        }
+      },
+      "actions": [
+        {
+          "target": "FR",
+          "preparation": "align-edge",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "align-edge",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "routine",
+          "routine": "pair-31",
+          "alg": "U' R U R' U' R U R'",
+          "turns": 8,
+          "newlySolved": [
+            "FR",
+            "DRF"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BR",
+          "preparation": "routine",
+          "routine": "pair-12",
+          "alg": "U' B U' B' U B U B'",
+          "turns": 8,
+          "newlySolved": [
+            "BR",
+            "DBR"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "routine",
+          "routine": "pair-28",
+          "alg": "U L U' L' U' B' U B",
+          "turns": 8,
+          "newlySolved": [
+            "BL"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "routine",
+          "routine": "pair-06",
+          "alg": "U' F U' F' U L' U' L",
+          "turns": 8,
+          "newlySolved": [
+            "FL",
+            "DFL"
+          ],
+          "middleAfter": true
+        }
+      ]
+    },
+    {
+      "id": "pair-3",
+      "groups": {
+        "align-corner": {
+          "actions": 4,
+          "turns": 4
+        },
+        "routine": {
+          "actions": 4,
+          "turns": 30
+        }
+      },
+      "actions": [
+        {
+          "target": "BR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BR",
+          "preparation": "routine",
+          "routine": "pair-03",
+          "alg": "U' R' U R",
+          "turns": 4,
+          "newlySolved": [
+            "BR",
+            "DBR"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "routine",
+          "routine": "pair-22",
+          "alg": "L U' L' U2 B' U' B",
+          "turns": 7,
+          "newlySolved": [
+            "BL",
+            "DLB"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "align-corner",
+          "routine": "U2",
+          "alg": "U2",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "routine",
+          "routine": "pair-37",
+          "alg": "U L' U' L U' F U F'",
+          "turns": 8,
+          "newlySolved": [
+            "FL",
+            "DFL"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "routine",
+          "routine": "pair-41",
+          "alg": "R U R' U' R U' R' U2 F' U' F",
+          "turns": 11,
+          "newlySolved": [
+            "FR",
+            "DRF"
+          ],
+          "middleAfter": true
+        }
+      ]
+    },
+    {
+      "id": "pair-4",
+      "groups": {
+        "align-corner": {
+          "actions": 3,
+          "turns": 3
+        },
+        "routine": {
+          "actions": 4,
+          "turns": 31
+        },
+        "align-edge": {
+          "actions": 2,
+          "turns": 2
+        }
+      },
+      "actions": [
+        {
+          "target": "FR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FR",
+          "preparation": "routine",
+          "routine": "pair-36",
+          "alg": "U' R U R' U F' U' F",
+          "turns": 8,
+          "newlySolved": [
+            "FR",
+            "DRF"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BR",
+          "preparation": "routine",
+          "routine": "pair-35",
+          "alg": "U B U B' U2 B U B'",
+          "turns": 8,
+          "newlySolved": [
+            "DBR"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "align-edge",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "align-edge",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "BL",
+          "preparation": "routine",
+          "routine": "pair-30",
+          "alg": "B' U' B U B' U' B",
+          "turns": 7,
+          "newlySolved": [
+            "BL",
+            "DLB"
+          ],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "align-corner",
+          "routine": "U'",
+          "alg": "U'",
+          "turns": 1,
+          "newlySolved": [],
+          "middleAfter": false
+        },
+        {
+          "target": "FL",
+          "preparation": "routine",
+          "routine": "pair-06",
+          "alg": "U' F U' F' U L' U' L",
+          "turns": 8,
+          "newlySolved": [
+            "FL",
+            "DFL"
+          ],
+          "middleAfter": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2113 @@
+{
+  "id": "random-88",
+  "runId": "836ef605-58db-452c-ac47-cb3445ccf98b",
+  "before": {
+    "EDGES": {
+      "pieces": [
+        1,
+        4,
+        7,
+        11,
+        9,
+        5,
+        2,
+        10,
+        6,
+        0,
+        8,
+        3
+      ],
+      "orientation": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "CORNERS": {
+      "pieces": [
+        1,
+        5,
+        6,
+        0,
+        7,
+        2,
+        3,
+        4
+      ],
+      "orientation": [
+        2,
+        1,
+        0,
+        0,
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    "CENTERS": {
+      "pieces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orientationMod": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "steps": [
+    {
+      "before": {
+        "EDGES": {
+          "pieces": [
+            1,
+            4,
+            7,
+            11,
+            9,
+            5,
+            2,
+            10,
+            6,
+            0,
+            8,
+            3
+          ],
+          "orientation": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            5,
+            6,
+            0,
+            7,
+            2,
+            3,
+            4
+          ],
+          "orientation": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            2,
+            1
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "pendingPlan": null,
+      "exchanges": [
+        {
+          "id": "6759f3a3-f9f9-4a27-a77b-ba21589ecbd5",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "completed": {
+                "daisy": 0,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 0
+              },
+              "uncollectedYellowEdges": 4,
+              "previousGoal": null,
+              "recentActions": []
+            },
+            "questions": {
+              "goal": {
+                "type": "choice",
+                "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+                "criteria": {
+                  "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                  "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                  "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                  "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                  "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                  "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                  "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                  "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "probabilities": {
+                  "daisy": 1,
+                  "top-cross": 0,
+                  "top-edges": 0,
+                  "top-corners": 0,
+                  "cross": 0,
+                  "middle-layer": 0,
+                  "first-layer": 0,
+                  "top-orientation": 0
+                },
+                "confidence": 1
+              }
+            },
+            "usage": {
+              "input_tokens": 756,
+              "output_tokens": 86
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "confidence": 1,
+                "probabilities": {
+                  "daisy": 1,
+                  "top-cross": 0,
+                  "top-edges": 0,
+                  "top-corners": 0,
+                  "cross": 0,
+                  "middle-layer": 0,
+                  "first-layer": 0,
+                  "top-orientation": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 756,
+              "output_tokens": 86
+            }
+          },
+          "elapsedMs": 2558.9442620002665,
+          "cost": 0.000031752000000000004
+        },
+        {
+          "id": "fac09ee1-6bd8-4af1-8284-364397bf0a5b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": {
+                "frame": {
+                  "centers": {
+                    "U": "white",
+                    "D": "yellow",
+                    "F": "green",
+                    "B": "blue",
+                    "R": "red",
+                    "L": "orange"
+                  },
+                  "note": "Fixed frame: yellow D, white U. Clockwise is viewed directly at the turned face. Camera has no effect."
+                },
+                "edges": [
+                  "Edge DF is at UR. yellow faces R; green faces U.",
+                  "Edge DR is at DR. yellow faces R; red faces D.",
+                  "Edge DB is at FR. yellow faces F; blue faces R.",
+                  "Edge DL is at UB. yellow faces B; orange faces U."
+                ],
+                "memory": {
+                  "target": null,
+                  "recentActions": []
+                }
+              },
+              "checks": {
+                "petal_DF": "no",
+                "bottom_DF": "no",
+                "petal_DR": "no",
+                "bottom_DR": "no",
+                "petal_DB": "no",
+                "bottom_DB": "no",
+                "petal_DL": "no",
+                "bottom_DL": "no"
+              },
+              "counts": {
+                "petals": 0,
+                "bottom": 0
+              },
+              "uncollectedYellowEdges": 4,
+              "selectedGoal": "daisy",
+              "excludedTarget": null
+            },
+            "questions": {
+              "gatherTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is gathering missing petals, regardless of the goal answer in this request. Choose an edge with petal=no AND bottom=no. Preserve both existing petals and solved bottom edges. Prefer an accessible edge; any eligible edge is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is transferring petals, regardless of the goal answer in this request. Choose an edge with petal=yes AND bottom=no. Any eligible petal is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "probabilities": {
+                  "DL": 0.06,
+                  "DB": 0.05,
+                  "DR": 0.17,
+                  "DF": 0.64,
+                  "none": 0.08
+                },
+                "confidence": 0.56
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "none",
+                "probabilities": {
+                  "DL": 0.01,
+                  "DB": 0.01,
+                  "DR": 0,
+                  "DF": 0.07,
+                  "none": 0.91
+                },
+                "confidence": 0.88
+              }
+            },
+            "usage": {
+              "input_tokens": 885,
+              "output_tokens": 107
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "confidence": 0.56,
+                "probabilities": {
+                  "DL": 0.06,
+                  "DB": 0.05,
+                  "DR": 0.17,
+                  "DF": 0.64,
+                  "none": 0.08
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "none",
+                "confidence": 0.88,
+                "probabilities": {
+                  "DL": 0.01,
+                  "DB": 0.01,
+                  "DR": 0,
+                  "DF": 0.07,
+                  "none": 0.91
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 885,
+              "output_tokens": 107
+            }
+          },
+          "elapsedMs": 2806.5947519997135,
+          "cost": 0.000037170000000000005
+        },
+        {
+          "id": "5dd255e8-dac8-4c0b-86c5-9af5e3dbe68d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "UR",
+              "yellowDirection": "R"
+            },
+            "questions": {
+              "situation": {
+                "type": "choice",
+                "instructions": "Classify this selected edge using ONLY currentPosition and yellowDirection. First check yellowDirection=U (petal). Otherwise currentPosition starting D is bottom; starting U is top; all other edge positions are middle. The piece identity is deliberately omitted.",
+                "criteria": {
+                  "petal": "Yellow faces U",
+                  "bottomDown": "Edge is on D and yellow faces D",
+                  "bottomSide": "Edge is on D and yellow faces a side",
+                  "middle": "Edge is between side faces, not on U or D",
+                  "topSide": "Edge is on U and yellow faces a side"
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "instructions": "Choose the reference front. If yellowDirection is F/R/B/L, choose that face. If yellowDirection is U or D, choose the other letter of currentPosition. Use current position only.",
+                "criteria": {
+                  "F": "Front F",
+                  "R": "Front R",
+                  "B": "Front B",
+                  "L": "Front L"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "topSide",
+                "probabilities": {
+                  "bottomSide": 0,
+                  "topSide": 0.99,
+                  "petal": 0,
+                  "bottomDown": 0,
+                  "middle": 0.01
+                },
+                "confidence": 0.98
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "B": 0,
+                  "R": 0.98,
+                  "L": 0.01,
+                  "F": 0.01
+                },
+                "confidence": 0.96
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 103
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "topSide",
+                "confidence": 0.98,
+                "probabilities": {
+                  "bottomSide": 0,
+                  "topSide": 0.99,
+                  "petal": 0,
+                  "bottomDown": 0,
+                  "middle": 0.01
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 0.96,
+                "probabilities": {
+                  "B": 0,
+                  "R": 0.98,
+                  "L": 0.01,
+                  "F": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 103
+            }
+          },
+          "elapsedMs": 2422.978114000056,
+          "cost": 0.000024612000000000004
+        },
+        {
+          "id": "4c81d4ec-c56f-42f5-95b2-f364489db766",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "position": "UF",
+                "layer": "top",
+                "yellowDirection": "F",
+                "sideColor": "green",
+                "sideDirection": "U",
+                "adjacentCenter": "white",
+                "sideMatchesCenter": false
+              },
+              "protectedBottomSlots": [],
+              "previouslyRejectedByModel": []
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Choose a routine whose position AND yellow direction match the current target, with no affectedBottomSlot in protectedBottomSlots. Ignore landing occupancy for now. Prefer a lift over staging initially. If a previous routine was rejected by the model, choose a different matching routine, including a staging routine. Do not repeat a rejected routine.",
+                "criteria": {
+                  "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"]}",
+                  "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"]}",
+                  "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"]}",
+                  "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"]}",
+                  "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "reconsider": "No matching routine remains."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "flip-top-edge",
+                "probabilities": {
+                  "cross-flip-top-left": 0.02,
+                  "lower-top-edge": 0.01,
+                  "cross-flip-top-right": 0.03,
+                  "flip-top-edge-left": 0.11,
+                  "reconsider": 0,
+                  "flip-top-edge": 0.73,
+                  "lift-middle-left": 0.01,
+                  "cross-flip-bottom": 0,
+                  "lift-bottom": 0.02,
+                  "cross-lift-left": 0.04,
+                  "lift-middle-right": 0.01,
+                  "stage-bottom-edge": 0,
+                  "cross-lift-right": 0.02
+                },
+                "confidence": 0.72
+              }
+            },
+            "usage": {
+              "input_tokens": 1603,
+              "output_tokens": 143
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "flip-top-edge",
+                "confidence": 0.72,
+                "probabilities": {
+                  "cross-flip-top-left": 0.02,
+                  "lower-top-edge": 0.01,
+                  "cross-flip-top-right": 0.03,
+                  "flip-top-edge-left": 0.11,
+                  "reconsider": 0,
+                  "flip-top-edge": 0.73,
+                  "lift-middle-left": 0.01,
+                  "cross-flip-bottom": 0,
+                  "lift-bottom": 0.02,
+                  "cross-lift-left": 0.04,
+                  "lift-middle-right": 0.01,
+                  "stage-bottom-edge": 0,
+                  "cross-lift-right": 0.02
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 1603,
+              "output_tokens": 143
+            }
+          },
+          "elapsedMs": 2567.4368380000815,
+          "cost": 0.00006732600000000001
+        },
+        {
+          "id": "eaa43af6-1694-452c-b3b2-4dbb6801e525",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "position": "UF",
+                "layer": "top",
+                "yellowDirection": "F",
+                "sideColor": "green",
+                "sideDirection": "U",
+                "adjacentCenter": "white",
+                "sideMatchesCenter": false
+              },
+              "centers": {
+                "U": "white",
+                "D": "yellow",
+                "L": "green",
+                "R": "blue",
+                "F": "red",
+                "B": "orange"
+              },
+              "yellowUpPetals": {
+                "UF": false,
+                "UR": false,
+                "UB": false,
+                "UL": false
+              },
+              "selectedRoutine": {
+                "id": "flip-top-edge",
+                "sequence": "F R",
+                "requiredFreeSlots": [
+                  "UF",
+                  "UR"
+                ]
+              },
+              "frame": "Local reference front=R; U and D stay fixed. Occupied means a yellow-up petal, not just any edge."
+            },
+            "questions": {
+              "decision": {
+                "type": "choice",
+                "instructions": "The model already selected a lift from the fixed routine reference. Inspect only selectedRoutine.requiredFreeSlots. If none of those slots contains a yellow-up petal, choose execute. Otherwise, if target.layer is bottom or middle choose clear. If a required slot is occupied and target.layer is top choose lower, because rotating U would move this target too. Other occupied slots do not matter.",
+                "criteria": {
+                  "execute": "Execute the selected lift",
+                  "clear": "Clear a landing slot with a top setup first",
+                  "lower": "Lower the top target before making space"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "decision": {
+                "type": "choice",
+                "choice": "execute",
+                "probabilities": {
+                  "lower": 0.01,
+                  "clear": 0,
+                  "execute": 0.99
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 661,
+              "output_tokens": 38
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "decision": {
+                "type": "choice",
+                "choice": "execute",
+                "confidence": 0.98,
+                "probabilities": {
+                  "lower": 0.01,
+                  "clear": 0,
+                  "execute": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 661,
+              "output_tokens": 38
+            }
+          },
+          "elapsedMs": 6185.9000110002235,
+          "cost": 0.000027762000000000003
+        }
+      ],
+      "decision": {
+        "goal": "daisy",
+        "target": "DF",
+        "front": "R",
+        "skill": "flip-top-edge",
+        "alg": "R B",
+        "intent": "execute",
+        "early": {
+          "plan": {
+            "goal": "daisy",
+            "gatherTarget": "DF",
+            "transferTarget": "none"
+          },
+          "target": "DF",
+          "front": "R",
+          "routine": "flip-top-edge",
+          "preparation": "execute",
+          "recognised": {
+            "situation": "topSide",
+            "reference": "R"
+          },
+          "plannedRoutine": "flip-top-edge",
+          "recovery": [],
+          "alg": "R B"
+        }
+      },
+      "alg": "R B",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            6,
+            4,
+            11,
+            9,
+            8,
+            3,
+            10,
+            5,
+            0,
+            2,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            5,
+            1,
+            0,
+            4,
+            2,
+            6,
+            3
+          ],
+          "orientation": [
+            0,
+            2,
+            1,
+            0,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "nextPendingPlan": null
+    },
+    {
+      "before": {
+        "EDGES": {
+          "pieces": [
+            1,
+            6,
+            4,
+            11,
+            9,
+            8,
+            3,
+            10,
+            5,
+            0,
+            2,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            7,
+            5,
+            1,
+            0,
+            4,
+            2,
+            6,
+            3
+          ],
+          "orientation": [
+            0,
+            2,
+            1,
+            0,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "pendingPlan": null,
+      "exchanges": [
+        {
+          "id": "c2c8e4b4-b5f3-4f58-9814-e2e875eb15eb",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "completed": {
+                "daisy": 2,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 0
+              },
+              "uncollectedYellowEdges": 2,
+              "previousGoal": "daisy",
+              "recentActions": [
+                "R B"
+              ]
+            },
+            "questions": {
+              "goal": {
+                "type": "choice",
+                "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+                "criteria": {
+                  "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                  "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                  "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                  "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                  "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                  "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                  "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                  "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "probabilities": {
+                  "cross": 0.01,
+                  "top-corners": 0,
+                  "middle-layer": 0,
+                  "top-orientation": 0,
+                  "daisy": 0.99,
+                  "top-edges": 0,
+                  "first-layer": 0,
+                  "top-cross": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 763,
+              "output_tokens": 86
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "confidence": 0.99,
+                "probabilities": {
+                  "cross": 0.01,
+                  "top-corners": 0,
+                  "middle-layer": 0,
+                  "top-orientation": 0,
+                  "daisy": 0.99,
+                  "top-edges": 0,
+                  "first-layer": 0,
+                  "top-cross": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 763,
+              "output_tokens": 86
+            }
+          },
+          "elapsedMs": 6739.020467000082,
+          "cost": 0.000032046000000000005
+        },
+        {
+          "id": "2f5688ec-fedd-41b7-affc-62559ced1af7",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": {
+                "frame": {
+                  "centers": {
+                    "U": "white",
+                    "D": "yellow",
+                    "F": "green",
+                    "B": "blue",
+                    "R": "red",
+                    "L": "orange"
+                  },
+                  "note": "Fixed frame: yellow D, white U. Clockwise is viewed directly at the turned face. Camera has no effect."
+                },
+                "edges": [
+                  "Edge DF is at UB. yellow faces U; green faces B.",
+                  "Edge DR is at FR. yellow faces R; red faces F.",
+                  "Edge DB is at UR. yellow faces U; blue faces R.",
+                  "Edge DL is at BL. yellow faces B; orange faces L."
+                ],
+                "memory": {
+                  "target": "DF",
+                  "recentActions": [
+                    "R B"
+                  ]
+                }
+              },
+              "checks": {
+                "petal_DF": "yes",
+                "bottom_DF": "no",
+                "petal_DR": "no",
+                "bottom_DR": "no",
+                "petal_DB": "yes",
+                "bottom_DB": "no",
+                "petal_DL": "no",
+                "bottom_DL": "no"
+              },
+              "counts": {
+                "petals": 2,
+                "bottom": 0
+              },
+              "uncollectedYellowEdges": 2,
+              "selectedGoal": "daisy",
+              "excludedTarget": null
+            },
+            "questions": {
+              "gatherTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is gathering missing petals, regardless of the goal answer in this request. Choose an edge with petal=no AND bottom=no. Preserve both existing petals and solved bottom edges. Prefer an accessible edge; any eligible edge is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is transferring petals, regardless of the goal answer in this request. Choose an edge with petal=yes AND bottom=no. Any eligible petal is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DR",
+                "probabilities": {
+                  "DF": 0,
+                  "none": 0.02,
+                  "DR": 0.86,
+                  "DB": 0,
+                  "DL": 0.12
+                },
+                "confidence": 0.82
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "probabilities": {
+                  "DF": 0.92,
+                  "none": 0,
+                  "DR": 0,
+                  "DB": 0.08,
+                  "DL": 0
+                },
+                "confidence": 0.89
+              }
+            },
+            "usage": {
+              "input_tokens": 891,
+              "output_tokens": 107
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DR",
+                "confidence": 0.82,
+                "probabilities": {
+                  "DF": 0,
+                  "none": 0.02,
+                  "DR": 0.86,
+                  "DB": 0,
+                  "DL": 0.12
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "confidence": 0.89,
+                "probabilities": {
+                  "DF": 0.92,
+                  "none": 0,
+                  "DR": 0,
+                  "DB": 0.08,
+                  "DL": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 891,
+              "output_tokens": 107
+            }
+          },
+          "elapsedMs": 5049.599378999788,
+          "cost": 0.000037422
+        },
+        {
+          "id": "65cead07-6098-40a0-bbae-77e03ac4e73c",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "FR",
+              "yellowDirection": "R"
+            },
+            "questions": {
+              "situation": {
+                "type": "choice",
+                "instructions": "Classify this selected edge using ONLY currentPosition and yellowDirection. First check yellowDirection=U (petal). Otherwise currentPosition starting D is bottom; starting U is top; all other edge positions are middle. The piece identity is deliberately omitted.",
+                "criteria": {
+                  "petal": "Yellow faces U",
+                  "bottomDown": "Edge is on D and yellow faces D",
+                  "bottomSide": "Edge is on D and yellow faces a side",
+                  "middle": "Edge is between side faces, not on U or D",
+                  "topSide": "Edge is on U and yellow faces a side"
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "instructions": "Choose the reference front. If yellowDirection is F/R/B/L, choose that face. If yellowDirection is U or D, choose the other letter of currentPosition. Use current position only.",
+                "criteria": {
+                  "F": "Front F",
+                  "R": "Front R",
+                  "B": "Front B",
+                  "L": "Front L"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "middle",
+                "probabilities": {
+                  "petal": 0,
+                  "bottomSide": 0.01,
+                  "middle": 0.97,
+                  "topSide": 0.02,
+                  "bottomDown": 0
+                },
+                "confidence": 0.96
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "R": 0.92,
+                  "L": 0.01,
+                  "F": 0.07,
+                  "B": 0
+                },
+                "confidence": 0.88
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 102
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "middle",
+                "confidence": 0.96,
+                "probabilities": {
+                  "petal": 0,
+                  "bottomSide": 0.01,
+                  "middle": 0.97,
+                  "topSide": 0.02,
+                  "bottomDown": 0
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 0.88,
+                "probabilities": {
+                  "R": 0.92,
+                  "L": 0.01,
+                  "F": 0.07,
+                  "B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 102
+            }
+          },
+          "elapsedMs": 3135.3780359998345,
+          "cost": 0.000024612000000000004
+        },
+        {
+          "id": "2fc3ad9d-2b07-4d76-960d-f7368d4cb767",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "position": "FL",
+                "layer": "middle",
+                "yellowDirection": "F",
+                "sideColor": "red",
+                "sideDirection": "L",
+                "adjacentCenter": "green",
+                "sideMatchesCenter": false
+              },
+              "protectedBottomSlots": [],
+              "previouslyRejectedByModel": []
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Choose a routine whose position AND yellow direction match the current target, with no affectedBottomSlot in protectedBottomSlots. Ignore landing occupancy for now. Prefer a lift over staging initially. If a previous routine was rejected by the model, choose a different matching routine, including a staging routine. Do not repeat a rejected routine.",
+                "criteria": {
+                  "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"]}",
+                  "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"]}",
+                  "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"]}",
+                  "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"]}",
+                  "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "reconsider": "No matching routine remains."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "cross-lift-left",
+                "probabilities": {
+                  "lower-top-edge": 0,
+                  "cross-lift-left": 0.65,
+                  "lift-bottom": 0,
+                  "cross-flip-top-left": 0,
+                  "cross-flip-top-right": 0,
+                  "stage-bottom-edge": 0,
+                  "lift-middle-right": 0,
+                  "lift-middle-left": 0.35,
+                  "flip-top-edge-left": 0,
+                  "reconsider": 0,
+                  "cross-lift-right": 0,
+                  "cross-flip-bottom": 0,
+                  "flip-top-edge": 0
+                },
+                "confidence": 0.61
+              }
+            },
+            "usage": {
+              "input_tokens": 1603,
+              "output_tokens": 144
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "cross-lift-left",
+                "confidence": 0.61,
+                "probabilities": {
+                  "lower-top-edge": 0,
+                  "cross-lift-left": 0.65,
+                  "lift-bottom": 0,
+                  "cross-flip-top-left": 0,
+                  "cross-flip-top-right": 0,
+                  "stage-bottom-edge": 0,
+                  "lift-middle-right": 0,
+                  "lift-middle-left": 0.35,
+                  "flip-top-edge-left": 0,
+                  "reconsider": 0,
+                  "cross-lift-right": 0,
+                  "cross-flip-bottom": 0,
+                  "flip-top-edge": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 1603,
+              "output_tokens": 144
+            }
+          },
+          "elapsedMs": 2416.06819000002,
+          "cost": 0.00006732600000000001
+        },
+        {
+          "id": "396dc0f3-9248-4a66-94dc-7917d3055021",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "position": "FL",
+                "layer": "middle",
+                "yellowDirection": "F",
+                "sideColor": "red",
+                "sideDirection": "L",
+                "adjacentCenter": "green",
+                "sideMatchesCenter": false
+              },
+              "centers": {
+                "U": "white",
+                "D": "yellow",
+                "L": "green",
+                "R": "blue",
+                "F": "red",
+                "B": "orange"
+              },
+              "yellowUpPetals": {
+                "UF": true,
+                "UR": true,
+                "UB": false,
+                "UL": false
+              },
+              "selectedRoutine": {
+                "id": "cross-lift-left",
+                "sequence": "L' U' L",
+                "requiredFreeSlots": [
+                  "UB"
+                ]
+              },
+              "frame": "Local reference front=R; U and D stay fixed. Occupied means a yellow-up petal, not just any edge."
+            },
+            "questions": {
+              "decision": {
+                "type": "choice",
+                "instructions": "The model already selected a lift from the fixed routine reference. Inspect only selectedRoutine.requiredFreeSlots. If none of those slots contains a yellow-up petal, choose execute. Otherwise, if target.layer is bottom or middle choose clear. If a required slot is occupied and target.layer is top choose lower, because rotating U would move this target too. Other occupied slots do not matter.",
+                "criteria": {
+                  "execute": "Execute the selected lift",
+                  "clear": "Clear a landing slot with a top setup first",
+                  "lower": "Lower the top target before making space"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "decision": {
+                "type": "choice",
+                "choice": "execute",
+                "probabilities": {
+                  "lower": 0,
+                  "clear": 0.08,
+                  "execute": 0.92
+                },
+                "confidence": 0.88
+              }
+            },
+            "usage": {
+              "input_tokens": 661,
+              "output_tokens": 38
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "decision": {
+                "type": "choice",
+                "choice": "execute",
+                "confidence": 0.88,
+                "probabilities": {
+                  "lower": 0,
+                  "clear": 0.08,
+                  "execute": 0.92
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 661,
+              "output_tokens": 38
+            }
+          },
+          "elapsedMs": 2820.005563999992,
+          "cost": 0.000027762000000000003
+        }
+      ],
+      "decision": {
+        "goal": "daisy",
+        "target": "DR",
+        "front": "R",
+        "skill": "cross-lift-left",
+        "alg": "F' U' F",
+        "intent": "execute",
+        "early": {
+          "plan": {
+            "goal": "daisy",
+            "gatherTarget": "DR",
+            "transferTarget": "DF"
+          },
+          "target": "DR",
+          "front": "R",
+          "routine": "cross-lift-left",
+          "preparation": "execute",
+          "recognised": {
+            "situation": "middle",
+            "reference": "R"
+          },
+          "plannedRoutine": "cross-lift-left",
+          "recovery": [],
+          "alg": "F' U' F"
+        }
+      },
+      "alg": "F' U' F",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            5,
+            6,
+            4,
+            9,
+            8,
+            3,
+            10,
+            11,
+            0,
+            2,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            4,
+            5,
+            0,
+            7,
+            2,
+            6,
+            3
+          ],
+          "orientation": [
+            2,
+            0,
+            2,
+            0,
+            1,
+            2,
+            2,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "nextPendingPlan": null
+    },
+    {
+      "before": {
+        "EDGES": {
+          "pieces": [
+            1,
+            5,
+            6,
+            4,
+            9,
+            8,
+            3,
+            10,
+            11,
+            0,
+            2,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            4,
+            5,
+            0,
+            7,
+            2,
+            6,
+            3
+          ],
+          "orientation": [
+            2,
+            0,
+            2,
+            0,
+            1,
+            2,
+            2,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "pendingPlan": null,
+      "exchanges": [
+        {
+          "id": "f1ad4117-1551-47c3-895c-6c9b81baeeef",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "completed": {
+                "daisy": 3,
+                "cross": false,
+                "firstLayer": false,
+                "middle": false,
+                "topCross": false,
+                "topOriented": false,
+                "cornersPlaced": false,
+                "solved": false,
+                "solvedPieces": 0
+              },
+              "uncollectedYellowEdges": 1,
+              "previousGoal": "daisy",
+              "recentActions": [
+                "R B",
+                "F' U' F"
+              ]
+            },
+            "questions": {
+              "goal": {
+                "type": "choice",
+                "instructions": "Choose the goal whose prerequisites match the current measurements. Apply the fixed definitions in the options. uncollectedYellowEdges counts yellow edges that are neither yellow-up petals nor solved bottom edges. PreviousGoal is memory, not an instruction; choose using present conditions. Completion flags describe structures, not recommendations. The program stops separately when all pieces are solved.",
+                "criteria": {
+                  "daisy": "Gather yellow edges as top petals. Choose when cross=false and uncollectedYellowEdges>0. Preserve solved bottom edges and existing petals.",
+                  "cross": "Transfer yellow-up petals to their bottom homes. Choose when cross=false and uncollectedYellowEdges=0. This controller only transfers petals; it cannot extract or gather missing petals.",
+                  "first-layer": "Solve yellow corners. Choose when cross=true and firstLayer=false.",
+                  "middle-layer": "Solve middle edges. Choose when firstLayer=true and middle=false.",
+                  "top-cross": "Orient white top edges. Choose when middle=true and topCross=false.",
+                  "top-orientation": "Orient white top corners. Choose when middle=true, topCross=true and topOriented=false.",
+                  "top-corners": "Place or align white corners. Choose when middle=true, topCross=true, topOriented=true and cornersPlaced=false.",
+                  "top-edges": "Place or align remaining white edges. Choose when middle=true, topCross=true, topOriented=true, cornersPlaced=true and solved=false."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "probabilities": {
+                  "top-cross": 0,
+                  "middle-layer": 0,
+                  "top-orientation": 0,
+                  "first-layer": 0,
+                  "top-edges": 0,
+                  "top-corners": 0,
+                  "cross": 0.01,
+                  "daisy": 0.99
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 771,
+              "output_tokens": 86
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "goal": {
+                "type": "choice",
+                "choice": "daisy",
+                "confidence": 0.99,
+                "probabilities": {
+                  "top-cross": 0,
+                  "middle-layer": 0,
+                  "top-orientation": 0,
+                  "first-layer": 0,
+                  "top-edges": 0,
+                  "top-corners": 0,
+                  "cross": 0.01,
+                  "daisy": 0.99
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 771,
+              "output_tokens": 86
+            }
+          },
+          "elapsedMs": 2639.6135109998286,
+          "cost": 0.000032382
+        },
+        {
+          "id": "6b071e1d-151b-4db1-91e6-f8aa0ee4b639",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": {
+                "frame": {
+                  "centers": {
+                    "U": "white",
+                    "D": "yellow",
+                    "F": "green",
+                    "B": "blue",
+                    "R": "red",
+                    "L": "orange"
+                  },
+                  "note": "Fixed frame: yellow D, white U. Clockwise is viewed directly at the turned face. Camera has no effect."
+                },
+                "edges": [
+                  "Edge DF is at UL. yellow faces U; green faces L.",
+                  "Edge DR is at UR. yellow faces U; red faces R.",
+                  "Edge DB is at UB. yellow faces U; blue faces B.",
+                  "Edge DL is at BL. yellow faces B; orange faces L."
+                ],
+                "memory": {
+                  "target": "DR",
+                  "recentActions": [
+                    "R B",
+                    "F' U' F"
+                  ]
+                }
+              },
+              "checks": {
+                "petal_DF": "yes",
+                "bottom_DF": "no",
+                "petal_DR": "yes",
+                "bottom_DR": "no",
+                "petal_DB": "yes",
+                "bottom_DB": "no",
+                "petal_DL": "no",
+                "bottom_DL": "no"
+              },
+              "counts": {
+                "petals": 3,
+                "bottom": 0
+              },
+              "uncollectedYellowEdges": 1,
+              "selectedGoal": "daisy",
+              "excludedTarget": null
+            },
+            "questions": {
+              "gatherTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is gathering missing petals, regardless of the goal answer in this request. Choose an edge with petal=no AND bottom=no. Preserve both existing petals and solved bottom edges. Prefer an accessible edge; any eligible edge is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "instructions": "Assume the goal is transferring petals, regardless of the goal answer in this request. Choose an edge with petal=yes AND bottom=no. Any eligible petal is allowed. If none is eligible, choose none.",
+                "criteria": {
+                  "DF": "Work on edge DF",
+                  "DR": "Work on edge DR",
+                  "DB": "Work on edge DB",
+                  "DL": "Work on edge DL",
+                  "none": "No eligible edge for this hypothetical goal"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DL",
+                "probabilities": {
+                  "none": 0.02,
+                  "DB": 0,
+                  "DL": 0.97,
+                  "DR": 0.01,
+                  "DF": 0
+                },
+                "confidence": 0.97
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "probabilities": {
+                  "none": 0.01,
+                  "DB": 0.07,
+                  "DL": 0,
+                  "DR": 0.42,
+                  "DF": 0.5
+                },
+                "confidence": 0.38
+              }
+            },
+            "usage": {
+              "input_tokens": 899,
+              "output_tokens": 107
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "gatherTarget": {
+                "type": "choice",
+                "choice": "DL",
+                "confidence": 0.97,
+                "probabilities": {
+                  "none": 0.02,
+                  "DB": 0,
+                  "DL": 0.97,
+                  "DR": 0.01,
+                  "DF": 0
+                }
+              },
+              "transferTarget": {
+                "type": "choice",
+                "choice": "DF",
+                "confidence": 0.38,
+                "probabilities": {
+                  "none": 0.01,
+                  "DB": 0.07,
+                  "DL": 0,
+                  "DR": 0.42,
+                  "DF": 0.5
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 899,
+              "output_tokens": 107
+            }
+          },
+          "elapsedMs": 4553.181365000084,
+          "cost": 0.00003775800000000001
+        },
+        {
+          "id": "f037913a-8128-420d-aa42-8c6c56befaeb",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "BL",
+              "yellowDirection": "B"
+            },
+            "questions": {
+              "situation": {
+                "type": "choice",
+                "instructions": "Classify this selected edge using ONLY currentPosition and yellowDirection. First check yellowDirection=U (petal). Otherwise currentPosition starting D is bottom; starting U is top; all other edge positions are middle. The piece identity is deliberately omitted.",
+                "criteria": {
+                  "petal": "Yellow faces U",
+                  "bottomDown": "Edge is on D and yellow faces D",
+                  "bottomSide": "Edge is on D and yellow faces a side",
+                  "middle": "Edge is between side faces, not on U or D",
+                  "topSide": "Edge is on U and yellow faces a side"
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "instructions": "Choose the reference front. If yellowDirection is F/R/B/L, choose that face. If yellowDirection is U or D, choose the other letter of currentPosition. Use current position only.",
+                "criteria": {
+                  "F": "Front F",
+                  "R": "Front R",
+                  "B": "Front B",
+                  "L": "Front L"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "middle",
+                "probabilities": {
+                  "middle": 0.73,
+                  "bottomSide": 0.23,
+                  "petal": 0,
+                  "topSide": 0.01,
+                  "bottomDown": 0.03
+                },
+                "confidence": 0.65
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "B",
+                "probabilities": {
+                  "F": 0,
+                  "L": 0.11,
+                  "B": 0.88,
+                  "R": 0.01
+                },
+                "confidence": 0.84
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 102
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "middle",
+                "confidence": 0.65,
+                "probabilities": {
+                  "middle": 0.73,
+                  "bottomSide": 0.23,
+                  "petal": 0,
+                  "topSide": 0.01,
+                  "bottomDown": 0.03
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "B",
+                "confidence": 0.84,
+                "probabilities": {
+                  "F": 0,
+                  "L": 0.11,
+                  "B": 0.88,
+                  "R": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 102
+            }
+          },
+          "elapsedMs": 7734.33266699966,
+          "cost": 0.000024612000000000004
+        },
+        {
+          "id": "06785ed9-dfaa-4e34-b9a1-6c07b89d687f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "target": {
+                "position": "FR",
+                "layer": "middle",
+                "yellowDirection": "F",
+                "sideColor": "orange",
+                "sideDirection": "R",
+                "adjacentCenter": "orange",
+                "sideMatchesCenter": true
+              },
+              "protectedBottomSlots": [],
+              "previouslyRejectedByModel": []
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Choose a routine whose position AND yellow direction match the current target, with no affectedBottomSlot in protectedBottomSlots. Ignore landing occupancy for now. Prefer a lift over staging initially. If a previous routine was rejected by the model, choose a different matching routine, including a staging routine. Do not repeat a rejected routine.",
+                "criteria": {
+                  "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"]}",
+                  "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"]}",
+                  "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"]}",
+                  "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"]}",
+                  "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[]}",
+                  "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"]}",
+                  "reconsider": "No matching routine remains."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "lift-middle-right",
+                "probabilities": {
+                  "lift-bottom": 0,
+                  "reconsider": 0,
+                  "cross-flip-top-left": 0,
+                  "flip-top-edge-left": 0,
+                  "lift-middle-left": 0,
+                  "cross-lift-right": 0.47,
+                  "stage-bottom-edge": 0,
+                  "cross-lift-left": 0,
+                  "cross-flip-top-right": 0,
+                  "lift-middle-right": 0.53,
+                  "flip-top-edge": 0,
+                  "lower-top-edge": 0,
+                  "cross-flip-bottom": 0
+                },
+                "confidence": 0.48
+              }
+            },
+            "usage": {
+              "input_tokens": 1603,
+              "output_tokens": 143
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "lift-middle-right",
+                "confidence": 0.48,
+                "probabilities": {
+                  "lift-bottom": 0,
+                  "reconsider": 0,
+                  "cross-flip-top-left": 0,
+                  "flip-top-edge-left": 0,
+                  "lift-middle-left": 0,
+                  "cross-lift-right": 0.47,
+                  "stage-bottom-edge": 0,
+                  "cross-lift-left": 0,
+                  "cross-flip-top-right": 0,
+                  "lift-middle-right": 0.53,
+                  "flip-top-edge": 0,
+                  "lower-top-edge": 0,
+                  "cross-flip-bottom": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 1603,
+              "output_tokens": 143
+            }
+          },
+          "elapsedMs": 7879.820271000266,
+          "cost": 0.00006732600000000001
+        }
+      ]
+    }
+  ],
+  "status": "error",
+  "error": "Error: JEV HTTP 529",
+  "after": {
+    "EDGES": {
+      "pieces": [
+        1,
+        5,
+        6,
+        4,
+        9,
+        8,
+        3,
+        10,
+        11,
+        0,
+        2,
+        7
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "CORNERS": {
+      "pieces": [
+        1,
+        4,
+        5,
+        0,
+        7,
+        2,
+        6,
+        3
+      ],
+      "orientation": [
+        2,
+        0,
+        2,
+        0,
+        1,
+        2,
+        2,
+        0
+      ]
+    },
+    "CENTERS": {
+      "pieces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orientation": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orientationMod": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "turns": 5,
+  "elapsedMs": 68097
+}

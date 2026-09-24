@@ -1,0 +1,82 @@
+{
+  "partial": false,
+  "checked": 3,
+  "projectCommitment": 8.223086886,
+  "rows": [
+    {
+      "id": "cross-validation-1",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 15,
+      "requests": 83,
+      "cost": 0.0023820300000000003,
+      "elapsedMs": 67261,
+      "bottomRegressions": 0,
+      "stages": {
+        "daisy": 8,
+        "cross": 7
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 4
+      }
+    },
+    {
+      "id": "cross-validation-2",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 13,
+      "requests": 45,
+      "cost": 0.0014165760000000001,
+      "elapsedMs": 32693,
+      "bottomRegressions": 0,
+      "stages": {
+        "daisy": 9,
+        "cross": 4
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 4
+      }
+    },
+    {
+      "id": "cross-validation-3",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 17,
+      "requests": 96,
+      "cost": 0.0027558300000000003,
+      "elapsedMs": 78555,
+      "bottomRegressions": 0,
+      "stages": {
+        "daisy": 10,
+        "cross": 7
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 4
+      }
+    }
+  ]
+}

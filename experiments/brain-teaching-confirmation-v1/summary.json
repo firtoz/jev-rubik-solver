@@ -1,0 +1,327 @@
+{
+  "passed": false,
+  "solved": 62,
+  "total": 100,
+  "categories": {
+    "solved": 62,
+    "provider HTTP error": 38
+  },
+  "failures": [
+    {
+      "id": "random-50",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 137
+    },
+    {
+      "id": "random-52",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 109
+    },
+    {
+      "id": "random-53",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 131
+    },
+    {
+      "id": "random-55",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 55
+    },
+    {
+      "id": "random-58",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 111
+    },
+    {
+      "id": "random-59",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 48
+    },
+    {
+      "id": "random-60",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 58
+    },
+    {
+      "id": "random-62",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 129
+    },
+    {
+      "id": "random-66",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 82
+    },
+    {
+      "id": "random-68",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "top-orientation",
+      "requests": 154
+    },
+    {
+      "id": "random-72",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 145
+    },
+    {
+      "id": "random-73",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 50
+    },
+    {
+      "id": "random-74",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 164
+    },
+    {
+      "id": "random-75",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "top-corners",
+      "requests": 210
+    },
+    {
+      "id": "random-77",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 140
+    },
+    {
+      "id": "random-78",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 95
+    },
+    {
+      "id": "random-79",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 71
+    },
+    {
+      "id": "random-80",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 38
+    },
+    {
+      "id": "random-81",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 12
+    },
+    {
+      "id": "random-82",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 25
+    },
+    {
+      "id": "random-83",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 59
+    },
+    {
+      "id": "random-84",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 30
+    },
+    {
+      "id": "random-85",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": null,
+      "requests": 1
+    },
+    {
+      "id": "random-86",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 46
+    },
+    {
+      "id": "random-87",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 38
+    },
+    {
+      "id": "random-88",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 15
+    },
+    {
+      "id": "random-89",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 20
+    },
+    {
+      "id": "random-90",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 83
+    },
+    {
+      "id": "random-91",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": null,
+      "requests": 3
+    },
+    {
+      "id": "random-92",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 55
+    },
+    {
+      "id": "random-93",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 52
+    },
+    {
+      "id": "random-94",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 19
+    },
+    {
+      "id": "random-95",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 58
+    },
+    {
+      "id": "random-96",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "middle-layer",
+      "requests": 124
+    },
+    {
+      "id": "random-97",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 107
+    },
+    {
+      "id": "random-98",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "daisy",
+      "requests": 9
+    },
+    {
+      "id": "random-99",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "cross",
+      "requests": 60
+    },
+    {
+      "id": "random-100",
+      "status": "error",
+      "category": "provider HTTP error",
+      "error": "Error: JEV HTTP 529",
+      "goal": "first-layer",
+      "requests": 81
+    }
+  ],
+  "studyCost": 0.8234806020000001,
+  "globalBudget": {
+    "cap": 9,
+    "reservedAndSpent": 7.523152476000001,
+    "usage": 7.404880476000001,
+    "reserved": 0.11827200000000002,
+    "attempts": 118458,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "validationSolves": 10,
+  "sourceDigest": "09496a1e30947cb24417b353812b5f3fa25efad4714f771728661ae5d8f30745"
+}

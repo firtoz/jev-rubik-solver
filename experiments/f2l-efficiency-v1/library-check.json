@@ -1,0 +1,1988 @@
+{
+  "source": "https://www.cubeskills.com/uploads/pdf/tutorials/f2l.pdf",
+  "rows": [
+    {
+      "id": "f2l-01",
+      "alg": "R U' R' U F' U2 F U2 F' U F",
+      "valid": true,
+      "changed": [
+        "FR"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "D",
+            "red": "R",
+            "green": "F"
+          },
+          "solved": true
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-02",
+      "alg": "U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 4
+    },
+    {
+      "id": "f2l-03",
+      "alg": "U' F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 4
+    },
+    {
+      "id": "f2l-04",
+      "alg": "F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "L",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 3
+    },
+    {
+      "id": "f2l-05",
+      "alg": "R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "B"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 3
+    },
+    {
+      "id": "f2l-06",
+      "alg": "U' R U' R' U F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "B",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-07",
+      "alg": "U F' U' F U' F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "B",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-08",
+      "alg": "U' R U R' U R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "L"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-09",
+      "alg": "U' R U2 R' U F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-10",
+      "alg": "R' U2 R2 U R2 U R",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-11",
+      "alg": "U F' U2 F U' R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-12",
+      "alg": "R U' R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-13",
+      "alg": "U2 R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "B"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "URB",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "B",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 4
+    },
+    {
+      "id": "f2l-14",
+      "alg": "F' U F U' F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "L",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "ULF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "L",
+            "red": "F",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-15",
+      "alg": "U' R U' R' U R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-16",
+      "alg": "U' R U R' U2 R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "B"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-17",
+      "alg": "U F' U' F U2 F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "L",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-18",
+      "alg": "U' R U2 R' U2 R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "L"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-19",
+      "alg": "U F' U2 F U2 F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "B",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-20",
+      "alg": "U R U2 R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "B"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-21",
+      "alg": "U' F' U2 F U' F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "L",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-22",
+      "alg": "U2 R U R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "L"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-23",
+      "alg": "R U' R' U2 R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UL",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "L"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-24",
+      "alg": "U2 F' U' F U' F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "B",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-25",
+      "alg": "F' L' U2 L F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UB",
+          "destination": "FR",
+          "stickers": {
+            "green": "B",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 5
+    },
+    {
+      "id": "f2l-26",
+      "alg": "F' U F U2 R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-27",
+      "alg": "R U R' U2 R U' R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-28",
+      "alg": "R U' R' U2 F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-29",
+      "alg": "U F R U R' U' F' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-30",
+      "alg": "R U2 R' U' R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-31",
+      "alg": "F' U2 F U F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-32",
+      "alg": "U R U' R' U' R U' R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 12
+    },
+    {
+      "id": "f2l-33",
+      "alg": "R U R' U2 R U R' U' R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-34",
+      "alg": "U' F' U F U F' U F U' F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 12
+    },
+    {
+      "id": "f2l-35",
+      "alg": "F U R U' R' F' R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 9
+    },
+    {
+      "id": "f2l-36",
+      "alg": "U' F' R U R' U' R' F R",
+      "valid": true,
+      "changed": [
+        "FR"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "D",
+            "red": "R",
+            "green": "F"
+          },
+          "solved": true
+        }
+      ],
+      "turns": 9
+    },
+    {
+      "id": "f2l-37",
+      "alg": "R' F' R U R U' R' F",
+      "valid": true,
+      "changed": [
+        "FR"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "D",
+            "red": "R",
+            "green": "F"
+          },
+          "solved": true
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-38",
+      "alg": "U R U' R' U' F' U F",
+      "valid": true,
+      "changed": [
+        "FR"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "D",
+            "red": "R",
+            "green": "F"
+          },
+          "solved": true
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-39",
+      "alg": "U R U' R' F R' F' R",
+      "valid": true,
+      "changed": [
+        "FR"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "D",
+            "red": "R",
+            "green": "F"
+          },
+          "solved": true
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-40",
+      "alg": "F' U F U' F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "F",
+            "green": "D"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-41",
+      "alg": "F' U' F U F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-42",
+      "alg": "R' F R F' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UF",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "U"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-43",
+      "alg": "R U R' U' R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "UR",
+          "destination": "FR",
+          "stickers": {
+            "green": "U",
+            "red": "R"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "F",
+            "green": "D"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-44",
+      "alg": "R U' R' U F' U F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 7
+    },
+    {
+      "id": "f2l-45",
+      "alg": "U' R' F R F' R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-46",
+      "alg": "U R U' R' U R U' R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "U",
+            "red": "F",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 12
+    },
+    {
+      "id": "f2l-47",
+      "alg": "U' R U' R' U2 R U' R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-48",
+      "alg": "U R U R' U2 R U R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-49",
+      "alg": "U' R U R' U F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "R",
+            "green": "U"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-50",
+      "alg": "U F' U' F U' R U R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "UFR",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "U",
+            "green": "F"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 8
+    },
+    {
+      "id": "f2l-51",
+      "alg": "R U' R' U' R U R' U2 R U' R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-52",
+      "alg": "R U R' U' R U2 R' U' R U R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-53",
+      "alg": "R U' R' U R U2 R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "F",
+            "green": "D"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-54",
+      "alg": "R U R' U2 R U' R' U R U R'",
+      "valid": true,
+      "changed": [
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "F",
+            "red": "R"
+          },
+          "solved": true
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "F",
+            "green": "D"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-55",
+      "alg": "F' U F U2 R U R' U R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    },
+    {
+      "id": "f2l-56",
+      "alg": "R U' R' F R U R' U' F' R U' R'",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "F",
+            "red": "D",
+            "green": "R"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 12
+    },
+    {
+      "id": "f2l-57",
+      "alg": "R U R' U' R U' R' U2 F' U' F",
+      "valid": true,
+      "changed": [
+        "FR",
+        "DRF"
+      ],
+      "pattern": [
+        {
+          "piece": "FR",
+          "kind": "edge",
+          "position": "FR",
+          "destination": "FR",
+          "stickers": {
+            "green": "R",
+            "red": "F"
+          },
+          "solved": false
+        },
+        {
+          "piece": "DRF",
+          "kind": "corner",
+          "position": "DRF",
+          "destination": "DRF",
+          "stickers": {
+            "yellow": "R",
+            "red": "F",
+            "green": "D"
+          },
+          "solved": false
+        }
+      ],
+      "turns": 11
+    }
+  ]
+}

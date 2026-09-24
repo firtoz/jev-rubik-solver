@@ -1,0 +1,2803 @@
+{
+  "phase": "development",
+  "rows": [
+    {
+      "id": "fresh-landing-1",
+      "variant": "sequential",
+      "expected": "execute",
+      "runId": "53d06a72-5af7-436f-b95f-6d198e1fdb8d",
+      "status": "complete",
+      "availability": {
+        "id": "d6d768d4-80a2-4597-b2bb-cad4ea3e50ba",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": true,
+              "UR": false,
+              "UB": true,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "probabilities": {
+                "blocked": 0.01,
+                "free": 0.99
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "confidence": 0.99,
+              "probabilities": {
+                "blocked": 0.01,
+                "free": 0.99
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 708.54088,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "0fd3d052-6d5c-4ca6-8a0e-3e94aa2f34d0",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "free",
+            "target": {
+              "position": "FR",
+              "layer": "middle",
+              "yellowDirection": "F",
+              "sideColor": "blue",
+              "sideDirection": "R",
+              "adjacentCenter": "blue",
+              "sideMatchesCenter": true
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "probabilities": {
+                "reorient": 0,
+                "lower": 0,
+                "execute": 1,
+                "clear": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "confidence": 0.99,
+              "probabilities": {
+                "reorient": 0,
+                "lower": 0,
+                "execute": 1,
+                "clear": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 248.15906399999994,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "execute",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-2",
+      "variant": "sequential",
+      "expected": "clear",
+      "runId": "2703cc6d-9d27-4641-ba34-1a95ed6a9dcc",
+      "status": "complete",
+      "availability": {
+        "id": "d1a3771d-c4a1-4619-9739-1f0ff12b2b79",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF"
+            ],
+            "yellowUpPetals": {
+              "UF": true,
+              "UR": true,
+              "UB": false,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 646.060067,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "932cae83-1835-4825-968d-23ae7c47d362",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "DF",
+              "layer": "bottom",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "D",
+              "adjacentCenter": "yellow",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "probabilities": {
+                "execute": 0,
+                "reorient": 0,
+                "lower": 0.02,
+                "clear": 0.98
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "execute": 0,
+                "reorient": 0,
+                "lower": 0.02,
+                "clear": 0.98
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 430.67770500000006,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "clear",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-3",
+      "variant": "sequential",
+      "expected": "execute",
+      "runId": "b4fddc8b-51f4-4daa-a243-92bf16c061a6",
+      "status": "complete",
+      "availability": {
+        "id": "6ccaef09-99af-451d-93fc-f8f66030190a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": true,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "probabilities": {
+                "free": 0.99,
+                "blocked": 0.01
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "confidence": 0.99,
+              "probabilities": {
+                "free": 0.99,
+                "blocked": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 411.42243399999984,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "133b9e74-e752-4f4d-ade6-6d069a1dea5b",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "free",
+            "target": {
+              "position": "DF",
+              "layer": "bottom",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "D",
+              "adjacentCenter": "yellow",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "probabilities": {
+                "lower": 0.01,
+                "reorient": 0,
+                "clear": 0,
+                "execute": 0.99
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "confidence": 0.98,
+              "probabilities": {
+                "lower": 0.01,
+                "reorient": 0,
+                "clear": 0,
+                "execute": 0.99
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 364.5206210000001,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "execute",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-4",
+      "variant": "sequential",
+      "expected": "clear",
+      "runId": "18310613-8b24-4917-a296-312f32ff30a3",
+      "status": "complete",
+      "availability": {
+        "id": "d2c9ff09-8df1-4525-926f-fe47f543ea0e",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UL"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": true,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 915.5066339999998,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "849a1a2f-7067-44ed-a4d6-8005e0893996",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "FL",
+              "layer": "middle",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "L",
+              "adjacentCenter": "red",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "probabilities": {
+                "lower": 0,
+                "execute": 0,
+                "reorient": 0,
+                "clear": 1
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "confidence": 0.99,
+              "probabilities": {
+                "lower": 0,
+                "execute": 0,
+                "reorient": 0,
+                "clear": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 326.9605190000002,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "clear",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-5",
+      "variant": "sequential",
+      "expected": "clear",
+      "runId": "acbab054-06b4-463f-8f10-7fcf394e1888",
+      "status": "complete",
+      "availability": {
+        "id": "51c2c4d3-1c7a-43f6-8386-56602899f4dd",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UL"
+            ],
+            "yellowUpPetals": {
+              "UF": true,
+              "UR": true,
+              "UB": false,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 0.99,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 264.4371460000002,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "b17790d6-1417-4053-8398-029e2228a9d8",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "FL",
+              "layer": "middle",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "L",
+              "adjacentCenter": "red",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "probabilities": {
+                "lower": 0,
+                "clear": 1,
+                "execute": 0,
+                "reorient": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "confidence": 0.99,
+              "probabilities": {
+                "lower": 0,
+                "clear": 1,
+                "execute": 0,
+                "reorient": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 554.4220769999997,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "clear",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-6",
+      "variant": "sequential",
+      "expected": "execute",
+      "runId": "7e412baf-3ceb-44cd-9b7d-010770a117cc",
+      "status": "complete",
+      "availability": {
+        "id": "900612ed-d672-4fe7-bf41-b60b2a49bf45",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF",
+              "UL"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": false,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "probabilities": {
+                "blocked": 0,
+                "free": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "confidence": 1,
+              "probabilities": {
+                "blocked": 0,
+                "free": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 409.6187460000001,
+        "cost": 0.000016842000000000002
+      },
+      "exchange": {
+        "id": "a4e89de6-993b-4175-96c5-f8bbd74a6fcb",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "free",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "red",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DR"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "probabilities": {
+                "reorient": 0.06,
+                "lower": 0.23,
+                "clear": 0.01,
+                "execute": 0.7
+              },
+              "confidence": 0.6
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "confidence": 0.6,
+              "probabilities": {
+                "reorient": 0.06,
+                "lower": 0.23,
+                "clear": 0.01,
+                "execute": 0.7
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 306.5160109999997,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "execute",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-7",
+      "variant": "sequential",
+      "expected": "execute",
+      "runId": "b1e7549b-b4e4-4f9e-aa78-4454837a5dfd",
+      "status": "complete",
+      "availability": {
+        "id": "cde5404d-1baa-4108-8db6-973f40f00e23",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UL",
+              "UF",
+              "UB"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "probabilities": {
+                "free": 1,
+                "blocked": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 405,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "confidence": 0.99,
+              "probabilities": {
+                "free": 1,
+                "blocked": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 405,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 292.1100690000003,
+        "cost": 0.00001701
+      },
+      "exchange": {
+        "id": "b41a08ef-3544-4e62-b5d2-acec45fd706c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "free",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "reorient",
+              "probabilities": {
+                "clear": 0.01,
+                "lower": 0.01,
+                "reorient": 0.61,
+                "execute": 0.37
+              },
+              "confidence": 0.47
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 47
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "reorient",
+              "confidence": 0.47,
+              "probabilities": {
+                "clear": 0.01,
+                "lower": 0.01,
+                "reorient": 0.61,
+                "execute": 0.37
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 47
+          }
+        },
+        "elapsedMs": 823.4700710000006,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "reorient",
+      "passed": false,
+      "destination": {
+        "id": "0e503942-6318-429f-9ff3-7a37f4e5cd38",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ]
+          },
+          "questions": {
+            "destination": {
+              "type": "choice",
+              "instructions": "Choose a different upper position above an unprotected bottom edge. The next cycle will observe the target there and select a fresh reference and routine. U rotations preserve all bottom edges. Pairings are UF above DF, UR above DR, UB above DB, UL above DL. Choose none only if no different safe position exists.",
+              "criteria": {
+                "UF": "Top front",
+                "UR": "Top right",
+                "UB": "Top back",
+                "UL": "Top left",
+                "none": "No other unprotected bottom position"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "destination": {
+              "type": "choice",
+              "choice": "UR",
+              "probabilities": {
+                "UF": 0.01,
+                "UB": 0.05,
+                "UR": 0.76,
+                "none": 0.12,
+                "UL": 0.06
+              },
+              "confidence": 0.7
+            }
+          },
+          "usage": {
+            "input_tokens": 506,
+            "output_tokens": 52
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "destination": {
+              "type": "choice",
+              "choice": "UR",
+              "confidence": 0.7,
+              "probabilities": {
+                "UF": 0.01,
+                "UB": 0.05,
+                "UR": 0.76,
+                "none": 0.12,
+                "UL": 0.06
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 506,
+            "output_tokens": 52
+          }
+        },
+        "elapsedMs": 517.5924670000004,
+        "cost": 0.000021252000000000003
+      },
+      "turn": {
+        "id": "ddf833c5-5fe0-4f37-83c9-d2e590ba4001",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UF",
+            "destination": "UR"
+          },
+          "questions": {
+            "setup": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying the target from currentPosition to destination. Use the fixed position cycles.",
+              "criteria": {
+                "U": "UF to UL, UL to UB, UB to UR, UR to UF",
+                "U'": "UF to UR, UR to UB, UB to UL, UL to UF",
+                "U2": "UF to UB, UB to UF, UR to UL, UL to UR"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "setup": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U'": 0.9,
+                "U2": 0.01,
+                "U": 0.09
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "setup": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.86,
+              "probabilities": {
+                "U'": 0.9,
+                "U2": 0.01,
+                "U": 0.09
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 479.29934799999955,
+        "cost": 0.000016674000000000003
+      },
+      "safeReorientation": true
+    },
+    {
+      "id": "fresh-landing-8",
+      "variant": "sequential",
+      "expected": "lower",
+      "runId": "0119d497-351a-47d3-b312-e7a017d3c3a3",
+      "status": "complete",
+      "availability": {
+        "id": "16ae537e-98da-4107-887c-8fc22dd04d8c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF",
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 259.9856010000003,
+        "cost": 0.000016842000000000002
+      },
+      "exchange": {
+        "id": "b5f9fb55-1344-4f39-bd07-1269ad03fa3c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DL"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "probabilities": {
+                "lower": 0.75,
+                "clear": 0.11,
+                "execute": 0,
+                "reorient": 0.14
+              },
+              "confidence": 0.67
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "confidence": 0.67,
+              "probabilities": {
+                "lower": 0.75,
+                "clear": 0.11,
+                "execute": 0,
+                "reorient": 0.14
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 240.9347969999999,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "lower",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-9",
+      "variant": "sequential",
+      "expected": "clear",
+      "runId": "833252f7-d232-4d09-90c3-fab1eb3030ee",
+      "status": "complete",
+      "availability": {
+        "id": "5a3ca417-a765-47a2-8550-520fa8f60894",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": true,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 287.22340200000053,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "40ec9cae-5109-41aa-851d-53763d9c984a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "FR",
+              "layer": "middle",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "R",
+              "adjacentCenter": "green",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DL"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "probabilities": {
+                "lower": 0.01,
+                "execute": 0,
+                "reorient": 0,
+                "clear": 0.99
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "confidence": 0.99,
+              "probabilities": {
+                "lower": 0.01,
+                "execute": 0,
+                "reorient": 0,
+                "clear": 0.99
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 638.8616809999994,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "clear",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-10",
+      "variant": "sequential",
+      "expected": "execute",
+      "runId": "99d84ab8-b10f-4bcc-822d-292ff0230097",
+      "status": "complete",
+      "availability": {
+        "id": "aad2b8d8-4a87-4550-ac7b-f65d1f9f2f80",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": true,
+              "UR": false,
+              "UB": false,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "probabilities": {
+                "free": 0.99,
+                "blocked": 0.01
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "free",
+              "confidence": 0.98,
+              "probabilities": {
+                "free": 0.99,
+                "blocked": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 402.53487399999995,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "3cd3e6e4-f429-4c5c-8fa2-40b27427a57f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "free",
+            "target": {
+              "position": "FR",
+              "layer": "middle",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "R",
+              "adjacentCenter": "green",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DL"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "probabilities": {
+                "reorient": 0,
+                "execute": 0.96,
+                "clear": 0.04,
+                "lower": 0
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "execute",
+              "confidence": 0.95,
+              "probabilities": {
+                "reorient": 0,
+                "execute": 0.96,
+                "clear": 0.04,
+                "lower": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 265.842212999999,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "execute",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-11",
+      "variant": "sequential",
+      "expected": "clear",
+      "runId": "c6746fb5-ed23-40de-b44c-34f016a4fb99",
+      "status": "complete",
+      "availability": {
+        "id": "8eb6eaf2-ff0e-4c02-a1d3-ba434ff0303b",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 0.99,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 808.0666549999996,
+        "cost": 0.000016674000000000003
+      },
+      "exchange": {
+        "id": "deb8de26-1d2b-4e0a-8a31-67aaf41a0186",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "FR",
+              "layer": "middle",
+              "yellowDirection": "F",
+              "sideColor": "red",
+              "sideDirection": "R",
+              "adjacentCenter": "green",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "probabilities": {
+                "lower": 0,
+                "clear": 1,
+                "reorient": 0,
+                "execute": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "clear",
+              "confidence": 0.99,
+              "probabilities": {
+                "lower": 0,
+                "clear": 1,
+                "reorient": 0,
+                "execute": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 254.41230600000017,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "clear",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-12",
+      "variant": "sequential",
+      "expected": "reorient",
+      "runId": "dfd43586-630d-49de-bbed-514a43a7652b",
+      "status": "complete",
+      "availability": {
+        "id": "7f428435-5104-4f26-8dcd-35de8068bbb3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UL",
+              "UF",
+              "UB"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": false,
+              "UB": false,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 405,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 405,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 255.84805100000085,
+        "cost": 0.00001701
+      },
+      "exchange": {
+        "id": "d9ec25c7-2c49-4dc4-9d32-c7d54fcf71a8",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "reorient",
+              "probabilities": {
+                "lower": 0,
+                "reorient": 0.99,
+                "clear": 0.01,
+                "execute": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 47
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "reorient",
+              "confidence": 0.98,
+              "probabilities": {
+                "lower": 0,
+                "reorient": 0.99,
+                "clear": 0.01,
+                "execute": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 47
+          }
+        },
+        "elapsedMs": 426.1860349999988,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "reorient",
+      "passed": true,
+      "destination": {
+        "id": "efaf1589-e6a1-4856-a757-8db30c9ea999",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ]
+          },
+          "questions": {
+            "destination": {
+              "type": "choice",
+              "instructions": "Choose a different upper position above an unprotected bottom edge. The next cycle will observe the target there and select a fresh reference and routine. U rotations preserve all bottom edges. Pairings are UF above DF, UR above DR, UB above DB, UL above DL. Choose none only if no different safe position exists.",
+              "criteria": {
+                "UF": "Top front",
+                "UR": "Top right",
+                "UB": "Top back",
+                "UL": "Top left",
+                "none": "No other unprotected bottom position"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "destination": {
+              "type": "choice",
+              "choice": "UR",
+              "probabilities": {
+                "UL": 0.04,
+                "UB": 0.04,
+                "UR": 0.78,
+                "UF": 0.01,
+                "none": 0.13
+              },
+              "confidence": 0.71
+            }
+          },
+          "usage": {
+            "input_tokens": 506,
+            "output_tokens": 52
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "destination": {
+              "type": "choice",
+              "choice": "UR",
+              "confidence": 0.71,
+              "probabilities": {
+                "UL": 0.04,
+                "UB": 0.04,
+                "UR": 0.78,
+                "UF": 0.01,
+                "none": 0.13
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 506,
+            "output_tokens": 52
+          }
+        },
+        "elapsedMs": 300.9211959999993,
+        "cost": 0.000021252000000000003
+      },
+      "turn": {
+        "id": "0f0e1a3c-4660-492a-9eb5-5d67ea6f5f5f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UF",
+            "destination": "UR"
+          },
+          "questions": {
+            "setup": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying the target from currentPosition to destination. Use the fixed position cycles.",
+              "criteria": {
+                "U": "UF to UL, UL to UB, UB to UR, UR to UF",
+                "U'": "UF to UR, UR to UB, UB to UL, UL to UF",
+                "U2": "UF to UB, UB to UF, UR to UL, UL to UR"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "setup": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U2": 0.01,
+                "U'": 0.93,
+                "U": 0.06
+              },
+              "confidence": 0.9
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "setup": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.9,
+              "probabilities": {
+                "U2": 0.01,
+                "U'": 0.93,
+                "U": 0.06
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 316.30047000000013,
+        "cost": 0.000016674000000000003
+      },
+      "safeReorientation": true
+    },
+    {
+      "id": "fresh-landing-13",
+      "variant": "sequential",
+      "expected": "reorient",
+      "runId": "17659e88-1c03-4ae8-8a22-7b2fa144a3a6",
+      "status": "complete",
+      "availability": {
+        "id": "d0523c88-b84b-40ed-be7e-95bd793bfbee",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UL",
+              "UF",
+              "UB"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": true
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 405,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 405,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 315.36188500000026,
+        "cost": 0.00001701
+      },
+      "exchange": {
+        "id": "20b6e75c-3031-4cff-a24d-e5df9e8d19c9",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ]
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "reorient",
+              "probabilities": {
+                "execute": 0,
+                "clear": 0.01,
+                "lower": 0.01,
+                "reorient": 0.98
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 47
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "reorient",
+              "confidence": 0.98,
+              "probabilities": {
+                "execute": 0,
+                "clear": 0.01,
+                "lower": 0.01,
+                "reorient": 0.98
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 544,
+            "output_tokens": 47
+          }
+        },
+        "elapsedMs": 268.45516300000054,
+        "cost": 0.000022848000000000002
+      },
+      "choice": "reorient",
+      "passed": true,
+      "destination": {
+        "id": "4cd0f2eb-28a8-44aa-8275-f806ca38a336",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "orange",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ]
+          },
+          "questions": {
+            "destination": {
+              "type": "choice",
+              "instructions": "Choose a different upper position above an unprotected bottom edge. The next cycle will observe the target there and select a fresh reference and routine. U rotations preserve all bottom edges. Pairings are UF above DF, UR above DR, UB above DB, UL above DL. Choose none only if no different safe position exists.",
+              "criteria": {
+                "UF": "Top front",
+                "UR": "Top right",
+                "UB": "Top back",
+                "UL": "Top left",
+                "none": "No other unprotected bottom position"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "destination": {
+              "type": "choice",
+              "choice": "UR",
+              "probabilities": {
+                "UF": 0.01,
+                "UL": 0.06,
+                "UR": 0.82,
+                "none": 0.06,
+                "UB": 0.05
+              },
+              "confidence": 0.78
+            }
+          },
+          "usage": {
+            "input_tokens": 506,
+            "output_tokens": 52
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "destination": {
+              "type": "choice",
+              "choice": "UR",
+              "confidence": 0.78,
+              "probabilities": {
+                "UF": 0.01,
+                "UL": 0.06,
+                "UR": 0.82,
+                "none": 0.06,
+                "UB": 0.05
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 506,
+            "output_tokens": 52
+          }
+        },
+        "elapsedMs": 468.5274759999993,
+        "cost": 0.000021252000000000003
+      },
+      "turn": {
+        "id": "6e28ba78-3dde-4d92-9ff5-69ce8e55f589",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UF",
+            "destination": "UR"
+          },
+          "questions": {
+            "setup": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying the target from currentPosition to destination. Use the fixed position cycles.",
+              "criteria": {
+                "U": "UF to UL, UL to UB, UB to UR, UR to UF",
+                "U'": "UF to UR, UR to UB, UB to UL, UL to UF",
+                "U2": "UF to UB, UB to UF, UR to UL, UL to UR"
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "setup": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U": 0.09,
+                "U'": 0.9,
+                "U2": 0.01
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 41
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "setup": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.86,
+              "probabilities": {
+                "U": 0.09,
+                "U'": 0.9,
+                "U2": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 397,
+            "output_tokens": 41
+          }
+        },
+        "elapsedMs": 301.8423180000009,
+        "cost": 0.000016674000000000003
+      },
+      "safeReorientation": true
+    },
+    {
+      "id": "fresh-landing-14",
+      "variant": "sequential",
+      "expected": "lower",
+      "runId": "beee8a97-d230-4ba3-8274-109d68c6312d",
+      "status": "complete",
+      "availability": {
+        "id": "8049985a-5cfc-473d-a4b1-8227ac23049c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF",
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 284.98971899999924,
+        "cost": 0.000016842000000000002
+      },
+      "exchange": {
+        "id": "21efa70f-cb49-48fa-a582-771d01cad607",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "green",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "probabilities": {
+                "clear": 0.04,
+                "lower": 0.96,
+                "execute": 0,
+                "reorient": 0
+              },
+              "confidence": 0.93
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "confidence": 0.93,
+              "probabilities": {
+                "clear": 0.04,
+                "lower": 0.96,
+                "execute": 0,
+                "reorient": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 412.313028999999,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "lower",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-15",
+      "variant": "sequential",
+      "expected": "lower",
+      "runId": "b0738ddf-635f-4234-9ca9-0336bf191ebe",
+      "status": "complete",
+      "availability": {
+        "id": "b512aa44-f5fc-4dd9-97dc-48badf6fb345",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF",
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "blocked": 1,
+                "free": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 434.460618000001,
+        "cost": 0.000016842000000000002
+      },
+      "exchange": {
+        "id": "4a38d76d-30c1-4519-a4fe-c4f4a2121b58",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "red",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "probabilities": {
+                "clear": 0.04,
+                "execute": 0,
+                "lower": 0.95,
+                "reorient": 0.01
+              },
+              "confidence": 0.93
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "confidence": 0.93,
+              "probabilities": {
+                "clear": 0.04,
+                "execute": 0,
+                "lower": 0.95,
+                "reorient": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 304.9195559999989,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "lower",
+      "passed": true
+    },
+    {
+      "id": "fresh-landing-16",
+      "variant": "sequential",
+      "expected": "lower",
+      "runId": "3b3f9f2d-6fed-4599-81c0-0f551fd9e4af",
+      "status": "complete",
+      "availability": {
+        "id": "e9906412-93cb-4d57-81a0-ea6e71a6b619",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "requiredFreeSlots": [
+              "UF",
+              "UR"
+            ],
+            "yellowUpPetals": {
+              "UF": false,
+              "UR": true,
+              "UB": false,
+              "UL": false
+            }
+          },
+          "questions": {
+            "availability": {
+              "type": "choice",
+              "instructions": "A true flag means a yellow-up petal occupies that slot. Inspect every slot listed in requiredFreeSlots. Are they all free? Ignore slots not listed.",
+              "criteria": {
+                "free": "Every required slot has false occupancy.",
+                "blocked": "At least one required slot has true occupancy."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "availability": {
+              "type": "choice",
+              "choice": "blocked",
+              "confidence": 1,
+              "probabilities": {
+                "free": 0,
+                "blocked": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 401,
+            "output_tokens": 31
+          }
+        },
+        "elapsedMs": 279.49519299999884,
+        "cost": 0.000016842000000000002
+      },
+      "exchange": {
+        "id": "c39c3c82-812f-471e-b24e-308cddfb9567",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "availability": "blocked",
+            "target": {
+              "position": "UF",
+              "layer": "top",
+              "yellowDirection": "F",
+              "sideColor": "red",
+              "sideDirection": "U",
+              "adjacentCenter": "white",
+              "sideMatchesCenter": false
+            },
+            "protectedBottomSlots": []
+          },
+          "questions": {
+            "decision": {
+              "type": "choice",
+              "instructions": "Use the previous model availability answer unchanged. Free means execute. For blocked: bottom or middle targets stay in place while U clears landing space. A top-front target would move with U, so first lower it with F unless the bottom-front edge is protected. F disturbs DF; if DF is protected, reorient the top target with U and observe again before choosing a fresh plan.",
+              "criteria": {
+                "execute": "Availability is free: execute the selected routine.",
+                "clear": "Blocked bottom or middle target: clear landing space.",
+                "lower": "Blocked top target with DF unprotected: lower using F.",
+                "reorient": "Blocked top target with DF protected: choose a new upper position."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "probabilities": {
+                "lower": 0.96,
+                "clear": 0.03,
+                "execute": 0,
+                "reorient": 0.01
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "decision": {
+              "type": "choice",
+              "choice": "lower",
+              "confidence": 0.95,
+              "probabilities": {
+                "lower": 0.96,
+                "clear": 0.03,
+                "execute": 0,
+                "reorient": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 541,
+            "output_tokens": 46
+          }
+        },
+        "elapsedMs": 248.56776799999898,
+        "cost": 0.000022722000000000004
+      },
+      "choice": "lower",
+      "passed": true
+    }
+  ],
+  "usage": {
+    "requests": 38,
+    "cost": 0.0007468440000000001
+  }
+}

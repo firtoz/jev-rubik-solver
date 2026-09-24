@@ -1,0 +1,17 @@
+{
+  "scores": [
+    {
+      "variant": "structured",
+      "total": 24,
+      "passed": 24,
+      "correctGroups": 24,
+      "tokens": 59011,
+      "failures": []
+    }
+  ],
+  "usage": {
+    "requests": 144,
+    "cost": 0.0074563020000000015
+  },
+  "projectCommitment": 8.250928140000001
+}

@@ -1,0 +1,23 @@
+{
+  "scores": [
+    {
+      "variant": "sequential",
+      "passed": 15,
+      "total": 16,
+      "safeAlternatives": 0,
+      "failures": [
+        {
+          "id": "fresh-landing-7",
+          "expected": "execute",
+          "choice": "reorient",
+          "safeReorientation": true
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "requests": 38,
+    "cost": 0.0007468440000000001
+  },
+  "projectCommitment": 8.214495114000002
+}

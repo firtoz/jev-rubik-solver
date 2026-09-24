@@ -1,0 +1,2793 @@
+{
+  "phase": "development",
+  "rows": [
+    {
+      "id": "position-0",
+      "variant": "compact",
+      "runId": "c914c170-de26-432e-8092-912add8c0b5d",
+      "expected": "routine",
+      "status": "complete",
+      "exchange": {
+        "id": "d6e59efe-4706-4a16-a156-8f78e1b0f1ac",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": true
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "probabilities": {
+                "reconsider": 0.01,
+                "align-corner": 0,
+                "extract-edge": 0,
+                "align-edge": 0,
+                "routine": 0.99,
+                "extract-corner": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "confidence": 0.98,
+              "probabilities": {
+                "reconsider": 0.01,
+                "align-corner": 0,
+                "extract-edge": 0,
+                "align-edge": 0,
+                "routine": 0.99,
+                "extract-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "elapsedMs": 720.944334,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-2",
+      "variant": "compact",
+      "runId": "11b23f04-0444-4855-ad08-95fcf9f6e013",
+      "expected": "routine",
+      "status": "complete",
+      "exchange": {
+        "id": "02f27c2f-2ab9-4d82-9865-417c4887e64d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": true
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "probabilities": {
+                "extract-corner": 0,
+                "reconsider": 0.03,
+                "align-corner": 0,
+                "extract-edge": 0,
+                "align-edge": 0,
+                "routine": 0.97
+              },
+              "confidence": 0.96
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "confidence": 0.96,
+              "probabilities": {
+                "extract-corner": 0,
+                "reconsider": 0.03,
+                "align-corner": 0,
+                "extract-edge": 0,
+                "align-edge": 0,
+                "routine": 0.97
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "elapsedMs": 764.0373249999999,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-4",
+      "variant": "compact",
+      "runId": "9df69d63-e993-4c36-9432-66f061297866",
+      "expected": "routine",
+      "status": "complete",
+      "exchange": {
+        "id": "0a119a67-f67c-4733-a5b7-05fe348af665",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": true
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "probabilities": {
+                "reconsider": 0.01,
+                "routine": 0.99,
+                "align-corner": 0,
+                "extract-corner": 0,
+                "align-edge": 0,
+                "extract-edge": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "confidence": 0.98,
+              "probabilities": {
+                "reconsider": 0.01,
+                "routine": 0.99,
+                "align-corner": 0,
+                "extract-corner": 0,
+                "align-edge": 0,
+                "extract-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "elapsedMs": 394.91057,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-6",
+      "variant": "compact",
+      "runId": "377402d3-7910-48a3-8a92-f39094d6c3d2",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchange": {
+        "id": "816ede49-a454-43fd-87aa-be0f3150fefb",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": true
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "probabilities": {
+                "align-corner": 0,
+                "reconsider": 0.12,
+                "routine": 0,
+                "extract-edge": 0.88,
+                "align-edge": 0,
+                "extract-corner": 0
+              },
+              "confidence": 0.85
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "confidence": 0.85,
+              "probabilities": {
+                "align-corner": 0,
+                "reconsider": 0.12,
+                "routine": 0,
+                "extract-edge": 0.88,
+                "align-edge": 0,
+                "extract-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "elapsedMs": 389.9919500000001,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-8",
+      "variant": "compact",
+      "runId": "63f1e78c-8b1c-42df-ae2c-240d388a5810",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "c4cd0021-89ec-41e9-815b-22f143a2934a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "reconsider": 0.2,
+                "extract-edge": 0.01,
+                "routine": 0,
+                "align-corner": 0.78,
+                "align-edge": 0.01,
+                "extract-corner": 0
+              },
+              "confidence": 0.73
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.73,
+              "probabilities": {
+                "reconsider": 0.2,
+                "extract-edge": 0.01,
+                "routine": 0,
+                "align-corner": 0.78,
+                "align-edge": 0.01,
+                "extract-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 512.2174140000002,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-10",
+      "variant": "compact",
+      "runId": "030dd2e9-11e3-4fc7-a07d-fcb6056488f5",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "fbf77c2a-297e-4c39-907b-630f23a2de9b",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "align-corner": 0.63,
+                "routine": 0.01,
+                "reconsider": 0.34,
+                "extract-edge": 0.01,
+                "align-edge": 0.01,
+                "extract-corner": 0
+              },
+              "confidence": 0.56
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.56,
+              "probabilities": {
+                "align-corner": 0.63,
+                "routine": 0.01,
+                "reconsider": 0.34,
+                "extract-edge": 0.01,
+                "align-edge": 0.01,
+                "extract-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 516.5851130000001,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-12",
+      "variant": "compact",
+      "runId": "679d2c4e-c6d6-4e66-b6b6-b7b75ae1ef65",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "9ed29b65-caa3-4d63-8d75-735eb23a6815",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "routine": 0,
+                "align-edge": 0,
+                "reconsider": 0.16,
+                "extract-edge": 0.01,
+                "extract-corner": 0,
+                "align-corner": 0.8200000000000001
+              },
+              "confidence": 0.78
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.78,
+              "probabilities": {
+                "routine": 0,
+                "align-edge": 0,
+                "reconsider": 0.16,
+                "extract-edge": 0.01,
+                "extract-corner": 0,
+                "align-corner": 0.8200000000000001
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 440.79835,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-14",
+      "variant": "compact",
+      "runId": "ab1ac5e5-785d-4417-9e38-bf3d1f8139c7",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchange": {
+        "id": "970f2810-3263-46bf-a95d-772dfb67b157",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "probabilities": {
+                "extract-corner": 0,
+                "align-edge": 0,
+                "align-corner": 0,
+                "extract-edge": 0.8200000000000001,
+                "routine": 0,
+                "reconsider": 0.18
+              },
+              "confidence": 0.78
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "confidence": 0.78,
+              "probabilities": {
+                "extract-corner": 0,
+                "align-edge": 0,
+                "align-corner": 0,
+                "extract-edge": 0.8200000000000001,
+                "routine": 0,
+                "reconsider": 0.18
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "elapsedMs": 449.2228060000002,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-16",
+      "variant": "compact",
+      "runId": "490768ab-d75e-4ed5-b4d6-a6ba0200072f",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "b853f13a-b740-4907-b9f7-5b46f5d59ff3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "extract-edge": 0.01,
+                "align-edge": 0,
+                "reconsider": 0.23,
+                "routine": 0.01,
+                "align-corner": 0.75,
+                "extract-corner": 0
+              },
+              "confidence": 0.7
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.7,
+              "probabilities": {
+                "extract-edge": 0.01,
+                "align-edge": 0,
+                "reconsider": 0.23,
+                "routine": 0.01,
+                "align-corner": 0.75,
+                "extract-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 547.9566970000001,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-18",
+      "variant": "compact",
+      "runId": "57529d2c-b97f-424b-9125-8e0b1ef00a3c",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "a5b61d39-5651-4975-b658-104aa92d026d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "align-edge": 0,
+                "extract-edge": 0.01,
+                "reconsider": 0.3,
+                "routine": 0.01,
+                "extract-corner": 0,
+                "align-corner": 0.68
+              },
+              "confidence": 0.62
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.62,
+              "probabilities": {
+                "align-edge": 0,
+                "extract-edge": 0.01,
+                "reconsider": 0.3,
+                "routine": 0.01,
+                "extract-corner": 0,
+                "align-corner": 0.68
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 559.6118339999994,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-20",
+      "variant": "compact",
+      "runId": "ce0f468d-35e4-4003-bc3b-e660fc245fb7",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "86250cd4-987e-40ec-83cd-46af9958ef6e",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "align-edge": 0,
+                "extract-edge": 0.02,
+                "align-corner": 0.8,
+                "extract-corner": 0,
+                "reconsider": 0.18,
+                "routine": 0
+              },
+              "confidence": 0.75
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.75,
+              "probabilities": {
+                "align-edge": 0,
+                "extract-edge": 0.02,
+                "align-corner": 0.8,
+                "extract-corner": 0,
+                "reconsider": 0.18,
+                "routine": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 288.0508090000003,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-22",
+      "variant": "compact",
+      "runId": "54ee5c8b-5ef7-49e7-beb4-08568f7273cf",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchange": {
+        "id": "d1440231-0a32-44d3-99a0-445172d62613",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "probabilities": {
+                "reconsider": 0.17,
+                "extract-edge": 0.83,
+                "routine": 0,
+                "align-corner": 0,
+                "align-edge": 0,
+                "extract-corner": 0
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "confidence": 0.79,
+              "probabilities": {
+                "reconsider": 0.17,
+                "extract-edge": 0.83,
+                "routine": 0,
+                "align-corner": 0,
+                "align-edge": 0,
+                "extract-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "elapsedMs": 293.65921199999957,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-24",
+      "variant": "compact",
+      "runId": "8cf9b1d8-f302-4f38-aac2-6d61eddbb77a",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "abffbe12-995b-47ba-8cea-5f482670c65c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "extract-corner": 0,
+                "routine": 0,
+                "align-edge": 0.01,
+                "reconsider": 0.22,
+                "align-corner": 0.76,
+                "extract-edge": 0.01
+              },
+              "confidence": 0.7
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.7,
+              "probabilities": {
+                "extract-corner": 0,
+                "routine": 0,
+                "align-edge": 0.01,
+                "reconsider": 0.22,
+                "align-corner": 0.76,
+                "extract-edge": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 454.73835000000054,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-26",
+      "variant": "compact",
+      "runId": "488390a9-b5fc-4b24-b37d-62a07a3b6018",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "56aaf99e-e40b-449e-a768-872bd3152236",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "reconsider": 0.28,
+                "align-corner": 0.69,
+                "routine": 0.01,
+                "extract-corner": 0,
+                "align-edge": 0.01,
+                "extract-edge": 0.01
+              },
+              "confidence": 0.64
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.64,
+              "probabilities": {
+                "reconsider": 0.28,
+                "align-corner": 0.69,
+                "routine": 0.01,
+                "extract-corner": 0,
+                "align-edge": 0.01,
+                "extract-edge": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 364.5632660000001,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-28",
+      "variant": "compact",
+      "runId": "d6bc046f-992f-4a66-815f-b584169269c1",
+      "expected": "align-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "48464272-c0e7-4d19-9d9b-3a26f4c319c3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "probabilities": {
+                "align-corner": 0.83,
+                "reconsider": 0.14,
+                "routine": 0.01,
+                "extract-corner": 0,
+                "align-edge": 0,
+                "extract-edge": 0.02
+              },
+              "confidence": 0.8
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-corner",
+              "confidence": 0.8,
+              "probabilities": {
+                "align-corner": 0.83,
+                "reconsider": 0.14,
+                "routine": 0.01,
+                "extract-corner": 0,
+                "align-edge": 0,
+                "extract-edge": 0.02
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 361.29528500000015,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-corner",
+      "passed": true
+    },
+    {
+      "id": "position-30",
+      "variant": "compact",
+      "runId": "1b25adc2-95bf-4fc9-88d8-dab30211fafb",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchange": {
+        "id": "c85e7a24-b159-4499-a42c-d538fc9926bb",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "upper",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "probabilities": {
+                "align-edge": 0,
+                "reconsider": 0.18,
+                "extract-edge": 0.8200000000000001,
+                "routine": 0,
+                "extract-corner": 0,
+                "align-corner": 0
+              },
+              "confidence": 0.77
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "confidence": 0.77,
+              "probabilities": {
+                "align-edge": 0,
+                "reconsider": 0.18,
+                "extract-edge": 0.8200000000000001,
+                "routine": 0,
+                "extract-corner": 0,
+                "align-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "elapsedMs": 300.13482099999965,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-32",
+      "variant": "compact",
+      "runId": "abeb1c7e-0e05-4e59-9068-8498f6a2acca",
+      "expected": "routine",
+      "status": "complete",
+      "exchange": {
+        "id": "ff97d267-ee22-4278-9fb7-d26be6e7f00f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": true,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "probabilities": {
+                "align-edge": 0.01,
+                "extract-edge": 0,
+                "reconsider": 0.09,
+                "routine": 0.9,
+                "extract-corner": 0,
+                "align-corner": 0
+              },
+              "confidence": 0.87
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "confidence": 0.87,
+              "probabilities": {
+                "align-edge": 0.01,
+                "extract-edge": 0,
+                "reconsider": 0.09,
+                "routine": 0.9,
+                "extract-corner": 0,
+                "align-corner": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "elapsedMs": 309.41880799999944,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-34",
+      "variant": "compact",
+      "runId": "b48dd364-de5e-43b9-98a5-159a04a450e7",
+      "expected": "align-edge",
+      "status": "complete",
+      "exchange": {
+        "id": "2d30ec8a-ba30-4c5a-8c0e-d1055fd47e26",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": true,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-edge",
+              "probabilities": {
+                "reconsider": 0.39,
+                "extract-edge": 0.01,
+                "extract-corner": 0,
+                "align-corner": 0,
+                "align-edge": 0.59,
+                "routine": 0.01
+              },
+              "confidence": 0.51
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "align-edge",
+              "confidence": 0.51,
+              "probabilities": {
+                "reconsider": 0.39,
+                "extract-edge": 0.01,
+                "extract-corner": 0,
+                "align-corner": 0,
+                "align-edge": 0.59,
+                "routine": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "elapsedMs": 434.61551599999984,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "align-edge",
+      "passed": true
+    },
+    {
+      "id": "position-36",
+      "variant": "compact",
+      "runId": "5fdc99ae-0092-4b60-8f7a-377fb08bc3b2",
+      "expected": "routine",
+      "status": "complete",
+      "exchange": {
+        "id": "a2195de0-6742-4a01-804b-8be663bf1e12",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": true,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "probabilities": {
+                "extract-edge": 0,
+                "reconsider": 0.02,
+                "align-corner": 0,
+                "extract-corner": 0,
+                "routine": 0.98,
+                "align-edge": 0
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "routine",
+              "confidence": 0.97,
+              "probabilities": {
+                "extract-edge": 0,
+                "reconsider": 0.02,
+                "align-corner": 0,
+                "extract-corner": 0,
+                "routine": 0.98,
+                "align-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 69
+          }
+        },
+        "elapsedMs": 423.2998770000004,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "routine",
+      "passed": true
+    },
+    {
+      "id": "position-38",
+      "variant": "compact",
+      "runId": "cd8b0770-1d1b-4def-acb6-ae95969b58fe",
+      "expected": "extract-edge",
+      "status": "complete",
+      "exchange": {
+        "id": "2c9a02a0-18aa-485e-b3f9-4778714dc09b",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": true,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "probabilities": {
+                "align-edge": 0,
+                "reconsider": 0.37,
+                "routine": 0.01,
+                "align-corner": 0,
+                "extract-corner": 0,
+                "extract-edge": 0.62
+              },
+              "confidence": 0.54
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "extract-edge",
+              "confidence": 0.54,
+              "probabilities": {
+                "align-edge": 0,
+                "reconsider": 0.37,
+                "routine": 0.01,
+                "align-corner": 0,
+                "extract-corner": 0,
+                "extract-edge": 0.62
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 70
+          }
+        },
+        "elapsedMs": 333.6507980000006,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "extract-edge",
+      "passed": true
+    },
+    {
+      "id": "position-40",
+      "variant": "compact",
+      "runId": "3b83b91b-90bb-4183-9969-23d3dc0e48c6",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "2ebaabb8-9ce8-443c-b7ed-2f2b1bd317c2",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "extract-edge": 0.02,
+                "align-corner": 0,
+                "routine": 0.01,
+                "extract-corner": 0.19,
+                "reconsider": 0.78,
+                "align-edge": 0
+              },
+              "confidence": 0.73
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.73,
+              "probabilities": {
+                "extract-edge": 0.02,
+                "align-corner": 0,
+                "routine": 0.01,
+                "extract-corner": 0.19,
+                "reconsider": 0.78,
+                "align-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 336.1229599999997,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-42",
+      "variant": "compact",
+      "runId": "9ce2f536-baf0-4474-8ae4-1e161431bca1",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "5297cb0e-0ac7-4665-9f99-7264093af2e6",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "extract-edge": 0.01,
+                "routine": 0.01,
+                "align-edge": 0.01,
+                "extract-corner": 0.26,
+                "align-corner": 0,
+                "reconsider": 0.71
+              },
+              "confidence": 0.65
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.65,
+              "probabilities": {
+                "extract-edge": 0.01,
+                "routine": 0.01,
+                "align-edge": 0.01,
+                "extract-corner": 0.26,
+                "align-corner": 0,
+                "reconsider": 0.71
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 295.07000699999935,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-44",
+      "variant": "compact",
+      "runId": "2f6c2ef6-406c-4856-b987-50366edadcf3",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "0b56dba2-dd6f-42f7-aaed-e09a832ca78c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "align-corner": 0,
+                "reconsider": 0.77,
+                "routine": 0.01,
+                "extract-edge": 0.02,
+                "align-edge": 0,
+                "extract-corner": 0.2
+              },
+              "confidence": 0.71
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.71,
+              "probabilities": {
+                "align-corner": 0,
+                "reconsider": 0.77,
+                "routine": 0.01,
+                "extract-edge": 0.02,
+                "align-edge": 0,
+                "extract-corner": 0.2
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 501.64391799999885,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-46",
+      "variant": "compact",
+      "runId": "83cdf6f9-5974-4819-91ac-a37f0b0a6468",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "7c52051b-28a4-4c3b-b67b-64894e5979a2",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "align-edge": 0,
+                "extract-corner": 0.3,
+                "reconsider": 0.66,
+                "align-corner": 0,
+                "extract-edge": 0.04,
+                "routine": 0
+              },
+              "confidence": 0.59
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.59,
+              "probabilities": {
+                "align-edge": 0,
+                "extract-corner": 0.3,
+                "reconsider": 0.66,
+                "align-corner": 0,
+                "extract-edge": 0.04,
+                "routine": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 470.6114519999992,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-48",
+      "variant": "compact",
+      "runId": "84fd9fc7-2650-4d82-ba5f-e972112f564d",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "967c4ebd-0cce-4931-9d31-2e9a942c3e32",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "reconsider": 0.79,
+                "routine": 0.01,
+                "align-corner": 0,
+                "extract-corner": 0.19,
+                "align-edge": 0,
+                "extract-edge": 0.01
+              },
+              "confidence": 0.74
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.74,
+              "probabilities": {
+                "reconsider": 0.79,
+                "routine": 0.01,
+                "align-corner": 0,
+                "extract-corner": 0.19,
+                "align-edge": 0,
+                "extract-edge": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 310.42794200000026,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-50",
+      "variant": "compact",
+      "runId": "bcfe17d7-cf02-4aae-8f42-1243665e5b28",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "15bff43c-3113-4634-86b4-1c177c9658de",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "routine": 0.01,
+                "align-edge": 0.01,
+                "reconsider": 0.71,
+                "align-corner": 0,
+                "extract-corner": 0.26,
+                "extract-edge": 0.01
+              },
+              "confidence": 0.66
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.66,
+              "probabilities": {
+                "routine": 0.01,
+                "align-edge": 0.01,
+                "reconsider": 0.71,
+                "align-corner": 0,
+                "extract-corner": 0.26,
+                "extract-edge": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 325.83863100000053,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-52",
+      "variant": "compact",
+      "runId": "187b9c56-ac41-4a11-b73e-558e7c7928b0",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "02350db3-ee84-4c78-92be-21ec1bad0e85",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "extract-edge": 0.02,
+                "align-corner": 0,
+                "reconsider": 0.76,
+                "extract-corner": 0.21,
+                "routine": 0.01,
+                "align-edge": 0
+              },
+              "confidence": 0.71
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.71,
+              "probabilities": {
+                "extract-edge": 0.02,
+                "align-corner": 0,
+                "reconsider": 0.76,
+                "extract-corner": 0.21,
+                "routine": 0.01,
+                "align-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 328.90499400000044,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-54",
+      "variant": "compact",
+      "runId": "91520dbc-c468-4f01-b6c9-21b7a63a8a3c",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "4c2d0200-b6df-44ed-8029-d23aa07cf3e7",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "align-corner": 0,
+                "routine": 0.01,
+                "extract-corner": 0.36,
+                "extract-edge": 0.03,
+                "reconsider": 0.6,
+                "align-edge": 0
+              },
+              "confidence": 0.52
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.52,
+              "probabilities": {
+                "align-corner": 0,
+                "routine": 0.01,
+                "extract-corner": 0.36,
+                "extract-edge": 0.03,
+                "reconsider": 0.6,
+                "align-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 323.21077200000036,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-56",
+      "variant": "compact",
+      "runId": "deeda72d-f03c-4356-9e29-5b47474087a6",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "88b72391-9228-419d-aa85-b4eee09d138e",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": true
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "routine": 0.01,
+                "reconsider": 0.71,
+                "extract-corner": 0.25,
+                "extract-edge": 0.02,
+                "align-corner": 0,
+                "align-edge": 0.01
+              },
+              "confidence": 0.66
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.66,
+              "probabilities": {
+                "routine": 0.01,
+                "reconsider": 0.71,
+                "extract-corner": 0.25,
+                "extract-edge": 0.02,
+                "align-corner": 0,
+                "align-edge": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 394.89284399999997,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-58",
+      "variant": "compact",
+      "runId": "f80c3418-6b6f-478a-ab17-6d8bc21ac09b",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "3842187e-4b80-431d-be05-d2a6d04d2e7e",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "upper",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "align-edge": 0.01,
+                "reconsider": 0.74,
+                "routine": 0.01,
+                "align-corner": 0,
+                "extract-corner": 0.23,
+                "extract-edge": 0.01
+              },
+              "confidence": 0.69
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.69,
+              "probabilities": {
+                "align-edge": 0.01,
+                "reconsider": 0.74,
+                "routine": 0.01,
+                "align-corner": 0,
+                "extract-corner": 0.23,
+                "extract-edge": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 393.1206860000002,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-60",
+      "variant": "compact",
+      "runId": "89adbdf2-8ed2-4669-952f-b447c1ed4ee3",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "8dc21b6d-fa4a-4c9d-88b9-b883ead2323f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": true,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "reconsider": 0.75,
+                "align-corner": 0,
+                "extract-edge": 0.03,
+                "align-edge": 0,
+                "extract-corner": 0.21,
+                "routine": 0.01
+              },
+              "confidence": 0.7
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.7,
+              "probabilities": {
+                "reconsider": 0.75,
+                "align-corner": 0,
+                "extract-edge": 0.03,
+                "align-edge": 0,
+                "extract-corner": 0.21,
+                "routine": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 351.02985100000114,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    },
+    {
+      "id": "position-62",
+      "variant": "compact",
+      "runId": "6b7ef2b8-4e79-43fd-8535-6067ef6dab08",
+      "expected": "extract-corner",
+      "status": "complete",
+      "exchange": {
+        "id": "e6a4561d-39a3-4a1e-9b5e-1f065241400c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "corner": {
+              "layer": "bottom",
+              "atDRF": false,
+              "atUFR": false
+            },
+            "edge": {
+              "layer": "middle",
+              "atFR": false,
+              "atUF": false
+            }
+          },
+          "questions": {
+            "preparation": {
+              "type": "choice",
+              "instructions": "Choose the preparation from these geometric observations in the selected local frame. DRF is the destination corner slot, FR the destination edge slot. Test extraction before alignment or choosing a routine. Both pieces must satisfy a routine reference.",
+              "criteria": {
+                "extract-corner": "corner.layer=bottom and corner.atDRF=false.",
+                "extract-edge": "corner is upper or atDRF=true; edge.layer=middle and edge.atFR=false.",
+                "align-corner": "corner.layer=upper and corner.atUFR=false; edge is upper or atFR=true.",
+                "align-edge": "corner.atDRF=true; edge.layer=upper and edge.atUF=false.",
+                "routine": "Either (corner.atUFR=true AND (edge.layer=upper OR edge.atFR=true)), OR (corner.atDRF=true AND (edge.atUF=true OR edge.atFR=true)).",
+                "reconsider": "No combination above applies."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "align-corner": 0,
+                "extract-corner": 0.36,
+                "extract-edge": 0.03,
+                "routine": 0,
+                "align-edge": 0,
+                "reconsider": 0.61
+              },
+              "confidence": 0.52
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "preparation": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.52,
+              "probabilities": {
+                "align-corner": 0,
+                "extract-corner": 0.36,
+                "extract-edge": 0.03,
+                "routine": 0,
+                "align-edge": 0,
+                "reconsider": 0.61
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 71
+          }
+        },
+        "elapsedMs": 342.07616400000006,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "reconsider",
+      "passed": false
+    }
+  ],
+  "usage": {
+    "requests": 96,
+    "cost": 0.002405424
+  }
+}

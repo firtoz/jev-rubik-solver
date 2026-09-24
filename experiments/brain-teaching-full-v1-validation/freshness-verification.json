@@ -1,0 +1,9 @@
+{
+  "starts": 10,
+  "unique": 10,
+  "priorFixtureFiles": 52,
+  "priorRunScrambles": 1514,
+  "priorDistinctStates": 1524,
+  "overlaps": [],
+  "method": "Independent cubing reconstruction and canonical edge/corner permutation+orientation arrays; compare every saved fixture file excluding this dataset, plus every other run’s recorded starting scramble."
+}

@@ -1,0 +1,125 @@
+{
+  "warning": "Reference coverage only, not JEV choices or new solves. Not a live-policy candidate ranking.",
+  "records": [
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-1",
+      "recordedStatus": "solved",
+      "recordedTurns": 87,
+      "turnsBeforePLL": 62,
+      "reference": "Ja@R:none",
+      "referenceTurns": 11,
+      "counterfactualTotal": 73
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-2",
+      "recordedStatus": "solved",
+      "recordedTurns": 96,
+      "turnsBeforePLL": 70,
+      "reference": "Gb@L:none",
+      "referenceTurns": 12,
+      "counterfactualTotal": 82
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-3",
+      "recordedStatus": "solved",
+      "recordedTurns": 85,
+      "turnsBeforePLL": 59,
+      "reference": "Gb@F:none",
+      "referenceTurns": 12,
+      "counterfactualTotal": 71
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-4",
+      "recordedStatus": "solved",
+      "recordedTurns": 95,
+      "turnsBeforePLL": 69,
+      "reference": "Jb@F:U2",
+      "referenceTurns": 15,
+      "counterfactualTotal": 84
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-5",
+      "recordedStatus": "capped",
+      "recordedTurns": 93,
+      "turnsBeforePLL": 78,
+      "reference": "Ja@L:U'",
+      "referenceTurns": 12,
+      "counterfactualTotal": 90
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-6",
+      "recordedStatus": "solved",
+      "recordedTurns": 84,
+      "turnsBeforePLL": 58,
+      "reference": "Y@R:U2",
+      "referenceTurns": 18,
+      "counterfactualTotal": 76
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-7",
+      "recordedStatus": "capped",
+      "recordedTurns": 87,
+      "turnsBeforePLL": 72,
+      "reference": "Ab@F:U2",
+      "referenceTurns": 10,
+      "counterfactualTotal": 82
+    },
+    {
+      "source": "experiments/diagonal-corners-v1/fresh-development/results.json",
+      "id": "fresh-8",
+      "recordedStatus": "capped",
+      "recordedTurns": 86,
+      "turnsBeforePLL": 71,
+      "reference": "Aa@F:none",
+      "referenceTurns": 9,
+      "counterfactualTotal": 80
+    },
+    {
+      "source": "experiments/protected-landing-v1/full-integration/results.json",
+      "id": "fresh-1",
+      "recordedStatus": "solved",
+      "recordedTurns": 94,
+      "turnsBeforePLL": 68,
+      "reference": "Ga@L:none",
+      "referenceTurns": 16,
+      "counterfactualTotal": 84
+    },
+    {
+      "source": "experiments/protected-landing-v1/full-integration/results.json",
+      "id": "fresh-2",
+      "recordedStatus": "solved",
+      "recordedTurns": 87,
+      "turnsBeforePLL": 61,
+      "reference": "Y@L:none",
+      "referenceTurns": 17,
+      "counterfactualTotal": 78
+    },
+    {
+      "source": "experiments/protected-landing-v1/full-integration/results.json",
+      "id": "fresh-3",
+      "recordedStatus": "solved",
+      "recordedTurns": 83,
+      "turnsBeforePLL": 71,
+      "reference": "Ub@F:U",
+      "referenceTurns": 12,
+      "counterfactualTotal": 83
+    },
+    {
+      "source": "experiments/protected-landing-v1/full-integration/results.json",
+      "id": "fresh-5",
+      "recordedStatus": "capped",
+      "recordedTurns": 87,
+      "turnsBeforePLL": 72,
+      "reference": "Ab@L:U'",
+      "referenceTurns": 10,
+      "counterfactualTotal": 82
+    }
+  ]
+}

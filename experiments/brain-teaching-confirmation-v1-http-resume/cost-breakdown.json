@@ -1,0 +1,675 @@
+{
+  "partial": false,
+  "at": "2026-09-23T21:02:49.514Z",
+  "current": {
+    "requests": 19674,
+    "inputTokens": 22940960,
+    "settled": 0.9635203200000458,
+    "reserved": 0.2257919999999998,
+    "latencyMs": 19923644.10963998
+  },
+  "stages": {
+    "daisy": {
+      "requests": 3388,
+      "inputTokens": 2684732,
+      "settled": 0.11275874399999904,
+      "reserved": 0,
+      "latencyMs": 4264822.430930993
+    },
+    "cross": {
+      "requests": 2815,
+      "inputTokens": 1928109,
+      "settled": 0.08098057799999912,
+      "reserved": 0,
+      "latencyMs": 2924078.9812070094
+    },
+    "first-layer": {
+      "requests": 4566,
+      "inputTokens": 9708981,
+      "settled": 0.4077772019999969,
+      "reserved": 0,
+      "latencyMs": 4760067.67276899
+    },
+    "middle-layer": {
+      "requests": 5194,
+      "inputTokens": 3397071,
+      "settled": 0.14267698199999987,
+      "reserved": 0,
+      "latencyMs": 4810216.120296017
+    },
+    "top-cross": {
+      "requests": 460,
+      "inputTokens": 666884,
+      "settled": 0.028009127999999977,
+      "reserved": 0,
+      "latencyMs": 445967.116718995
+    },
+    "top-orientation": {
+      "requests": 888,
+      "inputTokens": 821124,
+      "settled": 0.03448720799999993,
+      "reserved": 0,
+      "latencyMs": 815017.5022570062
+    },
+    "top-corners": {
+      "requests": 1510,
+      "inputTokens": 2572133,
+      "settled": 0.10802958599999993,
+      "reserved": 0,
+      "latencyMs": 1249205.7566670023
+    },
+    "top-edges": {
+      "requests": 769,
+      "inputTokens": 1161926,
+      "settled": 0.04880089199999982,
+      "reserved": 0,
+      "latencyMs": 654268.5287940032
+    },
+    "incomplete / unassigned": {
+      "requests": 84,
+      "inputTokens": 0,
+      "settled": 0,
+      "reserved": 0.2257919999999998,
+      "latencyMs": 0
+    }
+  },
+  "families": {
+    "goal": {
+      "requests": 4160,
+      "inputTokens": 3218084,
+      "settled": 0.13515952799999956,
+      "reserved": 0.034944,
+      "latencyMs": 4197184.682082008
+    },
+    "gatherTarget + transferTarget": {
+      "requests": 1211,
+      "inputTokens": 1080482,
+      "settled": 0.045380243999999535,
+      "reserved": 0.008064000000000002,
+      "latencyMs": 1430340.5821109943
+    },
+    "reference + situation": {
+      "requests": 1216,
+      "inputTokens": 707888,
+      "settled": 0.029731296000000244,
+      "reserved": 0.021504,
+      "latencyMs": 1367834.3334400016
+    },
+    "routine": {
+      "requests": 447,
+      "inputTokens": 713785,
+      "settled": 0.029978969999999855,
+      "reserved": 0.005376000000000001,
+      "latencyMs": 571772.3977219943
+    },
+    "decision": {
+      "requests": 1267,
+      "inputTokens": 795102,
+      "settled": 0.033394284000000024,
+      "reserved": 0.018816,
+      "latencyMs": 1409909.6755000085
+    },
+    "setup": {
+      "requests": 486,
+      "inputTokens": 205769,
+      "settled": 0.00864229799999997,
+      "reserved": 0.005376000000000001,
+      "latencyMs": 528263.0559010011
+    },
+    "plan": {
+      "requests": 179,
+      "inputTokens": 95999,
+      "settled": 0.004031958000000014,
+      "reserved": 0.005376000000000001,
+      "latencyMs": 198624.27582800275
+    },
+    "freeSlot": {
+      "requests": 162,
+      "inputTokens": 64410,
+      "settled": 0.002705219999999997,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 180821.3231960021
+    },
+    "recovery": {
+      "requests": 68,
+      "inputTokens": 32244,
+      "settled": 0.0013542480000000006,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 92547.70907399943
+    },
+    "intent_DBR + intent_DFL + intent_DLB + intent_DRF + target": {
+      "requests": 1146,
+      "inputTokens": 3331353,
+      "settled": 0.13991682599999986,
+      "reserved": 0.018816,
+      "latencyMs": 1200330.9450079896
+    },
+    "reference": {
+      "requests": 2061,
+      "inputTokens": 4902125,
+      "settled": 0.20588924999999908,
+      "reserved": 0.045696000000000014,
+      "latencyMs": 1958627.5054230127
+    },
+    "operation": {
+      "requests": 2047,
+      "inputTokens": 3914418,
+      "settled": 0.1644055560000004,
+      "reserved": 0.008064000000000002,
+      "latencyMs": 1988435.9931979966
+    },
+    "target": {
+      "requests": 895,
+      "inputTokens": 810284,
+      "settled": 0.0340319279999999,
+      "reserved": 0.005376000000000001,
+      "latencyMs": 806904.9460840059
+    },
+    "match_B + match_U": {
+      "requests": 154,
+      "inputTokens": 68085,
+      "settled": 0.0028595700000000035,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 134203.67609599943
+    },
+    "intention": {
+      "requests": 895,
+      "inputTokens": 535825,
+      "settled": 0.022504650000000015,
+      "reserved": 0.01344,
+      "latencyMs": 828268.7864320044
+    },
+    "front": {
+      "requests": 406,
+      "inputTokens": 210714,
+      "settled": 0.008849987999999984,
+      "reserved": 0,
+      "latencyMs": 355837.24889500067
+    },
+    "action": {
+      "requests": 562,
+      "inputTokens": 455163,
+      "settled": 0.019116845999999927,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 524003.0626810052
+    },
+    "match_F + match_L": {
+      "requests": 19,
+      "inputTokens": 8455,
+      "settled": 0.00035511000000000017,
+      "reserved": 0,
+      "latencyMs": 13368.63823400029
+    },
+    "match_B + match_R": {
+      "requests": 69,
+      "inputTokens": 30705,
+      "settled": 0.0012896100000000014,
+      "reserved": 0,
+      "latencyMs": 58486.343395998716
+    },
+    "destination": {
+      "requests": 332,
+      "inputTokens": 147063,
+      "settled": 0.006176646000000014,
+      "reserved": 0.008064000000000002,
+      "latencyMs": 332245.4539669998
+    },
+    "turn": {
+      "requests": 329,
+      "inputTokens": 144431,
+      "settled": 0.006066101999999989,
+      "reserved": 0,
+      "latencyMs": 321386.1285810004
+    },
+    "match_F + match_U": {
+      "requests": 217,
+      "inputTokens": 96565,
+      "settled": 0.004055730000000005,
+      "reserved": 0,
+      "latencyMs": 199742.31773299933
+    },
+    "match_L + match_U": {
+      "requests": 212,
+      "inputTokens": 93450,
+      "settled": 0.003924900000000005,
+      "reserved": 0.005376000000000001,
+      "latencyMs": 212246.1200350014
+    },
+    "match_R + match_U": {
+      "requests": 158,
+      "inputTokens": 69865,
+      "settled": 0.0029343300000000037,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 132055.1392129995
+    },
+    "match_F + match_R": {
+      "requests": 39,
+      "inputTokens": 17355,
+      "settled": 0.0007289100000000007,
+      "reserved": 0,
+      "latencyMs": 54779.99001900031
+    },
+    "intent_whole + target": {
+      "requests": 907,
+      "inputTokens": 1173286,
+      "settled": 0.049278011999999975,
+      "reserved": 0.008064000000000002,
+      "latencyMs": 795653.9894249977
+    },
+    "match_B + match_L": {
+      "requests": 28,
+      "inputTokens": 12460,
+      "settled": 0.0005233200000000004,
+      "reserved": 0,
+      "latencyMs": 27543.036637999176
+    },
+    "intent_DBR + intent_DFL + intent_DLB + target": {
+      "requests": 2,
+      "inputTokens": 5595,
+      "settled": 0.00023499000000000003,
+      "reserved": 0,
+      "latencyMs": 2226.7537279999815
+    }
+  },
+  "recovery": {
+    "requests": 68,
+    "inputTokens": 32244,
+    "settled": 0.0013542480000000006,
+    "reserved": 0.0026880000000000003,
+    "latencyMs": 92547.70907399943
+  },
+  "studies": {
+    "probe": {
+      "requests": 1811,
+      "inputTokens": 2926362,
+      "settled": 0.12290720400000042,
+      "reserved": 0,
+      "latencyMs": 535590.4693900002
+    },
+    "development": {
+      "requests": 12812,
+      "inputTokens": 23288302,
+      "settled": 0.9781086840000024,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 3821914.263730014
+    },
+    "interactive": {
+      "requests": 2,
+      "inputTokens": 4462,
+      "settled": 0.000187404,
+      "reserved": 0,
+      "latencyMs": 896.2949160000426
+    },
+    "validation": {
+      "requests": 6004,
+      "inputTokens": 11643694,
+      "settled": 0.4890351480000062,
+      "reserved": 0,
+      "latencyMs": 2343636.42715
+    },
+    "development-probe": {
+      "requests": 20,
+      "inputTokens": 49781,
+      "settled": 0.002090802,
+      "reserved": 0,
+      "latencyMs": 5960.435164
+    },
+    "final-test": {
+      "requests": 29465,
+      "inputTokens": 54942208,
+      "settled": 2.3075727359999743,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 12858378.80381204
+    },
+    "comparison": {
+      "requests": 1500,
+      "inputTokens": 3310572,
+      "settled": 0.13904402400000224,
+      "reserved": 0,
+      "latencyMs": 451889.5604870008
+    },
+    "article-manual": {
+      "requests": 9,
+      "inputTokens": 17648,
+      "settled": 0.0007412160000000002,
+      "reserved": 0,
+      "latencyMs": 3257.6839509999845
+    },
+    "move-prediction-development": {
+      "requests": 20,
+      "inputTokens": 16341,
+      "settled": 0.0006863220000000002,
+      "reserved": 0,
+      "latencyMs": 5472.902844999999
+    },
+    "geometric-development": {
+      "requests": 80,
+      "inputTokens": 69657,
+      "settled": 0.002925593999999999,
+      "reserved": 0,
+      "latencyMs": 22361.190831000014
+    },
+    "vector-prediction": {
+      "requests": 40,
+      "inputTokens": 45756,
+      "settled": 0.0019217519999999997,
+      "reserved": 0,
+      "latencyMs": 11624.740918999998
+    },
+    "grid-prediction": {
+      "requests": 80,
+      "inputTokens": 45418,
+      "settled": 0.0019075559999999988,
+      "reserved": 0,
+      "latencyMs": 24778.218643000007
+    },
+    "grid-variant-development": {
+      "requests": 120,
+      "inputTokens": 71238,
+      "settled": 0.0029919960000000033,
+      "reserved": 0,
+      "latencyMs": 36224.159106
+    },
+    "first-layer-development": {
+      "requests": 260,
+      "inputTokens": 256540,
+      "settled": 0.010774680000000002,
+      "reserved": 0,
+      "latencyMs": 73538.412634
+    },
+    "first-layer-validation": {
+      "requests": 60,
+      "inputTokens": 55380,
+      "settled": 0.00232596,
+      "reserved": 0,
+      "latencyMs": 16733.731564
+    },
+    "progress-goal-development": {
+      "requests": 220,
+      "inputTokens": 299480,
+      "settled": 0.01257815999999998,
+      "reserved": 0,
+      "latencyMs": 59107.89543199998
+    },
+    "goal-handoff": {
+      "requests": 60,
+      "inputTokens": 52580,
+      "settled": 0.0022083599999999986,
+      "reserved": 0,
+      "latencyMs": 17666.366330999997
+    },
+    "progress-goal-validation": {
+      "requests": 80,
+      "inputTokens": 121580,
+      "settled": 0.00510636,
+      "reserved": 0,
+      "latencyMs": 22967.205750000016
+    },
+    "progress-integration-v1": {
+      "requests": 114,
+      "inputTokens": 192243,
+      "settled": 0.008074206000000004,
+      "reserved": 0,
+      "latencyMs": 30802.588678999997
+    },
+    "daisy-transition-development": {
+      "requests": 120,
+      "inputTokens": 128340,
+      "settled": 0.0053902799999999895,
+      "reserved": 0,
+      "latencyMs": 30984.879574999984
+    },
+    "daisy-decision": {
+      "requests": 220,
+      "inputTokens": 161360,
+      "settled": 0.006777119999999987,
+      "reserved": 0,
+      "latencyMs": 57051.91215899996
+    },
+    "daisy-integration-v1": {
+      "requests": 140,
+      "inputTokens": 153915,
+      "settled": 0.006464429999999998,
+      "reserved": 0,
+      "latencyMs": 48940.17094599996
+    },
+    "observation-boundary-v1": {
+      "requests": 380,
+      "inputTokens": 869604,
+      "settled": 0.036523367999999966,
+      "reserved": 0,
+      "latencyMs": 173046.6984289998
+    },
+    "action-preconditions-v1": {
+      "requests": 200,
+      "inputTokens": 123042,
+      "settled": 0.005167764,
+      "reserved": 0,
+      "latencyMs": 74486.12606500005
+    },
+    "brain-early-v1": {
+      "requests": 126,
+      "inputTokens": 108119,
+      "settled": 0.004540998,
+      "reserved": 0,
+      "latencyMs": 35853.303757999965
+    },
+    "brain-early-v2": {
+      "requests": 262,
+      "inputTokens": 214404,
+      "settled": 0.00900496800000001,
+      "reserved": 0,
+      "latencyMs": 74931.312316
+    },
+    "top-slot-transfer-v1": {
+      "requests": 24,
+      "inputTokens": 10152,
+      "settled": 0.0004263840000000003,
+      "reserved": 0,
+      "latencyMs": 6808.343492
+    },
+    "brain-early-v3": {
+      "requests": 197,
+      "inputTokens": 155899,
+      "settled": 0.006547758000000004,
+      "reserved": 0,
+      "latencyMs": 53818.456382000004
+    },
+    "brain-full-v1": {
+      "requests": 59,
+      "inputTokens": 65592,
+      "settled": 0.002754864,
+      "reserved": 0,
+      "latencyMs": 16208.187976000005
+    },
+    "goal-contract-v1": {
+      "requests": 96,
+      "inputTokens": 102164,
+      "settled": 0.004290888000000008,
+      "reserved": 0,
+      "latencyMs": 26546.975149000016
+    },
+    "brain-full-v2": {
+      "requests": 654,
+      "inputTokens": 1017540,
+      "settled": 0.042736679999999985,
+      "reserved": 0,
+      "latencyMs": 181725.6482590004
+    },
+    "brain-full-v2-validation": {
+      "requests": 1699,
+      "inputTokens": 2328919,
+      "settled": 0.09781459799999986,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 482998.1612730013
+    },
+    "brain-full-v2-transport-validation": {
+      "requests": 1659,
+      "inputTokens": 2272608,
+      "settled": 0.09544953599999983,
+      "reserved": 0.0026880000000000003,
+      "latencyMs": 469380.4710229997
+    },
+    "plan-memory-v1": {
+      "requests": 78,
+      "inputTokens": 136364,
+      "settled": 0.005727288000000003,
+      "reserved": 0,
+      "latencyMs": 22991.275408999994
+    },
+    "plan-commit-development": {
+      "requests": 18,
+      "inputTokens": 9768,
+      "settled": 0.000410256,
+      "reserved": 0,
+      "latencyMs": 5403.829939
+    },
+    "plan-commit-validation": {
+      "requests": 24,
+      "inputTokens": 13078,
+      "settled": 0.000549276,
+      "reserved": 0,
+      "latencyMs": 7027.531843000001
+    },
+    "brain-full-v3": {
+      "requests": 671,
+      "inputTokens": 930407,
+      "settled": 0.03907709399999997,
+      "reserved": 0,
+      "latencyMs": 183495.8708
+    },
+    "brain-full-v3-validation": {
+      "requests": 1774,
+      "inputTokens": 2436863,
+      "settled": 0.10234824599999981,
+      "reserved": 0,
+      "latencyMs": 539843.834385999
+    },
+    "brain-full-v3-final": {
+      "requests": 17665,
+      "inputTokens": 24030420,
+      "settled": 1.0092776400000518,
+      "reserved": 0.005376000000000001,
+      "latencyMs": 5878335.2707329905
+    },
+    "goal-readable-v1": {
+      "requests": 128,
+      "inputTokens": 102216,
+      "settled": 0.004293071999999997,
+      "reserved": 0,
+      "latencyMs": 55599.162348000005
+    },
+    "brain-v3-viewer-2026-09-22T21-49-38-503Z": {
+      "requests": 196,
+      "inputTokens": 244147,
+      "settled": 0.010254173999999993,
+      "reserved": 0,
+      "latencyMs": 84012.150563
+    },
+    "less-help-v1": {
+      "requests": 200,
+      "inputTokens": 159980,
+      "settled": 0.00671916,
+      "reserved": 0,
+      "latencyMs": 87351.89379299998
+    },
+    "less-help-v2": {
+      "requests": 200,
+      "inputTokens": 192320,
+      "settled": 0.00807744,
+      "reserved": 0,
+      "latencyMs": 111864.845471
+    },
+    "less-help-probes-v1": {
+      "requests": 56,
+      "inputTokens": 20856,
+      "settled": 0.0008759520000000009,
+      "reserved": 0,
+      "latencyMs": 26555.640080999987
+    },
+    "less-help-compose-v1": {
+      "requests": 80,
+      "inputTokens": 92980,
+      "settled": 0.0039051600000000026,
+      "reserved": 0,
+      "latencyMs": 34411.404066999996
+    },
+    "less-help-routed-v1": {
+      "requests": 130,
+      "inputTokens": 91398,
+      "settled": 0.003838715999999997,
+      "reserved": 0,
+      "latencyMs": 54408.34753200005
+    },
+    "less-help-roles-v1": {
+      "requests": 141,
+      "inputTokens": 82251,
+      "settled": 0.0034545420000000014,
+      "reserved": 0,
+      "latencyMs": 62381.23192199998
+    },
+    "less-help-context-v1": {
+      "requests": 70,
+      "inputTokens": 46027,
+      "settled": 0.0019331340000000002,
+      "reserved": 0,
+      "latencyMs": 28979.95682100001
+    },
+    "less-help-context-v2": {
+      "requests": 70,
+      "inputTokens": 41211,
+      "settled": 0.0017308620000000012,
+      "reserved": 0,
+      "latencyMs": 31577.639362000005
+    },
+    "less-help-scene-v1": {
+      "requests": 88,
+      "inputTokens": 56895,
+      "settled": 0.002389590000000001,
+      "reserved": 0,
+      "latencyMs": 43813.624119999986
+    },
+    "less-help-view-v1": {
+      "requests": 120,
+      "inputTokens": 80912,
+      "settled": 0.003398304,
+      "reserved": 0,
+      "latencyMs": 76459.45832699996
+    },
+    "teaching-study-v1": {
+      "requests": 1754,
+      "inputTokens": 1122335,
+      "settled": 0.047138070000000164,
+      "reserved": 0,
+      "latencyMs": 784822.6869610008
+    },
+    "teaching-study-v2": {
+      "requests": 695,
+      "inputTokens": 430849,
+      "settled": 0.01809565799999994,
+      "reserved": 0,
+      "latencyMs": 291458.06185
+    },
+    "brain-teaching-full-v1-validation": {
+      "requests": 1856,
+      "inputTokens": 2136306,
+      "settled": 0.08972485199999987,
+      "reserved": 0,
+      "latencyMs": 901201.3669980009
+    },
+    "brain-teaching-full-v1-final": {
+      "requests": 18745,
+      "inputTokens": 21553514,
+      "settled": 0.9052475880000369,
+      "reserved": 0,
+      "latencyMs": 9676175.89319806
+    },
+    "brain-teaching-confirmation-v1": {
+      "requests": 19674,
+      "inputTokens": 22940960,
+      "settled": 0.9635203200000458,
+      "reserved": 0.2257919999999998,
+      "latencyMs": 19923644.10963998
+    }
+  }
+}

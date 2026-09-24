@@ -1,0 +1,120 @@
+{
+  "partial": false,
+  "checked": 4,
+  "projectCommitment": 8.056409214,
+  "rows": [
+    {
+      "id": "pair-1",
+      "variant": "candidate",
+      "status": "capped",
+      "turns": 98,
+      "requests": 143,
+      "cost": 0.004590978000000001,
+      "elapsedMs": 73202,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 39,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "top-corners": 29
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": false,
+        "solvedPieces": 17
+      }
+    },
+    {
+      "id": "pair-2",
+      "variant": "candidate",
+      "status": "capped",
+      "turns": 90,
+      "requests": 132,
+      "cost": 0.004230534,
+      "elapsedMs": 66965,
+      "stages": {
+        "daisy": 11,
+        "cross": 7,
+        "f2l": 36,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "top-corners": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": false,
+        "solvedPieces": 17
+      }
+    },
+    {
+      "id": "pair-3",
+      "variant": "candidate",
+      "status": "capped",
+      "turns": 93,
+      "requests": 141,
+      "cost": 0.0046084080000000005,
+      "elapsedMs": 70804,
+      "stages": {
+        "daisy": 10,
+        "cross": 4,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "top-corners": 28
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": false,
+        "solvedPieces": 17
+      }
+    },
+    {
+      "id": "pair-4",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 95,
+      "requests": 135,
+      "cost": 0.004333728,
+      "elapsedMs": 67450,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 36,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "top-corners": 14,
+        "top-edges": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    }
+  ]
+}

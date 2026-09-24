@@ -1,0 +1,1761 @@
+{
+  "phase": "development",
+  "rows": [
+    {
+      "id": "UF-UF",
+      "variant": "baseline",
+      "expected": "reconsider",
+      "runId": "13eefb5d-19db-4743-9d99-45ec5f48deff",
+      "status": "complete",
+      "exchange": {
+        "id": "8507cb83-5876-4a69-9dce-a4a3924645b4",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UF",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "reconsider": 0.84,
+                "U2": 0.01,
+                "U'": 0.01,
+                "U": 0.14
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 51
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.79,
+              "probabilities": {
+                "reconsider": 0.84,
+                "U2": 0.01,
+                "U'": 0.01,
+                "U": 0.14
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 51
+          }
+        },
+        "elapsedMs": 770.4147269999999,
+        "cost": 0.000019824000000000002
+      },
+      "choice": "reconsider",
+      "passed": true
+    },
+    {
+      "id": "UR-UF",
+      "variant": "baseline",
+      "expected": "U",
+      "runId": "8465fc82-97b3-4748-949a-d88b5d2afdbe",
+      "status": "complete",
+      "exchange": {
+        "id": "8118c102-94f6-4f61-80bd-f6c3c68c6597",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UR",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U2": 0.06,
+                "reconsider": 0.01,
+                "U'": 0.84,
+                "U": 0.09
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.79,
+              "probabilities": {
+                "U2": 0.06,
+                "reconsider": 0.01,
+                "U'": 0.84,
+                "U": 0.09
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 850.9038360000001,
+        "cost": 0.000019824000000000002
+      },
+      "choice": "U'",
+      "passed": false
+    },
+    {
+      "id": "UB-UF",
+      "variant": "baseline",
+      "expected": "U2",
+      "runId": "1c41d161-48cb-4125-8b3c-d45e3cf0882b",
+      "status": "complete",
+      "exchange": {
+        "id": "9dc92fe9-5117-4a29-808a-30bd03b6f3dd",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UB",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U": 0.15,
+                "reconsider": 0.01,
+                "U'": 0.56,
+                "U2": 0.27
+              },
+              "confidence": 0.42
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.42,
+              "probabilities": {
+                "U": 0.15,
+                "reconsider": 0.01,
+                "U'": 0.56,
+                "U2": 0.27
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 291.699173,
+        "cost": 0.000019824000000000002
+      },
+      "choice": "U'",
+      "passed": false
+    },
+    {
+      "id": "UL-UF",
+      "variant": "baseline",
+      "expected": "U'",
+      "runId": "be440902-82ae-4ab6-bfb0-1b205e7623e5",
+      "status": "complete",
+      "exchange": {
+        "id": "47e9b9d3-8b20-42a9-8eef-9482675d64ae",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UL",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "reconsider": 0.02,
+                "U'": 0.69,
+                "U2": 0.12,
+                "U": 0.17
+              },
+              "confidence": 0.58
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.58,
+              "probabilities": {
+                "reconsider": 0.02,
+                "U'": 0.69,
+                "U2": 0.12,
+                "U": 0.17
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 472,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 298.16788199999996,
+        "cost": 0.000019824000000000002
+      },
+      "choice": "U'",
+      "passed": true
+    },
+    {
+      "id": "UFR-UFR",
+      "variant": "baseline",
+      "expected": "reconsider",
+      "runId": "0411c24d-83af-4157-82ad-afb960702643",
+      "status": "complete",
+      "exchange": {
+        "id": "d4b857a3-4c17-491f-84c7-14a30a3a4f6a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UFR",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "U'": 0.02,
+                "reconsider": 0.78,
+                "U2": 0.02,
+                "U": 0.18
+              },
+              "confidence": 0.71
+            }
+          },
+          "usage": {
+            "input_tokens": 474,
+            "output_tokens": 51
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.71,
+              "probabilities": {
+                "U'": 0.02,
+                "reconsider": 0.78,
+                "U2": 0.02,
+                "U": 0.18
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 474,
+            "output_tokens": 51
+          }
+        },
+        "elapsedMs": 325.1975749999999,
+        "cost": 0.000019908000000000003
+      },
+      "choice": "reconsider",
+      "passed": true
+    },
+    {
+      "id": "URB-UFR",
+      "variant": "baseline",
+      "expected": "U",
+      "runId": "fb5f5520-b680-4533-8f0e-db5cf44bacab",
+      "status": "complete",
+      "exchange": {
+        "id": "9927d1a8-fc4f-46b4-87c0-4b76864d869a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "URB",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "reconsider": 0.02,
+                "U'": 0.67,
+                "U2": 0.06,
+                "U": 0.25
+              },
+              "confidence": 0.57
+            }
+          },
+          "usage": {
+            "input_tokens": 474,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.57,
+              "probabilities": {
+                "reconsider": 0.02,
+                "U'": 0.67,
+                "U2": 0.06,
+                "U": 0.25
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 474,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 328.1393400000002,
+        "cost": 0.000019908000000000003
+      },
+      "choice": "U'",
+      "passed": false
+    },
+    {
+      "id": "UBL-UFR",
+      "variant": "baseline",
+      "expected": "U2",
+      "runId": "6bc1212c-c68f-46e2-9315-930978a41727",
+      "status": "complete",
+      "exchange": {
+        "id": "ee682600-6838-46f6-8e0e-8946094fbb9b",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UBL",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "reconsider": 0.02,
+                "U2": 0.38,
+                "U'": 0.48,
+                "U": 0.12
+              },
+              "confidence": 0.32
+            }
+          },
+          "usage": {
+            "input_tokens": 473,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.32,
+              "probabilities": {
+                "reconsider": 0.02,
+                "U2": 0.38,
+                "U'": 0.48,
+                "U": 0.12
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 473,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 287.0714459999999,
+        "cost": 0.000019866000000000003
+      },
+      "choice": "U'",
+      "passed": false
+    },
+    {
+      "id": "ULF-UFR",
+      "variant": "baseline",
+      "expected": "U'",
+      "runId": "43902081-d5b9-467f-abb0-0aa9f2df0e52",
+      "status": "complete",
+      "exchange": {
+        "id": "d589aa0c-f4db-4fe0-b1c6-6562e9c5560c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "ULF",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose the U turn carrying currentPosition to requiredPosition using the generic position cycles. Choose one rotation, not a routine.",
+              "criteria": {
+                "U": "Upper edges UF→UL→UB→UR→UF; upper corners UFR→ULF→UBL→URB→UFR.",
+                "U'": "Upper edges UF→UR→UB→UL→UF; upper corners UFR→URB→UBL→ULF→UFR.",
+                "U2": "Upper edges UF/UB and UR/UL exchange; upper corners UFR/UBL and URB/ULF exchange.",
+                "reconsider": "No U rotation is needed or these positions cannot be related by U."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U'": 0.81,
+                "U": 0.07,
+                "U2": 0.09,
+                "reconsider": 0.03
+              },
+              "confidence": 0.75
+            }
+          },
+          "usage": {
+            "input_tokens": 474,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.75,
+              "probabilities": {
+                "U'": 0.81,
+                "U": 0.07,
+                "U2": 0.09,
+                "reconsider": 0.03
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 474,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 412.8067030000002,
+        "cost": 0.000019908000000000003
+      },
+      "choice": "U'",
+      "passed": true
+    },
+    {
+      "id": "UF-UF",
+      "variant": "relations",
+      "expected": "reconsider",
+      "runId": "cfcfa859-7588-45cd-8aeb-039b567a5ac1",
+      "status": "complete",
+      "exchange": {
+        "id": "75a2f20f-def9-4671-b6da-7e46507972e9",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UF",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "U": 0,
+                "reconsider": 1,
+                "U'": 0,
+                "U2": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 51
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.99,
+              "probabilities": {
+                "U": 0,
+                "reconsider": 1,
+                "U'": 0,
+                "U2": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 51
+          }
+        },
+        "elapsedMs": 382.065873,
+        "cost": 0.000023478000000000005
+      },
+      "choice": "reconsider",
+      "passed": true
+    },
+    {
+      "id": "UR-UF",
+      "variant": "relations",
+      "expected": "U",
+      "runId": "1bd20fe3-e1c2-4808-abb4-8e8d080a71ac",
+      "status": "complete",
+      "exchange": {
+        "id": "92a7e067-aebc-4774-a6f7-bef91318913c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UR",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U": 0.96,
+                "reconsider": 0.01,
+                "U2": 0,
+                "U'": 0.03
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 49
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.95,
+              "probabilities": {
+                "U": 0.96,
+                "reconsider": 0.01,
+                "U2": 0,
+                "U'": 0.03
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 49
+          }
+        },
+        "elapsedMs": 286.49791099999993,
+        "cost": 0.000023478000000000005
+      },
+      "choice": "U",
+      "passed": true
+    },
+    {
+      "id": "UB-UF",
+      "variant": "relations",
+      "expected": "U2",
+      "runId": "32fbce39-ef83-4243-8a17-813a1c909b80",
+      "status": "complete",
+      "exchange": {
+        "id": "904667da-1b91-4481-9015-67074edc7ef3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UB",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U'": 0.01,
+                "U2": 0.97,
+                "reconsider": 0.01,
+                "U": 0.01
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.95,
+              "probabilities": {
+                "U'": 0.01,
+                "U2": 0.97,
+                "reconsider": 0.01,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 311.6075310000001,
+        "cost": 0.000023478000000000005
+      },
+      "choice": "U2",
+      "passed": true
+    },
+    {
+      "id": "UL-UF",
+      "variant": "relations",
+      "expected": "U'",
+      "runId": "ecce126c-bb94-450c-82a0-908887b2bd2c",
+      "status": "complete",
+      "exchange": {
+        "id": "adcb570b-d8ce-4740-8a0e-5c30fafd0ff2",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UL",
+            "requiredPosition": "UF"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "reconsider": 0.01,
+                "U2": 0,
+                "U": 0.03,
+                "U'": 0.96
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.95,
+              "probabilities": {
+                "reconsider": 0.01,
+                "U2": 0,
+                "U": 0.03,
+                "U'": 0.96
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 283.4919749999999,
+        "cost": 0.000023478000000000005
+      },
+      "choice": "U'",
+      "passed": true
+    },
+    {
+      "id": "UFR-UFR",
+      "variant": "relations",
+      "expected": "reconsider",
+      "runId": "dc982e35-c0e0-4259-8c21-511ac4f8fe09",
+      "status": "complete",
+      "exchange": {
+        "id": "c197d0f2-7859-450c-80ae-442b9bb2a767",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UFR",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "reconsider": 0.98,
+                "U'": 0,
+                "U2": 0.01,
+                "U": 0.01
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 561,
+            "output_tokens": 51
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 0.97,
+              "probabilities": {
+                "reconsider": 0.98,
+                "U'": 0,
+                "U2": 0.01,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 561,
+            "output_tokens": 51
+          }
+        },
+        "elapsedMs": 297.1135059999997,
+        "cost": 0.000023562000000000002
+      },
+      "choice": "reconsider",
+      "passed": true
+    },
+    {
+      "id": "URB-UFR",
+      "variant": "relations",
+      "expected": "U",
+      "runId": "762d3544-da7c-4605-943e-34c4c0854a2f",
+      "status": "complete",
+      "exchange": {
+        "id": "784148af-f1f3-4cf4-b697-07742c867bbe",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "URB",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U2": 0.03,
+                "U'": 0.03,
+                "reconsider": 0.05,
+                "U": 0.89
+              },
+              "confidence": 0.84
+            }
+          },
+          "usage": {
+            "input_tokens": 561,
+            "output_tokens": 49
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.84,
+              "probabilities": {
+                "U2": 0.03,
+                "U'": 0.03,
+                "reconsider": 0.05,
+                "U": 0.89
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 561,
+            "output_tokens": 49
+          }
+        },
+        "elapsedMs": 311.6022730000004,
+        "cost": 0.000023562000000000002
+      },
+      "choice": "U",
+      "passed": true
+    },
+    {
+      "id": "UBL-UFR",
+      "variant": "relations",
+      "expected": "U2",
+      "runId": "fc337d96-c3f5-4c0d-8ec9-7b82fa36670e",
+      "status": "complete",
+      "exchange": {
+        "id": "dfa636f0-e09a-4968-96c9-6a998ee2b461",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "UBL",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U'": 0.01,
+                "U": 0.01,
+                "U2": 0.97,
+                "reconsider": 0.01
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.97,
+              "probabilities": {
+                "U'": 0.01,
+                "U": 0.01,
+                "U2": 0.97,
+                "reconsider": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 560,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 269.6066600000004,
+        "cost": 0.000023520000000000002
+      },
+      "choice": "U2",
+      "passed": true
+    },
+    {
+      "id": "ULF-UFR",
+      "variant": "relations",
+      "expected": "U'",
+      "runId": "43430c48-6ed5-42e0-80a2-81fffa55e219",
+      "status": "complete",
+      "exchange": {
+        "id": "0f157947-841d-4f92-8dff-a8e014bfea71",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "ULF",
+            "requiredPosition": "UFR"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves UF to UL. Moves UL to UB. Moves UB to UR. Moves UR to UF. Moves UFR to ULF. Moves ULF to UBL. Moves UBL to URB. Moves URB to UFR.",
+                "U'": "Moves UF to UR. Moves UL to UF. Moves UB to UL. Moves UR to UB. Moves UFR to URB. Moves ULF to UFR. Moves UBL to ULF. Moves URB to UBL.",
+                "U2": "Moves UF to UB. Moves UL to UR. Moves UB to UF. Moves UR to UL. Moves UFR to UBL. Moves ULF to URB. Moves UBL to UFR. Moves URB to ULF.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U": 0.01,
+                "reconsider": 0.02,
+                "U2": 0.01,
+                "U'": 0.96
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 561,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.95,
+              "probabilities": {
+                "U": 0.01,
+                "reconsider": 0.02,
+                "U2": 0.01,
+                "U'": 0.96
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 561,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 289.44374400000015,
+        "cost": 0.000023562000000000002
+      },
+      "choice": "U'",
+      "passed": true
+    },
+    {
+      "id": "UF-UF",
+      "variant": "words",
+      "expected": "reconsider",
+      "runId": "58f2d647-e71f-406b-978b-b87413397b3a",
+      "status": "complete",
+      "exchange": {
+        "id": "0e0cc2dd-70b3-440f-b0ab-ba963c515c66",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top front edge",
+            "requiredPosition": "top front edge"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "U2": 0,
+                "reconsider": 1,
+                "U'": 0,
+                "U": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 51
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 1,
+              "probabilities": {
+                "U2": 0,
+                "reconsider": 1,
+                "U'": 0,
+                "U": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 51
+          }
+        },
+        "elapsedMs": 278.60282800000004,
+        "cost": 0.000027678000000000005
+      },
+      "choice": "reconsider",
+      "passed": true
+    },
+    {
+      "id": "UR-UF",
+      "variant": "words",
+      "expected": "U",
+      "runId": "4c1aba38-b468-4681-9a8a-97b5622154b2",
+      "status": "complete",
+      "exchange": {
+        "id": "cb2b0efc-c732-4ed0-9c32-7966ea830b9a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top right edge",
+            "requiredPosition": "top front edge"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "U'": 0.04,
+                "U": 0.95,
+                "U2": 0,
+                "reconsider": 0.01
+              },
+              "confidence": 0.93
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 49
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.93,
+              "probabilities": {
+                "U'": 0.04,
+                "U": 0.95,
+                "U2": 0,
+                "reconsider": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 49
+          }
+        },
+        "elapsedMs": 299.29449399999976,
+        "cost": 0.000027678000000000005
+      },
+      "choice": "U",
+      "passed": true
+    },
+    {
+      "id": "UB-UF",
+      "variant": "words",
+      "expected": "U2",
+      "runId": "6e22ff20-9bed-4a97-8acc-5cbcb5bacf34",
+      "status": "complete",
+      "exchange": {
+        "id": "f67a3668-09d8-4440-97f3-22dfce68d0ab",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top back edge",
+            "requiredPosition": "top front edge"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "U'": 0.01,
+                "reconsider": 0.01,
+                "U": 0.01,
+                "U2": 0.97
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.97,
+              "probabilities": {
+                "U'": 0.01,
+                "reconsider": 0.01,
+                "U": 0.01,
+                "U2": 0.97
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 308.57481499999994,
+        "cost": 0.000027678000000000005
+      },
+      "choice": "U2",
+      "passed": true
+    },
+    {
+      "id": "UL-UF",
+      "variant": "words",
+      "expected": "U'",
+      "runId": "b087efd1-91cb-4bfc-abca-a541bbc04a70",
+      "status": "complete",
+      "exchange": {
+        "id": "6e2af9b0-d103-45f6-83e0-3bbfa30b262e",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top left edge",
+            "requiredPosition": "top front edge"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U'": 0.97,
+                "U2": 0.01,
+                "reconsider": 0.01,
+                "U": 0.01
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.97,
+              "probabilities": {
+                "U'": 0.97,
+                "U2": 0.01,
+                "reconsider": 0.01,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 659,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 275.1119519999993,
+        "cost": 0.000027678000000000005
+      },
+      "choice": "U'",
+      "passed": true
+    },
+    {
+      "id": "UFR-UFR",
+      "variant": "words",
+      "expected": "reconsider",
+      "runId": "f1c029e5-21f9-402e-bfc0-ad03087880b5",
+      "status": "complete",
+      "exchange": {
+        "id": "368b16bf-3bc7-4207-a3df-61c5ff426a14",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top front-right corner",
+            "requiredPosition": "top front-right corner"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "probabilities": {
+                "reconsider": 1,
+                "U'": 0,
+                "U2": 0,
+                "U": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 51
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "reconsider",
+              "confidence": 1,
+              "probabilities": {
+                "reconsider": 1,
+                "U'": 0,
+                "U2": 0,
+                "U": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 51
+          }
+        },
+        "elapsedMs": 318.5565920000008,
+        "cost": 0.000027762000000000003
+      },
+      "choice": "reconsider",
+      "passed": true
+    },
+    {
+      "id": "URB-UFR",
+      "variant": "words",
+      "expected": "U",
+      "runId": "ad022974-c4c2-4c58-81e3-56494816312b",
+      "status": "complete",
+      "exchange": {
+        "id": "87837f50-00ff-4c8a-88ab-f294c1e9912c",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top back-right corner",
+            "requiredPosition": "top front-right corner"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "probabilities": {
+                "reconsider": 0.01,
+                "U": 0.99,
+                "U'": 0,
+                "U2": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 49
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U",
+              "confidence": 0.98,
+              "probabilities": {
+                "reconsider": 0.01,
+                "U": 0.99,
+                "U'": 0,
+                "U2": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 49
+          }
+        },
+        "elapsedMs": 307.5343160000002,
+        "cost": 0.000027762000000000003
+      },
+      "choice": "U",
+      "passed": true
+    },
+    {
+      "id": "UBL-UFR",
+      "variant": "words",
+      "expected": "U2",
+      "runId": "2f3add63-c4c7-4b89-813d-4c53c1fdb974",
+      "status": "complete",
+      "exchange": {
+        "id": "5ec04edb-aa15-4fdd-8588-7fe1a79e713f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top back-left corner",
+            "requiredPosition": "top front-right corner"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "probabilities": {
+                "reconsider": 0,
+                "U'": 0,
+                "U2": 1,
+                "U": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U2",
+              "confidence": 0.99,
+              "probabilities": {
+                "reconsider": 0,
+                "U'": 0,
+                "U2": 1,
+                "U": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 277.11279399999967,
+        "cost": 0.000027762000000000003
+      },
+      "choice": "U2",
+      "passed": true
+    },
+    {
+      "id": "ULF-UFR",
+      "variant": "words",
+      "expected": "U'",
+      "runId": "6617c268-7234-4440-9624-3b5b63d07849",
+      "status": "complete",
+      "exchange": {
+        "id": "538da152-3c8f-478e-b367-d74ef4ca40e6",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "currentPosition": "top front-left corner",
+            "requiredPosition": "top front-right corner"
+          },
+          "questions": {
+            "turn": {
+              "type": "choice",
+              "instructions": "Choose one turn whose teaching lists the exact movement from currentPosition to requiredPosition. Match both endpoints. Each listed movement describes a single application of that turn. Do not take several quarter-turns when U2 reaches the destination directly.",
+              "criteria": {
+                "U": "Moves top front edge to top left edge. Moves top left edge to top back edge. Moves top back edge to top right edge. Moves top right edge to top front edge. Moves top front-right corner to top front-left corner. Moves top front-left corner to top back-left corner. Moves top back-left corner to top back-right corner. Moves top back-right corner to top front-right corner.",
+                "U'": "Moves top front edge to top right edge. Moves top left edge to top front edge. Moves top back edge to top left edge. Moves top right edge to top back edge. Moves top front-right corner to top back-right corner. Moves top front-left corner to top front-right corner. Moves top back-left corner to top front-left corner. Moves top back-right corner to top back-left corner.",
+                "U2": "Moves top front edge to top back edge. Moves top left edge to top right edge. Moves top back edge to top front edge. Moves top right edge to top left edge. Moves top front-right corner to top back-left corner. Moves top front-left corner to top back-right corner. Moves top back-left corner to top front-right corner. Moves top back-right corner to top front-left corner.",
+                "reconsider": "The current and required positions are identical, or no listed move connects them."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "probabilities": {
+                "U2": 0.01,
+                "U'": 0.98,
+                "reconsider": 0,
+                "U": 0.01
+              },
+              "confidence": 0.97
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 50
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "turn": {
+              "type": "choice",
+              "choice": "U'",
+              "confidence": 0.97,
+              "probabilities": {
+                "U2": 0.01,
+                "U'": 0.98,
+                "reconsider": 0,
+                "U": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 661,
+            "output_tokens": 50
+          }
+        },
+        "elapsedMs": 251.56581199999982,
+        "cost": 0.000027762000000000003
+      },
+      "choice": "U'",
+      "passed": true
+    }
+  ],
+  "usage": {
+    "requests": 24,
+    "cost": 0.000568764
+  }
+}

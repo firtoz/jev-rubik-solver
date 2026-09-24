@@ -1,0 +1,1609 @@
+{
+  "phase": "development",
+  "rows": [
+    {
+      "id": "selection-0",
+      "variant": "costs",
+      "acceptable": [
+        "lift-bottom"
+      ],
+      "runId": "1a28ed7a-f060-4870-93d0-b3533198d093",
+      "status": "complete",
+      "exchange": {
+        "id": "7b7261f3-81f0-4db2-8410-e1a6888dc31d",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "DF",
+              "yellowDirection": "D"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-bottom",
+              "probabilities": {
+                "lift-middle-left": 0,
+                "stage-bottom-edge": 0,
+                "cross-lift-right": 0,
+                "reconsider": 0.01,
+                "cross-flip-bottom": 0,
+                "lift-bottom": 0.99,
+                "lift-middle-right": 0,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "cross-flip-top-right": 0,
+                "cross-lift-left": 0,
+                "flip-top-edge": 0,
+                "flip-top-edge-left": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 142
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-bottom",
+              "confidence": 0.99,
+              "probabilities": {
+                "lift-middle-left": 0,
+                "stage-bottom-edge": 0,
+                "cross-lift-right": 0,
+                "reconsider": 0.01,
+                "cross-flip-bottom": 0,
+                "lift-bottom": 0.99,
+                "lift-middle-right": 0,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "cross-flip-top-right": 0,
+                "cross-lift-left": 0,
+                "flip-top-edge": 0,
+                "flip-top-edge-left": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 142
+          }
+        },
+        "elapsedMs": 867.4915019999999,
+        "cost": 0.00007014
+      },
+      "choice": "lift-bottom",
+      "passed": true
+    },
+    {
+      "id": "selection-2",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-left"
+      ],
+      "runId": "d976cd1b-0803-49ca-bc41-b8511d7c9734",
+      "status": "complete",
+      "exchange": {
+        "id": "2059bd8d-2cc7-44c3-a245-db06d6e0ce87",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FL",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "probabilities": {
+                "cross-lift-left": 0.01,
+                "cross-flip-top-right": 0,
+                "flip-top-edge": 0,
+                "lift-middle-right": 0,
+                "cross-flip-bottom": 0,
+                "lift-middle-left": 0.99,
+                "cross-flip-top-left": 0,
+                "reconsider": 0,
+                "cross-lift-right": 0,
+                "stage-bottom-edge": 0,
+                "flip-top-edge-left": 0,
+                "lift-bottom": 0,
+                "lower-top-edge": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "confidence": 0.99,
+              "probabilities": {
+                "cross-lift-left": 0.01,
+                "cross-flip-top-right": 0,
+                "flip-top-edge": 0,
+                "lift-middle-right": 0,
+                "cross-flip-bottom": 0,
+                "lift-middle-left": 0.99,
+                "cross-flip-top-left": 0,
+                "reconsider": 0,
+                "cross-lift-right": 0,
+                "stage-bottom-edge": 0,
+                "flip-top-edge-left": 0,
+                "lift-bottom": 0,
+                "lower-top-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 950.434776,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-left",
+      "passed": true
+    },
+    {
+      "id": "selection-4",
+      "variant": "costs",
+      "acceptable": [
+        "lift-bottom"
+      ],
+      "runId": "328e1095-1c7c-4eb1-988a-f7c1afb01623",
+      "status": "complete",
+      "exchange": {
+        "id": "4d7a0bb8-d754-4648-a686-d17c50571675",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "DF",
+              "yellowDirection": "D"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-bottom",
+              "probabilities": {
+                "cross-flip-bottom": 0,
+                "lift-bottom": 0.99,
+                "cross-lift-left": 0,
+                "flip-top-edge-left": 0,
+                "stage-bottom-edge": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-right": 0,
+                "lower-top-edge": 0,
+                "flip-top-edge": 0,
+                "lift-middle-left": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-right": 0,
+                "reconsider": 0.01
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 142
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-bottom",
+              "confidence": 0.99,
+              "probabilities": {
+                "cross-flip-bottom": 0,
+                "lift-bottom": 0.99,
+                "cross-lift-left": 0,
+                "flip-top-edge-left": 0,
+                "stage-bottom-edge": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-right": 0,
+                "lower-top-edge": 0,
+                "flip-top-edge": 0,
+                "lift-middle-left": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-right": 0,
+                "reconsider": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 142
+          }
+        },
+        "elapsedMs": 479.47435500000006,
+        "cost": 0.00007014
+      },
+      "choice": "lift-bottom",
+      "passed": true
+    },
+    {
+      "id": "selection-6",
+      "variant": "costs",
+      "acceptable": [
+        "stage-bottom-edge"
+      ],
+      "runId": "6be9e12e-936b-4fba-b49a-7ec4586763d7",
+      "status": "complete",
+      "exchange": {
+        "id": "36f3e4bd-3b28-473a-9ba9-8fda02f7d373",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "DF",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": [
+              "cross-flip-bottom"
+            ]
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "stage-bottom-edge",
+              "probabilities": {
+                "lift-middle-left": 0,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-right": 0,
+                "lift-middle-right": 0,
+                "stage-bottom-edge": 0.99,
+                "cross-lift-left": 0,
+                "flip-top-edge-left": 0,
+                "reconsider": 0.01,
+                "lift-bottom": 0,
+                "lower-top-edge": 0,
+                "cross-flip-bottom": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 1676,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "stage-bottom-edge",
+              "confidence": 0.98,
+              "probabilities": {
+                "lift-middle-left": 0,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-right": 0,
+                "lift-middle-right": 0,
+                "stage-bottom-edge": 0.99,
+                "cross-lift-left": 0,
+                "flip-top-edge-left": 0,
+                "reconsider": 0.01,
+                "lift-bottom": 0,
+                "lower-top-edge": 0,
+                "cross-flip-bottom": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1676,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 462.4878469999999,
+        "cost": 0.00007039200000000001
+      },
+      "choice": "stage-bottom-edge",
+      "passed": true
+    },
+    {
+      "id": "selection-8",
+      "variant": "costs",
+      "acceptable": [
+        "cross-flip-top-right",
+        "cross-flip-top-left"
+      ],
+      "runId": "490810de-0ec7-4626-b934-529436a25aee",
+      "status": "complete",
+      "exchange": {
+        "id": "e491d8d4-fbfa-44b7-929f-f7e16dd30f4f",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "UF",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [
+              "DF"
+            ],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "cross-flip-top-right",
+              "probabilities": {
+                "stage-bottom-edge": 0.01,
+                "lift-bottom": 0.01,
+                "reconsider": 0.24,
+                "lower-top-edge": 0.03,
+                "cross-lift-right": 0.01,
+                "lift-middle-right": 0,
+                "lift-middle-left": 0.01,
+                "flip-top-edge-left": 0.01,
+                "cross-flip-top-right": 0.35,
+                "cross-flip-top-left": 0.24,
+                "cross-flip-bottom": 0,
+                "cross-lift-left": 0.01,
+                "flip-top-edge": 0.08
+              },
+              "confidence": 0.29
+            }
+          },
+          "usage": {
+            "input_tokens": 1673,
+            "output_tokens": 145
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "cross-flip-top-right",
+              "confidence": 0.29,
+              "probabilities": {
+                "stage-bottom-edge": 0.01,
+                "lift-bottom": 0.01,
+                "reconsider": 0.24,
+                "lower-top-edge": 0.03,
+                "cross-lift-right": 0.01,
+                "lift-middle-right": 0,
+                "lift-middle-left": 0.01,
+                "flip-top-edge-left": 0.01,
+                "cross-flip-top-right": 0.35,
+                "cross-flip-top-left": 0.24,
+                "cross-flip-bottom": 0,
+                "cross-lift-left": 0.01,
+                "flip-top-edge": 0.08
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1673,
+            "output_tokens": 145
+          }
+        },
+        "elapsedMs": 313.5081660000001,
+        "cost": 0.00007026600000000001
+      },
+      "choice": "cross-flip-top-right",
+      "passed": true
+    },
+    {
+      "id": "selection-10",
+      "variant": "costs",
+      "acceptable": [
+        "stage-bottom-edge"
+      ],
+      "runId": "2ec9a0f6-fa3e-44be-a0a1-fe4ac3337b05",
+      "status": "complete",
+      "exchange": {
+        "id": "7e953bcb-29e0-4015-9f0a-16f95afe42b3",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "DF",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [
+              "DB"
+            ],
+            "previouslyRejectedByModel": [
+              "cross-flip-bottom"
+            ]
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "stage-bottom-edge",
+              "probabilities": {
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0,
+                "lower-top-edge": 0,
+                "lift-middle-right": 0,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0,
+                "stage-bottom-edge": 0.75,
+                "lift-bottom": 0,
+                "reconsider": 0.23,
+                "cross-flip-bottom": 0.01,
+                "lift-middle-left": 0.01,
+                "cross-lift-right": 0,
+                "cross-flip-top-right": 0
+              },
+              "confidence": 0.72
+            }
+          },
+          "usage": {
+            "input_tokens": 1679,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "stage-bottom-edge",
+              "confidence": 0.72,
+              "probabilities": {
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0,
+                "lower-top-edge": 0,
+                "lift-middle-right": 0,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0,
+                "stage-bottom-edge": 0.75,
+                "lift-bottom": 0,
+                "reconsider": 0.23,
+                "cross-flip-bottom": 0.01,
+                "lift-middle-left": 0.01,
+                "cross-lift-right": 0,
+                "cross-flip-top-right": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1679,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 420.0887990000001,
+        "cost": 0.000070518
+      },
+      "choice": "stage-bottom-edge",
+      "passed": true
+    },
+    {
+      "id": "selection-12",
+      "variant": "costs",
+      "acceptable": [
+        "flip-top-edge",
+        "flip-top-edge-left"
+      ],
+      "runId": "f55713cf-4483-45ab-b572-db953e26e765",
+      "status": "complete",
+      "exchange": {
+        "id": "5f19e09c-57eb-4197-9991-6cb9db990d63",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "UF",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lower-top-edge",
+              "probabilities": {
+                "lower-top-edge": 0.91,
+                "lift-middle-right": 0,
+                "flip-top-edge-left": 0.01,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0.05,
+                "lift-bottom": 0.01,
+                "reconsider": 0.01,
+                "cross-lift-left": 0,
+                "cross-flip-top-right": 0,
+                "stage-bottom-edge": 0.01,
+                "lift-middle-left": 0,
+                "cross-lift-right": 0,
+                "cross-flip-bottom": 0
+              },
+              "confidence": 0.89
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lower-top-edge",
+              "confidence": 0.89,
+              "probabilities": {
+                "lower-top-edge": 0.91,
+                "lift-middle-right": 0,
+                "flip-top-edge-left": 0.01,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0.05,
+                "lift-bottom": 0.01,
+                "reconsider": 0.01,
+                "cross-lift-left": 0,
+                "cross-flip-top-right": 0,
+                "stage-bottom-edge": 0.01,
+                "lift-middle-left": 0,
+                "cross-lift-right": 0,
+                "cross-flip-bottom": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 382.00901799999974,
+        "cost": 0.00007014
+      },
+      "choice": "lower-top-edge",
+      "passed": false
+    },
+    {
+      "id": "selection-14",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-left"
+      ],
+      "runId": "67ea49b6-9134-4e09-9bae-9f0f1118d945",
+      "status": "complete",
+      "exchange": {
+        "id": "4f2caa6b-ae30-4678-b8c3-fd474a2a4f31",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FL",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "probabilities": {
+                "lift-bottom": 0,
+                "reconsider": 0,
+                "cross-lift-left": 0.01,
+                "cross-flip-top-right": 0,
+                "cross-flip-bottom": 0,
+                "cross-lift-right": 0,
+                "lift-middle-right": 0,
+                "lower-top-edge": 0,
+                "flip-top-edge": 0,
+                "lift-middle-left": 0.99,
+                "cross-flip-top-left": 0,
+                "stage-bottom-edge": 0,
+                "flip-top-edge-left": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "confidence": 0.98,
+              "probabilities": {
+                "lift-bottom": 0,
+                "reconsider": 0,
+                "cross-lift-left": 0.01,
+                "cross-flip-top-right": 0,
+                "cross-flip-bottom": 0,
+                "cross-lift-right": 0,
+                "lift-middle-right": 0,
+                "lower-top-edge": 0,
+                "flip-top-edge": 0,
+                "lift-middle-left": 0.99,
+                "cross-flip-top-left": 0,
+                "stage-bottom-edge": 0,
+                "flip-top-edge-left": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 501.1568649999999,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-left",
+      "passed": true
+    },
+    {
+      "id": "selection-16",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-left"
+      ],
+      "runId": "adc5acbb-4762-4507-ad31-540a9992abc1",
+      "status": "complete",
+      "exchange": {
+        "id": "8dbea2fc-e7f0-4bae-b286-80da40e5854a",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FL",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "probabilities": {
+                "reconsider": 0,
+                "cross-lift-left": 0.01,
+                "cross-flip-top-left": 0,
+                "cross-lift-right": 0,
+                "lift-middle-right": 0,
+                "stage-bottom-edge": 0,
+                "flip-top-edge": 0,
+                "flip-top-edge-left": 0,
+                "lift-middle-left": 0.99,
+                "lift-bottom": 0,
+                "cross-flip-bottom": 0,
+                "cross-flip-top-right": 0,
+                "lower-top-edge": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "confidence": 0.98,
+              "probabilities": {
+                "reconsider": 0,
+                "cross-lift-left": 0.01,
+                "cross-flip-top-left": 0,
+                "cross-lift-right": 0,
+                "lift-middle-right": 0,
+                "stage-bottom-edge": 0,
+                "flip-top-edge": 0,
+                "flip-top-edge-left": 0,
+                "lift-middle-left": 0.99,
+                "lift-bottom": 0,
+                "cross-flip-bottom": 0,
+                "cross-flip-top-right": 0,
+                "lower-top-edge": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 510.96101,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-left",
+      "passed": true
+    },
+    {
+      "id": "selection-18",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-right"
+      ],
+      "runId": "bab1739a-26e5-4ffa-9f33-e70551bb6f72",
+      "status": "complete",
+      "exchange": {
+        "id": "345ea85c-0ed5-41e2-b94b-9006242a2eeb",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FR",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-right",
+              "probabilities": {
+                "stage-bottom-edge": 0,
+                "flip-top-edge": 0,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "cross-lift-right": 0.01,
+                "lift-middle-left": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0,
+                "lift-bottom": 0,
+                "lift-middle-right": 0.99,
+                "cross-flip-bottom": 0,
+                "reconsider": 0,
+                "cross-flip-top-right": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-right",
+              "confidence": 0.98,
+              "probabilities": {
+                "stage-bottom-edge": 0,
+                "flip-top-edge": 0,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "cross-lift-right": 0.01,
+                "lift-middle-left": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0,
+                "lift-bottom": 0,
+                "lift-middle-right": 0.99,
+                "cross-flip-bottom": 0,
+                "reconsider": 0,
+                "cross-flip-top-right": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 317.2996290000001,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-right",
+      "passed": true
+    },
+    {
+      "id": "selection-20",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-right"
+      ],
+      "runId": "55a2d9c7-e72f-47bb-8bf0-e05bb1bea470",
+      "status": "complete",
+      "exchange": {
+        "id": "8260cd62-5093-4f1f-8ac4-42aede5e5b15",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FR",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-right",
+              "probabilities": {
+                "stage-bottom-edge": 0.01,
+                "lower-top-edge": 0,
+                "flip-top-edge": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-left": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0,
+                "lift-bottom": 0,
+                "cross-flip-bottom": 0,
+                "lift-middle-right": 0.99,
+                "reconsider": 0,
+                "cross-flip-top-right": 0
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-right",
+              "confidence": 0.98,
+              "probabilities": {
+                "stage-bottom-edge": 0.01,
+                "lower-top-edge": 0,
+                "flip-top-edge": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-left": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0,
+                "lift-bottom": 0,
+                "cross-flip-bottom": 0,
+                "lift-middle-right": 0.99,
+                "reconsider": 0,
+                "cross-flip-top-right": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 500.1500139999998,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-right",
+      "passed": true
+    },
+    {
+      "id": "selection-22",
+      "variant": "costs",
+      "acceptable": [
+        "lift-bottom"
+      ],
+      "runId": "5d67d2d3-7dc3-43f0-a045-ab073dc60d42",
+      "status": "complete",
+      "exchange": {
+        "id": "5ed39431-7074-4c4b-9818-b664b3ca44c4",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "DF",
+              "yellowDirection": "D"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-bottom",
+              "probabilities": {
+                "lower-top-edge": 0,
+                "lift-middle-right": 0,
+                "lift-bottom": 0.99,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0,
+                "flip-top-edge-left": 0,
+                "reconsider": 0.01,
+                "cross-lift-left": 0,
+                "cross-flip-top-right": 0,
+                "stage-bottom-edge": 0,
+                "lift-middle-left": 0,
+                "cross-lift-right": 0,
+                "cross-flip-bottom": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 142
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-bottom",
+              "confidence": 0.99,
+              "probabilities": {
+                "lower-top-edge": 0,
+                "lift-middle-right": 0,
+                "lift-bottom": 0.99,
+                "cross-flip-top-left": 0,
+                "flip-top-edge": 0,
+                "flip-top-edge-left": 0,
+                "reconsider": 0.01,
+                "cross-lift-left": 0,
+                "cross-flip-top-right": 0,
+                "stage-bottom-edge": 0,
+                "lift-middle-left": 0,
+                "cross-lift-right": 0,
+                "cross-flip-bottom": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 142
+          }
+        },
+        "elapsedMs": 461.613703,
+        "cost": 0.00007014
+      },
+      "choice": "lift-bottom",
+      "passed": true
+    },
+    {
+      "id": "selection-24",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-right"
+      ],
+      "runId": "7119333b-c234-4c83-aca3-69c234221d4f",
+      "status": "complete",
+      "exchange": {
+        "id": "242ee20a-1672-40d1-8586-da35c8e1a188",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FR",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-right",
+              "probabilities": {
+                "cross-flip-top-right": 0,
+                "flip-top-edge": 0,
+                "lift-middle-right": 0.97,
+                "stage-bottom-edge": 0,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-left": 0,
+                "cross-flip-bottom": 0,
+                "reconsider": 0.01,
+                "cross-lift-left": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-right": 0.01,
+                "lift-bottom": 0.01
+              },
+              "confidence": 0.98
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-right",
+              "confidence": 0.98,
+              "probabilities": {
+                "cross-flip-top-right": 0,
+                "flip-top-edge": 0,
+                "lift-middle-right": 0.97,
+                "stage-bottom-edge": 0,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-left": 0,
+                "cross-flip-bottom": 0,
+                "reconsider": 0.01,
+                "cross-lift-left": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-right": 0.01,
+                "lift-bottom": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 277.7777329999999,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-right",
+      "passed": true
+    },
+    {
+      "id": "selection-26",
+      "variant": "costs",
+      "acceptable": [
+        "cross-flip-bottom"
+      ],
+      "runId": "d1c72661-0383-40ff-94ad-612996d48dce",
+      "status": "complete",
+      "exchange": {
+        "id": "c121579c-b058-4f3c-bc7f-22ac0a566511",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "DF",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "stage-bottom-edge",
+              "probabilities": {
+                "cross-lift-left": 0,
+                "cross-flip-top-right": 0,
+                "flip-top-edge-left": 0,
+                "flip-top-edge": 0,
+                "stage-bottom-edge": 0.96,
+                "lift-bottom": 0,
+                "lift-middle-right": 0,
+                "cross-lift-right": 0,
+                "cross-flip-bottom": 0.03,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-left": 0,
+                "reconsider": 0.01
+              },
+              "confidence": 0.95
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "stage-bottom-edge",
+              "confidence": 0.95,
+              "probabilities": {
+                "cross-lift-left": 0,
+                "cross-flip-top-right": 0,
+                "flip-top-edge-left": 0,
+                "flip-top-edge": 0,
+                "stage-bottom-edge": 0.96,
+                "lift-bottom": 0,
+                "lift-middle-right": 0,
+                "cross-lift-right": 0,
+                "cross-flip-bottom": 0.03,
+                "lower-top-edge": 0,
+                "cross-flip-top-left": 0,
+                "lift-middle-left": 0,
+                "reconsider": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 312.2230930000005,
+        "cost": 0.00007014
+      },
+      "choice": "stage-bottom-edge",
+      "passed": false
+    },
+    {
+      "id": "selection-28",
+      "variant": "costs",
+      "acceptable": [
+        "lift-middle-left"
+      ],
+      "runId": "b4084cd7-9bb9-4c5f-8a04-f9576472d4b0",
+      "status": "complete",
+      "exchange": {
+        "id": "ef2ebb8b-2217-4651-b2c4-544dfa5f5cce",
+        "request": {
+          "model": "jev-1.13.0",
+          "state": {
+            "target": {
+              "position": "FL",
+              "yellowDirection": "F"
+            },
+            "protectedBottomSlots": [],
+            "previouslyRejectedByModel": []
+          },
+          "questions": {
+            "routine": {
+              "type": "choice",
+              "instructions": "Choose one routine. First require its position to equal target.position EXACTLY and yellowDirection to equal target.yellowDirection EXACTLY. Different slot names are different positions. Reject previouslyRejectedByModel routines and any routine with an affectedBottomSlot listed in protectedBottomSlots. Among the remaining lifts, choose the smallest turnCount. Consider staging only when no lift remains. Landing occupancy is checked in the next request. Do not choose a cheaper routine that fails the position or protection checks.",
+              "criteria": {
+                "lift-bottom": "{\"id\":\"lift-bottom\",\"sequence\":\"F2\",\"position\":\"DF\",\"yellowDirection\":\"D\",\"purpose\":\"Target at DF with yellow pointing D: F2 lifts it to UF yellow-up. Before lifting, UF should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "lift-middle-right": "{\"id\":\"lift-middle-right\",\"sequence\":\"R\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: R lifts it to UR yellow-up. Before lifting, UR should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UR\"],\"affectedBottomSlots\":[\"DR\"],\"turnCount\":1}",
+                "lift-middle-left": "{\"id\":\"lift-middle-left\",\"sequence\":\"L'\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: L-prime lifts it to UL yellow-up. Before lifting, UL should not contain an existing yellow-up petal.\",\"requiredFreeSlots\":[\"UL\"],\"affectedBottomSlots\":[\"DL\"],\"turnCount\":1}",
+                "stage-bottom-edge": "{\"id\":\"stage-bottom-edge\",\"sequence\":\"F\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: F moves it to FL with yellow still pointing F. Requires UF free of yellow-up petals. This stages the edge in the middle, not yet a petal. On a later decision, clear UL and use lift-middle-left.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "flip-top-edge": "{\"id\":\"flip-top-edge\",\"sequence\":\"F R\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F then R lifts it via FR to UR yellow-up. Before executing, UR should not hold a yellow-up petal.\",\"requiredFreeSlots\":[\"UF\",\"UR\"],\"affectedBottomSlots\":[\"DR\",\"DF\"],\"turnCount\":2}",
+                "flip-top-edge-left": "{\"id\":\"flip-top-edge-left\",\"sequence\":\"F' L'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: F-prime then L-prime lifts it via FL to UL yellow-up. UL must be clear of existing petals.\",\"requiredFreeSlots\":[\"UF\",\"UL\"],\"affectedBottomSlots\":[\"DF\",\"DL\"],\"turnCount\":2}",
+                "lower-top-edge": "{\"id\":\"lower-top-edge\",\"sequence\":\"F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow facing F, and the lift landing slots are occupied by petals: move it into FR first. Then a later U setup can clear UR before lifting it, without moving this target.\",\"requiredFreeSlots\":[\"UF\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":1}",
+                "cross-lift-right": "{\"id\":\"cross-lift-right\",\"sequence\":\"R U R'\",\"position\":\"FR\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FR with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-lift-left": "{\"id\":\"cross-lift-left\",\"sequence\":\"L' U' L\",\"position\":\"FL\",\"yellowDirection\":\"F\",\"purpose\":\"Target at FL with yellow pointing F: lift it to UF yellow-up, preserving all bottom edges. Use for extraction, not insertion.\",\"requiredFreeSlots\":[\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":3}",
+                "cross-flip-top-right": "{\"id\":\"cross-flip-top-right\",\"sequence\":\"F R U2 R' F'\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UL yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UL\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-top-left": "{\"id\":\"cross-flip-top-left\",\"sequence\":\"F' L' U2 L F\",\"position\":\"UF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at UF with yellow pointing F: reorient it to UR yellow-up, preserving all bottom edges.\",\"requiredFreeSlots\":[\"UR\",\"UF\",\"UB\"],\"affectedBottomSlots\":[],\"turnCount\":5}",
+                "cross-flip-bottom": "{\"id\":\"cross-flip-bottom\",\"sequence\":\"F L' U2 L F'\",\"position\":\"DF\",\"yellowDirection\":\"F\",\"purpose\":\"Target at DF with yellow pointing F: lift it to UR yellow-up, preserving the OTHER three bottom edges. The target bottom slot itself is unsolved.\",\"requiredFreeSlots\":[\"UR\",\"UB\"],\"affectedBottomSlots\":[\"DF\"],\"turnCount\":5}",
+                "reconsider": "No matching routine remains."
+              }
+            }
+          }
+        },
+        "response": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "probabilities": {
+                "flip-top-edge": 0,
+                "reconsider": 0,
+                "lift-middle-right": 0,
+                "lift-middle-left": 0.99,
+                "lower-top-edge": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-left": 0,
+                "cross-flip-top-right": 0,
+                "stage-bottom-edge": 0,
+                "lift-bottom": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0.01,
+                "cross-flip-bottom": 0
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "nativeResponse": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "routine": {
+              "type": "choice",
+              "choice": "lift-middle-left",
+              "confidence": 0.99,
+              "probabilities": {
+                "flip-top-edge": 0,
+                "reconsider": 0,
+                "lift-middle-right": 0,
+                "lift-middle-left": 0.99,
+                "lower-top-edge": 0,
+                "cross-lift-right": 0,
+                "cross-flip-top-left": 0,
+                "cross-flip-top-right": 0,
+                "stage-bottom-edge": 0,
+                "lift-bottom": 0,
+                "flip-top-edge-left": 0,
+                "cross-lift-left": 0.01,
+                "cross-flip-bottom": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1670,
+            "output_tokens": 143
+          }
+        },
+        "elapsedMs": 430.4764530000002,
+        "cost": 0.00007014
+      },
+      "choice": "lift-middle-left",
+      "passed": true
+    }
+  ],
+  "usage": {
+    "requests": 45,
+    "cost": 0.0031648680000000004
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "phase": "development",
+    "usage": {
+      "requests": 38,
+      "cost": 0.0034282080000000003
+    },
+    "scores": [
+      {
+        "variant": "structured",
+        "passed": 19,
+        "n": 19,
+        "tokens": 40803,
+        "failures": []
+      },
+      {
+        "variant": "sentences",
+        "passed": 19,
+        "n": 19,
+        "tokens": 40821,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "phase": "validation",
+    "usage": {
+      "requests": 58,
+      "cost": 0.005241852000000001
+    },
+    "scores": [
+      {
+        "variant": "structured",
+        "passed": 20,
+        "n": 20,
+        "tokens": 43182,
+        "failures": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "cross-validation-1",
+    "scramble": "R F2 D F' L U L' B2 D' B' U' B2 R2 U2 R2 D' B2 R2 B2 U L2"
+  },
+  {
+    "id": "cross-validation-2",
+    "scramble": "U' B2 F2 U' L2 D B2 U2 L2 U' B2 U L' B' L B' D U L D"
+  },
+  {
+    "id": "cross-validation-3",
+    "scramble": "B' D2 R2 U2 L2 F2 U2 F' R2 D2 B' L D R' B U B L' D2 U'"
+  }
+]

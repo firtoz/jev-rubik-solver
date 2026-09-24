@@ -1,0 +1,32 @@
+[
+  {
+    "phase": "development",
+    "usage": {
+      "requests": 30,
+      "cost": 0.0005179020000000001
+    },
+    "scores": [
+      {
+        "variant": "sequential",
+        "n": 15,
+        "passed": 15,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "phase": "validation",
+    "usage": {
+      "requests": 60,
+      "cost": 0.0010355940000000001
+    },
+    "scores": [
+      {
+        "variant": "sequential",
+        "n": 15,
+        "passed": 15,
+        "failures": []
+      }
+    ]
+  }
+]

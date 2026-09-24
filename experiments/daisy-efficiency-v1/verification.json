@@ -1,0 +1,76 @@
+[
+  {
+    "phase": "development",
+    "usage": {
+      "requests": 30,
+      "cost": 0.0021120120000000004
+    },
+    "scores": [
+      {
+        "variant": "baseline",
+        "n": 15,
+        "passed": 9,
+        "failures": [
+          {
+            "id": "selection-2",
+            "choice": "cross-lift-left",
+            "acceptable": [
+              "lift-middle-left"
+            ]
+          },
+          {
+            "id": "selection-8",
+            "choice": "cross-lift-left",
+            "acceptable": [
+              "cross-flip-top-right",
+              "cross-flip-top-left"
+            ]
+          },
+          {
+            "id": "selection-14",
+            "choice": "cross-lift-left",
+            "acceptable": [
+              "lift-middle-left"
+            ]
+          },
+          {
+            "id": "selection-16",
+            "choice": "cross-lift-left",
+            "acceptable": [
+              "lift-middle-left"
+            ]
+          },
+          {
+            "id": "selection-24",
+            "choice": "cross-lift-right",
+            "acceptable": [
+              "lift-middle-right"
+            ]
+          },
+          {
+            "id": "selection-28",
+            "choice": "cross-lift-left",
+            "acceptable": [
+              "lift-middle-left"
+            ]
+          }
+        ]
+      },
+      {
+        "variant": "costs",
+        "n": 15,
+        "passed": 14,
+        "failures": [
+          {
+            "id": "selection-8",
+            "choice": "cross-lift-left",
+            "acceptable": [
+              "cross-flip-top-right",
+              "cross-flip-top-left"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

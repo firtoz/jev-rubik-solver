@@ -1,0 +1,4177 @@
+{
+  "phase": "development",
+  "usage": {
+    "requests": 16,
+    "cost": 0.000644784
+  },
+  "rows": [
+    {
+      "id": "edges-0",
+      "variant": "structured",
+      "runId": "534a9ad8-b871-4ab3-bfb7-81d6ba9b52c6",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "9ba8ca5c-ad5e-4582-beb6-d0fd5e1bb171",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "U",
+                "UR": "U",
+                "UB": "U",
+                "UL": "U"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "done",
+                "probabilities": {
+                  "line@L": 0,
+                  "line@B": 0,
+                  "elbow@L": 0,
+                  "line@R": 0,
+                  "line@F": 0,
+                  "elbow@B": 0,
+                  "elbow@F": 0,
+                  "elbow@R": 0,
+                  "reconsider": 0.02,
+                  "dot@F": 0.01,
+                  "done": 0.97
+                },
+                "confidence": 0.95
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 118
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "done",
+                "confidence": 0.95,
+                "probabilities": {
+                  "line@L": 0,
+                  "line@B": 0,
+                  "elbow@L": 0,
+                  "line@R": 0,
+                  "line@F": 0,
+                  "elbow@B": 0,
+                  "elbow@F": 0,
+                  "elbow@R": 0,
+                  "reconsider": 0.02,
+                  "dot@F": 0.01,
+                  "done": 0.97
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 118
+            }
+          },
+          "elapsedMs": 633.8815480000001,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "done",
+      "stage": "edges",
+      "alg": "",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 0,
+      "passed": true,
+      "elapsedMs": 851
+    },
+    {
+      "id": "edges-3",
+      "variant": "structured",
+      "runId": "e31380a0-aef2-4e4f-91ba-0ebad92b3b07",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "a60a204f-2d17-4975-afab-84ab8bea09fb",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "F",
+                "UR": "R",
+                "UB": "U",
+                "UL": "U"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@F",
+                "probabilities": {
+                  "line@L": 0,
+                  "line@B": 0,
+                  "elbow@L": 0,
+                  "line@R": 0,
+                  "line@F": 0,
+                  "elbow@B": 0,
+                  "elbow@F": 0.86,
+                  "elbow@R": 0,
+                  "reconsider": 0.11,
+                  "dot@F": 0.02,
+                  "done": 0.01
+                },
+                "confidence": 0.83
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@F",
+                "confidence": 0.83,
+                "probabilities": {
+                  "line@L": 0,
+                  "line@B": 0,
+                  "elbow@L": 0,
+                  "line@R": 0,
+                  "line@F": 0,
+                  "elbow@B": 0,
+                  "elbow@F": 0.86,
+                  "elbow@R": 0,
+                  "reconsider": 0.11,
+                  "dot@F": 0.02,
+                  "done": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 835.090985,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@F",
+      "stage": "edges",
+      "alg": "F U R U' R' F'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            3,
+            2,
+            1,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 1017
+    },
+    {
+      "id": "edges-5",
+      "variant": "structured",
+      "runId": "9cf9f481-bc89-42dd-bcf0-c35ec50d89db",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "3eb9b55a-ab20-4f41-9cd2-b6d47fc74861",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "F",
+                "UR": "U",
+                "UB": "B",
+                "UL": "U"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "line@F",
+                "probabilities": {
+                  "line@L": 0,
+                  "elbow@L": 0,
+                  "line@B": 0.01,
+                  "elbow@F": 0,
+                  "line@F": 0.92,
+                  "reconsider": 0.05,
+                  "elbow@B": 0,
+                  "line@R": 0,
+                  "dot@F": 0.01,
+                  "done": 0.01,
+                  "elbow@R": 0
+                },
+                "confidence": 0.9
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 120
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "line@F",
+                "confidence": 0.9,
+                "probabilities": {
+                  "line@L": 0,
+                  "elbow@L": 0,
+                  "line@B": 0.01,
+                  "elbow@F": 0,
+                  "line@F": 0.92,
+                  "reconsider": 0.05,
+                  "elbow@B": 0,
+                  "line@R": 0,
+                  "dot@F": 0.01,
+                  "done": 0.01,
+                  "elbow@R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 120
+            }
+          },
+          "elapsedMs": 338.7482869999999,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "line@F",
+      "stage": "edges",
+      "alg": "F R U R' U' F'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            3,
+            2,
+            1,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 532
+    },
+    {
+      "id": "edges-6",
+      "variant": "structured",
+      "runId": "98197c81-1496-48a5-a430-457cd61fc0d5",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "10908ab1-c70e-4a42-813c-fb3984854350",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "U",
+                "UR": "R",
+                "UB": "B",
+                "UL": "U"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@R",
+                "probabilities": {
+                  "elbow@L": 0,
+                  "done": 0.03,
+                  "line@F": 0,
+                  "reconsider": 0.13,
+                  "line@B": 0,
+                  "line@R": 0,
+                  "elbow@F": 0,
+                  "line@L": 0.01,
+                  "elbow@B": 0,
+                  "dot@F": 0.03,
+                  "elbow@R": 0.8
+                },
+                "confidence": 0.76
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@R",
+                "confidence": 0.76,
+                "probabilities": {
+                  "elbow@L": 0,
+                  "done": 0.03,
+                  "line@F": 0,
+                  "reconsider": 0.13,
+                  "line@B": 0,
+                  "line@R": 0,
+                  "elbow@F": 0,
+                  "line@L": 0.01,
+                  "elbow@B": 0,
+                  "dot@F": 0.03,
+                  "elbow@R": 0.8
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 343.35116600000015,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@R",
+      "stage": "edges",
+      "alg": "R U B U' B' R'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 528
+    },
+    {
+      "id": "edges-9",
+      "variant": "structured",
+      "runId": "1ebb0235-4e45-4fd0-b1ce-1a280bf81fa8",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "be71c114-39e5-4ca1-99bb-671962d5832f",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "F",
+                "UR": "U",
+                "UB": "U",
+                "UL": "L"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@L",
+                "probabilities": {
+                  "line@B": 0,
+                  "elbow@F": 0.01,
+                  "elbow@R": 0,
+                  "elbow@B": 0,
+                  "line@F": 0.02,
+                  "line@R": 0,
+                  "elbow@L": 0.75,
+                  "reconsider": 0.17,
+                  "dot@F": 0.04,
+                  "line@L": 0,
+                  "done": 0.01
+                },
+                "confidence": 0.71
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@L",
+                "confidence": 0.71,
+                "probabilities": {
+                  "line@B": 0,
+                  "elbow@F": 0.01,
+                  "elbow@R": 0,
+                  "elbow@B": 0,
+                  "line@F": 0.02,
+                  "line@R": 0,
+                  "elbow@L": 0.75,
+                  "reconsider": 0.17,
+                  "dot@F": 0.04,
+                  "line@L": 0,
+                  "done": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 374.51420299999995,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@L",
+      "stage": "edges",
+      "alg": "L U F U' F' L'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            3,
+            2,
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 563
+    },
+    {
+      "id": "edges-10",
+      "variant": "structured",
+      "runId": "97b1a687-7801-42e6-97eb-8d2310000231",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "3234bc42-569e-436f-8a9b-f912b3f8aa63",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "U",
+                "UR": "R",
+                "UB": "U",
+                "UL": "L"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "line@L",
+                "probabilities": {
+                  "elbow@L": 0,
+                  "done": 0.05,
+                  "line@F": 0.01,
+                  "line@B": 0,
+                  "reconsider": 0.16,
+                  "line@R": 0.29,
+                  "elbow@F": 0,
+                  "line@L": 0.42,
+                  "elbow@B": 0,
+                  "dot@F": 0.06,
+                  "elbow@R": 0.01
+                },
+                "confidence": 0.35
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 120
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "line@L",
+                "confidence": 0.35,
+                "probabilities": {
+                  "elbow@L": 0,
+                  "done": 0.05,
+                  "line@F": 0.01,
+                  "line@B": 0,
+                  "reconsider": 0.16,
+                  "line@R": 0.29,
+                  "elbow@F": 0,
+                  "line@L": 0.42,
+                  "elbow@B": 0,
+                  "dot@F": 0.06,
+                  "elbow@R": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 120
+            }
+          },
+          "elapsedMs": 425.1011089999997,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "line@L",
+      "stage": "edges",
+      "alg": "L F U F' U' L'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            3,
+            0,
+            2,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 627
+    },
+    {
+      "id": "edges-12",
+      "variant": "structured",
+      "runId": "2f21694b-dbdb-4ba2-be75-ce4171265104",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "2dfb5598-1e66-41cf-91bb-217a4a00a365",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "U",
+                "UR": "U",
+                "UB": "B",
+                "UL": "L"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@B",
+                "probabilities": {
+                  "elbow@B": 0.74,
+                  "elbow@L": 0,
+                  "dot@F": 0.04,
+                  "line@L": 0,
+                  "line@F": 0,
+                  "line@B": 0,
+                  "done": 0.03,
+                  "elbow@R": 0,
+                  "elbow@F": 0,
+                  "reconsider": 0.19,
+                  "line@R": 0
+                },
+                "confidence": 0.7
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@B",
+                "confidence": 0.7,
+                "probabilities": {
+                  "elbow@B": 0.74,
+                  "elbow@L": 0,
+                  "dot@F": 0.04,
+                  "line@L": 0,
+                  "line@F": 0,
+                  "line@B": 0,
+                  "done": 0.03,
+                  "elbow@R": 0,
+                  "elbow@F": 0,
+                  "reconsider": 0.19,
+                  "line@R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 338.1456869999997,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@B",
+      "stage": "edges",
+      "alg": "B U L U' L' B'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            1,
+            3,
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            3,
+            2,
+            1,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 562
+    },
+    {
+      "id": "edges-15",
+      "variant": "structured",
+      "runId": "2905d154-8cc2-439c-a1df-5d0516c681e7",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "88899d12-0294-4784-a90f-b52d0842812d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "pattern": {
+                "UF": "F",
+                "UR": "R",
+                "UB": "B",
+                "UL": "L"
+              }
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "dot@F",
+                "probabilities": {
+                  "elbow@F": 0.01,
+                  "line@R": 0,
+                  "reconsider": 0.07,
+                  "elbow@B": 0,
+                  "elbow@R": 0,
+                  "elbow@L": 0,
+                  "line@L": 0,
+                  "line@B": 0,
+                  "done": 0.02,
+                  "dot@F": 0.89,
+                  "line@F": 0.01
+                },
+                "confidence": 0.88
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 120
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "dot@F",
+                "confidence": 0.88,
+                "probabilities": {
+                  "elbow@F": 0.01,
+                  "line@R": 0,
+                  "reconsider": 0.07,
+                  "elbow@B": 0,
+                  "elbow@R": 0,
+                  "elbow@L": 0,
+                  "line@L": 0,
+                  "line@B": 0,
+                  "done": 0.02,
+                  "dot@F": 0.89,
+                  "line@F": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 960,
+              "output_tokens": 120
+            }
+          },
+          "elapsedMs": 330.5801019999999,
+          "cost": 0.00004032000000000001
+        }
+      ],
+      "status": "complete",
+      "choice": "dot@F",
+      "stage": "edges",
+      "alg": "F R U R' U' F' B U L U' L' B'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 12,
+      "passed": true,
+      "elapsedMs": 506
+    },
+    {
+      "id": "edges-0",
+      "variant": "sentences",
+      "runId": "89efce1f-dca3-4fe4-80a7-3a0643a56ea2",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "e25bac5a-18d2-4c6a-afb2-170223a3656d",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces U. At UR, white faces U. At UB, white faces U. At UL, white faces U."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "done",
+                "probabilities": {
+                  "line@L": 0,
+                  "line@B": 0,
+                  "dot@F": 0,
+                  "done": 0.99,
+                  "line@F": 0,
+                  "elbow@B": 0,
+                  "elbow@R": 0,
+                  "elbow@F": 0,
+                  "elbow@L": 0,
+                  "reconsider": 0.01,
+                  "line@R": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 118
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "done",
+                "confidence": 0.99,
+                "probabilities": {
+                  "line@L": 0,
+                  "line@B": 0,
+                  "dot@F": 0,
+                  "done": 0.99,
+                  "line@F": 0,
+                  "elbow@B": 0,
+                  "elbow@R": 0,
+                  "elbow@F": 0,
+                  "elbow@L": 0,
+                  "reconsider": 0.01,
+                  "line@R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 118
+            }
+          },
+          "elapsedMs": 331.838471,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "done",
+      "stage": "edges",
+      "alg": "",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 0,
+      "passed": true,
+      "elapsedMs": 514
+    },
+    {
+      "id": "edges-3",
+      "variant": "sentences",
+      "runId": "57a59642-484e-415d-849b-4bd958d1574f",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "17deba5b-b3bd-48e7-ace1-c35e0f166690",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@F",
+                "probabilities": {
+                  "dot@F": 0.01,
+                  "elbow@L": 0,
+                  "line@F": 0,
+                  "line@R": 0,
+                  "elbow@B": 0,
+                  "elbow@R": 0,
+                  "elbow@F": 0.77,
+                  "reconsider": 0.21,
+                  "done": 0.01,
+                  "line@L": 0,
+                  "line@B": 0
+                },
+                "confidence": 0.74
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@F",
+                "confidence": 0.74,
+                "probabilities": {
+                  "dot@F": 0.01,
+                  "elbow@L": 0,
+                  "line@F": 0,
+                  "line@R": 0,
+                  "elbow@B": 0,
+                  "elbow@R": 0,
+                  "elbow@F": 0.77,
+                  "reconsider": 0.21,
+                  "done": 0.01,
+                  "line@L": 0,
+                  "line@B": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 345.42849199999955,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@F",
+      "stage": "edges",
+      "alg": "F U R U' R' F'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            3,
+            2,
+            1,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 541
+    },
+    {
+      "id": "edges-5",
+      "variant": "sentences",
+      "runId": "cb027bf1-6fb1-4124-964e-e30bfa34fd9d",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "b06d1c31-4318-4f41-87d0-ebd4fae569a2",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "line@F",
+                "probabilities": {
+                  "done": 0.01,
+                  "line@L": 0,
+                  "dot@F": 0.02,
+                  "elbow@R": 0,
+                  "line@F": 0.63,
+                  "elbow@L": 0,
+                  "elbow@F": 0,
+                  "reconsider": 0.26,
+                  "line@B": 0.07,
+                  "line@R": 0,
+                  "elbow@B": 0.01
+                },
+                "confidence": 0.59
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 120
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "line@F",
+                "confidence": 0.59,
+                "probabilities": {
+                  "done": 0.01,
+                  "line@L": 0,
+                  "dot@F": 0.02,
+                  "elbow@R": 0,
+                  "line@F": 0.63,
+                  "elbow@L": 0,
+                  "elbow@F": 0,
+                  "reconsider": 0.26,
+                  "line@B": 0.07,
+                  "line@R": 0,
+                  "elbow@B": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 120
+            }
+          },
+          "elapsedMs": 382.26356300000043,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "line@F",
+      "stage": "edges",
+      "alg": "F R U R' U' F'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            3,
+            2,
+            1,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 560
+    },
+    {
+      "id": "edges-6",
+      "variant": "sentences",
+      "runId": "fbf96fb4-5176-4be8-b604-6df8d4ffb0f3",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "c423822b-9ba1-4cd3-b614-29a2977e63ae",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@R",
+                "probabilities": {
+                  "elbow@B": 0,
+                  "reconsider": 0.37,
+                  "line@B": 0,
+                  "elbow@L": 0,
+                  "elbow@F": 0,
+                  "elbow@R": 0.53,
+                  "line@L": 0.01,
+                  "line@F": 0,
+                  "dot@F": 0.07,
+                  "done": 0.02,
+                  "line@R": 0
+                },
+                "confidence": 0.48
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@R",
+                "confidence": 0.48,
+                "probabilities": {
+                  "elbow@B": 0,
+                  "reconsider": 0.37,
+                  "line@B": 0,
+                  "elbow@L": 0,
+                  "elbow@F": 0,
+                  "elbow@R": 0.53,
+                  "line@L": 0.01,
+                  "line@F": 0,
+                  "dot@F": 0.07,
+                  "done": 0.02,
+                  "line@R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 339.214962,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@R",
+      "stage": "edges",
+      "alg": "R U B U' B' R'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 527
+    },
+    {
+      "id": "edges-9",
+      "variant": "sentences",
+      "runId": "5a8eb317-64da-41c1-b79f-4125d5574b60",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "a9a98566-3a24-4c6e-98b6-4f14fe0b2e8b",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@L",
+                "probabilities": {
+                  "reconsider": 0.45,
+                  "elbow@R": 0,
+                  "dot@F": 0.02,
+                  "elbow@F": 0.01,
+                  "done": 0.01,
+                  "elbow@L": 0.5,
+                  "line@F": 0.01,
+                  "line@L": 0,
+                  "line@B": 0,
+                  "elbow@B": 0,
+                  "line@R": 0
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@L",
+                "confidence": 0.44,
+                "probabilities": {
+                  "reconsider": 0.45,
+                  "elbow@R": 0,
+                  "dot@F": 0.02,
+                  "elbow@F": 0.01,
+                  "done": 0.01,
+                  "elbow@L": 0.5,
+                  "line@F": 0.01,
+                  "line@L": 0,
+                  "line@B": 0,
+                  "elbow@B": 0,
+                  "line@R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 358.41924800000015,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@L",
+      "stage": "edges",
+      "alg": "L U F U' F' L'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            3,
+            2,
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 545
+    },
+    {
+      "id": "edges-10",
+      "variant": "sentences",
+      "runId": "a629f500-6818-4fce-9e7a-d992213582d7",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "00ed769a-1ba5-4de2-b82b-b59011f647d8",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "reconsider",
+                "probabilities": {
+                  "line@F": 0,
+                  "line@R": 0.35000000000000003,
+                  "reconsider": 0.43,
+                  "elbow@B": 0,
+                  "elbow@R": 0.01,
+                  "elbow@L": 0,
+                  "line@L": 0.14,
+                  "line@B": 0,
+                  "done": 0.04,
+                  "elbow@F": 0,
+                  "dot@F": 0.03
+                },
+                "confidence": 0.36
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 120
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "reconsider",
+                "confidence": 0.36,
+                "probabilities": {
+                  "line@F": 0,
+                  "line@R": 0.35000000000000003,
+                  "reconsider": 0.43,
+                  "elbow@B": 0,
+                  "elbow@R": 0.01,
+                  "elbow@L": 0,
+                  "line@L": 0.14,
+                  "line@B": 0,
+                  "done": 0.04,
+                  "elbow@F": 0,
+                  "dot@F": 0.03
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 120
+            }
+          },
+          "elapsedMs": 370.38928099999976,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "reconsider",
+      "stage": "edges",
+      "alg": "",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 0,
+      "passed": false,
+      "elapsedMs": 562
+    },
+    {
+      "id": "edges-12",
+      "variant": "sentences",
+      "runId": "1368e781-6463-4bcd-8128-637254c27fda",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "b0631104-2833-4f63-8118-5eeebac93673",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@B",
+                "probabilities": {
+                  "done": 0.05,
+                  "elbow@R": 0,
+                  "reconsider": 0.36,
+                  "elbow@L": 0,
+                  "line@F": 0,
+                  "elbow@B": 0.54,
+                  "elbow@F": 0,
+                  "line@B": 0,
+                  "dot@F": 0.05,
+                  "line@L": 0,
+                  "line@R": 0
+                },
+                "confidence": 0.48
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "elbow@B",
+                "confidence": 0.48,
+                "probabilities": {
+                  "done": 0.05,
+                  "elbow@R": 0,
+                  "reconsider": 0.36,
+                  "elbow@L": 0,
+                  "line@F": 0,
+                  "elbow@B": 0.54,
+                  "elbow@F": 0,
+                  "line@B": 0,
+                  "dot@F": 0.05,
+                  "line@L": 0,
+                  "line@R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 121
+            }
+          },
+          "elapsedMs": 347.979104,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "elbow@B",
+      "stage": "edges",
+      "alg": "B U L U' L' B'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            2,
+            1,
+            3,
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            3,
+            2,
+            1,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 6,
+      "passed": true,
+      "elapsedMs": 542
+    },
+    {
+      "id": "edges-15",
+      "variant": "sentences",
+      "runId": "3664ef65-99f5-473c-a075-7c27e44b359b",
+      "before": {
+        "EDGES": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "exchanges": [
+        {
+          "id": "6da085a8-4d94-4370-9f8b-abddfe6f22f5",
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "observation": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Orient the four white upper edges. Choose the learned reference matching all four sticker directions. Coordinates are the fixed frame. Match the complete illustration; do not predict candidate outcomes. Each routine preserves the lower two layers. A dot routine performs the two taught sequences as one fixed routine.",
+                "criteria": {
+                  "line@F": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute F R U R' U' F' (6 face turns), reference front F.",
+                  "line@R": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute R B U B' U' R' (6 face turns), reference front R.",
+                  "line@B": "At UF, white faces F. At UR, white faces U. At UB, white faces B. At UL, white faces U. Execute B L U L' U' B' (6 face turns), reference front B.",
+                  "line@L": "At UF, white faces U. At UR, white faces R. At UB, white faces U. At UL, white faces L. Execute L F U F' U' L' (6 face turns), reference front L.",
+                  "elbow@F": "At UF, white faces F. At UR, white faces R. At UB, white faces U. At UL, white faces U. Execute F U R U' R' F' (6 face turns), reference front F.",
+                  "elbow@R": "At UF, white faces U. At UR, white faces R. At UB, white faces B. At UL, white faces U. Execute R U B U' B' R' (6 face turns), reference front R.",
+                  "elbow@B": "At UF, white faces U. At UR, white faces U. At UB, white faces B. At UL, white faces L. Execute B U L U' L' B' (6 face turns), reference front B.",
+                  "elbow@L": "At UF, white faces F. At UR, white faces U. At UB, white faces U. At UL, white faces L. Execute L U F U' F' L' (6 face turns), reference front L.",
+                  "dot@F": "At UF, white faces F. At UR, white faces R. At UB, white faces B. At UL, white faces L. Execute F R U R' U' F' B U L U' L' B' (12 face turns), reference front F.",
+                  "done": "All four white stickers face U.",
+                  "reconsider": "No reference matches all four observations."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "dot@F",
+                "probabilities": {
+                  "line@B": 0,
+                  "elbow@F": 0,
+                  "elbow@R": 0,
+                  "elbow@L": 0,
+                  "line@F": 0,
+                  "line@R": 0,
+                  "elbow@B": 0,
+                  "reconsider": 0.04,
+                  "dot@F": 0.95,
+                  "line@L": 0,
+                  "done": 0.01
+                },
+                "confidence": 0.94
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 120
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "dot@F",
+                "confidence": 0.94,
+                "probabilities": {
+                  "line@B": 0,
+                  "elbow@F": 0,
+                  "elbow@R": 0,
+                  "elbow@L": 0,
+                  "line@F": 0,
+                  "line@R": 0,
+                  "elbow@B": 0,
+                  "reconsider": 0.04,
+                  "dot@F": 0.95,
+                  "line@L": 0,
+                  "done": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 959,
+              "output_tokens": 120
+            }
+          },
+          "elapsedMs": 290.52128600000015,
+          "cost": 0.000040278
+        }
+      ],
+      "status": "complete",
+      "choice": "dot@F",
+      "stage": "edges",
+      "alg": "F R U R' U' F' B U L U' L' B'",
+      "after": {
+        "EDGES": {
+          "pieces": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CORNERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "orientation": [
+            1,
+            2,
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CENTERS": {
+          "pieces": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orientationMod": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "turns": 12,
+      "passed": true,
+      "elapsedMs": 476
+    }
+  ]
+}

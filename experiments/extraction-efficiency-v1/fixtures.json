@@ -1,0 +1,2720 @@
+[
+  {
+    "id": "edge-0-9",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          8,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          1,
+          2,
+          3,
+          0,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "UFR",
+    "edgePosition": "FL",
+    "extract": "edge",
+    "acceptable": [
+      "L-forward",
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "edge-0-10",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          9,
+          8,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          1,
+          2,
+          3,
+          0,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "UFR",
+    "edgePosition": "BR",
+    "extract": "edge",
+    "acceptable": [
+      "R-forward"
+    ]
+  },
+  {
+    "id": "edge-0-11",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          9,
+          10,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          4,
+          1,
+          2,
+          3,
+          0,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "UFR",
+    "edgePosition": "BL",
+    "extract": "edge",
+    "acceptable": [
+      "B-forward",
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "edge-1-9",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          8,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          4,
+          2,
+          3,
+          1,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "URB",
+    "edgePosition": "FL",
+    "extract": "edge",
+    "acceptable": [
+      "L-forward",
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "edge-1-10",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          9,
+          8,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          4,
+          2,
+          3,
+          1,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "URB",
+    "edgePosition": "BR",
+    "extract": "edge",
+    "acceptable": [
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "edge-1-11",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          9,
+          10,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          4,
+          2,
+          3,
+          1,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "URB",
+    "edgePosition": "BL",
+    "extract": "edge",
+    "acceptable": [
+      "B-forward"
+    ]
+  },
+  {
+    "id": "edge-2-9",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          8,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          4,
+          3,
+          2,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "UBL",
+    "edgePosition": "FL",
+    "extract": "edge",
+    "acceptable": [
+      "L-forward"
+    ]
+  },
+  {
+    "id": "edge-2-10",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          9,
+          8,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          4,
+          3,
+          2,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "UBL",
+    "edgePosition": "BR",
+    "extract": "edge",
+    "acceptable": [
+      "R-forward",
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "edge-2-11",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          9,
+          10,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          4,
+          3,
+          2,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "UBL",
+    "edgePosition": "BL",
+    "extract": "edge",
+    "acceptable": [
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "edge-3-9",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          8,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          4,
+          3,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "ULF",
+    "edgePosition": "FL",
+    "extract": "edge",
+    "acceptable": [
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "edge-3-10",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          9,
+          8,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          4,
+          3,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "ULF",
+    "edgePosition": "BR",
+    "extract": "edge",
+    "acceptable": [
+      "R-forward",
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "edge-3-11",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          9,
+          10,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          4,
+          3,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "ULF",
+    "edgePosition": "BL",
+    "extract": "edge",
+    "acceptable": [
+      "B-forward",
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "edge-4-9",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          8,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DRF",
+    "edgePosition": "FL",
+    "extract": "edge",
+    "acceptable": [
+      "L-forward",
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "edge-4-10",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          9,
+          8,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DRF",
+    "edgePosition": "BR",
+    "extract": "edge",
+    "acceptable": [
+      "R-forward",
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "edge-4-11",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          9,
+          10,
+          8
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DRF",
+    "edgePosition": "BL",
+    "extract": "edge",
+    "acceptable": [
+      "B-forward",
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "corner-5-0",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DFL",
+    "edgePosition": "UF",
+    "extract": "corner",
+    "acceptable": [
+      "L-forward",
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "corner-5-1",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          8,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DFL",
+    "edgePosition": "UR",
+    "extract": "corner",
+    "acceptable": [
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "corner-5-2",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          8,
+          3,
+          4,
+          5,
+          6,
+          7,
+          2,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DFL",
+    "edgePosition": "UB",
+    "extract": "corner",
+    "acceptable": [
+      "L-forward",
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "corner-5-3",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          8,
+          4,
+          5,
+          6,
+          7,
+          3,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DFL",
+    "edgePosition": "UL",
+    "extract": "corner",
+    "acceptable": [
+      "L-forward"
+    ]
+  },
+  {
+    "id": "corner-5-8",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4,
+          6,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DFL",
+    "edgePosition": "FR",
+    "extract": "corner",
+    "acceptable": [
+      "L-forward",
+      "L-reverse"
+    ]
+  },
+  {
+    "id": "corner-6-0",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          5,
+          4,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DLB",
+    "edgePosition": "UF",
+    "extract": "corner",
+    "acceptable": [
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "corner-6-1",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          8,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          5,
+          4,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DLB",
+    "edgePosition": "UR",
+    "extract": "corner",
+    "acceptable": [
+      "B-forward",
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "corner-6-2",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          8,
+          3,
+          4,
+          5,
+          6,
+          7,
+          2,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          5,
+          4,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DLB",
+    "edgePosition": "UB",
+    "extract": "corner",
+    "acceptable": [
+      "B-forward"
+    ]
+  },
+  {
+    "id": "corner-6-3",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          8,
+          4,
+          5,
+          6,
+          7,
+          3,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          5,
+          4,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DLB",
+    "edgePosition": "UL",
+    "extract": "corner",
+    "acceptable": [
+      "B-forward",
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "corner-6-8",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          5,
+          4,
+          7
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DLB",
+    "edgePosition": "FR",
+    "extract": "corner",
+    "acceptable": [
+      "B-forward",
+      "B-reverse"
+    ]
+  },
+  {
+    "id": "corner-7-0",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          5,
+          6,
+          4
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DBR",
+    "edgePosition": "UF",
+    "extract": "corner",
+    "acceptable": [
+      "R-forward",
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "corner-7-1",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          8,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          5,
+          6,
+          4
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DBR",
+    "edgePosition": "UR",
+    "extract": "corner",
+    "acceptable": [
+      "R-forward"
+    ]
+  },
+  {
+    "id": "corner-7-2",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          8,
+          3,
+          4,
+          5,
+          6,
+          7,
+          2,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          5,
+          6,
+          4
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DBR",
+    "edgePosition": "UB",
+    "extract": "corner",
+    "acceptable": [
+      "R-forward",
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "corner-7-3",
+    "phase": "development",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          0,
+          1,
+          2,
+          8,
+          4,
+          5,
+          6,
+          7,
+          3,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          5,
+          6,
+          4
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DBR",
+    "edgePosition": "UL",
+    "extract": "corner",
+    "acceptable": [
+      "R-reverse"
+    ]
+  },
+  {
+    "id": "corner-7-8",
+    "phase": "validation",
+    "state": {
+      "EDGES": {
+        "pieces": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CORNERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          5,
+          6,
+          4
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CENTERS": {
+        "pieces": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "orientation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "orientationMod": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "cornerPosition": "DBR",
+    "edgePosition": "FR",
+    "extract": "corner",
+    "acceptable": [
+      "R-forward",
+      "R-reverse"
+    ]
+  }
+]

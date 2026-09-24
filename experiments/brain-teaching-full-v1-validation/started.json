@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-23T10:32:14.938Z",
+  "digest": "2ea8e830a7720185ffb60c352d7e1454d32117183748dc688f14f0306315aba7",
+  "limits": {
+    "requestsPerAttempt": 500,
+    "turns": 1000,
+    "ms": 600000,
+    "studyDollars": 1,
+    "concurrency": 4,
+    "retries": 0
+  },
+  "scope": "10 fresh random states for validation; experimental middle-layer substitution; other policies unchanged; no retries; at most two development rounds; cumulative study cap $1. All failures count. Final acceptance requires 95/100 independently verified solves. No tuning on this set."
+}

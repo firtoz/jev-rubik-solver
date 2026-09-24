@@ -1,0 +1,182 @@
+{
+  "source": "https://www.cubeskills.com/uploads/pdf/tutorials/4-look-last-layer.pdf",
+  "alg": "R' U L' U2 R U' L R' U L' U2 R U' L",
+  "rows": [
+    {
+      "corners": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "front": "F",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "front": "R",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "front": "B",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "front": "L",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "front": "F",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "front": "R",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "front": "B",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "front": "L",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "front": "F",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "front": "R",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "front": "B",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "front": "L",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "front": "F",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "front": "R",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "front": "B",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    },
+    {
+      "corners": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "front": "L",
+      "matchingPairsAfter": 4,
+      "turns": 14
+    }
+  ]
+}

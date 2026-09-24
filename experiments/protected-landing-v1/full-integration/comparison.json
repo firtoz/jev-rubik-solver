@@ -1,0 +1,61 @@
+{
+  "note": "Paired development starts with saved baseline; later decisions are stochastic. Not held-out reliability.",
+  "rows": [
+    {
+      "id": "fresh-1",
+      "before": {
+        "status": "solved",
+        "turns": 98,
+        "crossTurns": 18
+      },
+      "after": {
+        "status": "solved",
+        "turns": 94,
+        "crossTurns": 15
+      },
+      "turnDelta": -4
+    },
+    {
+      "id": "fresh-2",
+      "before": {
+        "status": "solved",
+        "turns": 96,
+        "crossTurns": 17
+      },
+      "after": {
+        "status": "solved",
+        "turns": 87,
+        "crossTurns": 16
+      },
+      "turnDelta": -9
+    },
+    {
+      "id": "fresh-3",
+      "before": {
+        "status": "solved",
+        "turns": 95,
+        "crossTurns": 18
+      },
+      "after": {
+        "status": "solved",
+        "turns": 83,
+        "crossTurns": 15
+      },
+      "turnDelta": -12
+    },
+    {
+      "id": "fresh-5",
+      "before": {
+        "status": "solved",
+        "turns": 93,
+        "crossTurns": 14
+      },
+      "after": {
+        "status": "capped",
+        "turns": 87,
+        "crossTurns": 13
+      },
+      "turnDelta": null
+    }
+  ]
+}

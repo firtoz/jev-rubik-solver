@@ -1,0 +1,46 @@
+[
+  {
+    "phase": "development",
+    "usage": {
+      "requests": 16,
+      "cost": 0.000644784
+    },
+    "scores": [
+      {
+        "variant": "structured",
+        "passed": 8,
+        "n": 8,
+        "tokens": 7680,
+        "failures": []
+      },
+      {
+        "variant": "sentences",
+        "passed": 7,
+        "n": 8,
+        "tokens": 7672,
+        "failures": [
+          {
+            "id": "edges-10",
+            "choice": "reconsider"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "validation",
+    "usage": {
+      "requests": 24,
+      "cost": 0.0009673440000000002
+    },
+    "scores": [
+      {
+        "variant": "structured",
+        "passed": 8,
+        "n": 8,
+        "tokens": 7680,
+        "failures": []
+      }
+    ]
+  }
+]

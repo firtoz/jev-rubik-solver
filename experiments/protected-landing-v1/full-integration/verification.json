@@ -1,0 +1,122 @@
+{
+  "partial": false,
+  "checked": 4,
+  "projectCommitment": 8.243471838000001,
+  "rows": [
+    {
+      "id": "fresh-1",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 94,
+      "requests": 153,
+      "cost": 0.004940292000000001,
+      "elapsedMs": 119567,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 38,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "top-corners": 15,
+        "top-edges": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "fresh-2",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 87,
+      "requests": 148,
+      "cost": 0.0048924120000000005,
+      "elapsedMs": 113602,
+      "stages": {
+        "daisy": 8,
+        "cross": 8,
+        "f2l": 31,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "top-corners": 15,
+        "top-edges": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "fresh-3",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 83,
+      "requests": 167,
+      "cost": 0.005422746000000001,
+      "elapsedMs": 103358,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 36,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "top-corners": 1,
+        "top-edges": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "fresh-5",
+      "variant": "candidate",
+      "status": "capped",
+      "turns": 87,
+      "requests": 159,
+      "cost": 0.005129502,
+      "elapsedMs": 94153,
+      "stages": {
+        "daisy": 5,
+        "cross": 8,
+        "f2l": 39,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "top-corners": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": false,
+        "solvedPieces": 16
+      }
+    }
+  ]
+}

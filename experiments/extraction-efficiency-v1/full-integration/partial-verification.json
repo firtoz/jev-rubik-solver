@@ -1,0 +1,65 @@
+{
+  "partial": true,
+  "checked": 2,
+  "projectCommitment": 8.186058930000002,
+  "rows": [
+    {
+      "id": "fresh-1",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 98,
+      "requests": 147,
+      "cost": 0.004954026,
+      "elapsedMs": 96706,
+      "stages": {
+        "daisy": 10,
+        "cross": 8,
+        "f2l": 33,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "top-corners": 15,
+        "top-edges": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "fresh-2",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 96,
+      "requests": 138,
+      "cost": 0.004576236000000001,
+      "elapsedMs": 90148,
+      "stages": {
+        "daisy": 10,
+        "cross": 7,
+        "f2l": 38,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "top-corners": 15,
+        "top-edges": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    }
+  ]
+}

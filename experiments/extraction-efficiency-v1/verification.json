@@ -1,0 +1,60 @@
+[
+  {
+    "phase": "development",
+    "usage": {
+      "requests": 30,
+      "cost": 0.0010954860000000001
+    },
+    "scores": [
+      {
+        "variant": "structured",
+        "n": 15,
+        "passed": 13,
+        "failures": [
+          {
+            "id": "edge-1-10",
+            "choice": "R-forward",
+            "acceptable": [
+              "R-reverse"
+            ]
+          },
+          {
+            "id": "corner-7-3",
+            "choice": "R-forward",
+            "acceptable": [
+              "R-reverse"
+            ]
+          }
+        ]
+      },
+      {
+        "variant": "sentences",
+        "n": 15,
+        "passed": 12,
+        "failures": [
+          {
+            "id": "edge-1-10",
+            "choice": "R-forward",
+            "acceptable": [
+              "R-reverse"
+            ]
+          },
+          {
+            "id": "corner-6-2",
+            "choice": "B-reverse",
+            "acceptable": [
+              "B-forward"
+            ]
+          },
+          {
+            "id": "corner-7-3",
+            "choice": "R-forward",
+            "acceptable": [
+              "R-reverse"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

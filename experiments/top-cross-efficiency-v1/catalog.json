@@ -1,0 +1,122 @@
+{
+  "source": "Existing documented orient-edges and orient-elbow routines; dot combines their fixed F then B reference sequences.",
+  "rows": [
+    {
+      "id": "line@F",
+      "stage": "edges",
+      "front": "F",
+      "alg": "F R U R' U' F'",
+      "turns": 6,
+      "pattern": {
+        "UF": "F",
+        "UR": "U",
+        "UB": "B",
+        "UL": "U"
+      }
+    },
+    {
+      "id": "line@R",
+      "stage": "edges",
+      "front": "R",
+      "alg": "R B U B' U' R'",
+      "turns": 6,
+      "pattern": {
+        "UF": "U",
+        "UR": "R",
+        "UB": "U",
+        "UL": "L"
+      }
+    },
+    {
+      "id": "line@B",
+      "stage": "edges",
+      "front": "B",
+      "alg": "B L U L' U' B'",
+      "turns": 6,
+      "pattern": {
+        "UF": "F",
+        "UR": "U",
+        "UB": "B",
+        "UL": "U"
+      }
+    },
+    {
+      "id": "line@L",
+      "stage": "edges",
+      "front": "L",
+      "alg": "L F U F' U' L'",
+      "turns": 6,
+      "pattern": {
+        "UF": "U",
+        "UR": "R",
+        "UB": "U",
+        "UL": "L"
+      }
+    },
+    {
+      "id": "elbow@F",
+      "stage": "edges",
+      "front": "F",
+      "alg": "F U R U' R' F'",
+      "turns": 6,
+      "pattern": {
+        "UF": "F",
+        "UR": "R",
+        "UB": "U",
+        "UL": "U"
+      }
+    },
+    {
+      "id": "elbow@R",
+      "stage": "edges",
+      "front": "R",
+      "alg": "R U B U' B' R'",
+      "turns": 6,
+      "pattern": {
+        "UF": "U",
+        "UR": "R",
+        "UB": "B",
+        "UL": "U"
+      }
+    },
+    {
+      "id": "elbow@B",
+      "stage": "edges",
+      "front": "B",
+      "alg": "B U L U' L' B'",
+      "turns": 6,
+      "pattern": {
+        "UF": "U",
+        "UR": "U",
+        "UB": "B",
+        "UL": "L"
+      }
+    },
+    {
+      "id": "elbow@L",
+      "stage": "edges",
+      "front": "L",
+      "alg": "L U F U' F' L'",
+      "turns": 6,
+      "pattern": {
+        "UF": "F",
+        "UR": "U",
+        "UB": "U",
+        "UL": "L"
+      }
+    },
+    {
+      "id": "dot@F",
+      "stage": "edges",
+      "front": "F",
+      "alg": "F R U R' U' F' B U L U' L' B'",
+      "turns": 12,
+      "pattern": {
+        "UF": "F",
+        "UR": "R",
+        "UB": "B",
+        "UL": "L"
+      }
+    }
+  ]
+}

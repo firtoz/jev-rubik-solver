@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fresh-1",
+    "scramble": "B2 L D' B' U F' R' L2 U F2 L D2 L2 B2 L' D2 L' F2 R' F2 D2",
+    "hash": "[{\"pieces\":[3,8,6,1,11,5,4,7,9,10,2,0],\"orientation\":[1,1,1,1,1,1,0,1,1,0,0,0]},{\"pieces\":[7,0,1,6,3,4,2,5],\"orientation\":[1,1,2,0,2,1,2,0]}]"
+  },
+  {
+    "id": "fresh-2",
+    "scramble": "B R' L' D' F2 L' F' U D' R2 U2 D2 F U2 F2 D2 L2 F' D2 B' L'",
+    "hash": "[{\"pieces\":[3,2,1,5,6,7,0,9,11,10,8,4],\"orientation\":[0,1,0,0,1,1,0,0,0,1,1,1]},{\"pieces\":[4,2,7,3,0,5,1,6],\"orientation\":[2,1,2,1,2,1,1,2]}]"
+  },
+  {
+    "id": "fresh-3",
+    "scramble": "F U' B2 R U2 R F2 D F U' B2 D2 F2 D' R2 D' R2 L2 D R2 U'",
+    "hash": "[{\"pieces\":[1,5,11,9,3,6,4,0,10,2,7,8],\"orientation\":[0,0,1,1,0,0,0,1,0,0,1,0]},{\"pieces\":[0,1,5,2,7,6,4,3],\"orientation\":[1,1,0,2,1,1,0,0]}]"
+  },
+  {
+    "id": "fresh-4",
+    "scramble": "D F2 B' U2 R F' D2 B2 R' D' F U2 F U2 B R2 B U2 R2 B2 R2",
+    "hash": "[{\"pieces\":[8,1,0,7,4,5,11,10,6,9,3,2],\"orientation\":[1,0,1,0,1,1,1,1,0,0,0,0]},{\"pieces\":[5,1,2,3,4,0,7,6],\"orientation\":[0,0,0,1,1,1,1,2]}]"
+  },
+  {
+    "id": "fresh-5",
+    "scramble": "R' D R' B R L2 U' R B2 R2 B' D2 F R2 F R2 F U2 R2 B U",
+    "hash": "[{\"pieces\":[3,8,5,0,6,4,10,1,2,11,7,9],\"orientation\":[0,0,0,1,0,1,0,0,1,0,1,0]},{\"pieces\":[2,6,0,5,1,7,4,3],\"orientation\":[0,1,2,2,0,1,2,1]}]"
+  },
+  {
+    "id": "fresh-6",
+    "scramble": "L2 F L F' D' R' U D2 B' R D2 L' D2 L2 F2 U2 F2 R' U2 F2 L",
+    "hash": "[{\"pieces\":[3,1,10,9,4,7,6,8,0,2,5,11],\"orientation\":[1,0,0,1,1,1,1,0,0,0,1,0]},{\"pieces\":[7,2,6,0,3,5,1,4],\"orientation\":[2,2,1,0,1,1,2,0]}]"
+  },
+  {
+    "id": "fresh-7",
+    "scramble": "U' D2 B2 L' F' U' B2 R' B2 D2 R2 U' B2 R2 U' L2 B2 D F2 D2 R",
+    "hash": "[{\"pieces\":[5,8,10,6,9,3,0,1,2,7,4,11],\"orientation\":[1,1,0,1,0,1,0,0,0,0,0,0]},{\"pieces\":[1,4,2,6,0,3,7,5],\"orientation\":[2,2,2,1,1,0,2,2]}]"
+  },
+  {
+    "id": "fresh-8",
+    "scramble": "D F' L2 D R' U2 D' F R F2 U R2 U2 B2 D' F2 D' B2 R2 B2 D2",
+    "hash": "[{\"pieces\":[8,3,5,9,11,10,2,1,7,6,0,4],\"orientation\":[1,0,0,1,1,0,1,1,0,0,1,0]},{\"pieces\":[6,0,1,7,2,3,4,5],\"orientation\":[2,2,2,2,0,2,1,1]}]"
+  }
+]

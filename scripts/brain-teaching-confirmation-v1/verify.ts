@@ -1,0 +1,103 @@
+import {decide} from '../brain-teaching-full-v1/policy';
+import {actions as middleActions} from '../teaching-study-v2/policy';
+import {facts,hash} from '../../src/lib/cube';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {cube3x3x3} from 'cubing/puzzles';
+import {db,getRun} from '../../src/server/store';
+import {Alg} from 'cubing/alg';
+import {skills} from '../../src/lib/skills';
+import earlyReference from '../brain-early-v3/routine-reference.json';
+const dir=process.argv[2]||'experiments/brain-teaching-confirmation-v1';
+const partial=process.argv.includes('--partial');
+const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const result=read(`${dir}/results.json`),fixtures=read(`${dir}/fixtures.json`),manifest=read(`${dir}/started.json`),sources=read(`${dir}/sources.json`);
+if(createHash('sha256').update(JSON.stringify(sources)).digest('hex')!==manifest.digest)throw new Error('Snapshot hash mismatch');
+for(const [path,source]of Object.entries(sources))if(readFileSync(path,'utf8')!==source)throw new Error('Frozen policy changed: '+path);
+const wireRequests:Record<string,any>={},snapshotDrift:any[]=[];
+const puzzle=await cube3x3x3.kpuzzle(),same=(a:any,b:any)=>JSON.stringify(a)===JSON.stringify(b),seen=new Set<string>(),rows:any[]=[];
+for(const fixture of fixtures){const state=puzzle.defaultPattern().applyAlg(fixture.scramble).patternData;const h=JSON.stringify([state.EDGES,state.CORNERS]);if(seen.has(h))throw new Error('Duplicate start');seen.add(h);}
+for(const summary of result.rows){
+ const row=summary.record&&summary.status!=='running'?read(`${dir}/${summary.record}`):summary;
+ if(row.status==='running'){if(partial)continue;throw new Error('Still running');}
+ const wire=db.query("SELECT payload FROM events WHERE run_id=? AND kind='request'").all(row.runId) as any[];
+ for(const e of wire){const v=JSON.parse(e.payload);wireRequests[v.id]=v.request;}
+ for(const step of row.steps)for(const e of step.exchanges){
+  if(!wireRequests[e.id])throw Error('Missing immutable wire request');
+  if(!same(e.request,wireRequests[e.id]))snapshotDrift.push({run:row.id,id:e.id,reason:'Mutable request snapshot differs from immutable dispatch event'});
+  e.request=wireRequests[e.id];
+ }
+ let pattern=puzzle.defaultPattern().applyAlg(fixtures.find((f:any)=>f.id===row.id).scramble),turns=0,lastAlg='';let pendingPlan:any=null;
+ const replayRun={...getRun(row.runId),state:row.before,history:[] as string[],stage:'',target:null as string|null};
+ const completed:any[]=[];
+ for(const step of row.steps){
+  if(!same(step.pendingPlan,pendingPlan))throw new Error('Pending plan provenance mismatch');
+  if(!same(pattern.patternData,step.before))throw new Error('Before mismatch');
+  if(step.after){
+   let expectedAlg:string;
+   if(step.recovery==='undo'){
+    const answer=step.exchanges.find((d:any)=>d.request.questions.recovery)?.response.answers.recovery.choice;
+    if(answer!=='undo'||!lastAlg)throw new Error('Undo was not chosen by JEV');
+    expectedAlg=new Alg(lastAlg).invert().toString().replace(/([UDFBRL])2'/g,'$12');
+   }else{
+    const decision=step.decision;
+    const sameVisits=completed.filter(s=>hash(s.before)===hash(replayRun.state));
+    let cursor=step.exchanges[0]?.request.questions.recovery?1:0;
+    const reproduced=await decide(replayRun,async request=>{
+     const exchange=step.exchanges[cursor++];
+     if(!exchange||!same(request,exchange.request)){console.error(JSON.stringify({id:row.id,step:completed.length,question:Object.keys(request.questions),generated:request,recorded:exchange?.request}));throw Error('Exact request replay mismatch');}
+     return exchange.response;
+    },sameVisits.slice(-3).map(s=>({action:s.alg,target:s.decision?.target,factsBefore:facts(s.before),factsAfter:facts(s.after)})),step.recovery==='retarget'?replayRun.target:null,pendingPlan);
+    if(!same(reproduced,decision)||cursor!==step.exchanges.length)throw Error('Decision/controller replay mismatch');
+    replayRun.stage=decision.goal;replayRun.target=decision.target;
+    if(decision.middle){
+     expectedAlg=middleActions[decision.middle.action];
+    }else{
+
+    const goal=step.exchanges.find((d:any)=>d.request.questions.goal)?.response.answers.goal.choice;
+    const front=step.exchanges.find((d:any)=>d.request.questions.reference)?.response.answers.reference.choice;
+    if(goal!==decision.goal||front!==decision.front)throw new Error('Goal/reference differs from JEV');
+    if(decision.early){
+     const last=(key:string)=>step.exchanges.filter((d:any)=>d.response.answers[key]).at(-1)?.response.answers[key].choice;
+     const target=last(decision.goal==='daisy'?'gatherTarget':'transferTarget');
+     if(target!==decision.target||last('decision')!==decision.early.preparation)throw new Error('Early target/preparation differs from JEV');
+     const prep=decision.early.preparation;
+     const selection=step.exchanges.filter((d:any)=>d.response.answers.routine||d.response.answers.plan).at(-1);
+     const pickedRoutine=selection?.response.answers.routine?.choice??(selection?.response.answers.plan?.choice==='resume'?pendingPlan?.routine:undefined);
+     if(decision.goal==='daisy'&&pickedRoutine!==decision.early.plannedRoutine)throw new Error('Remembered routine was not explicitly chosen');
+     const chosen=prep==='execute'?pickedRoutine:prep==='clear'||prep==='align'?last('setup'):prep==='lower'?'lower-top-edge':prep==='insert'?'daisy-to-cross':null;
+     if(chosen!==decision.skill)throw new Error('Early operation differs from JEV');
+    }else{
+     const operation=step.exchanges.find((d:any)=>d.request.questions.operation)?.response.answers.operation.choice;
+     if(operation!==decision.skill)throw new Error('Operation differs from JEV');
+    }
+    const raw=earlyReference.find(s=>s.id===decision.skill)?.sequence??skills.find(s=>s.id===decision.skill)?.alg??decision.skill;
+    if(typeof raw!=='string'||!raw.trim())throw new Error('No fixed routine');
+    const ring=['F','R','B','L'],offset=ring.indexOf(decision.front);
+    if(offset<0)throw new Error('Unknown frame');
+    expectedAlg=raw.split(/\s+/).map(m=>ring.includes(m[0])?ring[(ring.indexOf(m[0])+offset)%4]+m.slice(1):m).join(' ');
+    }
+   }
+   if(expectedAlg!==step.alg)throw new Error('Executed sequence differs from selected routine');
+   lastAlg=step.alg;
+   pendingPlan=step.decision?.early?.preparation==='clear'?{target:step.decision.target,front:step.decision.front,routine:step.decision.early.plannedRoutine,preparation:'clear',setup:step.alg}:null;
+   if(!same(pendingPlan,step.nextPendingPlan))throw new Error('Stored next plan differs from model setup choice');
+   const moves=step.alg.trim().split(/\s+/);if(moves.some((m:string)=>!/^([UDFBRL])('?|2)$/.test(m)))throw new Error('Nonstandard turn');
+   turns+=moves.length;pattern=pattern.applyAlg(step.alg);replayRun.state=pattern.patternData as any;replayRun.history.push(step.alg);completed.push(step);if(!same(pattern.patternData,step.after))throw new Error('After mismatch');
+  }
+ }
+ if(!same(pattern.patternData,row.after)||turns!==row.turns)throw new Error('Final mismatch');
+ const solved=['EDGES','CORNERS'].every(o=>pattern.patternData[o].pieces.every((p:number,i:number)=>p===i&&pattern.patternData[o].orientation[i]===0));
+ if((row.status==='solved')!==solved)throw new Error('Solve claim mismatch');
+ {const external=db.query("SELECT COUNT(*) n FROM events WHERE run_id=? AND kind IN ('action','step-start','control')").get(row.runId) as {n:number};if(external.n)throw new Error('Interactive runner intervention detected');}
+ const usage=db.query("SELECT COUNT(*) requests,COALESCE(SUM(amount),0) committed FROM ledger WHERE run_id=?").get(row.runId) as any;
+ const events=db.query("SELECT payload FROM events WHERE run_id=? AND kind='request'").all(row.runId) as any[];
+ if(events.some((e:any)=>JSON.parse(e.payload).request.model!=='jev-1.13.0')||row.steps.some((s:any)=>s.exchanges.some((e:any)=>e.response.model!=='jev-1.13.0')))throw new Error('Pinned model mismatch');
+ if(events.length!==usage.requests)throw new Error('Ledger/event mismatch');
+ if(usage.requests>500||turns>1000||(solved&&row.elapsedMs>600000))throw new Error('Attempt ceiling exceeded');
+ rows.push({id:row.id,status:row.status,solved,turns,requests:usage.requests,committed:usage.committed,elapsedMs:row.elapsedMs,recoveries:row.steps.filter((s:any)=>s.recovery).length});
+}
+const study=db.query("SELECT COALESCE(SUM(amount),0) cost FROM ledger l JOIN runs r ON r.id=l.run_id WHERE json_extract(r.json,'$.split')='brain-teaching-confirmation-v1'").get() as any;if(study.cost>1.25)throw Error('Study dollar cap');
+writeFileSync(`${dir}/${partial?'partial-wire-requests':'wire-requests'}.json`,JSON.stringify(wireRequests,null,2));
+const report={snapshotDrift,study,partial,expected:fixtures.length,verified:rows.length,solved:rows.filter(r=>r.solved).length,allAttemptsPresent:rows.length===fixtures.length,rows};
+writeFileSync(`${dir}/${partial?'partial-verification':'verification'}.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));

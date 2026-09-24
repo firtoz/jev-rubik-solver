@@ -1,0 +1,146 @@
+[
+  {
+    "id": "UF-UR",
+    "source": "UF",
+    "destination": "UR",
+    "expected": "U'"
+  },
+  {
+    "id": "UF-UB",
+    "source": "UF",
+    "destination": "UB",
+    "expected": "U2"
+  },
+  {
+    "id": "UF-UL",
+    "source": "UF",
+    "destination": "UL",
+    "expected": "U"
+  },
+  {
+    "id": "UR-UR",
+    "source": "UR",
+    "destination": "UR",
+    "expected": "reconsider"
+  },
+  {
+    "id": "UR-UB",
+    "source": "UR",
+    "destination": "UB",
+    "expected": "U'"
+  },
+  {
+    "id": "UR-UL",
+    "source": "UR",
+    "destination": "UL",
+    "expected": "U2"
+  },
+  {
+    "id": "UB-UR",
+    "source": "UB",
+    "destination": "UR",
+    "expected": "U"
+  },
+  {
+    "id": "UB-UB",
+    "source": "UB",
+    "destination": "UB",
+    "expected": "reconsider"
+  },
+  {
+    "id": "UB-UL",
+    "source": "UB",
+    "destination": "UL",
+    "expected": "U'"
+  },
+  {
+    "id": "UL-UR",
+    "source": "UL",
+    "destination": "UR",
+    "expected": "U2"
+  },
+  {
+    "id": "UL-UB",
+    "source": "UL",
+    "destination": "UB",
+    "expected": "U"
+  },
+  {
+    "id": "UL-UL",
+    "source": "UL",
+    "destination": "UL",
+    "expected": "reconsider"
+  },
+  {
+    "id": "UFR-URB",
+    "source": "UFR",
+    "destination": "URB",
+    "expected": "U'"
+  },
+  {
+    "id": "UFR-UBL",
+    "source": "UFR",
+    "destination": "UBL",
+    "expected": "U2"
+  },
+  {
+    "id": "UFR-ULF",
+    "source": "UFR",
+    "destination": "ULF",
+    "expected": "U"
+  },
+  {
+    "id": "URB-URB",
+    "source": "URB",
+    "destination": "URB",
+    "expected": "reconsider"
+  },
+  {
+    "id": "URB-UBL",
+    "source": "URB",
+    "destination": "UBL",
+    "expected": "U'"
+  },
+  {
+    "id": "URB-ULF",
+    "source": "URB",
+    "destination": "ULF",
+    "expected": "U2"
+  },
+  {
+    "id": "UBL-URB",
+    "source": "UBL",
+    "destination": "URB",
+    "expected": "U"
+  },
+  {
+    "id": "UBL-UBL",
+    "source": "UBL",
+    "destination": "UBL",
+    "expected": "reconsider"
+  },
+  {
+    "id": "UBL-ULF",
+    "source": "UBL",
+    "destination": "ULF",
+    "expected": "U'"
+  },
+  {
+    "id": "ULF-URB",
+    "source": "ULF",
+    "destination": "URB",
+    "expected": "U2"
+  },
+  {
+    "id": "ULF-UBL",
+    "source": "ULF",
+    "destination": "UBL",
+    "expected": "U"
+  },
+  {
+    "id": "ULF-ULF",
+    "source": "ULF",
+    "destination": "ULF",
+    "expected": "reconsider"
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "round": "preparation",
+    "phase": "development",
+    "usage": {
+      "requests": 64,
+      "cost": 0.0016527840000000002
+    },
+    "scores": [
+      {
+        "variant": "baseline",
+        "passed": 27,
+        "n": 32,
+        "failures": [
+          {
+            "id": "position-14",
+            "expected": "extract-edge",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-22",
+            "expected": "extract-edge",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-30",
+            "expected": "extract-edge",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-44",
+            "expected": "extract-corner",
+            "choice": "routine"
+          },
+          {
+            "id": "position-52",
+            "expected": "extract-corner",
+            "choice": "routine"
+          }
+        ]
+      },
+      {
+        "variant": "compact",
+        "passed": 28,
+        "n": 32,
+        "failures": [
+          {
+            "id": "position-56",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-58",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-60",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-62",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "round": "preparation-round2",
+    "phase": "development",
+    "usage": {
+      "requests": 96,
+      "cost": 0.002405424
+    },
+    "scores": [
+      {
+        "variant": "compact",
+        "passed": 20,
+        "n": 32,
+        "failures": [
+          {
+            "id": "position-40",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-42",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-44",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-46",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-48",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-50",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-52",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-54",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-56",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-58",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-60",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          },
+          {
+            "id": "position-62",
+            "expected": "extract-corner",
+            "choice": "reconsider"
+          }
+        ]
+      }
+    ]
+  }
+]
