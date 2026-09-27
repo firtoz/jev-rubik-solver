@@ -8,7 +8,7 @@ test('unfolded face positions agree with piece sticker directions', async () => 
   for (const [face, stickers] of Object.entries(netStickers(solvedState))) {
     expect(stickers.every(s => s.color === colors[face])).toBe(true);
   }
-  const recording = JSON.parse(readFileSync('public/recordings/brain-v3-flow.json', 'utf8'));
+  const recording = JSON.parse(readFileSync('tests/fixtures/brain-v3-flow.json', 'utf8'));
   let state = await apply(solvedState, recording.previewSetup);
   for (const step of recording.steps) {
     expect(state).toEqual(step.before);

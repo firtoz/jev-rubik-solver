@@ -4,6 +4,7 @@ import type { CubeData } from './types';
 type Round={before:CubeData;after:CubeData;alg:string;decision:any;exchanges?:{request:any}[]};
 const goals:Record<string,string>={'daisy':'Gather yellow petals','cross':'Build the yellow cross','first-layer':'Solve a yellow corner','middle-layer':'Solve a middle edge','top-cross':'Make the white cross','top-orientation':'Orient white corners','top-corners':'Place white corners','top-edges':'Place white edges'};
 const verbs:Record<string,string>={insert:'Insert',align:'Align',extract:'Extract',reorient:'Reorient',lower:'Lower',clear:'Make space for',execute:'Move',permute:'Reposition'};
+const objectives:Record<string,string>={daisy:'Build the daisy: four yellow petals',cross:'Build the yellow cross',f2l:'Solve the first two layers',pll:'Put the last-layer pieces in their homes',oll:'Orient the last layer'};
 export function roundSummary(round:Round){
  const d=round.decision||{},before=facts(round.before),after=facts(round.after);
  const target=pieces(round.before).find(p=>p.piece===d.target),result=pieces(round.after).find(p=>p.piece===d.target);
@@ -65,7 +66,7 @@ export function roundSummary(round:Round){
  }
  if(!measuredOutcome&&before.cross&&after.cross&&!after.solved)outcome.push('cross preserved');
  if(before.cross&&!after.cross)outcome.push('cross disturbed');
- return {title,context,outcome:outcome.join(' · '),...(frame?{frame}:{})};
+ return {title,context,objective:objectives[d.goal]||goals[d.goal]||d.goal,outcome:outcome.join(' · '),...(frame?{frame}:{})};
 }
 export function transitionSummary(rounds:Round[],from:number,to:number){
  if(to===from+1)return {...roundSummary(rounds[from]),round:from};

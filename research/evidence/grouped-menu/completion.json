@@ -1,0 +1,10 @@
+{
+  "planned": 100,
+  "attempted": 100,
+  "solved": 98,
+  "transportUnresolved": 0,
+  "solverNonSuccesses": 2,
+  "budgetStopped": 0,
+  "notStarted": 0,
+  "reason": "all attempts terminal"
+}

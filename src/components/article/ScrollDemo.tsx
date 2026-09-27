@@ -1,6 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import { Cube } from '../Cube';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Cube, type CubeMoveProgress } from '../Cube';
 import { RequestView } from './RequestView';
+import { actionSchedule, actionFrame } from '../../lib/article-replay';
+import { ReplayRequest } from './ReplayRequest';
+import { ReplayDecision } from './ReplayDecision';
 export function useInView(delay = 500) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -23,7 +26,7 @@ export function useInView(delay = 500) {
   }, [delay]);
   return { ref, visible };
 }
-type Recording = {
+export type Recording = {
   policy: string;
   scramble: string;
   timeline: { alg: string; ms: number }[];
@@ -32,8 +35,15 @@ type Recording = {
   result: { verifiedSolved: boolean; requests: number; turns: number; cost: number };
   firstRequest: import('../../lib/types').JevRequest;
 };
-export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
+export function ComparisonDemo({
+  recordings,
+  latest = false,
+}: {
+  recordings: Recording[];
+  latest?: boolean;
+}) {
   const { ref, visible } = useInView(500);
+  const [moveProgress, setMoveProgress] = useState<Record<string, CubeMoveProgress>>({});
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
   const [time, setTime] = useState(0);
@@ -47,7 +57,13 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
   }, []);
   const left = recordings.find((r) => r.policy === 'primitive');
   const right = recordings.find((r) => r.policy === 'skills');
-  const finish = right?.timeline.at(-1)?.ms ?? 0;
+  const schedules = useMemo(
+    () => Object.fromEntries(recordings.map((r) => [r.policy, actionSchedule(r.timeline)])),
+    [recordings],
+  );
+  const recordedFinish = right?.timeline.at(-1)?.ms ?? 0;
+  const finish = schedules.skills?.at(-1)?.end ?? 0;
+  const requestTime = Math.min(time, recordedFinish);
   const ended = finish > 0 && time >= finish;
   const playing = visible && !paused && !reduced && !ended && finish > 0;
   useEffect(() => {
@@ -55,7 +71,7 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
     let handle = 0,
       last = performance.now();
     const tick = (now: number) => {
-      clock.current = Math.min(finish, clock.current + (now - last) * 2);
+      clock.current = Math.min(finish, clock.current + Math.max(0, now - last));
       last = now;
       setTime(clock.current);
       if (clock.current < finish) handle = requestAnimationFrame(tick);
@@ -63,21 +79,27 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
     handle = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(handle);
   }, [playing, finish]);
-  if (!left || !right || !right.result.verifiedSolved || !finish) return null;
+  if (
+    !left ||
+    !right ||
+    left.scramble !== right.scramble ||
+    !right.result.verifiedSolved ||
+    !finish
+  )
+    return null;
   return (
     <div ref={ref} className="recorded-demo comparison-demo">
       <div className="demo-top">
         <span className="eyebrow">REAL RECORDINGS · NO API CALLS</span>
-        <span>Same scramble · 2× speed</span>
+        <span>Same scramble · 1× speed{latest ? ' · selected best case' : ''}</span>
       </div>
       <div className="comparison-cubes">
         {[left, right].map((recording, index) => {
-          const completed = recording.timeline.filter((a) => a.ms <= time);
-          const next = recording.timeline[completed.length];
-          const before = completed.at(-1)?.ms ?? 0;
-          const elapsed = Math.min(time, recording.durationMs);
+          const frame = actionFrame(schedules[recording.policy], index ? time : requestTime);
+          const actionIndex = frame.index;
+          const elapsed = Math.min(requestTime, recording.durationMs);
           const spent = recording.costs
-            .filter((c) => c.ms <= time)
+            .filter((c) => c.ms <= requestTime)
             .reduce((sum, c) => sum + c.cost, 0);
           return (
             <section
@@ -86,24 +108,27 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
             >
               <header>
                 <small>{index ? 'FOCUSED QUESTIONS' : 'INDIVIDUAL TURNS'}</small>
-                <h3>{index ? 'Decomposed skills' : 'Primitive policy'}</h3>
+                <h3>
+                  {index ? (latest ? 'Grouped-menu solver' : 'Beginner routines') : 'Single turns'}
+                </h3>
               </header>
               <div className="comparison-stage">
                 <Cube
                   scramble={recording.scramble}
-                  alg={completed.map((a) => a.alg).join(' ')}
+                  alg={frame.alg}
                   speed={1}
                   instant
-                  transition={
-                    next
-                      ? {
-                          key: completed.length,
-                          beforeAlg: completed.map((a) => a.alg).join(' '),
-                          alg: next.alg,
-                          progress: Math.max(0, Math.min(1, (time - before) / (next.ms - before))),
-                        }
-                      : undefined
+                  onMoveProgress={(progress) =>
+                    setMoveProgress((previous) => {
+                      const old = previous[recording.policy];
+                      return old?.key === progress.key &&
+                        old.active === progress.active &&
+                        old.done === progress.done
+                        ? previous
+                        : { ...previous, [recording.policy]: progress };
+                    })
                   }
+                  transition={frame.transition}
                 />
                 {ended && (
                   <div className={`result-stamp ${index ? 'win' : 'fail'}`}>
@@ -116,8 +141,28 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
                   ? index
                     ? 'Solved'
                     : 'Still unsolved when skills finished'
-                  : `Action ${completed.length} / ${recording.timeline.length}`}
+                  : `Completed ${frame.completed} / ${recording.timeline.length} actions`}
               </div>
+              {latest && (
+                <ReplayRequest
+                  policy={index ? 'skills' : 'primitive'}
+                  time={requestTime}
+                />
+              )}
+              {latest && actionIndex >= 0 && (
+                <ReplayDecision
+                  policy={index ? 'skills' : 'primitive'}
+                  index={actionIndex}
+                  final={ended && !!index}
+                  settled={!frame.transition}
+                  moveProgress={moveProgress[recording.policy]}
+                />
+              )}
+              {latest && actionIndex < 0 && (
+                <div className="comparison-decision">
+                  <small>Waiting for JEV’s first move decision</small>
+                </div>
+              )}
               <div
                 className="comparison-metrics"
                 aria-label={`${recording.policy} recorded time and cost`}
@@ -131,7 +176,7 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
                   <span>Full run: {(recording.durationMs / 1000).toFixed(1)}s</span>
                 </div>
                 <div>
-                  <small>SPENT SO FAR</small>
+                  <small>{latest ? 'API COMMITMENT' : 'SPENT SO FAR'}</small>
                   <strong>${spent.toFixed(5)}</strong>
                   <span>Full run: ${recording.result.cost.toFixed(5)}</span>
                 </div>
@@ -143,7 +188,7 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
                   {recording.result.cost.toFixed(4)}.{' '}
                   {index
                     ? 'Solved autonomously.'
-                    : 'The full attempt later stopped at the request limit, still unsolved.'}
+                    : 'The full attempt stopped without solving; all executed turns and requests are included.'}
                 </p>
                 <RequestView request={recording.firstRequest} />
               </details>
@@ -151,6 +196,16 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
           );
         })}
       </div>
+      {latest && (
+        <p className="fine-print" style={{ padding: '0 20px' }}>
+          Selected after evaluation: case 30, the grouped-menu solver’s fewest-turn success (59
+          turns, 128 requests). The single-turn run starts from exactly the same cube. Both have
+          100-turn, 500-request and ten-minute ceilings. They were recorded at different times. The
+          single-turn timeline includes an HTTP interruption and resume gap; its cost includes a
+          $0.002688 uncertain reservation. This is a best-case illustration, not a representative
+          performance comparison.
+        </p>
+      )}
       <div className="demo-transport">
         <button
           onClick={() => {
@@ -162,21 +217,25 @@ export function ComparisonDemo({ recordings }: { recordings: Recording[] }) {
             setReduced(false);
           }}
         >
-          {ended ? 'Replay comparison' : playing ? 'Pause' : 'Play'}
+          {ended ? 'Restart replay' : playing ? 'Pause' : 'Play'}
         </button>
         <span>
-          {(time / 1000).toFixed(1)}s / {(finish / 1000).toFixed(1)}s recorded time
+          {(requestTime / 1000).toFixed(1)}s / {(recordedFinish / 1000).toFixed(1)}s recorded time
         </span>
         <span aria-live="polite">
-          {ended ? 'Skills wins. Both recordings stopped.' : playing ? 'Playing at 2×' : 'Paused'}
+          {ended ? 'Skills wins. Both recordings stopped.' : playing ? 'Playing at 1×' : 'Paused'}
         </span>
       </div>
       <p className="fine-print">
-        Both recordings share one clock at 2× their original speed, starting with the first solving
-        request. Moves animate across the recorded decision intervals. The comparison stops when
-        skills solves the cube; FAIL means the primitive policy is still unsolved at that point.
-        Costs accumulate as recorded responses arrive. Both counters freeze with playback; full-run
-        totals also include the primitive attempt’s remaining time and requests.
+        Both recordings share one clock at 1× their original speed, starting with the first solving
+        request. Each bar follows saved request and response timestamps, including gaps between
+        calls. Timing labels show recorded API latency after completion. Moves start only after
+        their action was recorded; the next round’s requests can run alongside them. Cube animation
+        is a display aid at 300ms per face turn, not measured hand movement.
+        We let the final solve animation finish after freezing both request clocks at the solve’s
+        recorded end. FAIL means the primitive policy was still unsolved at that cutoff. Costs
+        accumulate as recorded responses arrive. Both counters freeze with playback; full-run totals
+        also include the primitive attempt’s remaining time and requests.
       </p>
     </div>
   );

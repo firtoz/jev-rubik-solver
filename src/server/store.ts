@@ -54,7 +54,10 @@ export function spend() {
   return (db.query('SELECT COALESCE(SUM(amount),0) total FROM ledger').get() as any)
     .total as number;
 }
-export const CAP = PROJECT_BUDGET_CAP,
+const configuredCap = Number(process.env.RUBIK_BUDGET_USD ?? PROJECT_BUDGET_CAP);
+if (!Number.isFinite(configuredCap) || configuredCap <= 0)
+  throw new Error('RUBIK_BUDGET_USD must be a positive finite number');
+export const CAP = configuredCap,
   PRICE = 0.042 / 1e6;
 export function reserve(id: string, runId: string, amount: number) {
   db.transaction(() => {

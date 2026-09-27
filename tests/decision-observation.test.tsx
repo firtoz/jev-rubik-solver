@@ -1,7 +1,7 @@
 import { expect, test } from 'bun:test';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { DecisionObservation } from '../src/components/DecisionObservation';
-import recording from '../public/recordings/brain-v3-flow.json';
+import recording from '../tests/fixtures/brain-v3-flow.json';
 
 test('all recorded decision observations render, including whole-cube reference targets',()=>{
   let wholeViews=0;

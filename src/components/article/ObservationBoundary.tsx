@@ -1,5 +1,4 @@
 import preconditions from '../../lib/action-preconditions-summary.json';
-import { PROJECT_BUDGET_CAP } from '../../lib/budget';
 import { Link } from '@tanstack/react-router';
 import study from '../../lib/observation-boundary-summary.json';
 export function ObservationBoundary() {
@@ -269,18 +268,11 @@ export function ObservationBoundary() {
           evaluator. The offline evaluator may inspect candidate outcomes to establish acceptable
           labels, but those outcomes never enter a live request.
         </p>
-        <pre>{`bun test tests/observation-boundary.test.ts
-bun scripts/observation-boundary/export.ts
-# The following commands make paid calls only for an unstarted study:
-bun scripts/observation-boundary/run.ts prepare
-bun scripts/observation-boundary/run.ts development
-bun scripts/observation-boundary/run.ts revision
-bun scripts/observation-boundary/run.ts validation
-bun scripts/observation-boundary/run.ts integration`}</pre>
+        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
         <p>
-          Existing study markers prevent accidental reruns. The shared ledger limits this experiment
+          Existing study markers prevent accidental reruns. The shared ledger limited this experiment
           to 400 requests and $0.05 including outstanding reservations, within the project’s $
-          {PROJECT_BUDGET_CAP}
+          {'5'}
           ceiling. At most four calls run concurrently and failed requests are not retried. Preserve
           the existing results when designing a new study.
         </p>

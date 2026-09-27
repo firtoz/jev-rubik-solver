@@ -1,5 +1,5 @@
 import {expect,test} from 'bun:test';
-import recording from '../public/recordings/brain-v3-flow.json';
+import recording from '../tests/fixtures/brain-v3-flow.json';
 import {roundSummary,transitionSummary} from '../src/lib/round-summary';
 test('round summaries describe recorded outcomes and distinguish rewind from execution',()=>{
  for(const round of recording.steps){const summary=roundSummary(round);expect(summary.title.length).toBeGreaterThan(0);expect(summary.outcome).not.toContain('Cube updated');}
@@ -9,7 +9,7 @@ test('round summaries describe recorded outcomes and distinguish rewind from exe
  expect(transitionSummary(recording.steps,0,5).title).toBe('Advance 5 rounds');
 });
 
-import fresh from '../public/recordings/brain-v3-fresh-flow.json';
+import fresh from '../tests/fixtures/brain-v3-fresh-flow.json';
 test('captions identify the recorded pattern and measured result',()=>{
  expect(roundSummary(fresh.steps[28])).toMatchObject({title:'Right middle-layer insertion',context:'Green matches front; red belongs right.'});
  expect(roundSummary(fresh.steps[37])).toMatchObject({title:'Sune · preparation',outcome:'0 → 1 oriented corners'});

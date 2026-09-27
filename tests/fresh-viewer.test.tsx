@@ -5,7 +5,7 @@ import {cube3x3x3} from 'cubing/puzzles';
 import {Alg} from 'cubing/alg';
 import {DecisionObservation} from '../src/components/DecisionObservation';
 import {roundSummary} from '../src/lib/round-summary';
-const file='public/recordings/brain-v3-fresh-flow.json';
+const file='tests/fixtures/brain-v3-fresh-flow.json';
 test.skipIf(!existsSync(file))('fresh solve renders every observation and replays forward and backward',async()=>{
  const r=JSON.parse(readFileSync(file,'utf8'));
  const puzzle=await cube3x3x3.kpuzzle();

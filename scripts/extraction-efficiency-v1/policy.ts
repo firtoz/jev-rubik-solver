@@ -1,7 +1,0 @@
-import catalog from '../../experiments/extraction-efficiency-v1/catalog.json';
-import type {JevRequest} from '../../src/lib/types';
-export const routines=catalog.rows;
-export type Variant='structured'|'sentences';
-export function request(cornerPosition:string,edgePosition:string,extract:'corner'|'edge',variant:Variant):JevRequest{
- return {model:'jev-1.13.0',state:variant==='structured'?{cornerPosition,edgePosition,extract}:{observation:`The target corner is at ${cornerPosition}. The target edge is at ${edgePosition}. Free the ${extract} from its current slot.`},questions:{extraction:{type:'choice',instructions:'Free the selected piece into the upper layer while keeping its partner available (upper or its own home slot DRF/FR). Choose a routine that opens the selected piece CURRENT slot. Reject a routine whose incoming upper-piece position contains the target partner, because it would trap that partner. All listed routines preserve the cross and other three lower slots. The descriptions are fixed effects, not predictions for this cube. If both directions are safe, either is acceptable.',criteria:{...Object.fromEntries(routines.map(r=>[r.id,`Opens corner ${r.cornerSlot} and edge ${r.edgeSlot}; lifts them to ${r.cornerLands} and ${r.edgeLands}. Sends the corner currently at ${r.trapsCornerFrom} down into ${r.cornerSlot}, and the edge currently at ${r.trapsEdgeFrom} into ${r.edgeSlot}. Execute ${r.alg}.`])),reconsider:'No routine opens the selected slot without trapping the partner.'}}}};
-}

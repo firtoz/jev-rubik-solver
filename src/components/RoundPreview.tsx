@@ -1,19 +1,12 @@
 import { FlowText } from './FlowArrow';
-import { transitionSummary } from '../lib/round-summary';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { TwistyPlayer, ExperimentalMillisecondTimestamp } from 'cubing/twisty';
 
-type Props={setup:string;moves:string[];round:number;finalLabel?:string;summaries:Parameters<typeof transitionSummary>[0]};
+type Props={onMove?:(index:number)=>void;onSettled?:(round:number)=>void;children?:ReactNode;setup:string;moves:string[];round:number;finalLabel?:string};
 /** Plays recorded transitions only. The displayed state is the start of a round. */
-export function RoundPreview({setup,moves,round,summaries,finalLabel='Solved'}:Props) {
+export function RoundPreview({setup,moves,round,children,onMove,onSettled,finalLabel='Solved'}:Props) {
+  const callbacks=useRef({onMove,onSettled});callbacks.current={onMove,onSettled};
   const host=useRef<HTMLDivElement>(null),wanted=useRef(round),kick=useRef(()=>{});
-  const [moveDisplay,setMoveDisplay]=useState<{moves:string[];done:number;active:number}>({moves:[],done:0,active:-1});
-  const moveStrip=useRef<HTMLDivElement>(null);
-  useEffect(()=>{
-    const strip=moveStrip.current,active=strip?.querySelector<HTMLElement>('[aria-current="step"]');
-    if(strip&&active)strip.scrollTop=active.offsetTop-strip.clientHeight/2+active.clientHeight/2;
-  },[moveDisplay.active]);
-  const [summary,setSummary]=useState<ReturnType<typeof transitionSummary>|null>(null);
   const [status,setStatus]=useState(round===moves.length?finalLabel:`Round ${round+1}`);
   wanted.current=round;
   useEffect(()=>{
@@ -57,9 +50,7 @@ export function RoundPreview({setup,moves,round,summaries,finalLabel='Solved'}:P
               ? Math.max(650,range.end*300/shortestMove)
               : 650;
             const duration=reduced?0:jump===1?singleRoundDuration:650;
-            setSummary(transitionSummary(summaries,from,target));
-            setMoveDisplay({moves:timeline.map(move=>move.label),done:0,active:-1});
-            setStatus(`${from===moves.length?finalLabel:`Round ${from+1}`} → ${target===moves.length?finalLabel:target+1}${jump>1?' · accelerated':''}`);
+
             await new Promise<void>(resolve=>{
               finish=resolve;let start:number|undefined;
               const frame=(now:number)=>{
@@ -67,22 +58,21 @@ export function RoundPreview({setup,moves,round,summaries,finalLabel='Solved'}:P
                 start??=now;const progress=duration?Math.min(1,(now-start)/duration):1;
                 const timestamp=range.end*progress;
                 p!.timestamp=timestamp as ExperimentalMillisecondTimestamp;
-                const done=progress===1?timeline.length:timeline.filter(move=>move.end<=timestamp).length;
-                const active=progress===1?-1:timeline.findIndex(move=>move.start<=timestamp&&timestamp<move.end);
-                setMoveDisplay(previous=>previous.done===done&&previous.active===active?previous:{...previous,done,active});
+                callbacks.current.onMove?.(progress===1?timeline.length:timeline.findIndex(move=>move.start<=timestamp&&timestamp<move.end));
                 if(progress<1)raf=requestAnimationFrame(frame);else{finish=undefined;resolve();}
               };raf=requestAnimationFrame(frame);
             });
             settled=target;
+            callbacks.current.onSettled?.(target);
           }
           if(!disposed)setStatus(settled===moves.length?finalLabel:`Round ${settled+1}`);
-        } catch {if(!disposed){setStatus('Preview unavailable');setSummary(null);}}
+        } catch {if(!disposed){setStatus('Preview unavailable');}}
         finally {busy=false;}
       };
       kick.current=()=>{void run();};kick.current();
     }).catch(()=>{if(!disposed)setStatus('Preview unavailable');});
     return()=>{disposed=true;kick.current=()=>{};cancelAnimationFrame(raf);finish?.();p?.pause();p?.remove();};
-  },[setup,moves,summaries,finalLabel]);
+  },[setup,moves,finalLabel]);
   useEffect(()=>{kick.current();},[round]);
-  return <aside className="round-preview" aria-label="Current round cube"><div className="round-preview-heading"><strong>Recorded cube</strong><small>Drag to rotate</small></div><div className="round-preview-cube" ref={host}/><div className="round-preview-status" role="status"><FlowText text={status}/></div>{moveDisplay.moves.length>0&&<div className="preview-move-panel"><div className="preview-move-legend"><span>Completed</span><span>Playing</span><span>Upcoming</span></div><div className="preview-move-strip" ref={moveStrip} aria-label="Moves in this transition">{moveDisplay.moves.map((move,i)=><span key={i} className={i<moveDisplay.done?'move-done':i===moveDisplay.active?'move-active':'move-pending'} aria-current={i===moveDisplay.active?'step':undefined} aria-label={`${move}: ${i<moveDisplay.done?'completed':i===moveDisplay.active?'playing':'upcoming'}`}>{move}</span>)}</div></div>}{summary&&<div className="preview-round-summary"><strong>{summary.title}</strong><p><FlowText text={summary.context}/></p>{'frame' in summary&&<small className="preview-summary-frame">{summary.frame}</small>}{summary.outcome&&<span><FlowText text={summary.outcome}/></span>}</div>}</aside>;
+  return <aside className="round-preview" aria-label="Current round cube"><div className="round-preview-heading"><strong>Recorded cube</strong><small>Drag to rotate</small></div><div className="round-preview-cube" ref={host}/><div className="round-preview-status" role="status"><FlowText text={status==='Preview unavailable'?status:round===moves.length?finalLabel:`Round ${round+1}`}/></div>{children}</aside>;
 }

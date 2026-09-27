@@ -1,23 +1,6 @@
-import { goalRequest } from './goal-policy';
-import { measuredSkillDecision as skillDecision } from './measured-policy';
-import {
-  apply,
-  solved,
-  parseScramble,
-  stageProgress,
-  pieces,
-  facts,
-  hash,
-  isSolved,
-  inverse,
-  turns,
-  turnDescription,
-  targetNames,
-  focusedObservation,
-  semanticFacts,
-} from '../lib/cube';
-import { SKILL_VERSION } from '../lib/skills';
-import { VERSION, LIMITS, type Run, type Policy, type JevRequest } from '../lib/types';
+import { apply, solved, parseScramble, facts, isSolved, focusedObservation } from '../lib/cube';
+import { decideRound, remember, type Round } from '../solver';
+import { VERSION, LIMITS, type Run, type Policy } from '../lib/types';
 import {
   db,
   event,
@@ -31,7 +14,7 @@ import {
   assertOwner,
   recover,
 } from './store';
-import { evaluate, MODEL } from './jev';
+import { evaluate } from './jev';
 const globals = globalThis as typeof globalThis & {
   rubikActive?: Map<string, AbortController>;
   rubikRecovered?: boolean;
@@ -52,6 +35,10 @@ export async function createRun(
   split = 'interactive',
   benchmarkId: string | null = null,
 ) {
+  if (policy !== 'skills')
+    throw new Error(
+      'Only the grouped-menu solver is available. Older recordings remain replayable.',
+    );
   scramble = parseScramble(scramble);
   const state = await apply(await solved(), scramble);
   const r: Run = {
@@ -62,7 +49,7 @@ export async function createRun(
     state,
     status: isSolved(state) ? 'solved' : 'ready',
     revision: 0,
-    stage: isSolved(state) ? 'solved' : 'choose-goal',
+    stage: isSolved(state) ? 'solved' : '',
     target: null,
     history: [],
     requests: 0,
@@ -71,7 +58,7 @@ export async function createRun(
     tokens: 0,
     cost: 0,
     reason: null,
-    version: VERSION + '/' + SKILL_VERSION,
+    version: VERSION,
     split,
     benchmarkId,
   };
@@ -82,17 +69,13 @@ export async function createRun(
 export function observation(r: Run, state = r.state) {
   return focusedObservation(r, state);
 }
-function localView(view: ReturnType<typeof observation>) {
-  const { otherPieces, ...local } = semanticFacts(view);
-  return local;
-}
 const terminal = (r: Run) => ['solved', 'stopped', 'capped', 'error'].includes(r.status);
 export async function step(id: string, revision: number, command: string) {
   const initial = getRun(id);
   if (initial.split === 'article-manual')
-    throw new Error('Use the How it works page to advance this manual session.');
+    throw new Error('Retired manual sessions cannot execute.');
   if (terminal(initial)) throw new Error('Run is finished');
-  if (initial.version !== VERSION + '/' + SKILL_VERSION)
+  if (initial.version !== VERSION)
     throw new Error('This run uses an older policy version. Replay it or create a new run.');
   const owner = lock(id, revision, command);
   const control = new AbortController();
@@ -130,135 +113,26 @@ export async function step(id: string, revision: number, command: string) {
       saveRun(r);
       return r;
     }
-    const choose = async (
-      name: string,
-      instructions: unknown,
-      criteria: Record<string, string>,
-      state: unknown = observation(r),
-    ) => {
-      check();
-      const req: JevRequest = {
-        model: MODEL,
-        state,
-        questions: { [name]: { type: 'choice', instructions, criteria } },
-      };
-      const d = await evaluate(id, req, control.signal);
-      return d.response.answers[name].choice;
-    };
-    // JEV owns goal selection. Always offer the same complete goal menu;
-    // factual completion predicates never dispatch the next goal in code.
-    const previousGoal = r.stage === 'choose-goal' ? null : r.stage;
-    const goalInput = goalRequest(MODEL, r.state, previousGoal, r.history);
-    const selectedGoal = await choose(
-      'goal',
-      goalInput.questions.goal.instructions,
-      goalInput.questions.goal.criteria,
-      goalInput.state,
-    );
-    check();
-    r = getRun(id); // Preserve usage counters written by evaluate.
-    if (selectedGoal !== r.stage) r.target = null;
-    r.stage = selectedGoal;
-    saveRun(r);
-    event(id, 'goal', { previousGoal, selectedGoal, owner: 'jev' });
-    let alg = '',
-      recovery = false,
-      retarget = false,
-      target = r.target,
-      front = 'F',
-      setup = 'none',
-      skill = '',
-      recognisedCase = '';
-    const previous = events(id).filter((e) => e.kind === 'action');
-    const experience = previous
-      .filter((e) => hash(e.payload.before) === hash(r.state))
-      .slice(-3)
+    const rounds: Round[] = events(id)
+      .filter((e) => e.kind === 'action')
       .map((e) => ({
-        action: e.payload.alg,
-        target: e.payload.target,
-        factsBefore: e.payload.factsBefore,
-        factsAfter: e.payload.factsAfter,
+        before: e.payload.before,
+        after: e.payload.after,
+        action: e.payload.decision,
+        recovery: e.payload.decision?.recovery,
       }));
-    const repeated = previous.filter((e) => hash(e.payload.after) === hash(r.state)).length >= 2;
-    const recent = previous.slice(-6);
-    const stalled =
-      recent.length === 6 &&
-      recent.every((e) => e.payload.stageBefore === r.stage) &&
-      stageProgress(r.state, r.stage) <= stageProgress(recent[0].payload.before, r.stage);
-    const lastRecovery = events(id)
-      .filter((e) => e.kind === 'recovery')
-      .at(-1);
-    const recoveryReady =
-      !lastRecovery || previous.filter((e) => e.id > lastRecovery.id).length >= 4;
-    if ((repeated || stalled) && r.history.length && recoveryReady) {
-      const response = await choose(
-        'recovery',
-        'The solve has repeated a state or stayed in this stage for six actions. Choose recovery deliberately. Temporary regression can be necessary. Do not repeatedly undo an undo: that only repeats the same two states. If previous recovery did not help, retarget or continue with a different action.',
-        {
-          continue:
-            'Continue from this position, choosing a different operation or reference if needed',
-          undo: 'Undo exactly the last executed action',
-          retarget: 'Choose a different target piece or reconsider the layer pattern',
-        },
-        {
-          ...observation(r),
-          lastRecovery:
-            events(id)
-              .filter((e) => e.kind === 'recovery')
-              .at(-1)?.payload || null,
-          lastActionWasUndo: previous.at(-1)?.payload.recovery || false,
-        },
-      );
-      event(id, 'recovery', { choice: response, repeated, stalled });
-      if (response === 'undo') {
-        alg = inverse(r.history.at(-1)!);
-        recovery = true;
-      }
-      if (response === 'retarget') {
-        target = null;
-        retarget = true;
-      }
-    }
-    if (!alg) {
-      if (r.policy === 'skills') {
-        const decision = await skillDecision(
-          r,
-          MODEL,
-          async (request) => {
-            check();
-            return (await evaluate(id, request, control.signal, { maxAttempts: 1 })).response;
-          },
-          experience,
-          retarget ? r.target : null,
-        );
-        ({ target, front, skill, alg } = decision);
-        recognisedCase = decision.intent;
-      } else {
-        const targets = pieces(r.state).filter((p) => targetNames(r.stage).includes(p.piece));
-        const criteria = Object.fromEntries(
-          targets.map((p) => [
-            p.piece,
-            `${p.kind} ${p.piece}, currently at ${p.position}, destination ${p.destination}; ${(r.stage === 'daisy' ? p.stickers.yellow === 'U' : p.solved) ? 'current stage goal satisfied; protect it' : 'current stage goal NOT satisfied'}`,
-          ]),
-        );
-        if (r.stage.startsWith('top-')) criteria.whole = 'Work on the layer pattern as a whole';
-        target = await choose(
-          'target',
-          'Choose a piece whose current stage goal is NOT satisfied. For the daisy, select a yellow edge that is not a yellow-up petal, even if it is solved on D. For later stages protect solved pieces.',
-          criteria,
-          localView(observation(r)),
-        );
-        r = { ...r, target };
-        if (r.policy === 'primitive') {
-          alg = await choose(
-            'turn',
-            'Choose one face turn that moves the target toward its requiredStickerDirections and destination while protecting solved pieces. Read the static direction mappings in the options. If one turn solves the entire cube, choose it. Quarter turns are clockwise looking directly at that face; prime is counterclockwise.',
-            Object.fromEntries(turns.map((t) => [t, turnDescription(t)])),
-          );
-          skill = alg;
-        }
-      }
-    }
+    const decision = await decideRound(
+      r,
+      async (request) => {
+        check();
+        return (await evaluate(id, request, control.signal)).response;
+      },
+      { rounds, pendingPlan: rounds.length ? remember(rounds.at(-1)!.action) : null },
+    );
+    const { alg, target, front, skill, intent: recognisedCase } = decision;
+    if (!alg) throw new Error('Policy abstained: no executable routine selected');
+    const recovery = decision.recovery === 'undo';
+    const setup = 'none';
 
     check();
     r = getRun(id);
@@ -273,8 +147,8 @@ export async function step(id: string, revision: number, command: string) {
       const before = r.state,
         stageBefore = r.stage;
       r.state = after;
-      // Keep the model's selected goal until its next goal decision.
-      if (isSolved(after)) r.stage = 'solved';
+      r.stage = isSolved(after) ? 'solved' : decision.goal;
+      event(id, 'goal', { previousGoal: stageBefore, selectedGoal: decision.goal, owner: 'jev' });
       r.target = target;
       r.history.push(alg);
       r.turns += count;
@@ -282,6 +156,8 @@ export async function step(id: string, revision: number, command: string) {
       r.reason = null;
       if (isSolved(after)) r.status = 'solved';
       event(id, 'action', {
+        decision,
+        nextPendingPlan: remember(decision),
         before,
         after,
         alg,
@@ -327,7 +203,7 @@ export async function step(id: string, revision: number, command: string) {
 }
 export function controlRun(id: string, action: 'start' | 'pause' | 'stop') {
   if (action === 'start' && getRun(id).split === 'article-manual')
-    throw new Error('Use the How it works page to advance this manual session.');
+    throw new Error('Retired manual sessions cannot execute.');
   const r = getRun(id);
   if (terminal(r)) throw new Error('Run is finished');
   if (action === 'start') {

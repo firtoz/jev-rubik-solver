@@ -25,7 +25,7 @@ test('complete native response fields survive validation, and credentials never 
     providerMetadata: { trace: 'example' },
   };
   globalThis.fetch = (async () => Response.json(raw)) as unknown as typeof fetch;
-  const r = await runner.createRun('R', 'primitive');
+  const r = await runner.createRun('R', 'skills');
   const request: any = {
     model: jev.MODEL,
     state: { fact: 'test' },
@@ -64,10 +64,10 @@ function fake(chooser: (q: string, criteria: Record<string, string>) => string) 
     });
   }) as unknown as typeof fetch;
 }
-test('live protocol executes selected turn; duplicates and stale steps reject', async () => {
+test('live protocol executes selected routine; duplicates and stale steps reject', async () => {
   const spentBefore = store.spend();
-  fake((q, c) => (q === 'turn' ? "R'" : Object.keys(c)[0]));
-  const r = await runner.createRun('R', 'primitive');
+  fake((q, c) => ({ goal: 'pll', group: 'corners-3', routine: "AUF:U'" })[q] || Object.keys(c)[0]);
+  const r = await runner.createRun('U', 'skills');
   const command = crypto.randomUUID();
   const result = await runner.step(r.id, 0, command);
   expect(result.status).toBe('solved');
@@ -76,7 +76,7 @@ test('live protocol executes selected turn; duplicates and stale steps reject', 
   expect(store.events(r.id).filter((e) => e.kind === 'decision')).toHaveLength(3);
   expect(store.spend() - spentBefore).toBeCloseTo(0.0000126, 8);
   await expect(runner.step(r.id, 0, command)).rejects.toThrow();
-  const other = await runner.createRun('R', 'primitive');
+  const other = await runner.createRun('R', 'skills');
   expect(() => store.lock(other.id, 5, crypto.randomUUID())).toThrow('Stale');
 });
 test('leases reject concurrent work and events cannot be overwritten', async () => {
@@ -90,7 +90,7 @@ test('leases reject concurrent work and events cannot be overwritten', async () 
 });
 test('malformed response does not change cube; reservation remains', async () => {
   globalThis.fetch = (async () => Response.json({ bad: true })) as unknown as typeof fetch;
-  const r = await runner.createRun('R', 'primitive');
+  const r = await runner.createRun('R', 'skills');
   const before = store.spend();
   const after = await runner.step(r.id, 0, crypto.randomUUID());
   expect(after.status).toBe('error');
@@ -122,7 +122,7 @@ test('pause cancels pending request and prevents an action', async () => {
       began();
       init.signal.addEventListener('abort', () => reject(new Error('aborted')));
     })) as unknown as typeof fetch;
-  const r = await runner.createRun('R', 'primitive');
+  const r = await runner.createRun('R', 'skills');
   const task = runner.step(r.id, 0, crypto.randomUUID());
   await started;
   runner.controlRun(r.id, 'pause');
@@ -145,7 +145,7 @@ test('request cap, recovery after restart and budget cap are durable', async () 
   store.reserve(reservationId, s.id, store.CAP - 0.1 - store.spend());
   expect(() => store.reserve(crypto.randomUUID(), s.id, 0.11)).toThrow('budget');
   store.settle(reservationId, 0);
-  expect(store.CAP).toBe(9);
+  expect(store.CAP).toBe((await import('../src/lib/budget')).PROJECT_BUDGET_CAP);
   const fullReservation = crypto.randomUUID();
   store.reserve(fullReservation, s.id, store.CAP - store.spend());
   expect(() => store.reserve(crypto.randomUUID(), s.id, 64000 * store.PRICE)).toThrow('budget');
@@ -164,7 +164,7 @@ test('rate limits retry with separate reservations and network failures retain t
     calls++;
     return new Response('{}', { status: 429 });
   }) as unknown as typeof fetch;
-  const r = await runner.createRun('R', 'primitive');
+  const r = await runner.createRun('R', 'skills');
   const before = store.spend();
   const done = await runner.step(r.id, 0, crypto.randomUUID());
   expect(calls).toBe(3);
@@ -174,19 +174,19 @@ test('rate limits retry with separate reservations and network failures retain t
   globalThis.fetch = (async () => {
     throw new Error('offline');
   }) as unknown as typeof fetch;
-  const next = await runner.createRun('R', 'primitive');
+  const next = await runner.createRun('R', 'skills');
   const failed = await runner.step(next.id, 0, crypto.randomUUID());
   expect(failed.status).toBe('error');
   expect(failed.history).toHaveLength(0);
 }, 10000);
 test('a paused run can resume from its recorded state without lost moves', async () => {
-  fake((q, c) => (q === 'turn' ? "R'" : Object.keys(c)[0]));
-  const r = await runner.createRun('R', 'primitive');
+  fake((q, c) => ({ goal: 'pll', group: 'corners-3', routine: "AUF:U'" })[q] || Object.keys(c)[0]);
+  const r = await runner.createRun('U', 'skills');
   runner.controlRun(r.id, 'pause');
   const paused = store.getRun(r.id);
   const finished = await runner.step(r.id, paused.revision, crypto.randomUUID());
   expect(finished.status).toBe('solved');
-  expect(finished.history).toEqual(["R'"]);
+  expect(finished.history).toEqual(["U'"]);
 });
 test('concurrent processes reserve against one shared budget without snapshot-lock failures', async () => {
   const before = store.spend();
@@ -214,7 +214,7 @@ test('bounded probes disable automatic retries and retain uncertain reservations
     calls++;
     return new Response('{}', { status: 429 });
   }) as unknown as typeof fetch;
-  const r = await runner.createRun('R', 'primitive');
+  const r = await runner.createRun('R', 'skills');
   const before = store.spend();
   await expect(
     jev.evaluate(
@@ -233,99 +233,89 @@ test('bounded probes disable automatic retries and retain uncertain reservations
   expect(store.spend() - before).toBeCloseTo(64000 * store.PRICE, 8);
 });
 
-test('runner obeys a model-selected goal even when the old curriculum would disagree', async () => {
-  fake((q, c) => (q === 'goal' ? 'middle-layer' : q === 'turn' ? 'U' : Object.keys(c)[0]));
-  const r = await runner.createRun('R', 'primitive');
-  expect(r.stage).toBe('choose-goal');
-  const after = await runner.step(r.id, 0, crypto.randomUUID());
-  expect(after.stage).toBe('middle-layer');
-  const recorded = store.events(r.id);
-  expect(recorded.find((e) => e.kind === 'goal')?.payload.selectedGoal).toBe('middle-layer');
-  expect(recorded.find((e) => e.kind === 'action')?.payload.stageBefore).toBe('middle-layer');
-  expect(recorded.find((e) => e.kind === 'action')?.payload.stageAfter).toBe('middle-layer');
-  expect(after.history).toEqual(['U']);
+test('retired policies and versions cannot dispatch live requests', async () => {
+  await expect(runner.createRun('R', 'primitive')).rejects.toThrow('Only the grouped-menu');
+  const r = await runner.createRun('R', 'skills');
+  r.version = 'rubik-v26';
+  store.saveRun(r);
+  await expect(runner.step(r.id, 0, crypto.randomUUID())).rejects.toThrow('older policy');
 });
 
-const { createSession, viewSession, advanceSession } = await import('../src/server/tutorial');
 const { hash } = await import('../src/lib/cube');
-test('article pauses at real dependencies, preserves responses and applies only on command', async () => {
-  let calls = 0;
+
+const boundedRequest = {
+  model: 'jev-1.13.0',
+  state: { measurement: 1 },
+  questions: { q: { type: 'choice' as const, instructions: 'Choose', criteria: { a: 'A' } } },
+};
+test('529 retries identical body once, counts both calls and retains uncertain cost', async () => {
+  const bodies: string[] = [];
   globalThis.fetch = (async (_url: any, init: any) => {
-    calls++;
-    const request = JSON.parse(init.body);
-    const chosen: Record<string, string> = {
-      goal: 'top-edges',
-      target: 'whole',
-      intent_whole: 'align',
-      reference: 'F',
-      operation: "U'",
-    };
-    return Response.json({
-      model: 'jev-1.13.0',
-      answers: Object.fromEntries(
-        Object.entries(request.questions).map(([id, q]: any) => [
-          id,
-          {
-            type: 'choice',
-            choice: chosen[id],
-            confidence: 0.9,
-            probabilities: Object.fromEntries(
-              Object.keys(q.criteria).map((k) => [k, k === chosen[id] ? 1 : 0]),
-            ),
-          },
-        ]),
-      ),
-      usage: { input_tokens: 50, output_tokens: 10 },
-      extra: { kept: true },
-    });
-  }) as typeof fetch;
-  let s = await createSession('U');
-  await expect(runner.step(s.id,0,crypto.randomUUID())).rejects.toThrow('How it works');
-  expect(()=>runner.controlRun(s.id,'start')).toThrow('How it works');
-  const initial = hash(s.run.state);
-  expect(calls).toBe(0);
-  expect(Object.keys(s.request!.questions)).toEqual(['goal']);
-  const id = s.id;
-  let firstCommand = '';
-  for (let i = 0; i < 4; i++) {
-    const command = crypto.randomUUID();
-    if (i === 0) firstCommand = command;
-    s = await advanceSession(id, s.revision, command, 'ask');
-    expect(hash(s.run.state)).toBe(initial);
-  }
-  expect(calls).toBe(4);
-  expect(s.action?.alg).toBe("U'");
-  expect((s.answers[0].nativeResponse as any).extra.kept).toBe(true);
-  const restored = await viewSession(id);
-  expect(restored.answers).toEqual(s.answers);
-  expect(calls).toBe(4);
-  await expect(advanceSession(id, 0, crypto.randomUUID(), 'ask')).rejects.toThrow('Stale');
-  await expect(advanceSession(id, s.revision, firstCommand, 'apply')).rejects.toThrow('Duplicate');
-  s = await advanceSession(id, s.revision, crypto.randomUUID(), 'apply');
-  expect(s.solved).toBe(true);
-  expect(s.archive).toHaveLength(1);
-  expect(calls).toBe(4);
+    bodies.push(init.body);
+    return bodies.length === 1
+      ? new Response('{}', { status: 529 })
+      : Response.json({
+          model: 'jev-1.13.0',
+          answers: { q: { type: 'choice', choice: 'a', confidence: 1, probabilities: { a: 1 } } },
+          usage: { input_tokens: 10, output_tokens: 1 },
+        });
+  }) as unknown as typeof fetch;
+  const run = await runner.createRun('R', 'skills');
+  await jev.evaluate(run.id, boundedRequest, AbortSignal.timeout(5000), { maxAttempts: 2 });
+  expect(bodies).toHaveLength(2);
+  expect(bodies[0]).toBe(bodies[1]);
+  expect(store.getRun(run.id).requests).toBe(2);
+  const ledger = store.db
+    .query('SELECT status,amount FROM ledger WHERE run_id=?')
+    .all(run.id) as any[];
+  expect(ledger.find((r) => r.status === 'reserved').amount).toBe(64000 * store.PRICE);
+  expect(ledger.find((r) => r.status === 'settled').amount).toBe(10 * store.PRICE);
+  expect(store.events(run.id).filter((e) => e.kind === 'request-error')).toHaveLength(1);
 });
-test('solved and malformed configurations never dispatch', async () => {
-  const s = await createSession('');
-  expect(s.solved).toBe(true);
-  expect(s.request).toBeNull();
-  await expect(advanceSession(s.id, 0, crypto.randomUUID(), 'ask')).rejects.toThrow('No pending');
-  await expect(createSession('not moves')).rejects.toThrow('standard face turns');
+test('second overload ends attempt without a third call', async () => {
+  let calls = 0;
+  globalThis.fetch = (async () => {
+    calls++;
+    return new Response('{}', { status: 529 });
+  }) as unknown as typeof fetch;
+  const run = await runner.createRun('R', 'skills');
+  await expect(
+    jev.evaluate(run.id, boundedRequest, AbortSignal.timeout(5000), { maxAttempts: 2 }),
+  ).rejects.toThrow('529');
+  expect(calls).toBe(2);
 });
 
-const boundedRequest={model:'jev-1.13.0',state:{measurement:1},questions:{q:{type:'choice' as const,instructions:'Choose',criteria:{a:'A'}}}};
-test('529 retries identical body once, counts both calls and retains uncertain cost',async()=>{
- const bodies:string[]=[];
- globalThis.fetch=(async(_url:any,init:any)=>{bodies.push(init.body);return bodies.length===1?new Response('{}',{status:529}):Response.json({model:'jev-1.13.0',answers:{q:{type:'choice',choice:'a',confidence:1,probabilities:{a:1}}},usage:{input_tokens:10,output_tokens:1}});}) as unknown as typeof fetch;
- const run=await runner.createRun('R','skills');await jev.evaluate(run.id,boundedRequest,AbortSignal.timeout(5000),{maxAttempts:2});
- expect(bodies).toHaveLength(2);expect(bodies[0]).toBe(bodies[1]);expect(store.getRun(run.id).requests).toBe(2);
- const ledger=store.db.query('SELECT status,amount FROM ledger WHERE run_id=?').all(run.id) as any[];
- expect(ledger.find(r=>r.status==='reserved').amount).toBe(64000*store.PRICE);
- expect(ledger.find(r=>r.status==='settled').amount).toBe(10*store.PRICE);
- expect(store.events(run.id).filter(e=>e.kind==='request-error')).toHaveLength(1);
+test('autonomous runner matches every featured request and preserves preparation memory', async () => {
+  const recording = await Bun.file('public/recordings/article-best-flow.json').json();
+  const exchanges = recording.steps.flatMap((step: any) => step.exchanges);
+  let cursor = 0;
+  globalThis.fetch = (async (_url: any, init: any) => {
+    const exchange = exchanges[cursor++];
+    expect(JSON.parse(init.body)).toEqual(exchange.request);
+    return Response.json(exchange.nativeResponse);
+  }) as typeof fetch;
+  let run = await runner.createRun(recording.previewSetup, 'skills');
+  for (const step of recording.steps) {
+    run = await runner.step(run.id, run.revision, crypto.randomUUID());
+    expect(run.reason).toBeNull();
+    expect(hash(run.state)).toBe(hash(step.after));
+    expect(run.history.at(-1)).toBe(step.alg);
+    // Context for the next call is read back from persisted events.
+    run = store.getRun(run.id);
+  }
+  expect(run.status).toBe('solved');
+  expect(run.turns).toBe(59);
+  expect(cursor).toBe(128);
+  expect(store.events(run.id).filter((e) => e.kind === 'action')).toHaveLength(21);
 });
-test('second overload ends attempt without a third call',async()=>{
- let calls=0;globalThis.fetch=(async()=>{calls++;return new Response('{}',{status:529});}) as unknown as typeof fetch;
- const run=await runner.createRun('R','skills');await expect(jev.evaluate(run.id,boundedRequest,AbortSignal.timeout(5000),{maxAttempts:2})).rejects.toThrow('529');expect(calls).toBe(2);
+
+test('a selected routine cannot cross the 100-turn cap', async () => {
+  fake((q, c) => ({ goal: 'pll', group: 'corners-3', routine: "AUF:U'" })[q] || Object.keys(c)[0]);
+  const run = await runner.createRun('U', 'skills');
+  run.turns = 100;
+  store.saveRun(run);
+  const result = await runner.step(run.id, run.revision, crypto.randomUUID());
+  expect(result.status).toBe('capped');
+  expect(result.requests).toBe(0);
+  expect(hash(result.state)).toBe(hash(run.state));
 });

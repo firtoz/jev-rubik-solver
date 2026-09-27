@@ -1,0 +1,342 @@
+{
+  "partial": false,
+  "planned": 100,
+  "verified": 100,
+  "started": 100,
+  "solved": 98,
+  "capped": 0,
+  "abstained": 2,
+  "transportUnresolved": 0,
+  "errors": 0,
+  "budgetStopped": 0,
+  "notStarted": 0,
+  "achieved": true,
+  "successfulRequests": {
+    "min": 93,
+    "median": 138,
+    "max": 183
+  },
+  "successfulTurns": {
+    "values": [
+      59,
+      63,
+      64,
+      65,
+      66,
+      67,
+      67,
+      67,
+      68,
+      68,
+      69,
+      69,
+      70,
+      71,
+      71,
+      71,
+      71,
+      72,
+      72,
+      72,
+      73,
+      73,
+      74,
+      74,
+      75,
+      75,
+      75,
+      75,
+      75,
+      76,
+      76,
+      76,
+      76,
+      76,
+      76,
+      76,
+      76,
+      76,
+      77,
+      77,
+      77,
+      78,
+      78,
+      78,
+      79,
+      79,
+      79,
+      79,
+      79,
+      79,
+      79,
+      80,
+      80,
+      80,
+      81,
+      81,
+      81,
+      81,
+      81,
+      81,
+      81,
+      81,
+      81,
+      81,
+      82,
+      82,
+      82,
+      82,
+      82,
+      82,
+      83,
+      83,
+      83,
+      83,
+      84,
+      84,
+      84,
+      84,
+      84,
+      85,
+      85,
+      85,
+      85,
+      85,
+      86,
+      86,
+      86,
+      87,
+      87,
+      87,
+      87,
+      88,
+      88,
+      90,
+      91,
+      92,
+      93,
+      94
+    ],
+    "min": 59,
+    "median": 79,
+    "max": 94
+  },
+  "successfulSeconds": {
+    "min": 57.861,
+    "median": 125.03,
+    "max": 346.54
+  },
+  "requestFamilies": {
+    "goal": {
+      "requests": 2335,
+      "inputTokens": 1680773,
+      "seconds": 1172.4445152110022,
+      "cost": 0.07059246600000031
+    },
+    "gatherTarget + transferTarget": {
+      "requests": 1239,
+      "inputTokens": 1106912,
+      "seconds": 641.8233367460105,
+      "cost": 0.0464903039999993
+    },
+    "reference + situation": {
+      "requests": 1239,
+      "inputTokens": 726054,
+      "seconds": 632.8924223309963,
+      "cost": 0.03049426800000025
+    },
+    "routine": {
+      "requests": 1022,
+      "inputTokens": 1507059,
+      "seconds": 532.351622329988,
+      "cost": 0.06329647800000034
+    },
+    "readiness": {
+      "requests": 619,
+      "inputTokens": 258766,
+      "seconds": 319.15989277699714,
+      "cost": 0.01086817200000008
+    },
+    "decision": {
+      "requests": 807,
+      "inputTokens": 468541,
+      "seconds": 420.69387974400206,
+      "cost": 0.019678722000000103
+    },
+    "freeSlot": {
+      "requests": 186,
+      "inputTokens": 74524,
+      "seconds": 96.33101626699943,
+      "cost": 0.0031300079999999975
+    },
+    "setup": {
+      "requests": 431,
+      "inputTokens": 181736,
+      "seconds": 217.40056183799842,
+      "cost": 0.007632912000000009
+    },
+    "plan": {
+      "requests": 186,
+      "inputTokens": 101011,
+      "seconds": 94.40917600999438,
+      "cost": 0.004242462000000015
+    },
+    "target": {
+      "requests": 790,
+      "inputTokens": 896271,
+      "seconds": 416.107158158002,
+      "cost": 0.037643381999999934
+    },
+    "front": {
+      "requests": 790,
+      "inputTokens": 424064,
+      "seconds": 418.55245665600046,
+      "cost": 0.01781068799999993
+    },
+    "preparation": {
+      "requests": 2637,
+      "inputTokens": 1075550,
+      "seconds": 1403.7877725059961,
+      "cost": 0.04517309999999901
+    },
+    "turn": {
+      "requests": 293,
+      "inputTokens": 164226,
+      "seconds": 150.07222446600227,
+      "cost": 0.006897492000000031
+    },
+    "group": {
+      "requests": 491,
+      "inputTokens": 342580,
+      "seconds": 263.0790996239986,
+      "cost": 0.014388360000000154
+    },
+    "intent_whole + target": {
+      "requests": 113,
+      "inputTokens": 131916,
+      "seconds": 60.20593970099725,
+      "cost": 0.005540472000000001
+    },
+    "reference": {
+      "requests": 113,
+      "inputTokens": 269866,
+      "seconds": 61.72654696499639,
+      "cost": 0.011334372000000014
+    },
+    "operation": {
+      "requests": 113,
+      "inputTokens": 163968,
+      "seconds": 57.613016813003014,
+      "cost": 0.006886655999999996
+    },
+    "slot": {
+      "requests": 104,
+      "inputTokens": 39258,
+      "seconds": 55.99489231400116,
+      "cost": 0.0016488359999999981
+    },
+    "extraction": {
+      "requests": 104,
+      "inputTokens": 46232,
+      "seconds": 54.11995099999809,
+      "cost": 0.0019417440000000015
+    },
+    "destination": {
+      "requests": 2,
+      "inputTokens": 1012,
+      "seconds": 1.729723629000131,
+      "cost": 0.000042504000000000005
+    },
+    "recovery": {
+      "requests": 1,
+      "inputTokens": 448,
+      "seconds": 0.3355430709999055,
+      "cost": 0.000018816000000000004
+    }
+  },
+  "requestLatencyMs": {
+    "median": 437.2732359999791,
+    "p95": 1006.9475050000474
+  },
+  "inputTokens": 9660767,
+  "successfulExchanges": 13615,
+  "recoveryActions": 0,
+  "stageTotals": {
+    "daisy": 647,
+    "cross": 619,
+    "f2l": 3591,
+    "top-cross": 678,
+    "top-orientation": 779,
+    "pll": 1392
+  },
+  "usage": {
+    "requests": 13616,
+    "cost": 0.4084402140000001
+  },
+  "projectCommitment": 9.386859090000002,
+  "goalCommitment": 0.5995206840000016,
+  "remainingAuthorisedCommitment": 0.7858483619999976,
+  "estimatedProviderBalance": 0.8858483619999984,
+  "providerBalanceLiveVerified": false,
+  "ledger": [
+    {
+      "status": "reserved",
+      "attempts": 104,
+      "dollars": 0.279552
+    },
+    {
+      "status": "settled",
+      "attempts": 167989,
+      "dollars": 9.10730709
+    }
+  ],
+  "nonSuccesses": [
+    {
+      "id": "final-38",
+      "variant": "candidate",
+      "status": "abstained",
+      "turns": 2,
+      "requests": 20,
+      "cost": 0.0006898920000000001,
+      "elapsedMs": 16819,
+      "stages": {
+        "daisy": 2
+      },
+      "finalFacts": {
+        "daisy": 1,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 0
+      }
+    },
+    {
+      "id": "final-84",
+      "variant": "candidate",
+      "status": "abstained",
+      "turns": 10,
+      "requests": 58,
+      "cost": 0.0017067960000000002,
+      "elapsedMs": 77279,
+      "stages": {
+        "daisy": 4,
+        "cross": 6
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 4
+      }
+    }
+  ]
+}

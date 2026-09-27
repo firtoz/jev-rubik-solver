@@ -1,4 +1,5 @@
-import { PROJECT_BUDGET_CAP } from '../lib/budget';
+import recordings from '../lib/article-matched-recordings.json';
+import { BestRecording } from '../components/article/BestRecording';
 import { ObservationBoundary } from '../components/article/ObservationBoundary';
 import { DaisyTransition } from '../components/article/DaisyTransition';
 import { ProgressIntegration } from '../components/article/ProgressIntegration';
@@ -6,109 +7,36 @@ import { ProgressGoalExperiment } from '../components/article/ProgressGoalExperi
 import { FirstLayerExperiment } from '../components/article/FirstLayerExperiment';
 import { ReasoningExperiments } from '../components/article/ReasoningExperiments';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { useEffect, useState, useRef } from 'react';
-import { Cube } from '../components/Cube';
-import { RequestView, ExchangeList } from '../components/article/RequestView';
-import { ComparisonDemo, LayerStory } from '../components/article/ScrollDemo';
+import { useEffect } from 'react';
+import { ComparisonDemo, type Recording } from '../components/article/ScrollDemo';
+import {
+  FinalApproach,
+  FinalResults,
+  FinalAppendix,
+  ReaderOrientation,
+} from '../components/article/FinalFindings';
 import { TestingStory } from '../components/article/TestingStory';
-import { articleCreate, articleRead, articleAdvance, articleEvidence } from '../server/api';
-import { parseScramble } from '../lib/cube';
 export const Route = createFileRoute('/how-it-works')({
   component: Article,
   head: () => ({ meta: [{ title: 'Teaching JEV to solve a cube | An interactive field guide' }] }),
 });
-const layers = [
-  [
-    '01',
-    'Choose a goal',
-    'Six faces, completion facts, recent moves and the fixed beginner reference.',
-    'A goal such as cross or middle-layer.',
-    'The goal determines which observations and static vocabulary the next question receives.',
-  ],
-  [
-    '02',
-    'Choose a target',
-    'Pieces relevant to that goal, including completed pieces, and the previous target.',
-    'A piece identity, or whole for a top-layer pattern.',
-    'Only the selected piece supplies the next focused observation.',
-  ],
-  [
-    '03',
-    'Name the intention',
-    'Position, sticker directions and factual progress for the chosen piece.',
-    'Extract, align, insert or another goal-specific intention.',
-    'Cross first asks phase, then alignment if needed. Middle-layer intention is a separate request. Some other goals batch target and intentions.',
-  ],
-  [
-    '04',
-    'Choose a reference',
-    'Four coordinate views or a compact current-slot observation, plus a fixed frame rule.',
-    'F, R, B or L as the reference front.',
-    'The next request receives the chosen local view. Only the coordinate names change at this point. The cube stays in place.',
-  ],
-  [
-    '05',
-    'Choose an operation',
-    'Local target facts, selected intention and the static skill descriptions.',
-    'One setup turn or beginner algorithm.',
-    'Daisy branches through lift, preparation and, if required, clearance. The exact path depends on JEV’s earlier answers.',
-  ],
-  [
-    '06',
-    'Apply and observe',
-    'The selected algorithm and reference orientation.',
-    'A new cube state, factual changes and a solved check.',
-    'Code executes the move with cubing.js. The next round begins with JEV choosing a goal again.',
-  ],
-];
 function Article() {
-  const [evidence, setEvidence] = useState<any[]>([]);
-  const [configuration, setConfiguration] = useState("R U R' U'"),
-    [session, setSession] = useState<any>(null),
-    [busy, setBusy] = useState(false),
-    [error, setError] = useState('');
-  const [turning, setTurning] = useState(false);
-  const turnTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  useEffect(() => () => clearTimeout(turnTimer.current), []);
+  const evidence = recordings.recordings as unknown as Recording[];
   useEffect(() => {
-    articleEvidence()
-      .then((x) => setEvidence(JSON.parse(x)))
-      .catch((e) => setError(String(e)));
-    const id = localStorage.getItem('rubik-article');
-    if (id)
-      articleRead({ data: { id } })
-        .then((x) => {
-          const saved = JSON.parse(x);
-          setSession(saved);
-          setConfiguration(saved.run.scramble);
-        })
-        .catch(() => localStorage.removeItem('rubik-article'));
+    const reveal = () => {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (!target) return;
+      let node: HTMLElement | null = target;
+      while (node) {
+        if (node instanceof HTMLDetailsElement) node.open = true;
+        node = node.parentElement;
+      }
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    };
+    reveal();
+    window.addEventListener('hashchange', reveal);
+    return () => window.removeEventListener('hashchange', reveal);
   }, []);
-  async function perform(fn: () => Promise<string>) {
-    setBusy(true);
-    setError('');
-    try {
-      const s = JSON.parse(await fn());
-      setSession(s);
-
-      localStorage.setItem('rubik-article', s.id);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setBusy(false);
-    }
-  }
-  let previewConfiguration = '';
-  try {
-    previewConfiguration = parseScramble(configuration);
-  } catch {}
-  const request = session?.request;
-  function edit(value: string) {
-    setConfiguration(value);
-    setSession(null);
-
-    localStorage.removeItem('rubik-article');
-  }
   return (
     <main className="field-guide">
       <header>
@@ -116,17 +44,16 @@ function Article() {
           J<span>▧</span>V <b>/</b> CUBE LAB
         </Link>
         <nav>
-          <Link to="/">Open the lab ↗</Link>
-          <a href="#playground">Try the layers ↓</a>
+          <a href="#reproduce">Try it locally</a>
+          <Link to="/request-flow">Inspect the requests</Link>
         </nav>
       </header>
       <article>
         <section className="article-hero">
           <div className="eyebrow">FIELD NOTES / 001 · INTERACTIVE RESEARCH</div>
           <h1>
-            How to teach JEV
-            <br />
-            to solve a <em>complex problem.</em>
+            Teaching JEV to solve
+            <br />a <em>Rubik’s cube.</em>
           </h1>
           <div className="hero-bottom">
             <div className="hero-cube-slot" aria-hidden="true">
@@ -160,19 +87,20 @@ function Article() {
               </div>
             </div>
             <p>
-              We wanted to see whether JEV could solve a Rubik’s cube using a fixed beginner reference and reliable observations. This
-              article follows the experiments that got it working, and lets you try the same
-              requests on a cube of your own.
+              Can a model choose and apply a cuber’s familiar routines reliably? We used JEV, a
+              hosted model that answers structured decision questions, to find out. It solved 98 of
+              100 fresh cubes within 100 face turns. Here is what we kept, what it cost and what
+              this taught us about designing a sequence of model decisions.
             </p>
           </div>
           <div className="article-stats">
             <div>
-              <strong>100 / 100</strong>
-              <span>unseen cubes solved by the frozen brain v3 policy</span>
+              <strong>98 / 100</strong>
+              <span>fresh cubes solved within 100 face turns</span>
             </div>
             <div>
-              <strong>$1.015</strong>
-              <span>committed for the brain v3 final evaluation</span>
+              <strong>$0.408</strong>
+              <span>estimated API cost + reservations for 100 attempts</span>
             </div>
             <div>
               <strong>JEV 1.13.0</strong>
@@ -184,14 +112,11 @@ function Article() {
           <aside className="article-toc">
             <span>THE EXPERIMENT</span>
             {[
-              ['start', '01 / Choosing individual turns'],
-              ['decompose', '02 / A smaller decision'],
-              ['measure', '03 / Testing the parts'],
-              ['reasoning', 'Follow-up / Fewer supplied rules'],
-              ['recognition', 'Experiment / Recognizing progress'],
-              ['playground', '04 / Inside the pipeline'],
-              ['reproduce', '05 / Make it reproducible'],
-              ['beyond', '06 / Beyond the cube'],
+              ['start', '01 / Why routines helped'],
+              ['decompose', '02 / The final approach'],
+              ['measure', '03 / Results and tradeoffs'],
+              ['beyond', '04 / Applying the method'],
+              ['appendix', 'Appendix / Details and evidence'],
             ].map(([id, title]) => (
               <a key={id} href={'#' + id}>
                 {title}
@@ -201,7 +126,8 @@ function Article() {
           <div className="article-body">
             <section id="start">
               <div className="eyebrow">01 / CHOOSING INDIVIDUAL TURNS</div>
-              <h2>Asking JEV for the next move</h2>
+              <h2>From a turn choice to a solving method</h2>
+              <ReaderOrientation />
               <p>
                 We started by giving JEV the cube state and asking which move to make. That question
                 left a lot for the model to work out. It had to decide which part of the cube to
@@ -209,408 +135,50 @@ function Article() {
                 it had already solved.
               </p>
               <p>
-                We later tested a policy that chose individual face turns, with separate questions
-                to help it choose a goal and a target. On three full scrambles, it used all 500
-                requests allowed per attempt without solving any of them. Below, a fresh matched
-                recording compares both policies on another shared scramble.
+                Our single-turn solver chose among the 18 standard face turns (six faces, each
+                clockwise, counterclockwise or a half turn), with separate questions to help it
+                choose a goal and a target. On three full scrambles, it used all 500 requests
+                allowed per attempt without solving any of them. The recording below starts both
+                policies from the same cube: case 30 of our latest evaluation, selected because the
+                grouped-menu solver completed it in the fewest turns. We reused that saved solve and
+                recorded a new single-turn attempt. The next section explains the routine-based
+                method.
               </p>
-              {evidence.length > 0 && <ComparisonDemo recordings={evidence} />}
+              {recordings.caseId === 'final-30' ? (
+                <ComparisonDemo recordings={evidence} latest />
+              ) : (
+                <BestRecording />
+              )}
               <div className="article-note">
-                <b>Why not use a cube solver?</b>
+                <b>What the cube is teaching us</b>
                 <p>
-                  An ordinary cube solver would be a much easier way to solve the puzzle. We chose
-                  the cube because we could check every move and see exactly where JEV struggled. We
-                  gave it a reference of beginner algorithms and asked it to choose when and how to
-                  use them. The code executes those choices without consulting a solver.
+                  The cube gives us a well-understood problem with a result we can verify. Our aim
+                  is to learn how to break its solving method into decisions small enough for JEV
+                  to handle, then connect those decisions into a working process. Solving speed is
+                  secondary to understanding which parts of that process need more help.
+                </p>
+                <p>
+                  The same approach could be useful for a support assistant investigating a delayed
+                  order. It might first determine whether the delay happened before dispatch or in
+                  transit, then use that answer to choose which records to check and what action to
+                  suggest. Each decision can be tested on its own before testing the whole workflow,
+                  just as we do here. That would need its own evaluation; the cube is a worked
+                  example of the method.
                 </p>
               </div>
             </section>
             <section id="decompose">
-              <div className="eyebrow">02 / A SMALLER DECISION</div>
-              <h2>Breaking the task into smaller questions</h2>
-              <p>
-                Breaking the question into smaller decisions helped. For example, an edge trapped in
-                the middle layer needs to be extracted from its current slot. JEV sometimes chose a
-                reference frame based on where that edge belonged instead. A focused question about
-                its current slot, with an explicit frame-mapping rule, passed all 20 fresh
-                validation cases. We then used that answer to construct the operation question.
-              </p>
-              <div className="layer-stories">
-                {layers.map((layer, index) => (
-                  <LayerStory key={layer[0]} layer={layer} index={index} />
-                ))}
-              </div>
-              <p>
-                The number of requests depends on JEV’s answers. Some choices can share a call,
-                while others need the previous answer before their input can be built. Code handles
-                that routing and the coordinate conversions. JEV chooses the goal and moves. In
-                autonomous runs, repeated states or stalled progress trigger another question asking
-                whether to continue, undo the previous action or change target.
-              </p>
+              <div className="eyebrow">02 / THE APPROACH WE KEPT</div>
+              <h2>Give JEV the decisions a player would make</h2>
+              <FinalApproach />
             </section>
             <section id="measure">
-              <div className="eyebrow">03 / TESTING THE PARTS</div>
-              <h2>How we tested the questions</h2>
-              <TestingStory />
-              <div className="evidence-grid">
-                <div>
-                  <strong>20 / 20</strong>
-                  <h3>Middle extraction</h3>
-                  <p>
-                    Fresh validation for the reference question and the operation question, each
-                    tested in isolation.
-                  </p>
-                </div>
-                <div>
-                  <strong>26 / 26</strong>
-                  <h3>Corner orientation</h3>
-                  <p>
-                    All non-solved orientation patterns in the compact fixture domain. Earlier
-                    layers were supplied.
-                  </p>
-                </div>
-                <div>
-                  <strong>99 / 100</strong>
-                  <h3>The earlier v26 system</h3>
-                  <p>
-                    Fresh full random-state scrambles, frozen v26 policy. One HTTP 503 remains
-                    counted as failure.
-                  </p>
-                </div>
-              </div>
-              <p>
-                The component results cover specific kinds of decisions. Five narrowly scoped
-                components passed their suites, and several other request families still need
-                broader isolated testing. The full-cube test measures whether the whole process
-                eventually solves the cube, including any mistakes it recovers from. JEV also
-                returns a confidence value for each answer, but we have not calibrated that value
-                against solve success.
-              </p>
-              <p>
-                An earlier final test produced six failures in 36 attempts, leaving 30 successful
-                solves. At that point it could no longer reach the 95/100 target. We kept those
-                results, used the failures to improve the questions and generated a fresh set for
-                the next final test.
-              </p>
-              <p>
-                That v26 test cost $1.28 for 30.48 million input tokens across 16,896
-                requests. That made the extra questions affordable for this experiment. Waiting for
-                them was more noticeable, with a mean active time of 76.46 seconds per attempt. We
-                used the $0.042 per million input-token rate checked on 20 September 2026. Check
-                current pricing before running your own evaluation.
-              </p>
-            </section>
-            <section id="reasoning">
-              <ReasoningExperiments />
-            </section>
-            <section id="recognition">
-              <FirstLayerExperiment />
-              <ProgressGoalExperiment />
-              <ProgressIntegration />
-              <DaisyTransition />
-              <ObservationBoundary />
-              <p><Link to="/request-flow">Explore every request, response and handoff in the recorded pipeline →</Link></p>
-            </section>
-            <section id="playground">
-              <div className="eyebrow">04 / INSIDE THE PIPELINE</div>
-              <h2>Try it with your own cube</h2>
-              <p>This playground and the recorded comparison use the earlier v26 policy. The brain v3 evaluation is documented separately above.</p>
-              <p>
-                Set up a cube with the face-turn buttons or enter a move sequence. You can drag the
-                preview to look around it. The directions used in requests stay fixed, with white on
-                U, yellow on D and green on F, regardless of the camera angle.
-              </p>
-              <div className="playground">
-                <div className="playground-cube">
-                  <div className="cube-control-stage">
-                    <Cube
-                      scramble=""
-                      alg={
-                        session
-                          ? [session.run.scramble, ...session.run.history].join(' ')
-                          : previewConfiguration
-                      }
-                      speed={2}
-                      hideControls
-                    />
-                    {(['U', 'L', 'F', 'R', 'B', 'D'] as const).map((face) => (
-                      <div key={face} className={'face-control face-' + face}>
-                        <span>
-                          {
-                            { U: 'Top', L: 'Left', F: 'Front', R: 'Right', B: 'Back', D: 'Bottom' }[
-                              face
-                            ]
-                          }{' '}
-                          <b>{face}</b>
-                        </span>
-                        <div>
-                          {[
-                            ['', '↻', 'clockwise'],
-                            ["'", '↺', 'counterclockwise'],
-                            ['2', '½', 'half turn'],
-                          ].map(([suffix, icon, direction]) => (
-                            <button
-                              key={suffix}
-                              disabled={busy || turning}
-                              aria-label={face + ' ' + direction}
-                              title={face + suffix + ' · viewed directly at this face'}
-                              onClick={() => {
-                                setTurning(true);
-                                clearTimeout(turnTimer.current);
-                                turnTimer.current = setTimeout(() => setTurning(false), 650);
-                                edit(
-                                  [
-                                    session
-                                      ? session.run.scramble + ' ' + session.run.history.join(' ')
-                                      : configuration,
-                                    face + suffix,
-                                  ]
-                                    .filter(Boolean)
-                                    .join(' '),
-                                );
-                              }}
-                            >
-                              {icon}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="fine-print">
-                    Arrows turn the named face clockwise or counterclockwise as viewed directly at
-                    that face. Controls stay in the fixed cube frame when you orbit the camera. ½
-                    makes a half turn.
-                  </p>
-                  <div className="small-controls">
-                    <button disabled={busy} onClick={() => edit('')}>
-                      Reset solved
-                    </button>
-                    <button
-                      disabled={busy}
-                      onClick={() =>
-                        edit(
-                          (session
-                            ? session.run.scramble + ' ' + session.run.history.join(' ')
-                            : configuration
-                          )
-                            .trim()
-                            .split(/\s+/)
-                            .slice(0, -1)
-                            .join(' '),
-                        )
-                      }
-                    >
-                      Remove last setup turn
-                    </button>
-                    <button disabled={busy} onClick={() => edit('U')}>
-                      One turn away
-                    </button>
-                    <button disabled={busy} onClick={() => edit("R U R' U' F2 D L2")}>
-                      Mixed setup
-                    </button>
-                  </div>
-                  <label htmlFor="article-config">Setup sequence (up to 100 face turns)</label>
-                  <textarea
-                    id="article-config"
-                    disabled={busy}
-                    value={configuration}
-                    onChange={(e) => edit(e.target.value)}
-                    placeholder="R U R' U'"
-                  />
-                  <button
-                    className="primary"
-                    disabled={busy}
-                    onClick={() =>
-                      perform(() => articleCreate({ data: { scramble: configuration } }))
-                    }
-                  >
-                    Prepare these inputs · free
-                  </button>
-                </div>
-                <div className="playground-console">
-                  <span className="eyebrow">LIVE POLICY WORKBENCH</span>
-                  <h3>
-                    {session?.solved
-                      ? 'Solved!'
-                      : request
-                        ? Object.keys(request.questions).join(' + ')
-                        : session?.action
-                          ? 'Ready to apply'
-                          : 'Start with a configuration'}
-                  </h3>
-                  <p>
-                    {session?.solved
-                      ? 'Every piece now matches its fixed center. No further requests are needed. Your complete round history is preserved below.'
-                      : session?.action
-                        ? 'The model has finished this round. Inspect its selected operation, then apply it when you are ready.'
-                        : session
-                          ? 'The exact next request is below. Each click sends only that request. The model’s outputs appear in the handoff history below.'
-                          : 'Preparing creates a saved manual session and constructs the first request. It does not call JEV.'}
-                  </p>
-                  {session && (
-                    <>
-                      <div className="console-stats">
-                        <span>{session.run.requests} requests</span>
-                        <span>${session.run.cost.toFixed(5)} this session</span>
-                        <span>${session.budget.usage.toFixed(4)} / ${session.budget.cap} project</span>
-                      </div>
-                      <div className="small-controls">
-                        <button
-                          className="primary"
-                          disabled={busy || !request || !session.budget.configured}
-                          onClick={() =>
-                            perform(() =>
-                              articleAdvance({
-                                data: {
-                                  id: session.id,
-                                  revision: session.revision,
-                                  command: crypto.randomUUID(),
-                                  action: 'ask',
-                                },
-                              }),
-                            )
-                          }
-                        >
-                          {busy ? 'Working…' : 'Run this layer · paid'}
-                        </button>
-                        <button
-                          disabled={busy || !session.action}
-                          onClick={() =>
-                            perform(() =>
-                              articleAdvance({
-                                data: {
-                                  id: session.id,
-                                  revision: session.revision,
-                                  command: crypto.randomUUID(),
-                                  action: 'apply',
-                                },
-                              }),
-                            )
-                          }
-                        >
-                          Apply chosen move · free
-                        </button>
-                      </div>
-                      {session.action && (
-                        <div className="chosen-move">
-                          <small>JEV’S SELECTED OPERATION</small>
-                          <h3>{session.action.skill}</h3>
-                          <code>{session.action.alg}</code>
-                          <p>
-                            Target {session.action.target} · reference {session.action.front}. Apply
-                            it to observe the next state and begin another round.
-                          </p>
-                        </div>
-                      )}
-                      {session.error && (
-                        <p role="alert" className="article-error">
-                          {session.error}. No replacement move has been chosen by code. Edit the
-                          configuration to start a new investigation.
-                        </p>
-                      )}
-                      {request && <RequestView request={request} />}
-                      <p className="fine-print">
-                        Your manual move applications are recorded separately from autonomous
-                        benchmarks. One request per click, no automatic retries. The existing
-                        project-wide ${PROJECT_BUDGET_CAP} cap still applies. This workbench exposes goal and skill
-                        layers. Autonomous recovery is available in the main lab.
-                      </p>
-                    </>
-                  )}
-                  {error && (
-                    <p role="alert" className="article-error">
-                      {error}
-                    </p>
-                  )}
-                </div>
-              </div>
-              {session?.answers.length > 0 && (
-                <div className="round-history">
-                  <h3>This round’s decisions</h3>
-                  <p>Open a step to inspect its answer and the exact request that led to it.</p>
-                  <ExchangeList answers={session.answers} />
-                </div>
-              )}
-              {session?.archive.length > 0 && (
-                <div className="round-history">
-                  <h3>Applied rounds</h3>
-                  {session.archive.map((answers: any[], i: number) => (
-                    <details key={i}>
-                      <summary>
-                        Round {i + 1}
-                        <span>{answers.length} requests · applied</span>
-                      </summary>
-                      <ExchangeList answers={answers} />
-                    </details>
-                  ))}
-                </div>
-              )}
-            </section>
-            <section id="reproduce">
-              <div className="eyebrow">05 / MAKE IT REPRODUCIBLE</div>
-              <h2>Reproducing the experiment</h2>
-              <ol className="recipe">
-                <li>
-                  <b>Run the local project.</b>
-                  <p>
-                    The app uses Bun with TanStack Start, SQLite and cubing.js. Install the
-                    dependencies and set TYPESAFE_API_KEY on the server before starting it. Keep
-                    that key out of browser environment variables.
-                  </p>
-                  <pre>
-                    bun install{'\n'}bun run dev{'\n'}bun test{'\n'}bun run typecheck
-                  </pre>
-                </li>
-                <li>
-                  <b>Measure one question.</b>
-                  <p>
-                    The fixture generators and request-eval scripts let you test individual
-                    questions. Keep separate development and validation sets, and save the exchanges
-                    with their expected answers and source versions. The suite details and known
-                    gaps are documented in docs/request-coverage.md.
-                  </p>
-                </li>
-                <li>
-                  <b>Integrate, then freeze.</b>
-                  <p>
-                    Once small integration runs are working, freeze the prompts and skill
-                    descriptions along with the code. Generate 100 new random-state scrambles for
-                    the final test. JEV should receive the resulting cube states, with no access to
-                    the scramble sequences or the evaluator’s expected answers.
-                  </p>
-                  <pre>
-                    bun run lab generate final-test 100{'\n'}bun scripts/evaluate.ts begin
-                    .data/final-test.json{'\n'}bun scripts/evaluate.ts batch BENCHMARK_ID
-                  </pre>
-                </li>
-                <li>
-                  <b>Count every assigned attempt.</b>
-                  <p>
-                    Stop each attempt at 500 requests, 1,000 face turns or ten minutes, whichever
-                    comes first. Keep failed and capped attempts in the results. Verify successes by
-                    replaying the recorded moves. If you use failures to make changes, the next
-                    evaluation needs a fresh test set.
-                  </p>
-                  <pre>bun scripts/audit-evaluation.ts</pre>
-                </li>
-              </ol>
-              <p>
-                Replays use saved records and cost nothing. The evaluation commands call JEV and
-                charge against the project budget. You can find the procedure and results in README,
-                docs/results.md, docs/request-coverage.md and experiments/. Keep the local .data
-                directory too, since it contains the full request/response history and frozen source
-                snapshots.
-              </p>
-              <div className="source-links">
-                <a href="https://docs.typesafe.ai/api">JEV API ↗</a>
-                <a href="https://docs.typesafe.ai/models">Model pricing ↗</a>
-                <a href="https://docs.typesafe.ai/confidence">Confidence semantics ↗</a>
-                <a href="https://www.rubiks.com/solution-guides">Beginner reference ↗</a>
-              </div>
+              <div className="eyebrow">03 / WHAT THE EVIDENCE SUPPORTS</div>
+              <h2>98 solves, with some tradeoffs</h2>
+              <FinalResults />
             </section>
             <section id="beyond">
-              <div className="eyebrow">06 / BEYOND THE CUBE</div>
+              <div className="eyebrow">04 / BEYOND THE CUBE</div>
               <h2>Using this approach for other tasks</h2>
               <p>
                 This approach may also help with tasks where a model has to make several related
@@ -658,14 +226,178 @@ function Article() {
                 </div>
               </div>
               <p>
-                JEV had the beginner method written into its instructions throughout this
-                experiment. We were testing how well it could apply that knowledge. The saved
-                requests show where it needed more focused information, and give us a starting point
-                for testing whether some of those questions can now be combined.
+                Start with the observations and routines a skilled person would use, then test which
+                decisions the model can reliably make. Keep deterministic work in code when that is
+                the clearer design. Our cube result supports this experimental method for a
+                well-specified task; it does not establish that the same recipe solves every complex
+                problem.
               </p>
-              <Link className="article-cta" to="/">
-                Explore the complete lab ↗
-              </Link>
+              <a className="article-cta" href="#reproduce">Try the solver locally</a>
+            </section>
+            <section id="appendix" className="article-appendix">
+              <div className="eyebrow">APPENDIX / THE EVIDENCE BEHIND THE STORY</div>
+              <h2>Prompts, experiments and reproduction</h2>
+              <p>
+                These sections provide the experimental record. “Policy” means the complete decision
+                procedure: observations, questions, routines and the code connecting them. Internal
+                version names are record identifiers, not model versions; the JEV model stayed
+                fixed.
+              </p>
+              <div className="article-table-wrap">
+                <table className="article-results-table">
+                  <caption>Which system does each result describe?</caption>
+                  <thead>
+                    <tr>
+                      <th>System</th>
+                      <th>What distinguishes it</th>
+                      <th>Recorded result</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Beginner routines (v26)</th>
+                      <td>
+                        Separate corner and middle-edge steps. Retained here as a historical comparison.
+                      </td>
+                      <td>99/100; 1,000-turn cap</td>
+                    </tr>
+                    <tr>
+                      <th>Observation and memory experiments (brain v3)</th>
+                      <td>
+                        Reliable measured facts and model checks of remembered plans. Covered in
+                        appendix D.
+                      </td>
+                      <td>100/100; 1,000-turn cap</td>
+                    </tr>
+                    <tr>
+                      <th>Full-menu solver</th>
+                      <td>F2L pairs and complete PLL routines, with the full F2L menu.</td>
+                      <td>97/100; 100-turn cap</td>
+                    </tr>
+                    <tr>
+                      <th>Grouped-menu solver</th>
+                      <td>JEV chooses the F2L family first; refined cross preparation.</td>
+                      <td>98/100; 100-turn cap</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Each row has its own evaluation sample. A higher score under a looser move limit is
+                not evidence of a better solver. The older 99/100 report counted one HTTP 503 as a
+                failure; later studies retry transient transport failures and report unresolved ones
+                separately.
+              </p>
+              <details id="appendix-final">
+                <summary>A. Grouped-menu solver: measurements, failures and verification</summary>
+                <FinalAppendix />
+              </details>
+              <details id="appendix-history">
+                <summary>B. Earlier component tests and full-solve results</summary>
+                <div className="appendix-content">
+                  <p>
+                    These tests concern the earlier beginner-routine solver (internal version v26).
+                    It solved corners and middle edges separately and allowed up to 1,000 turns.
+                    These numbers are separate from the final 100-turn evaluation.
+                  </p>
+                  <TestingStory />
+                  <div className="evidence-grid">
+                    <div>
+                      <strong>20 / 20</strong>
+                      <h3>Middle extraction</h3>
+                      <p>
+                        Fresh validation for the reference question and the operation question, each
+                        tested in isolation.
+                      </p>
+                    </div>
+                    <div>
+                      <strong>26 / 26</strong>
+                      <h3>Corner orientation</h3>
+                      <p>
+                        All non-solved orientation patterns in the compact fixture domain. Earlier
+                        layers were supplied.
+                      </p>
+                    </div>
+                    <div>
+                      <strong>99 / 100</strong>
+                      <h3>Beginner-routine solver</h3>
+                      <p>
+                        100 newly generated random-state scrambles, with the beginner-routine method
+                        fixed before testing. One HTTP 503 remains counted as failure.
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    The component results cover specific kinds of decisions. Five narrowly scoped
+                    components passed their suites, and several other request families still need
+                    broader isolated testing. The full-cube test measures whether the whole process
+                    eventually solves the cube, including any mistakes it recovers from. JEV also
+                    returns a confidence value for each answer, but we have not calibrated that
+                    value against solve success.
+                  </p>
+                  <p>
+                    An earlier final test produced six failures in 36 attempts, leaving 30
+                    successful solves. At that point it could no longer reach the 95/100 target. We
+                    kept those results, used the failures to improve the questions and generated a
+                    fresh set for the next final test.
+                  </p>
+                  <p>
+                    That v26 test cost $1.28 for 30.48 million input tokens across 16,896 requests.
+                    That made the extra questions affordable for this experiment. Waiting for them
+                    was more noticeable, with a mean active time of 76.46 seconds per attempt. We
+                    used the $0.042 per million input-token rate checked on 20 September 2026. Check
+                    current pricing before running your own evaluation.
+                  </p>
+                </div>
+              </details>
+              <details id="reasoning">
+                <summary>C. What happened when we removed some teaching</summary>
+                <div className="appendix-content">
+                  <ReasoningExperiments />
+                </div>
+              </details>
+              <details id="recognition">
+                <summary>D. Recognition, observation boundaries and the DOOM comparison</summary>
+                <div className="appendix-content">
+                  <p>
+                    These are chronological research notes. Candidate names, budgets and next steps
+                    below describe their own experiment, not the final policy or a current spending
+                    plan.
+                  </p>
+                  <FirstLayerExperiment />
+                  <ProgressGoalExperiment />
+                  <ProgressIntegration />
+                  <DaisyTransition />
+                  <ObservationBoundary />
+                </div>
+              </details>
+              <details id="reproduce">
+                <summary>E. Run it yourself</summary>
+                <div className="appendix-content">
+                  <h3>Explore the recordings</h3>
+                  <p>The website plays saved recordings and displays their exact requests and responses. It never calls JEV and needs no API key.</p>
+                  <pre>{'bun install --frozen-lockfile\nbun run dev'}</pre>
+                  <p>To check all 100 recorded attempts against the current solver and cube mechanics offline:</p>
+                  <pre>bun run verify:recordings</pre>
+                  <section id="playground">
+                    <h3>Try it with your own cube, locally</h3>
+                    <p>The command-line script uses the same grouped-menu policy as the featured recording. Supply a move sequence starting from a solved cube.</p>
+                    <pre>{`cp .env.example .env
+# Set TYPESAFE_API_KEY and RUBIK_BUDGET_USD in your local .env
+bun run lab status
+bun run lab solve "R U R' U'" --live`}</pre>
+                    <p>Only the last command makes paid requests. The <code>--live</code> flag opts into a real solve. It prints the result, face turns, request count, cost and elapsed time.</p>
+                    <p><code>scripts/lab.ts</code> runs the solver in <code>src/solver/</code>. Exact exchanges and the cumulative cost ledger stay in the local <code>.data/</code> directory. Keep that ledger between runs so previous spending remains counted.</p>
+                    <p>The default ledger ceiling is $1. Each attempt stops at 100 face turns, 500 requests or ten minutes. Set your own budget before running and check current provider pricing. A new solve may fail or hit a limit.</p>
+                    <p>See <code>README.md</code> for setup, <code>docs/architecture.md</code> for the code/model boundary and <code>research/README.md</code> for reproducing the evaluation. New experiments should keep separate results and fresh test cases.</p>
+                  </section>
+                  <div className="source-links">
+                    <a href="https://docs.typesafe.ai/api">JEV API</a>
+                    <a href="https://docs.typesafe.ai/models">Model pricing</a>
+                    <a href="https://docs.typesafe.ai/confidence">Confidence semantics</a>
+                  </div>
+                </div>
+              </details>
             </section>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { algorithmLabel,algorithmLabels } from '../lib/algorithm-labels';
+import { roundSummary } from '../lib/round-summary';
 import { RoundPreview } from './RoundPreview';
 import { FlowArrow } from './FlowArrow';
 import { CubeNet } from './RoundCube';
@@ -11,7 +12,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 type Exchange = { request: any; response: any; nativeResponse: any; elapsedMs: number; cost: number };
 type Cycle = { before: any; after: any; pendingPlan: any; nextPendingPlan: any; decision: any; alg: string; recovery?: string; transportRetries?: any[]; exchanges: Exchange[] };
 type Recording = { previewSetup: string; id: string; status: string; turns: number; elapsedMs: number; source: string; policyDigest: string; steps: Cycle[] };
-const titles: Record<string, string> = { goal: 'Choose the goal', gatherTarget: 'Choose conditional targets', target: 'Choose a target and intention', situation: 'Read the selected piece and choose a frame', reference: 'Choose the reference frame', routine: 'Choose a learned routine', decision: 'Check whether to execute or prepare', freeSlot: 'Choose an empty landing space', setup: 'Choose the setup turn', operation: 'Choose the operation', plan: 'Recheck the remembered plan', recovery: 'Choose recovery', intention: 'Choose the intention' };
+const titles: Record<string, string> = { goal: 'Choose the goal', gatherTarget: 'Choose conditional targets', target: 'Choose a target and intention', situation: 'Read the selected piece and choose a frame', reference: 'Choose the reference frame', front: 'Choose the reference front', group: 'Recognise the pattern family', readiness: 'Check landing space', preparation: 'Choose preparation', turn: 'Choose a turn', slot: 'Choose the extraction slot', extraction: 'Choose extraction', routine: 'Choose a learned routine', decision: 'Check whether to execute or prepare', freeSlot: 'Choose an empty landing space', setup: 'Choose the setup turn', operation: 'Choose the operation', plan: 'Recheck the remembered plan', recovery: 'Choose recovery', intention: 'Choose the intention' };
 
 function Value({ value, depth = 0, expanded = false }: { value: any; depth?: number; expanded?: boolean }) {
   if (value === null || value === undefined) return <span className="wire-muted">{value === null ? 'null' : 'not recorded'}</span>;
@@ -30,11 +31,18 @@ function choices(e: Exchange) { return Object.fromEntries(Object.entries(e.respo
 function wiring(e: Exchange, previous: Exchange[]) {
   const q = e.request.questions;
   const prior = Object.assign({}, ...previous.map(choices));
-  if (q.goal) return 'Code measures completed structures and uncollected edges. JEV compares those facts with the eight fixed goal definitions.';
+  if (q.goal) return 'Code measures completed structures and uncollected edges. JEV compares those facts with the fixed goal definitions in this request.';
   if (q.gatherTarget) return `goal = ${prior.goal} → state.selectedGoal. Both conditional targets are asked independently. Only the answer for the selected goal is used.`;
+  if (q.target && prior.goal === 'f2l') return 'JEV receives measured corner-edge pairs and chooses which pair to work on next.';
   if (q.target) return `goal = ${prior.goal} → state.stage. Code selects the observation vocabulary for that goal. Intention questions are independent of target selection; the chosen target’s intention is used afterward.`;
   if (q.situation) return `target = ${prior.gatherTarget && prior.goal === 'daisy' ? prior.gatherTarget : prior.transferTarget} → code looks up that piece’s currentPosition and yellowDirection. Situation and reference are answered independently from those two fields.`;
   if (q.plan) return 'The current target and reference are JEV choices. Code adds current geometry and the remembered routine’s static requirements. JEV decides whether all requirements still hold.';
+  if (q.group && e.request.state.corners) return 'Code reports the top corners. JEV identifies their permutation family, which selects the next routine menu.';
+  if (q.routine && e.request.state.previousCornerGroup) return 'The recorded corner-group answer selects the routine menu. JEV receives measured top edges and chooses the permutation routine.';
+  if (q.group) return 'Code supplies the selected corner’s measured position and sticker directions. JEV chooses which F2L reference family to inspect next.';
+  if (q.front) return 'JEV chooses the reference front from the selected pair’s home slot. Code then maps the pair observations into that local frame.';
+  if (q.preparation) return 'The next preparation check receives measured positions and the preceding model choices. Code follows those choices without correcting them.';
+  if (q.routine && e.request.state?.corner) return 'JEV’s group answer selects the reference menu. Both pieces’ positions and sticker directions are passed into the routine question unchanged.';
   if (q.routine) return `reference = ${prior.reference} → code translates the selected target and protected slots into that view. The situation label is not copied into this request; JEV receives the actual geometry and fixed routine descriptions.`;
   if (q.decision) return 'The selected target, reference and routine determine which observation is built. Code attaches the routine’s fixed requirements and current slot occupancy. JEV chooses execution or preparation.';
   if (q.freeSlot) return 'JEV requested clearance. Code lists currently empty slots; JEV chooses which empty space to move.';
@@ -117,6 +125,7 @@ function RequestNode({ exchange: e, index, previous, next, cube }: { exchange: E
   const key = Object.keys(e.request.questions)[0];
   const native = e.nativeResponse || e.response;
   return <section className="wire-step" id={`wire-request-${index}`} aria-label={titles[key] || key}>
+    <h2 className="request-section-title"><span>{index+1}</span>{titles[key] || key}</h2>
     {e.request.questions.goal && e.request.state.completed && <ObservationSnapshot state={cube} observation={e.request.state} />}
     {!(e.request.questions.goal && e.request.state.completed) && <section className="wire-preparation">
       <h3>What JEV sees for this decision</h3>
@@ -158,13 +167,67 @@ function RequestNode({ exchange: e, index, previous, next, cube }: { exchange: E
   </section>;
 }
 
-export function VerifiedFlow({recordingUrl='/recordings/brain-v3-flow.json'}:{recordingUrl?:string}) {
+export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json'}:{recordingUrl?:string}) {
   const [recording, setRecording] = useState<Recording | null>(null);
   const previewMoves=useMemo(()=>recording?.steps.map(step=>step.alg)||[],[recording]);
   const [error, setError] = useState('');
   const [cycleIndex, setCycleIndex] = useState(0);
+  const [advancePlayback,setAdvancePlayback]=useState<{from:number;to:number;phase:'fading'|'moves'|'requests'|'decision-out';request:number;move:number}|null>(null);
+  useEffect(()=>{
+    if(advancePlayback?.phase!=='fading')return;
+    const timer=setTimeout(()=>{
+      setCycleIndex(advancePlayback.to);
+      setAdvancePlayback(p=>p?{...p,phase:'moves'}:p);
+    },matchMedia('(prefers-reduced-motion: reduce)').matches?0:220);
+    return()=>clearTimeout(timer);
+  },[advancePlayback?.phase]);
+  useEffect(()=>{
+    if(advancePlayback?.phase!=='decision-out')return;
+    const timer=setTimeout(()=>setAdvancePlayback(null),matchMedia('(prefers-reduced-motion: reduce)').matches?0:200);
+    return()=>clearTimeout(timer);
+  },[advancePlayback?.phase]);
+  const playbackRef=useRef(advancePlayback);playbackRef.current=advancePlayback;
+  useEffect(()=>{
+    if(!advancePlayback||advancePlayback.phase!=='requests'||!recording)return;
+    const exchanges=recording.steps[advancePlayback.to]?.exchanges||[];
+    const index=advancePlayback.request;
+    const timer=setTimeout(()=>{
+      if(index>=exchanges.length){setAdvancePlayback(p=>p?{...p,phase:'decision-out'}:p);setActiveStep('wire-execution');}
+      else setAdvancePlayback(p=>p?{...p,request:index+1}:p);
+    },index<exchanges.length?Math.max(0,exchanges[index].elapsedMs):450);
+    return()=>clearTimeout(timer);
+  },[advancePlayback?.phase,advancePlayback?.request,recording]);
+  useEffect(()=>{
+    if(!advancePlayback)return;
+    const list=document.querySelector<HTMLElement>('.round-preview .round-step-tabs');
+    const selected=list?.querySelector<HTMLElement>('[aria-current="step"]');
+    if(list&&selected){const delta=selected.getBoundingClientRect().top-list.getBoundingClientRect().top;list.scrollTo({top:list.scrollTop+delta-list.clientHeight/2+selected.clientHeight/2,behavior:'smooth'});}
+  },[advancePlayback?.phase,advancePlayback?.request]);
   const [activeStep,setActiveStep]=useState('wire-request-0');
   const navigation=useRef<HTMLDivElement>(null);
+  const scrollAnimation=useRef(0);
+  useEffect(()=>{
+    const cancel=()=>cancelAnimationFrame(scrollAnimation.current);
+    const onKey=(event:KeyboardEvent)=>{if(['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' '].includes(event.key))cancel();};
+    window.addEventListener('wheel',cancel,{passive:true});
+    window.addEventListener('touchstart',cancel,{passive:true});
+    window.addEventListener('keydown',onKey);
+    return()=>{cancel();window.removeEventListener('wheel',cancel);window.removeEventListener('touchstart',cancel);window.removeEventListener('keydown',onKey);};
+  },[cycleIndex]);
+  const scrollToRequest=(target:HTMLElement)=>{
+    cancelAnimationFrame(scrollAnimation.current);
+    const start=window.scrollY;
+    const margin=parseFloat(getComputedStyle(target).scrollMarginTop)||0;
+    const end=Math.max(0,Math.min(document.documentElement.scrollHeight-window.innerHeight,start+target.getBoundingClientRect().top-margin));
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){window.scrollTo({top:end,behavior:'instant'});return;}
+    const distance=end-start,duration=Math.min(1100,600+Math.abs(distance)*.08),began=performance.now();
+    const frame=(now:number)=>{
+      const t=Math.min(1,(now-began)/duration),eased=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+      window.scrollTo({top:start+distance*eased,behavior:'instant'});
+      if(t<1)scrollAnimation.current=requestAnimationFrame(frame);
+    };
+    scrollAnimation.current=requestAnimationFrame(frame);
+  };
   useEffect(()=>{
     if(!recording||!navigation.current)return;
     const bar=navigation.current;
@@ -186,35 +249,61 @@ export function VerifiedFlow({recordingUrl='/recordings/brain-v3-flow.json'}:{re
   },[recording,cycleIndex]);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(recordingUrl, { signal: controller.signal }).then(r => { if (!r.ok) throw new Error('Could not load saved recording'); return r.json(); }).then(setRecording).catch(e => { if(e.name !== 'AbortError') setError(e.message); });
+    fetch(recordingUrl, { signal: controller.signal }).then(r => { if (!r.ok) throw new Error('Could not load saved recording'); return r.json(); }).then(data=>{setRecording(data);setCycleIndex(0);setAdvancePlayback({from:0,to:0,phase:'requests',request:0,move:-1});}).catch(e => { if(e.name !== 'AbortError') setError(e.message); });
     return () => controller.abort();
   }, [recordingUrl]);
   if (!recording) return <main className="board wire-board"><h1>Inside one real solve</h1><p role="status">{error || 'Loading saved requests and responses…'}</p></main>;
   const terminal=cycleIndex===recording.steps.length;
   const finalLabel=recording.status==='solved'?'Solved':'Final state';
   const cycle = recording.steps[Math.min(cycleIndex,recording.steps.length-1)];
+  const displayCycle=advancePlayback?recording.steps[advancePlayback.from]:cycle;
+  const decisionRound=advancePlayback?advancePlayback.from:cycleIndex;
+  const highlightedStep=advancePlayback?(advancePlayback.phase!=='requests'?'wire-execution':!terminal&&advancePlayback.request<cycle.exchanges.length?`wire-request-${advancePlayback.request}`:'wire-execution'):activeStep;
+  const decisionSummary=roundSummary(displayCycle);
   const allChoices = Object.assign({}, ...cycle.exchanges.map(choices));
   return <main className="board wire-board has-round-preview" onClick={event=>{
     const link=(event.target as Element).closest<HTMLAnchorElement>('a[href^="#wire-"]');
     if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
     const id=link.getAttribute('href')!.slice(1),target=document.getElementById(id);
-    if(target){event.preventDefault();history.replaceState(null,'',`#${id}`);target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
+    if(target){event.preventDefault();history.replaceState(null,'',`#${id}`);scrollToRequest(target);}
   }}>
-    <RoundPreview setup={recording.previewSetup} moves={previewMoves} round={cycleIndex} finalLabel={finalLabel} summaries={recording.steps}/>
+    <RoundPreview setup={recording.previewSetup} moves={previewMoves} round={advancePlayback?.phase==='fading'?advancePlayback.to:cycleIndex} finalLabel={finalLabel} onMove={move=>{if(playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')setAdvancePlayback(p=>p&&p.move!==move?{...p,move}:p);}} onSettled={round=>{if((playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')&&playbackRef.current.to===round){setCycleIndex(round);setAdvancePlayback(p=>p?{...p,phase:'requests',request:0}:p);}}}>    <nav className="round-step-tabs" aria-label="Requests in this round" aria-busy={!!advancePlayback} data-exiting={advancePlayback?.phase==='fading'||undefined}>
+      {!terminal&&cycle.exchanges.map((e,i)=>{
+        if(advancePlayback&&(advancePlayback.phase==='moves'||(advancePlayback.phase==='requests'&&i>advancePlayback.request)))return null;
+        const running=advancePlayback?.phase==='requests'&&i===advancePlayback.request;
+        return <a key={`${cycleIndex}-${i}`} className={running?'step-running':undefined} href={`#wire-request-${i}`} aria-current={highlightedStep===`wire-request-${i}`?'step':undefined}>
+          {running&&<i className="step-progress" style={{animationDuration:`${Math.max(0,e.elapsedMs)}ms`}} aria-hidden="true"/>}
+          <span>{i+1}</span><span className="step-label">{titles[Object.keys(e.request.questions)[0]] || 'Request'}</span>
+          {!running&&<time className="step-duration" title="Recorded request duration">{e.elapsedMs>=1000?`${(e.elapsedMs/1000).toFixed(1)}s`:`${Math.round(e.elapsedMs)}ms`}</time>}
+        </a>;
+      })}
+      {(!advancePlayback||advancePlayback.phase==='decision-out'||advancePlayback.phase==='fading'||(advancePlayback.phase==='requests'&&(terminal||advancePlayback.request>=cycle.exchanges.length)))&&<a key={`execute-${cycleIndex}`} href="#wire-execution" aria-current={highlightedStep==='wire-execution'?'step':undefined}>{terminal?finalLabel:'Execute'}</a>}
+    </nav>
+      {(!terminal||advancePlayback)&&!(advancePlayback&&advancePlayback.from===advancePlayback.to)&&<section key={decisionRound} className="preview-decision" data-exiting={advancePlayback?.phase==='decision-out'||undefined} aria-label="This round’s decision">
+        <small>JEV’s decision · round {decisionRound+1}</small>
+        <div className="preview-objective">{decisionSummary.objective}</div>
+        <strong>{decisionSummary.title}</strong>
+        <p>{decisionSummary.context}</p>
+        {decisionSummary.frame&&<small>{decisionSummary.frame}</small>}
+        <div className="preview-decision-moves" aria-label="Chosen fixed-face turns">{displayCycle.alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i} className={advancePlayback?(advancePlayback.phase==='requests'||i<advancePlayback.move?'move-done':i===advancePlayback.move?'move-active':'move-pending'):undefined} aria-current={(advancePlayback?.phase==='moves'||advancePlayback?.phase==='fading')&&i===advancePlayback.move?'step':undefined}>{move}</code>)}</div>
+        {decisionSummary.outcome&&<small>Recorded result: {decisionSummary.outcome}</small>}
+        <button className="preview-advance" disabled={!!advancePlayback} onClick={()=>{setAdvancePlayback({from:cycleIndex,to:cycleIndex+1,phase:'fading',request:0,move:-1});window.scrollTo({top:0,behavior:'smooth'});}}>Advance <FlowArrow/></button>
+      </section>}
+    </RoundPreview>
     <h1>Inside one real solve</h1>
     <div className="flow-overview">{['Observations','Questions','Answers','Execution','Fresh observations'].map((label,i)=><span key={label}>{i>0&&<FlowArrow/>}{label}</span>)}</div><details className="flow-reading-key"><summary>Reading this recording</summary><p>Each round ends with one executed action, which can contain several turns. Colored diagrams explain the recorded inputs; JEV receives the text and values. Bars show option probabilities. Confidence is the provider’s separate statistic, not solve success. Request times and estimated costs come from our app.</p><p>U up · D down · F front · B back · R right · L left. A chosen reference renames the faces without turning the cube.</p></details>
-    <p className="wire-caption">Frozen brain v3 · {recording.id} · {recording.steps.length} actions · {recording.turns} face turns · {(recording.elapsedMs / 1000).toFixed(1)} seconds · {recording.status}. {recordingUrl.includes('fresh')?'Fresh random-state recording for viewer verification.':'This is one of the 100 verified final-test solves.'} Viewing it makes no JEV calls.</p>
+    <p className="wire-caption">Grouped-menu solver · {recording.id} · {recording.steps.length} rounds · {recording.turns} face turns · {(recording.elapsedMs / 1000).toFixed(1)} seconds. The article’s selected fewest-turn solve from the latest 100-case batch. Every request and response below belongs to that same solve. Viewing it makes no JEV calls.</p>
     <div className="flow-sticky-navigation" ref={navigation}>
     <nav className="wire-toolbar round-navigation" aria-label="Decision round navigation">
       <div className="round-control-group">
-        <button className="round-arrow" aria-label="Previous round" title="Previous round" disabled={!cycleIndex} onClick={() => setCycleIndex(i => i - 1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
-        <div className="round-select-wrap"><select aria-label="Decision round" value={cycleIndex} onChange={e => setCycleIndex(Number(e.target.value))}>{recording.steps.map((s,i) => <option key={i} value={i}>Round {i+1} / {recording.steps.length}</option>)}<option value={recording.steps.length}>{finalLabel}</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg></div>
-        <button className="round-arrow" aria-label="Next round" title="Next round" disabled={terminal} onClick={() => setCycleIndex(i => i + 1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+        <button className="round-arrow" aria-label="Previous round" title="Previous round" disabled={!cycleIndex} onClick={() => {setAdvancePlayback(null);setCycleIndex(i => i - 1);}}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+        <div className="round-select-wrap"><select aria-label="Decision round" value={cycleIndex} onChange={e => {setAdvancePlayback(null);setCycleIndex(Number(e.target.value));}}>{recording.steps.map((s,i) => <option key={i} value={i}>Round {i+1} / {recording.steps.length}</option>)}<option value={recording.steps.length}>{finalLabel}</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg></div>
+        <button className="round-arrow" aria-label="Next round" title="Next round" disabled={terminal} onClick={() => {setAdvancePlayback(null);setCycleIndex(i => i + 1);}}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
       </div>
       <span className="round-request-count"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="3" cy="6" r=".7"/><circle cx="3" cy="12" r=".7"/><circle cx="3" cy="18" r=".7"/></svg>{terminal?'Final state':`${cycle.exchanges.length} requests`}</span>
     </nav>
 
-    <nav className="round-step-tabs" aria-label="Requests in this round">{!terminal&&cycle.exchanges.map((e,i)=><a key={i} href={`#wire-request-${i}`} aria-current={activeStep===`wire-request-${i}`?'step':undefined}><span>{i+1}</span>{titles[Object.keys(e.request.questions)[0]] || 'Request'}</a>)}<a href="#wire-execution" aria-current={activeStep==='wire-execution'?'step':undefined}><FlowArrow direction="down"/>{terminal?finalLabel:'Execute'}</a></nav>
+
     </div>
     <div key={cycleIndex}>{!terminal&&cycle.exchanges.map((e,i) => <RequestNode key={i} exchange={e} index={i} previous={cycle.exchanges.slice(0,i)} next={cycle.exchanges[i+1]} cube={cycle.before}/>)}</div>
     <section id="wire-execution" className="wire-execution">

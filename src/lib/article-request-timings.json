@@ -1,0 +1,5491 @@
+{
+  "primitive": [
+    {
+      "round": 0,
+      "startMs": 0,
+      "endMs": 864,
+      "elapsedMs": 861.9564349999999,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 0,
+      "startMs": 911,
+      "endMs": 1236,
+      "elapsedMs": 322.87763100000006,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 0,
+      "startMs": 1285,
+      "endMs": 1552,
+      "elapsedMs": 265.7128989999999,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 1,
+      "startMs": 1610,
+      "endMs": 1988,
+      "elapsedMs": 375.7329669999999,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 1,
+      "startMs": 2043,
+      "endMs": 2991,
+      "elapsedMs": 946.8101120000001,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 1,
+      "startMs": 3038,
+      "endMs": 3429,
+      "elapsedMs": 388.62489400000004,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 2,
+      "startMs": 3490,
+      "endMs": 3870,
+      "elapsedMs": 378.0076250000002,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 2,
+      "startMs": 3922,
+      "endMs": 4309,
+      "elapsedMs": 384.314085,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 2,
+      "startMs": 4360,
+      "endMs": 4591,
+      "elapsedMs": 228.39290699999947,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 3,
+      "startMs": 4646,
+      "endMs": 4970,
+      "elapsedMs": 322.54727100000036,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 3,
+      "startMs": 5025,
+      "endMs": 5288,
+      "elapsedMs": 261.0132729999996,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 3,
+      "startMs": 5331,
+      "endMs": 5641,
+      "elapsedMs": 308.3202309999997,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 3,
+      "startMs": 5686,
+      "endMs": 5932,
+      "elapsedMs": 244.03739700000006,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 4,
+      "startMs": 5981,
+      "endMs": 6367,
+      "elapsedMs": 384.34875999999986,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 4,
+      "startMs": 6413,
+      "endMs": 6730,
+      "elapsedMs": 314.3959589999995,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 4,
+      "startMs": 6776,
+      "endMs": 7003,
+      "elapsedMs": 225.23427999999967,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 5,
+      "startMs": 7064,
+      "endMs": 7442,
+      "elapsedMs": 375.5313389999992,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 5,
+      "startMs": 7493,
+      "endMs": 7829,
+      "elapsedMs": 333.69519499999933,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 5,
+      "startMs": 7876,
+      "endMs": 8270,
+      "elapsedMs": 391.6112750000002,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 6,
+      "startMs": 8321,
+      "endMs": 8593,
+      "elapsedMs": 270.2402230000007,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 6,
+      "startMs": 8645,
+      "endMs": 9004,
+      "elapsedMs": 356.605814999999,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 6,
+      "startMs": 9049,
+      "endMs": 9410,
+      "elapsedMs": 359.16931399999885,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 7,
+      "startMs": 9461,
+      "endMs": 9808,
+      "elapsedMs": 344.2326830000002,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 7,
+      "startMs": 10092,
+      "endMs": 10472,
+      "elapsedMs": 378.0112709999994,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 7,
+      "startMs": 10515,
+      "endMs": 10738,
+      "elapsedMs": 220.37070700000004,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 7,
+      "startMs": 10781,
+      "endMs": 11129,
+      "elapsedMs": 345.8517609999999,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 8,
+      "startMs": 11184,
+      "endMs": 11453,
+      "elapsedMs": 266.2640429999992,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 8,
+      "startMs": 11501,
+      "endMs": 11841,
+      "elapsedMs": 337.19176399999924,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 8,
+      "startMs": 11887,
+      "endMs": 12230,
+      "elapsedMs": 340.6200259999987,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 9,
+      "startMs": 12278,
+      "endMs": 12500,
+      "elapsedMs": 219.44948899999872,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 9,
+      "startMs": 12552,
+      "endMs": 12894,
+      "elapsedMs": 339.8204860000005,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 9,
+      "startMs": 12938,
+      "endMs": 13202,
+      "elapsedMs": 261.34763999999996,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 10,
+      "startMs": 13256,
+      "endMs": 13592,
+      "elapsedMs": 333.96191700000054,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 10,
+      "startMs": 13649,
+      "endMs": 13988,
+      "elapsedMs": 337.90802799999983,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 10,
+      "startMs": 14035,
+      "endMs": 14295,
+      "elapsedMs": 257.74984100000074,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 11,
+      "startMs": 14350,
+      "endMs": 14691,
+      "elapsedMs": 338.7455999999984,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 14750,
+      "endMs": 15309,
+      "elapsedMs": 557.0061889999997,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 15349,
+      "endMs": 15580,
+      "elapsedMs": 229.3579269999991,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 15627,
+      "endMs": 15968,
+      "elapsedMs": 340.25322699999924,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 12,
+      "startMs": 16021,
+      "endMs": 16291,
+      "elapsedMs": 268.0130459999982,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 12,
+      "startMs": 16344,
+      "endMs": 16668,
+      "elapsedMs": 322.2151479999993,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 12,
+      "startMs": 16715,
+      "endMs": 16946,
+      "elapsedMs": 229.73806999999942,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 13,
+      "startMs": 16996,
+      "endMs": 17288,
+      "elapsedMs": 290.9299080000019,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 13,
+      "startMs": 17343,
+      "endMs": 17581,
+      "elapsedMs": 236.46647400000074,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 13,
+      "startMs": 17625,
+      "endMs": 17989,
+      "elapsedMs": 362.9614189999993,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 14,
+      "startMs": 18039,
+      "endMs": 18304,
+      "elapsedMs": 263.1374279999982,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 14,
+      "startMs": 18358,
+      "endMs": 18693,
+      "elapsedMs": 332.8479370000023,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 14,
+      "startMs": 18735,
+      "endMs": 19050,
+      "elapsedMs": 313.10288500000024,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 15,
+      "startMs": 19096,
+      "endMs": 19492,
+      "elapsedMs": 393.51655200000096,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 15,
+      "startMs": 19550,
+      "endMs": 19929,
+      "elapsedMs": 376.8900300000023,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 15,
+      "startMs": 19978,
+      "endMs": 20299,
+      "elapsedMs": 318.6614530000006,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 15,
+      "startMs": 20347,
+      "endMs": 20810,
+      "elapsedMs": 460.14521799999784,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 16,
+      "startMs": 20866,
+      "endMs": 21249,
+      "elapsedMs": 381.0302269999993,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 16,
+      "startMs": 21327,
+      "endMs": 21690,
+      "elapsedMs": 360.4019580000022,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 16,
+      "startMs": 21740,
+      "endMs": 21991,
+      "elapsedMs": 248.3344180000022,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 17,
+      "startMs": 22050,
+      "endMs": 22361,
+      "elapsedMs": 309.3957789999986,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 17,
+      "startMs": 22429,
+      "endMs": 22650,
+      "elapsedMs": 219.78882499999963,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 17,
+      "startMs": 22697,
+      "endMs": 23101,
+      "elapsedMs": 402.0742649999993,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 18,
+      "startMs": 23161,
+      "endMs": 23450,
+      "elapsedMs": 286.8744689999985,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 18,
+      "startMs": 23514,
+      "endMs": 23894,
+      "elapsedMs": 377.7241639999993,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 18,
+      "startMs": 23948,
+      "endMs": 24305,
+      "elapsedMs": 355.0448069999984,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 19,
+      "startMs": 24360,
+      "endMs": 24592,
+      "elapsedMs": 230.16486200000145,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 19,
+      "startMs": 24659,
+      "endMs": 25011,
+      "elapsedMs": 349.57914399999936,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 19,
+      "startMs": 25061,
+      "endMs": 25432,
+      "elapsedMs": 368.8058439999986,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 19,
+      "startMs": 25489,
+      "endMs": 25870,
+      "elapsedMs": 378.75374699999884,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 20,
+      "startMs": 25928,
+      "endMs": 26181,
+      "elapsedMs": 250.99601000000257,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 20,
+      "startMs": 26243,
+      "endMs": 26592,
+      "elapsedMs": 347.0689259999999,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 20,
+      "startMs": 26633,
+      "endMs": 26970,
+      "elapsedMs": 334.4326089999995,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 21,
+      "startMs": 27025,
+      "endMs": 27410,
+      "elapsedMs": 382.5312129999984,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 21,
+      "startMs": 27487,
+      "endMs": 27848,
+      "elapsedMs": 359.5210250000018,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 21,
+      "startMs": 27897,
+      "endMs": 28141,
+      "elapsedMs": 241.8332130000017,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 22,
+      "startMs": 28202,
+      "endMs": 28504,
+      "elapsedMs": 300.2408359999972,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 22,
+      "startMs": 28563,
+      "endMs": 28949,
+      "elapsedMs": 376.71528300000136,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 22,
+      "startMs": 28998,
+      "endMs": 29238,
+      "elapsedMs": 237.26974100000007,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 23,
+      "startMs": 29286,
+      "endMs": 29693,
+      "elapsedMs": 404.6921880000009,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 23,
+      "startMs": 29756,
+      "endMs": 30055,
+      "elapsedMs": 296.9720530000013,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 23,
+      "startMs": 30106,
+      "endMs": 30490,
+      "elapsedMs": 381.4682590000011,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 23,
+      "startMs": 30606,
+      "endMs": 30955,
+      "elapsedMs": 346.6968679999991,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 24,
+      "startMs": 31060,
+      "endMs": 31487,
+      "elapsedMs": 423.75379800000155,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 24,
+      "startMs": 31557,
+      "endMs": 31940,
+      "elapsedMs": 377.32368399999905,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 24,
+      "startMs": 31995,
+      "endMs": 32255,
+      "elapsedMs": 257.8607609999999,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 25,
+      "startMs": 32311,
+      "endMs": 32707,
+      "elapsedMs": 394.4744999999966,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 25,
+      "startMs": 32761,
+      "endMs": 33167,
+      "elapsedMs": 404.2405909999943,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 25,
+      "startMs": 33215,
+      "endMs": 33446,
+      "elapsedMs": 228.7516020000039,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 26,
+      "startMs": 33503,
+      "endMs": 33724,
+      "elapsedMs": 219.3008919999993,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 26,
+      "startMs": 33793,
+      "endMs": 34021,
+      "elapsedMs": 225.46244000000297,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 26,
+      "startMs": 34074,
+      "endMs": 34488,
+      "elapsedMs": 412.17255199999636,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 27,
+      "startMs": 34558,
+      "endMs": 34826,
+      "elapsedMs": 266.42407500000263,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 27,
+      "startMs": 34895,
+      "endMs": 35288,
+      "elapsedMs": 390.3964680000063,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 27,
+      "startMs": 35344,
+      "endMs": 35567,
+      "elapsedMs": 221.29447100000107,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 27,
+      "startMs": 35619,
+      "endMs": 35862,
+      "elapsedMs": 240.73188700000173,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 28,
+      "startMs": 35939,
+      "endMs": 36404,
+      "elapsedMs": 462.53117600000405,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 28,
+      "startMs": 36486,
+      "endMs": 36862,
+      "elapsedMs": 374.5631760000033,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 28,
+      "startMs": 36910,
+      "endMs": 37154,
+      "elapsedMs": 242.06038900000567,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 29,
+      "startMs": 37211,
+      "endMs": 37578,
+      "elapsedMs": 365.4063580000002,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 29,
+      "startMs": 37645,
+      "endMs": 37999,
+      "elapsedMs": 352.3606140000047,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 29,
+      "startMs": 38050,
+      "endMs": 38301,
+      "elapsedMs": 249.7203789999985,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 30,
+      "startMs": 38358,
+      "endMs": 38703,
+      "elapsedMs": 343.56839000000036,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 30,
+      "startMs": 38777,
+      "endMs": 39141,
+      "elapsedMs": 362.48701099999744,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 30,
+      "startMs": 39189,
+      "endMs": 39416,
+      "elapsedMs": 224.9706789999982,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 31,
+      "startMs": 39472,
+      "endMs": 39699,
+      "elapsedMs": 223.9681969999947,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 31,
+      "startMs": 39768,
+      "endMs": 39992,
+      "elapsedMs": 222.65730800000165,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 31,
+      "startMs": 40039,
+      "endMs": 40256,
+      "elapsedMs": 215.23716799999966,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 31,
+      "startMs": 40301,
+      "endMs": 40521,
+      "elapsedMs": 217.77435799999512,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 32,
+      "startMs": 40581,
+      "endMs": 40809,
+      "elapsedMs": 226.34968500000105,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 32,
+      "startMs": 40880,
+      "endMs": 41142,
+      "elapsedMs": 259.9212059999991,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 32,
+      "startMs": 41197,
+      "endMs": 41424,
+      "elapsedMs": 224.630591000001,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 33,
+      "startMs": 41477,
+      "endMs": 41711,
+      "elapsedMs": 231.92764099999476,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 33,
+      "startMs": 41777,
+      "endMs": 42013,
+      "elapsedMs": 227.88605700000335,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 33,
+      "startMs": 42063,
+      "endMs": 42287,
+      "elapsedMs": 221.8344750000033,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 34,
+      "startMs": 42344,
+      "endMs": 42574,
+      "elapsedMs": 227.090956,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 34,
+      "startMs": 42639,
+      "endMs": 42884,
+      "elapsedMs": 242.62127099999634,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 34,
+      "startMs": 42935,
+      "endMs": 43162,
+      "elapsedMs": 225.24103399999876,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 35,
+      "startMs": 43218,
+      "endMs": 43448,
+      "elapsedMs": 228.5867020000005,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 35,
+      "startMs": 43533,
+      "endMs": 43755,
+      "elapsedMs": 220.407017000005,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 35,
+      "startMs": 43810,
+      "endMs": 44076,
+      "elapsedMs": 264.70036300000356,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 35,
+      "startMs": 44122,
+      "endMs": 44349,
+      "elapsedMs": 224.78849600000103,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 36,
+      "startMs": 44403,
+      "endMs": 44625,
+      "elapsedMs": 219.97885400000087,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 36,
+      "startMs": 44691,
+      "endMs": 44924,
+      "elapsedMs": 231.1921100000036,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 36,
+      "startMs": 44968,
+      "endMs": 45221,
+      "elapsedMs": 251.35244100000273,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 37,
+      "startMs": 45274,
+      "endMs": 45500,
+      "elapsedMs": 224.123099000004,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 37,
+      "startMs": 45563,
+      "endMs": 45816,
+      "elapsedMs": 250.76417700000457,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 37,
+      "startMs": 45876,
+      "endMs": 46116,
+      "elapsedMs": 237.8438890000034,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 38,
+      "startMs": 46169,
+      "endMs": 46405,
+      "elapsedMs": 233.76876400000037,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 38,
+      "startMs": 46470,
+      "endMs": 46693,
+      "elapsedMs": 220.33510199999728,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 38,
+      "startMs": 46734,
+      "endMs": 46976,
+      "elapsedMs": 239.59809900000255,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 39,
+      "startMs": 47045,
+      "endMs": 47266,
+      "elapsedMs": 219.25345399999787,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 39,
+      "startMs": 47340,
+      "endMs": 47560,
+      "elapsedMs": 218.7205329999997,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 39,
+      "startMs": 47606,
+      "endMs": 47900,
+      "elapsedMs": 291.8370009999999,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 39,
+      "startMs": 47952,
+      "endMs": 48218,
+      "elapsedMs": 263.8949219999995,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 40,
+      "startMs": 48275,
+      "endMs": 48517,
+      "elapsedMs": 240.1119350000008,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 40,
+      "startMs": 48588,
+      "endMs": 48809,
+      "elapsedMs": 219.71836500000063,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 40,
+      "startMs": 48858,
+      "endMs": 49136,
+      "elapsedMs": 275.85781499999575,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 41,
+      "startMs": 49195,
+      "endMs": 49423,
+      "elapsedMs": 226.09759399999894,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 41,
+      "startMs": 49502,
+      "endMs": 49754,
+      "elapsedMs": 249.00760300000547,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 41,
+      "startMs": 49802,
+      "endMs": 50059,
+      "elapsedMs": 254.57218200000352,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 42,
+      "startMs": 50124,
+      "endMs": 50366,
+      "elapsedMs": 240.5678099999932,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 42,
+      "startMs": 50455,
+      "endMs": 50677,
+      "elapsedMs": 219.79051199999958,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 42,
+      "startMs": 50732,
+      "endMs": 51143,
+      "elapsedMs": 408.4758279999951,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 43,
+      "startMs": 51199,
+      "endMs": 51470,
+      "elapsedMs": 268.9601349999939,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 43,
+      "startMs": 51559,
+      "endMs": 51823,
+      "elapsedMs": 262.65260200000193,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 43,
+      "startMs": 51870,
+      "endMs": 52088,
+      "elapsedMs": 215.95627799999784,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 43,
+      "startMs": 52147,
+      "endMs": 52402,
+      "elapsedMs": 253.18865699999878,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 44,
+      "startMs": 52466,
+      "endMs": 52685,
+      "elapsedMs": 217.08386299999984,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 44,
+      "startMs": 52777,
+      "endMs": 53031,
+      "elapsedMs": 252.64335299999948,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 44,
+      "startMs": 53084,
+      "endMs": 53331,
+      "elapsedMs": 245.25136600000405,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 45,
+      "startMs": 53404,
+      "endMs": 53648,
+      "elapsedMs": 241.88187499999913,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 45,
+      "startMs": 53724,
+      "endMs": 54006,
+      "elapsedMs": 278.07611700000416,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 45,
+      "startMs": 54050,
+      "endMs": 54313,
+      "elapsedMs": 262.1120580000061,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 46,
+      "startMs": 54366,
+      "endMs": 54586,
+      "elapsedMs": 217.5915060000043,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 46,
+      "startMs": 54662,
+      "endMs": 54880,
+      "elapsedMs": 216.14604400000098,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 46,
+      "startMs": 54929,
+      "endMs": 55159,
+      "elapsedMs": 227.93821700000262,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 47,
+      "startMs": 55237,
+      "endMs": 55503,
+      "elapsedMs": 264.007362999997,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 47,
+      "startMs": 55608,
+      "endMs": 55858,
+      "elapsedMs": 248.28596899999684,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 47,
+      "startMs": 55909,
+      "endMs": 56158,
+      "elapsedMs": 246.7709460000042,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 47,
+      "startMs": 56209,
+      "endMs": 56460,
+      "elapsedMs": 248.5942270000014,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 48,
+      "startMs": 56528,
+      "endMs": 56805,
+      "elapsedMs": 275.21861500000523,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 48,
+      "startMs": 56892,
+      "endMs": 57135,
+      "elapsedMs": 240.5377440000011,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 48,
+      "startMs": 57187,
+      "endMs": 57475,
+      "elapsedMs": 286.2271370000017,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 49,
+      "startMs": 57530,
+      "endMs": 57780,
+      "elapsedMs": 248.1889169999995,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 49,
+      "startMs": 57880,
+      "endMs": 58104,
+      "elapsedMs": 221.7321129999982,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 49,
+      "startMs": 58173,
+      "endMs": 58403,
+      "elapsedMs": 227.58389300000272,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 50,
+      "startMs": 58466,
+      "endMs": 58695,
+      "elapsedMs": 227.25382199999876,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 50,
+      "startMs": 58811,
+      "endMs": 59265,
+      "elapsedMs": 240.90751799999998,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 50,
+      "startMs": 59319,
+      "endMs": 59588,
+      "elapsedMs": 266.03661999999895,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 51,
+      "startMs": 59654,
+      "endMs": 59932,
+      "elapsedMs": 275.51158399999986,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 51,
+      "startMs": 60049,
+      "endMs": 60310,
+      "elapsedMs": 258.5707140000013,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 51,
+      "startMs": 60379,
+      "endMs": 60641,
+      "elapsedMs": 260.3987330000018,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 51,
+      "startMs": 60735,
+      "endMs": 60993,
+      "elapsedMs": 254.63545099999465,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 52,
+      "startMs": 61082,
+      "endMs": 61336,
+      "elapsedMs": 251.13599599999725,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 52,
+      "startMs": 61452,
+      "endMs": 61680,
+      "elapsedMs": 224.81225200000335,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 52,
+      "startMs": 61733,
+      "endMs": 61964,
+      "elapsedMs": 229.24316299999919,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 53,
+      "startMs": 62043,
+      "endMs": 62272,
+      "elapsedMs": 226.37904200000048,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 53,
+      "startMs": 62366,
+      "endMs": 62593,
+      "elapsedMs": 225.1541739999957,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 53,
+      "startMs": 62649,
+      "endMs": 62915,
+      "elapsedMs": 263.6621859999941,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 54,
+      "startMs": 62976,
+      "endMs": 63218,
+      "elapsedMs": 239.4646999999968,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 54,
+      "startMs": 63308,
+      "endMs": 63583,
+      "elapsedMs": 273.1092590000044,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 54,
+      "startMs": 63654,
+      "endMs": 63907,
+      "elapsedMs": 249.40244499999972,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 55,
+      "startMs": 63988,
+      "endMs": 64207,
+      "elapsedMs": 216.57499899999675,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 55,
+      "startMs": 64343,
+      "endMs": 64580,
+      "elapsedMs": 233.71761900000274,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 55,
+      "startMs": 64656,
+      "endMs": 64897,
+      "elapsedMs": 238.3319860000047,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 55,
+      "startMs": 64969,
+      "endMs": 65188,
+      "elapsedMs": 217.00762099999702,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 56,
+      "startMs": 65274,
+      "endMs": 65519,
+      "elapsedMs": 243.0947410000008,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 56,
+      "startMs": 65641,
+      "endMs": 65876,
+      "elapsedMs": 232.46257400000468,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 56,
+      "startMs": 65944,
+      "endMs": 66169,
+      "elapsedMs": 222.80659000000742,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 57,
+      "startMs": 66232,
+      "endMs": 66515,
+      "elapsedMs": 280.99486200000683,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 57,
+      "startMs": 66622,
+      "endMs": 66895,
+      "elapsedMs": 270.6277629999968,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 57,
+      "startMs": 66964,
+      "endMs": 67192,
+      "elapsedMs": 225.5757339999982,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 58,
+      "startMs": 67279,
+      "endMs": 67536,
+      "elapsedMs": 255.10512300000119,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 58,
+      "startMs": 67636,
+      "endMs": 67851,
+      "elapsedMs": 212.55894399998942,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 58,
+      "startMs": 67915,
+      "endMs": 68143,
+      "elapsedMs": 226.4911129999964,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 59,
+      "startMs": 68218,
+      "endMs": 68575,
+      "elapsedMs": 354.5978219999961,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 59,
+      "startMs": 68703,
+      "endMs": 68923,
+      "elapsedMs": 216.4658749999944,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 59,
+      "startMs": 69002,
+      "endMs": 69246,
+      "elapsedMs": 241.62374100000306,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 59,
+      "startMs": 69300,
+      "endMs": 69544,
+      "elapsedMs": 241.6289209999959,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 60,
+      "startMs": 69613,
+      "endMs": 69863,
+      "elapsedMs": 247.30571000000054,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 60,
+      "startMs": 69982,
+      "endMs": 70210,
+      "elapsedMs": 225.2719059999945,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 60,
+      "startMs": 70279,
+      "endMs": 70503,
+      "elapsedMs": 222.49162899999646,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 61,
+      "startMs": 70576,
+      "endMs": 70835,
+      "elapsedMs": 256.2892049999937,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 61,
+      "startMs": 70932,
+      "endMs": 71205,
+      "elapsedMs": 270.77646399999503,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 61,
+      "startMs": 71272,
+      "endMs": 71497,
+      "elapsedMs": 223.15423200000077,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 62,
+      "startMs": 71564,
+      "endMs": 71805,
+      "elapsedMs": 238.97486099999514,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 62,
+      "startMs": 71947,
+      "endMs": 72215,
+      "elapsedMs": 265.02399099999457,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 62,
+      "startMs": 72280,
+      "endMs": 72534,
+      "elapsedMs": 252.26228999999876,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 63,
+      "startMs": 72601,
+      "endMs": 72840,
+      "elapsedMs": 236.59613000000536,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 63,
+      "startMs": 72992,
+      "endMs": 73258,
+      "elapsedMs": 262.9693260000058,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 63,
+      "startMs": 73322,
+      "endMs": 73581,
+      "elapsedMs": 256.6084029999911,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 63,
+      "startMs": 73640,
+      "endMs": 73870,
+      "elapsedMs": 228.0400490000029,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 64,
+      "startMs": 73953,
+      "endMs": 74206,
+      "elapsedMs": 250.23131999999168,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 64,
+      "startMs": 74323,
+      "endMs": 74544,
+      "elapsedMs": 218.4524320000055,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 64,
+      "startMs": 74611,
+      "endMs": 74856,
+      "elapsedMs": 243.47098699999333,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 65,
+      "startMs": 74921,
+      "endMs": 75147,
+      "elapsedMs": 222.83221700000286,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 65,
+      "startMs": 75237,
+      "endMs": 75473,
+      "elapsedMs": 232.9133700000093,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 65,
+      "startMs": 75561,
+      "endMs": 75790,
+      "elapsedMs": 226.34668200000306,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 66,
+      "startMs": 75858,
+      "endMs": 76126,
+      "elapsedMs": 265.4125309999945,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 66,
+      "startMs": 76223,
+      "endMs": 76457,
+      "elapsedMs": 231.10351600000286,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 66,
+      "startMs": 76513,
+      "endMs": 76906,
+      "elapsedMs": 391.3738250000024,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 67,
+      "startMs": 76975,
+      "endMs": 77202,
+      "elapsedMs": 224.78137499999139,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 67,
+      "startMs": 77335,
+      "endMs": 77578,
+      "elapsedMs": 231.64800699999614,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 67,
+      "startMs": 77642,
+      "endMs": 77890,
+      "elapsedMs": 239.55175499999314,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 67,
+      "startMs": 77956,
+      "endMs": 78196,
+      "elapsedMs": 237.74350199999753,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 68,
+      "startMs": 78284,
+      "endMs": 78526,
+      "elapsedMs": 239.48081199999433,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 68,
+      "startMs": 78646,
+      "endMs": 78893,
+      "elapsedMs": 244.643796999997,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 68,
+      "startMs": 78958,
+      "endMs": 79186,
+      "elapsedMs": 225.6564570000046,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 69,
+      "startMs": 79258,
+      "endMs": 79520,
+      "elapsedMs": 260.5583040000056,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 69,
+      "startMs": 79637,
+      "endMs": 79882,
+      "elapsedMs": 242.38682400000107,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 69,
+      "startMs": 79946,
+      "endMs": 80171,
+      "elapsedMs": 222.01312200000393,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 70,
+      "startMs": 80266,
+      "endMs": 80545,
+      "elapsedMs": 276.29279099999985,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 70,
+      "startMs": 80692,
+      "endMs": 80935,
+      "elapsedMs": 240.84447099998943,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 70,
+      "startMs": 81006,
+      "endMs": 81232,
+      "elapsedMs": 224.64555099999416,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 71,
+      "startMs": 81325,
+      "endMs": 81558,
+      "elapsedMs": 230.67742700000235,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 71,
+      "startMs": 81738,
+      "endMs": 81983,
+      "elapsedMs": 243.12362500000745,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 71,
+      "startMs": 82059,
+      "endMs": 82279,
+      "elapsedMs": 216.60625899999286,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 71,
+      "startMs": 82351,
+      "endMs": 82589,
+      "elapsedMs": 234.4158299999981,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 72,
+      "startMs": 82668,
+      "endMs": 82945,
+      "elapsedMs": 274.9131630000047,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 72,
+      "startMs": 83060,
+      "endMs": 83315,
+      "elapsedMs": 252.7871840000007,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 72,
+      "startMs": 83390,
+      "endMs": 83640,
+      "elapsedMs": 247.41437499999302,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 73,
+      "startMs": 83767,
+      "endMs": 84024,
+      "elapsedMs": 252.65183999999135,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 73,
+      "startMs": 84161,
+      "endMs": 84442,
+      "elapsedMs": 275.07442699999956,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 73,
+      "startMs": 84505,
+      "endMs": 84753,
+      "elapsedMs": 245.54594999999972,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 74,
+      "startMs": 84907,
+      "endMs": 85151,
+      "elapsedMs": 241.62609599999269,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 74,
+      "startMs": 85280,
+      "endMs": 85522,
+      "elapsedMs": 240.3477370000037,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 74,
+      "startMs": 85591,
+      "endMs": 85826,
+      "elapsedMs": 232.18852100000367,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 75,
+      "startMs": 85911,
+      "endMs": 86191,
+      "elapsedMs": 277.1340909999999,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 75,
+      "startMs": 86354,
+      "endMs": 86583,
+      "elapsedMs": 226.18635099999665,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 75,
+      "startMs": 86669,
+      "endMs": 86898,
+      "elapsedMs": 227.01643899999908,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 75,
+      "startMs": 86970,
+      "endMs": 87213,
+      "elapsedMs": 240.12616200000048,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 76,
+      "startMs": 87302,
+      "endMs": 87574,
+      "elapsedMs": 269.6667219999945,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 76,
+      "startMs": 87696,
+      "endMs": 87949,
+      "elapsedMs": 250.65072599999257,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 76,
+      "startMs": 88034,
+      "endMs": 88277,
+      "elapsedMs": 240.90924199999426,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 77,
+      "startMs": 88392,
+      "endMs": 88682,
+      "elapsedMs": 287.0302559999982,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 77,
+      "startMs": 88821,
+      "endMs": 89093,
+      "elapsedMs": 268.59830699999293,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 77,
+      "startMs": 89158,
+      "endMs": 89404,
+      "elapsedMs": 243.88234000001103,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 78,
+      "startMs": 89478,
+      "endMs": 89723,
+      "elapsedMs": 242.69606399998884,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 78,
+      "startMs": 89846,
+      "endMs": 90081,
+      "elapsedMs": 226.5296159999998,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 78,
+      "startMs": 90152,
+      "endMs": 90423,
+      "elapsedMs": 252.4367879999918,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 79,
+      "startMs": 90498,
+      "endMs": 90765,
+      "elapsedMs": 264.4777780000004,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 79,
+      "startMs": 90929,
+      "endMs": 91151,
+      "elapsedMs": 219.51436500001,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 79,
+      "startMs": 91221,
+      "endMs": 91439,
+      "elapsedMs": 216.08460099999502,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 79,
+      "startMs": 91492,
+      "endMs": 91732,
+      "elapsedMs": 237.05912900000112,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 80,
+      "startMs": 91814,
+      "endMs": 92061,
+      "elapsedMs": 244.26196199998958,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 80,
+      "startMs": 92204,
+      "endMs": 92427,
+      "elapsedMs": 220.98333099999581,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 80,
+      "startMs": 92482,
+      "endMs": 92710,
+      "elapsedMs": 225.90524399999413,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 81,
+      "startMs": 92781,
+      "endMs": 93015,
+      "elapsedMs": 231.78549599999678,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 81,
+      "startMs": 93125,
+      "endMs": 93400,
+      "elapsedMs": 272.4035869999934,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 81,
+      "startMs": 93457,
+      "endMs": 93705,
+      "elapsedMs": 245.15410600000178,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 82,
+      "startMs": 93955,
+      "endMs": 94200,
+      "elapsedMs": 243.47628899999836,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 82,
+      "startMs": 94331,
+      "endMs": 94561,
+      "elapsedMs": 224.5558630000014,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 82,
+      "startMs": 94623,
+      "endMs": 94866,
+      "elapsedMs": 241.66654299999936,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 83,
+      "startMs": 94943,
+      "endMs": 95182,
+      "elapsedMs": 236.58228399998916,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 83,
+      "startMs": 95294,
+      "endMs": 95542,
+      "elapsedMs": 246.34475999999268,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 83,
+      "startMs": 95598,
+      "endMs": 95859,
+      "elapsedMs": 258.94679099999485,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 84,
+      "startMs": 95938,
+      "endMs": 96170,
+      "elapsedMs": 230.2386039999983,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 84,
+      "startMs": 96312,
+      "endMs": 96577,
+      "elapsedMs": 262.23392800000147,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 84,
+      "startMs": 96648,
+      "endMs": 96874,
+      "elapsedMs": 223.14058799999475,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 84,
+      "startMs": 96938,
+      "endMs": 97179,
+      "elapsedMs": 239.86784900000202,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 85,
+      "startMs": 97257,
+      "endMs": 97490,
+      "elapsedMs": 230.03728599999158,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 85,
+      "startMs": 97619,
+      "endMs": 97866,
+      "elapsedMs": 244.22399199999927,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 85,
+      "startMs": 97932,
+      "endMs": 98181,
+      "elapsedMs": 247.75896399999328,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 86,
+      "startMs": 98255,
+      "endMs": 98479,
+      "elapsedMs": 221.82018100000278,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 86,
+      "startMs": 98625,
+      "endMs": 98911,
+      "elapsedMs": 283.20051100000273,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 86,
+      "startMs": 98970,
+      "endMs": 99201,
+      "elapsedMs": 223.90181599999778,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 87,
+      "startMs": 99276,
+      "endMs": 99511,
+      "elapsedMs": 232.87525100000494,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 87,
+      "startMs": 99653,
+      "endMs": 99919,
+      "elapsedMs": 263.5303009999916,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 87,
+      "startMs": 99977,
+      "endMs": 100234,
+      "elapsedMs": 255.4331499999971,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 88,
+      "startMs": 100300,
+      "endMs": 100528,
+      "elapsedMs": 225.94623200000206,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 88,
+      "startMs": 100655,
+      "endMs": 100922,
+      "elapsedMs": 264.3325150000019,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 88,
+      "startMs": 100992,
+      "endMs": 101252,
+      "elapsedMs": 258.258170000001,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 89,
+      "startMs": 101334,
+      "endMs": 101564,
+      "elapsedMs": 228.44384799999534,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 89,
+      "startMs": 101734,
+      "endMs": 101984,
+      "elapsedMs": 248.40585600001214,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 89,
+      "startMs": 102047,
+      "endMs": 102308,
+      "elapsedMs": 253.4254030000011,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 89,
+      "startMs": 102380,
+      "endMs": 102618,
+      "elapsedMs": 234.716333999997,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 90,
+      "startMs": 102705,
+      "endMs": 102930,
+      "elapsedMs": 223.24211799999466,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 90,
+      "startMs": 103068,
+      "endMs": 103322,
+      "elapsedMs": 237.62092500001017,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 90,
+      "startMs": 103385,
+      "endMs": 103647,
+      "elapsedMs": 239.98045999999158,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 91,
+      "startMs": 103717,
+      "endMs": 104001,
+      "elapsedMs": 270.69857899998897,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 91,
+      "startMs": 104133,
+      "endMs": 104393,
+      "elapsedMs": 257.57162300001073,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 91,
+      "startMs": 104472,
+      "endMs": 104767,
+      "elapsedMs": 292.39555299999483,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 92,
+      "startMs": 104872,
+      "endMs": 105123,
+      "elapsedMs": 247.85330999999132,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 92,
+      "startMs": 105291,
+      "endMs": 105601,
+      "elapsedMs": 307.813868000012,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 92,
+      "startMs": 105665,
+      "endMs": 105938,
+      "elapsedMs": 270.3951700000034,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 93,
+      "startMs": 106032,
+      "endMs": 106287,
+      "elapsedMs": 253.31263200000103,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 93,
+      "startMs": 106443,
+      "endMs": 106792,
+      "elapsedMs": 331.6661940000049,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 93,
+      "startMs": 106871,
+      "endMs": 107120,
+      "elapsedMs": 246.08193699999538,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 94,
+      "startMs": 107214,
+      "endMs": 107583,
+      "elapsedMs": 366.0128410000034,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 94,
+      "startMs": 107773,
+      "endMs": 108096,
+      "elapsedMs": 319.9667469999986,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 94,
+      "startMs": 108189,
+      "endMs": 108444,
+      "elapsedMs": 252.0925530000095,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 94,
+      "startMs": 108541,
+      "endMs": 108796,
+      "elapsedMs": 251.9860830000107,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 95,
+      "startMs": 108906,
+      "endMs": 109145,
+      "elapsedMs": 236.75008000001253,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 95,
+      "startMs": 109322,
+      "endMs": 109590,
+      "elapsedMs": 265.51661700000113,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 95,
+      "startMs": 109749,
+      "endMs": 110101,
+      "elapsedMs": 349.5128260000056,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 96,
+      "startMs": 110195,
+      "endMs": 110425,
+      "elapsedMs": 227.27313200000208,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 96,
+      "startMs": 110629,
+      "endMs": 110889,
+      "elapsedMs": 256.5623590000032,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 96,
+      "startMs": 110974,
+      "endMs": 111284,
+      "elapsedMs": 307.8577099999966,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 97,
+      "startMs": 111394,
+      "endMs": 111648,
+      "elapsedMs": 252.05032300000312,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 97,
+      "startMs": 111779,
+      "endMs": 112096,
+      "elapsedMs": 314.5601139999926,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 97,
+      "startMs": 112169,
+      "endMs": 112392,
+      "elapsedMs": 220.6636509999953,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    },
+    {
+      "round": 98,
+      "startMs": 112468,
+      "endMs": 112731,
+      "elapsedMs": 250.89721100000315,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 98,
+      "startMs": 112905,
+      "endMs": 113196,
+      "elapsedMs": 288.31236199999694,
+      "questions": [
+        "recovery"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 98,
+      "startMs": 113268,
+      "endMs": 113514,
+      "elapsedMs": 243.38816299999598,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 98,
+      "startMs": 113595,
+      "endMs": 113902,
+      "elapsedMs": 303.69481099999393,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 99,
+      "startMs": 113980,
+      "endMs": 114318,
+      "elapsedMs": 335.67133099999046,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 6
+    },
+    {
+      "round": 99,
+      "startMs": 114464,
+      "endMs": 114798,
+      "elapsedMs": 331.2078860000038,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 6
+    },
+    {
+      "round": 99,
+      "startMs": 114892,
+      "endMs": 115200,
+      "elapsedMs": null,
+      "questions": [
+        "turn"
+      ],
+      "failed": true,
+      "step": 3,
+      "total": 6
+    },
+    {
+      "round": 99,
+      "startMs": 160819,
+      "endMs": 161659,
+      "elapsedMs": 837.188969,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 6
+    },
+    {
+      "round": 99,
+      "startMs": 161831,
+      "endMs": 162117,
+      "elapsedMs": 267.8778599999998,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 6
+    },
+    {
+      "round": 99,
+      "startMs": 162200,
+      "endMs": 162549,
+      "elapsedMs": 345.0288270000001,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 6
+    }
+  ],
+  "skills": [
+    {
+      "round": 0,
+      "startMs": 0,
+      "endMs": 329,
+      "elapsedMs": 311.89495899993926,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 5
+    },
+    {
+      "round": 0,
+      "startMs": 630,
+      "endMs": 942,
+      "elapsedMs": 295.40357799991034,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 5
+    },
+    {
+      "round": 0,
+      "startMs": 1260,
+      "endMs": 1724,
+      "elapsedMs": 452.66234699985944,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 5
+    },
+    {
+      "round": 0,
+      "startMs": 2007,
+      "endMs": 2365,
+      "elapsedMs": 347.5902159998659,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 5
+    },
+    {
+      "round": 0,
+      "startMs": 2656,
+      "endMs": 3110,
+      "elapsedMs": 440.01559900003485,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 5
+    },
+    {
+      "round": 1,
+      "startMs": 3577,
+      "endMs": 3911,
+      "elapsedMs": 331.33019899996,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 4202,
+      "endMs": 4695,
+      "elapsedMs": 479.03217999986373,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 4978,
+      "endMs": 5295,
+      "elapsedMs": 300.1676260000095,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 5571,
+      "endMs": 6002,
+      "elapsedMs": 414.3870170000009,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 6308,
+      "endMs": 6660,
+      "elapsedMs": 342.3408749999944,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 6960,
+      "endMs": 7296,
+      "elapsedMs": 326.7795220001135,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 7606,
+      "endMs": 8115,
+      "elapsedMs": 492.91343600000255,
+      "questions": [
+        "freeSlot"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 8
+    },
+    {
+      "round": 1,
+      "startMs": 8417,
+      "endMs": 8753,
+      "elapsedMs": 321.413189999992,
+      "questions": [
+        "setup"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 8
+    },
+    {
+      "round": 2,
+      "startMs": 9209,
+      "endMs": 9532,
+      "elapsedMs": 310.00459300004877,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 5
+    },
+    {
+      "round": 2,
+      "startMs": 9822,
+      "endMs": 10184,
+      "elapsedMs": 347.12060200003907,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 5
+    },
+    {
+      "round": 2,
+      "startMs": 10472,
+      "endMs": 10965,
+      "elapsedMs": 483.12917899992317,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 5
+    },
+    {
+      "round": 2,
+      "startMs": 11255,
+      "endMs": 11608,
+      "elapsedMs": 335.3556679999456,
+      "questions": [
+        "plan"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 5
+    },
+    {
+      "round": 2,
+      "startMs": 11924,
+      "endMs": 12265,
+      "elapsedMs": 335.92138299997896,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 5
+    },
+    {
+      "round": 3,
+      "startMs": 12703,
+      "endMs": 12990,
+      "elapsedMs": 277.8086449999828,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 13254,
+      "endMs": 13720,
+      "elapsedMs": 456.86646399996243,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 13996,
+      "endMs": 14311,
+      "elapsedMs": 300.1770559998695,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 14588,
+      "endMs": 15022,
+      "elapsedMs": 418.57055399985984,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 15334,
+      "endMs": 15649,
+      "elapsedMs": 302.5906650000252,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 15948,
+      "endMs": 16353,
+      "elapsedMs": 393.1504689999856,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 16652,
+      "endMs": 17102,
+      "elapsedMs": 438.39346699998714,
+      "questions": [
+        "freeSlot"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 8
+    },
+    {
+      "round": 3,
+      "startMs": 17407,
+      "endMs": 17722,
+      "elapsedMs": 303.3418140001595,
+      "questions": [
+        "setup"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 8
+    },
+    {
+      "round": 4,
+      "startMs": 18178,
+      "endMs": 18487,
+      "elapsedMs": 293.51795799983665,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 5
+    },
+    {
+      "round": 4,
+      "startMs": 18765,
+      "endMs": 19226,
+      "elapsedMs": 451.0755360000767,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 5
+    },
+    {
+      "round": 4,
+      "startMs": 19502,
+      "endMs": 19811,
+      "elapsedMs": 297.86311300005764,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 5
+    },
+    {
+      "round": 4,
+      "startMs": 20072,
+      "endMs": 20430,
+      "elapsedMs": 334.50539499986917,
+      "questions": [
+        "plan"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 5
+    },
+    {
+      "round": 4,
+      "startMs": 20694,
+      "endMs": 21053,
+      "elapsedMs": 343.0744400001131,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 5
+    },
+    {
+      "round": 5,
+      "startMs": 21481,
+      "endMs": 21794,
+      "elapsedMs": 299.200130000012,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 22090,
+      "endMs": 22453,
+      "elapsedMs": 345.329148999881,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 22770,
+      "endMs": 23111,
+      "elapsedMs": 326.575474999845,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 23406,
+      "endMs": 23711,
+      "elapsedMs": 291.820311000105,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 24011,
+      "endMs": 24404,
+      "elapsedMs": 366.98833699990064,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 24776,
+      "endMs": 25466,
+      "elapsedMs": 677.6154320000205,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 25800,
+      "endMs": 26144,
+      "elapsedMs": 328.2975739999674,
+      "questions": [
+        "freeSlot"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 8
+    },
+    {
+      "round": 5,
+      "startMs": 26511,
+      "endMs": 26900,
+      "elapsedMs": 369.0629809999373,
+      "questions": [
+        "setup"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 8
+    },
+    {
+      "round": 6,
+      "startMs": 27349,
+      "endMs": 27690,
+      "elapsedMs": 323.6130300001241,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 5
+    },
+    {
+      "round": 6,
+      "startMs": 27976,
+      "endMs": 28324,
+      "elapsedMs": 346.52006800007075,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 5
+    },
+    {
+      "round": 6,
+      "startMs": 28651,
+      "endMs": 28986,
+      "elapsedMs": 333.7824330001604,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 5
+    },
+    {
+      "round": 6,
+      "startMs": 29272,
+      "endMs": 29579,
+      "elapsedMs": 296.50114400009625,
+      "questions": [
+        "plan"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 5
+    },
+    {
+      "round": 6,
+      "startMs": 29870,
+      "endMs": 30357,
+      "elapsedMs": 469.16798899997957,
+      "questions": [
+        "readiness"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 5
+    },
+    {
+      "round": 7,
+      "startMs": 30828,
+      "endMs": 31143,
+      "elapsedMs": 313.75772700016387,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 5
+    },
+    {
+      "round": 7,
+      "startMs": 31438,
+      "endMs": 31776,
+      "elapsedMs": 321.68864599987864,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 5
+    },
+    {
+      "round": 7,
+      "startMs": 32072,
+      "endMs": 32372,
+      "elapsedMs": 293.74259299994446,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 5
+    },
+    {
+      "round": 7,
+      "startMs": 32657,
+      "endMs": 32949,
+      "elapsedMs": 283.72987199993804,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 5
+    },
+    {
+      "round": 7,
+      "startMs": 33237,
+      "endMs": 33896,
+      "elapsedMs": 646.3583860001527,
+      "questions": [
+        "setup"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 5
+    },
+    {
+      "round": 8,
+      "startMs": 34433,
+      "endMs": 34746,
+      "elapsedMs": 298.0929729999043,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 8,
+      "startMs": 35020,
+      "endMs": 35499,
+      "elapsedMs": 463.525202000048,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 8,
+      "startMs": 35982,
+      "endMs": 36612,
+      "elapsedMs": 608.1973680001684,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 8,
+      "startMs": 36992,
+      "endMs": 37309,
+      "elapsedMs": 302.707262000069,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 9,
+      "startMs": 37754,
+      "endMs": 38085,
+      "elapsedMs": 312.7386239999905,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 9,
+      "startMs": 38372,
+      "endMs": 38700,
+      "elapsedMs": 310.58996700006537,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 9,
+      "startMs": 38990,
+      "endMs": 39334,
+      "elapsedMs": 334.74318400002085,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 9,
+      "startMs": 39630,
+      "endMs": 39985,
+      "elapsedMs": 353.09451099997386,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 10,
+      "startMs": 40462,
+      "endMs": 40784,
+      "elapsedMs": 311.92704500001855,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 10,
+      "startMs": 41098,
+      "endMs": 41464,
+      "elapsedMs": 352.3032629999798,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 10,
+      "startMs": 41751,
+      "endMs": 42206,
+      "elapsedMs": 449.30009599984623,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 10,
+      "startMs": 42481,
+      "endMs": 42767,
+      "elapsedMs": 282.1152770000044,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 43197,
+      "endMs": 43507,
+      "elapsedMs": 300.42872600001283,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 43777,
+      "endMs": 44079,
+      "elapsedMs": 289.1878180000931,
+      "questions": [
+        "gatherTarget",
+        "transferTarget"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 44357,
+      "endMs": 44688,
+      "elapsedMs": 314.6324050000403,
+      "questions": [
+        "situation",
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 11,
+      "startMs": 44972,
+      "endMs": 45413,
+      "elapsedMs": 338.5783989999909,
+      "questions": [
+        "decision"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 12,
+      "startMs": 45875,
+      "endMs": 46187,
+      "elapsedMs": 304.31116100004874,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 46492,
+      "endMs": 46857,
+      "elapsedMs": 350.74124700017273,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 47183,
+      "endMs": 47504,
+      "elapsedMs": 304.65846200007945,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 47790,
+      "endMs": 48263,
+      "elapsedMs": 459.8952280001249,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 48545,
+      "endMs": 48865,
+      "elapsedMs": 305.9946190000046,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 49205,
+      "endMs": 49567,
+      "elapsedMs": 345.05710699991323,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 49865,
+      "endMs": 50190,
+      "elapsedMs": 305.1483909999952,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 50468,
+      "endMs": 50847,
+      "elapsedMs": 366.25745399994776,
+      "questions": [
+        "group"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 9
+    },
+    {
+      "round": 12,
+      "startMs": 51152,
+      "endMs": 51461,
+      "elapsedMs": 298.97163500008173,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 9,
+      "total": 9
+    },
+    {
+      "round": 13,
+      "startMs": 51900,
+      "endMs": 52215,
+      "elapsedMs": 297.6600079999771,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 6
+    },
+    {
+      "round": 13,
+      "startMs": 52499,
+      "endMs": 53195,
+      "elapsedMs": 515.4535709999036,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 6
+    },
+    {
+      "round": 13,
+      "startMs": 53483,
+      "endMs": 53808,
+      "elapsedMs": 310.19799499982037,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 6
+    },
+    {
+      "round": 13,
+      "startMs": 54103,
+      "endMs": 54416,
+      "elapsedMs": 299.8557449998334,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 6
+    },
+    {
+      "round": 13,
+      "startMs": 54693,
+      "endMs": 55034,
+      "elapsedMs": 339.3361980000045,
+      "questions": [
+        "slot"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 6
+    },
+    {
+      "round": 13,
+      "startMs": 55341,
+      "endMs": 55695,
+      "elapsedMs": 341.425906999968,
+      "questions": [
+        "extraction"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 6
+    },
+    {
+      "round": 14,
+      "startMs": 56131,
+      "endMs": 56434,
+      "elapsedMs": 285.6416559999343,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 56717,
+      "endMs": 57062,
+      "elapsedMs": 329.06287300004624,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 57371,
+      "endMs": 57703,
+      "elapsedMs": 316.1165480001364,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 57977,
+      "endMs": 58351,
+      "elapsedMs": 360.6940460000187,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 58644,
+      "endMs": 59117,
+      "elapsedMs": 457.4966570001561,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 59398,
+      "endMs": 59700,
+      "elapsedMs": 288.26783099980094,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 59968,
+      "endMs": 60353,
+      "elapsedMs": 373.11613199999556,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 60637,
+      "endMs": 60983,
+      "elapsedMs": 330.80732999998145,
+      "questions": [
+        "group"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 9
+    },
+    {
+      "round": 14,
+      "startMs": 61275,
+      "endMs": 61788,
+      "elapsedMs": 498.8954559999984,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 9,
+      "total": 9
+    },
+    {
+      "round": 15,
+      "startMs": 62227,
+      "endMs": 62525,
+      "elapsedMs": 287.8657639999874,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 7
+    },
+    {
+      "round": 15,
+      "startMs": 62812,
+      "endMs": 63352,
+      "elapsedMs": 535.1448369999416,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 7
+    },
+    {
+      "round": 15,
+      "startMs": 63656,
+      "endMs": 63980,
+      "elapsedMs": 314.65732800005935,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 7
+    },
+    {
+      "round": 15,
+      "startMs": 64318,
+      "endMs": 64618,
+      "elapsedMs": 288.68885100004263,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 7
+    },
+    {
+      "round": 15,
+      "startMs": 64919,
+      "endMs": 65910,
+      "elapsedMs": 975.4502670001239,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 7
+    },
+    {
+      "round": 15,
+      "startMs": 66213,
+      "endMs": 66554,
+      "elapsedMs": 339.3951030001044,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 7
+    },
+    {
+      "round": 15,
+      "startMs": 66852,
+      "endMs": 67192,
+      "elapsedMs": 325.43918699980713,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 7
+    },
+    {
+      "round": 16,
+      "startMs": 67640,
+      "endMs": 67959,
+      "elapsedMs": 311.38537400006317,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 68254,
+      "endMs": 68587,
+      "elapsedMs": 322.2776989999693,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 68887,
+      "endMs": 69374,
+      "elapsedMs": 469.7656970000826,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 69684,
+      "endMs": 70015,
+      "elapsedMs": 319.83278300007805,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 70298,
+      "endMs": 70654,
+      "elapsedMs": 353.3472569999285,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 70957,
+      "endMs": 71321,
+      "elapsedMs": 354.5330829999875,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 71611,
+      "endMs": 71985,
+      "elapsedMs": 358.6110729998909,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 72464,
+      "endMs": 73079,
+      "elapsedMs": 610.8411809999961,
+      "questions": [
+        "group"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 9
+    },
+    {
+      "round": 16,
+      "startMs": 73385,
+      "endMs": 73783,
+      "elapsedMs": 382.20904800016433,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 9,
+      "total": 9
+    },
+    {
+      "round": 17,
+      "startMs": 74264,
+      "endMs": 75140,
+      "elapsedMs": 864.8138729999773,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 7
+    },
+    {
+      "round": 17,
+      "startMs": 75601,
+      "endMs": 76124,
+      "elapsedMs": 349.488672999898,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 7
+    },
+    {
+      "round": 17,
+      "startMs": 76418,
+      "endMs": 76738,
+      "elapsedMs": 306.62019299995154,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 7
+    },
+    {
+      "round": 17,
+      "startMs": 77039,
+      "endMs": 77530,
+      "elapsedMs": 489.94050500006415,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 7
+    },
+    {
+      "round": 17,
+      "startMs": 77821,
+      "endMs": 78163,
+      "elapsedMs": 323.67694000015035,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 7
+    },
+    {
+      "round": 17,
+      "startMs": 78442,
+      "endMs": 78806,
+      "elapsedMs": 354.6118059998844,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 7
+    },
+    {
+      "round": 17,
+      "startMs": 79103,
+      "endMs": 79467,
+      "elapsedMs": 343.842934000073,
+      "questions": [
+        "turn"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 7
+    },
+    {
+      "round": 18,
+      "startMs": 79938,
+      "endMs": 80600,
+      "elapsedMs": 649.1846420001239,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 80892,
+      "endMs": 81389,
+      "elapsedMs": 486.42830400005914,
+      "questions": [
+        "target"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 81689,
+      "endMs": 82638,
+      "elapsedMs": 934.1478600001428,
+      "questions": [
+        "front"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 82943,
+      "endMs": 83283,
+      "elapsedMs": 323.0229629999958,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 83591,
+      "endMs": 83884,
+      "elapsedMs": 290.5849880001042,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 5,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 84169,
+      "endMs": 84524,
+      "elapsedMs": 352.7399279999081,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 6,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 84820,
+      "endMs": 85181,
+      "elapsedMs": 352.84256199980155,
+      "questions": [
+        "preparation"
+      ],
+      "failed": false,
+      "step": 7,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 85490,
+      "endMs": 85960,
+      "elapsedMs": 451.6419730000198,
+      "questions": [
+        "group"
+      ],
+      "failed": false,
+      "step": 8,
+      "total": 9
+    },
+    {
+      "round": 18,
+      "startMs": 86265,
+      "endMs": 86770,
+      "elapsedMs": 503.1286400000099,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 9,
+      "total": 9
+    },
+    {
+      "round": 19,
+      "startMs": 87230,
+      "endMs": 87578,
+      "elapsedMs": 340.229021999985,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 4
+    },
+    {
+      "round": 19,
+      "startMs": 87936,
+      "endMs": 88261,
+      "elapsedMs": 314.94011399988085,
+      "questions": [
+        "target",
+        "intent_whole"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 4
+    },
+    {
+      "round": 19,
+      "startMs": 88688,
+      "endMs": 89081,
+      "elapsedMs": 375.5883690000046,
+      "questions": [
+        "reference"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 4
+    },
+    {
+      "round": 19,
+      "startMs": 89412,
+      "endMs": 89735,
+      "elapsedMs": 304.6192330000922,
+      "questions": [
+        "operation"
+      ],
+      "failed": false,
+      "step": 4,
+      "total": 4
+    },
+    {
+      "round": 20,
+      "startMs": 90252,
+      "endMs": 90820,
+      "elapsedMs": 550.5906579999719,
+      "questions": [
+        "goal"
+      ],
+      "failed": false,
+      "step": 1,
+      "total": 3
+    },
+    {
+      "round": 20,
+      "startMs": 91129,
+      "endMs": 91466,
+      "elapsedMs": 323.77311499998905,
+      "questions": [
+        "group"
+      ],
+      "failed": false,
+      "step": 2,
+      "total": 3
+    },
+    {
+      "round": 20,
+      "startMs": 91780,
+      "endMs": 92171,
+      "elapsedMs": 381.7619340000674,
+      "questions": [
+        "routine"
+      ],
+      "failed": false,
+      "step": 3,
+      "total": 3
+    }
+  ]
+}

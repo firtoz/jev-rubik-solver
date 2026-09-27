@@ -1,0 +1,2782 @@
+{
+  "partial": false,
+  "checked": 100,
+  "projectCommitment": 9.386859090000002,
+  "rows": [
+    {
+      "id": "final-1",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 75,
+      "requests": 115,
+      "cost": 0.0034958280000000003,
+      "elapsedMs": 57861,
+      "stages": {
+        "daisy": 5,
+        "cross": 5,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-2",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 90,
+      "requests": 147,
+      "cost": 0.00449232,
+      "elapsedMs": 74835,
+      "stages": {
+        "daisy": 9,
+        "cross": 7,
+        "f2l": 43,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-3",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 152,
+      "cost": 0.004488246,
+      "elapsedMs": 78290,
+      "stages": {
+        "daisy": 9,
+        "cross": 8,
+        "f2l": 33,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-4",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 75,
+      "requests": 122,
+      "cost": 0.0036782760000000007,
+      "elapsedMs": 63758,
+      "stages": {
+        "daisy": 6,
+        "cross": 5,
+        "f2l": 33,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-5",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 121,
+      "cost": 0.0036618960000000004,
+      "elapsedMs": 64485,
+      "stages": {
+        "daisy": 4,
+        "cross": 5,
+        "f2l": 33,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-6",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 71,
+      "requests": 129,
+      "cost": 0.0037097340000000006,
+      "elapsedMs": 70838,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 33,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-7",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 73,
+      "requests": 174,
+      "cost": 0.004941930000000001,
+      "elapsedMs": 103176,
+      "stages": {
+        "daisy": 10,
+        "cross": 8,
+        "f2l": 33,
+        "top-orientation": 9,
+        "pll": 13
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-8",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 138,
+      "cost": 0.00405342,
+      "elapsedMs": 81435,
+      "stages": {
+        "daisy": 7,
+        "cross": 4,
+        "f2l": 40,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-9",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 86,
+      "requests": 183,
+      "cost": 0.005573232000000001,
+      "elapsedMs": 108563,
+      "stages": {
+        "daisy": 11,
+        "cross": 8,
+        "f2l": 33,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-10",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 80,
+      "requests": 117,
+      "cost": 0.0036964200000000006,
+      "elapsedMs": 68623,
+      "stages": {
+        "daisy": 5,
+        "cross": 6,
+        "f2l": 36,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 13
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-11",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 86,
+      "requests": 146,
+      "cost": 0.00429618,
+      "elapsedMs": 88764,
+      "stages": {
+        "daisy": 7,
+        "cross": 8,
+        "f2l": 43,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-12",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 75,
+      "requests": 112,
+      "cost": 0.0035271600000000005,
+      "elapsedMs": 71476,
+      "stages": {
+        "daisy": 6,
+        "cross": 6,
+        "f2l": 34,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-13",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 88,
+      "requests": 139,
+      "cost": 0.004178622000000001,
+      "elapsedMs": 87400,
+      "stages": {
+        "daisy": 5,
+        "cross": 7,
+        "f2l": 41,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-14",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 67,
+      "requests": 164,
+      "cost": 0.004833864,
+      "elapsedMs": 100620,
+      "stages": {
+        "daisy": 9,
+        "cross": 7,
+        "f2l": 25,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-15",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 157,
+      "cost": 0.004545534,
+      "elapsedMs": 102123,
+      "stages": {
+        "daisy": 11,
+        "cross": 5,
+        "f2l": 37,
+        "top-orientation": 8,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-16",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 91,
+      "requests": 167,
+      "cost": 0.0051101820000000004,
+      "elapsedMs": 107203,
+      "stages": {
+        "daisy": 10,
+        "cross": 7,
+        "f2l": 45,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 9
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-17",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 82,
+      "requests": 149,
+      "cost": 0.004292316000000001,
+      "elapsedMs": 106416,
+      "stages": {
+        "daisy": 5,
+        "cross": 7,
+        "f2l": 40,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-18",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 77,
+      "requests": 139,
+      "cost": 0.004179,
+      "elapsedMs": 102077,
+      "stages": {
+        "daisy": 7,
+        "cross": 6,
+        "f2l": 34,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-19",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 132,
+      "cost": 0.0039664800000000005,
+      "elapsedMs": 98776,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 34,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-20",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 83,
+      "requests": 133,
+      "cost": 0.003955350000000001,
+      "elapsedMs": 101208,
+      "stages": {
+        "daisy": 5,
+        "cross": 7,
+        "f2l": 40,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-21",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 174,
+      "cost": 0.005003250000000001,
+      "elapsedMs": 136937,
+      "stages": {
+        "daisy": 9,
+        "cross": 8,
+        "f2l": 32,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-22",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 77,
+      "requests": 148,
+      "cost": 0.004372452000000001,
+      "elapsedMs": 117040,
+      "stages": {
+        "daisy": 7,
+        "cross": 5,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-23",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 74,
+      "requests": 134,
+      "cost": 0.003970092000000001,
+      "elapsedMs": 104711,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 34,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-24",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 66,
+      "requests": 131,
+      "cost": 0.00397236,
+      "elapsedMs": 100133,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 24,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-25",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 82,
+      "requests": 150,
+      "cost": 0.004420206,
+      "elapsedMs": 117278,
+      "stages": {
+        "daisy": 6,
+        "cross": 8,
+        "f2l": 40,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-26",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 136,
+      "cost": 0.003969966,
+      "elapsedMs": 107013,
+      "stages": {
+        "daisy": 8,
+        "cross": 6,
+        "f2l": 42,
+        "top-orientation": 9,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-27",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 87,
+      "requests": 126,
+      "cost": 0.0037085580000000007,
+      "elapsedMs": 96362,
+      "stages": {
+        "daisy": 3,
+        "cross": 8,
+        "f2l": 42,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 19
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-28",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 75,
+      "requests": 142,
+      "cost": 0.004108398000000001,
+      "elapsedMs": 109302,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-29",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 120,
+      "cost": 0.0036292620000000007,
+      "elapsedMs": 86272,
+      "stages": {
+        "daisy": 4,
+        "cross": 6,
+        "f2l": 41,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-30",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 59,
+      "requests": 128,
+      "cost": 0.0037343880000000004,
+      "elapsedMs": 92662,
+      "stages": {
+        "daisy": 7,
+        "cross": 5,
+        "f2l": 31,
+        "top-cross": 6,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-31",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 85,
+      "requests": 137,
+      "cost": 0.00423612,
+      "elapsedMs": 107532,
+      "stages": {
+        "daisy": 6,
+        "cross": 6,
+        "f2l": 37,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-32",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 173,
+      "cost": 0.0051219,
+      "elapsedMs": 136783,
+      "stages": {
+        "daisy": 9,
+        "cross": 6,
+        "f2l": 33,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-33",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 82,
+      "requests": 156,
+      "cost": 0.004632054000000001,
+      "elapsedMs": 122247,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 43,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-34",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 120,
+      "cost": 0.0036684900000000004,
+      "elapsedMs": 93003,
+      "stages": {
+        "daisy": 4,
+        "cross": 6,
+        "f2l": 32,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-35",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 146,
+      "cost": 0.004100964,
+      "elapsedMs": 114467,
+      "stages": {
+        "daisy": 7,
+        "cross": 6,
+        "f2l": 43,
+        "top-orientation": 8,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-36",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 82,
+      "requests": 156,
+      "cost": 0.004618782000000001,
+      "elapsedMs": 125399,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 39,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-37",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 84,
+      "requests": 160,
+      "cost": 0.004846800000000001,
+      "elapsedMs": 140467,
+      "stages": {
+        "daisy": 7,
+        "cross": 8,
+        "f2l": 36,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-38",
+      "variant": "candidate",
+      "status": "abstained",
+      "turns": 2,
+      "requests": 20,
+      "cost": 0.0006898920000000001,
+      "elapsedMs": 16819,
+      "stages": {
+        "daisy": 2
+      },
+      "finalFacts": {
+        "daisy": 1,
+        "cross": false,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 0
+      }
+    },
+    {
+      "id": "final-39",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 85,
+      "requests": 160,
+      "cost": 0.004772376000000001,
+      "elapsedMs": 146329,
+      "stages": {
+        "daisy": 10,
+        "cross": 5,
+        "f2l": 42,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-40",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 64,
+      "requests": 100,
+      "cost": 0.0028321440000000004,
+      "elapsedMs": 91558,
+      "stages": {
+        "daisy": 2,
+        "cross": 6,
+        "f2l": 37,
+        "top-orientation": 7,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-41",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 72,
+      "requests": 94,
+      "cost": 0.00285663,
+      "elapsedMs": 80555,
+      "stages": {
+        "daisy": 6,
+        "cross": 4,
+        "f2l": 30,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-42",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 63,
+      "requests": 132,
+      "cost": 0.003953208000000001,
+      "elapsedMs": 113479,
+      "stages": {
+        "daisy": 5,
+        "cross": 7,
+        "f2l": 35,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 1
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-43",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 84,
+      "requests": 131,
+      "cost": 0.003931158000000001,
+      "elapsedMs": 112426,
+      "stages": {
+        "daisy": 5,
+        "cross": 7,
+        "f2l": 38,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-44",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 80,
+      "requests": 165,
+      "cost": 0.004840332000000001,
+      "elapsedMs": 144246,
+      "stages": {
+        "daisy": 9,
+        "cross": 7,
+        "f2l": 34,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-45",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 67,
+      "requests": 126,
+      "cost": 0.0036119580000000006,
+      "elapsedMs": 114186,
+      "stages": {
+        "daisy": 6,
+        "cross": 5,
+        "f2l": 33,
+        "top-orientation": 11,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-46",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 83,
+      "requests": 147,
+      "cost": 0.004267746,
+      "elapsedMs": 134471,
+      "stages": {
+        "daisy": 5,
+        "cross": 8,
+        "f2l": 38,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-47",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 138,
+      "cost": 0.004119108000000001,
+      "elapsedMs": 123325,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 40,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-48",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 139,
+      "cost": 0.004368126000000001,
+      "elapsedMs": 127482,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 31,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 11
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-49",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 78,
+      "requests": 123,
+      "cost": 0.0035914620000000006,
+      "elapsedMs": 110350,
+      "stages": {
+        "daisy": 7,
+        "cross": 3,
+        "f2l": 38,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-50",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 116,
+      "cost": 0.0035599620000000003,
+      "elapsedMs": 109450,
+      "stages": {
+        "daisy": 2,
+        "cross": 5,
+        "f2l": 38,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-51",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 83,
+      "requests": 130,
+      "cost": 0.004016544,
+      "elapsedMs": 124661,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 37,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-52",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 88,
+      "requests": 133,
+      "cost": 0.0040981080000000005,
+      "elapsedMs": 122145,
+      "stages": {
+        "daisy": 10,
+        "cross": 6,
+        "f2l": 38,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-53",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 83,
+      "requests": 169,
+      "cost": 0.005014590000000001,
+      "elapsedMs": 151910,
+      "stages": {
+        "daisy": 10,
+        "cross": 7,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-54",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 72,
+      "requests": 138,
+      "cost": 0.004095420000000001,
+      "elapsedMs": 139053,
+      "stages": {
+        "daisy": 6,
+        "cross": 8,
+        "f2l": 30,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-55",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 84,
+      "requests": 145,
+      "cost": 0.004340784,
+      "elapsedMs": 144933,
+      "stages": {
+        "daisy": 8,
+        "cross": 6,
+        "f2l": 38,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-56",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 151,
+      "cost": 0.004474386,
+      "elapsedMs": 150372,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-57",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 80,
+      "requests": 161,
+      "cost": 0.004901274000000001,
+      "elapsedMs": 156339,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 27,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-58",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 85,
+      "requests": 151,
+      "cost": 0.0044766120000000005,
+      "elapsedMs": 140295,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 43,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-59",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 71,
+      "requests": 108,
+      "cost": 0.0031722180000000005,
+      "elapsedMs": 102196,
+      "stages": {
+        "daisy": 8,
+        "cross": 4,
+        "f2l": 37,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-60",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 69,
+      "requests": 120,
+      "cost": 0.0034537860000000004,
+      "elapsedMs": 131433,
+      "stages": {
+        "daisy": 7,
+        "cross": 5,
+        "f2l": 37,
+        "top-orientation": 8,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-61",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 85,
+      "requests": 161,
+      "cost": 0.004823742000000001,
+      "elapsedMs": 181146,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 39,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-62",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 86,
+      "requests": 126,
+      "cost": 0.003926034,
+      "elapsedMs": 139655,
+      "stages": {
+        "daisy": 5,
+        "cross": 5,
+        "f2l": 40,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-63",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 93,
+      "requests": 150,
+      "cost": 0.004559184000000001,
+      "elapsedMs": 171082,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 42,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-64",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 71,
+      "requests": 159,
+      "cost": 0.004534908000000001,
+      "elapsedMs": 175818,
+      "stages": {
+        "daisy": 7,
+        "cross": 8,
+        "f2l": 37,
+        "top-orientation": 9,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-65",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 87,
+      "requests": 102,
+      "cost": 0.0032442060000000003,
+      "elapsedMs": 111157,
+      "stages": {
+        "daisy": 5,
+        "cross": 5,
+        "f2l": 38,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 19
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-66",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 75,
+      "requests": 129,
+      "cost": 0.0038971380000000005,
+      "elapsedMs": 134257,
+      "stages": {
+        "daisy": 6,
+        "cross": 4,
+        "f2l": 35,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-67",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 135,
+      "cost": 0.004050018000000001,
+      "elapsedMs": 146753,
+      "stages": {
+        "daisy": 7,
+        "cross": 5,
+        "f2l": 36,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-68",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 78,
+      "requests": 122,
+      "cost": 0.0036288420000000006,
+      "elapsedMs": 141195,
+      "stages": {
+        "daisy": 4,
+        "cross": 6,
+        "f2l": 39,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-69",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 133,
+      "cost": 0.0040138560000000005,
+      "elapsedMs": 160579,
+      "stages": {
+        "daisy": 6,
+        "cross": 5,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-70",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 68,
+      "requests": 114,
+      "cost": 0.0035656320000000004,
+      "elapsedMs": 136013,
+      "stages": {
+        "daisy": 4,
+        "cross": 5,
+        "f2l": 28,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-71",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 94,
+      "requests": 132,
+      "cost": 0.004031622,
+      "elapsedMs": 143993,
+      "stages": {
+        "daisy": 5,
+        "cross": 6,
+        "f2l": 50,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-72",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 73,
+      "requests": 136,
+      "cost": 0.004062240000000001,
+      "elapsedMs": 161785,
+      "stages": {
+        "daisy": 8,
+        "cross": 5,
+        "f2l": 34,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 13
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-73",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 141,
+      "cost": 0.004345278,
+      "elapsedMs": 166727,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 33,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-74",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 87,
+      "requests": 138,
+      "cost": 0.004302816000000001,
+      "elapsedMs": 150200,
+      "stages": {
+        "daisy": 3,
+        "cross": 9,
+        "f2l": 40,
+        "top-cross": 18,
+        "top-orientation": 7,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-75",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 72,
+      "requests": 115,
+      "cost": 0.0035890680000000004,
+      "elapsedMs": 123078,
+      "stages": {
+        "daisy": 4,
+        "cross": 5,
+        "f2l": 34,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-76",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 132,
+      "cost": 0.0038986500000000005,
+      "elapsedMs": 144319,
+      "stages": {
+        "daisy": 4,
+        "cross": 8,
+        "f2l": 35,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-77",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 135,
+      "cost": 0.003952410000000001,
+      "elapsedMs": 156819,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 36,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-78",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 71,
+      "requests": 156,
+      "cost": 0.004712274000000001,
+      "elapsedMs": 191836,
+      "stages": {
+        "daisy": 8,
+        "cross": 8,
+        "f2l": 35,
+        "top-cross": 12,
+        "top-orientation": 7,
+        "pll": 1
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-79",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 79,
+      "requests": 135,
+      "cost": 0.003985716,
+      "elapsedMs": 172737,
+      "stages": {
+        "daisy": 6,
+        "cross": 5,
+        "f2l": 32,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 22
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-80",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 70,
+      "requests": 93,
+      "cost": 0.0026071080000000003,
+      "elapsedMs": 108889,
+      "stages": {
+        "daisy": 1,
+        "cross": 3,
+        "f2l": 41,
+        "top-orientation": 9,
+        "pll": 16
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-81",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 109,
+      "cost": 0.0033379080000000005,
+      "elapsedMs": 110564,
+      "stages": {
+        "daisy": 4,
+        "cross": 6,
+        "f2l": 29,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-82",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 82,
+      "requests": 170,
+      "cost": 0.005030466000000001,
+      "elapsedMs": 208695,
+      "stages": {
+        "daisy": 11,
+        "cross": 7,
+        "f2l": 40,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 9
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-83",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 77,
+      "requests": 121,
+      "cost": 0.0036609720000000006,
+      "elapsedMs": 161099,
+      "stages": {
+        "daisy": 6,
+        "cross": 6,
+        "f2l": 31,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 19
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-84",
+      "variant": "candidate",
+      "status": "abstained",
+      "turns": 10,
+      "requests": 58,
+      "cost": 0.0017067960000000002,
+      "elapsedMs": 77279,
+      "stages": {
+        "daisy": 4,
+        "cross": 6
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": false,
+        "middle": false,
+        "topCross": false,
+        "topOriented": false,
+        "cornersPlaced": false,
+        "solved": false,
+        "solvedPieces": 4
+      }
+    },
+    {
+      "id": "final-85",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 133,
+      "cost": 0.004044474,
+      "elapsedMs": 150505,
+      "stages": {
+        "daisy": 4,
+        "cross": 5,
+        "f2l": 38,
+        "top-cross": 12,
+        "top-orientation": 8,
+        "pll": 14
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-86",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 87,
+      "requests": 148,
+      "cost": 0.004284378,
+      "elapsedMs": 149953,
+      "stages": {
+        "daisy": 6,
+        "cross": 8,
+        "f2l": 41,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-87",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 85,
+      "requests": 153,
+      "cost": 0.004539738000000001,
+      "elapsedMs": 159501,
+      "stages": {
+        "daisy": 6,
+        "cross": 7,
+        "f2l": 39,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-88",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 141,
+      "cost": 0.004180764000000001,
+      "elapsedMs": 163792,
+      "stages": {
+        "daisy": 6,
+        "cross": 5,
+        "f2l": 43,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-89",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 92,
+      "requests": 147,
+      "cost": 0.004511388000000001,
+      "elapsedMs": 169421,
+      "stages": {
+        "daisy": 7,
+        "cross": 5,
+        "f2l": 46,
+        "top-cross": 12,
+        "top-orientation": 9,
+        "pll": 13
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-90",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 74,
+      "requests": 148,
+      "cost": 0.004283412,
+      "elapsedMs": 160935,
+      "stages": {
+        "daisy": 5,
+        "cross": 7,
+        "f2l": 37,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 10
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-91",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 65,
+      "requests": 140,
+      "cost": 0.004013016,
+      "elapsedMs": 166396,
+      "stages": {
+        "daisy": 8,
+        "cross": 4,
+        "f2l": 36,
+        "top-orientation": 8,
+        "pll": 9
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-92",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 84,
+      "requests": 152,
+      "cost": 0.004530330000000001,
+      "elapsedMs": 192311,
+      "stages": {
+        "daisy": 9,
+        "cross": 6,
+        "f2l": 39,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-93",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 84,
+      "requests": 158,
+      "cost": 0.004546542000000001,
+      "elapsedMs": 209344,
+      "stages": {
+        "daisy": 8,
+        "cross": 7,
+        "f2l": 41,
+        "top-cross": 6,
+        "pll": 22
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-94",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 82,
+      "requests": 148,
+      "cost": 0.004329990000000001,
+      "elapsedMs": 200534,
+      "stages": {
+        "daisy": 7,
+        "cross": 7,
+        "f2l": 36,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 19
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-95",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 69,
+      "requests": 142,
+      "cost": 0.003973536000000001,
+      "elapsedMs": 228369,
+      "stages": {
+        "daisy": 4,
+        "cross": 7,
+        "f2l": 37,
+        "top-cross": 6,
+        "pll": 15
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-96",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 81,
+      "requests": 151,
+      "cost": 0.004497612000000001,
+      "elapsedMs": 309064,
+      "stages": {
+        "daisy": 9,
+        "cross": 7,
+        "f2l": 39,
+        "top-cross": 6,
+        "top-orientation": 8,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-97",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 78,
+      "requests": 134,
+      "cost": 0.00407505,
+      "elapsedMs": 346540,
+      "stages": {
+        "daisy": 12,
+        "cross": 5,
+        "f2l": 34,
+        "top-cross": 6,
+        "top-orientation": 9,
+        "pll": 12
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-98",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 76,
+      "requests": 119,
+      "cost": 0.006188910000000001,
+      "elapsedMs": 331672,
+      "stages": {
+        "daisy": 4,
+        "cross": 5,
+        "f2l": 33,
+        "top-cross": 6,
+        "top-orientation": 11,
+        "pll": 17
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-99",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 68,
+      "requests": 104,
+      "cost": 0.0031550820000000005,
+      "elapsedMs": 203881,
+      "stages": {
+        "daisy": 5,
+        "cross": 5,
+        "f2l": 36,
+        "top-cross": 6,
+        "top-orientation": 7,
+        "pll": 9
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    },
+    {
+      "id": "final-100",
+      "variant": "candidate",
+      "status": "solved",
+      "turns": 67,
+      "requests": 126,
+      "cost": 0.0035912520000000005,
+      "elapsedMs": 124516,
+      "stages": {
+        "daisy": 6,
+        "cross": 6,
+        "f2l": 30,
+        "top-orientation": 7,
+        "pll": 18
+      },
+      "finalFacts": {
+        "daisy": 0,
+        "cross": true,
+        "firstLayer": true,
+        "middle": true,
+        "topCross": true,
+        "topOriented": true,
+        "cornersPlaced": true,
+        "solved": true,
+        "solvedPieces": 20
+      }
+    }
+  ]
+}

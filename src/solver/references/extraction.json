@@ -1,0 +1,85 @@
+{
+  "note": "Static mechanics of fixed R U R-prime and R U-prime R-prime routines in four yaw frames; no live state used.",
+  "rows": [
+    {
+      "id": "F-forward",
+      "alg": "R U R'",
+      "cornerSlot": "DRF",
+      "edgeSlot": "FR",
+      "cornerLands": "ULF",
+      "edgeLands": "UF",
+      "trapsCornerFrom": "UFR",
+      "trapsEdgeFrom": "UB"
+    },
+    {
+      "id": "F-reverse",
+      "alg": "R U' R'",
+      "cornerSlot": "DRF",
+      "edgeSlot": "FR",
+      "cornerLands": "UFR",
+      "edgeLands": "UB",
+      "trapsCornerFrom": "ULF",
+      "trapsEdgeFrom": "UF"
+    },
+    {
+      "id": "R-forward",
+      "alg": "B U B'",
+      "cornerSlot": "DBR",
+      "edgeSlot": "BR",
+      "cornerLands": "UFR",
+      "edgeLands": "UR",
+      "trapsCornerFrom": "URB",
+      "trapsEdgeFrom": "UL"
+    },
+    {
+      "id": "R-reverse",
+      "alg": "B U' B'",
+      "cornerSlot": "DBR",
+      "edgeSlot": "BR",
+      "cornerLands": "URB",
+      "edgeLands": "UL",
+      "trapsCornerFrom": "UFR",
+      "trapsEdgeFrom": "UR"
+    },
+    {
+      "id": "B-forward",
+      "alg": "L U L'",
+      "cornerSlot": "DLB",
+      "edgeSlot": "BL",
+      "cornerLands": "URB",
+      "edgeLands": "UB",
+      "trapsCornerFrom": "UBL",
+      "trapsEdgeFrom": "UF"
+    },
+    {
+      "id": "B-reverse",
+      "alg": "L U' L'",
+      "cornerSlot": "DLB",
+      "edgeSlot": "BL",
+      "cornerLands": "UBL",
+      "edgeLands": "UF",
+      "trapsCornerFrom": "URB",
+      "trapsEdgeFrom": "UB"
+    },
+    {
+      "id": "L-forward",
+      "alg": "F U F'",
+      "cornerSlot": "DFL",
+      "edgeSlot": "FL",
+      "cornerLands": "UBL",
+      "edgeLands": "UL",
+      "trapsCornerFrom": "ULF",
+      "trapsEdgeFrom": "UR"
+    },
+    {
+      "id": "L-reverse",
+      "alg": "F U' F'",
+      "cornerSlot": "DFL",
+      "edgeSlot": "FL",
+      "cornerLands": "ULF",
+      "edgeLands": "UR",
+      "trapsCornerFrom": "UBL",
+      "trapsEdgeFrom": "UL"
+    }
+  ]
+}

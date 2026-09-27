@@ -1,3 +1,4 @@
+process.env.RUBIK_BUDGET_USD='1';
 // Some pure evaluator tests import modules that also export live runners.
 // Isolate the ledger before any module can initialise the shared store.
 process.env.RUBIK_DB=`/tmp/rubik-suite-${crypto.randomUUID()}.sqlite`;

@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-24T07:13:19.512Z",
+  "budget": {
+    "cap": 9,
+    "reservedAndSpent": 8.306377968000001,
+    "usage": 8.032201968,
+    "reserved": 0.27417600000000003,
+    "attempts": 134069,
+    "pricePerMillion": 0.042,
+    "configured": true
+  },
+  "limits": {
+    "studyDollars": 0.75,
+    "plannedAttempts": 100,
+    "stopAfterNonSuccesses": 6,
+    "requests": 500,
+    "turns": 100,
+    "ms": 600000,
+    "concurrency": 2,
+    "retries": 3
+  }
+}

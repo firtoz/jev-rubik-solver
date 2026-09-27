@@ -1,0 +1,878 @@
+{
+  "scope": "Offline diagnosis after frozen evaluation. No live calls or policy changes. Expected answers never entered evaluation requests. Retire this set before using this diagnosis for tuning.",
+  "failures": [
+    {
+      "id": "final-38",
+      "status": "abstained",
+      "turns": 2,
+      "interpretation": "Identical DF/D focus input returned F before preparation and R afterwards. The static reference rule requires F. The wrong frame propagated and the model abstained.",
+      "expectedAnswersAreOfflineAuditOnly": true,
+      "exchanges": [
+        {
+          "stepIndex": 0,
+          "exchangeIndex": 2,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "FR",
+              "yellowDirection": "R"
+            },
+            "questions": {
+              "situation": {
+                "type": "choice",
+                "instructions": "Classify this selected edge using ONLY currentPosition and yellowDirection. First check yellowDirection=U (petal). Otherwise currentPosition starting D is bottom; starting U is top; all other edge positions are middle. The piece identity is deliberately omitted.",
+                "criteria": {
+                  "petal": "Yellow faces U",
+                  "bottomDown": "Edge is on D and yellow faces D",
+                  "bottomSide": "Edge is on D and yellow faces a side",
+                  "middle": "Edge is between side faces, not on U or D",
+                  "topSide": "Edge is on U and yellow faces a side"
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "instructions": "Choose the reference front. If yellowDirection is F/R/B/L, choose that face. If yellowDirection is U or D, choose the other letter of currentPosition. Use current position only.",
+                "criteria": {
+                  "F": "Front F",
+                  "R": "Front R",
+                  "B": "Front B",
+                  "L": "Front L"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "middle",
+                "probabilities": {
+                  "topSide": 0.02,
+                  "bottomSide": 0.01,
+                  "petal": 0,
+                  "bottomDown": 0,
+                  "middle": 0.97
+                },
+                "confidence": 0.96
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "R": 0.96,
+                  "B": 0,
+                  "L": 0,
+                  "F": 0.04
+                },
+                "confidence": 0.94
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 102
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "middle",
+                "confidence": 0.96,
+                "probabilities": {
+                  "topSide": 0.02,
+                  "bottomSide": 0.01,
+                  "petal": 0,
+                  "bottomDown": 0,
+                  "middle": 0.97
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 0.94,
+                "probabilities": {
+                  "R": 0.96,
+                  "B": 0,
+                  "L": 0,
+                  "F": 0.04
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 102
+            }
+          }
+        },
+        {
+          "stepIndex": 1,
+          "exchangeIndex": 2,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DF",
+              "yellowDirection": "D"
+            },
+            "questions": {
+              "situation": {
+                "type": "choice",
+                "instructions": "Classify this selected edge using ONLY currentPosition and yellowDirection. First check yellowDirection=U (petal). Otherwise currentPosition starting D is bottom; starting U is top; all other edge positions are middle. The piece identity is deliberately omitted.",
+                "criteria": {
+                  "petal": "Yellow faces U",
+                  "bottomDown": "Edge is on D and yellow faces D",
+                  "bottomSide": "Edge is on D and yellow faces a side",
+                  "middle": "Edge is between side faces, not on U or D",
+                  "topSide": "Edge is on U and yellow faces a side"
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "instructions": "Choose the reference front. If yellowDirection is F/R/B/L, choose that face. If yellowDirection is U or D, choose the other letter of currentPosition. Use current position only.",
+                "criteria": {
+                  "F": "Front F",
+                  "R": "Front R",
+                  "B": "Front B",
+                  "L": "Front L"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "bottomDown",
+                "probabilities": {
+                  "bottomSide": 0.05,
+                  "topSide": 0,
+                  "bottomDown": 0.94,
+                  "middle": 0.01,
+                  "petal": 0
+                },
+                "confidence": 0.92
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "F",
+                "probabilities": {
+                  "B": 0.07,
+                  "L": 0.19,
+                  "F": 0.39,
+                  "R": 0.35
+                },
+                "confidence": 0.19
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 105
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "bottomDown",
+                "confidence": 0.92,
+                "probabilities": {
+                  "bottomSide": 0.05,
+                  "topSide": 0,
+                  "bottomDown": 0.94,
+                  "middle": 0.01,
+                  "petal": 0
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "F",
+                "confidence": 0.19,
+                "probabilities": {
+                  "B": 0.07,
+                  "L": 0.19,
+                  "F": 0.39,
+                  "R": 0.35
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 105
+            }
+          }
+        },
+        {
+          "stepIndex": 2,
+          "exchangeIndex": 2,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "currentPosition": "DF",
+              "yellowDirection": "D"
+            },
+            "questions": {
+              "situation": {
+                "type": "choice",
+                "instructions": "Classify this selected edge using ONLY currentPosition and yellowDirection. First check yellowDirection=U (petal). Otherwise currentPosition starting D is bottom; starting U is top; all other edge positions are middle. The piece identity is deliberately omitted.",
+                "criteria": {
+                  "petal": "Yellow faces U",
+                  "bottomDown": "Edge is on D and yellow faces D",
+                  "bottomSide": "Edge is on D and yellow faces a side",
+                  "middle": "Edge is between side faces, not on U or D",
+                  "topSide": "Edge is on U and yellow faces a side"
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "instructions": "Choose the reference front. If yellowDirection is F/R/B/L, choose that face. If yellowDirection is U or D, choose the other letter of currentPosition. Use current position only.",
+                "criteria": {
+                  "F": "Front F",
+                  "R": "Front R",
+                  "B": "Front B",
+                  "L": "Front L"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "bottomDown",
+                "probabilities": {
+                  "bottomSide": 0.06,
+                  "topSide": 0,
+                  "middle": 0.02,
+                  "petal": 0,
+                  "bottomDown": 0.92
+                },
+                "confidence": 0.9
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "L": 0.17,
+                  "B": 0.04,
+                  "R": 0.4,
+                  "F": 0.39
+                },
+                "confidence": 0.2
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 105
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "situation": {
+                "type": "choice",
+                "choice": "bottomDown",
+                "confidence": 0.9,
+                "probabilities": {
+                  "bottomSide": 0.06,
+                  "topSide": 0,
+                  "middle": 0.02,
+                  "petal": 0,
+                  "bottomDown": 0.92
+                }
+              },
+              "reference": {
+                "type": "choice",
+                "choice": "R",
+                "confidence": 0.2,
+                "probabilities": {
+                  "L": 0.17,
+                  "B": 0.04,
+                  "R": 0.4,
+                  "F": 0.39
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 586,
+              "output_tokens": 105
+            }
+          }
+        },
+        {
+          "stepIndex": 2,
+          "exchangeIndex": 3,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "current": {
+                "target": "DR",
+                "front": "R",
+                "position": "DL",
+                "yellowDirection": "D",
+                "protectedBottomSlots": []
+              },
+              "pending": {
+                "target": "DR",
+                "front": "F",
+                "routine": "lift-bottom",
+                "startingPosition": "DF",
+                "yellowDirection": "D",
+                "affectedBottomSlots": [
+                  "DF"
+                ]
+              }
+            },
+            "questions": {
+              "plan": {
+                "type": "choice",
+                "instructions": "Decide whether to resume the remembered routine. Compare current against pending. Resume requires ALL: same target; same front; current.position equals pending.startingPosition; same yellowDirection; no pending.affectedBottomSlots occurs in current.protectedBottomSlots. Ignore routine names when checking these requirements. Resume explicitly selects that previous routine; a later question checks landing occupancy. Otherwise reconsider and choose a new routine.",
+                "criteria": {
+                  "resume": "Every starting and preservation requirement matches; choose the remembered routine again.",
+                  "reconsider": "At least one requirement fails; discard the remembered routine."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "plan": {
+                "type": "choice",
+                "choice": "reconsider",
+                "probabilities": {
+                  "reconsider": 0.99,
+                  "resume": 0.01
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 542,
+              "output_tokens": 35
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "plan": {
+                "type": "choice",
+                "choice": "reconsider",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0.99,
+                  "resume": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 542,
+              "output_tokens": 35
+            }
+          }
+        },
+        {
+          "stepIndex": 2,
+          "exchangeIndex": 5,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "selectedRoutine": "reconsider",
+              "setupAnswer": "reconsider",
+              "target": {
+                "position": "DL",
+                "layer": "bottom",
+                "yellowDirection": "D",
+                "sideColor": "red",
+                "sideDirection": "L",
+                "adjacentCenter": "green",
+                "sideMatchesCenter": false
+              }
+            },
+            "questions": {
+              "recovery": {
+                "type": "choice",
+                "instructions": "The selected plan produced no executable move. Decide whether to try a different learned routine for the same target or stop this cycle. Do not invent a move.",
+                "criteria": {
+                  "another": "Choose a different routine, possibly staging this edge first",
+                  "stop": "Stop this cycle for inspection"
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "recovery": {
+                "type": "choice",
+                "choice": "another",
+                "probabilities": {
+                  "another": 0.78,
+                  "stop": 0.22
+                },
+                "confidence": 0.56
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 33
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "recovery": {
+                "type": "choice",
+                "choice": "another",
+                "confidence": 0.56,
+                "probabilities": {
+                  "another": 0.78,
+                  "stop": 0.22
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 448,
+              "output_tokens": 33
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "final-84",
+      "status": "abstained",
+      "turns": 10,
+      "interpretation": "Local edge BR requires extract-edge under the transmitted rule, but JEV chose continue, then incorrectly allowed routine. Corner group UFR-R was correct; routine reconsider was appropriate for the unprepared pair. This is a preparation failure, not missing canonical routine coverage.",
+      "expectedAnswersAreOfflineAuditOnly": true,
+      "exchanges": [
+        {
+          "stepIndex": 10,
+          "exchangeIndex": 3,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": []
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Inspect the target corner in the local frame. Its home is DRF. Decide whether it must be lifted out of another bottom slot before preparing the pair.",
+                "criteria": {
+                  "extract-corner": "The corner is in DBR, DLB or DFL.",
+                  "continue": "The corner is in UFR, URB, UBL, ULF or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0,
+                  "continue": 1
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "reconsider": 0,
+                  "extract-corner": 0,
+                  "continue": 1
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 409,
+              "output_tokens": 44
+            }
+          }
+        },
+        {
+          "stepIndex": 10,
+          "exchangeIndex": 4,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "The preceding decision allowed us to inspect the edge. Its home is FR. Decide whether it must be lifted out of another middle slot.",
+                "criteria": {
+                  "extract-edge": "The edge is in BR, BL or FL.",
+                  "continue": "The edge is in UF, UR, UB, UL or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "reconsider": 0.17,
+                  "extract-edge": 0.4,
+                  "continue": 0.43
+                },
+                "confidence": 0.14
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.14,
+                "probabilities": {
+                  "reconsider": 0.17,
+                  "extract-edge": 0.4,
+                  "continue": 0.43
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 398,
+              "output_tokens": 43
+            }
+          }
+        },
+        {
+          "stepIndex": 10,
+          "exchangeIndex": 5,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "precedingDecisions": [
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Extraction checks are finished. Decide whether the target corner needs an upper-layer rotation to reach the routine reference.",
+                "criteria": {
+                  "align-corner": "The corner is in URB, UBL or ULF.",
+                  "continue": "The corner is in UFR or DRF.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "probabilities": {
+                  "continue": 1,
+                  "align-corner": 0,
+                  "reconsider": 0
+                },
+                "confidence": 0.99
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "continue",
+                "confidence": 0.99,
+                "probabilities": {
+                  "continue": 1,
+                  "align-corner": 0,
+                  "reconsider": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 399,
+              "output_tokens": 44
+            }
+          }
+        },
+        {
+          "stepIndex": 10,
+          "exchangeIndex": 6,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "cornerPosition": "UFR",
+              "edgePosition": "BR",
+              "precedingDecisions": [
+                "continue",
+                "continue",
+                "continue"
+              ]
+            },
+            "questions": {
+              "preparation": {
+                "type": "choice",
+                "instructions": "Choose the final preparation. A corner at UFR accepts any upper edge or FR. A corner at DRF requires the edge at UF or FR.",
+                "criteria": {
+                  "align-edge": "Corner is DRF and edge is UR, UB or UL.",
+                  "routine": "Corner is UFR with edge UF, UR, UB, UL or FR; or corner is DRF with edge UF or FR.",
+                  "reconsider": "The observed position is outside the listed alternatives."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "probabilities": {
+                  "reconsider": 0.47,
+                  "routine": 0.52,
+                  "align-edge": 0.01
+                },
+                "confidence": 0.29
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "preparation": {
+                "type": "choice",
+                "choice": "routine",
+                "confidence": 0.29,
+                "probabilities": {
+                  "reconsider": 0.47,
+                  "routine": 0.52,
+                  "align-edge": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 43
+            }
+          }
+        },
+        {
+          "stepIndex": 10,
+          "exchangeIndex": 7,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "corner": {
+                "position": "UFR",
+                "downColorDirection": "R",
+                "frontColorDirection": "F",
+                "rightColorDirection": "U"
+              }
+            },
+            "questions": {
+              "group": {
+                "type": "choice",
+                "instructions": "Recognise the corner part of this learned F2L case. Match CURRENT corner.position and downColorDirection to a reference group. Down-color means the sticker color that belongs on D, even when it currently points elsewhere.",
+                "criteria": {
+                  "DRF-D": "corner.position=DRF AND corner.downColorDirection=D.",
+                  "UFR-F": "corner.position=UFR AND corner.downColorDirection=F.",
+                  "UFR-R": "corner.position=UFR AND corner.downColorDirection=R.",
+                  "DRF-F": "corner.position=DRF AND corner.downColorDirection=F.",
+                  "UFR-U": "corner.position=UFR AND corner.downColorDirection=U.",
+                  "DRF-R": "corner.position=DRF AND corner.downColorDirection=R."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "group": {
+                "type": "choice",
+                "choice": "UFR-R",
+                "probabilities": {
+                  "DRF-F": 0,
+                  "UFR-U": 0.01,
+                  "UFR-F": 0,
+                  "UFR-R": 0.99,
+                  "DRF-D": 0,
+                  "DRF-R": 0
+                },
+                "confidence": 0.98
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 73
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "group": {
+                "type": "choice",
+                "choice": "UFR-R",
+                "confidence": 0.98,
+                "probabilities": {
+                  "DRF-F": 0,
+                  "UFR-U": 0.01,
+                  "UFR-F": 0,
+                  "UFR-R": 0.99,
+                  "DRF-D": 0,
+                  "DRF-R": 0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 560,
+              "output_tokens": 73
+            }
+          }
+        },
+        {
+          "stepIndex": 10,
+          "exchangeIndex": 8,
+          "request": {
+            "model": "jev-1.13.0",
+            "state": {
+              "corner": {
+                "position": "UFR",
+                "downColorDirection": "R",
+                "frontColorDirection": "F",
+                "rightColorDirection": "U"
+              },
+              "edge": {
+                "position": "BR",
+                "frontColorDirection": "B",
+                "rightColorDirection": "R"
+              },
+              "frame": "Local front F, right R, down D. Target pair belongs at DRF corner and FR edge."
+            },
+            "questions": {
+              "routine": {
+                "type": "choice",
+                "instructions": "Choose a learned F2L routine whose reference illustration matches BOTH observed pieces: their current positions and sticker directions. Read current position, not the destination slot. These routines solve this corner and edge together, preserving the cross and other three pairs. Do not simulate candidate outcomes. If no reference matches choose reconsider.",
+                "criteria": {
+                  "pair-03": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UF; front-color sticker faces F, right-color sticker U. Execute U' F' U F (4 turns).",
+                  "pair-05": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UB; front-color sticker faces U, right-color sticker B. Execute R U R' (3 turns).",
+                  "pair-07": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UL; front-color sticker faces U, right-color sticker L. Execute U' R U R' U R U R' (8 turns).",
+                  "pair-09": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UF; front-color sticker faces U, right-color sticker F. Execute R' U2 R2 U R2 U R (7 turns).",
+                  "pair-12": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UR; front-color sticker faces U, right-color sticker R. Execute U' R U' R' U R U R' (8 turns).",
+                  "pair-14": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UL; front-color sticker faces L, right-color sticker U. Execute U F' U' F U2 F' U F (8 turns).",
+                  "pair-16": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UB; front-color sticker faces B, right-color sticker U. Execute U F' U2 F U2 F' U F (8 turns).",
+                  "pair-22": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position UR; front-color sticker faces R, right-color sticker U. Execute R U' R' U2 F' U' F (7 turns).",
+                  "pair-35": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position FR; front-color sticker faces F, right-color sticker R. Execute U R U R' U2 R U R' (8 turns).",
+                  "pair-37": "Corner position UFR; down-color sticker faces R, front-color sticker F, right-color sticker U. Edge position FR; front-color sticker faces R, right-color sticker F. Execute U F' U' F U' R U R' (8 turns).",
+                  "reconsider": "No listed illustration matches both pieces."
+                }
+              }
+            }
+          },
+          "response": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "reconsider",
+                "probabilities": {
+                  "reconsider": 0.95,
+                  "pair-05": 0,
+                  "pair-35": 0.04,
+                  "pair-07": 0,
+                  "pair-12": 0,
+                  "pair-14": 0,
+                  "pair-03": 0,
+                  "pair-09": 0,
+                  "pair-22": 0,
+                  "pair-37": 0,
+                  "pair-16": 0.01
+                },
+                "confidence": 0.93
+              }
+            },
+            "usage": {
+              "input_tokens": 1136,
+              "output_tokens": 128
+            }
+          },
+          "nativeResponse": {
+            "model": "jev-1.13.0",
+            "answers": {
+              "routine": {
+                "type": "choice",
+                "choice": "reconsider",
+                "confidence": 0.93,
+                "probabilities": {
+                  "reconsider": 0.95,
+                  "pair-05": 0,
+                  "pair-35": 0.04,
+                  "pair-07": 0,
+                  "pair-12": 0,
+                  "pair-14": 0,
+                  "pair-03": 0,
+                  "pair-09": 0,
+                  "pair-22": 0,
+                  "pair-37": 0,
+                  "pair-16": 0.01
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 1136,
+              "output_tokens": 128
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "transport": {
+    "id": "final-98",
+    "stepIndex": 19,
+    "error": "Error: JEV HTTP 503",
+    "outcome": "Bounded retry succeeded; cube solved. Retained uncertain reservation $0.002688."
+  }
+}

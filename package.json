@@ -9,7 +9,10 @@
     "typecheck": "tsc --noEmit",
     "lab": "bun scripts/lab.ts",
     "start": "bun scripts/serve.ts",
-    "check": "bun test && bun run typecheck && bun run build"
+    "check": "bun test && bun run typecheck && bun run verify:recordings && bun run build && bun run release:check",
+    "verify:recordings": "bun scripts/verify-recordings.ts",
+    "release:check": "bun scripts/release-check.ts",
+    "release:export": "bun scripts/export-public.ts"
   },
   "dependencies": {
     "@tanstack/react-router": "1.170.38",
@@ -30,5 +33,10 @@
     "prettier": "^3.9.8",
     "typescript": "7.0.2",
     "vite": "8.3.0"
+  },
+  "description": "A recorded study and interactive lab for solving a Rubik\u2019s cube with typed JEV decisions.",
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.3.13"
   }
 }

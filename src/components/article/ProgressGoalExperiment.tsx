@@ -96,7 +96,7 @@ export function ProgressGoalExperiment() {
             <FieldValue value={e.response} />
             <details>
               <summary>Response JSON</summary>
-              <pre>{JSON.stringify(e.response, null, 2)}</pre>
+              <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
             </details>
           </div>
         ))}
@@ -129,7 +129,7 @@ export function ProgressGoalExperiment() {
           <code>experiments/progress-goal-validation/</code>. The development README lists live
           commands and their cost boundaries.
         </p>
-        <pre>bun test tests/progress-goal.test.ts{'\n'}bun scripts/summarize-progress-goal.ts</pre>
+        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
         <p>These commands run offline checks and regenerate this article’s results.</p>
       </details>
     </div>

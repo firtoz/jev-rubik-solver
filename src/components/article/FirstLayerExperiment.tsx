@@ -70,7 +70,7 @@ export function FirstLayerExperiment() {
           <FieldValue value={data.example.response} />
           <details>
             <summary>Response JSON</summary>
-            <pre>{JSON.stringify(data.example.response, null, 2)}</pre>
+            <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
           </details>
         </details>
       </div>
@@ -158,7 +158,7 @@ export function FirstLayerExperiment() {
           <code>scripts/request-eval/first-layer.ts</code>. Started rounds cannot be overwritten.
           Live runs charge the shared budget.
         </p>
-        <pre>bun test tests/first-layer.test.ts{'\n'}bun scripts/summarize-first-layer.ts</pre>
+        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
         <p>These two commands are offline. The article tables come from the saved results.</p>
       </details>
     </div>

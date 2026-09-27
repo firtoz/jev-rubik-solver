@@ -1,51 +1,12 @@
-import { readFileSync } from 'node:fs';
-import { z } from 'zod';
 import { CAP, PRICE, db, event, getRun, reserve, saveRun, settle, spend } from './store';
 import { LIMITS, type JevRequest, type JevResponse, type Decision } from '../lib/types';
-export const MODEL = 'jev-1.13.0';
+import { MODEL, validateResponse } from '../lib/jev-protocol';
+export { MODEL, validateResponse };
 function apiKey() {
-  if (process.env.TYPESAFE_API_KEY) return process.env.TYPESAFE_API_KEY;
-  try {
-    const text = readFileSync('/home/frtn/work/2026/laya/.env', 'utf8');
-    const line = text.split('\n').find((l) => /^TYPESAFE_API_KEY=/.test(l));
-    return line
-      ?.slice(line.indexOf('=') + 1)
-      .trim()
-      .replace(/^['"]|['"]$/g, '');
-  } catch {
-    return undefined;
-  }
+  return process.env.TYPESAFE_API_KEY;
 }
 export function configured() {
   return Boolean(apiKey());
-}
-const answer = z.object({
-  type: z.literal('choice'),
-  choice: z.string(),
-  probabilities: z.record(z.string(), z.number().min(0).max(1)),
-  confidence: z.number().min(0).max(1),
-});
-const response = z.object({
-  model: z.literal(MODEL),
-  answers: z.record(z.string(), answer),
-  usage: z.object({
-    input_tokens: z.number().int().min(0).max(64000),
-    output_tokens: z.number().int().nonnegative(),
-  }),
-});
-export function validateResponse(raw: unknown, request: JevRequest): JevResponse {
-  const r = response.parse(raw);
-  for (const [id, q] of Object.entries(request.questions)) {
-    const a = r.answers[id];
-    if (
-      !a ||
-      !(a.choice in q.criteria) ||
-      Object.keys(q.criteria).sort().join('|') !== Object.keys(a.probabilities).sort().join('|') ||
-      Math.abs(Object.values(a.probabilities).reduce((a, b) => a + b, 0) - 1) > 0.025
-    )
-      throw new Error('Invalid JEV distribution');
-  }
-  return r;
 }
 export async function evaluate(
   runId: string,

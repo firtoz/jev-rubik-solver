@@ -5,13 +5,14 @@ export function ReasoningExperiments() {
       <div className="eyebrow">FOLLOW-UP EXPERIMENT / FEWER SUPPLIED SOLVING RULES</div>
       <h3>What can JEV work out without the algorithm menu?</h3>
       <p>
-        The 99/100 result above used a reference of beginner algorithms. JEV chose when and how to
-        apply them. The side-by-side recording also gives the two policies different action menus,
-        so it cannot tell us how much of the improvement came from splitting the questions up.
+        The earlier v26 99/100 result used a reference of beginner algorithms. JEV chose when and
+        how to apply them. The side-by-side recording also gives the two policies different action
+        menus, so it cannot tell us how much of the improvement came from splitting the questions
+        up.
       </p>
       <p>
-        We first tested whether JEV could predict what a turn would do to an individual piece.
-        Code supplied its current position and the proposed turn. No beginner move sequences or
+        We first tested whether JEV could predict what a turn would do to an individual piece. Code
+        supplied its current position and the proposed turn. No beginner move sequences or
         calculated successor positions entered these requests.
       </p>
       <div className="test-fixture">
@@ -38,8 +39,8 @@ export function ReasoningExperiments() {
         </li>
         <li>
           <strong>Carry forward useful gains.</strong> Keep the strongest wording as the next seed.
-          Our current development threshold is at least two extra correct cases out of 20. This is a
-          practical screening rule, not proof of statistical significance.
+          That study’s development threshold is at least two extra correct cases out of 20. This is
+          a practical screening rule, not proof of statistical significance.
         </li>
         <li>
           <strong>Stop repeating an unhelpful idea.</strong> After two rounds without that gain,
@@ -139,13 +140,13 @@ export function ReasoningExperiments() {
         <p>
           The complete requests, native responses, expected labels and frozen source files are under{' '}
           <code>experiments/</code>, in the move-prediction, geometric-prediction,
-          vector-prediction, grid-prediction and grid-search directories. The scripts live in{' '}
-          <code>scripts/request-eval/</code>. Live scripts charge the shared project budget and
-          refuse to overwrite a started suite.
+          vector-prediction, grid-prediction and grid-search directories. The retired scripts originally lived in{' '}
+          <code>scripts/request-eval/</code>. Those scripts charged the shared project budget and
+          refused to overwrite a started suite.
         </p>
-        <pre>bun test tests/move-prediction.test.ts{'\n'}bun scripts/summarize-reasoning.ts</pre>
+        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
         <p>
-          Both commands above are offline. The article tables are generated from the saved results.
+          The current recording verification is offline. The article tables are generated from the saved results.
         </p>
       </details>
     </div>

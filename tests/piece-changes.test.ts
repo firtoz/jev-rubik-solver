@@ -1,5 +1,5 @@
 import {expect,test} from 'bun:test';
-import fresh from '../public/recordings/brain-v3-fresh-flow.json';
+import fresh from '../tests/fixtures/brain-v3-fresh-flow.json';
 import {pieceChanges} from '../src/lib/piece-changes';
 import {apply,solved} from '../src/lib/cube';
 
