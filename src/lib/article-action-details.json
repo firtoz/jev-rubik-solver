@@ -1,704 +1,704 @@
 {
   "primitive": [
     {
-      "title": "Turn R",
+      "title": "Move yellow–red edge",
       "context": "Directly above its home.",
       "objective": "Build the yellow cross",
       "outcome": "UR → BR",
       "alg": "R"
     },
     {
-      "title": "Turn D",
-      "context": "At BR; home DR.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At BR; home DR.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn R",
+      "title": "Move yellow–red edge",
       "context": "At BR; home DR.",
       "objective": "Build the yellow cross",
       "outcome": "Edge solved",
       "alg": "R"
     },
     {
-      "title": "Turn B",
+      "title": "Move yellow–orange edge",
       "context": "At UB; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "UB → BL",
       "alg": "B"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–orange edge",
       "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–orange edge",
       "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–orange edge",
       "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–orange edge",
       "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–orange edge",
       "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn B",
+      "title": "Move yellow–blue edge",
       "context": "Directly above its home.",
       "objective": "Build the yellow cross",
       "outcome": "UB → BL",
       "alg": "B"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–blue edge",
       "context": "At BL; home DB.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
-      "context": "At BL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At BL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At DR; home DL.",
-      "objective": "Build the yellow cross",
-      "outcome": "DR → DB",
-      "alg": "D"
-    },
-    {
-      "title": "Turn L",
-      "context": "At DB; home DL.",
+      "title": "Move yellow–orange edge",
+      "context": "At DL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "1/4 petals",
       "alg": "L"
     },
     {
-      "title": "Turn D",
-      "context": "At DB; home DL.",
-      "objective": "Build the yellow cross",
-      "outcome": "DB → DL",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
+      "title": "Move yellow–orange edge",
+      "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
+      "title": "Move yellow–orange edge",
+      "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
+      "title": "Move yellow–orange edge",
+      "context": "At BL; home DL.",
       "objective": "Build the yellow cross",
       "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–blue edge",
       "context": "At UL; home DB.",
       "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
+      "outcome": "2/4 petals",
+      "alg": "B"
     },
     {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn L",
+      "title": "Move yellow–blue edge",
       "context": "At UL; home DB.",
       "objective": "Build the yellow cross",
       "outcome": "UL → FL",
       "alg": "L"
     },
     {
-      "title": "Turn L",
+      "title": "Move yellow–blue edge",
       "context": "At FL; home DB.",
       "objective": "Build the yellow cross",
       "outcome": "FL → DL",
       "alg": "L"
     },
     {
-      "title": "Turn L",
-      "context": "Directly above its home.",
-      "objective": "Build the yellow cross",
-      "outcome": "UL → FL",
-      "alg": "L"
-    },
-    {
-      "title": "Turn D",
-      "context": "At DF; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DF → DR",
-      "alg": "D"
-    },
-    {
-      "title": "Turn R",
-      "context": "At DR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DR → FR",
-      "alg": "R"
-    },
-    {
-      "title": "Turn R",
-      "context": "At FR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "FR → UR",
-      "alg": "R"
-    },
-    {
-      "title": "Turn R",
-      "context": "At UR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "UR → BR",
-      "alg": "R"
-    },
-    {
-      "title": "Turn R",
-      "context": "At BR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "BR → DR",
-      "alg": "R"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At DR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DR → DF",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn F'",
-      "context": "At DF; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DF → FR",
-      "alg": "F'"
-    },
-    {
-      "title": "Turn D",
-      "context": "At FR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn F",
-      "context": "At FR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "FR → DF",
-      "alg": "F"
-    },
-    {
-      "title": "Turn F",
-      "context": "At DF; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DF → FL",
-      "alg": "F"
-    },
-    {
-      "title": "Turn F",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "FL → UF",
-      "alg": "F"
-    },
-    {
-      "title": "Turn F2",
-      "context": "Directly above its home.",
-      "objective": "Build the yellow cross",
-      "outcome": "UF → DF",
-      "alg": "F2"
-    },
-    {
-      "title": "Turn F",
-      "context": "At DF; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DF → FL",
-      "alg": "F"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn L'",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "1/4 petals",
-      "alg": "L'"
-    },
-    {
-      "title": "Turn L",
-      "context": "At UL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "UL → FL",
-      "alg": "L"
-    },
-    {
-      "title": "Turn L'",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "1/4 petals",
-      "alg": "L'"
-    },
-    {
-      "title": "Turn L",
-      "context": "At UL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "UL → FL",
-      "alg": "L"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn D",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "",
-      "alg": "D"
-    },
-    {
-      "title": "Turn L",
-      "context": "At FL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "1/4 petals",
-      "alg": "L"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At DL; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DL → DB",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At DB; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "DB → DR",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At DR; home DF.",
-      "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
-      "alg": "D'"
-    },
-    {
-      "title": "Turn L",
-      "context": "At UL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "UL → FL",
-      "alg": "L"
-    },
-    {
-      "title": "Turn L",
-      "context": "At FL; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "FL → DL",
-      "alg": "L"
-    },
-    {
-      "title": "Turn D",
+      "title": "Move yellow–blue edge",
       "context": "At DL; home DB.",
       "objective": "Build the yellow cross",
       "outcome": "DL → DF",
       "alg": "D"
     },
     {
-      "title": "Turn D",
+      "title": "Move yellow–blue edge",
       "context": "At DF; home DB.",
       "objective": "Build the yellow cross",
-      "outcome": "DF → DR",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D",
-      "context": "At DR; home DB.",
-      "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
-      "alg": "D"
-    },
-    {
-      "title": "Turn D'",
-      "context": "At DF; home DL.",
-      "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
+      "outcome": "DF → DL",
       "alg": "D'"
     },
     {
-      "title": "Turn D",
-      "context": "At DR; home DB.",
+      "title": "Move yellow–blue edge",
+      "context": "At DL; home DB.",
       "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
+      "outcome": "DL → DF",
       "alg": "D"
     },
     {
-      "title": "Turn D'",
-      "context": "At DF; home DL.",
+      "title": "Move yellow–blue edge",
+      "context": "At DF; home DB.",
       "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
+      "outcome": "DF → DL",
       "alg": "D'"
     },
     {
-      "title": "Turn D",
-      "context": "At DR; home DB.",
+      "title": "Move yellow–blue edge",
+      "context": "At DL; home DB.",
       "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
+      "outcome": "DL → DF",
       "alg": "D"
     },
     {
-      "title": "Turn D'",
-      "context": "At DF; home DL.",
+      "title": "Move yellow–blue edge",
+      "context": "At DF; home DB.",
       "objective": "Build the yellow cross",
       "outcome": "Edge solved",
-      "alg": "D'"
+      "alg": "D2"
     },
     {
-      "title": "Turn D",
-      "context": "At DR; home DB.",
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
       "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "2/4 petals",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "R"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At UB; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "UB → BL",
+      "alg": "B"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
       "alg": "D"
     },
     {
-      "title": "Turn D'",
-      "context": "At DF; home DL.",
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
       "objective": "Build the yellow cross",
-      "outcome": "Edge solved",
-      "alg": "D'"
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
+    },
+    {
+      "title": "Move yellow–red edge",
+      "context": "At BL; home DR.",
+      "objective": "Build the yellow cross",
+      "outcome": "",
+      "alg": "D"
     }
   ],
   "skills": [

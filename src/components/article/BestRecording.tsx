@@ -48,7 +48,7 @@ export function BestRecording() {
   return (
     <div ref={ref} className="recorded-demo">
       <div className="demo-top">
-        <span className="eyebrow">LATEST BATCH · BEST BY FACE TURNS</span>
+        <span className="eyebrow">FRESH RECORDING · ORIGINAL STARTING STATE</span>
         <span>Recorded replay · no API calls · {speed}×</span>
       </div>
       <div className="comparison-stage">
@@ -113,17 +113,16 @@ export function BestRecording() {
           setPaused(ended || reduced ? false : !paused); setReduced(false);
         }} />
       <p className="fine-print" style={{ padding: '0 20px' }}>
-        Case 30 of 100: the fewest-turn success, selected after evaluation. The full batch solved
-        98/100 with a median of 79 turns. This example took 59 turns and 128 requests; it is not the
-        fastest solve or a typical result. Each action may execute several turns.
+        Fresh attempt on the original featured starting state. This run took {recording.result.turns}
+        {' '}turns and {recording.result.requests} requests. The original evaluation solved 98/100;
+        this recording is a separate demonstration.
       </p>
       <details>
         <summary>Recording source and first request</summary>
         <p>
           {recording.selection} Timings come from saved request, response and action events.
           Playback starts at the first request and ends at the final action; the full-attempt time
-          also includes surrounding local work. Source: <code>research/evidence/grouped-menu/</code>
-          , case <code>{recording.caseId}</code>.
+          also includes surrounding local work. Run: <code>{recording.runId}</code>.
         </p>
         <RequestView request={recording.firstRequest as import('../../lib/types').JevRequest} />
       </details>

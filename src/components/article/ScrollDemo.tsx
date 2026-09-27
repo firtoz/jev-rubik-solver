@@ -96,7 +96,7 @@ export function ComparisonDemo({
     <div ref={ref} className="recorded-demo comparison-demo">
       <div className="demo-top">
         <span className="eyebrow">REAL RECORDINGS · NO API CALLS</span>
-        <span>Same scramble · {speed}× speed{latest ? ' · selected best case' : ''}</span>
+        <span>Same scramble · {speed}× speed{latest ? ' · fresh paired recording' : ''}</span>
       </div>
       <div className="comparison-cubes">
         {[left, right].map((recording, index) => {
@@ -220,10 +220,11 @@ export function ComparisonDemo({
       </div>
       {latest && (
         <p className="fine-print" style={{ padding: '0 20px' }}>
-          Case 30 was selected after evaluation because the grouped-menu solver used the fewest
-          turns: 59, across 128 requests. We recorded the single-turn comparison from the same
-          starting cube. Both attempts allowed 100 turns, 500 requests and ten minutes. This is a
-          deliberately favourable example of the grouped-menu solver.
+          Fresh attempts from the same starting cube used in the earlier replay. That starting
+          state was originally selected as the fewest-turn case in the 100-cube evaluation.
+          Both policies were recorded again, sequentially, with a 100-turn, 500-request and
+          ten-minute limit. This is a demonstration on a favourable starting state, not a new
+          reliability evaluation.
         </p>
       )}
       <p className="fine-print">
@@ -240,9 +241,8 @@ export function ComparisonDemo({
         </p>
         <p>
           Cost estimates accumulate as recorded responses arrive and freeze with playback. Full-run
-          totals include the single-turn attempt’s remaining requests after the cutoff. That run was
-          interrupted and resumed, so its timeline includes the gap. Its total also includes a
-          $0.002688 allowance for an uncertain HTTP attempt, which may not have been billed.
+          totals include the single-turn attempt’s remaining requests after the comparison stops.
+          These fresh timings include network and provider latency; cube animation is for display.
         </p>
       </details>
     </div>

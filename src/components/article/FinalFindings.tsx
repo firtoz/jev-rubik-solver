@@ -181,7 +181,7 @@ export function FinalApproach() {
         <Link to="/request-flow">
           Inspect a recorded round's observations, questions and answers
         </Link>
-        . The viewer follows the 59-turn solve featured above.
+        . The viewer follows the fresh solve featured above.
       </p>
     </>
   );

@@ -312,7 +312,7 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
     </RoundPreview>
     <h1>Inside one real solve</h1>
     <div className="flow-overview">{['Observations','Questions','Answers','Execution','Fresh observations'].map((label,i)=><span key={label}>{i>0&&<FlowArrow/>}{label}</span>)}</div><details className="flow-reading-key"><summary>Reading this recording</summary><p>Each round ends with one executed action, which can contain several turns. Colored diagrams explain the recorded inputs; JEV receives the text and values. Bars show option probabilities. Confidence is the provider’s separate statistic, not solve success. Request times and estimated costs come from our app.</p><p>U up · D down · F front · B back · R right · L left. A chosen reference renames the faces without turning the cube.</p></details>
-    <p className="wire-caption">Grouped-menu solver · {recording.id} · {recording.steps.length} rounds · {recording.turns} face turns · {(recording.elapsedMs / 1000).toFixed(1)} seconds. The article’s selected fewest-turn solve from the latest 100-case batch. Every request and response below belongs to that same solve. Viewing it makes no JEV calls.</p>
+    <p className="wire-caption">Grouped-menu solver · {recording.id} · {recording.steps.length} rounds · {recording.turns} face turns · {(recording.elapsedMs / 1000).toFixed(1)} seconds. Fresh recording from the article’s original starting state. Every request and response below belongs to that same solve. Viewing it makes no JEV calls.</p>
     <div className="flow-sticky-navigation" ref={navigation}>
     <nav className="wire-toolbar round-navigation" aria-label="Decision round navigation">
       <div className="round-control-group">
