@@ -751,3 +751,68 @@
 .preview-decision .replay-goal dl { margin-bottom:0; }
 
 .round-step-tabs .request-round-label { padding:5px 8px;color:var(--flow-muted);font-size:11px;flex-shrink:0; }
+
+/* Below laptop widths the player belongs in the document, not over the text. */
+@media (max-width: 900px) {
+  .flow-article-header { padding: 16px; gap: 16px; flex-wrap: wrap; }
+  .wire-board.has-round-preview { padding: 16px; }
+  .has-round-preview > h1 { padding-right: 0; font-size: clamp(23px, 4vw, 32px); }
+  .round-preview {
+    position: relative; inset: auto; width: 100%; height: auto; max-height: none;
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    margin-bottom: 24px; z-index: auto; overflow: hidden;
+  }
+  .round-preview > .round-preview-heading { grid-column: 1; grid-row: 1; padding: 12px 10px 0; }
+  .round-preview-heading small { display: none; }
+  .round-preview > .round-preview-cube { grid-column: 1; grid-row: 2; height: clamp(150px, 30vw, 240px); align-self: start; }
+  .round-preview > .preview-decision { grid-column: 2; grid-row: 1 / 3; border-top: 0; border-left: 1px solid var(--flow-border); padding: 12px; gap: 7px; min-width: 0; }
+  .round-preview > .preview-executing { grid-column: 1 / -1; grid-row: 3; padding: 10px; }
+  .round-preview > .round-step-tabs { grid-column: 1 / -1; grid-row: 4; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); padding: 8px; max-height: none; overflow: visible; gap: 5px; }
+  .round-preview .round-step-tabs .request-round-label { grid-column: 1 / -1; }
+  .round-preview .round-step-tabs a { font-size: 11px; min-height: 44px; align-items: center; padding: 8px; gap: 5px; }
+  .round-preview .step-duration { font-size: 9px; }
+  .round-preview .round-step-tabs a > span { flex-basis: 12px; }
+  .round-preview .round-step-tabs a > .step-label { flex: 1; }
+  .round-preview > .round-preview-status { grid-column: 1 / -1; }
+  .has-round-preview .flow-sticky-navigation { padding-right: 0; min-height: 0; }
+  .flow-sticky-navigation .round-navigation { gap: 8px; flex-wrap: wrap; }
+  .round-control-group { max-width: 100%; }
+  .round-select-wrap { min-width: 0; }
+  .board .round-navigation select { min-width: 0; width: 100%; font-size: 13px; }
+  .round-request-count { font-size: 11px; }
+  .wire-caption, .wire-board code, .wire-board dd { overflow-wrap: anywhere; }
+  .observation-linked, .target-observation-linked, .wire-exchange { grid-template-columns: minmax(0,1fr); }
+  .wire-exchange > .wire-output { grid-column: 1; border-left: 0; }
+  .observation-net-sticky, .target-net-sticky { position: static; max-width: 380px; margin-inline: auto; }
+  .wire-board .request-section-title { font-size: 18px; gap: 8px; }
+  .wire-board pre { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
+}
+@media (max-width: 480px) {
+  .flow-article-header { padding: 14px 10px; font-size: 11px; justify-content: space-between; }
+  .wire-board.has-round-preview { padding: 10px; font-size: 13px; }
+  .round-preview > .preview-decision { padding: 10px; font-size: 11px; }
+  .round-preview .preview-objective { font-size: 12px; }
+  .round-preview .preview-decision > strong { font-size: 12px; }
+  .board .preview-decision > p { font-size: 11px; }
+  .round-preview .preview-decision-moves { gap: 4px; }
+  .round-preview .preview-decision-moves code { font-size: 11px; padding: 4px 5px; }
+  .round-preview .round-step-tabs { grid-template-columns: minmax(0,1fr); }
+  .round-preview .round-step-tabs a { font-size: 12px; }
+  .wire-board .wire-preparation, .wire-board .wire-sent, .wire-board .wire-output, .wire-board .wire-execution { padding: 12px; }
+  .wire-board .wire-next { padding: 12px; }
+  .wire-preparation > dl > div { grid-template-columns: minmax(0,1fr); gap: 5px; }
+  .compact-question .compact-criteria > div { grid-template-columns: minmax(0,1fr); gap: 4px; }
+  .response-heading { flex-wrap: wrap; gap: 6px; }
+  .do-fields > div { min-width: 0; }
+}
+@media (max-width: 480px) {
+  .wire-board .observation-snapshot { padding: 12px; }
+  .observation-linked .observation-card summary { padding: 7px; }
+  .observation-card summary strong { font-size: 14px; }
+  .observation-card summary b { font-size: 12px; }
+  .observation-card summary code { font-size: 10px; }
+}
+@media (max-width: 360px) {
+  .observation-linked .observation-cards { grid-template-columns: minmax(0,1fr); }
+  .observation-linked .observation-card summary { flex-direction: row; align-items: center; }
+}
