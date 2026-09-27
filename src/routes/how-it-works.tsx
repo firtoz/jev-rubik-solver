@@ -137,11 +137,11 @@ function Article() {
           <aside className="article-toc">
             <span>THE EXPERIMENT</span>
             {[
-              ['start', '01 / Why routines helped'],
-              ['decompose', '02 / The final approach'],
-              ['measure', '03 / Results and tradeoffs'],
-              ['beyond', '04 / Applying the method'],
-              ['appendix', 'Appendix / Details and evidence'],
+              ['start', '01 / Choosing individual turns'],
+              ['decompose', '02 / The approach we kept'],
+              ['measure', '03 / What the evidence supports'],
+              ['beyond', '04 / Beyond the cube'],
+              ['appendix', 'Appendix / The evidence behind the story'],
             ].map(([id, title]) => (
               <a key={id} href={'#' + id}>
                 {title}

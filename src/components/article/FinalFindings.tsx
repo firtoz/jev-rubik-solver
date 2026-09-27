@@ -213,12 +213,46 @@ export function FinalApproach() {
 export function FinalResults() {
   return (
     <>
+      <h3>How we improved the questions</h3>
       <p>
-        We tested questions on varied labelled situations, compared a few variants on the same
-        inputs, then tested complete stages from identical starting states. Promising changes had to
-        survive small paired full solves before a final test on 100 new random-state cubes. “Frozen”
-        means the prompts, routine library and code were fixed before that test; expected answers
-        stayed in the evaluator, outside model requests.
+        We worked on individual decisions before testing the whole solve. The useful loop was to
+        compare a few alternatives, inspect their mistakes and refine the promising ones. The
+        model stayed fixed throughout; we changed what we told it and how we divided the task.
+      </p>
+      <ol className="experiment-method">
+        <li>
+          <strong>Start with varied cases and a baseline.</strong> Choose one decision to test,
+          collect different cube situations and label the acceptable answers. More than one answer
+          can be valid. Those labels belong to the evaluator and never go into JEV’s request.
+        </li>
+        <li>
+          <strong>Compare a few variants fairly.</strong> Try different wording on the same inputs,
+          keeping the available information and answer options fixed. Score the chosen answers
+          against the labels and inspect which cases changed. JEV’s confidence is not the score.
+        </li>
+        <li>
+          <strong>Refine a promising version, then stop if gains stall.</strong> Use it as the
+          baseline for another small comparison. When wording changes stopped helping or made
+          things worse, we paused that line of work and tried a different observation format or
+          split the question further. A plateau meant we had run out of useful changes to try,
+          not that we had found the best possible prompt.
+        </li>
+        <li>
+          <strong>Check fresh cases before keeping a change.</strong> Freeze the candidate and
+          test inputs that did not guide its wording. If those failures inform another revision,
+          retire that validation set. Repeatedly improving one small test set can just teach us
+          how to fit that set.
+        </li>
+        <li>
+          <strong>Put the decisions back together.</strong> Test complete stages from identical
+          starting cubes, then small paired full solves. A better answer score only earns its
+          place if it helps the workflow, with turns, requests, latency and cost measured too.
+        </li>
+      </ol>
+      <p>
+        Experiment sizes and stopping limits varied with the question and remaining budget.
+        The appendix records the individual comparisons, including regressions. After development,
+        we froze the prompts, routine library and code for a final test on 100 new random-state cubes.
       </p>
       <p>
         To measure our last changes, we compared two versions of the routine-based solver.{' '}
