@@ -28,8 +28,9 @@ export function ObservationBoundary() {
         <a href="https://github.com/AmoghCreator/doom-jev/tree/main/agent">
           separate community implementation
         </a>{' '}
-        exposes its inputs and includes automatic aiming and firing. It illustrates an assistance
-        boundary; it is not evidence that JEV handles every decision in the official demo.
+        exposes its inputs and includes automatic aiming and firing. Its inputs show how that
+        implementation divides the work between code and model. We could not use it to infer the
+        exact setup of the official demo.
       </p>
       <h4>What we measured</h4>
       <p>
@@ -38,6 +39,12 @@ export function ObservationBoundary() {
         descriptions. Acceptable answers stayed in the offline evaluator. A full-chain pass requires
         correct recognition, goal, target, situation, reference and a useful action, or a correct
         cross-completion handoff.
+      </p>
+      <p>
+        The fixtures were filtered to have usable routines for eligible targets. Five cases per set
+        require a cross handoff rather than an action. These are controlled component tests, not a
+        representative full-scramble solve rate. This initial comparison did not isolate the effect
+        of memory.
       </p>
       <div style={{ overflowX: 'auto' }}>
         <table>
@@ -81,9 +88,8 @@ export function ObservationBoundary() {
         One action-only revision used canonical slot names and placed the selected target directly
         beside the question. Saved earlier answers were reused without correction. Code/player moved
         from 10/20 to 9/20; JEV/player moved from 10/20 to 11/20. We kept the original candidates
-        under the rule requiring neither arm to regress. This does not establish that canonical
-        naming is harmful: the revision changed several details and the sample is small. Its
-        formatting fix remains useful for future work.
+        under the rule requiring neither arm to regress. Because the revision changed several
+        details on a small set, it could not isolate the effect of the slot names.
       </p>
       <p>
         Fresh validation scored 12/20 complete chains with code-measured observations and 8/20 with
@@ -94,9 +100,8 @@ export function ObservationBoundary() {
         belongs to a different policy.
       </p>
       <p>
-        The next question to test is whether JEV can explicitly check alignment or landing occupancy
-        before choosing a routine. That would add a dependent call where these failures occurred. It
-        is a hypothesis for another experiment, not a demonstrated improvement.
+        Those failures led to the next experiment: ask JEV to check alignment or landing occupancy
+        explicitly before choosing a routine.
       </p>
       <h4>Follow-up: ask about the precondition explicitly</h4>
       <p>
@@ -141,10 +146,10 @@ export function ObservationBoundary() {
       </div>
       <p>
         This study used 200 requests and cost $0.00517. It supports these isolated checks, with the
-        prior decisions supplied. It does not yet establish correct setup turns, routine selection
-        or complete solves. The next integration must feed in JEV’s actual earlier choices and
-        execute the resulting actions without correction. All tested landing routines require one
-        free slot; routines with multiple landing requirements remain outside this result.
+        prior decisions supplied. We still needed to connect the checks to JEV’s actual earlier
+        choices and execute the selected moves to measure setup and routine errors. All tested
+        landing routines require one free slot; routines with multiple landing requirements remain
+        outside this result.
       </p>
       <h4>Then connect those checks to real model choices</h4>
       <p>
@@ -168,113 +173,105 @@ export function ObservationBoundary() {
       <p>
         A development example exposed another distinction: two free top slots were opposite each
         other, but the chosen routine needed adjacent slots. No U turn could fix that. JEV correctly
-        abstained at setup selection. The next policy needs JEV-directed reconsideration of the
-        routine, rather than code silently switching algorithms. A different case had a valid
-        clearing turn that JEV missed. Those are different failures and need different tests.
+        abstained at setup selection. We therefore added a way for JEV to reconsider a blocked
+        routine. A different case had a valid clearing turn that JEV missed. Those are different
+        failures and need different tests.
       </p>
       <h3>Testing repeated decisions</h3>
       <p>
         The next revision exposed the uncollected-edge count, focused recognition on the selected
-        piece, and let JEV reconsider a blocked routine. It passed 19/20 development cases and
-        20/20 fresh action-cycle cases. In four short trajectories, three completed the cross;
-        the fourth exhausted its 60 requests. Independent replay confirmed all recorded states.
+        piece, and let JEV reconsider a blocked routine. It passed 19/20 development cases and 20/20
+        fresh action-cycle cases. In four short trajectories, three completed the cross; the fourth
+        exhausted its 60 requests. Independent replay confirmed all recorded states.
       </p>
       <p>
-        In the capped run, JEV correctly selected the empty UF slot, then chose a quarter turn
-        to move it to the opposite UB slot. That required a half turn. It recovered on the next
-        cycle, but repeated observations and preparation decisions consumed the request allowance.
-        This round used 262 calls and cost $0.00900. These results cover early-stage decisions,
-        not full-cube reliability. A focused follow-up checked all twelve distinct top-slot
-        transfers. Arrow-cycle notation passed 10/12; plain direction descriptions passed 12/12,
-        for $0.00043 across both forms. Both arrow-notation errors confused opposite slots with
-        neighbouring slots. One call per pair does not establish repeatability; the larger
-        policy still needs a fresh test with the new wording.
+        In the capped run, JEV correctly selected the empty UF slot, then chose a quarter turn to
+        move it to the opposite UB slot. That required a half turn. It recovered on the next cycle,
+        but repeated observations and preparation decisions consumed the request allowance. This
+        round used 262 calls and cost $0.00900. These results cover early-stage decisions, not
+        full-cube reliability. A focused follow-up checked all twelve distinct top-slot transfers.
+        Arrow-cycle notation passed 10/12; plain direction descriptions passed 12/12, for $0.00043
+        across both forms. Both arrow-notation errors confused opposite slots with neighbouring
+        slots. Each pair was tested once. We then checked the new wording in fresh action cases and
+        trajectories.
       </p>
       <h3>When the pieces disagree about a goal</h3>
       <p>
         With the direction wording, a new set passed 19/20 action cases and all four cross
-        trajectories finished. One required 67 requests under a larger 120-request cap, so this
-        is not a controlled comparison with the previous round.
+        trajectories finished. One required 67 requests under a larger 120-request cap, so this is
+        not a controlled comparison with the previous round.
       </p>
       <p>
-        Connecting that controller to the full goal selector exposed a teaching conflict.
-        The older reference allowed direct cross solving; the new cross controller only transferred
-        petals. In all four development starts, JEV eventually chose cross with no petal to transfer
-        and stopped. Those 59 calls cost $0.00275. The next experiment tests consistent goal
-        definitions before attempting more full solves. Shared labels need to mean the same thing
-        in every part of the process.
+        Connecting that controller to the full goal selector exposed a teaching conflict. The older
+        reference allowed direct cross solving; the new cross controller only transferred petals. In
+        all four development starts, JEV eventually chose cross with no petal to transfer and
+        stopped. Those 59 calls cost $0.00275. We tested consistent goal definitions next. A shared
+        label has to mean the same thing in every part of the process.
       </p>
       <p>
-        Replacing those definitions resolved the isolated goal test: both compact facts and
-        detailed face observations passed 32/32 development states, four per goal. The compact
-        form used 54% fewer input tokens and then passed 32/32 different validation states.
-        These are constructed goal-selection cases. Full solves still need to test whether
-        the decisions work together over time.
+        Replacing those definitions resolved the isolated goal test: both compact facts and detailed
+        face observations passed 32/32 development states, four per goal. The compact form used 54%
+        fewer input tokens and then passed 32/32 different validation states. These were constructed
+        goal-selection cases. They qualified the wording for another full-solve test.
       </p>
       <p>
-        The corrected full policy then solved all four development starts: two short scrambles
-        and two full random-state scrambles. They took 115 to 226 requests each and cost $0.04274
-        together. Independent replay checked every move and final cube. The next ten fresh random-state
-        validation attempts produced nine solves and one HTTP 529 failure. That failure remains
-        in the denominator. A fresh follow-up keeps the prompts unchanged and permits one
-        identical-request retry for rate limits or overload, with both attempts counted.
-        The required 95/100 reliability remains untested.
+        The corrected full policy then solved all four development starts: two short scrambles and
+        two full random-state scrambles. They took 115 to 226 requests each and cost $0.04274
+        together. Independent replay checked every move and final cube. The next ten fresh
+        random-state validation attempts produced nine solves and one HTTP 529 failure. That failure
+        remains in the denominator. For the follow-up, we kept the prompts unchanged and allowed one
+        identical-request retry for rate limits or overload. Both attempts counted against the
+        limits. We had not yet run the 100-cube evaluation.
       </p>
       <p>
-        The bounded-retry follow-up also finished at 9/10. Its failure was a request timeout,
-        which that retry rule did not cover. Before the timeout, the cube had repeated a state:
-        JEV cleared space for one routine, then chose a different routine and cleared the space
-        back again. Remembering the last moves had lost the purpose of those moves. The next
-        component experiment will give JEV its own pending plan as memory and test whether it
-        completes the setup before changing approach. The final 100-cube test remains gated.
+        The bounded-retry follow-up also finished at 9/10. Its failure was a request timeout, which
+        that retry rule did not cover. Before the timeout, the cube had repeated a state: JEV
+        cleared space for one routine, then chose a different routine and cleared the space back
+        again. Remembering the last moves had lost the purpose of those moves. This prompted a
+        component test of plan memory: could JEV remember why it had made a setup move and finish
+        that plan?
       </p>
       <h3>Remembering a plan can introduce a new mistake</h3>
       <p>
-        Giving JEV its pending routine improved prepared-action selection from 12/20 to 19/20
-        on development situations. But the memory prompt then failed all six checks where the
-        remembered routine no longer matched the piece. It copied the old action. We did not
-        adopt that prompt.
+        Giving JEV its pending routine improved prepared-action selection from 12/20 to 19/20 on
+        development situations. But the memory prompt then failed all six checks where the
+        remembered routine no longer matched the piece. It copied the old action. We did not adopt
+        that prompt.
       </p>
       <p>
         A separate resume-or-reconsider question compared the remembered plan with current
         conditions. It passed 24/24 new component cases, including changed targets, reference
-        frames, positions, sticker directions and protected pieces. The integration now requires
-        an explicit JEV commitment before resuming a routine. The known-loop cube then solved: JEV resumed the staging routine after its setup,
-        instead of switching routines and clearing back again. All four development starts
-        solved and replay-verified, costing $0.0391. The frozen policy then solved and replay-verified 10/10 fresh validation cubes,
-        costing $0.10235. The frozen policy then solved 100/100 fresh full random-state cubes,
-        independently replay-verified within all limits. Median solve time was 76 seconds,
-        with 174 requests and 160 face turns. The final test committed $1.015, including
-        reservations for two uncertain requests that were retried. The two earlier 9/10
-        results remain in the record. This measures one held-out set with supplied beginner
-        routines and reliable code observations; future success is not guaranteed.
+        frames, positions, sticker directions and protected pieces.
       </p>
       <p>
-        The fixtures were filtered to have usable routines for eligible targets. Five cases per set
-        require a cross handoff rather than an action. These are controlled component tests, not a
-        representative full-scramble solve rate. Memory is present in the interface but its
-        usefulness was not isolated in this experiment.
+        We changed the integration to require JEV to confirm that it wanted to resume the routine.
+        The known-loop cube then solved: JEV resumed the staging routine after its setup, instead of
+        switching routines and clearing back again. All four development starts solved and
+        replay-verified, costing $0.0391. With that policy fixed, it solved 10/10 fresh validation
+        cubes for $0.10235, followed by 100/100 fresh random-state cubes. Every recorded solve
+        passed mechanical replay and the study limits. Median solve time was 76 seconds, with 174
+        requests and 160 face turns. The final test accounted for $1.015, including reservations for
+        two uncertain requests that were retried. The two earlier 9/10 results remain in the record.
+        That evaluation used supplied beginner routines, code-measured observations and the earlier
+        1,000-turn ceiling. Its 100/100 result is separate from the final 100-turn evaluation.
       </p>
+
       <p>
-        <Link to="/request-flow">
-          Inspect the exact requests and responses in the whiteboard viewer →
-        </Link>
+        <Link to="/request-flow">Inspect the final solver’s recorded requests and responses</Link>
       </p>
       <details>
-        <summary>Reproduce this study and interpret the assistance</summary>
+        <summary>Data behind this experiment</summary>
         <p>
-          Use Bun from the repository root. Saved results are under{' '}
-          <code>experiments/observation-boundary-v1</code>. The policy module has no access to the
-          evaluator. The offline evaluator may inspect candidate outcomes to establish acceptable
-          labels, but those outcomes never enter a live request.
-        </p>
-        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
-        <p>
-          Existing study markers prevent accidental reruns. The shared ledger limited this experiment
-          to 400 requests and $0.05 including outstanding reservations, within the project’s $
-          {'5'}
-          ceiling. At most four calls run concurrently and failed requests are not retried. Preserve
-          the existing results when designing a new study.
+          The displayed results are in{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/src/lib/observation-boundary-summary.json">
+            observation-boundary-summary.json
+          </a>
+          . The{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/notes.md">
+            research notebook
+          </a>{' '}
+          records the changes and their limits. These older study runners have been retired. For the
+          current solver, see <a href="#reproduce">local setup and offline verification</a>.
         </p>
       </details>
     </section>

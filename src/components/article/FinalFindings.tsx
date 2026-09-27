@@ -77,9 +77,9 @@ export function ReaderOrientation() {
           </div>
         </dl>
         <p>
-          This is a hybrid teaching method: beginner-style cross preparation, supplied F2L routines
-          and last-layer algorithms. It is not a model inventing CFOP, an optimal solver or a
-          speedcubing benchmark.{' '}
+          Our method combines beginner cross preparation with supplied F2L and last-layer
+          algorithms. We measure how well JEV can apply that teaching. Algorithm discovery and
+          speedcubing performance are outside this experiment.{' '}
           <a href="https://www.rubiks.com/solution-guides">Rubik's beginner guides</a> introduce the
           puzzle and a simpler layer-by-layer method.
         </p>
@@ -92,14 +92,14 @@ export function FinalApproach() {
   return (
     <>
       <p>
-        We got further by asking what a practiced player would notice. A player can recognise a
-        trapped edge, remember which pair they are working on and execute a familiar algorithm. They
-        do not need to invent a solution one face turn at a time.
+        A practiced player can notice a trapped edge, remember the pair they are working on and use
+        a familiar algorithm to free it. That suggested a more manageable job for JEV: recognise the
+        situation, prepare the pieces and choose a routine.
       </p>
       <p>
-        We gave JEV that routine vocabulary and reliable measurements. Its job was to decide which
-        routine applied, how to prepare for it and when to change course. This is substantial
-        teaching, and part of what made the result possible.
+        We supplied the routine descriptions and used code to measure the cube. JEV had to connect
+        those measurements to the reference and decide what to do. The reference contains a
+        substantial amount of solving knowledge.
       </p>
       <ol className="article-decision-path">
         <li>
@@ -142,7 +142,7 @@ export function FinalApproach() {
         </li>
       </ol>
       <div className="article-note">
-        <b>A routine choice in miniature</b>
+        <b>An example: choosing a four-turn routine</b>
         <p>
           Suppose the chosen corner and edge are both in the top layer, ready to be inserted as a
           pair. Code reports their positions and sticker directions. JEV first identifies the corner
@@ -155,20 +155,16 @@ export function FinalApproach() {
           during execution.
         </p>
         <p className="fine-print">
-          Illustrative library case, not a quoted model explanation. Exact reference: corner UFR
-          with its down-color sticker facing R; edge UF with its front-color sticker facing F. In
-          plain terms, the corner is at top-front-right and the edge at top-front. Their colors
-          matter as well as their positions.
+          This example comes from the supplied library. The corner is at UFR (top-front-right), with
+          its bottom color facing right. The edge is at UF (top-front), with its front color facing
+          front. Both positions and sticker directions are needed to identify the case.
         </p>
       </div>
       <p>
-        This is a sketch of the loop, not five fixed API calls. Independent questions can share a
-        request; a question that needs a previous answer must wait. Some choices remain simple rule
-        checks that ordinary code could perform. We left these with JEV to measure where the
-        decision chain succeeds or breaks; that is an experimental choice, not a recommendation to
-        put every predicate behind an API. The measured capability is applying a supplied method
-        across many decisions. The analogy to a player describes how we organised the task; it does
-        not establish human-like reasoning inside the model.
+        Each part of this loop can take several requests. We batch independent questions and wait
+        when a question needs an earlier answer. Some goal checks are simple enough to implement
+        directly in code. We kept them with JEV to study errors across the complete decision
+        sequence; in a practical application, those calls might be unnecessary.
       </p>
       <div className="article-note">
         <b>What stayed in code</b>
@@ -183,8 +179,7 @@ export function FinalApproach() {
         <Link to="/request-flow">
           Inspect a recorded round's observations, questions and answers
         </Link>
-        . The viewer identifies its recording; it is not a replay of every case in the final
-        evaluation.
+        . The viewer follows the 59-turn solve featured above.
       </p>
     </>
   );
@@ -205,8 +200,8 @@ export function FinalResults() {
         <b>Full-menu solver</b> asks JEV to select an F2L routine from the whole library.{' '}
         <b>Grouped-menu solver</b> first asks for the corner family, then shows that family’s
         routines. It also refines early preparation with explicit landing-space protection and
-        routine turn costs. Both supply algorithms and let JEV choose actions; neither is the
-        single-turn approach shown above.
+        routine turn costs. Both versions choose from supplied algorithms. The single-turn solver in
+        the replay is a separate comparison.
       </p>
       <div className="article-table-wrap">
         <table className="article-results-table">
@@ -256,18 +251,18 @@ export function FinalResults() {
         explained in the appendix.
       </p>
       <p>
-        Two changes earned their place: asking JEV to prepare a free destination for a yellow edge
-        reduced cross-building moves; splitting F2L recognition reduced input tokens, the text units
-        billed by the API. Better wording sometimes made an isolated question more accurate without
-        changing the completed solve. Combining several decisions into one request also lost
-        accuracy in our extraction tests.
+        In paired stage tests, asking JEV to prepare a free destination for a yellow edge reduced
+        the moves needed to build the cross. Splitting F2L recognition reduced the amount of input
+        text sent to JEV. Other changes were less useful: improved wording sometimes raised a
+        question’s score without improving completed solves, and combining extraction decisions into
+        one request reduced accuracy.
       </p>
       <p>
-        The grouped-menu solver stopped twice: it chose the wrong reference face once and failed to
-        extract a trapped edge once. It abstained rather than returning a usable move sequence. A
-        transient HTTP failure was retried successfully. All cases remain in the results. Confidence
-        values are provider-reported statistics; we have not calibrated them as probabilities of
-        solving a cube.
+        Two attempts stopped after earlier mistakes left JEV unable to select a usable routine. One
+        began with a wrong reference face; the other skipped a required extraction. A transient HTTP
+        failure was retried successfully. All cases remain in the results. Confidence values are
+        provider-reported statistics; we have not calibrated them as probabilities of solving a
+        cube.
       </p>
       <p>
         <a href="#appendix-final">
@@ -283,12 +278,12 @@ export function FinalAppendix() {
     <div className="appendix-content">
       <h3>Grouped-menu solver: evaluation protocol</h3>
       <p>
-        The grouped-menu solver at <code>src/solver/policy.ts</code> combines
-        protected early preparation and grouped F2L recognition. Its white-edge orientation,
-        white-corner orientation and PLL decisions are unchanged from the full-menu solver. These
-        are the later solving stages defined in the notation guide. The model is fixed at
-        jev-1.13.0. Each attempt allows 100 face turns, 500 HTTP attempts and ten minutes, with two
-        concurrent attempts. A half turn counts as one; repeats and undo moves count too.
+        The grouped-menu solver at <code>src/solver/policy.ts</code> combines protected early
+        preparation and grouped F2L recognition. Its white-edge orientation, white-corner
+        orientation and PLL decisions are unchanged from the full-menu solver. These are the later
+        solving stages defined in the notation guide. The model is fixed at jev-1.13.0. Each attempt
+        allowed 100 face turns, 500 HTTP attempts and ten minutes. We ran at most two attempts
+        concurrently. A half turn counts as one; repeats and undo moves count too.
       </p>
       <p>
         The sample size was fixed at 100 before outcomes, using measured costs and a $0.50
@@ -330,10 +325,10 @@ export function FinalAppendix() {
         </table>
       </div>
       <p>
-        These extremes are not necessarily the same cases. Elapsed time includes local persistence
-        and host load as well as provider calls. The runner writes growing records after each
-        exchange; we have not isolated the cause of its slower final timings. Individual request
-        latency was median 437 ms and p95 1,007 ms.
+        The fastest solve, shortest solution and fewest requests can belong to different cubes.
+        Elapsed time includes local persistence and host load as well as provider calls. The runner
+        writes growing records after each exchange; we have not isolated the cause of its slower
+        final timings. Individual request latency was median 437 ms and p95 1,007 ms.
       </p>
       <h3>What the controlled comparisons showed</h3>
       <ul>
@@ -347,7 +342,8 @@ export function FinalAppendix() {
           <b>Grouped F2L:</b> all 41 canonical cases passed across development and coverage
           validation. Both the full-menu and grouped-menu F2L variants completed eight fresh paired
           stages. Grouping used 146 versus 155 turns and 20.7% fewer input tokens. Requests rose
-          from 230 to 238. Canonical coverage is not unseen-family validation.
+          from 230 to 238. This covers the supplied case library. It does not test recognition of an
+          unfamiliar family.
         </li>
         <li>
           <b>Daisy wording:</b> after two rounds, isolated labels improved but eight complete stages
@@ -357,8 +353,8 @@ export function FinalAppendix() {
         <li>
           <b>Combined integration:</b> the combined grouped-menu and preparation variant solved four
           of four paired starts versus three of four for the full-menu solver, with lower aggregate
-          cost. On the three jointly solved starts it used nine more turns. The benefit was not
-          uniform.
+          cost. On the three jointly solved starts it used nine more turns. The turn saving depended
+          on the starting cube.
         </li>
         <li>
           <b>Top-cross recognition:</b> explicit definitions of adjacent versus opposite white top
@@ -388,8 +384,8 @@ export function FinalAppendix() {
         </pre>
         <p>
           JEV then allowed routine selection, but the edge was still trapped. Corner-family
-          recognition was correct and the routine selector appropriately abstained. The failure
-          began in preparation, not in missing routine coverage. Provider confidence on the missed
+          recognition was correct and the routine selector appropriately abstained. The first
+          mistake was skipping the required preparation. Provider confidence on the missed
           extraction was 0.14; this single example does not validate a confidence-based retry
           policy.
         </p>
@@ -416,26 +412,24 @@ export function FinalAppendix() {
       <p>
         Goal selection cost about $0.07059 of the final evaluation, routine selection $0.06330,
         conditional early targets $0.04649 and preparation $0.04517. Preparation made 2,637 calls.
-        Cheap tokens do not make a long chain fast or immune to mistakes.
+        Many small requests can keep token costs low while still taking time and giving errors more
+        opportunities to accumulate.
       </p>
       <h3>Records and offline verification</h3>
       <p>
-        The detailed report is <code>docs/research/budget-round-results.md</code>. Fixtures,
-        exact exchanges, completion accounting and replay results are under{' '}
-        <code>research/evidence/grouped-menu/</code>. The public verifier needs no local SQLite ledger. The historical 97/100 result remains in{' '}
-        <code>research/evidence/full-menu/</code>.
+        The detailed report is <code>docs/research/budget-round-results.md</code>. Fixtures, exact
+        exchanges, completion accounting and replay results are under{' '}
+        <code>research/evidence/grouped-menu/</code>. The public verifier needs no local SQLite
+        ledger. The historical 97/100 result remains in <code>research/evidence/full-menu/</code>.
       </p>
-      <pre>
-        {
-          'bun run verify:recordings\nbun run check'
-        }
-      </pre>
+      <pre>{'bun run verify:recordings\nbun run check'}</pre>
       <p>
-        These commands make no model calls. The public verifier checks fixture uniqueness, recorded requests and native answers,
-        policy replay, physical transformations and execution ceilings. Historical source-freeze
-        and held-out checks are retained in the evaluation report.
-        All 100 trajectories passed, along with 16 relevant boundary/mechanics tests containing
-        3,541 assertions. The older evaluation runners have been retired; these records remain immutable evidence.
+        These commands make no model calls. The current verifier checks that the 100 fixtures are
+        unique, reproduces requests from saved answers, applies the moves and checks final states
+        and the 100-turn limit. The original audit also checked frozen sources, prior datasets,
+        request/time limits and the private ledger. That audit recorded 100 verified trajectories
+        and 16 tests with 3,541 assertions. Those are historical check counts; the current test
+        suite has changed.
       </p>
     </div>
   );

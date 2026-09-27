@@ -1,5 +1,7 @@
 # Progress toward 100-turn solves
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 Baseline: 0/100 within 100 turns in the prior confirmation. Its 94 complete solves averaged 176.5 turns. That set is now diagnostic material and will not be reused as a fresh final test.
 
 ## Offline stage audit
@@ -19,13 +21,13 @@ Means cover the 94 completed solves. All 100 original records were reconstructed
 
 ## Corner experiments
 
-Round1 single-request structured/player/effects-only forms passed 1/12, 2/12 and 1/12 development cases. Round2 separated recognition from action: model-recognition completed 12/12 stages but only 7/12 within tight case move ceilings; measured recognition completed 11/12, 4/12 within ceilings. All 148 model pair-color judgements were correct. Remaining errors included U' followed by U2 instead of U. Different outputs on identical downstream inputs prevent attributing the apparent arm difference to recognition source.
+Round 1 single-request structured/player/effects-only forms passed 1/12, 2/12 and 1/12 development cases. Round 2 separated recognition from action: model-recognition completed 12/12 stages but only 7/12 within tight case move ceilings; measured recognition completed 11/12, 4/12 within ceilings. All 148 model pair-color judgements were correct. Remaining errors included U' followed by U2 instead of U. Different outputs on identical downstream inputs prevent attributing the apparent arm difference to recognition source.
 
-Round3 tried conditional intention/reference/destination questions with a separate turn question. Both letter/word variants passed 0/12: intention selection failed before alignment was reached. Round4 made the numeric pair-count prerequisites explicit. Both batched and separate questions passed 12/12 development cases. The batched form used fewer calls, was frozen, and passed all 12 untouched validation cases.
+Round 3 tried conditional intention/reference/destination questions with a separate turn question. Both letter/word variants passed 0/12: intention selection failed before alignment was reached. Round 4 made the numeric pair-count prerequisites explicit. Both batched and separate questions passed 12/12 development cases. The batched form used fewer calls, was frozen, and passed all 12 untouched validation cases.
 
 Development and validation jointly cover all 24 oriented upper-corner permutations, with parity-compatible upper edges. Correct done recognition and preservation of lower layers/orientation are required. Case ceilings are 1, 15 or 29 turns. Labels and evaluator mechanics never enter requests. The first screen cost $0.009195648; the separate alignment diagnostic, including validation, cost $0.006911352. No transport errors in either.
 
-Assistance remains substantial: code measures pair colors/counts, and static criteria teach when to align versus permute and where a T-perm's matching pair belongs. JEV chooses intention, reference, destination and turn. No state-specific recommendation, action simulation or tactical repair. Round2 changed both decomposition and rule placement, so causal claims about either alone are unwarranted.
+Assistance remains substantial: code measures pair colors/counts, and static criteria teach when to align versus permute and where a T-perm's matching pair belongs. JEV chooses intention, reference, destination and turn. No state-specific recommendation, action simulation or tactical repair. Round 2 changed both decomposition and rule placement, so causal claims about either alone are unwarranted.
 
 ## Paired full solves
 

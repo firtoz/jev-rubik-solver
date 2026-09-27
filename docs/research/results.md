@@ -1,5 +1,7 @@
 # Frozen v26 results
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The model-owned skill policy solved **99 of 100 unseen full random-state cubes** under the fixed limits of 500 requests, 1,000 face turns and ten minutes per attempt. This exceeds the experiment's 95/100 acceptance target. The single HTTP 503 failure counts as a failure, without replacement. This is measured performance on one held-out set, not a guarantee about future cubes or individual decisions.
 
 JEV selects the goal, target, intention, reference, setup and operation from static beginner instructions. Code builds factual observations, routes model answers and executes the selected moves. No solving search or outcome-ranked candidate selection is used. Earlier failed final sets were retired before tuning; v26 used a fresh 100-state set after 8/8 fresh validation solves.
@@ -19,10 +21,10 @@ The offline final audit replayed all 3,617 actions from 100 distinct initial sta
 
 Evidence:
 
-- [Full final manifest and results](../experiments/v26-final-100.json)
-- [Offline audit](../experiments/v26-final-audit.json); rerun with `bun scripts/audit-evaluation.ts`
-- [Matched comparison](../experiments/v26-primitive-comparison.json)
-- [Validation](../experiments/v26-frozen-validation.json)
+- Full final manifest and results (archived: `experiments/v26-final-100.json`)
+- Offline audit (archived: `experiments/v26-final-audit.json`); rerun with `bun scripts/audit-evaluation.ts`
+- Matched comparison (archived: `experiments/v26-primitive-comparison.json`)
+- Validation (archived: `experiments/v26-frozen-validation.json`)
 - [Component coverage and historical failures](request-coverage.md)
 
 Reducing request layers is a future optimization requiring fresh validation. The current result does not establish a minimum number of model requests.

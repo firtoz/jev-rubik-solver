@@ -1,5 +1,7 @@
 # Frozen confirmation with HTTP recovery
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 **94/100 cubes independently verified solved.** The 95/100 sample target was missed.
 
 The user amended the transport rule after the original batch: HTTP errors may be retried and are not solver failures. The original no-retry snapshot remains preserved as 62 solves and 38 HTTP interruptions. We resumed the same interrupted cubes, with the same policy, cached successful answers and completed moves. No fresh replacement scrambles or tactical retries were introduced. Transport-unresolved cubes remain in the 100-case accounting and are not presumed solved.
@@ -32,7 +34,7 @@ All 100 records passed independent cube reconstruction, solved-state checking, e
 
 Code supplies measured observations and executes JEV-selected routines. JEV chooses goals, targets, frames, preparations, routines and recovery. Assistance still includes explicit goal criteria, fixed beginner algorithms, four middle-layer examples and other-stage case guidance. There is no tactical correction, simulated-outcome ranking or solver fallback. This measures the frozen system with that assistance, not independent discovery of cube-solving algorithms.
 
-The earlier 94 solves and six budget stops remain [separate](full-teaching-integration-results.md), as does the [original no-retry snapshot](frozen-confirmation-results.md). No earlier outcomes were replaced. Full records: [results.json](../experiments/brain-teaching-confirmation-v1-http-resume/results.json).
+The earlier 94 solves and six budget stops remain [separate](full-teaching-integration-results.md), as does the [original no-retry snapshot](frozen-confirmation-results.md). No earlier outcomes were replaced. Full records: results.json (archived: `experiments/brain-teaching-confirmation-v1-http-resume/results.json`).
 
 ## What this tells us
 

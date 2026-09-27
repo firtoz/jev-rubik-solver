@@ -1,8 +1,10 @@
 # Next goal template
 
+> Archived proposal, not an active task or current spending instruction. See the [research index](README.md) for the completed study.
+
 Draft for the next `/goal`; saving this does not start paid experiments or change the active goal or budget enforcement.
 
-Budget reference: [latest reconciliation](../experiments/budget-round-v1/costs.json). Estimated provider credit is $0.885848362, not a live balance. After preserving $0.10, estimated usable credit is $0.785848362. Refresh the ledger before starting; never treat this allowance as additional to that remaining credit.
+Budget reference: latest reconciliation (archived: `experiments/budget-round-v1/costs.json`). Estimated provider credit is $0.885848362, not a live balance. After preserving $0.10, estimated usable credit is $0.785848362. Refresh the ledger before starting; never treat this allowance as additional to that remaining credit.
 
 ```text
 Improve the frozen 98/100 JEV Rubik candidate, prioritising its

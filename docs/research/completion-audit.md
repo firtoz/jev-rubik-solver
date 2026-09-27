@@ -1,4 +1,6 @@
-# Completion audit — 2026-09-20
+# Completion audit | 2026-09-20
+
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
 
 The v26 skill policy meets the requested 95/100 autonomous full-cube acceptance target at 99/100. This closes the solve-capability goal; it does not claim optimal request count or universal correctness of each component.
 

@@ -1,5 +1,7 @@
 # Protecting prior work in early-stage decisions
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The cost-aware daisy candidate completed three fresh cross stages but disturbed a solved bottom edge in one. Routine selection knew that edge was protected. The later landing question did not, and instructed JEV to lower a blocked top target with F. The model followed that instruction.
 
 The experiment supplies measured protected bottom slots to preparation and lets JEV choose a U reorientation before observing again. Code does not select that action from the state. Fixed routines remain assistance.

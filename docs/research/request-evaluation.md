@@ -1,5 +1,7 @@
 # Request-level wording experiments
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The unit of evaluation is one real JEV request, not an entire solve. Use **20 distinct cube inputs**, one live call per input per wording variant. Compare up to four variants on identical states, context, question keys and option menus. Do not repeat identical calls as a substitute for case diversity.
 
 The first experiment covers the production cross-stage assessment request: target selection plus four independent edge-intention questions. Capture the actual request builder without calling JEV or executing an action. Accept any unfinished target; score all four intention answers against offline labels. Also report the operational result (chosen target and that target's intention), since unused intention answers can fail without affecting the next action.

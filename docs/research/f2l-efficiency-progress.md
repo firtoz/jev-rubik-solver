@@ -1,5 +1,7 @@
 # F2L efficiency experiment
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The old controller solves corners and middle edges separately. This candidate teaches 41 fixed F2L cases that solve a corner and its matching edge together. JEV still selects the target, reference frame, preparation and routine. Code measures sticker directions and executes the selected turns.
 
 The extra routine vocabulary is substantial assistance. This is a method change, not evidence that JEV discovered shorter algorithms or gained reasoning ability. The source is the [CubeSkills F2L reference](https://www.cubeskills.com/uploads/pdf/tutorials/f2l.pdf); all cases, reference transforms and preserved slots are checked mechanically offline. No library case matching or outcome search runs inside the policy.

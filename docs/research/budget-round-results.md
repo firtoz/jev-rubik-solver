@@ -1,5 +1,7 @@
 # Budget round: 98 of 100 cubes solved within 100 turns
 
+> Final evaluation report. Current reproduction commands appear at the end; archived paths identify older study records. See the [research index](README.md).
+
 The selected experimental policy combines protected daisy preparation with grouped F2L recognition. It solved **98 of 100 fresh random-state cubes**, with two model abstentions, no turn/request/time caps and no unresolved transport failures. All 100 trajectories were independently replayed, including the two failures. This completes the experiment; no further spending is needed for this round.
 
 ## Comparison
@@ -17,19 +19,19 @@ These are separate frozen test sets, not a paired final comparison. The one-solv
 
 The new evaluation cost about 4.2% less, used 7.0% more requests and had 24.9% longer median elapsed time. It is a supported cost/turn candidate, not a universal improvement. Timing includes local persistence and host load as well as provider response time; the runner writes growing records after every exchange. We have not isolated the cause of the slowdown. Final request latency was median 437 ms and p95 1,007 ms. There were 9,660,767 input tokens across 13,615 successful exchanges.
 
-[New report](../experiments/budget-round-v1/final-evaluation/report.json), [full replay verification](../experiments/budget-round-v1/final-evaluation/verification.json), [historical report](../experiments/full-pll-v1/final100/report.json).
+[New report](../../research/evidence/grouped-menu/report.json), [full replay verification](../../research/evidence/grouped-menu/verification.json), [historical report](../../research/evidence/full-menu/report.json).
 
 ## What earned inclusion
 
-**Protected preparation:** JEV checks landing occupancy and chooses preparation while preserving completed bottom edges. Static routine descriptions include affected slots and turn counts. On eight fresh paired cross-stage starts, both policies completed all eight; the candidate used 101 versus 150 turns, but 516 versus 483 requests and about 4.9% more cost. This is a substantial local move saving with an explicit request tradeoff. [Evidence](../experiments/early-preparation-v2/stage-validation/report.json).
+**Protected preparation:** JEV checks landing occupancy and chooses preparation while preserving completed bottom edges. Static routine descriptions include affected slots and turn counts. On eight fresh paired cross-stage starts, both policies completed all eight; the candidate used 101 versus 150 turns, but 516 versus 483 requests and about 4.9% more cost. This is a substantial local move saving with an explicit request tradeoff. Evidence (archived: `experiments/early-preparation-v2/stage-validation/report.json`).
 
-**Grouped F2L recognition:** JEV recognises the corner family, then chooses from that family's routines using both pieces. All 41 canonical cases passed across development and coverage validation. This is finite library coverage, not unseen-family generalisation. Eight fresh paired stage starts all completed, using 146 versus 155 turns and 20.7% fewer tokens, but 238 versus 230 requests. Four paired full solves had identical move totals and about 6.4% lower cost. [Stage evidence](../experiments/f2l-recognition-v2/stage-validation/verification.json), [full comparison](../experiments/f2l-recognition-v2/full-integration/report.json).
+**Grouped F2L recognition:** JEV recognises the corner family, then chooses from that family's routines using both pieces. All 41 canonical cases passed across development and coverage validation. This is finite library coverage, not unseen-family generalisation. Eight fresh paired stage starts all completed, using 146 versus 155 turns and 20.7% fewer tokens, but 238 versus 230 requests. Four paired full solves had identical move totals and about 6.4% lower cost. Stage evidence (archived: `experiments/f2l-recognition-v2/stage-validation/verification.json`), full comparison (archived: `experiments/f2l-recognition-v2/full-integration/report.json`).
 
-The combined candidate passed its predeclared four-pair gate: 4/4 solves versus 3/4, 306 versus 307 executed turns, 526 versus 546 requests and $0.01565 versus $0.01796. On the three pairs both solved, the candidate used nine more turns. The aggregate advantage is not uniform. [Combined gate](../experiments/budget-round-v1/full-integration/report.json).
+The combined candidate passed its predeclared four-pair gate: 4/4 solves versus 3/4, 306 versus 307 executed turns, 526 versus 546 requests and $0.01565 versus $0.01796. On the three pairs both solved, the candidate used nine more turns. The aggregate advantage is not uniform. Combined gate (archived: `experiments/budget-round-v1/full-integration/report.json`).
 
 ## What did not earn inclusion
 
-Daisy wording variants improved some isolated classification scores but did not improve eight complete cross-stage trajectories: both used 111 turns and 440 requests; revised wording cost 4.7% more. We stopped after two wording rounds and changed the hypothesis to preparation. Repeated finite-domain focus inputs were repeatability checks, even where their underlying cubes differed. [Evidence](../experiments/daisy-focus-v2/stage-development/report.json).
+Daisy wording variants improved some isolated classification scores but did not improve eight complete cross-stage trajectories: both used 111 turns and 440 requests; revised wording cost 4.7% more. We stopped after two wording rounds and changed the hypothesis to preparation. Repeated finite-domain focus inputs were repeatability checks, even where their underlying cubes differed. Evidence (archived: `experiments/daisy-focus-v2/stage-development/report.json`).
 
 Earlier top-cross definitions improved controlled line/elbow recognition, but their paired full comparison did not establish an integration gain. Earlier attempts to merge extraction decisions also performed worse than the sequential baseline. Neither change entered this candidate. Those studies predate this round's spending baseline. [Prior diagnosis](contextual-decision-followup.md).
 
@@ -39,7 +41,7 @@ Earlier top-cross definitions improved controlled line/elbow recognition, but th
 
 **final-84, F2L, stopped after ten turns.** In the selected local frame, the corner was at UFR and the edge at BR. The extraction request explicitly lists BR under `extract-edge`, but JEV chose `continue` (0.43 probability versus 0.40 for extraction; provider confidence 0.14). It then incorrectly allowed routine selection. The corner family UFR-R was recognised correctly, and the routine selector appropriately answered `reconsider` because the edge had not been extracted. This is a preparation failure, not a gap in the canonical F2L routine library.
 
-[Exact selected requests, parsed answers and native responses](../experiments/budget-round-v1/final-evaluation/failure-audit.json). Expected answers in this audit were never supplied to the live model. No tactical correction was made. These failures are now development evidence for any subsequent tuning; retire this test set before that tuning and generate fresh final cases.
+[Exact selected requests, parsed answers and native responses](../../research/evidence/grouped-menu/failure-audit.json). Expected answers in this audit were never supplied to the live model. No tactical correction was made. These failures are now development evidence for any subsequent tuning; retire this test set before that tuning and generate fresh final cases.
 
 A single HTTP 503 occurred in final-98, action index 19. Its bounded retry succeeded and the cube solved. It is not a model failure. The uncertain $0.002688 reservation remains in the ledger.
 
@@ -58,9 +60,9 @@ These are examples selected by turn count, not three typical timing profiles. Th
 
 Starting project commitment was $8.787338406. This round added **$0.599520684**, consisting of $0.596832684 settled usage estimates and $0.002688 retained uncertain reservation. Development and integration cost $0.191080470; the final evaluation cost $0.408440214. The $0.50 evaluation reserve was respected.
 
-The final evaluation's largest request families by settled cost were goal selection ($0.07059), routine selection ($0.06330), conditional early targets ($0.04649), preparation ($0.04517) and F2L targets ($0.03764). Preparation alone made 2,637 calls. Smaller requests can reduce tokens while adding latency and independent opportunities for error. [Complete study ledger](../experiments/budget-round-v1/costs.json) and [request-family breakdown](../experiments/budget-round-v1/final-evaluation/report.json).
+The final evaluation's largest request families by settled cost were goal selection ($0.07059), routine selection ($0.06330), conditional early targets ($0.04649), preparation ($0.04517) and F2L targets ($0.03764). Preparation alone made 2,637 calls. Smaller requests can reduce tokens while adding latency and independent opportunities for error. Complete study ledger (archived: `experiments/budget-round-v1/costs.json`) and [request-family breakdown](../../research/evidence/grouped-menu/report.json).
 
-Final project commitment is **$9.386859090**, including historical reservations. The estimated provider balance is **$0.885848362**, not a live reading. With the $0.10 buffer, **$0.785848362** of conservative authorised allowance remains. Unused allowance is not a reason to run more tests. Existing stricter enforcement at $9.672707452 was sufficient for this round and has not been raised to the maximum authorised ceiling.
+Final project commitment is **$9.386859090**, including historical reservations. The estimated provider balance is **$0.885848362**, not a live reading. With the $0.10 buffer, **$0.785848362** of conservative authorised allowance remained. Unused allowance is not a reason to run more tests. Existing stricter enforcement at $9.672707452 was sufficient for this round and has not been raised to the maximum authorised ceiling.
 
 ## Assistance and interpretation
 
@@ -74,14 +76,15 @@ For the article: evaluate the whole decision path as well as isolated questions.
 
 Use fresh varied cases to test reference selection and trapped-edge preparation, then test a model-directed recovery from `reconsider`. Compare the incumbent prompt with at most two alternatives, holding observations and routines constant. Separately profile persistence overhead offline before attributing slower full-run timings to JEV. Request consolidation should be tested only where questions do not require sibling answers. The saved [next goal template](next-goal-template.md) describes this future scope; it has not started.
 
-## Reproduce the checks without API calls
+## Reproduce the current checks without API calls
+
+Run these from the repository root:
 
 ```sh
-bun scripts/budget-round-v1/verify-final.ts
-bun scripts/budget-round-v1/report-final.ts
-bun scripts/budget-round-v1/costs.ts
-bun test scripts/full-pll-v1/boundary.test.ts tests/f2l-grouped-controller.test.ts tests/f2l-library.test.ts tests/f2l-preparation-sequential.test.ts tests/extraction-efficiency.test.ts scripts/protected-landing-v1/boundary.test.ts
-bun run typecheck
+bun run verify:recordings
+bun run check
 ```
 
-The verifier uses the local ledger/event database and retained records. It checks the frozen source closure, unique held-out starting states, exact wire requests, native/parsed answers, decision replay, physical transformations, final solved states and execution ceilings. Final checks passed: 100 trajectories, 16 tests with 3,541 assertions, and TypeScript. The paid final runner must not be rerun into this completed directory.
+The recording verifier uses the included grouped-menu records. It checks unique starting fixtures, exact requests, native and parsed answers, decision replay, cube transformations, final states and the 100-turn ceiling. It needs no private ledger or provider key.
+
+The original study audit also checked the frozen source files, exclusion of previous datasets, request/time limits and local ledger entries. Its report recorded 100 verified trajectories, 16 tests with 3,541 assertions and a passing TypeScript check. Those historical counts are separate from the current test suite. The retired study scripts are no longer reproduction commands for this checkout.

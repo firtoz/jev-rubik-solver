@@ -8,7 +8,7 @@ export function ProgressGoalExperiment() {
       <div className="eyebrow">FOLLOW-UP / FROM RECOGNITION TO A GOAL</div>
       <h3>Let JEV describe the progress, then choose what to work on</h3>
       <p>
-        Recognizing one complete layer worked well. We expanded the task to four checkpoints: the
+        Recognising one complete layer worked well. We expanded the task to four checkpoints: the
         bottom cross, the first layer, the lower two layers and the whole cube. JEV then chose a
         goal using the beginner progression. All six goal options remained available on every case.
       </p>
@@ -47,8 +47,8 @@ export function ProgressGoalExperiment() {
       <p>
         We reused the 20 recorded progress assessments, including the mistake, and reran only goal
         selection. Keeping the grids scored 18/20. Removing them scored 16/20. Removing the grids
-        and shortening the reference scored 14/20. The change from 17 to 18 for the unchanged
-        baseline is repeat-call variation, not a prompt improvement.
+        and shortening the reference scored 14/20. The unchanged baseline varied from 17 to 18
+        correct answers when called again.
       </p>
       <p>
         We kept the original grids in the selected pipeline and froze it before fresh validation.
@@ -77,7 +77,7 @@ export function ProgressGoalExperiment() {
           </tbody>
         </table>
       </div>
-      <h4>The remaining failure is useful</h4>
+      <h4>How one observation error reached the goal decision</h4>
       <p>
         On validation case 5, D’s left edge sticker was blue while its center was yellow. JEV
         answered that all four D edge stickers matched. The next request accepted that observation
@@ -96,7 +96,7 @@ export function ProgressGoalExperiment() {
             <FieldValue value={e.response} />
             <details>
               <summary>Response JSON</summary>
-              <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
+              <pre>{JSON.stringify(e.response, null, 2)}</pre>
             </details>
           </div>
         ))}
@@ -111,9 +111,9 @@ export function ProgressGoalExperiment() {
       <p>
         These 20 fresh states came from the same controlled families as development. There were no
         fully solved cases, and “last layer” was a handoff rather than a choice among its
-        algorithms. This establishes a promising early-goal component. The running solver still uses
-        its earlier completion facts. The first integration using these uncorrected observations
-        is described below.
+        algorithms. This establishes a promising early-goal component. At that point, the working
+        solver still used code-measured completion facts. The first integration using these
+        uncorrected observations is described below.
       </p>
       <p className="fine-print">
         This study used {data.requests} requests and an estimated ${data.cost.toFixed(5)}, including
@@ -121,16 +121,19 @@ export function ProgressGoalExperiment() {
         The earlier 99/100 solve result belongs to a different policy.
       </p>
       <details>
-        <summary>Reproduce the study</summary>
+        <summary>Data behind this experiment</summary>
         <p>
-          Saved fixtures, source snapshots and complete exchanges are under{' '}
-          <code>experiments/progress-goal-development/</code>,{' '}
-          <code>experiments/progress-goal-handoff/</code> and{' '}
-          <code>experiments/progress-goal-validation/</code>. The development README lists live
-          commands and their cost boundaries.
+          The displayed results are in{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/src/lib/progress-goal-experiment.json">
+            progress-goal-experiment.json
+          </a>
+          . The{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/notes.md">
+            research notebook
+          </a>{' '}
+          records the changes and their limits. These older study runners have been retired. For the
+          current solver, see <a href="#reproduce">local setup and offline verification</a>.
         </p>
-        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
-        <p>These commands run offline checks and regenerate this article’s results.</p>
       </details>
     </div>
   );

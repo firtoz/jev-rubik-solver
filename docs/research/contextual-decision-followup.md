@@ -1,5 +1,7 @@
 # Contextual decisions and top-cross recognition
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 This follow-up tests whether fewer, more contextual requests can preserve the reliability of the frozen 97/100 solver. It also investigates a concrete pattern-recognition mistake from a capped solve. The original policy and recordings are unchanged. Its final set is now retired from future holdout use because we examined failures for tuning.
 
 ## Extraction: combining decisions did not work well enough
@@ -48,16 +50,16 @@ Four fresh paired full-solve comparisons finished and independently replayed:
 
 | Start | Baseline | Candidate |
 | --- | --- | --- |
-| 1 | Capped at85 | Solved79 |
-| 2 | Solved93 | Solved80 |
-| 3 | Solved90 | Capped at95 |
-| 4 | Solved79 | Solved80 |
+| 1 | Capped at 85 | Solved 79 |
+| 2 | Solved 93 | Solved 80 |
+| 3 | Solved 90 | Capped at 95 |
+| 4 | Solved 79 | Solved 80 |
 
-Both solved3/4. Capped counts are executed turns before a selected routine would exceed100, not solution lengths. Candidate top-cross took6,6,12,6 turns; baseline took12,18,0,0. Zero means F2L had already left the top cross oriented. Earlier trajectories differed despite identical starting scrambles, so total savings cannot all be attributed to the new question. On start2 both policies spent9/7/39 turns in daisy/cross/F2L, followed by18 versus6 in top-cross; matching stage costs alone still do not prove identical entry states.
+Both solved 3/4. Capped counts are executed turns before a selected routine would exceed 100, not solution lengths. Candidate top-cross took 6,6,12,6 turns; baseline took 12,18,0,0. Zero means F2L had already left the top cross oriented. Earlier trajectories differed despite identical starting scrambles, so total savings cannot all be attributed to the new question. On start 2 both policies spent 9/7/39 turns in daisy/cross/F2L, followed by 18 versus 6 in top-cross; matching stage costs alone still do not prove identical entry states.
 
-The candidate's failed start spent29 daisy turns and8 cross turns before later work. This reinforces the distinction between a well-performing component and whole-solver reliability. Retain explicit recognition as a component candidate; do not replace the97/100 frozen incumbent or claim an improved overall success rate from3/4.
+The candidate's failed start spent 29 daisy turns and 8 cross turns before later work. This reinforces the distinction between a well-performing component and whole-solver reliability. Retain explicit recognition as a component candidate; do not replace the 97/100 frozen incumbent or claim an improved overall success rate from 3/4.
 
-Integration used1,190 HTTP attempts and$0.038855544. Total follow-up:1,574 attempts/$0.054630954, below the authorised$0.15. Project commitment$8.787338406 includes reservations, leaving$0.212661594 under$9. All study processes finished. No further live calls are scheduled. Three added mechanics/boundary/integration-shape tests passed (196 assertions), along with TypeScript checking.
+Integration used 1,190 HTTP attempts and $0.038855544. Total follow-up: 1,574 attempts/$0.054630954, below the authorised $0.15. Project commitment $8.787338406 includes reservations, leaving $0.212661594 under $9. All study processes finished. No further live calls are scheduled. Three added mechanics/boundary/integration-shape tests passed (196 assertions), along with TypeScript checking.
 
 Next useful experiment, if pursued: compare whole-stage outcomes from identical saved stage-entry states to separate local effects from upstream variation. For global turn count, early-stage repeats and F2L abstention remain distinct targets. Avoid another large reliability run until an integrated change has stronger evidence.
 

@@ -1,5 +1,7 @@
 # Where the API budget went
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The new confirmation used **15,106 calls**, **17,174,681 input tokens**, **$0.721337 estimated spent** and **$0.102144 unresolved reservations**. These are local ledger estimates from native token usage, not an account invoice.
 
 Input tokens cost $0.042 per million; output tokens are free. Each dispatch first reserves $0.002688 (the full 64,000-token ceiling). A valid response replaces that reservation with its reported input-token cost. Failed or uncertain requests retain their reservation. Reservations are not additional confirmed charges.
@@ -117,4 +119,4 @@ Explicit repeated-state recovery questions used 61 calls and $0.001215 estimated
 | plan-commit-development | 18 | 9,768 | $0.000410 | $0.000000 |
 | interactive | 2 | 4,462 | $0.000187 | $0.000000 |
 
-These ledger groups include earlier experiments and the current confirmation separately. Unlabelled entries are retained rather than guessed. Historical uncertain reservations remain visible. Latency totals and per-group numeric values are available in [the machine-readable breakdown](../experiments/brain-teaching-confirmation-v1/cost-breakdown.json); summed latency is not wall-clock duration because four attempts run concurrently.
+These ledger groups include earlier experiments and the current confirmation separately. Unlabelled entries are retained rather than guessed. Historical uncertain reservations remain visible. Latency totals and per-group numeric values are available in the machine-readable breakdown (archived: `experiments/brain-teaching-confirmation-v1/cost-breakdown.json`); summed latency is not wall-clock duration because four attempts run concurrently.

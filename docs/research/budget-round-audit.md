@@ -1,5 +1,7 @@
 # Completed goal audit
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 Status: complete. This audit concerns the original $1.40 incremental goal, not the saved next-goal template. The previous turn made documentation progress by updating that template; it did not start a new goal or paid study.
 
 | Requirement | Current authoritative evidence |

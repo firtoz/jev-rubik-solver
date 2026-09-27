@@ -19,11 +19,11 @@ Read compressed records with Bun's `node:zlib` or `gzip -dc`. The article's smal
 bun run verify:recordings
 ```
 
-This reconstructs the 100 latest starting cubes, feeds saved answers through the active policy, checks exact request bodies and validated native responses, applies every recorded action, and checks final states and turn ceilings. It makes no provider calls and needs no private database. It preserves abstentions and capped/interrupted attempts.
+This reconstructs the 100 latest starting cubes, feeds saved answers through the active policy, checks exact request bodies and validated native responses, applies every recorded action, and checks final states and the 100-turn ceiling. It makes no provider calls and needs no private database. It preserves abstentions and capped/interrupted attempts.
 
-The original verification additionally compared wire events with a private SQLite ledger, frozen sources and earlier dataset hashes. Those historical reports are retained; the public verifier cannot independently establish that a fixture was unseen by every prior private experiment.
+The original verification also checked request/time limits and compared wire events with a private SQLite ledger, frozen sources and earlier dataset hashes. Those historical reports are retained; the public verifier cannot independently establish that a fixture was unseen by every prior private experiment.
 
-Archived research paths in older notes identify the original workspace, not commands supported by this checkout. In the author's local workspace, the complete original experiment archive remains under ignored `.data/cleanup-backup/`. It is intentionally absent from a public release.
+Older notes use the original workspace paths. Their retired scripts and full experiment archive are absent from the current checkout. See the [research index](../docs/research/README.md) for a guide to those notes.
 
 ## New experiments
 

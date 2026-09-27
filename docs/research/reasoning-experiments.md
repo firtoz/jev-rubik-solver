@@ -1,5 +1,7 @@
 # Reducing supplied solving knowledge
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 This follow-up preserves the v26 solver and its historical results. It investigates single-turn reasoning without beginner algorithms, case-to-skill mappings or simulated candidate ranking. A model that selects supplied algorithms and a model that plans primitive turns solve different experimental tasks.
 
 ## Working protocol

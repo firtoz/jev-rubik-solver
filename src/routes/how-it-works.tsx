@@ -87,10 +87,10 @@ function Article() {
               </div>
             </div>
             <p>
-              Can a model choose and apply a cuber’s familiar routines reliably? We used JEV, a
-              hosted model that answers structured decision questions, to find out. It solved 98 of
-              100 fresh cubes within 100 face turns. Here is what we kept, what it cost and what
-              this taught us about designing a sequence of model decisions.
+              We gave JEV a reference of cube algorithms and asked it to decide when and how to use
+              them. After testing and revising the questions, it solved 98 of 100 fresh cubes within
+              100 face turns. This article follows the approach we kept, the mistakes that shaped it
+              and the cost of making many small decisions.
             </p>
           </div>
           <div className="article-stats">
@@ -104,7 +104,7 @@ function Article() {
             </div>
             <div>
               <strong>JEV 1.13.0</strong>
-              <span>fixed hosted model, no training</span>
+              <span>same hosted model throughout</span>
             </div>
           </div>
         </section>
@@ -135,14 +135,10 @@ function Article() {
                 it had already solved.
               </p>
               <p>
-                Our single-turn solver chose among the 18 standard face turns (six faces, each
-                clockwise, counterclockwise or a half turn), with separate questions to help it
-                choose a goal and a target. On three full scrambles, it used all 500 requests
-                allowed per attempt without solving any of them. The recording below starts both
-                policies from the same cube: case 30 of our latest evaluation, selected because the
-                grouped-menu solver completed it in the fewest turns. We reused that saved solve and
-                recorded a new single-turn attempt. The next section explains the routine-based
-                method.
+                Our single-turn solver chose among the 18 standard face turns, with separate
+                questions about goals and targets. On three early full scrambles, it hit the
+                500-request limit without solving any of them. The replay compares that approach
+                with our final routine-based solver from the same starting cube.
               </p>
               {recordings.caseId === 'final-30' ? (
                 <ComparisonDemo recordings={evidence} latest />
@@ -152,18 +148,18 @@ function Article() {
               <div className="article-note">
                 <b>What the cube is teaching us</b>
                 <p>
-                  The cube gives us a well-understood problem with a result we can verify. Our aim
-                  is to learn how to break its solving method into decisions small enough for JEV
-                  to handle, then connect those decisions into a working process. Solving speed is
-                  secondary to understanding which parts of that process need more help.
+                  Cube solving gives us a known method to break into smaller decisions, and we can
+                  check every result. We wanted to find out how much context and teaching JEV needed
+                  at each step. That makes the cube a useful example for designing other workflows,
+                  even though an ordinary cube solver would finish it more efficiently.
                 </p>
                 <p>
                   The same approach could be useful for a support assistant investigating a delayed
                   order. It might first determine whether the delay happened before dispatch or in
                   transit, then use that answer to choose which records to check and what action to
-                  suggest. Each decision can be tested on its own before testing the whole workflow,
-                  just as we do here. That would need its own evaluation; the cube is a worked
-                  example of the method.
+                  suggest. We could test those decisions on labelled support cases before letting
+                  the assistant handle a whole investigation. That application would need its own
+                  evidence.
                 </p>
               </div>
             </section>
@@ -226,22 +222,24 @@ function Article() {
                 </div>
               </div>
               <p>
-                Start with the observations and routines a skilled person would use, then test which
-                decisions the model can reliably make. Keep deterministic work in code when that is
-                the clearer design. Our cube result supports this experimental method for a
-                well-specified task; it does not establish that the same recipe solves every complex
-                problem.
+                Start by writing down what a skilled person needs to notice and decide. Use code for
+                the facts you can calculate, then test whether the model can use those facts to
+                choose an action. The cube study gives us a way to investigate that question in
+                another task. It cannot tell us the answer in advance.
               </p>
-              <a className="article-cta" href="#reproduce">Try the solver locally</a>
+              <a className="article-cta" href="#reproduce">
+                Try the solver locally
+              </a>
             </section>
             <section id="appendix" className="article-appendix">
               <div className="eyebrow">APPENDIX / THE EVIDENCE BEHIND THE STORY</div>
               <h2>Prompts, experiments and reproduction</h2>
               <p>
                 These sections provide the experimental record. “Policy” means the complete decision
-                procedure: observations, questions, routines and the code connecting them. Internal
-                version names are record identifiers, not model versions; the JEV model stayed
-                fixed.
+                procedure: observations, questions, routines and the code connecting them. The
+                version names below identify our code and prompts. Every experiment used the same
+                JEV model. Older study runners have been retired. Their summaries and selected
+                examples remain here; the final evaluation records are included in the repository.
               </p>
               <div className="article-table-wrap">
                 <table className="article-results-table">
@@ -257,7 +255,8 @@ function Article() {
                     <tr>
                       <th>Beginner routines (v26)</th>
                       <td>
-                        Separate corner and middle-edge steps. Retained here as a historical comparison.
+                        Separate corner and middle-edge steps. Retained here as a historical
+                        comparison.
                       </td>
                       <td>99/100; 1,000-turn cap</td>
                     </tr>
@@ -328,12 +327,10 @@ function Article() {
                     </div>
                   </div>
                   <p>
-                    The component results cover specific kinds of decisions. Five narrowly scoped
-                    components passed their suites, and several other request families still need
-                    broader isolated testing. The full-cube test measures whether the whole process
-                    eventually solves the cube, including any mistakes it recovers from. JEV also
-                    returns a confidence value for each answer, but we have not calibrated that
-                    value against solve success.
+                    At this point, five narrowly scoped components had passed their suites. Other
+                    request families had only limited individual coverage. The full-cube test
+                    measured whether the connected process could finish, including after mistakes it
+                    recovered from.
                   </p>
                   <p>
                     An earlier final test produced six failures in 36 attempts, leaving 30
@@ -342,11 +339,11 @@ function Article() {
                     fresh set for the next final test.
                   </p>
                   <p>
-                    That v26 test cost $1.28 for 30.48 million input tokens across 16,896 requests.
-                    That made the extra questions affordable for this experiment. Waiting for them
-                    was more noticeable, with a mean active time of 76.46 seconds per attempt. We
-                    used the $0.042 per million input-token rate checked on 20 September 2026. Check
-                    current pricing before running your own evaluation.
+                    The v26 test used 30.48 million input tokens across 16,896 requests, for an
+                    estimated $1.28. The extra calls were cheap enough for this experiment, but the
+                    mean active time was 76.46 seconds per attempt. We used the $0.042 per million
+                    input-token rate checked on 20 September 2026. Check current pricing before
+                    running your own evaluation.
                   </p>
                 </div>
               </details>
@@ -360,9 +357,9 @@ function Article() {
                 <summary>D. Recognition, observation boundaries and the DOOM comparison</summary>
                 <div className="appendix-content">
                   <p>
-                    These are chronological research notes. Candidate names, budgets and next steps
-                    below describe their own experiment, not the final policy or a current spending
-                    plan.
+                    The experiments below are in chronological order. Each result uses the rules and
+                    limits stated in its section. Budgets and proposed next steps describe what we
+                    were considering at that time.
                   </p>
                   <FirstLayerExperiment />
                   <ProgressGoalExperiment />
@@ -375,21 +372,63 @@ function Article() {
                 <summary>E. Run it yourself</summary>
                 <div className="appendix-content">
                   <h3>Explore the recordings</h3>
-                  <p>The website plays saved recordings and displays their exact requests and responses. It never calls JEV and needs no API key.</p>
-                  <pre>{'bun install\nbun run dev'}</pre>
-                  <p>To check all 100 recorded attempts against the current solver and cube mechanics offline:</p>
+                  <p>
+                    The website plays saved recordings and shows their requests and responses. You
+                    can run it without an API key. Install <a href="https://bun.sh/">Bun</a>, then
+                    get the source and start the app:
+                  </p>
+                  <pre>
+                    {
+                      'git clone https://github.com/firtoz/jev-rubik-solver.git\ncd jev-rubik-solver\nbun install\nbun run dev'
+                    }
+                  </pre>
+                  <p>
+                    Open http://127.0.0.1:3000. To replay all 100 final attempts through the current
+                    solver without calling JEV:
+                  </p>
                   <pre>bun run verify:recordings</pre>
                   <section id="playground">
                     <h3>Try it with your own cube, locally</h3>
-                    <p>The command-line script uses the same grouped-menu policy as the featured recording. Supply a move sequence starting from a solved cube.</p>
+                    <p>
+                      The command-line script uses the same grouped-menu policy as the featured
+                      recording. Supply a move sequence starting from a solved cube.
+                    </p>
                     <pre>{`cp .env.example .env
 # Set TYPESAFE_API_KEY and RUBIK_BUDGET_USD in your local .env
 bun run lab status
 bun run lab solve "R U R' U'" --live`}</pre>
-                    <p>Only the last command makes paid requests. The <code>--live</code> flag opts into a real solve. It prints the result, face turns, request count, cost and elapsed time.</p>
-                    <p><code>scripts/lab.ts</code> runs the solver in <code>src/solver/</code>. Exact exchanges and the cumulative cost ledger stay in the local <code>.data/</code> directory. Keep that ledger between runs so previous spending remains counted.</p>
-                    <p>The default ledger ceiling is $1. Each attempt stops at 100 face turns, 500 requests or ten minutes. Set your own budget before running and check current provider pricing. A new solve may fail or hit a limit.</p>
-                    <p>See <code>README.md</code> for setup, <code>docs/architecture.md</code> for the code/model boundary and <code>research/README.md</code> for reproducing the evaluation. New experiments should keep separate results and fresh test cases.</p>
+                    <p>
+                      Only the last command makes paid requests. The <code>--live</code> flag opts
+                      into a real solve. It prints the result, face turns, request count, cost and
+                      elapsed time.
+                    </p>
+                    <p>
+                      <code>scripts/lab.ts</code> runs the solver in <code>src/solver/</code>. Exact
+                      exchanges and the cumulative cost ledger stay in the local <code>.data/</code>{' '}
+                      directory. Keep that ledger between runs so previous spending remains counted.
+                    </p>
+                    <p>
+                      The default cumulative budget is $1. Each attempt allows 100 face turns, 500
+                      HTTP attempts and ten minutes of active execution. Set a budget and check
+                      provider pricing before running. Keep failed or capped attempts in any results
+                      you report.
+                    </p>
+                    <p>
+                      See{' '}
+                      <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/README.md">
+                        README
+                      </a>{' '}
+                      for setup,{' '}
+                      <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/docs/architecture.md">
+                        architecture guide
+                      </a>{' '}
+                      for the code/model boundary and{' '}
+                      <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/research/README.md">
+                        evidence guide
+                      </a>{' '}
+                      for reproducing the evaluation. New experiments should keep separate results
+                      and fresh test cases.
+                    </p>
                   </section>
                   <div className="source-links">
                     <a href="https://docs.typesafe.ai/api">JEV API</a>

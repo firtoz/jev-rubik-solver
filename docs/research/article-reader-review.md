@@ -1,5 +1,7 @@
 # Article review for first-time readers
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 Editorial walkthrough of `/how-it-works`, using three knowledge profiles. This is an inspection of the article and its sources, not usability research with actual participants.
 
 | Reader | Questions the article must answer | Where the revised article answers them |
@@ -21,3 +23,13 @@ Evidence checks:
 - Browser attachment timed out, so visual layout and real user comprehension are not claimed verified. Existing responsive layout plus the new two-column orientation block collapses to one column below 700px.
 
 No policy, model requests, budget or experiment records were changed for this editorial goal. No JEV API calls were made.
+
+## Release documentation review
+
+Reviewed the current article, setup guides, research notebook and archived references. Updated local setup separately from the future hosted links, defined F2L and PLL in the README, and documented the Node requirement for the Pages build.
+
+The article now describes the final method first, uses past tense for completed experiments and keeps detailed replay accounting in an expandable section. Repeated limitations were consolidated without removing the action-vocabulary difference, selected-best-case label, separate test sets or supplied-algorithm boundary. Two response-JSON disclosures now show the recorded responses.
+
+Research notes are indexed and marked historical. Links to included final records work; missing original records are identified as archived paths. The current offline verifier's documented scope is separated from the original private-ledger audit. Historical results, prompts and model responses were not changed.
+
+Checking the Pages instructions also exposed an unsupported workflow context field. The deployment condition now reads repository visibility from the triggering event (`github.event.repository.visibility`). GitHub documents `github.event` in its [context reference](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts). The site remains unpublished while the repository is private.

@@ -26,7 +26,7 @@ export function ReasoningExperiments() {
           outside the turned layer. This gave us a specific recognition question to test separately.
         </p>
       </div>
-      <h4>How we choose the next experiment</h4>
+      <h4>How we compared prompt variants</h4>
       <ol className="experiment-method">
         <li>
           <strong>Keep a baseline.</strong> Define one measurable question, prepare 20 different
@@ -39,8 +39,8 @@ export function ReasoningExperiments() {
         </li>
         <li>
           <strong>Carry forward useful gains.</strong> Keep the strongest wording as the next seed.
-          That study’s development threshold is at least two extra correct cases out of 20. This is
-          a practical screening rule, not proof of statistical significance.
+          We required at least two additional correct answers out of 20 to continue a wording
+          change. That was a screening threshold; a gain still needed to hold up on fresh cases.
         </li>
         <li>
           <strong>Stop repeating an unhelpful idea.</strong> After two rounds without that gain,
@@ -53,7 +53,7 @@ export function ReasoningExperiments() {
           helps comparison but can also overfit them.
         </li>
       </ol>
-      <h4>What the representations have shown so far</h4>
+      <h4>Results for each representation</h4>
       <div className="test-table">
         <table>
           <thead>
@@ -125,28 +125,27 @@ export function ReasoningExperiments() {
       )}
       <p>
         Neither wording round improved on the retained baseline by two cases, so we stopped that
-        wording search. Fresh validation supports the smaller layer-membership component; 16/20
-        position predictions remained too weak for reliable full solves. We then changed direction:
-        recognize the current situation and select a learned routine, as described below.
+        search. Layer membership passed all 20 fresh cases. Position prediction passed only 16,
+        leaving too many errors to rely on it for a whole solve. We then changed direction:
+        recognise the current situation and select a learned routine, as described below.
       </p>
       <p>
-        These are small development experiments, with one request per case and variant, not repeated
-        votes until an answer looks right. Parallel execution is only a way to run the comparison.
-        No winning answer is selected at runtime, and these probes do not replace the existing
-        solver.
+        Each variant received one call per case. We ran independent cases in parallel to reduce
+        evaluation time. We never used repeated calls to vote on a move during solving.
       </p>
       <details>
-        <summary>Reproduce and inspect this experiment</summary>
+        <summary>Data behind this experiment</summary>
         <p>
-          The complete requests, native responses, expected labels and frozen source files are under{' '}
-          <code>experiments/</code>, in the move-prediction, geometric-prediction,
-          vector-prediction, grid-prediction and grid-search directories. The retired scripts originally lived in{' '}
-          <code>scripts/request-eval/</code>. Those scripts charged the shared project budget and
-          refused to overwrite a started suite.
-        </p>
-        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
-        <p>
-          The current recording verification is offline. The article tables are generated from the saved results.
+          The displayed results are in{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/src/lib/reasoning-experiments.json">
+            reasoning-experiments.json
+          </a>
+          . The{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/notes.md">
+            research notebook
+          </a>{' '}
+          records the changes and their limits. These older study runners have been retired. For the
+          current solver, see <a href="#reproduce">local setup and offline verification</a>.
         </p>
       </details>
     </div>

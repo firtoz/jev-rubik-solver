@@ -65,10 +65,7 @@ export function BestRecording() {
         />
         {ended && <div className="result-stamp win">SOLVED</div>}
       </div>
-      <ReplayRequest
-        policy="skills"
-        time={requestTime}
-      />
+      <ReplayRequest policy="skills" time={requestTime} />
       {frame.index >= 0 ? (
         <ReplayDecision
           policy="skills"
@@ -79,7 +76,7 @@ export function BestRecording() {
         />
       ) : (
         <div className="comparison-decision">
-          <small>Waiting for JEV’s first move decision</small>
+          <small>Waiting for the first recorded move</small>
         </div>
       )}
       <div className="comparison-metrics">
@@ -92,7 +89,7 @@ export function BestRecording() {
           <span>Full attempt: {(recording.attemptElapsedMs / 1000).toFixed(1)}s</span>
         </div>
         <div>
-          <small>API COST SO FAR</small>
+          <small>ESTIMATED COST</small>
           <strong>${cost.toFixed(5)}</strong>
           <span>Total: ${recording.result.cost.toFixed(5)}</span>
         </div>
@@ -125,9 +122,8 @@ export function BestRecording() {
         <p>
           {recording.selection} Timings come from saved request, response and action events.
           Playback starts at the first request and ends at the final action; the full-attempt time
-          also includes surrounding local work. Source:{' '}
-          <code>experiments/budget-round-v1/final-evaluation</code>, case{' '}
-          <code>{recording.caseId}</code>.
+          also includes surrounding local work. Source: <code>research/evidence/grouped-menu/</code>
+          , case <code>{recording.caseId}</code>.
         </p>
         <RequestView request={recording.firstRequest as import('../../lib/types').JevRequest} />
       </details>

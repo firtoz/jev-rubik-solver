@@ -1,6 +1,8 @@
 # Less-help goal: plateau report
 
-Status: **not achieved**. Live experimentation stopped at the requested plateau condition on 2026-09-23. The existing proven solver remains unchanged. This is not a claim that JEV cannot perform the task under any formulation.
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
+Status: **not achieved**. Live experimentation stopped at the requested plateau condition on 2026-09-23. The previously evaluated solver remains unchanged. This is not a claim that JEV cannot perform the task under any formulation.
 
 ## What the evidence supports
 

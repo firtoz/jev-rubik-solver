@@ -1,5 +1,7 @@
 # Original no-retry snapshot of the frozen confirmation
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 **62/100 held-out full random-state scrambles solved autonomously.** The target was 95/100. The target remains unmet; all failures and budget-capped attempts remain in the denominator.
 
 The preliminary gate passed 10/10. This confirmation study used the unchanged policy with no development, tuning or retries. Its policy dependency sources match the previous frozen snapshot; its separate runner changes only accounting, the authorized budget, recording snapshots and dataset bookkeeping. The original proven solver remains unchanged. Only the middle-layer policy was substituted.
@@ -69,7 +71,7 @@ The verifier reconstructs cubes from recorded scrambles and actions using cubing
 
 The new runner clones request data before dispatch, preventing later mutation of recorded requests. The verifier still compares against immutable SQLite dispatch events and exports authoritative wire-requests.json. Recorded snapshot differences: 0. No solver choices were repaired.
 
-Commands: `bun scripts/brain-teaching-confirmation-v1/verify.ts experiments/brain-teaching-confirmation-v1`, `bun scripts/brain-full-v3/freshness.ts experiments/brain-teaching-confirmation-v1`, and `bun scripts/brain-teaching-confirmation-v1/summarize.ts experiments/brain-teaching-confirmation-v1`. These are offline audits and do not call JEV. Full per-run requests, responses, actions, timing, failures and usage are in [the final records](../experiments/brain-teaching-confirmation-v1/results.json). Teaching development and its earlier failures are documented in [the middle-layer report](minimum-teaching-results.md).
+Commands: `bun scripts/brain-teaching-confirmation-v1/verify.ts experiments/brain-teaching-confirmation-v1`, `bun scripts/brain-full-v3/freshness.ts experiments/brain-teaching-confirmation-v1`, and `bun scripts/brain-teaching-confirmation-v1/summarize.ts experiments/brain-teaching-confirmation-v1`. These are offline audits and do not call JEV. Full per-run requests, responses, actions, timing, failures and usage are in the final records (archived: `experiments/brain-teaching-confirmation-v1/results.json`). Teaching development and its earlier failures are documented in [the middle-layer report](minimum-teaching-results.md).
 
 See [the cost breakdown](frozen-confirmation-costs.md) for spending by request family and stage, recovery calls, unresolved reservations and separate earlier studies.
 

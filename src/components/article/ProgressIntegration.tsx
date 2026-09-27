@@ -70,17 +70,17 @@ export function ProgressIntegration() {
         separately.
       </p>
       <p>
-        The next component test should include incomplete daisies, completed daisies and partial
-        transfers. JEV needs to recognize those situations from stickers and choose whether to keep
-        building or transfer an edge. We also need cases where the goal contradicts an otherwise
-        correct progress assessment. Those failed states now belong to development; any later
-        validation must use fresh ones.
+        For the next component test, we added incomplete daisies, completed daisies and partial
+        transfers. JEV needed to recognise when to keep gathering petals and when to transfer an
+        edge. We also kept cases where a wrong goal followed a correct progress assessment. Once
+        used for diagnosis, those failed states became development cases.
       </p>
       <p className="fine-print">
         Six attempts, {data.requests} requests, estimated ${data.cost.toFixed(5)}. These are
         diagnostic cases, not a reliability estimate. Downstream piece facts and algorithm
-        assistance remain in place. Saved sources, full exchanges and failures:{' '}
-        <code>experiments/progress-integration-v1/</code>. The running solver is unchanged.
+        assistance remain in place. The displayed results are saved in{' '}
+        <code>src/lib/progress-integration.json</code>. The historical integration runner has been
+        retired.
       </p>
     </div>
   );

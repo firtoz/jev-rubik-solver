@@ -1,5 +1,7 @@
 # Full-cube integration of the examples-based middle policy
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 **94/100 held-out full random-state scrambles solved autonomously.** The target was 95/100. The target remains unmet; all failures and budget-capped attempts remain in the denominator.
 
 The preliminary gate passed 10/10. One development version was used; no final-test tuning or retries were performed. Both batches used the same frozen source digest. The original proven solver remains unchanged. Only the middle-layer policy was substituted.
@@ -37,7 +39,7 @@ The verifier reconstructs cubes from recorded scrambles and actions using cubing
 
 A pre-existing mutable request-array defect can change a later in-memory snapshot after dispatch. Immutable SQLite dispatch events preserve the actual request. The verifier exports those authoritative copies to wire-requests.json and reports every drift without overwriting the original record. No solver choices were repaired.
 
-Commands: `bun scripts/brain-teaching-full-v1/verify.ts experiments/brain-teaching-full-v1-final`, `bun scripts/brain-full-v3/freshness.ts experiments/brain-teaching-full-v1-final`, and `bun scripts/brain-teaching-full-v1/summarize.ts experiments/brain-teaching-full-v1-final`. These are offline audits and do not call JEV. Full per-run requests, responses, actions, timing, failures and usage are in [the final records](../experiments/brain-teaching-full-v1-final/results.json). Teaching development and its earlier failures are documented in [the middle-layer report](minimum-teaching-results.md).
+Commands: `bun scripts/brain-teaching-full-v1/verify.ts experiments/brain-teaching-full-v1-final`, `bun scripts/brain-full-v3/freshness.ts experiments/brain-teaching-full-v1-final`, and `bun scripts/brain-teaching-full-v1/summarize.ts experiments/brain-teaching-full-v1-final`. These are offline audits and do not call JEV. Full per-run requests, responses, actions, timing, failures and usage are in the final records (archived: `experiments/brain-teaching-full-v1-final/results.json`). Teaching development and its earlier failures are documented in [the middle-layer report](minimum-teaching-results.md).
 
 ## Article implications
 

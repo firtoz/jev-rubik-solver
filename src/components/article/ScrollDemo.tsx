@@ -140,14 +140,11 @@ export function ComparisonDemo({
                 {ended
                   ? index
                     ? 'Solved'
-                    : 'Still unsolved when skills finished'
+                    : 'Still unsolved when the other solve finished'
                   : `Completed ${frame.completed} / ${recording.timeline.length} actions`}
               </div>
               {latest && (
-                <ReplayRequest
-                  policy={index ? 'skills' : 'primitive'}
-                  time={requestTime}
-                />
+                <ReplayRequest policy={index ? 'skills' : 'primitive'} time={requestTime} />
               )}
               {latest && actionIndex >= 0 && (
                 <ReplayDecision
@@ -160,7 +157,7 @@ export function ComparisonDemo({
               )}
               {latest && actionIndex < 0 && (
                 <div className="comparison-decision">
-                  <small>Waiting for JEV’s first move decision</small>
+                  <small>Waiting for the first recorded move</small>
                 </div>
               )}
               <div
@@ -176,13 +173,13 @@ export function ComparisonDemo({
                   <span>Full run: {(recording.durationMs / 1000).toFixed(1)}s</span>
                 </div>
                 <div>
-                  <small>{latest ? 'API COMMITMENT' : 'SPENT SO FAR'}</small>
+                  <small>ESTIMATED COST</small>
                   <strong>${spent.toFixed(5)}</strong>
                   <span>Full run: ${recording.result.cost.toFixed(5)}</span>
                 </div>
               </div>
               <details>
-                <summary>Full recording and first request</summary>
+                <summary>Full-run totals and first request</summary>
                 <p>
                   {recording.result.requests} requests · {recording.result.turns} face turns · $
                   {recording.result.cost.toFixed(4)}.{' '}
@@ -198,12 +195,10 @@ export function ComparisonDemo({
       </div>
       {latest && (
         <p className="fine-print" style={{ padding: '0 20px' }}>
-          Selected after evaluation: case 30, the grouped-menu solver’s fewest-turn success (59
-          turns, 128 requests). The single-turn run starts from exactly the same cube. Both have
-          100-turn, 500-request and ten-minute ceilings. They were recorded at different times. The
-          single-turn timeline includes an HTTP interruption and resume gap; its cost includes a
-          $0.002688 uncertain reservation. This is a best-case illustration, not a representative
-          performance comparison.
+          Case 30 was selected after evaluation because the grouped-menu solver used the fewest
+          turns: 59, across 128 requests. We recorded the single-turn comparison from the same
+          starting cube. Both attempts allowed 100 turns, 500 requests and ten minutes. This is a
+          deliberately favourable example of the grouped-menu solver.
         </p>
       )}
       <div className="demo-transport">
@@ -223,20 +218,32 @@ export function ComparisonDemo({
           {(requestTime / 1000).toFixed(1)}s / {(recordedFinish / 1000).toFixed(1)}s recorded time
         </span>
         <span aria-live="polite">
-          {ended ? 'Skills wins. Both recordings stopped.' : playing ? 'Playing at 1×' : 'Paused'}
+          {ended
+            ? 'Solve finished. Both recordings stopped.'
+            : playing
+              ? 'Playing at 1×'
+              : 'Paused'}
         </span>
       </div>
       <p className="fine-print">
-        Both recordings share one clock at 1× their original speed, starting with the first solving
-        request. Each bar follows saved request and response timestamps, including gaps between
-        calls. Timing labels show recorded API latency after completion. Moves start only after
-        their action was recorded; the next round’s requests can run alongside them. Cube animation
-        is a display aid at 300ms per face turn, not measured hand movement.
-        We let the final solve animation finish after freezing both request clocks at the solve’s
-        recorded end. FAIL means the primitive policy was still unsolved at that cutoff. Costs
-        accumulate as recorded responses arrive. Both counters freeze with playback; full-run totals
-        also include the primitive attempt’s remaining time and requests.
+        Both replays start together at 1× recorded speed and stop when the grouped-menu solver
+        finishes. FAIL means the single-turn solver was still unsolved at that moment.
       </p>
+      <details>
+        <summary>How timing and cost are shown</summary>
+        <p>
+          Request bars follow the recorded timestamps, including gaps between calls. A move starts
+          after its decision was recorded, while requests for the next round can appear alongside
+          the animation. The cube takes 300 ms per face turn for display; we did not measure
+          physical hand movement. The final animation finishes after the request clocks stop.
+        </p>
+        <p>
+          Cost estimates accumulate as recorded responses arrive and freeze with playback. Full-run
+          totals include the single-turn attempt’s remaining requests after the cutoff. That run was
+          interrupted and resumed, so its timeline includes the gap. Its total also includes a
+          $0.002688 allowance for an uncertain HTTP attempt, which may not have been billed.
+        </p>
+      </details>
     </div>
   );
 }

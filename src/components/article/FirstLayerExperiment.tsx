@@ -14,11 +14,11 @@ export function FirstLayerExperiment() {
   return (
     <div className="reasoning-experiments">
       <div className="eyebrow">RECOGNITION EXPERIMENT / WHAT HAS THE PLAYER ALREADY SOLVED?</div>
-      <h3>Recognize the layer before choosing a move</h3>
+      <h3>Recognise the layer before choosing a move</h3>
       <p>
         Predicting every turn was a detour from our intended solving strategy. A practiced player
-        can recognize a situation and apply a learned routine. We kept the beginner reference and
-        asked a more useful question: could JEV recognize a complete first layer from sticker
+        can recognise a situation and apply a learned routine. We kept the beginner reference and
+        asked a more useful question: could JEV recognise a complete first layer from sticker
         colors, without code supplying the completion flag?
       </p>
       <p>
@@ -70,15 +70,15 @@ export function FirstLayerExperiment() {
           <FieldValue value={data.example.response} />
           <details>
             <summary>Response JSON</summary>
-            <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
+            <pre>{JSON.stringify(data.example.response, null, 2)}</pre>
           </details>
         </details>
       </div>
       <h4>Vary the top two, then check fresh cubes</h4>
       <p>
         We kept the sequential and direct approaches, and tested each original wording plus two
-        variations on the same development set. One variation emphasized finding a mismatch; the
-        other emphasized which cells to inspect and which to ignore. Three bounded workers ran these
+        variations on the same development set. One variation emphasised finding a mismatch; the
+        other emphasised which cells to inspect and which to ignore. Three bounded workers ran these
         candidates in parallel, with no retries or answer voting.
       </p>
       <div className="test-table">
@@ -128,21 +128,20 @@ export function FirstLayerExperiment() {
         </table>
       </div>
       <p>
-        Both passed this small validation set. This supports first-layer recognition from raw
-        sticker observations for these fixtures. It does not establish general cube-solving
-        reliability. The states came from controlled legal setups, and fresh states can still share
-        patterns with the development set.
+        Both passed all 20 validation cases. The states came from controlled legal setups and could
+        share patterns with development, so the result supports recognition within those families.
+        Full solving was a separate question.
       </p>
       <h4>What this teaches us about the request design</h4>
       <p>
         Make the inspection scope precise before adding more calls. When a conclusion depends on
         earlier answers, pass those actual answers into a later request. More questions in one
-        request do not by themselves create that dependency. Here we found both a reliable small
-        sequential pipeline and a promising cheaper single-request version.
+        request do not by themselves create that dependency. Both the sequential version and a
+        cheaper direct question passed this small validation set.
       </p>
       <p>
-        We followed this with a recognition-to-goal experiment, described below. The existing
-        solver still uses its original completion facts while we evaluate the replacement.
+        We followed this with a recognition-to-goal experiment, described below. We kept
+        code-measured completion facts in the working solver during that experiment.
       </p>
       <p className="fine-print">
         This tournament used {data.totalRequests} live requests and an estimated $
@@ -150,16 +149,19 @@ export function FirstLayerExperiment() {
         99/100 solver result belongs to the earlier policy.
       </p>
       <details>
-        <summary>Reproduce the recognition experiment</summary>
+        <summary>Data behind this experiment</summary>
         <p>
-          Fixtures, frozen source, requests and responses are in{' '}
-          <code>experiments/first-layer-development/</code> and{' '}
-          <code>experiments/first-layer-validation/</code>. The runner is{' '}
-          <code>scripts/request-eval/first-layer.ts</code>. Started rounds cannot be overwritten.
-          Live runs charge the shared budget.
+          The displayed results are in{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/src/lib/first-layer-experiment.json">
+            first-layer-experiment.json
+          </a>
+          . The{' '}
+          <a href="https://github.com/firtoz/jev-rubik-solver/blob/main/notes.md">
+            research notebook
+          </a>{' '}
+          records the changes and their limits. These older study runners have been retired. For the
+          current solver, see <a href="#reproduce">local setup and offline verification</a>.
         </p>
-        <p className="fine-print">Historical experiment. Its runners have been retired; the measured findings remain here. See docs/research for the notebook and bun run verify:recordings for the current solver.</p>
-        <p>These two commands are offline. The article tables come from the saved results.</p>
       </details>
     </div>
   );

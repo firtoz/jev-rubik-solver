@@ -1,69 +1,92 @@
 # Teaching JEV to solve a Rubik’s cube
 
-An interactive article, recorded request viewer and local TypeScript lab for exploring how a small decision model can apply a supplied solving method.
+An interactive article about breaking cube solving into decisions a small model can handle. The repository includes recorded replays, an inspector for every request and response, and the final solver as a local command-line tool.
 
-The current **grouped-menu solver** solved **98 of 100 fresh random-state cubes within 100 face turns**. It uses hosted `jev-1.13.0`, with no training. This is a measured result for this task and reference library, not a claim of general reasoning ability.
+The final **grouped-menu solver solved 98 of 100 fresh random-state cubes within 100 face turns**. We supplied observations and known cube algorithms, then asked hosted `jev-1.13.0` to choose when and how to use them. We did not train the model.
 
-## Run locally
+[Read the article](https://firtoz.github.io/jev-rubik-solver/how-it-works/) · [Inspect a recorded solve](https://firtoz.github.io/jev-rubik-solver/request-flow/)
 
-Requires [Bun](https://bun.sh/) 1.3.13 or later.
+These hosted links will be available after GitHub Pages is enabled. The website uses saved recordings and needs no API key.
+
+## Run the website locally
+
+Install [Bun](https://bun.sh/) 1.3.13 or later, then run these commands from the repository root:
 
 ```sh
 bun install
 bun run dev
 ```
 
-Open [the article](https://firtoz.github.io/jev-rubik-solver/how-it-works/), [the recorded request flow](https://firtoz.github.io/jev-rubik-solver/request-flow/).
+Open `http://127.0.0.1:3000`. This serves the same article and recordings locally.
 
-The website is read-only and makes no JEV API calls. It needs no credentials.
+## Try a live solve
 
-To run a paid solve locally, copy `.env.example` to `.env`, set `TYPESAFE_API_KEY` and your budget, then run `bun run lab solve "R U" --live`. Only the CLI calls the provider.
+Copy `.env.example` to `.env` and set `TYPESAFE_API_KEY` and `RUBIK_BUDGET_USD`. Keep your key in that ignored file or in an environment variable.
 
-`RUBIK_BUDGET_USD` sets the cumulative local ledger ceiling, default **$1**. The ledger includes conservative reservations for uncertain outcomes. It is not the provider account balance. Keep the database when restarting so the ceiling continues to cover earlier calls. The configured estimate is $0.042 per million input tokens; check [provider pricing](https://docs.typesafe.ai/models) before a new paid study. Each attempt allows 500 requests, 100 face turns and ten minutes of active execution.
+```sh
+cp .env.example .env
+# Edit .env before continuing.
+bun run lab status
+bun run lab solve "R U" --live
+```
+
+The quoted moves describe a scramble applied to a solved cube. Only the last command calls JEV. It uses the policy from the featured recording and prints the outcome, turns, requests, estimated cost and elapsed time. Full exchanges are saved in the local SQLite database under `.data/`.
+
+`RUBIK_BUDGET_USD` is the cumulative local spending ceiling, default **$1**. Uncertain requests retain a reserved allowance so they still count against that ceiling. Keep the database between runs to preserve the spending record. `lab status` reports this local accounting, not your provider account balance.
+
+Each attempt allows 500 HTTP attempts, 100 face turns and ten minutes of active execution. Retries count toward those limits. A half turn counts as one face turn. Usage estimates use the study's rate of $0.042 per million input tokens; check [current provider pricing](https://docs.typesafe.ai/models) before running a paid experiment.
+
+## How the solver works
+
+Code measures the cube and executes moves. JEV chooses the goal, target piece, reference orientation, preparation and routine. Independent questions can share a request. A question that needs an earlier answer waits for it.
+
+For **F2L** (first two layers), JEV recognises the corner pattern before choosing a routine for the corner and its matching edge. For **PLL** (permutation of the last layer), it recognises a corner pattern before choosing a routine using the edge arrangement.
+
+The supplied algorithms are substantial assistance. JEV receives no scramble history, predicted move outcomes or solver-generated solution. Wrong choices can lead to extra work or a failed attempt. See the [architecture guide](docs/architecture.md) for the boundary between code and model.
+
+Only this final policy is runnable. Earlier approaches, including the single-turn comparison, remain as research notes and recordings.
+
+## Offline checks and other commands
+
+```sh
+bun run verify:recordings  # replay the final 100 attempts without calling JEV
+bun run check              # tests, types, recording verification, build and release checks
+bun run build
+bun run start              # serve the production build on localhost
+bun run release:export     # copy distributable files into .data/public-release
+```
+
+The export omits credentials, local databases and Git history. Move an existing export aside before running it again.
 
 ## GitHub Pages
 
-The static Pages build is prepared in `.github/workflows/pages.yml`. It prerenders the article and request viewer with the project URL prefix and publishes only the static client output. While this repository is private on GitHub Free, pushes build an artifact and skip deployment. After making the repository public, select **Settings → Pages → Build and deployment → GitHub Actions**, then run the **Deploy GitHub Pages** workflow once. The published site will be public.
+The [Pages workflow](.github/workflows/pages.yml) builds static HTML for the article and request viewer at `/jev-rubik-solver/`. It uses Node 22 for prerendering and Bun to install dependencies. Only `dist/client` is published.
 
-## How it works
+While the repository is private, deployment is skipped. After making it public, choose **Settings → Pages → Build and deployment → GitHub Actions**, then run **Deploy GitHub Pages** once. Later pushes to `main` deploy automatically. The published site will be public.
 
-Code measures the current cube and executes moves. JEV chooses the goal, target, reference frame, preparation and routine. Independent questions may share a request; dependent questions wait for earlier answers. For F2L it recognises a corner family before choosing from that family's routines. For PLL it recognises the corner pattern before choosing the matching edge routine.
-
-The supplied routines are substantial assistance. The policy does not search candidate outcomes, supply recommended moves, see the scramble history or fall back to a cube solver. It can make mistakes or abstain. Full details are in the article and [architecture guide](docs/architecture.md).
-
-Only the latest solver is runnable. Earlier policies survive as recorded evidence and research notes. The single-turn comparison is a historical recording, not an executable second policy.
-
-## Commands
+To build the Pages files locally, install Node 22 as well as Bun and run:
 
 ```sh
-bun run check                      # tests, types, 100-record offline verification, build, release checks
-bun run lab status                 # local ledger; no provider calls
-bun run lab solve "R U" --live      # paid solve using the featured recording policy
-bun run verify:recordings           # reproduce saved requests and moves without an API
-bun run build
-bun run start                      # serve the production build on localhost
-bun run release:export             # clean snapshot in .data/public-release, excluding local data and Git history
+GITHUB_PAGES=1 bun run build:pages
 ```
 
 ## Repository map
 
-| Directory | Contents |
-| --- | --- |
-| `src/solver/` | The current policy, prompts, memory and static routine references |
-| `src/lib/` | Cube mechanics, recording data and UI helpers |
-| `src/server/` | JEV transport, SQLite ledger, locks and execution |
-| `src/components/`, `src/routes/` | Read-only article and recorded viewer |
-| `tests/` | Offline mechanics, policy, persistence and UI tests |
-| `research/evidence/` | Compressed final evaluation records and summaries |
-| `docs/research/`, `notes.md` | Historical findings and experiment notes |
-| `scripts/` | Local CLI, verification and release tooling |
+| Directory                        | Contents                                                            |
+| -------------------------------- | ------------------------------------------------------------------- |
+| `src/solver/`                    | Current prompts, decision sequence, memory and algorithm references |
+| `src/lib/`                       | Cube mechanics, recorded data and viewer helpers                    |
+| `src/server/`                    | CLI transport, SQLite ledger, locks and execution                   |
+| `src/components/`, `src/routes/` | Article and recorded viewer                                         |
+| `tests/`                         | Offline mechanics, policy, persistence and UI checks                |
+| `research/evidence/`             | Final evaluation records and summaries                              |
+| `docs/research/`, `notes.md`     | Experiment history and lessons for the article                      |
+| `scripts/`                       | CLI, verification and release tools                                 |
 
-See [evidence and reproduction](research/README.md), [contributing](CONTRIBUTING.md) and [security](SECURITY.md).
-
-The website has no live solve endpoints. Local CLI execution and its ledger are single-user tooling. SQLite files, credentials and the full local experiment archive are excluded from the public snapshot.
+See [evidence and reproduction](research/README.md), [contributing](CONTRIBUTING.md) and [security](SECURITY.md). The website has no live solve endpoints. Paid execution is available through the local CLI.
 
 ## Credits and license
 
-MIT. See [LICENSE](LICENSE). Cube transformations and animated playback use [cubing.js](https://js.cubing.net/cubing/); the static view uses [Three.js](https://threejs.org/). The app uses [TanStack Start](https://tanstack.com/start) and React. JEV is a hosted service from [TypeSafe](https://docs.typesafe.ai/api); its API access is separate from this repository's license.
+[MIT](LICENSE). Cube transformations and animated playback use [cubing.js](https://js.cubing.net/cubing/); the static view uses [Three.js](https://threejs.org/). The app uses [TanStack Start](https://tanstack.com/start) and React. JEV is a hosted service from [TypeSafe](https://docs.typesafe.ai/api); API access is separate from this repository's license.
 
-Routine references and sources are described in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). This project is an independent experiment.
+Algorithm sources are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). This is an independent experiment.

@@ -1,5 +1,7 @@
 # Last-layer efficiency experiment
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The candidate adds seven standard corner-orientation routines and Ua, Ub, H and Z edge permutations, from the CubeSkills four-look last-layer reference. Fixed outer-face equivalents are mechanically verified. This supplies more learned algorithms; JEV still selects the case and reference from observations, and code does no live matching or outcome ranking.
 
 | Test | Structured fields | Short sentences |

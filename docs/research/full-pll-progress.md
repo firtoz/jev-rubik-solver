@@ -1,5 +1,7 @@
 # Full PLL experiment
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The previous controller placed top corners and edges separately. Recorded solves commonly spent 26–30 turns on that part alone. This experiment teaches the standard full PLL vocabulary so JEV can choose a routine that places both together.
 
 Code still measures piece positions and homes. JEV first identifies the corner arrangement, then selects a routine from that model-selected reference family using the edge arrangement. That choice includes the frame and any initial U setup. Code executes it without correcting the model's answer.

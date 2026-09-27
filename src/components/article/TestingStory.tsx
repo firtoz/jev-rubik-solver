@@ -118,8 +118,8 @@ export function TestingStory() {
           <p>
             Each development variant saw 20 different states, with five targets in each middle slot.
             Every target was away from its destination, and every cube had a completed first layer.
-            We then checked the selected wording on 20 fresh validation states. There was one run
-            per case, rather than 20 repetitions of the same request.
+            We then checked the selected wording on 20 fresh validation states. Each variant was
+            called once per state.
           </p>
           <div className="test-table">
             <table>
@@ -161,9 +161,10 @@ export function TestingStory() {
             integrating it.
           </p>
           <p className="fine-print">
-            Source: extraction-reference-v1 development and validation records. These results cover
-            extraction frames with the target and intention supplied. They do not establish accuracy
-            for choosing a target or for flipped edges already in their home slot.
+            Displayed example: src/lib/article-case.json. Study: extraction-reference-v1. These
+            results cover extraction frames with the target and intention supplied. They do not
+            establish accuracy for choosing a target or for flipped edges already in their home
+            slot.
           </p>
         </div>
       </div>

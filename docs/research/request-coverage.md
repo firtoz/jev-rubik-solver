@@ -1,5 +1,7 @@
 # JEV request capability coverage
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 “Measured” applies only to the listed fixtures, not all cube situations. Deterministic tests verify mechanics, input construction, and offline labels; live experiments measure model choices. The current v26 policy integrates the measured middle-extraction prompts and decomposed cross decisions. Historical sections below describe earlier experiment checkpoints.
 
 | Request family | Current evidence | Remaining work |

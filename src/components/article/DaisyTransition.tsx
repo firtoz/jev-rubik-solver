@@ -126,9 +126,9 @@ export function DaisyTransition() {
       </p>
       <p className="fine-print">
         {data.requests} calls, estimated ${data.cost.toFixed(5)}, no retries or moves. The second
-        development round reused earlier model checks; fresh validation ran recognition again. Full
-        fixtures, source and exchanges are in <code>experiments/daisy-transition-development/</code>{' '}
-        and <code>experiments/daisy-decision-*/</code>.
+        development round reused earlier model checks; fresh validation ran recognition again. The
+        table data and recorded example are in <code>src/lib/daisy-transition.json</code>. The
+        original experiment directories are identified in the research notebook.
       </p>
       <h4>Then we let it make moves</h4>
       <p>
@@ -167,20 +167,20 @@ export function DaisyTransition() {
       </p>
       <p>
         The R setup incidentally ended with the whole cube solved, verified by replay. JEV selected
-        the first-layer handoff from this limited menu, so this does not test whether it recognized
+        the first-layer handoff from this limited menu, so this does not test whether it recognised
         a solved cube. The other successful attempts completed the cross only.
       </p>
       <p>
         The result supports the repaired transition on these trajectories. It also shows why request
-        cost, latency and execution limits belong in integration tests. We need a separately
-        budgeted continuation of the incomplete attempt before assuming more requests would finish
-        it. Downstream assistance remains, and the production policy is unchanged.
+        cost, latency and execution limits belong in integration tests. We stopped the incomplete
+        attempt at its limit. Whether more requests would finish it was still unknown. The
+        downstream target and algorithm questions retained their earlier teaching.
       </p>
       <p className="fine-print">
         This integration added {integration.requests} requests and an estimated $
         {integration.cost.toFixed(5)}. Every final state was independently replayed from the initial
         setup. These reused development cases are diagnostic, not a fresh reliability evaluation.
-        Records: <code>experiments/daisy-integration-v1/</code>.
+        Records: <code>src/lib/daisy-integration.json</code>.
       </p>
     </div>
   );

@@ -1,5 +1,7 @@
 # Decision ownership in JEV brain v3
 
+> Historical study note. Status, budgets and original commands describe this experiment at the time. See the [research index](README.md) for current code and available records.
+
 The cube is a test of a model following a learned procedure. Fixed beginner algorithms are substantial, explicit assistance. Code executes their turns, while JEV decides when and how to use them.
 
 | Layer | Supplied by code | Chosen by JEV |
