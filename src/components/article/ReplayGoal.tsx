@@ -1,7 +1,9 @@
 import { goalNames, requestMetadata, type ReplayPolicy } from '../../lib/replay-requests';
 import { algorithmLabel } from '../../lib/algorithm-labels';
 export function ReplayGoal({ policy, time }: { policy: ReplayPolicy; time: number }) {
-  const state = requestMetadata(policy, time);
+  return <DecisionMetadata state={requestMetadata(policy, time)}/>;
+}
+export function DecisionMetadata({state}:{state:{round:number;goal?:string;target?:string;answers:Partial<Record<string,string>>}}) {
   const fields: [string, string | undefined][] = [
     ['Target', state.target],
     ['Situation', state.answers.situation],

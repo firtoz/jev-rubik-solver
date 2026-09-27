@@ -1,3 +1,4 @@
+import { DecisionMetadata } from './article/ReplayGoal';
 import { preparationLabel } from '../lib/request-label';
 import { algorithmLabel,algorithmLabels } from '../lib/algorithm-labels';
 import { roundSummary } from '../lib/round-summary';
@@ -263,8 +264,10 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
   const terminal=cycleIndex===recording.steps.length;
   const finalLabel=recording.status==='solved'?'Solved':'Final state';
   const cycle = recording.steps[Math.min(cycleIndex,recording.steps.length-1)];
-  const displayCycle=advancePlayback?recording.steps[advancePlayback.from]:cycle;
-  const decisionRound=advancePlayback?advancePlayback.from:cycleIndex;
+  const displayCycle=advancePlayback?.phase==='fading'?recording.steps[advancePlayback.from]:cycle;
+  const decisionRound=advancePlayback?.phase==='fading'?advancePlayback.from:cycleIndex;
+  const completedChoices=Object.assign({},...cycle.exchanges.slice(0,advancePlayback?.phase==='requests'?advancePlayback.request:cycle.exchanges.length).map(choices));
+  const partialDecision=advancePlayback?.phase==='requests'&&advancePlayback.request<cycle.exchanges.length;
   const highlightedStep=advancePlayback?(advancePlayback.phase!=='requests'?'wire-execution':!terminal&&advancePlayback.request<cycle.exchanges.length?`wire-request-${advancePlayback.request}`:'wire-execution'):activeStep;
   const decisionSummary=roundSummary(displayCycle);
   const allChoices = Object.assign({}, ...cycle.exchanges.map(choices));
@@ -274,7 +277,12 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
     const id=link.getAttribute('href')!.slice(1),target=document.getElementById(id);
     if(target){event.preventDefault();history.replaceState(null,'',`#${id}`);scrollToRequest(target);}
   }}>
-    <RoundPreview setup={recording.previewSetup} moves={previewMoves} round={advancePlayback?.phase==='fading'?advancePlayback.to:cycleIndex} finalLabel={finalLabel} onMove={move=>{if(playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')setAdvancePlayback(p=>p&&p.move!==move?{...p,move}:p);}} onSettled={round=>{if((playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')&&playbackRef.current.to===round){setCycleIndex(round);setAdvancePlayback(p=>p?{...p,phase:'requests',request:0}:p);}}}>    <nav className="round-step-tabs" aria-label="Requests in this round" aria-busy={!!advancePlayback} data-exiting={advancePlayback?.phase==='fading'||undefined}>
+    <RoundPreview setup={recording.previewSetup} moves={previewMoves} round={advancePlayback?.phase==='fading'?advancePlayback.to:cycleIndex} finalLabel={finalLabel} onMove={move=>{if(playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')setAdvancePlayback(p=>p&&p.move!==move?{...p,move}:p);}} onSettled={round=>{if((playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')&&playbackRef.current.to===round){setCycleIndex(round);setAdvancePlayback(p=>p?{...p,phase:'requests',request:0}:p);}}}>
+      {advancePlayback&&(advancePlayback.phase==='fading'||advancePlayback.phase==='moves')&&<div className="preview-executing" aria-label="Executing recorded turns">
+        <small>Round {advancePlayback.from+1} · moves</small>
+        <div className="preview-decision-moves">{recording.steps[advancePlayback.from].alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i} className={i<advancePlayback.move?'move-done':i===advancePlayback.move?'move-active':'move-pending'} aria-current={i===advancePlayback.move?'step':undefined}>{move}</code>)}</div>
+      </div>}
+      <nav className="round-step-tabs" aria-label="Requests in this round" aria-busy={!!advancePlayback} data-exiting={advancePlayback?.phase==='fading'||undefined}>
       {!terminal&&cycle.exchanges.map((e,i)=>{
         if(advancePlayback&&(advancePlayback.phase==='moves'||(advancePlayback.phase==='requests'&&i>advancePlayback.request)))return null;
         const running=advancePlayback?.phase==='requests'&&i===advancePlayback.request;
@@ -286,14 +294,16 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
       })}
       {(!advancePlayback||advancePlayback.phase==='decision-out'||advancePlayback.phase==='fading'||(advancePlayback.phase==='requests'&&(terminal||advancePlayback.request>=cycle.exchanges.length)))&&<a key={`execute-${cycleIndex}`} href="#wire-execution" aria-current={highlightedStep==='wire-execution'?'step':undefined}>{terminal?finalLabel:'Execute'}</a>}
     </nav>
-      {(!terminal||advancePlayback)&&!(advancePlayback&&advancePlayback.from===advancePlayback.to)&&<section key={decisionRound} className="preview-decision" data-exiting={advancePlayback?.phase==='decision-out'||undefined} aria-label="This round’s decision">
-        <small>JEV’s decision · round {decisionRound+1}</small>
-        <div className="preview-objective">{decisionSummary.objective}</div>
-        <strong>{decisionSummary.title}</strong>
-        <p>{decisionSummary.context}</p>
-        {decisionSummary.frame&&<small>{decisionSummary.frame}</small>}
-        <div className="preview-decision-moves" aria-label="Chosen fixed-face turns">{displayCycle.alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i} className={advancePlayback?(advancePlayback.phase==='requests'||i<advancePlayback.move?'move-done':i===advancePlayback.move?'move-active':'move-pending'):undefined} aria-current={(advancePlayback?.phase==='moves'||advancePlayback?.phase==='fading')&&i===advancePlayback.move?'step':undefined}>{move}</code>)}</div>
-        {decisionSummary.outcome&&<small>Recorded result: {decisionSummary.outcome}</small>}
+      {!terminal&&advancePlayback?.phase!=='moves'&&<section key={decisionRound} className="preview-decision" data-exiting={advancePlayback?.phase==='fading'||undefined} aria-label="This round’s decision">
+        {partialDecision?<DecisionMetadata state={{round:cycleIndex,goal:completedChoices.goal,target:completedChoices.target??(completedChoices.goal==='daisy'?completedChoices.gatherTarget:completedChoices.goal==='cross'?completedChoices.transferTarget:undefined),answers:completedChoices}}/>:<>
+          <small>JEV’s decision · round {decisionRound+1}</small>
+          <div className="preview-objective">{decisionSummary.objective}</div>
+          <strong>{decisionSummary.title}</strong>
+          <p>{decisionSummary.context}</p>
+          {decisionSummary.frame&&<small>{decisionSummary.frame}</small>}
+          <div className="preview-decision-moves" aria-label="Chosen fixed-face turns">{displayCycle.alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i}>{move}</code>)}</div>
+          {decisionSummary.outcome&&<small>Recorded result: {decisionSummary.outcome}</small>}
+        </>}
         <button className="preview-advance" disabled={!!advancePlayback} onClick={()=>{setAdvancePlayback({from:cycleIndex,to:cycleIndex+1,phase:'fading',request:0,move:-1});window.scrollTo({top:0,behavior:'smooth'});}}>Advance <FlowArrow/></button>
       </section>}
     </RoundPreview>

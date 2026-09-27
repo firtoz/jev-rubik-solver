@@ -744,3 +744,8 @@
 }
 @media(min-width:651px) and (max-width:1050px){.flow-article-header{padding-right:310px;}}
 @media(max-width:650px){.flow-article-header{padding:20px 135px 20px 12px;gap:10px;}.flow-theme .response-bars>div {grid-template-columns:minmax(0,1fr) minmax(30px,1fr) 42px;}}
+
+.round-preview>.preview-executing { flex-shrink:0;padding:10px 14px;border-top:1px solid var(--flow-border); }
+.preview-executing>small { display:block;margin-bottom:7px;color:var(--flow-muted);font-size:10px; }
+.preview-decision .replay-goal { padding:0;border:0;min-height:0; }
+.preview-decision .replay-goal dl { margin-bottom:0; }
