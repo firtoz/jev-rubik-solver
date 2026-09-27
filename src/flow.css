@@ -749,3 +749,5 @@
 .preview-executing>small { display:block;margin-bottom:7px;color:var(--flow-muted);font-size:10px; }
 .preview-decision .replay-goal { padding:0;border:0;min-height:0; }
 .preview-decision .replay-goal dl { margin-bottom:0; }
+
+.round-step-tabs .request-round-label { padding:5px 8px;color:var(--flow-muted);font-size:11px;flex-shrink:0; }

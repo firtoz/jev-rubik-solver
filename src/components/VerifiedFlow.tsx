@@ -267,6 +267,8 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
   const displayCycle=advancePlayback?.phase==='fading'?recording.steps[advancePlayback.from]:cycle;
   const decisionRound=advancePlayback?.phase==='fading'?advancePlayback.from:cycleIndex;
   const completedChoices=Object.assign({},...cycle.exchanges.slice(0,advancePlayback?.phase==='requests'?advancePlayback.request:cycle.exchanges.length).map(choices));
+  const executingMoves=advancePlayback?.phase==='fading'||advancePlayback?.phase==='moves';
+  const moveRound=executingMoves?advancePlayback!.from:cycleIndex-1;
   const partialDecision=advancePlayback?.phase==='requests'&&advancePlayback.request<cycle.exchanges.length;
   const highlightedStep=advancePlayback?(advancePlayback.phase!=='requests'?'wire-execution':!terminal&&advancePlayback.request<cycle.exchanges.length?`wire-request-${advancePlayback.request}`:'wire-execution'):activeStep;
   const decisionSummary=roundSummary(displayCycle);
@@ -278,11 +280,12 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
     if(target){event.preventDefault();history.replaceState(null,'',`#${id}`);scrollToRequest(target);}
   }}>
     <RoundPreview setup={recording.previewSetup} moves={previewMoves} round={advancePlayback?.phase==='fading'?advancePlayback.to:cycleIndex} finalLabel={finalLabel} onMove={move=>{if(playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')setAdvancePlayback(p=>p&&p.move!==move?{...p,move}:p);}} onSettled={round=>{if((playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')&&playbackRef.current.to===round){setCycleIndex(round);setAdvancePlayback(p=>p?{...p,phase:'requests',request:0}:p);}}}>
-      {advancePlayback&&(advancePlayback.phase==='fading'||advancePlayback.phase==='moves')&&<div className="preview-executing" aria-label="Executing recorded turns">
-        <small>Round {advancePlayback.from+1} · moves</small>
-        <div className="preview-decision-moves">{recording.steps[advancePlayback.from].alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i} className={i<advancePlayback.move?'move-done':i===advancePlayback.move?'move-active':'move-pending'} aria-current={i===advancePlayback.move?'step':undefined}>{move}</code>)}</div>
+      {moveRound>=0&&<div className="preview-executing" aria-label={executingMoves?'Executing recorded turns':'Previous round’s recorded turns'}>
+        <small>Round {moveRound+1} · moves</small>
+        <div className="preview-decision-moves">{recording.steps[moveRound].alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i} className={!executingMoves||i<advancePlayback!.move?'move-done':i===advancePlayback!.move?'move-active':'move-pending'} aria-current={executingMoves&&i===advancePlayback!.move?'step':undefined}>{move}</code>)}</div>
       </div>}
       <nav className="round-step-tabs" aria-label="Requests in this round" aria-busy={!!advancePlayback} data-exiting={advancePlayback?.phase==='fading'||undefined}>
+      {!terminal&&!executingMoves&&<small className="request-round-label">Round {cycleIndex+1}</small>}
       {!terminal&&cycle.exchanges.map((e,i)=>{
         if(advancePlayback&&(advancePlayback.phase==='moves'||(advancePlayback.phase==='requests'&&i>advancePlayback.request)))return null;
         const running=advancePlayback?.phase==='requests'&&i===advancePlayback.request;
