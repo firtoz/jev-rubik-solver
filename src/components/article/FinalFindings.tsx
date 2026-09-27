@@ -100,21 +100,31 @@ export function FinalApproach() {
       <p>
         We supplied the routine descriptions and used code to measure the cube. JEV had to connect
         those measurements to the reference and decide what to do. The reference contains a
-        substantial amount of solving knowledge.
+        substantial amount of solving knowledge: descriptions of useful patterns, preparation
+        rules and named sequences of turns. JEV chooses from those options through typed requests.
+        Its answer is a selected option with probabilities, which the program uses to build the
+        next request.
       </p>
       <ol className="article-decision-path">
         <li>
           <b>Measure the current cube.</b>
           <p>
             Code reports piece locations, sticker directions and completed structures in a fixed
-            frame. JEV never receives the scramble history.
+            frame. For example, a yellow–green edge might be in the top layer with yellow facing
+            up and green facing the back. Its home is between the yellow and green centers. Code
+            can also count yellow petals and check whether the bottom cross is complete. These
+            are measurements of the current position; JEV never receives the scramble history.
           </p>
         </li>
         <li>
           <b>Choose what to work on.</b>
           <p>
             JEV selects a goal and a target from the observations, with the previous target and
-            recent actions as memory.
+            recent actions as memory. The goal request includes definitions and prerequisites:
+            gather yellow petals, transfer them into the cross, solve the first two layers, then
+            finish the top layer. Once JEV chooses a goal, the next request supplies the relevant
+            pieces. During pair solving, it might choose the yellow–green–red corner and its
+            green–red edge. That target stays explicit in the later questions.
           </p>
         </li>
         <li>
@@ -122,7 +132,14 @@ export function FinalApproach() {
           <p>
             JEV chooses which face to treat as front for the routine. It decides whether to lift a
             trapped piece into the top layer (extract it), line it up, or clear the slot it will
-            move into. Those answers become inputs to the next question.
+            move into. Choosing a reference front changes how we describe the cube, not the cube
+            itself. A piece’s current slot matters here: an edge trapped on the left needs a
+            different preparation from one already waiting above its destination.
+          </p>
+          <p>
+            Each answer narrows the next question. If JEV chooses extraction, we ask which slot
+            and which extraction to use. If it chooses a setup turn, code applies that turn and
+            the next round starts from fresh observations. We do not assume the preparation worked.
           </p>
         </li>
         <li>
@@ -131,14 +148,20 @@ export function FinalApproach() {
             JEV matches the observed situation to supplied algorithms. For the first two layers
             (F2L), it first recognises the corner’s location and orientation. That selects a smaller
             group of routines; JEV then examines both the corner and its matching edge to choose
-            one.
+            one. The options describe the sticker patterns each routine handles and the turns it
+            performs. This is the closest part of the analogy to a player’s muscle memory:
+            recognise a familiar case, then use a learned sequence. Code retrieves the sequence
+            JEV named; it does not try each routine and pick the best result.
           </p>
         </li>
         <li>
           <b>Execute and look again.</b>
           <p>
             Code applies the selected moves and measures the result. Repeated states can trigger a
-            JEV recovery decision. Incorrect choices are recorded rather than repaired by code.
+            JEV recovery decision: continue, change target or undo the previous action. Recent
+            actions and any remembered plan give the next request some continuity, while the new
+            observations show what actually changed. Incorrect choices remain in the recording.
+            Only the exact cube-state check can declare the puzzle solved.
           </p>
         </li>
       </ol>
