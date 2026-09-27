@@ -2836,3 +2836,4 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
  .comparison-side:first-child .replay-request-heading small::before { content:'Single turns · '; }
  .comparison-side:nth-child(2) .replay-request-heading small::before { content:'Grouped menu · '; }
 }
+.replay-camera-label { display:block;color:var(--muted);font-size:11px;margin-bottom:3px; }

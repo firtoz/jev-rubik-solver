@@ -1,3 +1,4 @@
+import { replayCamera } from '../../lib/replay-camera';
 import { ReplayGoal } from './ReplayGoal';
 import { nextRequestEnd } from '../../lib/replay-requests';
 import { useEffect, useRef, useState } from 'react';
@@ -52,6 +53,8 @@ export function BestRecording() {
       </div>
       <div className="comparison-stage">
         <Cube
+          camera={replayCamera('skills', frame.transition ? schedule[frame.index].ms : requestTime)}
+          cameraSpeed={speed}
           scramble={recording.scramble}
           alg={frame.alg}
           speed={1}

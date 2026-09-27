@@ -1,3 +1,4 @@
+import { replayCamera } from '../../lib/replay-camera';
 import { ReplayGoal } from './ReplayGoal';
 import { nextRequestEnd } from '../../lib/replay-requests';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -101,6 +102,9 @@ export function ComparisonDemo({
         {[left, right].map((recording, index) => {
           const frame = actionFrame(schedules[recording.policy], index ? time : requestTime);
           const actionIndex = frame.index;
+          // Keep the executing action in view while the next round's requests arrive.
+          const cameraTime = frame.transition ? schedules[recording.policy][frame.index].ms : requestTime;
+          const camera = latest ? replayCamera(index ? 'skills' : 'primitive', cameraTime) : undefined;
           const elapsed = Math.min(requestTime, recording.durationMs);
           const spent = recording.costs
             .filter((c) => c.ms <= requestTime)
@@ -118,6 +122,8 @@ export function ComparisonDemo({
               </header>
               <div className="comparison-stage">
                 <Cube
+                  camera={camera}
+                  cameraSpeed={speed}
                   scramble={recording.scramble}
                   alg={frame.alg}
                   speed={1}
@@ -141,6 +147,7 @@ export function ComparisonDemo({
                 )}
               </div>
               <div className="comparison-status">
+                {camera && <small className="replay-camera-label">{camera.label}</small>}
                 {ended
                   ? index
                     ? 'Solved'

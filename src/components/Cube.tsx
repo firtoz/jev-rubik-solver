@@ -1,3 +1,4 @@
+import { cameraTravel } from '../lib/replay-camera';
 import { useEffect, useRef, useState } from 'react';
 import type { TwistyPlayer, ExperimentalMillisecondTimestamp } from 'cubing/twisty';
 import type { RecordedTransition } from '../lib/replay';
@@ -10,7 +11,11 @@ export function Cube({
   hideControls = false,
   transition,
   onMoveProgress,
+  camera,
+  cameraSpeed = 1,
 }: {
+  camera?: { latitude: number; longitude: number };
+  cameraSpeed?: number;
   scramble: string;
   alg: string;
   speed: number;
@@ -154,6 +159,27 @@ export function Cube({
   useEffect(() => {
     if (player.current) player.current.tempoScale = speed;
   }, [speed]);
+  useEffect(() => {
+    const p = player.current;
+    if (!p || !camera) return;
+    let cancelled = false, frame = 0;
+    void p.experimentalModel.twistySceneModel.orbitCoordinates.get().then(from => {
+      if (cancelled) return;
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const duration = reduced ? 0 : Math.max(280, Math.min(1200, 700 / Math.sqrt(cameraSpeed)));
+      const began = performance.now(), delta = cameraTravel(from.longitude, camera.longitude);
+      const tick = (now: number) => {
+        if (cancelled) return;
+        const t = duration ? Math.min(1, (now - began) / duration) : 1;
+        const eased = t * t * (3 - 2 * t);
+        p.cameraLatitude = from.latitude + (camera.latitude - from.latitude) * eased;
+        p.cameraLongitude = from.longitude + delta * eased;
+        if (t < 1) frame = requestAnimationFrame(tick);
+      };
+      frame = requestAnimationFrame(tick);
+    });
+    return () => { cancelled = true; cancelAnimationFrame(frame); };
+  }, [camera?.latitude, camera?.longitude, cameraSpeed, generation]);
   return (
     <div className="cube" ref={host}>
       {error || <span className="loading">Loading cube…</span>}
