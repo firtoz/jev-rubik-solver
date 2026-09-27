@@ -70,6 +70,7 @@ export function Cube({
           background: 'none',
           controlPanel: latest.current.instant || hideControls ? 'none' : 'bottom-row',
           backView: 'top-right',
+          cameraLatitudeLimit: 90,
           hintFacelets: 'none',
           tempoScale: latest.current.speed,
         });

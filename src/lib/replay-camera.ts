@@ -15,8 +15,9 @@ export function replayCamera(policy: ReplayPolicy, time: number) {
   const middle = goal === 'f2l' || goal === 'middle-layer';
   const longitude = ({ F: 0, R: 90, B: 180, L: -90 } as Record<string, number>)[front] ?? 0;
   return {
-    latitude: lower ? -55 : middle ? -20 : 45,
-    longitude: longitude + 30,
+    // Stay just off the pole to keep the camera's up direction stable.
+    latitude: goal === 'cross' ? -89.9 : lower ? -55 : middle ? -20 : 45,
+    longitude: goal === 'cross' ? 0 : longitude + 30,
     label: lower ? 'Yellow underside · D' : middle ? `Lower layers · ${front} side` : 'Top face · U',
   };
 }

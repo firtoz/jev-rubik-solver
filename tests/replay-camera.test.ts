@@ -4,7 +4,8 @@ import { replayCamera, cameraTravel } from '../src/lib/replay-camera';
 
 test('camera follows completed goals and seeks deterministically', () => {
   const cross = timings.skills.find(row => row.answers.goal === 'cross')!;
-  expect(replayCamera('skills', cross.endMs).latitude).toBeLessThan(0);
+  expect(replayCamera('skills', cross.endMs).latitude).toBe(-89.9);
+  expect(replayCamera('skills', cross.endMs).longitude).toBe(0);
   expect(replayCamera('skills', cross.endMs).label).toContain('D');
   const daisy = timings.skills.find(row => row.answers.goal === 'daisy')!;
   expect(replayCamera('skills', daisy.endMs).latitude).toBeGreaterThan(0);
