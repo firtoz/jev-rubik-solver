@@ -13,7 +13,7 @@ bun install
 bun run dev
 ```
 
-Open [the article](http://127.0.0.1:3000/how-it-works), [the recorded request flow](http://127.0.0.1:3000/request-flow).
+Open [the article](https://firtoz.github.io/jev-rubik-solver/how-it-works/), [the recorded request flow](https://firtoz.github.io/jev-rubik-solver/request-flow/).
 
 The website is read-only and makes no JEV API calls. It needs no credentials.
 
