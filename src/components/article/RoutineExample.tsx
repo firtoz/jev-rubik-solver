@@ -16,8 +16,8 @@ function Diagram({ after }: { after: boolean }) {
       role="img"
       aria-label={
         after
-          ? 'Corner and edge inserted into the front-right slot'
-          : 'Target corner at UFR and edge at UF, outlined in dark blue'
+          ? 'Two highlighted pieces in their home slot; grey stickers are omitted'
+          : 'Two highlighted pieces in the top layer, ready to insert; grey stickers are omitted'
       }
     >
       {(['U', 'F', 'R'] as const).map((face) => (
@@ -39,8 +39,8 @@ function Diagram({ after }: { after: boolean }) {
                 width="48"
                 height="48"
                 rx="3"
-                fill={colors[sticker.color]}
-                opacity={selected.includes(sticker.position) ? 1 : 0.4}
+                fill={selected.includes(sticker.position) ? colors[sticker.color] : '#424954'}
+                opacity={1}
                 stroke="#151b26"
                 strokeWidth="2"
               />
@@ -68,10 +68,10 @@ export function RoutineExample() {
     <figure className="routine-example">
       <div className="routine-example-pair">
         <div>
-          <h4>Before: pair in the top layer</h4>
+          <h4>Before: two pieces ready to insert</h4>
           <Diagram after={false} />
           <p>
-            Corner <code>UFR</code> · edge <code>UF</code>
+            The corner and edge are waiting in the top layer.
           </p>
         </div>
         <div className="routine-example-arrow">
@@ -81,17 +81,17 @@ export function RoutineExample() {
           </svg>
         </div>
         <div>
-          <h4>After: pair in its home slot</h4>
+          <h4>After: those two pieces are solved</h4>
           <Diagram after />
           <p>
-            Corner <code>DRF</code> · edge <code>FR</code>
+            They now sit together in the front-right slot.
           </p>
         </div>
       </div>
       <figcaption>
-        Outlines follow the yellow–green–red corner and green–red edge. The other bottom-layer
-        pieces return to their original positions. This is a supplied reference case, not a new JEV
-        response.
+        Follow just the two colored pieces. Grey stickers are hidden for clarity, not marked as
+        solved. This routine inserts one pair; a full solve can still need other pairs and the last
+        layer. Illustration from the supplied routine reference.
       </figcaption>
     </figure>
   );

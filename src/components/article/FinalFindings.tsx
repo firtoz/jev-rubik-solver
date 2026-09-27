@@ -143,7 +143,7 @@ export function FinalApproach() {
         </li>
       </ol>
       <div className="article-note">
-        <b>An example: choosing a four-turn routine</b>
+        <b>An example: putting two pieces into place</b>
         <p>
           Suppose the chosen corner and edge are both in the top layer, ready to be inserted as a
           pair. Code reports their positions and sticker directions. JEV first identifies the corner
