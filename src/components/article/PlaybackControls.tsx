@@ -7,6 +7,7 @@ const formatTime = (ms: number) => {
 };
 
 export function PlaybackControls({
+  disabled = false,
   time,
   finish,
   playing,
@@ -16,6 +17,7 @@ export function PlaybackControls({
   onSeek,
   onSpeed,
 }: {
+  disabled?: boolean;
   time: number;
   finish: number;
   playing: boolean;
@@ -54,6 +56,7 @@ export function PlaybackControls({
       <div className="replay-control-buttons">
         <button
           type="button"
+          disabled={disabled}
           onClick={onToggle}
           aria-label={playing ? 'Pause replay' : 'Play replay'}
           title={playing ? 'Pause' : 'Play'}
@@ -62,7 +65,7 @@ export function PlaybackControls({
             {playing ? <path d="M8 5v14M16 5v14" /> : <path d="m8 5 11 7-11 7Z" />}
           </svg>
         </button>
-        <button type="button" onClick={onRestart} aria-label="Restart replay" title="Restart">
+        <button type="button" disabled={disabled} onClick={onRestart} aria-label="Restart replay" title="Restart">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 10a8 8 0 1 1 1 7M4 4v6h6" />
           </svg>
@@ -71,6 +74,7 @@ export function PlaybackControls({
       <div className="replay-seek">
         <input
           type="range"
+          disabled={disabled}
           min={0}
           max={finish}
           step={1}

@@ -47,6 +47,8 @@ export function ComparisonDemo({
   latest?: boolean;
 }) {
   const { ref, visible } = useInView(500);
+  const [readyCubes, setReadyCubes] = useState<Record<string, boolean>>({});
+  const cubesReady = readyCubes.primitive === true && readyCubes.skills === true;
   const [moveProgress, setMoveProgress] = useState<Record<string, CubeMoveProgress>>({});
   const [speed, setSpeed] = useState(3);
   const [paused, setPaused] = useState(false);
@@ -70,7 +72,7 @@ export function ComparisonDemo({
   const finish = schedules.skills?.at(-1)?.end ?? 0;
   const requestTime = Math.min(time, recordedFinish);
   const ended = finish > 0 && time >= finish;
-  const playing = visible && !paused && !reduced && !ended && finish > 0;
+  const playing = cubesReady && visible && !paused && !reduced && !ended && finish > 0;
   useEffect(() => {
     if (!playing) return;
     let handle = 0,
@@ -96,7 +98,7 @@ export function ComparisonDemo({
     <div ref={ref} className="recorded-demo comparison-demo">
       <div className="demo-top">
         <span className="eyebrow">REAL RECORDINGS · NO API CALLS</span>
-        <span>Same scramble · {speed}× speed{latest ? ' · fresh paired recording' : ''}</span>
+        <span>{cubesReady ? <>Same scramble · {speed}× speed{latest ? ' · fresh paired recording' : ''}</> : 'Loading cube previews…'}</span>
       </div>
       <div className="comparison-cubes">
         {[left, right].map((recording, index) => {
@@ -122,6 +124,8 @@ export function ComparisonDemo({
               </header>
               <div className="comparison-stage">
                 <Cube
+                  onReadyChange={ready => setReadyCubes(previous => previous[recording.policy] === ready
+                    ? previous : { ...previous, [recording.policy]: ready })}
                   camera={camera}
                   cameraSpeed={speed}
                   scramble={recording.scramble}
@@ -157,7 +161,7 @@ export function ComparisonDemo({
               {latest && <ReplayGoal policy={index ? 'skills' : 'primitive'} time={requestTime} />}
               {latest && (
                 <ReplayRequest policy={index ? 'skills' : 'primitive'} time={requestTime}
-                  canStep={nextRequestEnd(index ? 'skills' : 'primitive', time, finish) !== undefined}
+                  canStep={cubesReady && nextRequestEnd(index ? 'skills' : 'primitive', time, finish) !== undefined}
                   onStep={() => {
                     const end = nextRequestEnd(index ? 'skills' : 'primitive', time, finish);
                     if (end !== undefined) { setPaused(true); clock.current = end; setTime(end); }
@@ -209,7 +213,7 @@ export function ComparisonDemo({
             </section>
           );
         })}
-      <PlaybackControls time={time} finish={finish} playing={playing} speed={speed}
+      <PlaybackControls disabled={!cubesReady} time={time} finish={finish} playing={playing} speed={speed}
         onSpeed={setSpeed}
         onSeek={value => { clock.current = value; setTime(value); }}
         onRestart={() => { clock.current = 0; setTime(0); setPaused(false); setReduced(false); }}

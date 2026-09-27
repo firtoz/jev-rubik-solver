@@ -1,4 +1,5 @@
-import { cameraTravel } from '../lib/replay-camera';
+import { cameraTravel } from '../lib/camera-view';
+import { waitForCubeRender } from '../lib/cube-ready';
 import { useEffect, useRef, useState } from 'react';
 import type { TwistyPlayer, ExperimentalMillisecondTimestamp } from 'cubing/twisty';
 import type { RecordedTransition } from '../lib/replay';
@@ -11,6 +12,7 @@ export function Cube({
   hideControls = false,
   transition,
   onMoveProgress,
+  onReadyChange,
   camera,
   cameraSpeed = 1,
 }: {
@@ -22,6 +24,7 @@ export function Cube({
   instant?: boolean;
   hideControls?: boolean;
   transition?: RecordedTransition;
+  onReadyChange?: (ready: boolean) => void;
   onMoveProgress?: (progress: CubeMoveProgress) => void;
 }) {
   const host = useRef<HTMLDivElement>(null),
@@ -29,6 +32,8 @@ export function Cube({
     previous = useRef('');
   const latest = useRef({ alg, speed, instant, transition });
   latest.current = { alg, speed, instant, transition };
+  const readyCallback = useRef(onReadyChange);
+  readyCallback.current = onReadyChange;
   const moveCallback = useRef(onMoveProgress);
   moveCallback.current = onMoveProgress;
   const timedRange = useRef<{
@@ -60,8 +65,10 @@ export function Cube({
   useEffect(() => {
     if (!nearby) return;
     let disposed = false;
+    readyCallback.current?.(false);
+    setError('');
     import('cubing/twisty')
-      .then(({ TwistyPlayer }) => {
+      .then(async ({ TwistyPlayer }) => {
         if (disposed) return;
         const p = new TwistyPlayer({
           puzzle: '3x3x3',
@@ -81,14 +88,19 @@ export function Cube({
         previous.current = latest.current.alg;
         p.jumpToEnd();
         setGeneration((n) => n + 1);
+        await waitForCubeRender(p);
+        if (!disposed) readyCallback.current?.(true);
       })
-      .catch(() =>
+      .catch(() => {
+        if (disposed) return;
+        readyCallback.current?.(false);
         setError(
           '3D preview could not load. The recorded cube state is available in the inspector.',
-        ),
-      );
+        );
+      });
     return () => {
       disposed = true;
+      readyCallback.current?.(false);
       player.current?.remove();
       player.current = null;
     };
