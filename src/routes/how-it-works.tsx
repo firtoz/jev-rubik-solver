@@ -376,7 +376,7 @@ function Article() {
                 <div className="appendix-content">
                   <h3>Explore the recordings</h3>
                   <p>The website plays saved recordings and displays their exact requests and responses. It never calls JEV and needs no API key.</p>
-                  <pre>{'bun install --frozen-lockfile\nbun run dev'}</pre>
+                  <pre>{'bun install\nbun run dev'}</pre>
                   <p>To check all 100 recorded attempts against the current solver and cube mechanics offline:</p>
                   <pre>bun run verify:recordings</pre>
                   <section id="playground">

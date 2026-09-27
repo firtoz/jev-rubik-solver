@@ -1,6 +1,6 @@
 # Contributing
 
-Install Bun, run `bun install --frozen-lockfile`, then `bun run check`. Tests use a temporary SQLite database and block live provider requests. A provider key is not needed for verification.
+Install Bun, run `bun install`, then `bun run check`. Tests use a temporary SQLite database and block live provider requests. A provider key is not needed for verification.
 
 Keep prompts and code/model responsibilities explicit. Code may measure facts, transform coordinates, execute a JEV-selected routine and score a result. It must not silently choose a matching case, rank predicted outcomes or repair a tactical mistake.
 

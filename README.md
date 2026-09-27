@@ -9,7 +9,7 @@ The current **grouped-menu solver** solved **98 of 100 fresh random-state cubes 
 Requires [Bun](https://bun.sh/) 1.3.13 or later.
 
 ```sh
-bun install --frozen-lockfile
+bun install
 bun run dev
 ```
 
