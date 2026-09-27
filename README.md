@@ -21,6 +21,10 @@ To run a paid solve locally, copy `.env.example` to `.env`, set `TYPESAFE_API_KE
 
 `RUBIK_BUDGET_USD` sets the cumulative local ledger ceiling, default **$1**. The ledger includes conservative reservations for uncertain outcomes. It is not the provider account balance. Keep the database when restarting so the ceiling continues to cover earlier calls. The configured estimate is $0.042 per million input tokens; check [provider pricing](https://docs.typesafe.ai/models) before a new paid study. Each attempt allows 500 requests, 100 face turns and ten minutes of active execution.
 
+## GitHub Pages
+
+The static Pages build is prepared in `.github/workflows/pages.yml`. It prerenders the article and request viewer with the project URL prefix and publishes only the static client output. While this repository is private on GitHub Free, pushes build an artifact and skip deployment. After making the repository public, select **Settings → Pages → Build and deployment → GitHub Actions**, then run the **Deploy GitHub Pages** workflow once. The published site will be public.
+
 ## How it works
 
 Code measures the current cube and executes moves. JEV chooses the goal, target, reference frame, preparation and routine. Independent questions may share a request; dependent questions wait for earlier answers. For F2L it recognises a corner family before choosing from that family's routines. For PLL it recognises the corner pattern before choosing the matching edge routine.

@@ -12,7 +12,8 @@
     "check": "bun test && bun run typecheck && bun run verify:recordings && bun run build && bun run release:check",
     "verify:recordings": "bun scripts/verify-recordings.ts",
     "release:check": "bun scripts/release-check.ts",
-    "release:export": "bun scripts/export-public.ts"
+    "release:export": "bun scripts/export-public.ts",
+    "build:pages": "node node_modules/vite/bin/vite.js build"
   },
   "dependencies": {
     "@tanstack/react-router": "1.170.38",

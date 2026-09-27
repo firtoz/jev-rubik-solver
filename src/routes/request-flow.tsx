@@ -14,7 +14,7 @@ function FlowViewer() {
           Back to the article
         </Link>
       </header>
-      <VerifiedFlow recordingUrl="/recordings/article-best-flow.json" />
+      <VerifiedFlow recordingUrl={`${import.meta.env.BASE_URL}recordings/article-best-flow.json`} />
     </div>
   );
 }
