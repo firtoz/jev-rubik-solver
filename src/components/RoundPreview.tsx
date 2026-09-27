@@ -1,9 +1,13 @@
+import { cameraTravel } from '../lib/camera-view';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { TwistyPlayer, ExperimentalMillisecondTimestamp } from 'cubing/twisty';
 
-type Props={onMove?:(index:number)=>void;onSettled?:(round:number)=>void;children?:ReactNode;setup:string;moves:string[];round:number;finalLabel?:string};
+type Props={camera?:{latitude:number;longitude:number};onMove?:(index:number)=>void;onSettled?:(round:number)=>void;children?:ReactNode;setup:string;moves:string[];round:number;finalLabel?:string};
 /** Plays recorded transitions only. The displayed state is the start of a round. */
-export function RoundPreview({setup,moves,round,children,onMove,onSettled,finalLabel='Solved'}:Props) {
+export function RoundPreview({setup,moves,round,children,onMove,onSettled,camera,finalLabel='Solved'}:Props) {
+  const player=useRef<TwistyPlayer|null>(null);
+  const [generation,setGeneration]=useState(0);
+  const cameraRef=useRef(camera);cameraRef.current=camera;
   const callbacks=useRef({onMove,onSettled});callbacks.current={onMove,onSettled};
   const host=useRef<HTMLDivElement>(null),wanted=useRef(round),kick=useRef(()=>{});
   const [status,setStatus]=useState(round===moves.length?finalLabel:`Round ${round+1}`);
@@ -14,7 +18,8 @@ export function RoundPreview({setup,moves,round,children,onMove,onSettled,finalL
     const prefix=(n:number)=>[setup,...moves.slice(0,n)].filter(Boolean).join(' ');
     void Promise.all([import('cubing/twisty'),import('cubing/alg')]).then(async ([{TwistyPlayer},{Alg}])=>{
       if(disposed)return;
-      p=new TwistyPlayer({puzzle:'3x3x3',visualization:'3D',experimentalSetupAlg:prefix(settled),alg:'',background:'none',controlPanel:'none',backView:'none',hintFacelets:'none'});
+      p=new TwistyPlayer({puzzle:'3x3x3',visualization:'3D',experimentalSetupAlg:prefix(settled),alg:'',background:'none',controlPanel:'none',backView:'none',hintFacelets:'none',cameraLatitudeLimit:90,cameraLatitude:cameraRef.current?.latitude??45,cameraLongitude:cameraRef.current?.longitude??30});
+      player.current=p;setGeneration(n=>n+1);
       p.indexer='simple';
       p.style.width='100%';p.style.height='100%';host.current?.replaceChildren(p);
       // Cube3D defaults to translucent cubie bodies. Make the gap backing opaque.
@@ -70,8 +75,27 @@ export function RoundPreview({setup,moves,round,children,onMove,onSettled,finalL
       };
       kick.current=()=>{void run();};kick.current();
     }).catch(()=>{if(!disposed)setStatus('Preview unavailable');});
-    return()=>{disposed=true;kick.current=()=>{};cancelAnimationFrame(raf);finish?.();p?.pause();p?.remove();};
+    return()=>{disposed=true;player.current=null;kick.current=()=>{};cancelAnimationFrame(raf);finish?.();p?.pause();p?.remove();};
   },[setup,moves,finalLabel]);
   useEffect(()=>{kick.current();},[round]);
+  useEffect(()=>{
+    const p=player.current;
+    if(!p||!camera)return;
+    let cancelled=false,frame=0;
+    void p.experimentalModel.twistySceneModel.orbitCoordinates.get().then(from=>{
+      if(cancelled)return;
+      const duration=matchMedia('(prefers-reduced-motion: reduce)').matches?0:650;
+      const began=performance.now(),delta=cameraTravel(from.longitude,camera.longitude);
+      const tick=(now:number)=>{
+        if(cancelled)return;
+        const t=duration?Math.min(1,(now-began)/duration):1,eased=t*t*(3-2*t);
+        p.cameraLatitude=from.latitude+(camera.latitude-from.latitude)*eased;
+        p.cameraLongitude=from.longitude+delta*eased;
+        if(t<1)frame=requestAnimationFrame(tick);
+      };
+      frame=requestAnimationFrame(tick);
+    });
+    return()=>{cancelled=true;cancelAnimationFrame(frame);};
+  },[camera?.latitude,camera?.longitude,generation]);
   return <aside className="round-preview" aria-label="Current round cube"><div className="round-preview-heading"><strong>Recorded cube</strong><small>Drag to rotate</small></div><div className="round-preview-cube" ref={host}/>{status==='Preview unavailable'&&<div className="round-preview-status" role="status">{status}</div>}{children}</aside>;
 }

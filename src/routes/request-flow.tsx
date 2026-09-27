@@ -1,4 +1,5 @@
-import { RequestPermalink } from '../components/RequestPermalink';
+import { lazy, Suspense } from 'react';
+const RequestPermalink = lazy(() => import('../components/RequestPermalink').then(m => ({ default: m.RequestPermalink })));
 import { VerifiedFlow } from '../components/VerifiedFlow';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import '../flow.css';
@@ -20,7 +21,10 @@ export const Route = createFileRoute('/request-flow')({
         ? Number(search.request)
         : 1,
   }),
-  head: () => ({ meta: [{ title: 'Inside the article’s solve | JEV Cube Lab' }] }),
+  head: () => ({
+    meta: [{ title: 'Inside the article’s solve | JEV Cube Lab' }],
+    links: [{ rel: 'preload', as: 'fetch', href: `${import.meta.env.BASE_URL}recordings/article-best-flow.json`, crossOrigin: 'anonymous' }],
+  }),
 });
 function FlowViewer() {
   const search = Route.useSearch();
@@ -33,11 +37,11 @@ function FlowViewer() {
         </Link>
       </header>
       {search.recording === 'primitive' ? (
-        <RequestPermalink
+        <Suspense fallback={<p role="status">Loading saved request…</p>}><RequestPermalink
           policy={search.recording}
           round={search.round ?? 1}
           step={search.request ?? 1}
-        />
+        /></Suspense>
       ) : (
         <VerifiedFlow
           key={`${search.round}-${search.request}`}

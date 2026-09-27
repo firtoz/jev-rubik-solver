@@ -1,4 +1,4 @@
-import { colors, facts, pieces } from '../lib/cube';
+import { colors, facts, pieces } from '../lib/cube-observations';
 import type { CubeData } from '../lib/types';
 
 const palette: Record<string, string> = {

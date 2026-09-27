@@ -1,11 +1,12 @@
-import { DecisionMetadata } from './article/ReplayGoal';
+import { cameraForGoal } from '../lib/camera-view';
+import { DecisionMetadata } from './article/DecisionMetadata';
 import { preparationLabel } from '../lib/request-label';
 import { algorithmLabel,algorithmLabels } from '../lib/algorithm-labels';
 import { roundSummary } from '../lib/round-summary';
 import { RoundPreview } from './RoundPreview';
 import { FlowArrow } from './FlowArrow';
 import { CubeNet } from './RoundCube';
-import { facts } from '../lib/cube';
+import { facts } from '../lib/cube-observations';
 import { ExecutionChanges } from './ExecutionChanges';
 import { DecisionObservation, RoutineDefinition } from './DecisionObservation';
 import { ObservationSnapshot } from './ObservationSnapshot';
@@ -270,6 +271,14 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
   const executingMoves=advancePlayback?.phase==='fading'||advancePlayback?.phase==='moves';
   const moveRound=executingMoves?advancePlayback!.from:cycleIndex-1;
   const partialDecision=advancePlayback?.phase==='requests'&&advancePlayback.request<cycle.exchanges.length;
+  // Keep the executing action in view. New answers reframe the next round only
+  // after they have completed; seeking uses that round's recorded choices.
+  const cameraAnswers=executingMoves
+    ? Object.assign({},...recording.steps[advancePlayback!.from].exchanges.map(choices))
+    : completedChoices;
+  const previousDecision=recording.steps[Math.max(0,cycleIndex-1)]?.decision;
+  const camera=cameraForGoal(cameraAnswers.goal??(cycleIndex>0?previousDecision?.goal:undefined),
+    cameraAnswers.front??cameraAnswers.reference??'F');
   const highlightedStep=advancePlayback?(advancePlayback.phase!=='requests'?'wire-execution':!terminal&&advancePlayback.request<cycle.exchanges.length?`wire-request-${advancePlayback.request}`:'wire-execution'):activeStep;
   const decisionSummary=roundSummary(displayCycle);
   const allChoices = Object.assign({}, ...cycle.exchanges.map(choices));
@@ -279,7 +288,7 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',
     const id=link.getAttribute('href')!.slice(1),target=document.getElementById(id);
     if(target){event.preventDefault();history.replaceState(null,'',`#${id}`);scrollToRequest(target);}
   }}>
-    <RoundPreview setup={recording.previewSetup} moves={previewMoves} round={advancePlayback?.phase==='fading'?advancePlayback.to:cycleIndex} finalLabel={finalLabel} onMove={move=>{if(playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')setAdvancePlayback(p=>p&&p.move!==move?{...p,move}:p);}} onSettled={round=>{if((playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')&&playbackRef.current.to===round){setCycleIndex(round);setAdvancePlayback(p=>p?{...p,phase:'requests',request:0}:p);}}}>
+    <RoundPreview camera={camera} setup={recording.previewSetup} moves={previewMoves} round={advancePlayback?.phase==='fading'?advancePlayback.to:cycleIndex} finalLabel={finalLabel} onMove={move=>{if(playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')setAdvancePlayback(p=>p&&p.move!==move?{...p,move}:p);}} onSettled={round=>{if((playbackRef.current?.phase==='moves'||playbackRef.current?.phase==='fading')&&playbackRef.current.to===round){setCycleIndex(round);setAdvancePlayback(p=>p?{...p,phase:'requests',request:0}:p);}}}>
       {moveRound>=0&&<div className="preview-executing" aria-label={executingMoves?'Executing recorded turns':'Previous round’s recorded turns'}>
         <small>Round {moveRound+1} · moves</small>
         <div className="preview-decision-moves">{recording.steps[moveRound].alg.trim().split(/\s+/).filter(Boolean).map((move,i)=><code key={i} className={!executingMoves||i<advancePlayback!.move?'move-done':i===advancePlayback!.move?'move-active':'move-pending'} aria-current={executingMoves&&i===advancePlayback!.move?'step':undefined}>{move}</code>)}</div>

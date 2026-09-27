@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CubeNet } from './RoundCube';
 import { stageVisuals } from './StageFacts';
-import { colors } from '../lib/cube';
+import { colors } from '../lib/cube-observations';
 import type { CubeData } from '../lib/types';
 const palette:Record<string,string>={white:'#fff',yellow:'#ecd247',green:'#58a673',blue:'#568ad4',red:'#db7068',orange:'#eaa04d'};
 const positions:Record<string,[number,number]>={UB:[32,10],UL:[10,32],UR:[54,32],UF:[32,54],DB:[32,54],DL:[10,32],DR:[54,32],DF:[32,10],UBL:[10,10],URB:[54,10],ULF:[10,54],UFR:[54,54]};

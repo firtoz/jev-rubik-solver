@@ -1,4 +1,4 @@
-import { pieces } from './cube';
+import { pieces } from './cube-observations';
 import type { CubeData } from './types';
 
 /** Compare the recorded endpoints by physical piece identity, not occupied slot. */

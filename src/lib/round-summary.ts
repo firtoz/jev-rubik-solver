@@ -1,5 +1,5 @@
 import {algorithmLabel,namedAlgorithms} from './algorithm-labels';
-import { facts, pieces } from './cube';
+import { facts, pieces } from './cube-observations';
 import type { CubeData } from './types';
 type Round={before:CubeData;after:CubeData;alg:string;decision:any;exchanges?:{request:any}[]};
 const goals:Record<string,string>={'daisy':'Gather yellow petals','cross':'Build the yellow cross','first-layer':'Solve a yellow corner','middle-layer':'Solve a middle edge','top-cross':'Make the white cross','top-orientation':'Orient white corners','top-corners':'Place white corners','top-edges':'Place white edges'};

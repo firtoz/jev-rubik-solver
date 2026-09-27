@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { pieceChanges } from '../lib/piece-changes';
-import { facts } from '../lib/cube';
+import { facts } from '../lib/cube-observations';
 import type { CubeData } from '../lib/types';
 import { CubeNet } from './RoundCube';
 import { FlowArrow } from './FlowArrow';

@@ -1,4 +1,4 @@
-import { colors, pieces } from './cube';
+import { colors, pieces } from './cube-observations';
 import type { CubeData } from './types';
 // Each face is viewed from outside. U is above F; D below F in the unfolded net.
 export const netSlots: Record<string, string[]> = {
