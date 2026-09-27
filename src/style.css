@@ -2567,13 +2567,10 @@ footer span:first-child {
 
 .article-reader-context {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.8rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.7rem;
+  max-width: 70ch;
   margin: 2rem 0;
-}
-.article-reader-context > div {
-  border-top: 2px solid #b8d994;
-  padding-top: 0.7rem;
 }
 .article-glossary {
   display: grid;
@@ -2587,12 +2584,6 @@ footer span:first-child {
   margin: 0.3rem 0 0;
   color: #b4bfac;
   line-height: 1.7;
-}
-@media (max-width: 700px) {
-  .article-reader-context {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
-  }
 }
 
 /* Let article grids shrink below their contents' intrinsic table/code width. */
