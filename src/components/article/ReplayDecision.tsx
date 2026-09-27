@@ -20,8 +20,8 @@ export function ReplayDecision({
   if (!detail) return null;
   return (
     <div className="comparison-decision" key={index}>
-      <small>{final ? 'FINAL ACTION' : `ROUND ${index + 1} / ${details.length}`}</small>
-      <strong>{detail.objective}</strong>
+      <small>{final ? 'FINAL ACTION' : `MOVES FROM ROUND ${index + 1}`}</small>
+
       <span>{detail.title}</span>
       <p>{detail.context}</p>
       <div className="comparison-decision-moves" aria-label="Chosen moves">
@@ -45,7 +45,7 @@ export function ReplayDecision({
           </code>
         ))}
       </div>
-      {detail.outcome && <small>Recorded result: {detail.outcome}</small>}
+      {(settled || final) && detail.outcome && <small>Recorded result: {detail.outcome}</small>}
     </div>
   );
 }

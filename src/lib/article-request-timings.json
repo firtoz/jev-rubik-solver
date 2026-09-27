@@ -10,7 +10,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 0,
@@ -22,7 +25,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DR"
+      }
     },
     {
       "round": 0,
@@ -34,7 +40,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "R"
+      }
     },
     {
       "round": 1,
@@ -46,7 +55,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 1,
@@ -58,7 +70,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DR"
+      }
     },
     {
       "round": 1,
@@ -70,7 +85,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 2,
@@ -82,7 +100,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 2,
@@ -94,7 +115,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DR"
+      }
     },
     {
       "round": 2,
@@ -106,7 +130,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 3,
@@ -118,7 +145,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 3,
@@ -130,7 +160,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 3,
@@ -142,7 +175,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DR"
+      }
     },
     {
       "round": 3,
@@ -154,7 +190,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "R"
+      }
     },
     {
       "round": 4,
@@ -166,7 +205,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 4,
@@ -178,7 +220,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 4,
@@ -190,7 +235,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "B"
+      }
     },
     {
       "round": 5,
@@ -202,7 +250,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 5,
@@ -214,7 +265,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 5,
@@ -226,7 +280,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 6,
@@ -238,7 +295,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 6,
@@ -250,7 +310,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 6,
@@ -262,7 +325,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 7,
@@ -274,7 +340,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 7,
@@ -286,7 +355,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 7,
@@ -298,7 +370,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 7,
@@ -310,7 +385,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 8,
@@ -322,7 +400,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 8,
@@ -334,7 +415,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 8,
@@ -346,7 +430,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 9,
@@ -358,7 +445,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 9,
@@ -370,7 +460,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 9,
@@ -382,7 +475,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 10,
@@ -394,7 +490,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 10,
@@ -406,7 +505,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 10,
@@ -418,7 +520,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "B"
+      }
     },
     {
       "round": 11,
@@ -430,7 +535,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 11,
@@ -442,7 +550,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 11,
@@ -454,7 +565,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 11,
@@ -466,7 +580,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 12,
@@ -478,7 +595,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 12,
@@ -490,7 +610,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 12,
@@ -502,7 +625,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 13,
@@ -514,7 +640,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 13,
@@ -526,7 +655,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 13,
@@ -538,7 +670,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 14,
@@ -550,7 +685,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 14,
@@ -562,7 +700,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 14,
@@ -574,7 +715,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 15,
@@ -586,7 +730,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 15,
@@ -598,7 +745,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 15,
@@ -610,7 +760,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 15,
@@ -622,7 +775,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 16,
@@ -634,7 +790,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 16,
@@ -646,7 +805,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 16,
@@ -658,7 +820,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 17,
@@ -670,7 +835,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 17,
@@ -682,7 +850,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 17,
@@ -694,7 +865,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 18,
@@ -706,7 +880,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 18,
@@ -718,7 +895,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 18,
@@ -730,7 +910,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 19,
@@ -742,7 +925,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 19,
@@ -754,7 +940,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 19,
@@ -766,7 +955,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 19,
@@ -778,7 +970,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 20,
@@ -790,7 +985,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 20,
@@ -802,7 +1000,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 20,
@@ -814,7 +1015,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 21,
@@ -826,7 +1030,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 21,
@@ -838,7 +1045,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 21,
@@ -850,7 +1060,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 22,
@@ -862,7 +1075,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 22,
@@ -874,7 +1090,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 22,
@@ -886,7 +1105,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 23,
@@ -898,7 +1120,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 23,
@@ -910,7 +1135,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 23,
@@ -922,7 +1150,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 23,
@@ -934,7 +1165,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 24,
@@ -946,7 +1180,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 24,
@@ -958,7 +1195,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 24,
@@ -970,7 +1210,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 25,
@@ -982,7 +1225,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 25,
@@ -994,7 +1240,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 25,
@@ -1006,7 +1255,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 26,
@@ -1018,7 +1270,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 26,
@@ -1030,7 +1285,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 26,
@@ -1042,7 +1300,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 27,
@@ -1054,7 +1315,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 27,
@@ -1066,7 +1330,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 27,
@@ -1078,7 +1345,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 27,
@@ -1090,7 +1360,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 28,
@@ -1102,7 +1375,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 28,
@@ -1114,7 +1390,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 28,
@@ -1126,7 +1405,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 29,
@@ -1138,7 +1420,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 29,
@@ -1150,7 +1435,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 29,
@@ -1162,7 +1450,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 30,
@@ -1174,7 +1465,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 30,
@@ -1186,7 +1480,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 30,
@@ -1198,7 +1495,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 31,
@@ -1210,7 +1510,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 31,
@@ -1222,7 +1525,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 31,
@@ -1234,7 +1540,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 31,
@@ -1246,7 +1555,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 32,
@@ -1258,7 +1570,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 32,
@@ -1270,7 +1585,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 32,
@@ -1282,7 +1600,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 33,
@@ -1294,7 +1615,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 33,
@@ -1306,7 +1630,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 33,
@@ -1318,7 +1645,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 34,
@@ -1330,7 +1660,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 34,
@@ -1342,7 +1675,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 34,
@@ -1354,7 +1690,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 35,
@@ -1366,7 +1705,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 35,
@@ -1378,7 +1720,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 35,
@@ -1390,7 +1735,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 35,
@@ -1402,7 +1750,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 36,
@@ -1414,7 +1765,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 36,
@@ -1426,7 +1780,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 36,
@@ -1438,7 +1795,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 37,
@@ -1450,7 +1810,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 37,
@@ -1462,7 +1825,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 37,
@@ -1474,7 +1840,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 38,
@@ -1486,7 +1855,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 38,
@@ -1498,7 +1870,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 38,
@@ -1510,7 +1885,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 39,
@@ -1522,7 +1900,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 39,
@@ -1534,7 +1915,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 39,
@@ -1546,7 +1930,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 39,
@@ -1558,7 +1945,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 40,
@@ -1570,7 +1960,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 40,
@@ -1582,7 +1975,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 40,
@@ -1594,7 +1990,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 41,
@@ -1606,7 +2005,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 41,
@@ -1618,7 +2020,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 41,
@@ -1630,7 +2035,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 42,
@@ -1642,7 +2050,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 42,
@@ -1654,7 +2065,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 42,
@@ -1666,7 +2080,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 43,
@@ -1678,7 +2095,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 43,
@@ -1690,7 +2110,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 43,
@@ -1702,7 +2125,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 43,
@@ -1714,7 +2140,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 44,
@@ -1726,7 +2155,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 44,
@@ -1738,7 +2170,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 44,
@@ -1750,7 +2185,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 45,
@@ -1762,7 +2200,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 45,
@@ -1774,7 +2215,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 45,
@@ -1786,7 +2230,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 46,
@@ -1798,7 +2245,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 46,
@@ -1810,7 +2260,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 46,
@@ -1822,7 +2275,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 47,
@@ -1834,7 +2290,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 47,
@@ -1846,7 +2305,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 47,
@@ -1858,7 +2320,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 47,
@@ -1870,7 +2335,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 48,
@@ -1882,7 +2350,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 48,
@@ -1894,7 +2365,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 48,
@@ -1906,7 +2380,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 49,
@@ -1918,7 +2395,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 49,
@@ -1930,7 +2410,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 49,
@@ -1942,7 +2425,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 50,
@@ -1954,7 +2440,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 50,
@@ -1966,7 +2455,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 50,
@@ -1978,7 +2470,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 51,
@@ -1990,7 +2485,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 51,
@@ -2002,7 +2500,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 51,
@@ -2014,7 +2515,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 51,
@@ -2026,7 +2530,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 52,
@@ -2038,7 +2545,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 52,
@@ -2050,7 +2560,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 52,
@@ -2062,7 +2575,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 53,
@@ -2074,7 +2590,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 53,
@@ -2086,7 +2605,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 53,
@@ -2098,7 +2620,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 54,
@@ -2110,7 +2635,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 54,
@@ -2122,7 +2650,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 54,
@@ -2134,7 +2665,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 55,
@@ -2146,7 +2680,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 55,
@@ -2158,7 +2695,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 55,
@@ -2170,7 +2710,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 55,
@@ -2182,7 +2725,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 56,
@@ -2194,7 +2740,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 56,
@@ -2206,7 +2755,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 56,
@@ -2218,7 +2770,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 57,
@@ -2230,7 +2785,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 57,
@@ -2242,7 +2800,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 57,
@@ -2254,7 +2815,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 58,
@@ -2266,7 +2830,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 58,
@@ -2278,7 +2845,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 58,
@@ -2290,7 +2860,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 59,
@@ -2302,7 +2875,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 59,
@@ -2314,7 +2890,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 59,
@@ -2326,7 +2905,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 59,
@@ -2338,7 +2920,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 60,
@@ -2350,7 +2935,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 60,
@@ -2362,7 +2950,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 60,
@@ -2374,7 +2965,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 61,
@@ -2386,7 +2980,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 61,
@@ -2398,7 +2995,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 61,
@@ -2410,7 +3010,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 62,
@@ -2422,7 +3025,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 62,
@@ -2434,7 +3040,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 62,
@@ -2446,7 +3055,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 63,
@@ -2458,7 +3070,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 63,
@@ -2470,7 +3085,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 63,
@@ -2482,7 +3100,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 63,
@@ -2494,7 +3115,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 64,
@@ -2506,7 +3130,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 64,
@@ -2518,7 +3145,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 64,
@@ -2530,7 +3160,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 65,
@@ -2542,7 +3175,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 65,
@@ -2554,7 +3190,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 65,
@@ -2566,7 +3205,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "R"
+      }
     },
     {
       "round": 66,
@@ -2578,7 +3220,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 66,
@@ -2590,7 +3235,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 66,
@@ -2602,7 +3250,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "R"
+      }
     },
     {
       "round": 67,
@@ -2614,7 +3265,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 67,
@@ -2626,7 +3280,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 67,
@@ -2638,7 +3295,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 67,
@@ -2650,7 +3310,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "R"
+      }
     },
     {
       "round": 68,
@@ -2662,7 +3325,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 68,
@@ -2674,7 +3340,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 68,
@@ -2686,7 +3355,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "R"
+      }
     },
     {
       "round": 69,
@@ -2698,7 +3370,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 69,
@@ -2710,7 +3385,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 69,
@@ -2722,7 +3400,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 70,
@@ -2734,7 +3415,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 70,
@@ -2746,7 +3430,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 70,
@@ -2758,7 +3445,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "F'"
+      }
     },
     {
       "round": 71,
@@ -2770,7 +3460,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 71,
@@ -2782,7 +3475,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 71,
@@ -2794,7 +3490,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 71,
@@ -2806,7 +3505,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 72,
@@ -2818,7 +3520,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 72,
@@ -2830,7 +3535,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 72,
@@ -2842,7 +3550,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "F"
+      }
     },
     {
       "round": 73,
@@ -2854,7 +3565,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 73,
@@ -2866,7 +3580,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 73,
@@ -2878,7 +3595,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "F"
+      }
     },
     {
       "round": 74,
@@ -2890,7 +3610,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 74,
@@ -2902,7 +3625,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 74,
@@ -2914,7 +3640,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "F"
+      }
     },
     {
       "round": 75,
@@ -2926,7 +3655,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 75,
@@ -2938,7 +3670,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 75,
@@ -2950,7 +3685,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 75,
@@ -2962,7 +3700,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "F2"
+      }
     },
     {
       "round": 76,
@@ -2974,7 +3715,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 76,
@@ -2986,7 +3730,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 76,
@@ -2998,7 +3745,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "F"
+      }
     },
     {
       "round": 77,
@@ -3010,7 +3760,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 77,
@@ -3022,7 +3775,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 77,
@@ -3034,7 +3790,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 78,
@@ -3046,7 +3805,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 78,
@@ -3058,7 +3820,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 78,
@@ -3070,7 +3835,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "L'"
+      }
     },
     {
       "round": 79,
@@ -3082,7 +3850,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 79,
@@ -3094,7 +3865,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 79,
@@ -3106,7 +3880,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 79,
@@ -3118,7 +3895,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 80,
@@ -3130,7 +3910,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 80,
@@ -3142,7 +3925,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 80,
@@ -3154,7 +3940,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "L'"
+      }
     },
     {
       "round": 81,
@@ -3166,7 +3955,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 81,
@@ -3178,7 +3970,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 81,
@@ -3190,7 +3985,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 82,
@@ -3202,7 +4000,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 82,
@@ -3214,7 +4015,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 82,
@@ -3226,7 +4030,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 83,
@@ -3238,7 +4045,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 83,
@@ -3250,7 +4060,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 83,
@@ -3262,7 +4075,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 84,
@@ -3274,7 +4090,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 84,
@@ -3286,7 +4105,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 84,
@@ -3298,7 +4120,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 84,
@@ -3310,7 +4135,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 85,
@@ -3322,7 +4150,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 85,
@@ -3334,7 +4165,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 85,
@@ -3346,7 +4180,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 86,
@@ -3358,7 +4195,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 86,
@@ -3370,7 +4210,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 86,
@@ -3382,7 +4225,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 87,
@@ -3394,7 +4240,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 87,
@@ -3406,7 +4255,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DF"
+      }
     },
     {
       "round": 87,
@@ -3418,7 +4270,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 88,
@@ -3430,7 +4285,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 88,
@@ -3442,7 +4300,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 88,
@@ -3454,7 +4315,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 89,
@@ -3466,7 +4330,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 89,
@@ -3478,7 +4345,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 89,
@@ -3490,7 +4360,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 89,
@@ -3502,7 +4375,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "L"
+      }
     },
     {
       "round": 90,
@@ -3514,7 +4390,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 90,
@@ -3526,7 +4405,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 90,
@@ -3538,7 +4420,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 91,
@@ -3550,7 +4435,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 91,
@@ -3562,7 +4450,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 91,
@@ -3574,7 +4465,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 92,
@@ -3586,7 +4480,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 92,
@@ -3598,7 +4495,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 92,
@@ -3610,7 +4510,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 93,
@@ -3622,7 +4525,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 93,
@@ -3634,7 +4540,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 93,
@@ -3646,7 +4555,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 94,
@@ -3658,7 +4570,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 94,
@@ -3670,7 +4585,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 94,
@@ -3682,7 +4600,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 94,
@@ -3694,7 +4615,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 95,
@@ -3706,7 +4630,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 95,
@@ -3718,7 +4645,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 95,
@@ -3730,7 +4660,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 96,
@@ -3742,7 +4675,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 96,
@@ -3754,7 +4690,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 96,
@@ -3766,7 +4705,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 97,
@@ -3778,7 +4720,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 97,
@@ -3790,7 +4735,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 97,
@@ -3802,7 +4750,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "turn": "D'"
+      }
     },
     {
       "round": 98,
@@ -3814,7 +4765,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 98,
@@ -3826,7 +4780,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "recovery": "retarget"
+      }
     },
     {
       "round": 98,
@@ -3838,7 +4795,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "DB"
+      }
     },
     {
       "round": 98,
@@ -3850,7 +4810,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "turn": "D"
+      }
     },
     {
       "round": 99,
@@ -3862,7 +4825,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 99,
@@ -3874,7 +4840,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 99,
@@ -3886,7 +4855,8 @@
       ],
       "failed": true,
       "step": 3,
-      "total": 6
+      "total": 6,
+      "answers": {}
     },
     {
       "round": 99,
@@ -3898,7 +4868,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 99,
@@ -3910,7 +4883,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "target": "DL"
+      }
     },
     {
       "round": 99,
@@ -3922,7 +4898,10 @@
       ],
       "failed": false,
       "step": 6,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "turn": "D'"
+      }
     }
   ],
   "skills": [
@@ -3936,7 +4915,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 0,
@@ -3949,7 +4931,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "gatherTarget": "DF",
+        "transferTarget": "DR"
+      }
     },
     {
       "round": 0,
@@ -3962,7 +4948,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "situation": "middle",
+        "reference": "L"
+      }
     },
     {
       "round": 0,
@@ -3974,7 +4964,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "routine": "lift-middle-right"
+      }
     },
     {
       "round": 0,
@@ -3986,7 +4979,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "readiness": "execute"
+      }
     },
     {
       "round": 1,
@@ -3998,7 +4994,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 1,
@@ -4011,7 +5010,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "gatherTarget": "DB",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 1,
@@ -4024,7 +5027,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "situation": "bottomSide",
+        "reference": "F"
+      }
     },
     {
       "round": 1,
@@ -4036,7 +5043,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "routine": "stage-bottom-edge"
+      }
     },
     {
       "round": 1,
@@ -4048,7 +5058,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "readiness": "prepare"
+      }
     },
     {
       "round": 1,
@@ -4060,7 +5073,10 @@
       ],
       "failed": false,
       "step": 6,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "decision": "clear"
+      }
     },
     {
       "round": 1,
@@ -4072,7 +5088,10 @@
       ],
       "failed": false,
       "step": 7,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "freeSlot": "UB"
+      }
     },
     {
       "round": 1,
@@ -4084,7 +5103,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "setup": "U2"
+      }
     },
     {
       "round": 2,
@@ -4096,7 +5118,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 2,
@@ -4109,7 +5134,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "gatherTarget": "DB",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 2,
@@ -4122,7 +5151,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "situation": "bottomSide",
+        "reference": "F"
+      }
     },
     {
       "round": 2,
@@ -4134,7 +5167,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "plan": "resume"
+      }
     },
     {
       "round": 2,
@@ -4146,7 +5182,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "readiness": "execute"
+      }
     },
     {
       "round": 3,
@@ -4158,7 +5197,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 3,
@@ -4171,7 +5213,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "gatherTarget": "DB",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 3,
@@ -4184,7 +5230,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "situation": "middle",
+        "reference": "F"
+      }
     },
     {
       "round": 3,
@@ -4196,7 +5246,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "routine": "lift-middle-left"
+      }
     },
     {
       "round": 3,
@@ -4208,7 +5261,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "readiness": "prepare"
+      }
     },
     {
       "round": 3,
@@ -4220,7 +5276,10 @@
       ],
       "failed": false,
       "step": 6,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "decision": "clear"
+      }
     },
     {
       "round": 3,
@@ -4232,7 +5291,10 @@
       ],
       "failed": false,
       "step": 7,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "freeSlot": "UF"
+      }
     },
     {
       "round": 3,
@@ -4244,7 +5306,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "setup": "U"
+      }
     },
     {
       "round": 4,
@@ -4256,7 +5321,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 4,
@@ -4269,7 +5337,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "gatherTarget": "DB",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 4,
@@ -4282,7 +5354,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "situation": "middle",
+        "reference": "F"
+      }
     },
     {
       "round": 4,
@@ -4294,7 +5370,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "plan": "resume"
+      }
     },
     {
       "round": 4,
@@ -4306,7 +5385,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "readiness": "execute"
+      }
     },
     {
       "round": 5,
@@ -4318,7 +5400,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 5,
@@ -4331,7 +5416,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "gatherTarget": "DL",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 5,
@@ -4344,7 +5433,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "situation": "middle",
+        "reference": "F"
+      }
     },
     {
       "round": 5,
@@ -4356,7 +5449,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "routine": "lift-middle-right"
+      }
     },
     {
       "round": 5,
@@ -4368,7 +5464,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "readiness": "prepare"
+      }
     },
     {
       "round": 5,
@@ -4380,7 +5479,10 @@
       ],
       "failed": false,
       "step": 6,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "decision": "clear"
+      }
     },
     {
       "round": 5,
@@ -4392,7 +5494,10 @@
       ],
       "failed": false,
       "step": 7,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "freeSlot": "UF"
+      }
     },
     {
       "round": 5,
@@ -4404,7 +5509,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 8
+      "total": 8,
+      "answers": {
+        "setup": "U'"
+      }
     },
     {
       "round": 6,
@@ -4416,7 +5524,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "goal": "daisy"
+      }
     },
     {
       "round": 6,
@@ -4429,7 +5540,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "gatherTarget": "DL",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 6,
@@ -4442,7 +5557,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "situation": "middle",
+        "reference": "F"
+      }
     },
     {
       "round": 6,
@@ -4454,7 +5573,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "plan": "resume"
+      }
     },
     {
       "round": 6,
@@ -4466,7 +5588,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "readiness": "execute"
+      }
     },
     {
       "round": 7,
@@ -4478,7 +5603,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 7,
@@ -4491,7 +5619,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "gatherTarget": "none",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 7,
@@ -4504,7 +5636,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "situation": "petal",
+        "reference": "B"
+      }
     },
     {
       "round": 7,
@@ -4516,7 +5652,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "decision": "align"
+      }
     },
     {
       "round": 7,
@@ -4528,7 +5667,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 5
+      "total": 5,
+      "answers": {
+        "setup": "U2"
+      }
     },
     {
       "round": 8,
@@ -4540,7 +5682,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 8,
@@ -4553,7 +5698,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "gatherTarget": "none",
+        "transferTarget": "DF"
+      }
     },
     {
       "round": 8,
@@ -4566,7 +5715,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "situation": "petal",
+        "reference": "F"
+      }
     },
     {
       "round": 8,
@@ -4578,7 +5731,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "decision": "insert"
+      }
     },
     {
       "round": 9,
@@ -4590,7 +5746,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 9,
@@ -4603,7 +5762,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "gatherTarget": "none",
+        "transferTarget": "DR"
+      }
     },
     {
       "round": 9,
@@ -4616,7 +5779,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "situation": "petal",
+        "reference": "R"
+      }
     },
     {
       "round": 9,
@@ -4628,7 +5795,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "decision": "insert"
+      }
     },
     {
       "round": 10,
@@ -4640,7 +5810,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 10,
@@ -4653,7 +5826,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "gatherTarget": "none",
+        "transferTarget": "DB"
+      }
     },
     {
       "round": 10,
@@ -4666,7 +5843,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "situation": "petal",
+        "reference": "B"
+      }
     },
     {
       "round": 10,
@@ -4678,7 +5859,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "decision": "insert"
+      }
     },
     {
       "round": 11,
@@ -4690,7 +5874,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "cross"
+      }
     },
     {
       "round": 11,
@@ -4703,7 +5890,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "gatherTarget": "none",
+        "transferTarget": "DL"
+      }
     },
     {
       "round": 11,
@@ -4716,7 +5907,11 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "situation": "petal",
+        "reference": "L"
+      }
     },
     {
       "round": 11,
@@ -4728,7 +5923,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "decision": "insert"
+      }
     },
     {
       "round": 12,
@@ -4740,7 +5938,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 12,
@@ -4752,7 +5953,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "target": "FR"
+      }
     },
     {
       "round": 12,
@@ -4764,7 +5968,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "front": "F"
+      }
     },
     {
       "round": 12,
@@ -4777,7 +5984,10 @@
       "failed": false,
       "step": 4,
       "total": 9,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 12,
@@ -4790,7 +6000,10 @@
       "failed": false,
       "step": 5,
       "total": 9,
-      "label": "Check edge extraction"
+      "label": "Check edge extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 12,
@@ -4803,7 +6016,10 @@
       "failed": false,
       "step": 6,
       "total": 9,
-      "label": "Check corner alignment"
+      "label": "Check corner alignment",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 12,
@@ -4816,7 +6032,10 @@
       "failed": false,
       "step": 7,
       "total": 9,
-      "label": "Check edge alignment"
+      "label": "Check edge alignment",
+      "answers": {
+        "preparation": "routine"
+      }
     },
     {
       "round": 12,
@@ -4828,7 +6047,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "group": "UFR-R"
+      }
     },
     {
       "round": 12,
@@ -4840,7 +6062,10 @@
       ],
       "failed": false,
       "step": 9,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "routine": "pair-05"
+      }
     },
     {
       "round": 13,
@@ -4852,7 +6077,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 13,
@@ -4864,7 +6092,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "target": "BR"
+      }
     },
     {
       "round": 13,
@@ -4876,7 +6107,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "front": "R"
+      }
     },
     {
       "round": 13,
@@ -4889,7 +6123,10 @@
       "failed": false,
       "step": 4,
       "total": 6,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "extract-corner"
+      }
     },
     {
       "round": 13,
@@ -4901,7 +6138,10 @@
       ],
       "failed": false,
       "step": 5,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "slot": "R"
+      }
     },
     {
       "round": 13,
@@ -4913,7 +6153,10 @@
       ],
       "failed": false,
       "step": 6,
-      "total": 6
+      "total": 6,
+      "answers": {
+        "extraction": "R-forward"
+      }
     },
     {
       "round": 14,
@@ -4925,7 +6168,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 14,
@@ -4937,7 +6183,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "target": "BR"
+      }
     },
     {
       "round": 14,
@@ -4949,7 +6198,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "front": "R"
+      }
     },
     {
       "round": 14,
@@ -4962,7 +6214,10 @@
       "failed": false,
       "step": 4,
       "total": 9,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 14,
@@ -4975,7 +6230,10 @@
       "failed": false,
       "step": 5,
       "total": 9,
-      "label": "Check edge extraction"
+      "label": "Check edge extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 14,
@@ -4988,7 +6246,10 @@
       "failed": false,
       "step": 6,
       "total": 9,
-      "label": "Check corner alignment"
+      "label": "Check corner alignment",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 14,
@@ -5001,7 +6262,10 @@
       "failed": false,
       "step": 7,
       "total": 9,
-      "label": "Check edge alignment"
+      "label": "Check edge alignment",
+      "answers": {
+        "preparation": "routine"
+      }
     },
     {
       "round": 14,
@@ -5013,7 +6277,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "group": "UFR-F"
+      }
     },
     {
       "round": 14,
@@ -5025,7 +6292,10 @@
       ],
       "failed": false,
       "step": 9,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "routine": "pair-11"
+      }
     },
     {
       "round": 15,
@@ -5037,7 +6307,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 15,
@@ -5049,7 +6322,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "target": "BL"
+      }
     },
     {
       "round": 15,
@@ -5061,7 +6337,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "front": "B"
+      }
     },
     {
       "round": 15,
@@ -5074,7 +6353,10 @@
       "failed": false,
       "step": 4,
       "total": 7,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 15,
@@ -5087,7 +6369,10 @@
       "failed": false,
       "step": 5,
       "total": 7,
-      "label": "Check edge extraction"
+      "label": "Check edge extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 15,
@@ -5100,7 +6385,10 @@
       "failed": false,
       "step": 6,
       "total": 7,
-      "label": "Check corner alignment"
+      "label": "Check corner alignment",
+      "answers": {
+        "preparation": "align-corner"
+      }
     },
     {
       "round": 15,
@@ -5112,7 +6400,10 @@
       ],
       "failed": false,
       "step": 7,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "turn": "U'"
+      }
     },
     {
       "round": 16,
@@ -5124,7 +6415,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 16,
@@ -5136,7 +6430,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "target": "BL"
+      }
     },
     {
       "round": 16,
@@ -5148,7 +6445,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "front": "B"
+      }
     },
     {
       "round": 16,
@@ -5161,7 +6461,10 @@
       "failed": false,
       "step": 4,
       "total": 9,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 16,
@@ -5174,7 +6477,10 @@
       "failed": false,
       "step": 5,
       "total": 9,
-      "label": "Check edge extraction"
+      "label": "Check edge extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 16,
@@ -5187,7 +6493,10 @@
       "failed": false,
       "step": 6,
       "total": 9,
-      "label": "Check corner alignment"
+      "label": "Check corner alignment",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 16,
@@ -5200,7 +6509,10 @@
       "failed": false,
       "step": 7,
       "total": 9,
-      "label": "Check edge alignment"
+      "label": "Check edge alignment",
+      "answers": {
+        "preparation": "routine"
+      }
     },
     {
       "round": 16,
@@ -5212,7 +6524,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "group": "UFR-U"
+      }
     },
     {
       "round": 16,
@@ -5224,7 +6539,10 @@
       ],
       "failed": false,
       "step": 9,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "routine": "pair-17"
+      }
     },
     {
       "round": 17,
@@ -5236,7 +6554,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 17,
@@ -5248,7 +6569,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "target": "FL"
+      }
     },
     {
       "round": 17,
@@ -5260,7 +6584,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "front": "L"
+      }
     },
     {
       "round": 17,
@@ -5273,7 +6600,10 @@
       "failed": false,
       "step": 4,
       "total": 7,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 17,
@@ -5286,7 +6616,10 @@
       "failed": false,
       "step": 5,
       "total": 7,
-      "label": "Check edge extraction"
+      "label": "Check edge extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 17,
@@ -5299,7 +6632,10 @@
       "failed": false,
       "step": 6,
       "total": 7,
-      "label": "Check corner alignment"
+      "label": "Check corner alignment",
+      "answers": {
+        "preparation": "align-corner"
+      }
     },
     {
       "round": 17,
@@ -5311,7 +6647,10 @@
       ],
       "failed": false,
       "step": 7,
-      "total": 7
+      "total": 7,
+      "answers": {
+        "turn": "U2"
+      }
     },
     {
       "round": 18,
@@ -5323,7 +6662,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "goal": "f2l"
+      }
     },
     {
       "round": 18,
@@ -5335,7 +6677,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "target": "FL"
+      }
     },
     {
       "round": 18,
@@ -5347,7 +6692,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "front": "L"
+      }
     },
     {
       "round": 18,
@@ -5360,7 +6708,10 @@
       "failed": false,
       "step": 4,
       "total": 9,
-      "label": "Check corner extraction"
+      "label": "Check corner extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 18,
@@ -5373,7 +6724,10 @@
       "failed": false,
       "step": 5,
       "total": 9,
-      "label": "Check edge extraction"
+      "label": "Check edge extraction",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 18,
@@ -5386,7 +6740,10 @@
       "failed": false,
       "step": 6,
       "total": 9,
-      "label": "Check corner alignment"
+      "label": "Check corner alignment",
+      "answers": {
+        "preparation": "continue"
+      }
     },
     {
       "round": 18,
@@ -5399,7 +6756,10 @@
       "failed": false,
       "step": 7,
       "total": 9,
-      "label": "Check edge alignment"
+      "label": "Check edge alignment",
+      "answers": {
+        "preparation": "routine"
+      }
     },
     {
       "round": 18,
@@ -5411,7 +6771,10 @@
       ],
       "failed": false,
       "step": 8,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "group": "UFR-U"
+      }
     },
     {
       "round": 18,
@@ -5423,7 +6786,10 @@
       ],
       "failed": false,
       "step": 9,
-      "total": 9
+      "total": 9,
+      "answers": {
+        "routine": "pair-23"
+      }
     },
     {
       "round": 19,
@@ -5435,7 +6801,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "goal": "top-cross"
+      }
     },
     {
       "round": 19,
@@ -5448,7 +6817,11 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "target": "whole",
+        "intent_whole": "elbow"
+      }
     },
     {
       "round": 19,
@@ -5460,7 +6833,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "reference": "F"
+      }
     },
     {
       "round": 19,
@@ -5472,7 +6848,10 @@
       ],
       "failed": false,
       "step": 4,
-      "total": 4
+      "total": 4,
+      "answers": {
+        "operation": "orient-elbow"
+      }
     },
     {
       "round": 20,
@@ -5484,7 +6863,10 @@
       ],
       "failed": false,
       "step": 1,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "goal": "pll"
+      }
     },
     {
       "round": 20,
@@ -5496,7 +6878,10 @@
       ],
       "failed": false,
       "step": 2,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "group": "corners-11"
+      }
     },
     {
       "round": 20,
@@ -5508,7 +6893,10 @@
       ],
       "failed": false,
       "step": 3,
-      "total": 3
+      "total": 3,
+      "answers": {
+        "routine": "Aa@R:U'"
+      }
     }
   ]
 }

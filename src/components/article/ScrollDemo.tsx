@@ -1,3 +1,5 @@
+import { ReplayGoal } from './ReplayGoal';
+import { nextRequestEnd } from '../../lib/replay-requests';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Cube, type CubeMoveProgress } from '../Cube';
 import { RequestView } from './RequestView';
@@ -145,8 +147,14 @@ export function ComparisonDemo({
                     : 'Still unsolved when the other solve finished'
                   : `Completed ${frame.completed} / ${recording.timeline.length} actions`}
               </div>
+              {latest && <ReplayGoal policy={index ? 'skills' : 'primitive'} time={requestTime} />}
               {latest && (
-                <ReplayRequest policy={index ? 'skills' : 'primitive'} time={requestTime} />
+                <ReplayRequest policy={index ? 'skills' : 'primitive'} time={requestTime}
+                  canStep={nextRequestEnd(index ? 'skills' : 'primitive', time, finish) !== undefined}
+                  onStep={() => {
+                    const end = nextRequestEnd(index ? 'skills' : 'primitive', time, finish);
+                    if (end !== undefined) { setPaused(true); clock.current = end; setTime(end); }
+                  }} />
               )}
               {latest && actionIndex >= 0 && (
                 <ReplayDecision

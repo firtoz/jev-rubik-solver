@@ -1,3 +1,5 @@
+import { ReplayGoal } from './ReplayGoal';
+import { nextRequestEnd } from '../../lib/replay-requests';
 import { useEffect, useRef, useState } from 'react';
 import recording from '../../lib/article-best-recording.json';
 import { actionSchedule, actionFrame } from '../../lib/article-replay';
@@ -67,7 +69,10 @@ export function BestRecording() {
         />
         {ended && <div className="result-stamp win">SOLVED</div>}
       </div>
-      <ReplayRequest policy="skills" time={requestTime} />
+      <ReplayGoal policy="skills" time={requestTime} />
+      <ReplayRequest policy="skills" time={requestTime} canStep={nextRequestEnd('skills', time, finish)!==undefined} onStep={()=>{
+        const end=nextRequestEnd('skills',time,finish); if(end!==undefined){setPaused(true);clock.current=end;setTime(end);}
+      }} />
       {frame.index >= 0 ? (
         <ReplayDecision
           policy="skills"

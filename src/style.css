@@ -2798,3 +2798,41 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   .replay-speed-popover { animation: speed-pop-in 130ms ease-out; transform-origin: bottom right; }
   @keyframes speed-pop-in { from { opacity: 0; transform: translateY(5px) scale(.96); } to { opacity: 1; transform: none; } }
 }
+.replay-goal { padding: 18px 20px 12px; display: grid; align-content: start; gap: 8px; border-top: 1px solid #3b3c3d; min-height: 108px; }
+.replay-goal > small { color: #aab4c3; font-size: 11px; }
+.replay-goal > strong { font-size: 16px; line-height: 1.4; color: #b5cef2; }
+.replay-goal dl { display:flex; flex-wrap:wrap; gap:6px 12px; margin:0; font-size:11px; }
+.replay-goal dl > div { display:flex; gap:5px; min-width:0; }
+.replay-goal dt { color:#aab4c3; }
+.replay-goal dd { margin:0; overflow-wrap:anywhere; color:#e1e6ed; }
+.replay-request-heading { display:flex; align-items:center; justify-content:space-between; min-height:30px; }
+.replay-request-heading small { font-size:10px; color:#b1b5ba; }
+.request-step-button { padding:5px; display:grid; place-items:center; width:30px; height:28px; }
+.request-step-button svg, .request-permalink-icon svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+.request-permalink-icon { display:grid; place-items:center; flex:0 0 24px; height:28px; border-radius:4px; text-decoration:none !important; }
+.request-permalink-icon:hover { background:#45566b; }
+.comparison-side > .replay-goal { grid-row:5; }
+.comparison-side > .replay-request { grid-row:6; }
+.comparison-side > .comparison-decision { grid-row:7; }
+.comparison-side > .comparison-metrics { grid-row:8; }
+.comparison-side > details { grid-row:9; }
+.request-permalink { max-width:960px; padding-top:36px; }
+.request-permalink section { margin:30px 0; }
+.request-record-nav { display:flex; gap:24px; }
+.request-permalink pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:16px; font-size:12px; background:#171b22; }
+.saved-answer { padding:16px; border:1px solid #404650; margin:12px 0; }
+@media(max-width:600px) {
+ .comparison-side > .replay-goal { grid-column:1 / -1; }
+ .comparison-side:first-child > .replay-goal { grid-row:5; }
+ .comparison-side:first-child > .replay-request { grid-row:6; }
+ .comparison-side:first-child > .comparison-decision { grid-row:7; }
+ .comparison-side:first-child > .comparison-metrics { grid-row:8; }
+ .comparison-side:first-child > details { grid-row:9; }
+ .comparison-side:nth-child(2) > .replay-goal { grid-row:10; }
+ .comparison-side:nth-child(2) > .replay-request { grid-row:11; }
+ .comparison-side:nth-child(2) > .comparison-decision { grid-row:12; }
+ .comparison-side:nth-child(2) > .comparison-metrics { grid-row:13; }
+ .comparison-side:nth-child(2) > details { grid-row:14; }
+ .comparison-side:first-child .replay-request-heading small::before { content:'Single turns · '; }
+ .comparison-side:nth-child(2) .replay-request-heading small::before { content:'Grouped menu · '; }
+}

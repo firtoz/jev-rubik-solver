@@ -168,7 +168,7 @@ function RequestNode({ exchange: e, index, previous, next, cube }: { exchange: E
   </section>;
 }
 
-export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json'}:{recordingUrl?:string}) {
+export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json',initialRound,initialRequest=1}:{recordingUrl?:string;initialRound?:number;initialRequest?:number}) {
   const [recording, setRecording] = useState<Recording | null>(null);
   const previewMoves=useMemo(()=>recording?.steps.map(step=>step.alg)||[],[recording]);
   const [error, setError] = useState('');
@@ -250,9 +250,15 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json'}
   },[recording,cycleIndex]);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(recordingUrl, { signal: controller.signal }).then(r => { if (!r.ok) throw new Error('Could not load saved recording'); return r.json(); }).then(data=>{setRecording(data);setCycleIndex(0);setAdvancePlayback({from:0,to:0,phase:'requests',request:0,move:-1});}).catch(e => { if(e.name !== 'AbortError') setError(e.message); });
+    fetch(recordingUrl, { signal: controller.signal }).then(r => { if (!r.ok) throw new Error('Could not load saved recording'); return r.json(); }).then(data=>{setRecording(data);const round=Math.max(0,Math.min(data.steps.length-1,(initialRound ?? 1)-1));setCycleIndex(round);setAdvancePlayback(initialRound ? null : {from:0,to:0,phase:'requests',request:0,move:-1});}).catch(e => { if(e.name !== 'AbortError') setError(e.message); });
     return () => controller.abort();
   }, [recordingUrl]);
+  useEffect(()=>{
+    if(!recording || !initialRound)return;
+    const index=Math.max(0,Math.min(recording.steps[cycleIndex]?.exchanges.length-1,initialRequest-1));
+    const frame=requestAnimationFrame(()=>document.getElementById(`wire-request-${index}`)?.scrollIntoView({block:'start'}));
+    return()=>cancelAnimationFrame(frame);
+  },[recording,initialRound,initialRequest]);
   if (!recording) return <main className="board wire-board"><h1>Inside one real solve</h1><p role="status">{error || 'Loading saved requests and responses…'}</p></main>;
   const terminal=cycleIndex===recording.steps.length;
   const finalLabel=recording.status==='solved'?'Solved':'Final state';

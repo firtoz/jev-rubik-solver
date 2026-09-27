@@ -1,3 +1,4 @@
+import { requestLink } from '../../lib/replay-requests';
 import timings from '../../lib/article-request-timings.json';
 const names: Record<string, string> = {
   goal: 'Choose the goal',
@@ -25,12 +26,16 @@ const duration = (ms: number) =>
 export function ReplayRequest({
   policy,
   time,
+  onStep,
+  canStep = false,
 }: {
   policy: 'skills' | 'primitive';
   time: number;
+  onStep?: () => void;
+  canStep?: boolean;
 }) {
   const rows = timings[policy];
-  const started = rows.filter((r) => r.startMs < time);
+  const started = rows.filter((r) => r.startMs <= time);
   // Keep the outgoing row mounted above the clipping window until it has slid out.
   const visible = started.slice(-4);
   const latest = visible.at(-1);
@@ -41,7 +46,9 @@ export function ReplayRequest({
   const displacement = Math.max(0, (visible.length - 1 + growth) * 56 - 168);
   return (
     <div className="replay-request">
-      <small>JEV requests</small>
+      <div className="replay-request-heading"><small>JEV requests</small>{onStep && <button type="button" className="request-step-button" onClick={onStep} disabled={!canStep} aria-label={`Next request: ${policy === 'skills' ? 'grouped-menu solver' : 'single turns'}`} title="Pause at the end of this side’s next request">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 10 7-10 7ZM19 5v14"/></svg>
+      </button>}</div>
       <div className="replay-request-history height-progress" aria-label="Latest three requests">
         {Array.from({ length: Math.max(0, 3 - visible.length) }, (_, i) => (
           <div
@@ -89,6 +96,9 @@ export function ReplayRequest({
                     running ? time - row.startMs : (row.elapsedMs ?? row.endMs - row.startMs),
                   )}
                 </time>
+                <a className="request-permalink-icon" href={requestLink(policy,row.round,row.step)} target="_blank" rel="noreferrer" aria-label={`Inspect round ${row.round+1}, request ${row.step}`} title="Open this exact recorded request" tabIndex={index * 56 - displacement <= -56 ? -1 : 0}>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-10 10M10 5H5v14h14v-5"/></svg>
+                </a>
               </div>
             </div>
           );

@@ -49,3 +49,33 @@ test('preparation labels describe the exact recorded question', () => {
   }
   expect(labels.size).toBe(4);
 });
+
+import { requestMetadata, nextRequestEnd, requestLink } from '../src/lib/replay-requests';
+import primitiveRequests from '../public/recordings/primitive-requests.json';
+test('replay metadata appears only at response boundaries and resets for the next round', () => {
+  for (const policy of ['skills','primitive'] as const) {
+    const rows=requests[policy];
+    for(const row of rows.filter(r=>r.questions.includes('goal') && !r.failed)) {
+      const earlierGoal=rows.filter(r=>r.round===row.round && r.endMs<=row.startMs && !r.failed && r.questions.includes('goal')).at(-1);
+      expect(requestMetadata(policy,row.startMs).goal).toBe(earlierGoal?.answers.goal);
+      expect(requestMetadata(policy,row.endMs).goal).toBe(row.answers.goal);
+    }
+    const first=rows[0];
+    expect(nextRequestEnd(policy,first.endMs-1,Infinity)).toBe(first.endMs);
+    expect(nextRequestEnd(policy,first.endMs,Infinity)).toBe(rows[1].endMs);
+    expect(nextRequestEnd(policy,0,first.endMs-1)).toBeUndefined();
+  }
+});
+test('every permalink identifies its corresponding saved request',()=>{
+  for(const policy of ['skills','primitive'] as const) {
+    for(const [index,row] of requests[policy].entries()) {
+      const url=new URL(requestLink(policy,row.round,row.step),'https://example.com');
+      expect(url.searchParams.get('recording')).toBe(policy);
+      expect(Number(url.searchParams.get('round'))).toBe(row.round+1);
+      expect(Number(url.searchParams.get('request'))).toBe(row.step);
+      const saved=policy==='skills'?flow.steps[row.round].exchanges[row.step-1]:primitiveRequests[index];
+      expect(Object.keys(saved.request.questions)).toEqual(row.questions);
+      if(policy==='primitive')expect(primitiveRequests[index].endMs).toBe(row.endMs);
+    }
+  }
+});
