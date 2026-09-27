@@ -1,3 +1,4 @@
+import { RoutineExample } from './RoutineExample';
 import { Link } from '@tanstack/react-router';
 
 export function ReaderOrientation() {
@@ -154,6 +155,7 @@ export function FinalApproach() {
           frame. The routine restores the cross and other pairs at the end, though pieces move
           during execution.
         </p>
+        <RoutineExample />
         <p className="fine-print">
           This example comes from the supplied library. The corner is at UFR (top-front-right), with
           its bottom color facing right. The edge is at UF (top-front), with its front color facing

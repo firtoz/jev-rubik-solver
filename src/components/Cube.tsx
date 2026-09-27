@@ -44,7 +44,16 @@ export function Cube({
   };
   const [generation, setGeneration] = useState(0);
   const [error, setError] = useState('');
+  const [nearby, setNearby] = useState(false);
   useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setNearby(true); observer.disconnect(); }
+    }, { rootMargin: '300px' });
+    if (host.current) observer.observe(host.current);
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!nearby) return;
     let disposed = false;
     import('cubing/twisty')
       .then(({ TwistyPlayer }) => {
@@ -77,7 +86,7 @@ export function Cube({
       player.current?.remove();
       player.current = null;
     };
-  }, [scramble]);
+  }, [scramble, nearby]);
   useEffect(() => {
     const p = player.current;
     timedRange.current = null;

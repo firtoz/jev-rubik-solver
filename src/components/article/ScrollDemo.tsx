@@ -194,6 +194,14 @@ export function ComparisonDemo({
             </section>
           );
         })}
+      <PlaybackControls time={time} finish={finish} playing={playing} speed={speed}
+        onSpeed={setSpeed}
+        onSeek={value => { clock.current = value; setTime(value); }}
+        onRestart={() => { clock.current = 0; setTime(0); setPaused(false); setReduced(false); }}
+        onToggle={() => {
+          if (ended) { clock.current = 0; setTime(0); }
+          setPaused(ended ? false : playing); setReduced(false);
+        }} />
       </div>
       {latest && (
         <p className="fine-print" style={{ padding: '0 20px' }}>
@@ -203,14 +211,6 @@ export function ComparisonDemo({
           deliberately favourable example of the grouped-menu solver.
         </p>
       )}
-      <PlaybackControls time={time} finish={finish} playing={playing} speed={speed}
-        onSpeed={setSpeed}
-        onSeek={value => { clock.current = value; setTime(value); }}
-        onRestart={() => { clock.current = 0; setTime(0); setPaused(false); setReduced(false); }}
-        onToggle={() => {
-          if (ended) { clock.current = 0; setTime(0); }
-          setPaused(ended ? false : playing); setReduced(false);
-        }} />
       <p className="fine-print">
         Both replays use the selected playback speed and stop when the grouped-menu solver
         finishes. FAIL means the single-turn solver was still unsolved at that moment.

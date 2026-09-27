@@ -1,0 +1,463 @@
+{
+  "alg": "U' F' U F",
+  "before": {
+    "U": [
+      {
+        "position": "UBL",
+        "color": "white"
+      },
+      {
+        "position": "UB",
+        "color": "white"
+      },
+      {
+        "position": "URB",
+        "color": "white"
+      },
+      {
+        "position": "UL",
+        "color": "white"
+      },
+      {
+        "position": "U",
+        "color": "white"
+      },
+      {
+        "position": "UR",
+        "color": "white"
+      },
+      {
+        "position": "ULF",
+        "color": "blue"
+      },
+      {
+        "position": "UF",
+        "color": "red"
+      },
+      {
+        "position": "UFR",
+        "color": "red"
+      }
+    ],
+    "L": [
+      {
+        "position": "UBL",
+        "color": "green"
+      },
+      {
+        "position": "UL",
+        "color": "green"
+      },
+      {
+        "position": "ULF",
+        "color": "orange"
+      },
+      {
+        "position": "BL",
+        "color": "orange"
+      },
+      {
+        "position": "L",
+        "color": "orange"
+      },
+      {
+        "position": "FL",
+        "color": "orange"
+      },
+      {
+        "position": "DLB",
+        "color": "orange"
+      },
+      {
+        "position": "DL",
+        "color": "orange"
+      },
+      {
+        "position": "DFL",
+        "color": "orange"
+      }
+    ],
+    "F": [
+      {
+        "position": "ULF",
+        "color": "white"
+      },
+      {
+        "position": "UF",
+        "color": "green"
+      },
+      {
+        "position": "UFR",
+        "color": "green"
+      },
+      {
+        "position": "FL",
+        "color": "green"
+      },
+      {
+        "position": "F",
+        "color": "green"
+      },
+      {
+        "position": "FR",
+        "color": "orange"
+      },
+      {
+        "position": "DFL",
+        "color": "green"
+      },
+      {
+        "position": "DF",
+        "color": "green"
+      },
+      {
+        "position": "DRF",
+        "color": "white"
+      }
+    ],
+    "R": [
+      {
+        "position": "UFR",
+        "color": "yellow"
+      },
+      {
+        "position": "UR",
+        "color": "red"
+      },
+      {
+        "position": "URB",
+        "color": "red"
+      },
+      {
+        "position": "FR",
+        "color": "white"
+      },
+      {
+        "position": "R",
+        "color": "red"
+      },
+      {
+        "position": "BR",
+        "color": "red"
+      },
+      {
+        "position": "DRF",
+        "color": "red"
+      },
+      {
+        "position": "DR",
+        "color": "red"
+      },
+      {
+        "position": "DBR",
+        "color": "red"
+      }
+    ],
+    "B": [
+      {
+        "position": "URB",
+        "color": "blue"
+      },
+      {
+        "position": "UB",
+        "color": "blue"
+      },
+      {
+        "position": "UBL",
+        "color": "orange"
+      },
+      {
+        "position": "BR",
+        "color": "blue"
+      },
+      {
+        "position": "B",
+        "color": "blue"
+      },
+      {
+        "position": "BL",
+        "color": "blue"
+      },
+      {
+        "position": "DBR",
+        "color": "blue"
+      },
+      {
+        "position": "DB",
+        "color": "blue"
+      },
+      {
+        "position": "DLB",
+        "color": "blue"
+      }
+    ],
+    "D": [
+      {
+        "position": "DFL",
+        "color": "yellow"
+      },
+      {
+        "position": "DF",
+        "color": "yellow"
+      },
+      {
+        "position": "DRF",
+        "color": "green"
+      },
+      {
+        "position": "DL",
+        "color": "yellow"
+      },
+      {
+        "position": "D",
+        "color": "yellow"
+      },
+      {
+        "position": "DR",
+        "color": "yellow"
+      },
+      {
+        "position": "DLB",
+        "color": "yellow"
+      },
+      {
+        "position": "DB",
+        "color": "yellow"
+      },
+      {
+        "position": "DBR",
+        "color": "yellow"
+      }
+    ]
+  },
+  "after": {
+    "U": [
+      {
+        "position": "UBL",
+        "color": "white"
+      },
+      {
+        "position": "UB",
+        "color": "white"
+      },
+      {
+        "position": "URB",
+        "color": "white"
+      },
+      {
+        "position": "UL",
+        "color": "white"
+      },
+      {
+        "position": "U",
+        "color": "white"
+      },
+      {
+        "position": "UR",
+        "color": "white"
+      },
+      {
+        "position": "ULF",
+        "color": "white"
+      },
+      {
+        "position": "UF",
+        "color": "white"
+      },
+      {
+        "position": "UFR",
+        "color": "white"
+      }
+    ],
+    "L": [
+      {
+        "position": "UBL",
+        "color": "orange"
+      },
+      {
+        "position": "UL",
+        "color": "orange"
+      },
+      {
+        "position": "ULF",
+        "color": "orange"
+      },
+      {
+        "position": "BL",
+        "color": "orange"
+      },
+      {
+        "position": "L",
+        "color": "orange"
+      },
+      {
+        "position": "FL",
+        "color": "orange"
+      },
+      {
+        "position": "DLB",
+        "color": "orange"
+      },
+      {
+        "position": "DL",
+        "color": "orange"
+      },
+      {
+        "position": "DFL",
+        "color": "orange"
+      }
+    ],
+    "F": [
+      {
+        "position": "ULF",
+        "color": "green"
+      },
+      {
+        "position": "UF",
+        "color": "green"
+      },
+      {
+        "position": "UFR",
+        "color": "green"
+      },
+      {
+        "position": "FL",
+        "color": "green"
+      },
+      {
+        "position": "F",
+        "color": "green"
+      },
+      {
+        "position": "FR",
+        "color": "green"
+      },
+      {
+        "position": "DFL",
+        "color": "green"
+      },
+      {
+        "position": "DF",
+        "color": "green"
+      },
+      {
+        "position": "DRF",
+        "color": "green"
+      }
+    ],
+    "R": [
+      {
+        "position": "UFR",
+        "color": "red"
+      },
+      {
+        "position": "UR",
+        "color": "red"
+      },
+      {
+        "position": "URB",
+        "color": "red"
+      },
+      {
+        "position": "FR",
+        "color": "red"
+      },
+      {
+        "position": "R",
+        "color": "red"
+      },
+      {
+        "position": "BR",
+        "color": "red"
+      },
+      {
+        "position": "DRF",
+        "color": "red"
+      },
+      {
+        "position": "DR",
+        "color": "red"
+      },
+      {
+        "position": "DBR",
+        "color": "red"
+      }
+    ],
+    "B": [
+      {
+        "position": "URB",
+        "color": "blue"
+      },
+      {
+        "position": "UB",
+        "color": "blue"
+      },
+      {
+        "position": "UBL",
+        "color": "blue"
+      },
+      {
+        "position": "BR",
+        "color": "blue"
+      },
+      {
+        "position": "B",
+        "color": "blue"
+      },
+      {
+        "position": "BL",
+        "color": "blue"
+      },
+      {
+        "position": "DBR",
+        "color": "blue"
+      },
+      {
+        "position": "DB",
+        "color": "blue"
+      },
+      {
+        "position": "DLB",
+        "color": "blue"
+      }
+    ],
+    "D": [
+      {
+        "position": "DFL",
+        "color": "yellow"
+      },
+      {
+        "position": "DF",
+        "color": "yellow"
+      },
+      {
+        "position": "DRF",
+        "color": "yellow"
+      },
+      {
+        "position": "DL",
+        "color": "yellow"
+      },
+      {
+        "position": "D",
+        "color": "yellow"
+      },
+      {
+        "position": "DR",
+        "color": "yellow"
+      },
+      {
+        "position": "DLB",
+        "color": "yellow"
+      },
+      {
+        "position": "DB",
+        "color": "yellow"
+      },
+      {
+        "position": "DBR",
+        "color": "yellow"
+      }
+    ]
+  }
+}

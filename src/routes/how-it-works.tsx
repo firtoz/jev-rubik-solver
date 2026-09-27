@@ -1,30 +1,55 @@
-import recordings from '../lib/article-matched-recordings.json';
-import { BestRecording } from '../components/article/BestRecording';
-import { ObservationBoundary } from '../components/article/ObservationBoundary';
-import { DaisyTransition } from '../components/article/DaisyTransition';
-import { ProgressIntegration } from '../components/article/ProgressIntegration';
-import { ProgressGoalExperiment } from '../components/article/ProgressGoalExperiment';
-import { FirstLayerExperiment } from '../components/article/FirstLayerExperiment';
-import { ReasoningExperiments } from '../components/article/ReasoningExperiments';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { useEffect } from 'react';
-import { ComparisonDemo, type Recording } from '../components/article/ScrollDemo';
+import { lazy, useEffect } from 'react';
+import { NearViewport, LazyDetails } from '../components/article/Deferred';
+const RecordedComparison = lazy(() => import('../components/article/RecordedComparison'));
 import {
   FinalApproach,
   FinalResults,
   FinalAppendix,
   ReaderOrientation,
 } from '../components/article/FinalFindings';
-import { TestingStory } from '../components/article/TestingStory';
+const ObservationBoundary = lazy(() =>
+  import('../components/article/ObservationBoundary').then((m) => ({
+    default: m.ObservationBoundary,
+  })),
+);
+const DaisyTransition = lazy(() =>
+  import('../components/article/DaisyTransition').then((m) => ({ default: m.DaisyTransition })),
+);
+const ProgressIntegration = lazy(() =>
+  import('../components/article/ProgressIntegration').then((m) => ({
+    default: m.ProgressIntegration,
+  })),
+);
+const ProgressGoalExperiment = lazy(() =>
+  import('../components/article/ProgressGoalExperiment').then((m) => ({
+    default: m.ProgressGoalExperiment,
+  })),
+);
+const FirstLayerExperiment = lazy(() =>
+  import('../components/article/FirstLayerExperiment').then((m) => ({
+    default: m.FirstLayerExperiment,
+  })),
+);
+const ReasoningExperiments = lazy(() =>
+  import('../components/article/ReasoningExperiments').then((m) => ({
+    default: m.ReasoningExperiments,
+  })),
+);
+const TestingStory = lazy(() =>
+  import('../components/article/TestingStory').then((m) => ({ default: m.TestingStory })),
+);
 export const Route = createFileRoute('/how-it-works')({
   component: Article,
   head: () => ({ meta: [{ title: 'Teaching JEV to solve a cube | An interactive field guide' }] }),
 });
 function Article() {
-  const evidence = recordings.recordings as unknown as Recording[];
   useEffect(() => {
     const reveal = () => {
-      const target = document.getElementById(window.location.hash.slice(1));
+      const anchor = window.location.hash.slice(1);
+      const target =
+        document.getElementById(anchor) ??
+        (anchor === 'observation-boundaries' ? document.getElementById('recognition') : null);
       if (!target) return;
       let node: HTMLElement | null = target;
       while (node) {
@@ -140,11 +165,9 @@ function Article() {
                 500-request limit without solving any of them. The replay compares that approach
                 with our final routine-based solver from the same starting cube.
               </p>
-              {recordings.caseId === 'final-30' ? (
-                <ComparisonDemo recordings={evidence} latest />
-              ) : (
-                <BestRecording />
-              )}
+              <NearViewport>
+                <RecordedComparison />
+              </NearViewport>
               <div className="article-note">
                 <b>What the cube is teaching us</b>
                 <p>
@@ -287,12 +310,16 @@ function Article() {
                 failure; later studies retry transient transport failures and report unresolved ones
                 separately.
               </p>
-              <details id="appendix-final">
-                <summary>A. Grouped-menu solver: measurements, failures and verification</summary>
+              <LazyDetails
+                id="appendix-final"
+                title="A. Grouped-menu solver: measurements, failures and verification"
+              >
                 <FinalAppendix />
-              </details>
-              <details id="appendix-history">
-                <summary>B. Earlier component tests and full-solve results</summary>
+              </LazyDetails>
+              <LazyDetails
+                id="appendix-history"
+                title="B. Earlier component tests and full-solve results"
+              >
                 <div className="appendix-content">
                   <p>
                     These tests concern the earlier beginner-routine solver (internal version v26).
@@ -346,15 +373,16 @@ function Article() {
                     running your own evaluation.
                   </p>
                 </div>
-              </details>
-              <details id="reasoning">
-                <summary>C. What happened when we removed some teaching</summary>
+              </LazyDetails>
+              <LazyDetails id="reasoning" title="C. What happened when we removed some teaching">
                 <div className="appendix-content">
                   <ReasoningExperiments />
                 </div>
-              </details>
-              <details id="recognition">
-                <summary>D. Recognition, observation boundaries and the DOOM comparison</summary>
+              </LazyDetails>
+              <LazyDetails
+                id="recognition"
+                title="D. Recognition, observation boundaries and the DOOM comparison"
+              >
                 <div className="appendix-content">
                   <p>
                     The experiments below are in chronological order. Each result uses the rules and
@@ -367,7 +395,7 @@ function Article() {
                   <DaisyTransition />
                   <ObservationBoundary />
                 </div>
-              </details>
+              </LazyDetails>
               <details id="reproduce">
                 <summary>E. Run it yourself</summary>
                 <div className="appendix-content">
