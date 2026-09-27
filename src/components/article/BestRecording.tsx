@@ -6,6 +6,7 @@ import { ReplayDecision } from './ReplayDecision';
 import { Cube, type CubeMoveProgress } from '../Cube';
 import { useInView } from './ScrollDemo';
 import { RequestView } from './RequestView';
+import { PlaybackControls } from './PlaybackControls';
 
 const schedule = actionSchedule(recording.timeline);
 const finish = schedule.at(-1)!.end;
@@ -15,6 +16,7 @@ export function BestRecording() {
   const [time, setTime] = useState(0),
     [paused, setPaused] = useState(false),
     [reduced, setReduced] = useState(true);
+  const [speed, setSpeed] = useState(3);
   const clock = useRef(0);
   useEffect(() => {
     const q = matchMedia('(prefers-reduced-motion: reduce)');
@@ -30,21 +32,21 @@ export function BestRecording() {
     let frame = 0,
       last = performance.now();
     const tick = (now: number) => {
-      clock.current = Math.min(finish, clock.current + Math.max(0, now - last));
+      clock.current = Math.min(finish, clock.current + Math.max(0, now - last) * speed);
       last = now;
       setTime(clock.current);
       if (clock.current < finish) frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [visible, paused, reduced, ended]);
+  }, [visible, paused, reduced, ended, speed]);
   const frame = actionFrame(schedule, time);
   const cost = recording.costs.filter((c) => c.ms <= requestTime).reduce((n, c) => n + c.cost, 0);
   return (
     <div ref={ref} className="recorded-demo">
       <div className="demo-top">
         <span className="eyebrow">LATEST BATCH · BEST BY FACE TURNS</span>
-        <span>Recorded replay · no API calls · 1×</span>
+        <span>Recorded replay · no API calls · {speed}×</span>
       </div>
       <div className="comparison-stage">
         <Cube
@@ -94,24 +96,14 @@ export function BestRecording() {
           <span>Total: ${recording.result.cost.toFixed(5)}</span>
         </div>
       </div>
-      <div className="demo-transport">
-        <button
-          onClick={() => {
-            if (ended) {
-              clock.current = 0;
-              setTime(0);
-            }
-            setReduced(false);
-            setPaused(ended || reduced ? false : !paused);
-          }}
-        >
-          {ended ? 'Restart replay' : paused || reduced ? 'Play' : 'Pause'}
-        </button>
-        <span>
-          {frame.completed} / {recording.timeline.length} actions · {recording.result.turns} total
-          face turns
-        </span>
-      </div>
+      <PlaybackControls time={time} finish={finish} playing={visible && !paused && !reduced && !ended} speed={speed}
+        onSpeed={setSpeed}
+        onSeek={value => { clock.current = value; setTime(value); }}
+        onRestart={() => { clock.current = 0; setTime(0); setPaused(false); setReduced(false); }}
+        onToggle={() => {
+          if (ended) { clock.current = 0; setTime(0); }
+          setPaused(ended || reduced ? false : !paused); setReduced(false);
+        }} />
       <p className="fine-print" style={{ padding: '0 20px' }}>
         Case 30 of 100: the fewest-turn success, selected after evaluation. The full batch solved
         98/100 with a median of 79 turns. This example took 59 turns and 128 requests; it is not the

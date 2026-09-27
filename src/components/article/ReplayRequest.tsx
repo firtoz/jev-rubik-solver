@@ -82,7 +82,7 @@ export function ReplayRequest({
               >
                 <span className="replay-request-number">{row.step}</span>
                 <span className="replay-request-name">
-                  {names[row.questions[0]] || row.questions.join(' + ')}
+                  {('label' in row && typeof row.label === 'string' ? row.label : undefined) || names[row.questions[0]] || row.questions.join(' + ')}
                 </span>
                 <time>
                   {duration(

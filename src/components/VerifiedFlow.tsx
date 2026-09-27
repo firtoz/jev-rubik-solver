@@ -1,3 +1,4 @@
+import { preparationLabel } from '../lib/request-label';
 import { algorithmLabel,algorithmLabels } from '../lib/algorithm-labels';
 import { roundSummary } from '../lib/round-summary';
 import { RoundPreview } from './RoundPreview';
@@ -124,8 +125,8 @@ function ExecutionComparison({cycle}:{cycle:Cycle}) {
 function RequestNode({ exchange: e, index, previous, next, cube }: { exchange: Exchange; index: number; previous: Exchange[]; next?: Exchange; cube: any }) {
   const key = Object.keys(e.request.questions)[0];
   const native = e.nativeResponse || e.response;
-  return <section className="wire-step" id={`wire-request-${index}`} aria-label={titles[key] || key}>
-    <h2 className="request-section-title"><span>{index+1}</span>{titles[key] || key}</h2>
+  return <section className="wire-step" id={`wire-request-${index}`} aria-label={preparationLabel(e.request) || titles[key] || key}>
+    <h2 className="request-section-title"><span>{index+1}</span>{preparationLabel(e.request) || titles[key] || key}</h2>
     {e.request.questions.goal && e.request.state.completed && <ObservationSnapshot state={cube} observation={e.request.state} />}
     {!(e.request.questions.goal && e.request.state.completed) && <section className="wire-preparation">
       <h3>What JEV sees for this decision</h3>
@@ -273,7 +274,7 @@ export function VerifiedFlow({recordingUrl='/recordings/article-best-flow.json'}
         const running=advancePlayback?.phase==='requests'&&i===advancePlayback.request;
         return <a key={`${cycleIndex}-${i}`} className={running?'step-running':undefined} href={`#wire-request-${i}`} aria-current={highlightedStep===`wire-request-${i}`?'step':undefined}>
           {running&&<i className="step-progress" style={{animationDuration:`${Math.max(0,e.elapsedMs)}ms`}} aria-hidden="true"/>}
-          <span>{i+1}</span><span className="step-label">{titles[Object.keys(e.request.questions)[0]] || 'Request'}</span>
+          <span>{i+1}</span><span className="step-label">{preparationLabel(e.request) || titles[Object.keys(e.request.questions)[0]] || 'Request'}</span>
           {!running&&<time className="step-duration" title="Recorded request duration">{e.elapsedMs>=1000?`${(e.elapsedMs/1000).toFixed(1)}s`:`${Math.round(e.elapsedMs)}ms`}</time>}
         </a>;
       })}

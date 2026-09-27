@@ -4,6 +4,7 @@ import { RequestView } from './RequestView';
 import { actionSchedule, actionFrame } from '../../lib/article-replay';
 import { ReplayRequest } from './ReplayRequest';
 import { ReplayDecision } from './ReplayDecision';
+import { PlaybackControls } from './PlaybackControls';
 export function useInView(delay = 500) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -44,6 +45,7 @@ export function ComparisonDemo({
 }) {
   const { ref, visible } = useInView(500);
   const [moveProgress, setMoveProgress] = useState<Record<string, CubeMoveProgress>>({});
+  const [speed, setSpeed] = useState(3);
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
   const [time, setTime] = useState(0);
@@ -71,14 +73,14 @@ export function ComparisonDemo({
     let handle = 0,
       last = performance.now();
     const tick = (now: number) => {
-      clock.current = Math.min(finish, clock.current + Math.max(0, now - last));
+      clock.current = Math.min(finish, clock.current + Math.max(0, now - last) * speed);
       last = now;
       setTime(clock.current);
       if (clock.current < finish) handle = requestAnimationFrame(tick);
     };
     handle = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(handle);
-  }, [playing, finish]);
+  }, [playing, finish, speed]);
   if (
     !left ||
     !right ||
@@ -91,7 +93,7 @@ export function ComparisonDemo({
     <div ref={ref} className="recorded-demo comparison-demo">
       <div className="demo-top">
         <span className="eyebrow">REAL RECORDINGS · NO API CALLS</span>
-        <span>Same scramble · 1× speed{latest ? ' · selected best case' : ''}</span>
+        <span>Same scramble · {speed}× speed{latest ? ' · selected best case' : ''}</span>
       </div>
       <div className="comparison-cubes">
         {[left, right].map((recording, index) => {
@@ -201,32 +203,16 @@ export function ComparisonDemo({
           deliberately favourable example of the grouped-menu solver.
         </p>
       )}
-      <div className="demo-transport">
-        <button
-          onClick={() => {
-            if (ended) {
-              clock.current = 0;
-              setTime(0);
-              setPaused(false);
-            } else setPaused(playing);
-            setReduced(false);
-          }}
-        >
-          {ended ? 'Restart replay' : playing ? 'Pause' : 'Play'}
-        </button>
-        <span>
-          {(requestTime / 1000).toFixed(1)}s / {(recordedFinish / 1000).toFixed(1)}s recorded time
-        </span>
-        <span aria-live="polite">
-          {ended
-            ? 'Solve finished. Both recordings stopped.'
-            : playing
-              ? 'Playing at 1×'
-              : 'Paused'}
-        </span>
-      </div>
+      <PlaybackControls time={time} finish={finish} playing={playing} speed={speed}
+        onSpeed={setSpeed}
+        onSeek={value => { clock.current = value; setTime(value); }}
+        onRestart={() => { clock.current = 0; setTime(0); setPaused(false); setReduced(false); }}
+        onToggle={() => {
+          if (ended) { clock.current = 0; setTime(0); }
+          setPaused(ended ? false : playing); setReduced(false);
+        }} />
       <p className="fine-print">
-        Both replays start together at 1× recorded speed and stop when the grouped-menu solver
+        Both replays use the selected playback speed and stop when the grouped-menu solver
         finishes. FAIL means the single-turn solver was still unsolved at that moment.
       </p>
       <details>
@@ -234,7 +220,7 @@ export function ComparisonDemo({
         <p>
           Request bars follow the recorded timestamps, including gaps between calls. A move starts
           after its decision was recorded, while requests for the next round can appear alongside
-          the animation. The cube takes 300 ms per face turn for display; we did not measure
+          the animation. At 1×, the cube takes 300 ms per face turn for display; we did not measure
           physical hand movement. The final animation finishes after the request clocks stop.
         </p>
         <p>

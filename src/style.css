@@ -2681,3 +2681,33 @@ footer span:first-child {
 .height-progress .replay-round-divider { overflow:hidden; }
 .height-progress .replay-request-bar.is-running { background:#34472b;border-color:#8fa971; }
 .height-progress .replay-request-bar.is-complete { background:#283722; }
+
+/* Shared recorded-playback transport. */
+.replay-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-top: 1px solid #394731;
+  color: #c3d2b6;
+}
+.replay-control-buttons { display: flex; gap: 6px; flex-shrink: 0; }
+.replay-control-buttons button {
+  display: grid; place-items: center; width: 38px; height: 38px;
+  padding: 8px; border-radius: 8px;
+}
+.replay-control-buttons svg {
+  width: 20px; height: 20px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.replay-seek { flex: 1; min-width: 0; }
+.replay-seek input { display: block; width: 100%; accent-color: #cbed9b; cursor: pointer; }
+.replay-seek span { display: block; font-size: 11px; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.replay-seek small { margin-left: 6px; color: #9dab92; }
+.replay-speed { display: flex; align-items: center; gap: 7px; font-size: 12px; flex-shrink: 0; }
+.replay-speed select { color: #e8f2df; background: #20291e; border: 1px solid #596c48; border-radius: 8px; padding: 8px; cursor: pointer; }
+@media (max-width: 520px) {
+  .replay-controls { gap: 10px; padding: 12px; flex-wrap: wrap; }
+  .replay-seek { order: 3; flex-basis: 100%; }
+  .replay-speed { margin-left: auto; }
+}

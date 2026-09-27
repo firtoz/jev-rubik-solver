@@ -33,3 +33,19 @@ describe('article request and action playback', () => {
       );
     });
 });
+
+import flow from '../public/recordings/article-best-flow.json';
+import { preparationLabel } from '../src/lib/request-label';
+test('preparation labels describe the exact recorded question', () => {
+  const labels = new Set<string>();
+  for (const row of requests.skills) {
+    const request = flow.steps[row.round].exchanges[row.step - 1].request;
+    expect(Object.keys(request.questions)).toEqual(row.questions);
+    const label = preparationLabel(request);
+    if (label) {
+      expect('label' in row && row.label).toBe(label);
+      labels.add(label);
+    }
+  }
+  expect(labels.size).toBe(4);
+});
