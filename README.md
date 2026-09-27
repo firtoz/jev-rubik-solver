@@ -6,7 +6,7 @@ The final **grouped-menu solver solved 98 of 100 fresh random-state cubes within
 
 [Read the article](https://firtoz.github.io/jev-rubik-solver/how-it-works/) · [Inspect a recorded solve](https://firtoz.github.io/jev-rubik-solver/request-flow/)
 
-These hosted links will be available after GitHub Pages is enabled. The website uses saved recordings and needs no API key.
+The website uses saved recordings and needs no API key.
 
 ## Run the website locally
 
@@ -62,7 +62,7 @@ The export omits credentials, local databases and Git history. Move an existing 
 
 The [Pages workflow](.github/workflows/pages.yml) builds static HTML for the article and request viewer at `/jev-rubik-solver/`. It uses Node 22 for prerendering and Bun to install dependencies. Only `dist/client` is published.
 
-While the repository is private, deployment is skipped. After making it public, choose **Settings → Pages → Build and deployment → GitHub Actions**, then run **Deploy GitHub Pages** once. Later pushes to `main` deploy automatically. The published site will be public.
+Pushes to `main` deploy automatically through GitHub Actions.
 
 To build the Pages files locally, install Node 22 as well as Bun and run:
 
