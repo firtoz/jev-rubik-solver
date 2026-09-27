@@ -1128,7 +1128,7 @@ footer span:first-child {
 .article-toc > span {
   font-size: 10px;
   letter-spacing: 2px;
-  color: #70757d;
+  color: #adb7c5;
   margin-bottom: 10px;
 }
 .article-toc a {
@@ -1978,7 +1978,7 @@ footer span:first-child {
 }
 .request-section > summary small {
   display: block;
-  color: #8a8f96;
+  color: #b2bdcc;
   font-size: 11px;
   letter-spacing: 0;
   margin-top: 6px;
@@ -2007,7 +2007,7 @@ footer span:first-child {
 .field-list dt code {
   display: block;
   font: 10px monospace;
-  color: #787d85;
+  color: #b8c5d8;
   text-transform: none;
   margin-top: 3px;
 }
@@ -2053,7 +2053,7 @@ footer span:first-child {
   font-family: monospace;
 }
 .field-items summary > span {
-  color: #7f848c;
+  color: #b2bdcc;
   font: 11px var(--font-sans);
 }
 .field-boolean {
@@ -2136,7 +2136,7 @@ footer span:first-child {
   gap: 20px;
 }
 .round-history > details > summary span {
-  color: #8a8f96;
+  color: #b2bdcc;
   font-size: 11px;
 }
 .field-guide .exchange-entry {
@@ -2837,3 +2837,16 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
  .comparison-side:nth-child(2) .replay-request-heading small::before { content:'Grouped menu · '; }
 }
 .replay-camera-label { display:block;color:var(--muted);font-size:11px;margin-bottom:3px; }
+
+/* Row headings carry content, rather than the muted column-label treatment. */
+.field-guide table tbody th {
+  color: #e1e7ef;
+  font-size: inherit;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.field-guide table td { color: #c8d0dc; }
+.field-guide table thead th { color: #b5cef2; }
+.field-guide :is(.layer-story-heading > span, .flow-arrow) { color: #a8b8ce; }
+.field-guide footer { color: #aeb8c6; }
