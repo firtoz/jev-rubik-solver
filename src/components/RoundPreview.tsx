@@ -1,4 +1,3 @@
-import { FlowText } from './FlowArrow';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { TwistyPlayer, ExperimentalMillisecondTimestamp } from 'cubing/twisty';
 
@@ -74,5 +73,5 @@ export function RoundPreview({setup,moves,round,children,onMove,onSettled,finalL
     return()=>{disposed=true;kick.current=()=>{};cancelAnimationFrame(raf);finish?.();p?.pause();p?.remove();};
   },[setup,moves,finalLabel]);
   useEffect(()=>{kick.current();},[round]);
-  return <aside className="round-preview" aria-label="Current round cube"><div className="round-preview-heading"><strong>Recorded cube</strong><small>Drag to rotate</small></div><div className="round-preview-cube" ref={host}/><div className="round-preview-status" role="status"><FlowText text={status==='Preview unavailable'?status:round===moves.length?finalLabel:`Round ${round+1}`}/></div>{children}</aside>;
+  return <aside className="round-preview" aria-label="Current round cube"><div className="round-preview-heading"><strong>Recorded cube</strong><small>Drag to rotate</small></div><div className="round-preview-cube" ref={host}/>{status==='Preview unavailable'&&<div className="round-preview-status" role="status">{status}</div>}{children}</aside>;
 }
