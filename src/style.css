@@ -2347,6 +2347,8 @@ footer span:first-child {
   grid-template-columns: 1fr;
 }
 .result-stamp {
+  white-space: nowrap;
+  overflow-wrap: normal;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -2749,22 +2751,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 }
 .field-guide .article-note { background: #1b2028; border-left-color: #83aee8; }
 .routine-example-pair > .routine-example-arrow > svg { width: 48px; height: 24px; }
-@media (max-width: 600px) {
-  .comparison-side > .replay-request,
-  .comparison-side > .comparison-decision,
-  .comparison-side > .comparison-metrics,
-  .comparison-side > details { grid-column: 1 / -1; border-left: 0; }
-  .comparison-side:first-child > .replay-request { grid-row: 5; }
-  .comparison-side:first-child > .comparison-decision { grid-row: 6; }
-  .comparison-side:first-child > .comparison-metrics { grid-row: 7; }
-  .comparison-side:first-child > details { grid-row: 8; }
-  .comparison-side:nth-child(2) > .replay-request { grid-row: 9; border-top: 1px solid #404650; }
-  .comparison-side:nth-child(2) > .comparison-decision { grid-row: 10; }
-  .comparison-side:nth-child(2) > .comparison-metrics { grid-row: 11; }
-  .comparison-side:nth-child(2) > details { grid-row: 12; }
-  .comparison-side:first-child > .replay-request > small::before { content: 'Single turns · '; }
-  .comparison-side:nth-child(2) > .replay-request > small::before { content: 'Grouped menu · '; }
-}
+
 
 .replay-speed-trigger {
   display: flex; align-items: center; justify-content: center; gap: 10px;
@@ -2821,21 +2808,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .request-record-nav { display:flex; gap:24px; }
 .request-permalink pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:16px; font-size:12px; background:#171b22; }
 .saved-answer { padding:16px; border:1px solid #404650; margin:12px 0; }
-@media(max-width:600px) {
- .comparison-side > .replay-goal { grid-column:1 / -1; }
- .comparison-side:first-child > .replay-goal { grid-row:5; }
- .comparison-side:first-child > .replay-request { grid-row:6; }
- .comparison-side:first-child > .comparison-decision { grid-row:7; }
- .comparison-side:first-child > .comparison-metrics { grid-row:8; }
- .comparison-side:first-child > details { grid-row:9; }
- .comparison-side:nth-child(2) > .replay-goal { grid-row:10; }
- .comparison-side:nth-child(2) > .replay-request { grid-row:11; }
- .comparison-side:nth-child(2) > .comparison-decision { grid-row:12; }
- .comparison-side:nth-child(2) > .comparison-metrics { grid-row:13; }
- .comparison-side:nth-child(2) > details { grid-row:14; }
- .comparison-side:first-child .replay-request-heading small::before { content:'Single turns · '; }
- .comparison-side:nth-child(2) .replay-request-heading small::before { content:'Grouped menu · '; }
-}
+
 .replay-camera-label { display:block;color:var(--muted);font-size:11px;margin-bottom:3px; }
 
 /* Row headings carry content, rather than the muted column-label treatment. */
@@ -2850,3 +2823,43 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .field-guide table thead th { color: #b5cef2; }
 .field-guide :is(.layer-story-heading > span, .flow-arrow) { color: #a8b8ce; }
 .field-guide footer { color: #aeb8c6; }
+
+/* Keep both policies aligned on phones, including decisions and request history. */
+@media (max-width: 600px) {
+  .comparison-demo .demo-top { padding: 16px 12px; font-size: 12px; line-height: 1.5; }
+  .comparison-demo .demo-top .eyebrow { font-size: 9px; letter-spacing: .12em; }
+  .comparison-side > header { display: block; padding: 14px 9px 6px; }
+  .comparison-side header small { font-size: 8px; letter-spacing: .06em; }
+  .comparison-side h3 { font-size: clamp(12px, 3.2vw, 16px); line-height: 1.35; margin: 7px 0; }
+  .comparison-stage .cube { height: clamp(140px, 42vw, 230px); }
+  .comparison-demo .result-stamp { font-size: clamp(24px, 7vw, 40px); border-width: 3px; padding: 3px 9px; letter-spacing: .04em; }
+  .comparison-side > .comparison-status { padding: 9px; font-size: 11px; line-height: 1.4; }
+  .comparison-side .replay-camera-label { font-size: 9px; letter-spacing: 0; }
+  .comparison-side > .replay-goal,
+  .comparison-side > .replay-request,
+  .comparison-side > .comparison-decision { padding: 12px 8px; gap: 6px; }
+  .comparison-side .replay-goal { min-height: 100px; }
+  .comparison-side .replay-goal > strong,
+  .comparison-side .comparison-decision > strong { font-size: 13px; line-height: 1.4; }
+  .comparison-side .replay-goal > small,
+  .comparison-side .comparison-decision > small { font-size: 9px; letter-spacing: .03em; }
+  .comparison-side .replay-goal dl { font-size: 10px; gap: 4px 8px; }
+  .comparison-side .replay-goal dl > div { flex-wrap: wrap; gap: 2px 4px; }
+  .comparison-side .comparison-decision > span,
+  .comparison-side .comparison-decision > p { font-size: 11px; line-height: 1.5; }
+  .comparison-side .comparison-decision-moves { gap: 4px; }
+  .comparison-side .comparison-decision-moves code { padding: 3px 5px; font-size: 11px; }
+  .comparison-side .replay-request-heading small { font-size: 9px; letter-spacing: .03em; }
+  .comparison-side .replay-request-bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 4px; row-gap: 0; padding: 2px 5px; }
+  .comparison-side .replay-request-number { display: none; }
+  .comparison-side .replay-request-name { grid-column: 1; grid-row: 1 / 3; font-size: 10px; line-height: 1.15; }
+  .comparison-side .replay-request-bar time { grid-column: 2; grid-row: 1; font-size: 9px; text-align: right; }
+  .comparison-side .request-permalink-icon { grid-column: 2; grid-row: 2; height: 18px; justify-self: end; }
+  .comparison-side .request-permalink-icon svg { width: 13px; height: 13px; }
+  .comparison-side .comparison-metrics { gap: 10px; margin: 0 8px 14px; }
+  .comparison-side .comparison-metrics strong { font-size: 17px; }
+  .comparison-side .comparison-metrics small { font-size: 9px; letter-spacing: .04em; }
+  .comparison-side .comparison-metrics > div > span { font-size: 10px; }
+  .comparison-side > details { font-size: 11px; }
+  .comparison-side > details > p { padding: 6px; font-size: 11px; line-height: 1.5; }
+}
