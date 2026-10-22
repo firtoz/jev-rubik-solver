@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@tanstack/react-router": "1.170.38",
-    "@tanstack/react-start": "1.168.56",
+    "@tanstack/react-start": "1.168.60",
     "cubing": "0.63.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",
@@ -33,11 +33,12 @@
     "@vitejs/plugin-react": "6.1.1",
     "prettier": "^3.9.8",
     "typescript": "7.0.2",
-    "vite": "8.3.0"
+    "vite": "8.3.3"
   },
-  "description": "A recorded study and interactive lab for solving a Rubik\u2019s cube with typed JEV decisions.",
+  "description": "A recorded study and interactive lab for solving a Rubik’s cube with typed JEV decisions.",
   "license": "MIT",
   "engines": {
-    "bun": ">=1.4.3"
-  }
+    "bun": ">=1.4.4"
+  },
+  "packageManager": "bun@1.4.4"
 }
