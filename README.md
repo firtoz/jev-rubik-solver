@@ -10,7 +10,7 @@ The website uses saved recordings and needs no API key.
 
 ## Run the website locally
 
-Install [Bun](https://bun.sh/) 1.3.13 or later, then run these commands from the repository root:
+Install [Bun](https://bun.sh/) 1.4.4 and Node 22.23.4 (`nvm use`), then run these commands from the repository root:
 
 ```sh
 bun install
@@ -64,7 +64,7 @@ The [Pages workflow](.github/workflows/pages.yml) builds static HTML for the art
 
 Pushes to `main` deploy automatically through GitHub Actions.
 
-To build the Pages files locally, install Node 22 as well as Bun and run:
+To build the Pages files locally, select Node 22.23.4 (`nvm use`) as well as Bun 1.4.4 and run:
 
 ```sh
 GITHUB_PAGES=1 bun run build:pages
